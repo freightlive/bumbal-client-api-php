@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\API;
+namespace API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
