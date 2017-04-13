@@ -11,7 +11,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *

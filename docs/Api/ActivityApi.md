@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \Bumbal\Client\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info)
+> \Bumbal\Client\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links)
 
 Find activity by ID
 
@@ -123,9 +123,11 @@ $include_time_slots = true; // bool | Include TimeSlots
 $include_time_slot_tags = true; // bool | Include tags from TimeSlots
 $include_route_info = true; // bool | Include route data
 $include_driver_info = true; // bool | Include driver data
+$include_activity_communication = true; // bool | Include Communication Settings
+$include_activity_links = true; // bool | Include Link Data
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -146,6 +148,8 @@ Name | Type | Description  | Notes
  **include_time_slot_tags** | **bool**| Include tags from TimeSlots |
  **include_route_info** | **bool**| Include route data |
  **include_driver_info** | **bool**| Include driver data |
+ **include_activity_communication** | **bool**| Include Communication Settings |
+ **include_activity_links** | **bool**| Include Link Data |
 
 ### Return type
 

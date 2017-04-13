@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArguments
+ * CommunicationModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Bumbal\Client\Model;
 use \ArrayAccess;
 
 /**
- * DriverRetrieveListArguments Class Doc Comment
+ * CommunicationModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,24 +53,24 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArguments implements ArrayAccess
+class CommunicationModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverRetrieveListArguments';
+    protected static $swaggerModelName = 'CommunicationModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\Bumbal\Client\Model\DriverOptionsModel',
-        'filters' => '\Bumbal\Client\Model\DriverFiltersModel',
-        'limit' => 'int',
-        'offset' => 'int',
-        'search_text' => 'string'
+        'saywhen' => 'bool',
+        'send_invite' => 'bool',
+        'send_eta' => 'bool',
+        'email' => 'string',
+        'phone_nr' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,11 +83,11 @@ class DriverRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
-        'filters' => 'filters',
-        'limit' => 'limit',
-        'offset' => 'offset',
-        'search_text' => 'search_text'
+        'saywhen' => 'saywhen',
+        'send_invite' => 'send_invite',
+        'send_eta' => 'send_eta',
+        'email' => 'email',
+        'phone_nr' => 'phone_nr'
     ];
 
 
@@ -96,11 +96,11 @@ class DriverRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
-        'filters' => 'setFilters',
-        'limit' => 'setLimit',
-        'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'saywhen' => 'setSaywhen',
+        'send_invite' => 'setSendInvite',
+        'send_eta' => 'setSendEta',
+        'email' => 'setEmail',
+        'phone_nr' => 'setPhoneNr'
     ];
 
 
@@ -109,11 +109,11 @@ class DriverRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
-        'filters' => 'getFilters',
-        'limit' => 'getLimit',
-        'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'saywhen' => 'getSaywhen',
+        'send_invite' => 'getSendInvite',
+        'send_eta' => 'getSendEta',
+        'email' => 'getEmail',
+        'phone_nr' => 'getPhoneNr'
     ];
 
     public static function attributeMap()
@@ -147,11 +147,11 @@ class DriverRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['saywhen'] = isset($data['saywhen']) ? $data['saywhen'] : null;
+        $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
+        $this->container['send_eta'] = isset($data['send_eta']) ? $data['send_eta'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone_nr'] = isset($data['phone_nr']) ? $data['phone_nr'] : null;
     }
 
     /**
@@ -178,106 +178,106 @@ class DriverRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \Bumbal\Client\Model\DriverOptionsModel
+     * Gets saywhen
+     * @return bool
      */
-    public function getOptions()
+    public function getSaywhen()
     {
-        return $this->container['options'];
+        return $this->container['saywhen'];
     }
 
     /**
-     * Sets options
-     * @param \Bumbal\Client\Model\DriverOptionsModel $options
+     * Sets saywhen
+     * @param bool $saywhen Make use of SayWhen
      * @return $this
      */
-    public function setOptions($options)
+    public function setSaywhen($saywhen)
     {
-        $this->container['options'] = $options;
+        $this->container['saywhen'] = $saywhen;
 
         return $this;
     }
 
     /**
-     * Gets filters
-     * @return \Bumbal\Client\Model\DriverFiltersModel
+     * Gets send_invite
+     * @return bool
      */
-    public function getFilters()
+    public function getSendInvite()
     {
-        return $this->container['filters'];
+        return $this->container['send_invite'];
     }
 
     /**
-     * Sets filters
-     * @param \Bumbal\Client\Model\DriverFiltersModel $filters
+     * Sets send_invite
+     * @param bool $send_invite Send an invitation to make an appointment
      * @return $this
      */
-    public function setFilters($filters)
+    public function setSendInvite($send_invite)
     {
-        $this->container['filters'] = $filters;
+        $this->container['send_invite'] = $send_invite;
 
         return $this;
     }
 
     /**
-     * Gets limit
-     * @return int
+     * Gets send_eta
+     * @return bool
      */
-    public function getLimit()
+    public function getSendEta()
     {
-        return $this->container['limit'];
+        return $this->container['send_eta'];
     }
 
     /**
-     * Sets limit
-     * @param int $limit
+     * Sets send_eta
+     * @param bool $send_eta Send ETA messages
      * @return $this
      */
-    public function setLimit($limit)
+    public function setSendEta($send_eta)
     {
-        $this->container['limit'] = $limit;
+        $this->container['send_eta'] = $send_eta;
 
         return $this;
     }
 
     /**
-     * Gets offset
-     * @return int
-     */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-     * Sets offset
-     * @param int $offset
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_text
+     * Gets email
      * @return string
      */
-    public function getSearchText()
+    public function getEmail()
     {
-        return $this->container['search_text'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets search_text
-     * @param string $search_text
+     * Sets email
+     * @param string $email The email address to which to communicate
      * @return $this
      */
-    public function setSearchText($search_text)
+    public function setEmail($email)
     {
-        $this->container['search_text'] = $search_text;
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_nr
+     * @return string
+     */
+    public function getPhoneNr()
+    {
+        return $this->container['phone_nr'];
+    }
+
+    /**
+     * Sets phone_nr
+     * @param string $phone_nr The phone number to which to communicate
+     * @return $this
+     */
+    public function setPhoneNr($phone_nr)
+    {
+        $this->container['phone_nr'] = $phone_nr;
 
         return $this;
     }

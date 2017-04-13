@@ -1,6 +1,6 @@
 <?php
 /**
- * PackageLineModelTest
+ * CommunicationModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Bumbal\Client;
 
 /**
- * PackageLineModelTest Class Doc Comment
+ * CommunicationModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PackageLineModel
+// * @description CommunicationModel
 /**
  * @package     Bumbal\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PackageLineModelTest extends \PHPUnit_Framework_TestCase
+class CommunicationModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,89 +88,49 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PackageLineModel"
+     * Test "CommunicationModel"
      */
-    public function testPackageLineModel()
+    public function testCommunicationModel()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "saywhen"
      */
-    public function testPropertyId()
+    public function testPropertySaywhen()
     {
 
     }
 
     /**
-     * Test attribute "nr"
+     * Test attribute "send_invite"
      */
-    public function testPropertyNr()
+    public function testPropertySendInvite()
     {
 
     }
 
     /**
-     * Test attribute "package_type"
+     * Test attribute "send_eta"
      */
-    public function testPropertyPackageType()
+    public function testPropertySendEta()
     {
 
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "email"
      */
-    public function testPropertyDescription()
+    public function testPropertyEmail()
     {
 
     }
 
     /**
-     * Test attribute "nr_of_packages"
+     * Test attribute "phone_nr"
      */
-    public function testPropertyNrOfPackages()
-    {
-
-    }
-
-    /**
-     * Test attribute "length"
-     */
-    public function testPropertyLength()
-    {
-
-    }
-
-    /**
-     * Test attribute "width"
-     */
-    public function testPropertyWidth()
-    {
-
-    }
-
-    /**
-     * Test attribute "height"
-     */
-    public function testPropertyHeight()
-    {
-
-    }
-
-    /**
-     * Test attribute "volume"
-     */
-    public function testPropertyVolume()
-    {
-
-    }
-
-    /**
-     * Test attribute "packagevalue"
-     */
-    public function testPropertyPackagevalue()
+    public function testPropertyPhoneNr()
     {
 
     }

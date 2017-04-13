@@ -1,6 +1,6 @@
 <?php
 /**
- * AddressModel
+ * LinkModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace Bumbal\Client\Model;
 use \ArrayAccess;
 
 /**
- * AddressModel Class Doc Comment
+ * LinkModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddressModel implements ArrayAccess
+class LinkModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AddressModel';
+    protected static $swaggerModelName = 'LinkModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,17 +67,12 @@ class AddressModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'name_1' => 'string',
-        'street_1' => 'string',
-        'street_2' => 'string',
-        'house_nr' => 'string',
-        'house_nr_addendum' => 'string',
-        'zipcode' => 'string',
-        'city' => 'string',
-        'state' => 'string',
-        'iso_country' => 'string',
-        'email' => 'string',
-        'contact_person' => 'string'
+        'link_id' => 'string',
+        'object_type' => 'int',
+        'object_id' => 'int',
+        'provider_id' => 'int',
+        'provider_reference' => 'string',
+        'provider_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -91,17 +86,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name_1' => 'name_1',
-        'street_1' => 'street_1',
-        'street_2' => 'street_2',
-        'house_nr' => 'house_nr',
-        'house_nr_addendum' => 'house_nr_addendum',
-        'zipcode' => 'zipcode',
-        'city' => 'city',
-        'state' => 'state',
-        'iso_country' => 'iso_country',
-        'email' => 'email',
-        'contact_person' => 'contact_person'
+        'link_id' => 'link_id',
+        'object_type' => 'object_type',
+        'object_id' => 'object_id',
+        'provider_id' => 'provider_id',
+        'provider_reference' => 'provider_reference',
+        'provider_name' => 'provider_name'
     ];
 
 
@@ -111,17 +101,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name_1' => 'setName1',
-        'street_1' => 'setStreet1',
-        'street_2' => 'setStreet2',
-        'house_nr' => 'setHouseNr',
-        'house_nr_addendum' => 'setHouseNrAddendum',
-        'zipcode' => 'setZipcode',
-        'city' => 'setCity',
-        'state' => 'setState',
-        'iso_country' => 'setIsoCountry',
-        'email' => 'setEmail',
-        'contact_person' => 'setContactPerson'
+        'link_id' => 'setLinkId',
+        'object_type' => 'setObjectType',
+        'object_id' => 'setObjectId',
+        'provider_id' => 'setProviderId',
+        'provider_reference' => 'setProviderReference',
+        'provider_name' => 'setProviderName'
     ];
 
 
@@ -131,17 +116,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name_1' => 'getName1',
-        'street_1' => 'getStreet1',
-        'street_2' => 'getStreet2',
-        'house_nr' => 'getHouseNr',
-        'house_nr_addendum' => 'getHouseNrAddendum',
-        'zipcode' => 'getZipcode',
-        'city' => 'getCity',
-        'state' => 'getState',
-        'iso_country' => 'getIsoCountry',
-        'email' => 'getEmail',
-        'contact_person' => 'getContactPerson'
+        'link_id' => 'getLinkId',
+        'object_type' => 'getObjectType',
+        'object_id' => 'getObjectId',
+        'provider_id' => 'getProviderId',
+        'provider_reference' => 'getProviderReference',
+        'provider_name' => 'getProviderName'
     ];
 
     public static function attributeMap()
@@ -176,17 +156,12 @@ class AddressModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
-        $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
-        $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
-        $this->container['house_nr'] = isset($data['house_nr']) ? $data['house_nr'] : null;
-        $this->container['house_nr_addendum'] = isset($data['house_nr_addendum']) ? $data['house_nr_addendum'] : null;
-        $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
+        $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['provider_id'] = isset($data['provider_id']) ? $data['provider_id'] : null;
+        $this->container['provider_reference'] = isset($data['provider_reference']) ? $data['provider_reference'] : null;
+        $this->container['provider_name'] = isset($data['provider_name']) ? $data['provider_name'] : null;
     }
 
     /**
@@ -229,7 +204,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id Unique ID
      * @return $this
      */
     public function setId($id)
@@ -240,232 +215,127 @@ class AddressModel implements ArrayAccess
     }
 
     /**
-     * Gets name_1
+     * Gets link_id
      * @return string
      */
-    public function getName1()
+    public function getLinkId()
     {
-        return $this->container['name_1'];
+        return $this->container['link_id'];
     }
 
     /**
-     * Sets name_1
-     * @param string $name_1
+     * Sets link_id
+     * @param string $link_id The external Link ID
      * @return $this
      */
-    public function setName1($name_1)
+    public function setLinkId($link_id)
     {
-        $this->container['name_1'] = $name_1;
+        $this->container['link_id'] = $link_id;
 
         return $this;
     }
 
     /**
-     * Gets street_1
-     * @return string
+     * Gets object_type
+     * @return int
      */
-    public function getStreet1()
+    public function getObjectType()
     {
-        return $this->container['street_1'];
+        return $this->container['object_type'];
     }
 
     /**
-     * Sets street_1
-     * @param string $street_1
+     * Sets object_type
+     * @param int $object_type The object type id which this link is connected to
      * @return $this
      */
-    public function setStreet1($street_1)
+    public function setObjectType($object_type)
     {
-        $this->container['street_1'] = $street_1;
+        $this->container['object_type'] = $object_type;
 
         return $this;
     }
 
     /**
-     * Gets street_2
-     * @return string
+     * Gets object_id
+     * @return int
      */
-    public function getStreet2()
+    public function getObjectId()
     {
-        return $this->container['street_2'];
+        return $this->container['object_id'];
     }
 
     /**
-     * Sets street_2
-     * @param string $street_2
+     * Sets object_id
+     * @param int $object_id The object ID which this link is connected to
      * @return $this
      */
-    public function setStreet2($street_2)
+    public function setObjectId($object_id)
     {
-        $this->container['street_2'] = $street_2;
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }
 
     /**
-     * Gets house_nr
-     * @return string
+     * Gets provider_id
+     * @return int
      */
-    public function getHouseNr()
+    public function getProviderId()
     {
-        return $this->container['house_nr'];
+        return $this->container['provider_id'];
     }
 
     /**
-     * Sets house_nr
-     * @param string $house_nr
+     * Sets provider_id
+     * @param int $provider_id The Provider ID which this link is connected to
      * @return $this
      */
-    public function setHouseNr($house_nr)
+    public function setProviderId($provider_id)
     {
-        $this->container['house_nr'] = $house_nr;
+        $this->container['provider_id'] = $provider_id;
 
         return $this;
     }
 
     /**
-     * Gets house_nr_addendum
+     * Gets provider_reference
      * @return string
      */
-    public function getHouseNrAddendum()
+    public function getProviderReference()
     {
-        return $this->container['house_nr_addendum'];
+        return $this->container['provider_reference'];
     }
 
     /**
-     * Sets house_nr_addendum
-     * @param string $house_nr_addendum
+     * Sets provider_reference
+     * @param string $provider_reference A Provider reference which this link is connected to
      * @return $this
      */
-    public function setHouseNrAddendum($house_nr_addendum)
+    public function setProviderReference($provider_reference)
     {
-        $this->container['house_nr_addendum'] = $house_nr_addendum;
+        $this->container['provider_reference'] = $provider_reference;
 
         return $this;
     }
 
     /**
-     * Gets zipcode
+     * Gets provider_name
      * @return string
      */
-    public function getZipcode()
+    public function getProviderName()
     {
-        return $this->container['zipcode'];
+        return $this->container['provider_name'];
     }
 
     /**
-     * Sets zipcode
-     * @param string $zipcode
+     * Sets provider_name
+     * @param string $provider_name The name of the external Provider
      * @return $this
      */
-    public function setZipcode($zipcode)
+    public function setProviderName($provider_name)
     {
-        $this->container['zipcode'] = $zipcode;
-
-        return $this;
-    }
-
-    /**
-     * Gets city
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     * @param string $city
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets state
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-     * Sets state
-     * @param string $state
-     * @return $this
-     */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets iso_country
-     * @return string
-     */
-    public function getIsoCountry()
-    {
-        return $this->container['iso_country'];
-    }
-
-    /**
-     * Sets iso_country
-     * @param string $iso_country
-     * @return $this
-     */
-    public function setIsoCountry($iso_country)
-    {
-        $this->container['iso_country'] = $iso_country;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets contact_person
-     * @return string
-     */
-    public function getContactPerson()
-    {
-        return $this->container['contact_person'];
-    }
-
-    /**
-     * Sets contact_person
-     * @param string $contact_person
-     * @return $this
-     */
-    public function setContactPerson($contact_person)
-    {
-        $this->container['contact_person'] = $contact_person;
+        $this->container['provider_name'] = $provider_name;
 
         return $this;
     }

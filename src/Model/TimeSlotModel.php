@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -155,7 +155,7 @@ class TimeSlotModel implements ArrayAccess
         return self::$getters;
     }
 
-    const TIME_SLOT_TYPE_FIRST_ENTRY = 'first_entry';
+    const TIME_SLOT_TYPE_FIRST_ENTRY = 'first-entry';
     const TIME_SLOT_TYPE_PLANNED = 'planned';
     const TIME_SLOT_TYPE_ACTUAL = 'actual';
     
@@ -217,9 +217,9 @@ class TimeSlotModel implements ArrayAccess
         if ($this->container['time_slot_type'] === null) {
             $invalid_properties[] = "'time_slot_type' can't be null";
         }
-        $allowed_values = ["first_entry", "planned", "actual"];
+        $allowed_values = ["first-entry", "planned", "actual"];
         if (!in_array($this->container['time_slot_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'time_slot_type', must be one of 'first_entry', 'planned', 'actual'.";
+            $invalid_properties[] = "invalid value for 'time_slot_type', must be one of 'first-entry', 'planned', 'actual'.";
         }
 
         return $invalid_properties;
@@ -242,7 +242,7 @@ class TimeSlotModel implements ArrayAccess
         if ($this->container['time_slot_type'] === null) {
             return false;
         }
-        $allowed_values = ["first_entry", "planned", "actual"];
+        $allowed_values = ["first-entry", "planned", "actual"];
         if (!in_array($this->container['time_slot_type'], $allowed_values)) {
             return false;
         }
@@ -308,9 +308,9 @@ class TimeSlotModel implements ArrayAccess
      */
     public function setTimeSlotType($time_slot_type)
     {
-        $allowed_values = array('first_entry', 'planned', 'actual');
+        $allowed_values = array('first-entry', 'planned', 'actual');
         if ((!in_array($time_slot_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'time_slot_type', must be one of 'first_entry', 'planned', 'actual'");
+            throw new \InvalidArgumentException("Invalid value for 'time_slot_type', must be one of 'first-entry', 'planned', 'actual'");
         }
         $this->container['time_slot_type'] = $time_slot_type;
 

@@ -11,7 +11,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -278,12 +278,14 @@ class ActivityApi
      * @param bool $include_time_slot_tags Include tags from TimeSlots (required)
      * @param bool $include_route_info Include route data (required)
      * @param bool $include_driver_info Include driver data (required)
+     * @param bool $include_activity_communication Include Communication Settings (required)
+     * @param bool $include_activity_links Include Link Data (required)
      * @throws \Bumbal\Client\ApiException on non-2xx response
      * @return \Bumbal\Client\Model\ActivityModel
      */
-    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info)
+    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links)
     {
-        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info);
+        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links);
         return $response;
     }
 
@@ -301,10 +303,12 @@ class ActivityApi
      * @param bool $include_time_slot_tags Include tags from TimeSlots (required)
      * @param bool $include_route_info Include route data (required)
      * @param bool $include_driver_info Include driver data (required)
+     * @param bool $include_activity_communication Include Communication Settings (required)
+     * @param bool $include_activity_links Include Link Data (required)
      * @throws \Bumbal\Client\ApiException on non-2xx response
      * @return array of \Bumbal\Client\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info)
+    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -341,6 +345,14 @@ class ActivityApi
         // verify the required parameter 'include_driver_info' is set
         if ($include_driver_info === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_driver_info when calling retrieveActivity');
+        }
+        // verify the required parameter 'include_activity_communication' is set
+        if ($include_activity_communication === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_activity_communication when calling retrieveActivity');
+        }
+        // verify the required parameter 'include_activity_links' is set
+        if ($include_activity_links === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_activity_links when calling retrieveActivity');
         }
         // parse inputs
         $resourcePath = "/activity/{activityId}";
@@ -385,6 +397,14 @@ class ActivityApi
         // query params
         if ($include_driver_info !== null) {
             $queryParams['include_driver_info'] = $this->apiClient->getSerializer()->toQueryValue($include_driver_info);
+        }
+        // query params
+        if ($include_activity_communication !== null) {
+            $queryParams['include_activity_communication'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_communication);
+        }
+        // query params
+        if ($include_activity_links !== null) {
+            $queryParams['include_activity_links'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_links);
         }
         // path params
         if ($activity_id !== null) {

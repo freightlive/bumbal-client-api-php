@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -73,7 +73,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'bool',
         'include_time_slot_tags' => 'bool',
         'include_route_info' => 'bool',
-        'include_driver_info' => 'bool'
+        'include_driver_info' => 'bool',
+        'include_activity_communication' => 'bool',
+        'include_activity_links' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -93,7 +95,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'include_time_slots',
         'include_time_slot_tags' => 'include_time_slot_tags',
         'include_route_info' => 'include_route_info',
-        'include_driver_info' => 'include_driver_info'
+        'include_driver_info' => 'include_driver_info',
+        'include_activity_communication' => 'include_activity_communication',
+        'include_activity_links' => 'include_activity_links'
     ];
 
 
@@ -109,7 +113,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'setIncludeTimeSlots',
         'include_time_slot_tags' => 'setIncludeTimeSlotTags',
         'include_route_info' => 'setIncludeRouteInfo',
-        'include_driver_info' => 'setIncludeDriverInfo'
+        'include_driver_info' => 'setIncludeDriverInfo',
+        'include_activity_communication' => 'setIncludeActivityCommunication',
+        'include_activity_links' => 'setIncludeActivityLinks'
     ];
 
 
@@ -125,7 +131,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'getIncludeTimeSlots',
         'include_time_slot_tags' => 'getIncludeTimeSlotTags',
         'include_route_info' => 'getIncludeRouteInfo',
-        'include_driver_info' => 'getIncludeDriverInfo'
+        'include_driver_info' => 'getIncludeDriverInfo',
+        'include_activity_communication' => 'getIncludeActivityCommunication',
+        'include_activity_links' => 'getIncludeActivityLinks'
     ];
 
     public static function attributeMap()
@@ -167,6 +175,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
+        $this->container['include_activity_communication'] = isset($data['include_activity_communication']) ? $data['include_activity_communication'] : null;
+        $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
     }
 
     /**
@@ -356,6 +366,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeDriverInfo($include_driver_info)
     {
         $this->container['include_driver_info'] = $include_driver_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_communication
+     * @return bool
+     */
+    public function getIncludeActivityCommunication()
+    {
+        return $this->container['include_activity_communication'];
+    }
+
+    /**
+     * Sets include_activity_communication
+     * @param bool $include_activity_communication
+     * @return $this
+     */
+    public function setIncludeActivityCommunication($include_activity_communication)
+    {
+        $this->container['include_activity_communication'] = $include_activity_communication;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_links
+     * @return bool
+     */
+    public function getIncludeActivityLinks()
+    {
+        return $this->container['include_activity_links'];
+    }
+
+    /**
+     * Sets include_activity_links
+     * @param bool $include_activity_links
+     * @return $this
+     */
+    public function setIncludeActivityLinks($include_activity_links)
+    {
+        $this->container['include_activity_links'] = $include_activity_links;
 
         return $this;
     }

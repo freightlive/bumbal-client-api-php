@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -98,7 +98,9 @@ class ActivityModel implements ArrayAccess
         'address' => '\Bumbal\Client\Model\AddressModel',
         'tags' => '\Bumbal\Client\Model\TagModel[]',
         'package_lines' => '\Bumbal\Client\Model\PackageLineModel[]',
-        'time_slots' => '\Bumbal\Client\Model\TimeSlotModel[]'
+        'time_slots' => '\Bumbal\Client\Model\TimeSlotModel[]',
+        'links' => '\Bumbal\Client\Model\LinkModel[]',
+        'communication' => '\Bumbal\Client\Model\CommunicationModel'
     ];
 
     public static function swaggerTypes()
@@ -143,7 +145,9 @@ class ActivityModel implements ArrayAccess
         'address' => 'address',
         'tags' => 'tags',
         'package_lines' => 'package_lines',
-        'time_slots' => 'time_slots'
+        'time_slots' => 'time_slots',
+        'links' => 'links',
+        'communication' => 'communication'
     ];
 
 
@@ -184,7 +188,9 @@ class ActivityModel implements ArrayAccess
         'address' => 'setAddress',
         'tags' => 'setTags',
         'package_lines' => 'setPackageLines',
-        'time_slots' => 'setTimeSlots'
+        'time_slots' => 'setTimeSlots',
+        'links' => 'setLinks',
+        'communication' => 'setCommunication'
     ];
 
 
@@ -225,7 +231,9 @@ class ActivityModel implements ArrayAccess
         'address' => 'getAddress',
         'tags' => 'getTags',
         'package_lines' => 'getPackageLines',
-        'time_slots' => 'getTimeSlots'
+        'time_slots' => 'getTimeSlots',
+        'links' => 'getLinks',
+        'communication' => 'getCommunication'
     ];
 
     public static function attributeMap()
@@ -338,6 +346,8 @@ class ActivityModel implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
     }
 
     /**
@@ -1096,6 +1106,48 @@ class ActivityModel implements ArrayAccess
     public function setTimeSlots($time_slots)
     {
         $this->container['time_slots'] = $time_slots;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \Bumbal\Client\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \Bumbal\Client\Model\LinkModel[] $links
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets communication
+     * @return \Bumbal\Client\Model\CommunicationModel
+     */
+    public function getCommunication()
+    {
+        return $this->container['communication'];
+    }
+
+    /**
+     * Sets communication
+     * @param \Bumbal\Client\Model\CommunicationModel $communication
+     * @return $this
+     */
+    public function setCommunication($communication)
+    {
+        $this->container['communication'] = $communication;
 
         return $this;
     }

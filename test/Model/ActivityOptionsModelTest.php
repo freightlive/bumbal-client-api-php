@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -155,6 +155,22 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_driver_info"
      */
     public function testPropertyIncludeDriverInfo()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_activity_communication"
+     */
+    public function testPropertyIncludeActivityCommunication()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_activity_links"
+     */
+    public function testPropertyIncludeActivityLinks()
     {
 
     }

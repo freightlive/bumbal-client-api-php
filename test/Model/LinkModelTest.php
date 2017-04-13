@@ -1,6 +1,6 @@
 <?php
 /**
- * PackageLineModelTest
+ * LinkModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace Bumbal\Client;
 
 /**
- * PackageLineModelTest Class Doc Comment
+ * LinkModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PackageLineModel
+// * @description LinkModel
 /**
  * @package     Bumbal\Client
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PackageLineModelTest extends \PHPUnit_Framework_TestCase
+class LinkModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PackageLineModel"
+     * Test "LinkModel"
      */
-    public function testPackageLineModel()
+    public function testLinkModel()
     {
 
     }
@@ -104,73 +104,49 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "nr"
+     * Test attribute "link_id"
      */
-    public function testPropertyNr()
+    public function testPropertyLinkId()
     {
 
     }
 
     /**
-     * Test attribute "package_type"
+     * Test attribute "object_type"
      */
-    public function testPropertyPackageType()
+    public function testPropertyObjectType()
     {
 
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "object_id"
      */
-    public function testPropertyDescription()
+    public function testPropertyObjectId()
     {
 
     }
 
     /**
-     * Test attribute "nr_of_packages"
+     * Test attribute "provider_id"
      */
-    public function testPropertyNrOfPackages()
+    public function testPropertyProviderId()
     {
 
     }
 
     /**
-     * Test attribute "length"
+     * Test attribute "provider_reference"
      */
-    public function testPropertyLength()
+    public function testPropertyProviderReference()
     {
 
     }
 
     /**
-     * Test attribute "width"
+     * Test attribute "provider_name"
      */
-    public function testPropertyWidth()
-    {
-
-    }
-
-    /**
-     * Test attribute "height"
-     */
-    public function testPropertyHeight()
-    {
-
-    }
-
-    /**
-     * Test attribute "volume"
-     */
-    public function testPropertyVolume()
-    {
-
-    }
-
-    /**
-     * Test attribute "packagevalue"
-     */
-    public function testPropertyPackagevalue()
+    public function testPropertyProviderName()
     {
 
     }

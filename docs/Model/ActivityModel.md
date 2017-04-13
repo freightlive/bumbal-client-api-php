@@ -36,6 +36,8 @@ Name | Type | Description | Notes
 **tags** | [**\Bumbal\Client\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **package_lines** | [**\Bumbal\Client\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
 **time_slots** | [**\Bumbal\Client\Model\TimeSlotModel[]**](TimeSlotModel.md) |  | [optional] 
+**links** | [**\Bumbal\Client\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**communication** | [**\Bumbal\Client\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

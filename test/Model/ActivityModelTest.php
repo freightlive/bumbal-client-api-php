@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal API v2
+ * Bumbal Client API
  *
  * Bumbal API documentation
  *
@@ -355,6 +355,22 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "time_slots"
      */
     public function testPropertyTimeSlots()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "communication"
+     */
+    public function testPropertyCommunication()
     {
 
     }

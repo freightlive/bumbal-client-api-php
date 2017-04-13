@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **include_time_slot_tags** | **bool** |  | [optional] 
 **include_route_info** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 
+**include_activity_communication** | **bool** |  | [optional] 
+**include_activity_links** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
