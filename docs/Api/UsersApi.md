@@ -1,4 +1,4 @@
-# Bumbal\Client\UsersApi
+# BumbalClient\UsersApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -21,7 +21,7 @@ Retrieve List of Userss
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\UsersApi();
+$api_instance = new BumbalClient\Api\UsersApi();
 $arguments = new \Bumbal\Client\Model\UsersRetrieveListArguments(); // \Bumbal\Client\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
 
 try {
@@ -66,7 +66,7 @@ Retrieve an Users
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\UsersApi();
+$api_instance = new BumbalClient\Api\UsersApi();
 $users_id = 789; // int | ID of users to retrieve
 
 try {
@@ -111,7 +111,7 @@ Update a Setting
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\UsersApi();
+$api_instance = new BumbalClient\Api\UsersApi();
 $users_id = 789; // int | ID of users to update
 
 try {

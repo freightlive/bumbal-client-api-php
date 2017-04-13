@@ -1,4 +1,4 @@
-# Bumbal\Client\RouteApi
+# BumbalClient\RouteApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RouteApi();
+$api_instance = new BumbalClient\Api\RouteApi();
 $body = new \Bumbal\Client\Model\RouteModel(); // \Bumbal\Client\Model\RouteModel | Route object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete an Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RouteApi();
+$api_instance = new BumbalClient\Api\RouteApi();
 $route_id = 789; // int | ID of route to update
 $cancel_activities = true; // bool | Cancel activities on Route
 
@@ -115,7 +115,7 @@ Retrieve List of Routes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RouteApi();
+$api_instance = new BumbalClient\Api\RouteApi();
 $arguments = new \Bumbal\Client\Model\RouteRetrieveListArguments(); // \Bumbal\Client\Model\RouteRetrieveListArguments | Route RetrieveList Arguments
 
 try {
@@ -160,7 +160,7 @@ Retrieve an Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RouteApi();
+$api_instance = new BumbalClient\Api\RouteApi();
 $route_id = 789; // int | ID of route to retrieve
 $include_address_info = true; // bool | Include Address info
 $include_route_status = true; // bool | Include Status Name
@@ -217,7 +217,7 @@ Update an Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RouteApi();
+$api_instance = new BumbalClient\Api\RouteApi();
 $route_id = 789; // int | ID of route to update
 
 try {

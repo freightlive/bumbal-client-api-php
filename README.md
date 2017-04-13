@@ -56,7 +56,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $body = new \Bumbal\Client\Model\ActivityModel(); // \Bumbal\Client\Model\ActivityModel | Activity object
 
 try {

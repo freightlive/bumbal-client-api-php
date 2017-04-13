@@ -1,4 +1,4 @@
-# Bumbal\Client\EquipmentApi
+# BumbalClient\EquipmentApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\EquipmentApi();
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $body = new \Bumbal\Client\Model\EquipmentModel(); // \Bumbal\Client\Model\EquipmentModel | Equipment object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete an Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\EquipmentApi();
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
 
 try {
@@ -113,7 +113,7 @@ Retrieve an Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\EquipmentApi();
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to retrieve
 
 try {
@@ -158,7 +158,7 @@ Retrieve List of Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\EquipmentApi();
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $arguments = new \Bumbal\Client\Model\EquipmentRetrieveListArguments(); // \Bumbal\Client\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
 
 try {
@@ -203,7 +203,7 @@ Update an Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\EquipmentApi();
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
 
 try {

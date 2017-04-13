@@ -1,4 +1,4 @@
-# Bumbal\Client\PartyApi
+# BumbalClient\PartyApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Party
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PartyApi();
+$api_instance = new BumbalClient\Api\PartyApi();
 $body = new \Bumbal\Client\Model\PartyModel(); // \Bumbal\Client\Model\PartyModel | Party object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete an Party
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PartyApi();
+$api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to update
 
 try {
@@ -113,7 +113,7 @@ Retrieve List of Parties
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PartyApi();
+$api_instance = new BumbalClient\Api\PartyApi();
 $arguments = new \Bumbal\Client\Model\PartyRetrieveListArguments(); // \Bumbal\Client\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
 
 try {
@@ -158,7 +158,7 @@ Retrieve an Party
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PartyApi();
+$api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to retrieve
 
 try {
@@ -203,7 +203,7 @@ Update an Party
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PartyApi();
+$api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to update
 
 try {

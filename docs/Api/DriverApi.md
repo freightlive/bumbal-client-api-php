@@ -1,4 +1,4 @@
-# Bumbal\Client\DriverApi
+# BumbalClient\DriverApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -19,7 +19,7 @@ Retrieve List of Drivers
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\DriverApi();
+$api_instance = new BumbalClient\Api\DriverApi();
 $arguments = new \Bumbal\Client\Model\DriverRetrieveListArguments(); // \Bumbal\Client\Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
 
 try {

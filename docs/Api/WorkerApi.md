@@ -1,4 +1,4 @@
-# Bumbal\Client\WorkerApi
+# BumbalClient\WorkerApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -19,7 +19,7 @@ Add Action To Worker Stack
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\WorkerApi();
+$api_instance = new BumbalClient\Api\WorkerApi();
 
 try {
     $result = $api_instance->addActionToWorkerStack();

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Bumbal\Client
+ * @package  BumbalClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -38,18 +38,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Bumbal\Client;
+namespace BumbalClient;
 
-use \Bumbal\Client\Configuration;
-use \Bumbal\Client\ApiClient;
-use \Bumbal\Client\ApiException;
-use \Bumbal\Client\ObjectSerializer;
+use \BumbalClient\Configuration;
+use \BumbalClient\ApiClient;
+use \BumbalClient\ApiException;
+use \BumbalClient\ObjectSerializer;
 
 /**
  * DriverApiTest Class Doc Comment
  *
  * @category Class
- * @package  Bumbal\Client
+ * @package  BumbalClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen

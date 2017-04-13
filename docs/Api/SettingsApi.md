@@ -1,4 +1,4 @@
-# Bumbal\Client\SettingsApi
+# BumbalClient\SettingsApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -21,7 +21,7 @@ Retrieve List of Settingss
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\SettingsApi();
+$api_instance = new BumbalClient\Api\SettingsApi();
 $arguments = new \Bumbal\Client\Model\SettingsRetrieveListArguments(); // \Bumbal\Client\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
@@ -66,7 +66,7 @@ Retrieve an Settings
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\SettingsApi();
+$api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to retrieve
 
 try {
@@ -111,7 +111,7 @@ Update a Setting
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\SettingsApi();
+$api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to update
 
 try {

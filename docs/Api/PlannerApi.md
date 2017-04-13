@@ -1,4 +1,4 @@
-# Bumbal\Client\PlannerApi
+# BumbalClient\PlannerApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add Activities To Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PlannerApi();
+$api_instance = new BumbalClient\Api\PlannerApi();
 
 try {
     $result = $api_instance->plannerAddActivitiesToRoute();
@@ -64,7 +64,7 @@ Calculate Drive Time
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PlannerApi();
+$api_instance = new BumbalClient\Api\PlannerApi();
 
 try {
     $result = $api_instance->plannerCalculateDriveTime();
@@ -105,7 +105,7 @@ Change Activity Sequence
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PlannerApi();
+$api_instance = new BumbalClient\Api\PlannerApi();
 
 try {
     $result = $api_instance->plannerChangeActivitySequence();
@@ -146,7 +146,7 @@ Lock Activities on Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PlannerApi();
+$api_instance = new BumbalClient\Api\PlannerApi();
 
 try {
     $result = $api_instance->plannerLockActivities();
@@ -187,7 +187,7 @@ Remove Activities From Route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\PlannerApi();
+$api_instance = new BumbalClient\Api\PlannerApi();
 
 try {
     $result = $api_instance->plannerRemoveActivitiesFromRoute();

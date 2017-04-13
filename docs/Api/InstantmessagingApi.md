@@ -1,4 +1,4 @@
-# Bumbal\Client\InstantmessagingApi
+# BumbalClient\InstantmessagingApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -21,7 +21,7 @@ List conversations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\InstantmessagingApi();
+$api_instance = new BumbalClient\Api\InstantmessagingApi();
 
 try {
     $result = $api_instance->instantMessagingList();
@@ -62,7 +62,7 @@ Post a message to some one
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\InstantmessagingApi();
+$api_instance = new BumbalClient\Api\InstantmessagingApi();
 
 try {
     $result = $api_instance->instantMessagingPost();
@@ -103,7 +103,7 @@ Retrieve Conversation
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\InstantmessagingApi();
+$api_instance = new BumbalClient\Api\InstantmessagingApi();
 
 try {
     $result = $api_instance->instantMessagingRetrieveConversation();

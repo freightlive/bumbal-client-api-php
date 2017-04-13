@@ -1,4 +1,4 @@
-# Bumbal\Client\AssignmentApi
+# BumbalClient\AssignmentApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Assignment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AssignmentApi();
+$api_instance = new BumbalClient\Api\AssignmentApi();
 $body = new \Bumbal\Client\Model\AssignmentModel(); // \Bumbal\Client\Model\AssignmentModel | Assignment object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete an Assignment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AssignmentApi();
+$api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to update
 
 try {
@@ -113,7 +113,7 @@ Retrieve an Assignment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AssignmentApi();
+$api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to retrieve
 
 try {
@@ -158,7 +158,7 @@ Retrieve List of Assignments
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AssignmentApi();
+$api_instance = new BumbalClient\Api\AssignmentApi();
 $arguments = new \Bumbal\Client\Model\AssignmentRetrieveListArguments(); // \Bumbal\Client\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
 
 try {
@@ -203,7 +203,7 @@ Update an Assignment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AssignmentApi();
+$api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to update
 $body = new \Bumbal\Client\Model\AssignmentModel(); // \Bumbal\Client\Model\AssignmentModel | Assignment object that needs to be updated
 

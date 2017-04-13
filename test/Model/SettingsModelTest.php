@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Bumbal\Client
+ * @package  BumbalClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -39,7 +39,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Bumbal\Client;
+namespace BumbalClient;
 
 /**
  * SettingsModelTest Class Doc Comment
@@ -47,7 +47,7 @@ namespace Bumbal\Client;
  * @category    Class */
 // * @description SettingsModel
 /**
- * @package     Bumbal\Client
+ * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen

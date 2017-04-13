@@ -1,4 +1,4 @@
-# Bumbal\Client\AddressappliedApi
+# BumbalClient\AddressappliedApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -20,7 +20,7 @@ Retrieve an Applied Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressappliedApi();
+$api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of the applied address to retrieve
 
 try {
@@ -65,7 +65,7 @@ Update an Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressappliedApi();
+$api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of address to update
 
 try {

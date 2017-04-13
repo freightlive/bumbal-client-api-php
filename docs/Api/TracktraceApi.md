@@ -1,4 +1,4 @@
-# Bumbal\Client\TracktraceApi
+# BumbalClient\TracktraceApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -20,7 +20,7 @@ Retrieve Activity Status
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TracktraceApi();
+$api_instance = new BumbalClient\Api\TracktraceApi();
 $activity_id = 789; // int | ID of the activity to retrieve
 
 try {
@@ -65,7 +65,7 @@ Retrieve Route Status
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TracktraceApi();
+$api_instance = new BumbalClient\Api\TracktraceApi();
 $route_id = 789; // int | ID of the route to retrieve
 
 try {

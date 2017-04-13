@@ -1,4 +1,4 @@
-# Bumbal\Client\AutoplanApi
+# BumbalClient\AutoplanApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -21,7 +21,7 @@ Check Progress on a Auto Plan Process
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AutoplanApi();
+$api_instance = new BumbalClient\Api\AutoplanApi();
 $process_uuid = 789; // int | UUID of the process to check the progress of
 
 try {
@@ -66,7 +66,7 @@ Finish a Auto Plan Process
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AutoplanApi();
+$api_instance = new BumbalClient\Api\AutoplanApi();
 
 try {
     $result = $api_instance->autoPlanFinish();
@@ -107,7 +107,7 @@ Start a Auto Plan Process
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AutoplanApi();
+$api_instance = new BumbalClient\Api\AutoplanApi();
 
 try {
     $result = $api_instance->autoPlanStart();

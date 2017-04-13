@@ -1,4 +1,4 @@
-# Bumbal\Client\AddressApi
+# BumbalClient\AddressApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressApi();
+$api_instance = new BumbalClient\Api\AddressApi();
 $body = new \Bumbal\Client\Model\AddressModel(); // \Bumbal\Client\Model\AddressModel | Address object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete an Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressApi();
+$api_instance = new BumbalClient\Api\AddressApi();
 $address_id = 789; // int | ID of address to update
 
 try {
@@ -113,7 +113,7 @@ Retrieve an Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressApi();
+$api_instance = new BumbalClient\Api\AddressApi();
 $address_id = 789; // int | ID of address to retrieve
 
 try {
@@ -158,7 +158,7 @@ Retrieve List of Addresses
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressApi();
+$api_instance = new BumbalClient\Api\AddressApi();
 $arguments = new \Bumbal\Client\Model\AddressRetrieveListArguments(); // \Bumbal\Client\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
 
 try {
@@ -203,7 +203,7 @@ Update an Address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\AddressApi();
+$api_instance = new BumbalClient\Api\AddressApi();
 $address_id = 789; // int | ID of address to update
 
 try {

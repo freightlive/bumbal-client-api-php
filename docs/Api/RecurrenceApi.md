@@ -1,4 +1,4 @@
-# Bumbal\Client\RecurrenceApi
+# BumbalClient\RecurrenceApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -22,7 +22,7 @@ Delete an Recurrence
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RecurrenceApi();
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
 
 try {
@@ -67,7 +67,7 @@ Retrieve List of Recurrences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RecurrenceApi();
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $arguments = new \Bumbal\Client\Model\RecurrenceRetrieveListArguments(); // \Bumbal\Client\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
 
 try {
@@ -112,7 +112,7 @@ Retrieve an Recurrence
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RecurrenceApi();
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to retrieve
 
 try {
@@ -157,7 +157,7 @@ Update an Recurrence
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\RecurrenceApi();
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
 
 try {

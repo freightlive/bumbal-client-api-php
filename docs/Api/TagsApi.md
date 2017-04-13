@@ -1,4 +1,4 @@
-# Bumbal\Client\TagsApi
+# BumbalClient\TagsApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Add a new Tag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TagsApi();
+$api_instance = new BumbalClient\Api\TagsApi();
 $body = new \Bumbal\Client\Model\TagModel(); // \Bumbal\Client\Model\TagModel | Tag object that needs to be created
 
 try {
@@ -68,7 +68,7 @@ Delete a Tag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TagsApi();
+$api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to delete
 
 try {
@@ -113,7 +113,7 @@ Retrieve List of Tags
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TagsApi();
+$api_instance = new BumbalClient\Api\TagsApi();
 $arguments = new \Bumbal\Client\Model\TagsRetrieveListArguments(); // \Bumbal\Client\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
 
 try {
@@ -158,7 +158,7 @@ Retrieve an Tag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TagsApi();
+$api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to retrieve
 
 try {
@@ -203,7 +203,7 @@ Update an Tag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\TagsApi();
+$api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to update
 
 try {

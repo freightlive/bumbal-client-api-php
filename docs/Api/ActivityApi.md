@@ -1,4 +1,4 @@
-# Bumbal\Client\ActivityApi
+# BumbalClient\ActivityApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -23,7 +23,7 @@ Create an Activity
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $body = new \Bumbal\Client\Model\ActivityModel(); // \Bumbal\Client\Model\ActivityModel | Activity object
 
 try {
@@ -68,7 +68,7 @@ Delete an activity
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of the activity to delete
 
 try {
@@ -113,7 +113,7 @@ Returns a single activity
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to return
 $include_activity_status = true; // bool | Show the text value of the status
 $include_activity_type_name = true; // bool | Show the text value of the activity type
@@ -178,7 +178,7 @@ Retrieve List of Activities
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $arguments = new \Bumbal\Client\Model\ActivityRetrieveListArguments(); // \Bumbal\Client\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
 
 try {
@@ -223,7 +223,7 @@ Update a activity
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Bumbal\Client\Api\ActivityApi();
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to update
 $body = new \Bumbal\Client\Model\ActivityModel(); // \Bumbal\Client\Model\ActivityModel | Activity object that needs to be updated
 
