@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **instantMessagingList**
-> \Bumbal\Client\Model\ApiResponse instantMessagingList()
+> \BumbalClient\Model\ApiResponse instantMessagingList()
 
 List conversations
 
@@ -37,7 +37,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **instantMessagingPost**
-> \Bumbal\Client\Model\ApiResponse instantMessagingPost()
+> \BumbalClient\Model\ApiResponse instantMessagingPost()
 
 Post a message to some one
 
@@ -78,7 +78,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **instantMessagingRetrieveConversation**
-> \Bumbal\Client\Model\ApiResponse instantMessagingRetrieveConversation()
+> \BumbalClient\Model\ApiResponse instantMessagingRetrieveConversation()
 
 Retrieve Conversation
 
@@ -119,7 +119,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

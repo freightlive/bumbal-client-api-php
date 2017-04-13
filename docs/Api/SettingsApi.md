@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListSettings**
-> \Bumbal\Client\Model\SettingsModel[] retrieveListSettings($arguments)
+> \BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
 
 Retrieve List of Settingss
 
@@ -22,7 +22,7 @@ Retrieve List of Settingss
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
-$arguments = new \Bumbal\Client\Model\SettingsRetrieveListArguments(); // \Bumbal\Client\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
+$arguments = new \BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListSettings($arguments);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\SettingsRetrieveListArguments**](../Model/\Bumbal\Client\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/\BumbalClient\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\SettingsModel[]**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveSettings**
-> \Bumbal\Client\Model\SettingsModel retrieveSettings($settings_id)
+> \BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
 
 Retrieve a Settings
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\SettingsModel**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSettings**
-> \Bumbal\Client\Model\ApiResponse updateSettings($settings_id)
+> \BumbalClient\Model\ApiResponse updateSettings($settings_id)
 
 Update a Settings
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

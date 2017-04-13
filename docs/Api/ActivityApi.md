@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createActivity**
-> \Bumbal\Client\Model\ApiResponse createActivity($body)
+> \BumbalClient\Model\ApiResponse createActivity($body)
 
 Create an Activity
 
@@ -24,7 +24,7 @@ Create an Activity
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \Bumbal\Client\Model\ActivityModel(); // \Bumbal\Client\Model\ActivityModel | Activity object
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
 
 try {
     $result = $api_instance->createActivity($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\ActivityModel**](../Model/\Bumbal\Client\Model\ActivityModel.md)| Activity object | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteActivity**
-> \Bumbal\Client\Model\ApiResponse deleteActivity($activity_id)
+> \BumbalClient\Model\ApiResponse deleteActivity($activity_id)
 
 Delete an activity
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \Bumbal\Client\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links)
 
 Find activity by ID
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ActivityModel**](../Model/ActivityModel.md)
+[**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListActivity**
-> \Bumbal\Client\Model\ActivityModel[] retrieveListActivity($arguments)
+> \BumbalClient\Model\ActivityModel[] retrieveListActivity($arguments)
 
 Retrieve List of Activities
 
@@ -179,7 +179,7 @@ Retrieve List of Activities
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$arguments = new \Bumbal\Client\Model\ActivityRetrieveListArguments(); // \Bumbal\Client\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
+$arguments = new \BumbalClient\Model\ActivityRetrieveListArguments(); // \BumbalClient\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListActivity($arguments);
@@ -194,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\ActivityRetrieveListArguments**](../Model/\Bumbal\Client\Model\ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/\BumbalClient\Model\ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\ActivityModel[]**](../Model/ActivityModel.md)
+[**\BumbalClient\Model\ActivityModel[]**](../Model/ActivityModel.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateActivity**
-> \Bumbal\Client\Model\ApiResponse updateActivity($activity_id, $body)
+> \BumbalClient\Model\ApiResponse updateActivity($activity_id, $body)
 
 Update a activity
 
@@ -225,7 +225,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to update
-$body = new \Bumbal\Client\Model\ActivityModel(); // \Bumbal\Client\Model\ActivityModel | Activity object that needs to be updated
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object that needs to be updated
 
 try {
     $result = $api_instance->updateActivity($activity_id, $body);
@@ -241,11 +241,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of activity to update |
- **body** | [**\Bumbal\Client\Model\ActivityModel**](../Model/\Bumbal\Client\Model\ActivityModel.md)| Activity object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object that needs to be updated | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

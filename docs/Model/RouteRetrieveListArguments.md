@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Bumbal\Client\Model\RouteOptionsModel**](RouteOptionsModel.md) |  | [optional] 
-**filters** | [**\Bumbal\Client\Model\RouteFiltersModel**](RouteFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\RouteOptionsModel**](RouteOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\RouteFiltersModel**](RouteFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

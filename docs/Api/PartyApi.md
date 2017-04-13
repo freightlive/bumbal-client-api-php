@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createParty**
-> \Bumbal\Client\Model\ApiResponse createParty($body)
+> \BumbalClient\Model\ApiResponse createParty($body)
 
 Add a new Party
 
@@ -24,7 +24,7 @@ Add a new Party
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\PartyApi();
-$body = new \Bumbal\Client\Model\PartyModel(); // \Bumbal\Client\Model\PartyModel | Party object that needs to be created
+$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object that needs to be created
 
 try {
     $result = $api_instance->createParty($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\PartyModel**](../Model/\Bumbal\Client\Model\PartyModel.md)| Party object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\PartyModel**](../Model/\BumbalClient\Model\PartyModel.md)| Party object that needs to be created | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteParty**
-> \Bumbal\Client\Model\ApiResponse deleteParty($party_id)
+> \BumbalClient\Model\ApiResponse deleteParty($party_id)
 
 Delete an Party
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListParty**
-> \Bumbal\Client\Model\PartyModel[] retrieveListParty($arguments)
+> \BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
 
 Retrieve List of Parties
 
@@ -114,7 +114,7 @@ Retrieve List of Parties
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\PartyApi();
-$arguments = new \Bumbal\Client\Model\PartyRetrieveListArguments(); // \Bumbal\Client\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
+$arguments = new \BumbalClient\Model\PartyRetrieveListArguments(); // \BumbalClient\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListParty($arguments);
@@ -129,11 +129,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\PartyRetrieveListArguments**](../Model/\Bumbal\Client\Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/\BumbalClient\Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\PartyModel[]**](../Model/PartyModel.md)
+[**\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveParty**
-> \Bumbal\Client\Model\PartyModel retrieveParty($party_id)
+> \BumbalClient\Model\PartyModel retrieveParty($party_id)
 
 Retrieve a Party
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\PartyModel**](../Model/PartyModel.md)
+[**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateParty**
-> \Bumbal\Client\Model\ApiResponse updateParty($party_id)
+> \BumbalClient\Model\ApiResponse updateParty($party_id)
 
 Update a Party
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

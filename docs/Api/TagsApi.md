@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createTag**
-> \Bumbal\Client\Model\ApiResponse createTag($body)
+> \BumbalClient\Model\ApiResponse createTag($body)
 
 Add a new Tag
 
@@ -24,7 +24,7 @@ Add a new Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\TagsApi();
-$body = new \Bumbal\Client\Model\TagModel(); // \Bumbal\Client\Model\TagModel | Tag object that needs to be created
+$body = new \BumbalClient\Model\TagModel(); // \BumbalClient\Model\TagModel | Tag object that needs to be created
 
 try {
     $result = $api_instance->createTag($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\TagModel**](../Model/\Bumbal\Client\Model\TagModel.md)| Tag object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TagModel**](../Model/\BumbalClient\Model\TagModel.md)| Tag object that needs to be created | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTag**
-> \Bumbal\Client\Model\ApiResponse deleteTag($tag_id)
+> \BumbalClient\Model\ApiResponse deleteTag($tag_id)
 
 Delete a Tag
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTags**
-> \Bumbal\Client\Model\TagModel[] retrieveListTags($arguments)
+> \BumbalClient\Model\TagModel[] retrieveListTags($arguments)
 
 Retrieve List of Tags
 
@@ -114,7 +114,7 @@ Retrieve List of Tags
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\TagsApi();
-$arguments = new \Bumbal\Client\Model\TagsRetrieveListArguments(); // \Bumbal\Client\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
+$arguments = new \BumbalClient\Model\TagsRetrieveListArguments(); // \BumbalClient\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListTags($arguments);
@@ -129,11 +129,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\TagsRetrieveListArguments**](../Model/\Bumbal\Client\Model\TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\TagsRetrieveListArguments**](../Model/\BumbalClient\Model\TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\TagModel[]**](../Model/TagModel.md)
+[**\BumbalClient\Model\TagModel[]**](../Model/TagModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTag**
-> \Bumbal\Client\Model\TagModel retrieveTag($tag_id)
+> \BumbalClient\Model\TagModel retrieveTag($tag_id)
 
 Retrieve a Tag
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\TagModel**](../Model/TagModel.md)
+[**\BumbalClient\Model\TagModel**](../Model/TagModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTag**
-> \Bumbal\Client\Model\ApiResponse updateTag($tag_id)
+> \BumbalClient\Model\ApiResponse updateTag($tag_id)
 
 Update a Tag
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

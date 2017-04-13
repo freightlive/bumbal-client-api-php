@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListDriver**
-> \Bumbal\Client\Model\DriverModel[] retrieveListDriver($arguments)
+> \BumbalClient\Model\DriverModel[] retrieveListDriver($arguments)
 
 Retrieve List of Drivers
 
@@ -20,7 +20,7 @@ Retrieve List of Drivers
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\DriverApi();
-$arguments = new \Bumbal\Client\Model\DriverRetrieveListArguments(); // \Bumbal\Client\Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
+$arguments = new \BumbalClient\Model\DriverRetrieveListArguments(); // \BumbalClient\Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListDriver($arguments);
@@ -35,11 +35,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\DriverRetrieveListArguments**](../Model/\Bumbal\Client\Model\DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\DriverRetrieveListArguments**](../Model/\BumbalClient\Model\DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\DriverModel[]**](../Model/DriverModel.md)
+[**\BumbalClient\Model\DriverModel[]**](../Model/DriverModel.md)
 
 ### Authorization
 

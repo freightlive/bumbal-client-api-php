@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveAddressApplied**
-> \Bumbal\Client\Model\AddressAppliedModel retrieveAddressApplied($address_id)
+> \BumbalClient\Model\AddressAppliedModel retrieveAddressApplied($address_id)
 
 Retrieve an Applied Address
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
+[**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddressApplied**
-> \Bumbal\Client\Model\ApiResponse updateAddressApplied($address_id)
+> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id)
 
 Update a Address
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

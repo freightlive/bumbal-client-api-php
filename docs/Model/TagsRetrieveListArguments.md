@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Bumbal\Client\Model\TagsOptionsModel**](TagsOptionsModel.md) |  | [optional] 
-**filters** | [**\Bumbal\Client\Model\TagsFiltersModel**](TagsFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\TagsOptionsModel**](TagsOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\TagsFiltersModel**](TagsFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

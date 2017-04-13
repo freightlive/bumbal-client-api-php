@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveActivityStatus**
-> \Bumbal\Client\Model\ApiResponse retrieveActivityStatus($activity_id)
+> \BumbalClient\Model\ApiResponse retrieveActivityStatus($activity_id)
 
 Retrieve Activity Status
 
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRouteStatus**
-> \Bumbal\Client\Model\ApiResponse retrieveRouteStatus($route_id)
+> \BumbalClient\Model\ApiResponse retrieveRouteStatus($route_id)
 
 Retrieve Route Status
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

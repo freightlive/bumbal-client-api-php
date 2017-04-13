@@ -14,8 +14,8 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src/Bumbal/Client/API</directory>
-            <directory suffix=".php">./src/Bumbal/Client/Model</directory>
+            <directory suffix=".php">./src/API</directory>
+            <directory suffix=".php">./src/Model</directory>
         </whitelist>
     </filter>
 </phpunit>

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteRecurrence**
-> \Bumbal\Client\Model\ApiResponse deleteRecurrence($recurrence_id)
+> \BumbalClient\Model\ApiResponse deleteRecurrence($recurrence_id)
 
 Delete an Recurrence
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRecurrence**
-> \Bumbal\Client\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
+> \BumbalClient\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
 
 Retrieve List of Recurrences
 
@@ -68,7 +68,7 @@ Retrieve List of Recurrences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\RecurrenceApi();
-$arguments = new \Bumbal\Client\Model\RecurrenceRetrieveListArguments(); // \Bumbal\Client\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
+$arguments = new \BumbalClient\Model\RecurrenceRetrieveListArguments(); // \BumbalClient\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListRecurrence($arguments);
@@ -83,11 +83,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\RecurrenceRetrieveListArguments**](../Model/\Bumbal\Client\Model\RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/\BumbalClient\Model\RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
+[**\BumbalClient\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRecurrence**
-> \Bumbal\Client\Model\RecurrenceModel retrieveRecurrence($recurrence_id)
+> \BumbalClient\Model\RecurrenceModel retrieveRecurrence($recurrence_id)
 
 Retrieve a Recurrence
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\RecurrenceModel**](../Model/RecurrenceModel.md)
+[**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRecurrence**
-> \Bumbal\Client\Model\ApiResponse updateRecurrence($recurrence_id)
+> \BumbalClient\Model\ApiResponse updateRecurrence($recurrence_id)
 
 Update a Recurrence
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

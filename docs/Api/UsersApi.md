@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListUsers**
-> \Bumbal\Client\Model\UsersModel[] retrieveListUsers($arguments)
+> \BumbalClient\Model\UsersModel[] retrieveListUsers($arguments)
 
 Retrieve List of Userss
 
@@ -22,7 +22,7 @@ Retrieve List of Userss
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$arguments = new \Bumbal\Client\Model\UsersRetrieveListArguments(); // \Bumbal\Client\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
+$arguments = new \BumbalClient\Model\UsersRetrieveListArguments(); // \BumbalClient\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListUsers($arguments);
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\UsersRetrieveListArguments**](../Model/\Bumbal\Client\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/\BumbalClient\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\UsersModel[]**](../Model/UsersModel.md)
+[**\BumbalClient\Model\UsersModel[]**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \Bumbal\Client\Model\UsersModel retrieveUsers($users_id)
+> \BumbalClient\Model\UsersModel retrieveUsers($users_id)
 
 Retrieve a Users
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUsers**
-> \Bumbal\Client\Model\ApiResponse updateUsers($users_id)
+> \BumbalClient\Model\ApiResponse updateUsers($users_id)
 
 Update a Users
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

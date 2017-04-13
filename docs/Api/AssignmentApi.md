@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAssignment**
-> \Bumbal\Client\Model\ApiResponse createAssignment($body)
+> \BumbalClient\Model\ApiResponse createAssignment($body)
 
 Add a new Assignment
 
@@ -24,7 +24,7 @@ Add a new Assignment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
-$body = new \Bumbal\Client\Model\AssignmentModel(); // \Bumbal\Client\Model\AssignmentModel | Assignment object that needs to be created
+$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object that needs to be created
 
 try {
     $result = $api_instance->createAssignment($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\AssignmentModel**](../Model/\Bumbal\Client\Model\AssignmentModel.md)| Assignment object that needs to be created |
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object that needs to be created |
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAssignment**
-> \Bumbal\Client\Model\ApiResponse deleteAssignment($assignment_id)
+> \BumbalClient\Model\ApiResponse deleteAssignment($assignment_id)
 
 Delete an Assignment
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAssignment**
-> \Bumbal\Client\Model\AssignmentModel retrieveAssignment($assignment_id)
+> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id)
 
 Retrieve a Assignment
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\AssignmentModel**](../Model/AssignmentModel.md)
+[**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAssignment**
-> \Bumbal\Client\Model\AssignmentModel[] retrieveListAssignment($arguments)
+> \BumbalClient\Model\AssignmentModel[] retrieveListAssignment($arguments)
 
 Retrieve List of Assignments
 
@@ -159,7 +159,7 @@ Retrieve List of Assignments
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
-$arguments = new \Bumbal\Client\Model\AssignmentRetrieveListArguments(); // \Bumbal\Client\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
+$arguments = new \BumbalClient\Model\AssignmentRetrieveListArguments(); // \BumbalClient\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListAssignment($arguments);
@@ -174,11 +174,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\AssignmentRetrieveListArguments**](../Model/\Bumbal\Client\Model\AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/\BumbalClient\Model\AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\AssignmentModel[]**](../Model/AssignmentModel.md)
+[**\BumbalClient\Model\AssignmentModel[]**](../Model/AssignmentModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAssignment**
-> \Bumbal\Client\Model\ApiResponse updateAssignment($assignment_id, $body)
+> \BumbalClient\Model\ApiResponse updateAssignment($assignment_id, $body)
 
 Update a Assignment
 
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to update
-$body = new \Bumbal\Client\Model\AssignmentModel(); // \Bumbal\Client\Model\AssignmentModel | Assignment object that needs to be updated
+$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object that needs to be updated
 
 try {
     $result = $api_instance->updateAssignment($assignment_id, $body);
@@ -221,11 +221,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to update |
- **body** | [**\Bumbal\Client\Model\AssignmentModel**](../Model/\Bumbal\Client\Model\AssignmentModel.md)| Assignment object that needs to be updated |
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object that needs to be updated |
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

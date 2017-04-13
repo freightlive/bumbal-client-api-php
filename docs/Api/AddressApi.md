@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAddress**
-> \Bumbal\Client\Model\ApiResponse createAddress($body)
+> \BumbalClient\Model\ApiResponse createAddress($body)
 
 Add a new Address
 
@@ -24,7 +24,7 @@ Add a new Address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$body = new \Bumbal\Client\Model\AddressModel(); // \Bumbal\Client\Model\AddressModel | Address object that needs to be created
+$body = new \BumbalClient\Model\AddressModel(); // \BumbalClient\Model\AddressModel | Address object that needs to be created
 
 try {
     $result = $api_instance->createAddress($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\AddressModel**](../Model/\Bumbal\Client\Model\AddressModel.md)| Address object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\AddressModel**](../Model/\BumbalClient\Model\AddressModel.md)| Address object that needs to be created | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAddress**
-> \Bumbal\Client\Model\ApiResponse deleteAddress($address_id)
+> \BumbalClient\Model\ApiResponse deleteAddress($address_id)
 
 Delete an Address
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAddress**
-> \Bumbal\Client\Model\AddressModel retrieveAddress($address_id)
+> \BumbalClient\Model\AddressModel retrieveAddress($address_id)
 
 Retrieve a Address
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\AddressModel**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAddress**
-> \Bumbal\Client\Model\AddressModel[] retrieveListAddress($arguments)
+> \BumbalClient\Model\AddressModel[] retrieveListAddress($arguments)
 
 Retrieve List of Addresses
 
@@ -159,7 +159,7 @@ Retrieve List of Addresses
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$arguments = new \Bumbal\Client\Model\AddressRetrieveListArguments(); // \Bumbal\Client\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
+$arguments = new \BumbalClient\Model\AddressRetrieveListArguments(); // \BumbalClient\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListAddress($arguments);
@@ -174,11 +174,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\AddressRetrieveListArguments**](../Model/\Bumbal\Client\Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/\BumbalClient\Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\AddressModel[]**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressModel[]**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddress**
-> \Bumbal\Client\Model\ApiResponse updateAddress($address_id)
+> \BumbalClient\Model\ApiResponse updateAddress($address_id)
 
 Update a Address
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

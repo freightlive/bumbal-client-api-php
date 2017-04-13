@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createEquipment**
-> \Bumbal\Client\Model\ApiResponse createEquipment($body)
+> \BumbalClient\Model\ApiResponse createEquipment($body)
 
 Add a new Equipment
 
@@ -24,7 +24,7 @@ Add a new Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
-$body = new \Bumbal\Client\Model\EquipmentModel(); // \Bumbal\Client\Model\EquipmentModel | Equipment object that needs to be created
+$body = new \BumbalClient\Model\EquipmentModel(); // \BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
 
 try {
     $result = $api_instance->createEquipment($body);
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Bumbal\Client\Model\EquipmentModel**](../Model/\Bumbal\Client\Model\EquipmentModel.md)| Equipment object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/\BumbalClient\Model\EquipmentModel.md)| Equipment object that needs to be created | [optional]
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteEquipment**
-> \Bumbal\Client\Model\ApiResponse deleteEquipment($equipment_id)
+> \BumbalClient\Model\ApiResponse deleteEquipment($equipment_id)
 
 Delete an Equipment
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveEquipment**
-> \Bumbal\Client\Model\EquipmentModel retrieveEquipment($equipment_id)
+> \BumbalClient\Model\EquipmentModel retrieveEquipment($equipment_id)
 
 Retrieve a Equipment
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\EquipmentModel**](../Model/EquipmentModel.md)
+[**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListEquipment**
-> \Bumbal\Client\Model\EquipmentModel[] retrieveListEquipment($arguments)
+> \BumbalClient\Model\EquipmentModel[] retrieveListEquipment($arguments)
 
 Retrieve List of Equipment
 
@@ -159,7 +159,7 @@ Retrieve List of Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
-$arguments = new \Bumbal\Client\Model\EquipmentRetrieveListArguments(); // \Bumbal\Client\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
+$arguments = new \BumbalClient\Model\EquipmentRetrieveListArguments(); // \BumbalClient\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListEquipment($arguments);
@@ -174,11 +174,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Bumbal\Client\Model\EquipmentRetrieveListArguments**](../Model/\Bumbal\Client\Model\EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/\BumbalClient\Model\EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
 
 ### Return type
 
-[**\Bumbal\Client\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
+[**\BumbalClient\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEquipment**
-> \Bumbal\Client\Model\ApiResponse updateEquipment($equipment_id)
+> \BumbalClient\Model\ApiResponse updateEquipment($equipment_id)
 
 Update a Equipment
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Bumbal\Client\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

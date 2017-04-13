@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Bumbal\Client\Model\SettingsOptionsModel**](SettingsOptionsModel.md) |  | [optional] 
-**filters** | [**\Bumbal\Client\Model\SettingsFiltersModel**](SettingsFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\SettingsOptionsModel**](SettingsOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\SettingsFiltersModel**](SettingsFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 
