@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "title" : "Bumbal API",
+    "title" : "Bumbal Client API",
     "description" : "Bumbal API documentation",
     "contact" : {
       "email" : "gerb@bumbal.eu"
@@ -2694,7 +2694,6 @@
       }
     },
     "CommunicationModel" : {
-      "required" : [ "id" ],
       "properties" : {
         "saywhen" : {
           "description" : "Make use of SayWhen",
