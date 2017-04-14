@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal Client API
+ * Bumbal Client Api
  *
  * Bumbal API documentation
  *

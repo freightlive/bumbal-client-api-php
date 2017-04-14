@@ -12,7 +12,7 @@
  */
 
 /**
- * Bumbal Client API
+ * Bumbal Client Api
  *
  * Bumbal API documentation
  *
@@ -75,7 +75,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'bool',
         'include_driver_info' => 'bool',
         'include_activity_communication' => 'bool',
-        'include_activity_links' => 'bool'
+        'include_activity_links' => 'bool',
+        'include_packagelines_info' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -97,7 +98,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'include_route_info',
         'include_driver_info' => 'include_driver_info',
         'include_activity_communication' => 'include_activity_communication',
-        'include_activity_links' => 'include_activity_links'
+        'include_activity_links' => 'include_activity_links',
+        'include_packagelines_info' => 'include_packagelines_info'
     ];
 
 
@@ -115,7 +117,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'setIncludeRouteInfo',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_activity_communication' => 'setIncludeActivityCommunication',
-        'include_activity_links' => 'setIncludeActivityLinks'
+        'include_activity_links' => 'setIncludeActivityLinks',
+        'include_packagelines_info' => 'setIncludePackagelinesInfo'
     ];
 
 
@@ -133,7 +136,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'getIncludeRouteInfo',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_activity_communication' => 'getIncludeActivityCommunication',
-        'include_activity_links' => 'getIncludeActivityLinks'
+        'include_activity_links' => 'getIncludeActivityLinks',
+        'include_packagelines_info' => 'getIncludePackagelinesInfo'
     ];
 
     public static function attributeMap()
@@ -177,6 +181,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_activity_communication'] = isset($data['include_activity_communication']) ? $data['include_activity_communication'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
+        $this->container['include_packagelines_info'] = isset($data['include_packagelines_info']) ? $data['include_packagelines_info'] : null;
     }
 
     /**
@@ -408,6 +413,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityLinks($include_activity_links)
     {
         $this->container['include_activity_links'] = $include_activity_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_packagelines_info
+     * @return bool
+     */
+    public function getIncludePackagelinesInfo()
+    {
+        return $this->container['include_packagelines_info'];
+    }
+
+    /**
+     * Sets include_packagelines_info
+     * @param bool $include_packagelines_info
+     * @return $this
+     */
+    public function setIncludePackagelinesInfo($include_packagelines_info)
+    {
+        $this->container['include_packagelines_info'] = $include_packagelines_info;
 
         return $this;
     }
