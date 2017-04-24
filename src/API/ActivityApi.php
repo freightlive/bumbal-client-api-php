@@ -104,7 +104,7 @@ class ActivityApi
     /**
      * Operation createActivity
      *
-     * Create an Activity
+     * Create a new Activity
      *
      * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -119,7 +119,7 @@ class ActivityApi
     /**
      * Operation createActivityWithHttpInfo
      *
-     * Create an Activity
+     * Create a new Activity
      *
      * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response

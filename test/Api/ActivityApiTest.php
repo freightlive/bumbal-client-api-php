@@ -92,7 +92,7 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createActivity
      *
-     * Create an Activity.
+     * Create a new Activity.
      *
      */
     public function testCreateActivity()

@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create an Activity
+[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create a new Activity
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 # **createActivity**
 > \BumbalClient\Model\ApiResponse createActivity($body)
 
-Create an Activity
+Create a new Activity
 
-Create an Activity
+Create a new Activity
 
 ### Example
 ```php
