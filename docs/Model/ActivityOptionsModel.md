@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **include_driver_info** | **bool** |  | [optional] 
 **include_activity_communication** | **bool** |  | [optional] 
 **include_activity_links** | **bool** |  | [optional] 
-**include_packagelines_info** | **bool** |  | [optional] 
+**include_package_lines_info** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -70,7 +70,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'string',
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
-        'status' => 'string',
+        'status_name' => 'string',
         'remarks' => 'string',
         'locked' => 'bool',
         'top_priority' => 'bool',
@@ -117,7 +117,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
-        'status' => 'status',
+        'status_name' => 'status_name',
         'remarks' => 'remarks',
         'locked' => 'locked',
         'top_priority' => 'top_priority',
@@ -160,7 +160,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
-        'status' => 'setStatus',
+        'status_name' => 'setStatusName',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
         'top_priority' => 'setTopPriority',
@@ -203,7 +203,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
-        'status' => 'getStatus',
+        'status_name' => 'getStatusName',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
         'top_priority' => 'getTopPriority',
@@ -251,19 +251,19 @@ class ActivityModel implements ArrayAccess
         return self::$getters;
     }
 
-    const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
-    const ACTIVITY_TYPE_NAME_STOP = 'stop';
     const ACTIVITY_TYPE_NAME_PICKUP = 'pickup';
     const ACTIVITY_TYPE_NAME_DROPOFF = 'dropoff';
-    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
     const ACTIVITY_TYPE_NAME_ROUTE_END = 'route_end';
-    const STATUS_NEW = 'activity_new';
-    const STATUS_ACCEPTED = 'activity_accepted';
-    const STATUS_PLANNED = 'activity_planned';
-    const STATUS_IN_PROGRESS = 'activity_in_progress';
-    const STATUS_EXECUTED = 'activity_executed';
-    const STATUS_CANCELLED = 'activity_cancelled';
-    const STATUS_AWAITING = 'activity_awaiting';
+    const ACTIVITY_TYPE_NAME_STOP = 'stop';
+    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const STATUS_NAME_NEW = 'activity_new';
+    const STATUS_NAME_ACCEPTED = 'activity_accepted';
+    const STATUS_NAME_PLANNED = 'activity_planned';
+    const STATUS_NAME_IN_PROGRESS = 'activity_in_progress';
+    const STATUS_NAME_EXECUTED = 'activity_executed';
+    const STATUS_NAME_CANCELLED = 'activity_cancelled';
+    const STATUS_NAME_AWAITING = 'activity_awaiting';
     
 
     
@@ -274,12 +274,12 @@ class ActivityModel implements ArrayAccess
     public function getActivityTypeNameAllowableValues()
     {
         return [
-            self::ACTIVITY_TYPE_NAME_ROUTE_START,
-            self::ACTIVITY_TYPE_NAME_STOP,
             self::ACTIVITY_TYPE_NAME_PICKUP,
             self::ACTIVITY_TYPE_NAME_DROPOFF,
-            self::ACTIVITY_TYPE_NAME_COMBI,
+            self::ACTIVITY_TYPE_NAME_ROUTE_START,
             self::ACTIVITY_TYPE_NAME_ROUTE_END,
+            self::ACTIVITY_TYPE_NAME_STOP,
+            self::ACTIVITY_TYPE_NAME_COMBI,
         ];
     }
     
@@ -287,16 +287,16 @@ class ActivityModel implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getStatusNameAllowableValues()
     {
         return [
-            self::STATUS_NEW,
-            self::STATUS_ACCEPTED,
-            self::STATUS_PLANNED,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_EXECUTED,
-            self::STATUS_CANCELLED,
-            self::STATUS_AWAITING,
+            self::STATUS_NAME_NEW,
+            self::STATUS_NAME_ACCEPTED,
+            self::STATUS_NAME_PLANNED,
+            self::STATUS_NAME_IN_PROGRESS,
+            self::STATUS_NAME_EXECUTED,
+            self::STATUS_NAME_CANCELLED,
+            self::STATUS_NAME_AWAITING,
         ];
     }
     
@@ -317,7 +317,7 @@ class ActivityModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
@@ -361,20 +361,17 @@ class ActivityModel implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        $allowed_values = ["route_start", "stop", "pickup", "dropoff", "combi", "route_end"];
+        $allowed_values = ["pickup", "dropoff", "route_start", "route_end", "stop", "combi"];
         if (!in_array($this->container['activity_type_name'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'activity_type_name', must be one of 'route_start', 'stop', 'pickup', 'dropoff', 'combi', 'route_end'.";
+            $invalid_properties[] = "invalid value for 'activity_type_name', must be one of 'pickup', 'dropoff', 'route_start', 'route_end', 'stop', 'combi'.";
         }
 
         if ($this->container['activity_type_id'] === null) {
             $invalid_properties[] = "'activity_type_id' can't be null";
         }
-        if ($this->container['status'] === null) {
-            $invalid_properties[] = "'status' can't be null";
-        }
         $allowed_values = ["activity_new", "activity_accepted", "activity_planned", "activity_in_progress", "activity_executed", "activity_cancelled", "activity_awaiting"];
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'.";
+        if (!in_array($this->container['status_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status_name', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'.";
         }
 
         return $invalid_properties;
@@ -391,18 +388,15 @@ class ActivityModel implements ArrayAccess
         if ($this->container['id'] === null) {
             return false;
         }
-        $allowed_values = ["route_start", "stop", "pickup", "dropoff", "combi", "route_end"];
+        $allowed_values = ["pickup", "dropoff", "route_start", "route_end", "stop", "combi"];
         if (!in_array($this->container['activity_type_name'], $allowed_values)) {
             return false;
         }
         if ($this->container['activity_type_id'] === null) {
             return false;
         }
-        if ($this->container['status'] === null) {
-            return false;
-        }
         $allowed_values = ["activity_new", "activity_accepted", "activity_planned", "activity_in_progress", "activity_executed", "activity_cancelled", "activity_awaiting"];
-        if (!in_array($this->container['status'], $allowed_values)) {
+        if (!in_array($this->container['status_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -467,9 +461,9 @@ class ActivityModel implements ArrayAccess
      */
     public function setActivityTypeName($activity_type_name)
     {
-        $allowed_values = array('route_start', 'stop', 'pickup', 'dropoff', 'combi', 'route_end');
+        $allowed_values = array('pickup', 'dropoff', 'route_start', 'route_end', 'stop', 'combi');
         if (!is_null($activity_type_name) && (!in_array($activity_type_name, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'activity_type_name', must be one of 'route_start', 'stop', 'pickup', 'dropoff', 'combi', 'route_end'");
+            throw new \InvalidArgumentException("Invalid value for 'activity_type_name', must be one of 'pickup', 'dropoff', 'route_start', 'route_end', 'stop', 'combi'");
         }
         $this->container['activity_type_name'] = $activity_type_name;
 
@@ -498,26 +492,26 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
-     * Gets status
+     * Gets status_name
      * @return string
      */
-    public function getStatus()
+    public function getStatusName()
     {
-        return $this->container['status'];
+        return $this->container['status_name'];
     }
 
     /**
-     * Sets status
-     * @param string $status Activity Status
+     * Sets status_name
+     * @param string $status_name Activity Status
      * @return $this
      */
-    public function setStatus($status)
+    public function setStatusName($status_name)
     {
         $allowed_values = array('activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting');
-        if ((!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'");
+        if (!is_null($status_name) && (!in_array($status_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'status_name', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'");
         }
-        $this->container['status'] = $status;
+        $this->container['status_name'] = $status_name;
 
         return $this;
     }

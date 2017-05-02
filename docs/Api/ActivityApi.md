@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create a new Activity
+[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create or update an Activity
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 # **createActivity**
 > \BumbalClient\Model\ApiResponse createActivity($body)
 
-Create a new Activity
+Create or update an Activity
 
-Create a new Activity
+Create or update an Activity. If id or links are set in the data, and a corresponding activity   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_packagelines_info)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info)
 
 Find activity by ID
 
@@ -125,10 +125,10 @@ $include_route_info = true; // bool | Include route data
 $include_driver_info = true; // bool | Include driver data
 $include_activity_communication = true; // bool | Include Communication Settings
 $include_activity_links = true; // bool | Include Link Data
-$include_packagelines_info = true; // bool | Include PackageLines
+$include_package_lines_info = true; // bool | Include PackageLines
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_packagelines_info);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
  **include_driver_info** | **bool**| Include driver data |
  **include_activity_communication** | **bool**| Include Communication Settings |
  **include_activity_links** | **bool**| Include Link Data |
- **include_packagelines_info** | **bool**| Include PackageLines |
+ **include_package_lines_info** | **bool**| Include PackageLines |
 
 ### Return type
 

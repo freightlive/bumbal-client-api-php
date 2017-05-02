@@ -76,7 +76,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'bool',
         'include_activity_communication' => 'bool',
         'include_activity_links' => 'bool',
-        'include_packagelines_info' => 'bool'
+        'include_package_lines_info' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -99,7 +99,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'include_driver_info',
         'include_activity_communication' => 'include_activity_communication',
         'include_activity_links' => 'include_activity_links',
-        'include_packagelines_info' => 'include_packagelines_info'
+        'include_package_lines_info' => 'include_package_lines_info'
     ];
 
 
@@ -118,7 +118,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_activity_communication' => 'setIncludeActivityCommunication',
         'include_activity_links' => 'setIncludeActivityLinks',
-        'include_packagelines_info' => 'setIncludePackagelinesInfo'
+        'include_package_lines_info' => 'setIncludePackageLinesInfo'
     ];
 
 
@@ -137,7 +137,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_activity_communication' => 'getIncludeActivityCommunication',
         'include_activity_links' => 'getIncludeActivityLinks',
-        'include_packagelines_info' => 'getIncludePackagelinesInfo'
+        'include_package_lines_info' => 'getIncludePackageLinesInfo'
     ];
 
     public static function attributeMap()
@@ -181,7 +181,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_activity_communication'] = isset($data['include_activity_communication']) ? $data['include_activity_communication'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
-        $this->container['include_packagelines_info'] = isset($data['include_packagelines_info']) ? $data['include_packagelines_info'] : null;
+        $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
     }
 
     /**
@@ -418,22 +418,22 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_packagelines_info
+     * Gets include_package_lines_info
      * @return bool
      */
-    public function getIncludePackagelinesInfo()
+    public function getIncludePackageLinesInfo()
     {
-        return $this->container['include_packagelines_info'];
+        return $this->container['include_package_lines_info'];
     }
 
     /**
-     * Sets include_packagelines_info
-     * @param bool $include_packagelines_info
+     * Sets include_package_lines_info
+     * @param bool $include_package_lines_info
      * @return $this
      */
-    public function setIncludePackagelinesInfo($include_packagelines_info)
+    public function setIncludePackageLinesInfo($include_package_lines_info)
     {
-        $this->container['include_packagelines_info'] = $include_packagelines_info;
+        $this->container['include_package_lines_info'] = $include_package_lines_info;
 
         return $this;
     }

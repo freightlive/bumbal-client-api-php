@@ -75,6 +75,7 @@ class PackageLineModel implements ArrayAccess
         'width' => 'float',
         'height' => 'float',
         'volume' => 'float',
+        'bar_code' => 'float',
         'packagevalue' => 'float'
     ];
 
@@ -97,6 +98,7 @@ class PackageLineModel implements ArrayAccess
         'width' => 'width',
         'height' => 'height',
         'volume' => 'volume',
+        'bar_code' => 'bar_code',
         'packagevalue' => 'packagevalue'
     ];
 
@@ -115,6 +117,7 @@ class PackageLineModel implements ArrayAccess
         'width' => 'setWidth',
         'height' => 'setHeight',
         'volume' => 'setVolume',
+        'bar_code' => 'setBarCode',
         'packagevalue' => 'setPackagevalue'
     ];
 
@@ -133,6 +136,7 @@ class PackageLineModel implements ArrayAccess
         'width' => 'getWidth',
         'height' => 'getHeight',
         'volume' => 'getVolume',
+        'bar_code' => 'getBarCode',
         'packagevalue' => 'getPackagevalue'
     ];
 
@@ -192,6 +196,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
+        $this->container['bar_code'] = isset($data['bar_code']) ? $data['bar_code'] : null;
         $this->container['packagevalue'] = isset($data['packagevalue']) ? $data['packagevalue'] : null;
     }
 
@@ -434,6 +439,27 @@ class PackageLineModel implements ArrayAccess
     public function setVolume($volume)
     {
         $this->container['volume'] = $volume;
+
+        return $this;
+    }
+
+    /**
+     * Gets bar_code
+     * @return float
+     */
+    public function getBarCode()
+    {
+        return $this->container['bar_code'];
+    }
+
+    /**
+     * Sets bar_code
+     * @param float $bar_code
+     * @return $this
+     */
+    public function setBarCode($bar_code)
+    {
+        $this->container['bar_code'] = $bar_code;
 
         return $this;
     }

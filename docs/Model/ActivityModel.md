@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Type of this Activity | [optional] 
 **activity_type_id** | **int** | TypeID of this Activity | 
-**status** | **string** | Activity Status | 
+**status_name** | **string** | Activity Status | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
 **locked** | **bool** | Activity locked on a Route | [optional] 
 **top_priority** | **bool** | Activity has top priority | [optional] 

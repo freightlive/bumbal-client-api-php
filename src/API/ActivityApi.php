@@ -104,7 +104,7 @@ class ActivityApi
     /**
      * Operation createActivity
      *
-     * Create a new Activity
+     * Create or update an Activity
      *
      * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -119,7 +119,7 @@ class ActivityApi
     /**
      * Operation createActivityWithHttpInfo
      *
-     * Create a new Activity
+     * Create or update an Activity
      *
      * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -280,13 +280,13 @@ class ActivityApi
      * @param bool $include_driver_info Include driver data (required)
      * @param bool $include_activity_communication Include Communication Settings (required)
      * @param bool $include_activity_links Include Link Data (required)
-     * @param bool $include_packagelines_info Include PackageLines (required)
+     * @param bool $include_package_lines_info Include PackageLines (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ActivityModel
      */
-    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_packagelines_info)
+    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info)
     {
-        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_packagelines_info);
+        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info);
         return $response;
     }
 
@@ -306,11 +306,11 @@ class ActivityApi
      * @param bool $include_driver_info Include driver data (required)
      * @param bool $include_activity_communication Include Communication Settings (required)
      * @param bool $include_activity_links Include Link Data (required)
-     * @param bool $include_packagelines_info Include PackageLines (required)
+     * @param bool $include_package_lines_info Include PackageLines (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_packagelines_info)
+    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -356,9 +356,9 @@ class ActivityApi
         if ($include_activity_links === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_activity_links when calling retrieveActivity');
         }
-        // verify the required parameter 'include_packagelines_info' is set
-        if ($include_packagelines_info === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_packagelines_info when calling retrieveActivity');
+        // verify the required parameter 'include_package_lines_info' is set
+        if ($include_package_lines_info === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_package_lines_info when calling retrieveActivity');
         }
         // parse inputs
         $resourcePath = "/activity/{activityId}";
@@ -413,8 +413,8 @@ class ActivityApi
             $queryParams['include_activity_links'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_links);
         }
         // query params
-        if ($include_packagelines_info !== null) {
-            $queryParams['include_packagelines_info'] = $this->apiClient->getSerializer()->toQueryValue($include_packagelines_info);
+        if ($include_package_lines_info !== null) {
+            $queryParams['include_package_lines_info'] = $this->apiClient->getSerializer()->toQueryValue($include_package_lines_info);
         }
         // path params
         if ($activity_id !== null) {

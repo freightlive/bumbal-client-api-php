@@ -75,7 +75,7 @@ All URIs are relative to *https://localhost/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create a new Activity
+*ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create or update an Activity
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
@@ -165,7 +165,9 @@ Class | Method | HTTP request | Description
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
  - [GPSLocationModel](docs/Model/GPSLocationModel.md)
+ - [InstructionModel](docs/Model/InstructionModel.md)
  - [LinkModel](docs/Model/LinkModel.md)
+ - [MetaDataModel](docs/Model/MetaDataModel.md)
  - [PackageLineModel](docs/Model/PackageLineModel.md)
  - [PartyFiltersModel](docs/Model/PartyFiltersModel.md)
  - [PartyModel](docs/Model/PartyModel.md)
