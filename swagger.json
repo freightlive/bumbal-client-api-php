@@ -1965,7 +1965,7 @@
         "instructions" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/Instruction"
+            "$ref" : "#/definitions/InstructionModel"
           },
           "xml" : {
             "name" : "instruction",
@@ -2161,7 +2161,7 @@
         "meta_data" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/MetaData"
+            "$ref" : "#/definitions/MetaDataModel"
           },
           "xml" : {
             "name" : "meta_data",
