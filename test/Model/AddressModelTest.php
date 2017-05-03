@@ -112,6 +112,14 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name_2"
+     */
+    public function testPropertyName2()
+    {
+
+    }
+
+    /**
      * Test attribute "street_1"
      */
     public function testPropertyStreet1()
@@ -187,6 +195,30 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "contact_person"
      */
     public function testPropertyContactPerson()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
     {
 
     }

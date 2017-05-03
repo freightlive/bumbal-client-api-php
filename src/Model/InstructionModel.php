@@ -66,7 +66,8 @@ class InstructionModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'id' => 'int',
+        'content' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class InstructionModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'content' => 'content'
     ];
 
 
@@ -88,7 +90,8 @@ class InstructionModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'content' => 'setContent'
     ];
 
 
@@ -97,7 +100,8 @@ class InstructionModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'content' => 'getContent'
     ];
 
     public static function attributeMap()
@@ -132,6 +136,7 @@ class InstructionModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
     }
 
     /**
@@ -180,6 +185,27 @@ class InstructionModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets content
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->container['content'];
+    }
+
+    /**
+     * Sets content
+     * @param string $content Instructie voor chauffeur
+     * @return $this
+     */
+    public function setContent($content)
+    {
+        $this->container['content'] = $content;
 
         return $this;
     }

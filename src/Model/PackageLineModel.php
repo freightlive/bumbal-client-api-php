@@ -75,8 +75,9 @@ class PackageLineModel implements ArrayAccess
         'width' => 'float',
         'height' => 'float',
         'volume' => 'float',
-        'bar_code' => 'float',
-        'packagevalue' => 'float'
+        'barcode' => 'float',
+        'packagevalue' => 'float',
+        'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
     public static function swaggerTypes()
@@ -98,8 +99,9 @@ class PackageLineModel implements ArrayAccess
         'width' => 'width',
         'height' => 'height',
         'volume' => 'volume',
-        'bar_code' => 'bar_code',
-        'packagevalue' => 'packagevalue'
+        'barcode' => 'barcode',
+        'packagevalue' => 'packagevalue',
+        'links' => 'links'
     ];
 
 
@@ -117,8 +119,9 @@ class PackageLineModel implements ArrayAccess
         'width' => 'setWidth',
         'height' => 'setHeight',
         'volume' => 'setVolume',
-        'bar_code' => 'setBarCode',
-        'packagevalue' => 'setPackagevalue'
+        'barcode' => 'setBarcode',
+        'packagevalue' => 'setPackagevalue',
+        'links' => 'setLinks'
     ];
 
 
@@ -136,8 +139,9 @@ class PackageLineModel implements ArrayAccess
         'width' => 'getWidth',
         'height' => 'getHeight',
         'volume' => 'getVolume',
-        'bar_code' => 'getBarCode',
-        'packagevalue' => 'getPackagevalue'
+        'barcode' => 'getBarcode',
+        'packagevalue' => 'getPackagevalue',
+        'links' => 'getLinks'
     ];
 
     public static function attributeMap()
@@ -196,8 +200,9 @@ class PackageLineModel implements ArrayAccess
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
         $this->container['volume'] = isset($data['volume']) ? $data['volume'] : null;
-        $this->container['bar_code'] = isset($data['bar_code']) ? $data['bar_code'] : null;
+        $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
         $this->container['packagevalue'] = isset($data['packagevalue']) ? $data['packagevalue'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -444,22 +449,22 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
-     * Gets bar_code
+     * Gets barcode
      * @return float
      */
-    public function getBarCode()
+    public function getBarcode()
     {
-        return $this->container['bar_code'];
+        return $this->container['barcode'];
     }
 
     /**
-     * Sets bar_code
-     * @param float $bar_code
+     * Sets barcode
+     * @param float $barcode
      * @return $this
      */
-    public function setBarCode($bar_code)
+    public function setBarcode($barcode)
     {
-        $this->container['bar_code'] = $bar_code;
+        $this->container['barcode'] = $barcode;
 
         return $this;
     }
@@ -481,6 +486,27 @@ class PackageLineModel implements ArrayAccess
     public function setPackagevalue($packagevalue)
     {
         $this->container['packagevalue'] = $packagevalue;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }

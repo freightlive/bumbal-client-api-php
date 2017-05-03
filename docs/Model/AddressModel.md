@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
 **name_1** | **string** |  | [optional] 
+**name_2** | **string** |  | [optional] 
 **street_1** | **string** |  | [optional] 
 **street_2** | **string** |  | [optional] 
 **house_nr** | **string** |  | [optional] 
@@ -15,6 +16,9 @@ Name | Type | Description | Notes
 **iso_country** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
 **contact_person** | **string** |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

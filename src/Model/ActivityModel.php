@@ -71,6 +71,7 @@ class ActivityModel implements ArrayAccess
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
         'status_name' => 'string',
+        'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
         'locked' => 'bool',
         'top_priority' => 'bool',
@@ -100,7 +101,8 @@ class ActivityModel implements ArrayAccess
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
-        'communication' => '\BumbalClient\Model\CommunicationModel'
+        'communication' => '\BumbalClient\Model\CommunicationModel',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     public static function swaggerTypes()
@@ -118,6 +120,7 @@ class ActivityModel implements ArrayAccess
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
         'status_name' => 'status_name',
+        'instructions' => 'instructions',
         'remarks' => 'remarks',
         'locked' => 'locked',
         'top_priority' => 'top_priority',
@@ -147,7 +150,8 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'package_lines',
         'time_slots' => 'time_slots',
         'links' => 'links',
-        'communication' => 'communication'
+        'communication' => 'communication',
+        'meta_data' => 'meta_data'
     ];
 
 
@@ -161,6 +165,7 @@ class ActivityModel implements ArrayAccess
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
         'status_name' => 'setStatusName',
+        'instructions' => 'setInstructions',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
         'top_priority' => 'setTopPriority',
@@ -190,7 +195,8 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'setPackageLines',
         'time_slots' => 'setTimeSlots',
         'links' => 'setLinks',
-        'communication' => 'setCommunication'
+        'communication' => 'setCommunication',
+        'meta_data' => 'setMetaData'
     ];
 
 
@@ -204,6 +210,7 @@ class ActivityModel implements ArrayAccess
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
         'status_name' => 'getStatusName',
+        'instructions' => 'getInstructions',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
         'top_priority' => 'getTopPriority',
@@ -233,7 +240,8 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'getPackageLines',
         'time_slots' => 'getTimeSlots',
         'links' => 'getLinks',
-        'communication' => 'getCommunication'
+        'communication' => 'getCommunication',
+        'meta_data' => 'getMetaData'
     ];
 
     public static function attributeMap()
@@ -318,6 +326,7 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
+        $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
@@ -348,6 +357,7 @@ class ActivityModel implements ArrayAccess
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
     /**
@@ -512,6 +522,27 @@ class ActivityModel implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status_name', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'");
         }
         $this->container['status_name'] = $status_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets instructions
+     * @return \BumbalClient\Model\InstructionModel[]
+     */
+    public function getInstructions()
+    {
+        return $this->container['instructions'];
+    }
+
+    /**
+     * Sets instructions
+     * @param \BumbalClient\Model\InstructionModel[] $instructions
+     * @return $this
+     */
+    public function setInstructions($instructions)
+    {
+        $this->container['instructions'] = $instructions;
 
         return $this;
     }
@@ -1142,6 +1173,27 @@ class ActivityModel implements ArrayAccess
     public function setCommunication($communication)
     {
         $this->container['communication'] = $communication;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

@@ -168,9 +168,9 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "bar_code"
+     * Test attribute "barcode"
      */
-    public function testPropertyBarCode()
+    public function testPropertyBarcode()
     {
 
     }
@@ -179,6 +179,14 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "packagevalue"
      */
     public function testPropertyPackagevalue()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
     {
 
     }

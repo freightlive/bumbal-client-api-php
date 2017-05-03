@@ -103,4 +103,12 @@ class InstructionModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "content"
+     */
+    public function testPropertyContent()
+    {
+
+    }
+
 }

@@ -103,4 +103,20 @@ class MetaDataModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "value"
+     */
+    public function testPropertyValue()
+    {
+
+    }
+
 }

@@ -68,6 +68,7 @@ class AddressModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name_1' => 'string',
+        'name_2' => 'string',
         'street_1' => 'string',
         'street_2' => 'string',
         'house_nr' => 'string',
@@ -77,7 +78,10 @@ class AddressModel implements ArrayAccess
         'state' => 'string',
         'iso_country' => 'string',
         'email' => 'string',
-        'contact_person' => 'string'
+        'contact_person' => 'string',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     public static function swaggerTypes()
@@ -92,6 +96,7 @@ class AddressModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name_1' => 'name_1',
+        'name_2' => 'name_2',
         'street_1' => 'street_1',
         'street_2' => 'street_2',
         'house_nr' => 'house_nr',
@@ -101,7 +106,10 @@ class AddressModel implements ArrayAccess
         'state' => 'state',
         'iso_country' => 'iso_country',
         'email' => 'email',
-        'contact_person' => 'contact_person'
+        'contact_person' => 'contact_person',
+        'links' => 'links',
+        'meta_data' => 'meta_data',
+        'tags' => 'tags'
     ];
 
 
@@ -112,6 +120,7 @@ class AddressModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name_1' => 'setName1',
+        'name_2' => 'setName2',
         'street_1' => 'setStreet1',
         'street_2' => 'setStreet2',
         'house_nr' => 'setHouseNr',
@@ -121,7 +130,10 @@ class AddressModel implements ArrayAccess
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
         'email' => 'setEmail',
-        'contact_person' => 'setContactPerson'
+        'contact_person' => 'setContactPerson',
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
+        'tags' => 'setTags'
     ];
 
 
@@ -132,6 +144,7 @@ class AddressModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name_1' => 'getName1',
+        'name_2' => 'getName2',
         'street_1' => 'getStreet1',
         'street_2' => 'getStreet2',
         'house_nr' => 'getHouseNr',
@@ -141,7 +154,10 @@ class AddressModel implements ArrayAccess
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
         'email' => 'getEmail',
-        'contact_person' => 'getContactPerson'
+        'contact_person' => 'getContactPerson',
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
+        'tags' => 'getTags'
     ];
 
     public static function attributeMap()
@@ -177,6 +193,7 @@ class AddressModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
+        $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
         $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
         $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
         $this->container['house_nr'] = isset($data['house_nr']) ? $data['house_nr'] : null;
@@ -187,6 +204,9 @@ class AddressModel implements ArrayAccess
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -256,6 +276,27 @@ class AddressModel implements ArrayAccess
     public function setName1($name_1)
     {
         $this->container['name_1'] = $name_1;
+
+        return $this;
+    }
+
+    /**
+     * Gets name_2
+     * @return string
+     */
+    public function getName2()
+    {
+        return $this->container['name_2'];
+    }
+
+    /**
+     * Sets name_2
+     * @param string $name_2
+     * @return $this
+     */
+    public function setName2($name_2)
+    {
+        $this->container['name_2'] = $name_2;
 
         return $this;
     }
@@ -466,6 +507,69 @@ class AddressModel implements ArrayAccess
     public function setContactPerson($contact_person)
     {
         $this->container['contact_person'] = $contact_person;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }
