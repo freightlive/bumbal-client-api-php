@@ -2343,7 +2343,7 @@
         "meta_data" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/MetaDataModal"
+            "$ref" : "#/definitions/MetaDataModel"
           },
           "xml" : {
             "name" : "meta_data",
