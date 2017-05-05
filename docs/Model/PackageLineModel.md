@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **width** | **float** |  | [optional] 
 **height** | **float** |  | [optional] 
 **volume** | **float** |  | [optional] 
-**barcode** | **float** |  | [optional] 
+**barcode** | **string** |  | [optional] 
 **packagevalue** | **float** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 

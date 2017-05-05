@@ -75,7 +75,7 @@ class PackageLineModel implements ArrayAccess
         'width' => 'float',
         'height' => 'float',
         'volume' => 'float',
-        'barcode' => 'float',
+        'barcode' => 'string',
         'packagevalue' => 'float',
         'links' => '\BumbalClient\Model\LinkModel[]'
     ];
@@ -450,7 +450,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets barcode
-     * @return float
+     * @return string
      */
     public function getBarcode()
     {
@@ -459,7 +459,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets barcode
-     * @param float $barcode
+     * @param string $barcode
      * @return $this
      */
     public function setBarcode($barcode)
