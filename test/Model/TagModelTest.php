@@ -104,14 +104,6 @@ class TagModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "object_id"
-     */
-    public function testPropertyObjectId()
-    {
-
-    }
-
-    /**
      * Test attribute "tag_type_id"
      */
     public function testPropertyTagTypeId()
@@ -120,9 +112,9 @@ class TagModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "object_type"
+     * Test attribute "tag_type_name"
      */
-    public function testPropertyObjectType()
+    public function testPropertyTagTypeName()
     {
 
     }
