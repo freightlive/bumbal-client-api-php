@@ -66,7 +66,9 @@ class TagModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'id' => 'int',
+        'tag_type_id' => 'int',
+        'tag_type_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,9 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'tag_type_id' => 'tag_type_id',
+        'tag_type_name' => 'tag_type_name'
     ];
 
 
@@ -88,7 +92,9 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'tag_type_id' => 'setTagTypeId',
+        'tag_type_name' => 'setTagTypeName'
     ];
 
 
@@ -97,7 +103,9 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'tag_type_id' => 'getTagTypeId',
+        'tag_type_name' => 'getTagTypeName'
     ];
 
     public static function attributeMap()
@@ -132,6 +140,8 @@ class TagModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
+        $this->container['tag_type_name'] = isset($data['tag_type_name']) ? $data['tag_type_name'] : null;
     }
 
     /**
@@ -174,12 +184,54 @@ class TagModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id Unique ID
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_type_id
+     * @return int
+     */
+    public function getTagTypeId()
+    {
+        return $this->container['tag_type_id'];
+    }
+
+    /**
+     * Sets tag_type_id
+     * @param int $tag_type_id Tag Type ID
+     * @return $this
+     */
+    public function setTagTypeId($tag_type_id)
+    {
+        $this->container['tag_type_id'] = $tag_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_type_name
+     * @return string
+     */
+    public function getTagTypeName()
+    {
+        return $this->container['tag_type_name'];
+    }
+
+    /**
+     * Sets tag_type_name
+     * @param string $tag_type_name Tag Type Name
+     * @return $this
+     */
+    public function setTagTypeName($tag_type_name)
+    {
+        $this->container['tag_type_name'] = $tag_type_name;
 
         return $this;
     }

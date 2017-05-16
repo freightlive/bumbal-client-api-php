@@ -368,12 +368,13 @@ class RouteApi
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_activity_ids Include activity ids of activities on the route (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\RouteModel
      */
-    public function retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations)
+    public function retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids)
     {
-        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations);
+        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids);
         return $response;
     }
 
@@ -389,10 +390,11 @@ class RouteApi
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_activity_ids Include activity ids of activities on the route (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations)
+    public function retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids)
     {
         // verify the required parameter 'route_id' is set
         if ($route_id === null) {
@@ -421,6 +423,10 @@ class RouteApi
         // verify the required parameter 'include_gps_locations' is set
         if ($include_gps_locations === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_gps_locations when calling retrieveRoute');
+        }
+        // verify the required parameter 'include_activity_ids' is set
+        if ($include_activity_ids === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_activity_ids when calling retrieveRoute');
         }
         // parse inputs
         $resourcePath = "/route/{routeId}";
@@ -457,6 +463,10 @@ class RouteApi
         // query params
         if ($include_gps_locations !== null) {
             $queryParams['include_gps_locations'] = $this->apiClient->getSerializer()->toQueryValue($include_gps_locations);
+        }
+        // query params
+        if ($include_activity_ids !== null) {
+            $queryParams['include_activity_ids'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_ids);
         }
         // path params
         if ($route_id !== null) {

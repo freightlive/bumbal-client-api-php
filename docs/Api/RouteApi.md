@@ -149,7 +149,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRoute**
-> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations)
+> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids)
 
 Retrieve a Route
 
@@ -168,9 +168,10 @@ $include_route_tags = true; // bool | Include Tags
 $include_driver_info = true; // bool | Include Driver info
 $include_equipment_info_car = true; // bool | Include Equipment info car
 $include_gps_locations = true; // bool | Include GPS locations
+$include_activity_ids = true; // bool | Include activity ids of activities on the route
 
 try {
-    $result = $api_instance->retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations);
+    $result = $api_instance->retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RouteApi->retrieveRoute: ', $e->getMessage(), PHP_EOL;
@@ -189,6 +190,7 @@ Name | Type | Description  | Notes
  **include_driver_info** | **bool**| Include Driver info |
  **include_equipment_info_car** | **bool**| Include Equipment info car |
  **include_gps_locations** | **bool**| Include GPS locations |
+ **include_activity_ids** | **bool**| Include activity ids of activities on the route |
 
 ### Return type
 
