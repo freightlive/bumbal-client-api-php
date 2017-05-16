@@ -76,7 +76,8 @@ class RouteModel implements ArrayAccess
         'link_id' => 'string',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
-        'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]'
+        'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
+        'activity_ids' => 'null[]'
     ];
 
     public static function swaggerTypes()
@@ -99,7 +100,8 @@ class RouteModel implements ArrayAccess
         'link_id' => 'link_id',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
-        'gps_locations' => 'gps_locations'
+        'gps_locations' => 'gps_locations',
+        'activity_ids' => 'activity_ids'
     ];
 
 
@@ -118,7 +120,8 @@ class RouteModel implements ArrayAccess
         'link_id' => 'setLinkId',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
-        'gps_locations' => 'setGpsLocations'
+        'gps_locations' => 'setGpsLocations',
+        'activity_ids' => 'setActivityIds'
     ];
 
 
@@ -137,7 +140,8 @@ class RouteModel implements ArrayAccess
         'link_id' => 'getLinkId',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
-        'gps_locations' => 'getGpsLocations'
+        'gps_locations' => 'getGpsLocations',
+        'activity_ids' => 'getActivityIds'
     ];
 
     public static function attributeMap()
@@ -200,6 +204,7 @@ class RouteModel implements ArrayAccess
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['gps_locations'] = isset($data['gps_locations']) ? $data['gps_locations'] : null;
+        $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
     }
 
     /**
@@ -471,6 +476,27 @@ class RouteModel implements ArrayAccess
     public function setGpsLocations($gps_locations)
     {
         $this->container['gps_locations'] = $gps_locations;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_ids
+     * @return null[]
+     */
+    public function getActivityIds()
+    {
+        return $this->container['activity_ids'];
+    }
+
+    /**
+     * Sets activity_ids
+     * @param null[] $activity_ids
+     * @return $this
+     */
+    public function setActivityIds($activity_ids)
+    {
+        $this->container['activity_ids'] = $activity_ids;
 
         return $this;
     }

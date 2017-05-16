@@ -143,4 +143,12 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "include_activity_ids"
+     */
+    public function testPropertyIncludeActivityIds()
+    {
+
+    }
+
 }

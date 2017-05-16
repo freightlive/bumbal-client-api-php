@@ -71,7 +71,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_route_tags' => 'bool',
         'include_driver_info' => 'bool',
         'include_equipment_info_car' => 'bool',
-        'include_gps_locations' => 'bool'
+        'include_gps_locations' => 'bool',
+        'include_activity_ids' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -89,7 +90,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_route_tags' => 'include_route_tags',
         'include_driver_info' => 'include_driver_info',
         'include_equipment_info_car' => 'include_equipment_info_car',
-        'include_gps_locations' => 'include_gps_locations'
+        'include_gps_locations' => 'include_gps_locations',
+        'include_activity_ids' => 'include_activity_ids'
     ];
 
 
@@ -103,7 +105,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_route_tags' => 'setIncludeRouteTags',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_equipment_info_car' => 'setIncludeEquipmentInfoCar',
-        'include_gps_locations' => 'setIncludeGpsLocations'
+        'include_gps_locations' => 'setIncludeGpsLocations',
+        'include_activity_ids' => 'setIncludeActivityIds'
     ];
 
 
@@ -117,7 +120,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_route_tags' => 'getIncludeRouteTags',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_equipment_info_car' => 'getIncludeEquipmentInfoCar',
-        'include_gps_locations' => 'getIncludeGpsLocations'
+        'include_gps_locations' => 'getIncludeGpsLocations',
+        'include_activity_ids' => 'getIncludeActivityIds'
     ];
 
     public static function attributeMap()
@@ -157,6 +161,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_equipment_info_car'] = isset($data['include_equipment_info_car']) ? $data['include_equipment_info_car'] : null;
         $this->container['include_gps_locations'] = isset($data['include_gps_locations']) ? $data['include_gps_locations'] : null;
+        $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
     }
 
     /**
@@ -310,6 +315,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeGpsLocations($include_gps_locations)
     {
         $this->container['include_gps_locations'] = $include_gps_locations;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_ids
+     * @return bool
+     */
+    public function getIncludeActivityIds()
+    {
+        return $this->container['include_activity_ids'];
+    }
+
+    /**
+     * Sets include_activity_ids
+     * @param bool $include_activity_ids
+     * @return $this
+     */
+    public function setIncludeActivityIds($include_activity_ids)
+    {
+        $this->container['include_activity_ids'] = $include_activity_ids;
 
         return $this;
     }

@@ -183,4 +183,12 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "activity_ids"
+     */
+    public function testPropertyActivityIds()
+    {
+
+    }
+
 }
