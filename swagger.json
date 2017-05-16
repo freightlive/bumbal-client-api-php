@@ -1976,7 +1976,6 @@
           "enum" : [ "activity_new", "activity_accepted", "activity_planned", "activity_in_progress", "activity_executed", "activity_cancelled", "activity_awaiting" ]
         },
         "instructions" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/InstructionModel"
@@ -2127,11 +2126,9 @@
           "example" : "john@doe.com"
         },
         "address" : {
-          "description" : "",
           "$ref" : "#/definitions/AddressModel"
         },
         "tags" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/TagModel"
@@ -2142,7 +2139,6 @@
           }
         },
         "package_lines" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/PackageLineModel"
@@ -2153,7 +2149,6 @@
           }
         },
         "time_slots" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/TimeSlotModel"
@@ -2164,7 +2159,6 @@
           }
         },
         "links" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/LinkModel"
@@ -2175,11 +2169,9 @@
           }
         },
         "communication" : {
-          "description" : "",
           "$ref" : "#/definitions/CommunicationModel"
         },
         "meta_data" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/MetaDataModel"
@@ -2197,57 +2189,46 @@
     "ActivityOptionsModel" : {
       "properties" : {
         "include_activity_status" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_activity_type_name" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_activity_meta_data" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_address_object" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_time_slots" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_time_slot_tags" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_route_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_driver_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_activity_communication" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_activity_links" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_package_lines_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -2259,27 +2240,22 @@
     "ActivityRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/ActivityOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/ActivityFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "10"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "20"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "zoek tekst"
         }
@@ -2292,63 +2268,51 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
         },
         "name_1" : {
-          "description" : "",
           "type" : "string",
           "example" : "Naamveld #1"
         },
         "street_1" : {
-          "description" : "",
           "type" : "string",
           "example" : "Straatnaam #2"
         },
         "street_2" : {
-          "description" : "",
           "type" : "string",
           "example" : "Straatnaam #2"
         },
         "house_nr" : {
-          "description" : "",
           "type" : "string",
           "example" : "Huisnummer"
         },
         "house_nr_addendum" : {
-          "description" : "",
           "type" : "string",
           "example" : "Huisnummer toevoeging"
         },
         "zipcode" : {
-          "description" : "",
           "type" : "string",
           "example" : "Postcode"
         },
         "city" : {
-          "description" : "",
           "type" : "string",
           "example" : "Woonplaats"
         },
         "state" : {
-          "description" : "",
           "type" : "string",
           "example" : "Provincie"
         },
         "iso_country" : {
-          "description" : "",
           "type" : "string",
           "example" : "ISO Country"
         },
         "email" : {
-          "description" : "",
           "type" : "string",
           "example" : "Email adres"
         },
         "contact_person" : {
-          "description" : "",
           "type" : "string",
           "example" : "Contact Person"
         }
@@ -2384,73 +2348,59 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
         },
         "name_1" : {
-          "description" : "",
           "type" : "string",
           "example" : "Naamveld #1"
         },
         "name_2" : {
-          "description" : "",
           "type" : "string",
           "example" : "Naamveld #2"
         },
         "street_1" : {
-          "description" : "",
           "type" : "string",
           "example" : "Straatnaam #2"
         },
         "street_2" : {
-          "description" : "",
           "type" : "string",
           "example" : "Straatnaam #2"
         },
         "house_nr" : {
-          "description" : "",
           "type" : "string",
           "example" : "Huisnummer"
         },
         "house_nr_addendum" : {
-          "description" : "",
           "type" : "string",
           "example" : "Huisnummer toevoeging"
         },
         "zipcode" : {
-          "description" : "",
           "type" : "string",
           "example" : "Postcode"
         },
         "city" : {
-          "description" : "",
           "type" : "string",
           "example" : "Woonplaats"
         },
         "state" : {
-          "description" : "",
           "type" : "string",
           "example" : "Provincie"
         },
         "iso_country" : {
-          "description" : "",
           "type" : "string",
           "example" : "ISO Country"
         },
         "email" : {
-          "description" : "",
           "type" : "string",
           "example" : "Email adres"
         },
         "contact_person" : {
-          "description" : "",
           "type" : "string",
           "example" : "Contact Person"
         },
         "links" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/LinkModel"
@@ -2461,7 +2411,6 @@
           }
         },
         "meta_data" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/MetaDataModel"
@@ -2472,7 +2421,6 @@
           }
         },
         "tags" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/TagModel"
@@ -2490,22 +2438,18 @@
     "AddressOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_address_tags" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_party_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_address_type_ids" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -2517,27 +2461,22 @@
     "AddressRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/AddressOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/AddressFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -2608,7 +2547,6 @@
     "AssignmentOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -2620,27 +2558,22 @@
     "AssignmentRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/AssignmentOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/AddressFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -2658,7 +2591,6 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -2671,7 +2603,6 @@
     "DriverOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -2683,27 +2614,22 @@
     "DriverRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/DriverOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/DriverFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -2749,7 +2675,6 @@
       "required" : [ "id", "equipment_type" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -2760,29 +2685,24 @@
           "enum" : [ "car", "trailer", "other" ]
         },
         "info" : {
-          "description" : "",
           "type" : "string",
           "example" : "Blauwe Truck"
         },
         "registration_nr" : {
-          "description" : "",
           "type" : "string",
           "example" : "AA-BB-01"
         },
         "capacity_volume" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "124.50"
         },
         "capacity_loading_meter" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "24.50"
         },
         "capacity_weight" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "14.50"
@@ -2795,7 +2715,6 @@
     "EquipmentOptionsModel" : {
       "properties" : {
         "include_activity_status" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -2807,27 +2726,22 @@
     "EquipmentRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/ActivityOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/ActivityFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "10"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "20"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "zoek tekst"
         }
@@ -2839,20 +2753,16 @@
     "ApiResponse" : {
       "properties" : {
         "code" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int32"
         },
         "type" : {
-          "description" : "",
           "type" : "string"
         },
         "message" : {
-          "description" : "",
           "type" : "string"
         },
         "additional_data" : {
-          "description" : "",
           "type" : "object"
         }
       },
@@ -2895,30 +2805,25 @@
     "GPSLocationModel" : {
       "properties" : {
         "longitude" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "5.123456"
         },
         "altitude" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "67.123456"
         },
         "latitude" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "1.2"
         },
         "heading" : {
-          "description" : "",
           "type" : "integer",
           "example" : "61"
         },
         "timestamp" : {
-          "description" : "",
           "type" : "integer",
           "example" : "1484842170000"
         }
@@ -3025,13 +2930,11 @@
       "required" : [ "id", "package_type", "nr_of_packages" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
         },
         "nr" : {
-          "description" : "",
           "type" : "string",
           "example" : "PCKL0001"
         },
@@ -3041,53 +2944,44 @@
           "enum" : [ "pallet", "box", "general" ]
         },
         "description" : {
-          "description" : "",
           "type" : "string",
           "example" : "Doos Bananen"
         },
         "nr_of_packages" : {
-          "description" : "",
           "type" : "string",
           "format" : "int64",
           "example" : "4"
         },
         "length" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "4.1"
         },
         "width" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "2.3"
         },
         "height" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "5.2"
         },
         "volume" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "12.5"
         },
         "barcode" : {
-          "description" : "",
           "type" : "string",
           "example" : "15698758"
         },
         "packagevalue" : {
-          "description" : "",
           "type" : "number",
           "format" : "float",
           "example" : "99.95"
         },
         "links" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/LinkModel"
@@ -3106,7 +3000,6 @@
       "required" : [ "id", "activity_id", "time_slot_type" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -3123,35 +3016,29 @@
           "enum" : [ "first-entry", "planned", "actual" ]
         },
         "date_from" : {
-          "description" : "",
           "type" : "string",
           "format" : "date",
           "example" : "2017-01-22"
         },
         "time_from" : {
-          "description" : "",
           "type" : "string",
           "example" : "15:00:00"
         },
         "date_time_from" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
         },
         "date_to" : {
-          "description" : "",
           "type" : "string",
           "format" : "date",
           "example" : "2017-01-22"
         },
         "time_to" : {
-          "description" : "",
           "type" : "string",
           "example" : "15:00:00"
         },
         "date_time_to" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
@@ -3180,7 +3067,6 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -3193,7 +3079,6 @@
     "PartyOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3205,27 +3090,22 @@
     "PartyRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/PartyOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/PartyFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -3243,7 +3123,6 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -3256,7 +3135,6 @@
     "RecurrenceOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3268,27 +3146,22 @@
     "RecurrenceRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/RecurrenceOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/RecurrenceFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -3300,31 +3173,26 @@
     "RouteFiltersModel" : {
       "properties" : {
         "date_time_from" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
         },
         "date_time_to" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
         },
         "updated_at" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
         },
         "status" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T15:00:00Z"
         },
         "driver_id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "20"
@@ -3359,39 +3227,32 @@
           "enum" : [ "route_planned", "route_in_progress", "route_executed", "route_cancelled" ]
         },
         "nr_of_stops" : {
-          "description" : "",
           "type" : "integer",
           "example" : "3"
         },
         "driver_id" : {
-          "description" : "",
           "type" : "integer",
           "example" : "3"
         },
         "car_id" : {
-          "description" : "",
           "type" : "integer",
           "example" : "3"
         },
         "link_id" : {
-          "description" : "",
           "type" : "string",
           "example" : "XY23"
         },
         "earliest_date_time" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T17:00:00Z"
         },
         "latest_date_time" : {
-          "description" : "",
           "type" : "string",
           "format" : "date-time",
           "example" : "2017-01-22T17:00:00Z"
         },
         "gps_locations" : {
-          "description" : "",
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/GPSLocationModel"
@@ -3403,7 +3264,6 @@
           }
         },
         "activity_ids" : {
-          "description" : "",
           "type" : "array",
           "xml" : {
             "name" : "activity_ids",
@@ -3419,37 +3279,30 @@
       "required" : [ "include_address_info" ],
       "properties" : {
         "include_address_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_route_status" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_route_tags" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_driver_info" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_equipment_info_car" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_gps_locations" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         },
         "include_activity_ids" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3461,27 +3314,22 @@
     "RouteRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/RouteOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/RouteFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "10"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "20"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "zoek tekst"
         }
@@ -3499,7 +3347,6 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -3512,7 +3359,6 @@
     "SettingsOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3524,27 +3370,22 @@
     "SettingsRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/SettingsOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/SettingsFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -3586,7 +3427,6 @@
     "TagsOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3598,27 +3438,22 @@
     "TagsRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/TagsOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/TagsFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
@@ -3636,7 +3471,6 @@
       "required" : [ "id" ],
       "properties" : {
         "id" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "31"
@@ -3649,7 +3483,6 @@
     "UsersOptionsModel" : {
       "properties" : {
         "include_phone_nrs" : {
-          "description" : "",
           "type" : "boolean",
           "example" : "true"
         }
@@ -3661,27 +3494,22 @@
     "UsersRetrieveListArguments" : {
       "properties" : {
         "options" : {
-          "description" : "",
           "$ref" : "#/definitions/UsersOptionsModel"
         },
         "filters" : {
-          "description" : "",
           "$ref" : "#/definitions/UsersFiltersModel"
         },
         "limit" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "12"
         },
         "offset" : {
-          "description" : "",
           "type" : "integer",
           "format" : "int64",
           "example" : "0"
         },
         "search_text" : {
-          "description" : "",
           "type" : "string",
           "example" : "search text"
         }
