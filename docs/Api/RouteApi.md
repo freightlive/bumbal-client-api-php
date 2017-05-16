@@ -168,7 +168,7 @@ $include_route_tags = true; // bool | Include Tags
 $include_driver_info = true; // bool | Include Driver info
 $include_equipment_info_car = true; // bool | Include Equipment info car
 $include_gps_locations = true; // bool | Include GPS locations
-$include_activity_ids = true; // bool | Include activity ids of activities on the route
+$include_activity_ids = true; // bool | Include Activity ids
 
 try {
     $result = $api_instance->retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids);
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
  **include_driver_info** | **bool**| Include Driver info |
  **include_equipment_info_car** | **bool**| Include Equipment info car |
  **include_gps_locations** | **bool**| Include GPS locations |
- **include_activity_ids** | **bool**| Include activity ids of activities on the route |
+ **include_activity_ids** | **bool**| Include Activity ids | [optional]
 
 ### Return type
 

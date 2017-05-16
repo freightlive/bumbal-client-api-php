@@ -135,12 +135,4 @@ class RouteRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "include_activities"
-     */
-    public function testPropertyIncludeActivities()
-    {
-
-    }
-
 }

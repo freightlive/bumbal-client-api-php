@@ -70,8 +70,7 @@ class RouteRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\RouteFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string',
-        'include_activities' => 'bool'
+        'search_text' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -88,8 +87,7 @@ class RouteRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text',
-        'include_activities' => 'include_activities'
+        'search_text' => 'search_text'
     ];
 
 
@@ -102,8 +100,7 @@ class RouteRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText',
-        'include_activities' => 'setIncludeActivities'
+        'search_text' => 'setSearchText'
     ];
 
 
@@ -116,8 +113,7 @@ class RouteRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText',
-        'include_activities' => 'getIncludeActivities'
+        'search_text' => 'getSearchText'
     ];
 
     public static function attributeMap()
@@ -156,7 +152,6 @@ class RouteRetrieveListArguments implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
-        $this->container['include_activities'] = isset($data['include_activities']) ? $data['include_activities'] : null;
     }
 
     /**
@@ -283,27 +278,6 @@ class RouteRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activities
-     * @return bool
-     */
-    public function getIncludeActivities()
-    {
-        return $this->container['include_activities'];
-    }
-
-    /**
-     * Sets include_activities
-     * @param bool $include_activities
-     * @return $this
-     */
-    public function setIncludeActivities($include_activities)
-    {
-        $this->container['include_activities'] = $include_activities;
 
         return $this;
     }

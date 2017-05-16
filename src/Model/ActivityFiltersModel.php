@@ -69,7 +69,8 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'updated_at' => '\DateTime',
-        'status' => 'string[]'
+        'status' => 'string[]',
+        'route_id' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -85,7 +86,8 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'updated_at' => 'updated_at',
-        'status' => 'status'
+        'status' => 'status',
+        'route_id' => 'route_id'
     ];
 
 
@@ -97,7 +99,8 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'updated_at' => 'setUpdatedAt',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'route_id' => 'setRouteId'
     ];
 
 
@@ -109,7 +112,8 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'updated_at' => 'getUpdatedAt',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'route_id' => 'getRouteId'
     ];
 
     public static function attributeMap()
@@ -147,6 +151,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
     }
 
     /**
@@ -252,6 +257,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets route_id
+     * @return int[]
+     */
+    public function getRouteId()
+    {
+        return $this->container['route_id'];
+    }
+
+    /**
+     * Sets route_id
+     * @param int[] $route_id Route id
+     * @return $this
+     */
+    public function setRouteId($route_id)
+    {
+        $this->container['route_id'] = $route_id;
 
         return $this;
     }
