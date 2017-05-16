@@ -77,7 +77,7 @@ class RouteModel implements ArrayAccess
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
         'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
-        'activity_ids' => 'null[]'
+        'activity_ids' => 'object'
     ];
 
     public static function swaggerTypes()
@@ -482,7 +482,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets activity_ids
-     * @return null[]
+     * @return object
      */
     public function getActivityIds()
     {
@@ -491,7 +491,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets activity_ids
-     * @param null[] $activity_ids
+     * @param object $activity_ids
      * @return $this
      */
     public function setActivityIds($activity_ids)
