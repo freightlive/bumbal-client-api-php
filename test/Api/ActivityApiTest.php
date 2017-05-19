@@ -101,17 +101,6 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createActivity_0
-     *
-     * Create or update an Activity.
-     *
-     */
-    public function testCreateActivity0()
-    {
-
-    }
-
-    /**
      * Test case for deleteActivity
      *
      * Delete an activity.
@@ -140,6 +129,17 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testRetrieveListActivity()
+    {
+
+    }
+
+    /**
+     * Test case for setActivity
+     *
+     * Set (create or update) an Activity.
+     *
+     */
+    public function testSetActivity()
     {
 
     }

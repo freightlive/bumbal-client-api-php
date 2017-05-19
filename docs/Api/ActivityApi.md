@@ -5,10 +5,10 @@ All URIs are relative to *https://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create  an Activity
-[**createActivity_0**](ActivityApi.md#createActivity_0) | **POST** /activity/set | Create or update an Activity
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
+[**setActivity**](ActivityApi.md#setActivity) | **POST** /activity/set | Set (create or update) an Activity
 [**updateActivity**](ActivityApi.md#updateActivity) | **PUT** /activity/{activityId} | Update a activity
 
 
@@ -32,51 +32,6 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->createActivity: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object | [optional]
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **createActivity_0**
-> \BumbalClient\Model\ApiResponse createActivity_0($body)
-
-Create or update an Activity
-
-Create or update an Activity. If id or links are set in the data, and a corresponding activity   is found in Bumbal, an update will be performed.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
-
-try {
-    $result = $api_instance->createActivity_0($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ActivityApi->createActivity_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -247,6 +202,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\ActivityModel[]**](../Model/ActivityModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setActivity**
+> \BumbalClient\Model\ApiResponse setActivity($body)
+
+Set (create or update) an Activity
+
+Set (create or update) an Activity. If id or links are set in the data, and a corresponding activity   is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
+
+try {
+    $result = $api_instance->setActivity($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->setActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

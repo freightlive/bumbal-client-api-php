@@ -76,10 +76,10 @@ All URIs are relative to *https://localhost/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create  an Activity
-*ActivityApi* | [**createActivity_0**](docs/Api/ActivityApi.md#createactivity_0) | **POST** /activity/set | Create or update an Activity
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
+*ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
 *AddressApi* | [**createAddress**](docs/Api/AddressApi.md#createaddress) | **POST** /address | Add a new Address
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an Address
