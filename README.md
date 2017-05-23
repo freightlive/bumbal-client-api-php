@@ -75,7 +75,7 @@ All URIs are relative to *https://localhost/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create  an Activity
+*ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create or update an Activity
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
@@ -102,6 +102,11 @@ Class | Method | HTTP request | Description
 *EquipmentApi* | [**retrieveEquipment**](docs/Api/EquipmentApi.md#retrieveequipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
 *EquipmentApi* | [**retrieveListEquipment**](docs/Api/EquipmentApi.md#retrievelistequipment) | **PUT** /equipment | Retrieve List of Equipment
 *EquipmentApi* | [**updateEquipment**](docs/Api/EquipmentApi.md#updateequipment) | **PUT** /equipment/{equipmentId} | Update a Equipment
+*FileApi* | [**createFile**](docs/Api/FileApi.md#createfile) | **POST** /file | Add a new File
+*FileApi* | [**deleteFile**](docs/Api/FileApi.md#deletefile) | **DELETE** /file/{fileId} | Delete an File
+*FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
+*FileApi* | [**retrieveListFile**](docs/Api/FileApi.md#retrievelistfile) | **PUT** /file | Retrieve List of Files
+*FileApi* | [**updateFile**](docs/Api/FileApi.md#updatefile) | **PUT** /file/{fileId} | Update a File
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
@@ -165,6 +170,10 @@ Class | Method | HTTP request | Description
  - [EquipmentModel](docs/Model/EquipmentModel.md)
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
+ - [FileFiltersModel](docs/Model/FileFiltersModel.md)
+ - [FileModel](docs/Model/FileModel.md)
+ - [FileOptionsModel](docs/Model/FileOptionsModel.md)
+ - [FileRetrieveListArguments](docs/Model/FileRetrieveListArguments.md)
  - [GPSLocationModel](docs/Model/GPSLocationModel.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [LinkModel](docs/Model/LinkModel.md)

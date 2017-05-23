@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityApiTest
+ * FileApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * ActivityApiTest Class Doc Comment
+ * FileApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
@@ -54,7 +54,7 @@ use \BumbalClient\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ActivityApiTest extends \PHPUnit_Framework_TestCase
+class FileApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,67 +90,56 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createActivity
+     * Test case for createFile
      *
-     * Create or update an Activity.
+     * Add a new File.
      *
      */
-    public function testCreateActivity()
+    public function testCreateFile()
     {
 
     }
 
     /**
-     * Test case for deleteActivity
+     * Test case for deleteFile
      *
-     * Delete an activity.
+     * Delete an File.
      *
      */
-    public function testDeleteActivity()
+    public function testDeleteFile()
     {
 
     }
 
     /**
-     * Test case for retrieveActivity
+     * Test case for retrieveFile
      *
-     * Find activity by ID.
+     * Retrieve a File.
      *
      */
-    public function testRetrieveActivity()
+    public function testRetrieveFile()
     {
 
     }
 
     /**
-     * Test case for retrieveListActivity
+     * Test case for retrieveListFile
      *
-     * Retrieve List of Activities.
+     * Retrieve List of Files.
      *
      */
-    public function testRetrieveListActivity()
+    public function testRetrieveListFile()
     {
 
     }
 
     /**
-     * Test case for setActivity
+     * Test case for updateFile
      *
-     * Set (create or update) an Activity.
-     *
-     */
-    public function testSetActivity()
-    {
-
-    }
-
-    /**
-     * Test case for updateActivity
-     *
-     * Update a activity.
+     * Update a File.
      *
      */
-    public function testUpdateActivity()
+    public function testUpdateFile()
     {
 
     }

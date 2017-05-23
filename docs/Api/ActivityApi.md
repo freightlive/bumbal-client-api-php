@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create  an Activity
+[**createActivity**](ActivityApi.md#createActivity) | **POST** /activity | Create or update an Activity
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
@@ -15,9 +15,9 @@ Method | HTTP request | Description
 # **createActivity**
 > \BumbalClient\Model\ApiResponse createActivity($body)
 
-Create  an Activity
+Create or update an Activity
 
-Create  an Activity
+Create or update an Activity. If id or links are set in the data, and a corresponding activity    *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -219,7 +219,7 @@ No authorization required
 
 Set (create or update) an Activity
 
-Set (create or update) an Activity. If id or links are set in the data, and a corresponding activity   is found in Bumbal, an update will be performed.
+Set (create or update) an Activity. If id or links are set in the data, and a corresponding activity is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
