@@ -216,6 +216,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "route_id"
+     */
+    public function testPropertyRouteId()
+    {
+
+    }
+
+    /**
      * Test attribute "route_nr"
      */
     public function testPropertyRouteNr()
@@ -267,6 +275,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "route_status_id"
      */
     public function testPropertyRouteStatusId()
+    {
+
+    }
+
+    /**
+     * Test attribute "route_status_name"
+     */
+    public function testPropertyRouteStatusName()
     {
 
     }

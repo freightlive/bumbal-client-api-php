@@ -81,6 +81,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'duration' => 'int',
+        'route_id' => 'string',
         'route_nr' => 'string',
         'route_name' => 'string',
         'route_date_time_from' => '\DateTime',
@@ -88,6 +89,7 @@ class ActivityModel implements ArrayAccess
         'route_earliest_date_time' => '\DateTime',
         'route_latest_date_time' => '\DateTime',
         'route_status_id' => 'int',
+        'route_status_name' => 'int',
         'route_nr_of_stops' => 'int',
         'route_overdue' => 'bool',
         'driver_id' => 'int',
@@ -130,6 +132,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'duration' => 'duration',
+        'route_id' => 'route_id',
         'route_nr' => 'route_nr',
         'route_name' => 'route_name',
         'route_date_time_from' => 'route_date_time_from',
@@ -137,6 +140,7 @@ class ActivityModel implements ArrayAccess
         'route_earliest_date_time' => 'route_earliest_date_time',
         'route_latest_date_time' => 'route_latest_date_time',
         'route_status_id' => 'route_status_id',
+        'route_status_name' => 'route_status_name',
         'route_nr_of_stops' => 'route_nr_of_stops',
         'route_overdue' => 'route_overdue',
         'driver_id' => 'driver_id',
@@ -175,6 +179,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'duration' => 'setDuration',
+        'route_id' => 'setRouteId',
         'route_nr' => 'setRouteNr',
         'route_name' => 'setRouteName',
         'route_date_time_from' => 'setRouteDateTimeFrom',
@@ -182,6 +187,7 @@ class ActivityModel implements ArrayAccess
         'route_earliest_date_time' => 'setRouteEarliestDateTime',
         'route_latest_date_time' => 'setRouteLatestDateTime',
         'route_status_id' => 'setRouteStatusId',
+        'route_status_name' => 'setRouteStatusName',
         'route_nr_of_stops' => 'setRouteNrOfStops',
         'route_overdue' => 'setRouteOverdue',
         'driver_id' => 'setDriverId',
@@ -220,6 +226,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'duration' => 'getDuration',
+        'route_id' => 'getRouteId',
         'route_nr' => 'getRouteNr',
         'route_name' => 'getRouteName',
         'route_date_time_from' => 'getRouteDateTimeFrom',
@@ -227,6 +234,7 @@ class ActivityModel implements ArrayAccess
         'route_earliest_date_time' => 'getRouteEarliestDateTime',
         'route_latest_date_time' => 'getRouteLatestDateTime',
         'route_status_id' => 'getRouteStatusId',
+        'route_status_name' => 'getRouteStatusName',
         'route_nr_of_stops' => 'getRouteNrOfStops',
         'route_overdue' => 'getRouteOverdue',
         'driver_id' => 'getDriverId',
@@ -336,6 +344,7 @@ class ActivityModel implements ArrayAccess
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['route_nr'] = isset($data['route_nr']) ? $data['route_nr'] : null;
         $this->container['route_name'] = isset($data['route_name']) ? $data['route_name'] : null;
         $this->container['route_date_time_from'] = isset($data['route_date_time_from']) ? $data['route_date_time_from'] : null;
@@ -343,6 +352,7 @@ class ActivityModel implements ArrayAccess
         $this->container['route_earliest_date_time'] = isset($data['route_earliest_date_time']) ? $data['route_earliest_date_time'] : null;
         $this->container['route_latest_date_time'] = isset($data['route_latest_date_time']) ? $data['route_latest_date_time'] : null;
         $this->container['route_status_id'] = isset($data['route_status_id']) ? $data['route_status_id'] : null;
+        $this->container['route_status_name'] = isset($data['route_status_name']) ? $data['route_status_name'] : null;
         $this->container['route_nr_of_stops'] = isset($data['route_nr_of_stops']) ? $data['route_nr_of_stops'] : null;
         $this->container['route_overdue'] = isset($data['route_overdue']) ? $data['route_overdue'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
@@ -737,6 +747,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets route_id
+     * @return string
+     */
+    public function getRouteId()
+    {
+        return $this->container['route_id'];
+    }
+
+    /**
+     * Sets route_id
+     * @param string $route_id Route ID (unique)
+     * @return $this
+     */
+    public function setRouteId($route_id)
+    {
+        $this->container['route_id'] = $route_id;
+
+        return $this;
+    }
+
+    /**
      * Gets route_nr
      * @return string
      */
@@ -879,6 +910,27 @@ class ActivityModel implements ArrayAccess
     public function setRouteStatusId($route_status_id)
     {
         $this->container['route_status_id'] = $route_status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets route_status_name
+     * @return int
+     */
+    public function getRouteStatusName()
+    {
+        return $this->container['route_status_name'];
+    }
+
+    /**
+     * Sets route_status_name
+     * @param int $route_status_name Status Name of this Route
+     * @return $this
+     */
+    public function setRouteStatusName($route_status_name)
+    {
+        $this->container['route_status_name'] = $route_status_name;
 
         return $this;
     }
