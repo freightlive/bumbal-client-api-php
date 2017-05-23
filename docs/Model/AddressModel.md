@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
+**latitude** | **string** |  | [optional] 
+**longitude** | **string** |  | [optional] 
 **contact_person** | **string** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 

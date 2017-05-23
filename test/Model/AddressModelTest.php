@@ -192,6 +192,22 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "latitude"
+     */
+    public function testPropertyLatitude()
+    {
+
+    }
+
+    /**
+     * Test attribute "longitude"
+     */
+    public function testPropertyLongitude()
+    {
+
+    }
+
+    /**
      * Test attribute "contact_person"
      */
     public function testPropertyContactPerson()

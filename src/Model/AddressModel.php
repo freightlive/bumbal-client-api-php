@@ -78,6 +78,8 @@ class AddressModel implements ArrayAccess
         'state' => 'string',
         'iso_country' => 'string',
         'email' => 'string',
+        'latitude' => 'string',
+        'longitude' => 'string',
         'contact_person' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -106,6 +108,8 @@ class AddressModel implements ArrayAccess
         'state' => 'state',
         'iso_country' => 'iso_country',
         'email' => 'email',
+        'latitude' => 'latitude',
+        'longitude' => 'longitude',
         'contact_person' => 'contact_person',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -130,6 +134,8 @@ class AddressModel implements ArrayAccess
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
         'email' => 'setEmail',
+        'latitude' => 'setLatitude',
+        'longitude' => 'setLongitude',
         'contact_person' => 'setContactPerson',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -154,6 +160,8 @@ class AddressModel implements ArrayAccess
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
         'email' => 'getEmail',
+        'latitude' => 'getLatitude',
+        'longitude' => 'getLongitude',
         'contact_person' => 'getContactPerson',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -203,6 +211,8 @@ class AddressModel implements ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
+        $this->container['longitude'] = isset($data['longitude']) ? $data['longitude'] : null;
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -486,6 +496,48 @@ class AddressModel implements ArrayAccess
     public function setEmail($email)
     {
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets latitude
+     * @return string
+     */
+    public function getLatitude()
+    {
+        return $this->container['latitude'];
+    }
+
+    /**
+     * Sets latitude
+     * @param string $latitude
+     * @return $this
+     */
+    public function setLatitude($latitude)
+    {
+        $this->container['latitude'] = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets longitude
+     * @return string
+     */
+    public function getLongitude()
+    {
+        return $this->container['longitude'];
+    }
+
+    /**
+     * Sets longitude
+     * @param string $longitude
+     * @return $this
+     */
+    public function setLongitude($longitude)
+    {
+        $this->container['longitude'] = $longitude;
 
         return $this;
     }
