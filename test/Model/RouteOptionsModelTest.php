@@ -151,4 +151,12 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "include_latest_position"
+     */
+    public function testPropertyIncludeLatestPosition()
+    {
+
+    }
+
 }

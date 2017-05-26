@@ -184,6 +184,14 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "latest_known_position"
+     */
+    public function testPropertyLatestKnownPosition()
+    {
+
+    }
+
+    /**
      * Test attribute "activity_ids"
      */
     public function testPropertyActivityIds()

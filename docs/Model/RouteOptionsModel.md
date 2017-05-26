@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **include_equipment_info_car** | **bool** |  | [optional] 
 **include_gps_locations** | **bool** |  | [optional] 
 **include_activity_ids** | **bool** |  | [optional] 
+**include_latest_position** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

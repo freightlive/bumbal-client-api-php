@@ -77,6 +77,7 @@ class RouteModel implements ArrayAccess
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
         'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
+        'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
         'activity_ids' => 'object'
     ];
 
@@ -101,6 +102,7 @@ class RouteModel implements ArrayAccess
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
         'gps_locations' => 'gps_locations',
+        'latest_known_position' => 'latest_known_position',
         'activity_ids' => 'activity_ids'
     ];
 
@@ -121,6 +123,7 @@ class RouteModel implements ArrayAccess
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
         'gps_locations' => 'setGpsLocations',
+        'latest_known_position' => 'setLatestKnownPosition',
         'activity_ids' => 'setActivityIds'
     ];
 
@@ -141,6 +144,7 @@ class RouteModel implements ArrayAccess
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
         'gps_locations' => 'getGpsLocations',
+        'latest_known_position' => 'getLatestKnownPosition',
         'activity_ids' => 'getActivityIds'
     ];
 
@@ -204,6 +208,7 @@ class RouteModel implements ArrayAccess
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['gps_locations'] = isset($data['gps_locations']) ? $data['gps_locations'] : null;
+        $this->container['latest_known_position'] = isset($data['latest_known_position']) ? $data['latest_known_position'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
     }
 
@@ -476,6 +481,27 @@ class RouteModel implements ArrayAccess
     public function setGpsLocations($gps_locations)
     {
         $this->container['gps_locations'] = $gps_locations;
+
+        return $this;
+    }
+
+    /**
+     * Gets latest_known_position
+     * @return \BumbalClient\Model\GPSLocationModel
+     */
+    public function getLatestKnownPosition()
+    {
+        return $this->container['latest_known_position'];
+    }
+
+    /**
+     * Sets latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
+     * @return $this
+     */
+    public function setLatestKnownPosition($latest_known_position)
+    {
+        $this->container['latest_known_position'] = $latest_known_position;
 
         return $this;
     }
