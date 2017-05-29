@@ -66,7 +66,8 @@ class FileFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'object_id' => 'int[]',
+        'object_type' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class FileFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'object_id' => 'object_id',
+        'object_type' => 'object_type'
     ];
 
 
@@ -88,7 +90,8 @@ class FileFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'object_id' => 'setObjectId',
+        'object_type' => 'setObjectType'
     ];
 
 
@@ -97,7 +100,8 @@ class FileFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'object_id' => 'getObjectId',
+        'object_type' => 'getObjectType'
     ];
 
     public static function attributeMap()
@@ -131,6 +135,8 @@ class FileFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
     }
 
     /**
@@ -155,6 +161,48 @@ class FileFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets object_id
+     * @return int[]
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int[] $object_id Object id
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type
+     * @return int[]
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param int[] $object_type Object type
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

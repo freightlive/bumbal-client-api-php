@@ -95,4 +95,20 @@ class FileFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "object_id"
+     */
+    public function testPropertyObjectId()
+    {
+
+    }
+
+    /**
+     * Test attribute "object_type"
+     */
+    public function testPropertyObjectType()
+    {
+
+    }
+
 }
