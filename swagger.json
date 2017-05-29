@@ -2156,7 +2156,7 @@
         },
         "status_id" : {
           "description" : "Activity Status Id",
-          "type" : "int",
+          "type" : "integer",
           "enum" : [ 28, 20, 21, 39, 22, 3, 4, 9 ]
         },
         "status_name" : {
