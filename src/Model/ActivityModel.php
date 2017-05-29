@@ -70,6 +70,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'string',
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
+        'status_id' => 'int',
         'status_name' => 'string',
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
@@ -121,6 +122,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
+        'status_id' => 'status_id',
         'status_name' => 'status_name',
         'instructions' => 'instructions',
         'remarks' => 'remarks',
@@ -168,6 +170,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
+        'status_id' => 'setStatusId',
         'status_name' => 'setStatusName',
         'instructions' => 'setInstructions',
         'remarks' => 'setRemarks',
@@ -215,6 +218,7 @@ class ActivityModel implements ArrayAccess
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
+        'status_id' => 'getStatusId',
         'status_name' => 'getStatusName',
         'instructions' => 'getInstructions',
         'remarks' => 'getRemarks',
@@ -333,6 +337,7 @@ class ActivityModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
@@ -507,6 +512,27 @@ class ActivityModel implements ArrayAccess
     public function setActivityTypeId($activity_type_id)
     {
         $this->container['activity_type_id'] = $activity_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int $status_id Activity Status Id
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $this->container['status_id'] = $status_id;
 
         return $this;
     }

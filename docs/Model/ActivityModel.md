@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Type of this Activity | [optional] 
 **activity_type_id** | **int** | TypeID of this Activity | 
+**status_id** | **int** | Activity Status Id | [optional] 
 **status_name** | **string** | Activity Status | [optional] 
 **instructions** | [**\BumbalClient\Model\InstructionModel[]**](InstructionModel.md) |  | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
