@@ -71,8 +71,8 @@ class ActivityFiltersModel implements ArrayAccess
         'updated_at' => '\DateTime',
         'status' => 'string[]',
         'route_id' => 'int[]',
-        'link' => 'string[]',
-        'links' => 'string[]'
+        'link' => 'object[]',
+        'links' => 'object[]'
     ];
 
     public static function swaggerTypes()
@@ -294,7 +294,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets link
-     * @return string[]
+     * @return object[]
      */
     public function getLink()
     {
@@ -303,7 +303,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets link
-     * @param string[] $link Activity Link ids
+     * @param object[] $link Activity Link ids
      * @return $this
      */
     public function setLink($link)
@@ -315,7 +315,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return string[]
+     * @return object[]
      */
     public function getLinks()
     {
@@ -324,7 +324,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param string[] $links Activity Link ids
+     * @param object[] $links Activity Link ids
      * @return $this
      */
     public function setLinks($links)
