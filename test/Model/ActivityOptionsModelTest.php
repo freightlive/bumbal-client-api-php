@@ -183,4 +183,20 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "include_activity_files"
+     */
+    public function testPropertyIncludeActivityFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_activity_files_meta_data"
+     */
+    public function testPropertyIncludeActivityFilesMetaData()
+    {
+
+    }
+
 }

@@ -105,7 +105,8 @@ class ActivityModel implements ArrayAccess
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'communication' => '\BumbalClient\Model\CommunicationModel',
-        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]'
     ];
 
     public static function swaggerTypes()
@@ -157,7 +158,8 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'time_slots',
         'links' => 'links',
         'communication' => 'communication',
-        'meta_data' => 'meta_data'
+        'meta_data' => 'meta_data',
+        'files' => 'files'
     ];
 
 
@@ -205,7 +207,8 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'setTimeSlots',
         'links' => 'setLinks',
         'communication' => 'setCommunication',
-        'meta_data' => 'setMetaData'
+        'meta_data' => 'setMetaData',
+        'files' => 'setFiles'
     ];
 
 
@@ -253,7 +256,8 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'getTimeSlots',
         'links' => 'getLinks',
         'communication' => 'getCommunication',
-        'meta_data' => 'getMetaData'
+        'meta_data' => 'getMetaData',
+        'files' => 'getFiles'
     ];
 
     public static function attributeMap()
@@ -373,6 +377,7 @@ class ActivityModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
     /**
@@ -1272,6 +1277,27 @@ class ActivityModel implements ArrayAccess
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
 
         return $this;
     }

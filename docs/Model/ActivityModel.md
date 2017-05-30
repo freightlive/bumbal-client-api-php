@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

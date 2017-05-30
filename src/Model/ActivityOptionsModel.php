@@ -76,7 +76,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'bool',
         'include_activity_communication' => 'bool',
         'include_activity_links' => 'bool',
-        'include_package_lines_info' => 'bool'
+        'include_package_lines_info' => 'bool',
+        'include_activity_files' => 'bool',
+        'include_activity_files_meta_data' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -99,7 +101,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'include_driver_info',
         'include_activity_communication' => 'include_activity_communication',
         'include_activity_links' => 'include_activity_links',
-        'include_package_lines_info' => 'include_package_lines_info'
+        'include_package_lines_info' => 'include_package_lines_info',
+        'include_activity_files' => 'include_activity_files',
+        'include_activity_files_meta_data' => 'include_activity_files_meta_data'
     ];
 
 
@@ -118,7 +122,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_activity_communication' => 'setIncludeActivityCommunication',
         'include_activity_links' => 'setIncludeActivityLinks',
-        'include_package_lines_info' => 'setIncludePackageLinesInfo'
+        'include_package_lines_info' => 'setIncludePackageLinesInfo',
+        'include_activity_files' => 'setIncludeActivityFiles',
+        'include_activity_files_meta_data' => 'setIncludeActivityFilesMetaData'
     ];
 
 
@@ -137,7 +143,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_activity_communication' => 'getIncludeActivityCommunication',
         'include_activity_links' => 'getIncludeActivityLinks',
-        'include_package_lines_info' => 'getIncludePackageLinesInfo'
+        'include_package_lines_info' => 'getIncludePackageLinesInfo',
+        'include_activity_files' => 'getIncludeActivityFiles',
+        'include_activity_files_meta_data' => 'getIncludeActivityFilesMetaData'
     ];
 
     public static function attributeMap()
@@ -182,6 +190,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_communication'] = isset($data['include_activity_communication']) ? $data['include_activity_communication'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
+        $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
+        $this->container['include_activity_files_meta_data'] = isset($data['include_activity_files_meta_data']) ? $data['include_activity_files_meta_data'] : null;
     }
 
     /**
@@ -434,6 +444,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludePackageLinesInfo($include_package_lines_info)
     {
         $this->container['include_package_lines_info'] = $include_package_lines_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_files
+     * @return bool
+     */
+    public function getIncludeActivityFiles()
+    {
+        return $this->container['include_activity_files'];
+    }
+
+    /**
+     * Sets include_activity_files
+     * @param bool $include_activity_files
+     * @return $this
+     */
+    public function setIncludeActivityFiles($include_activity_files)
+    {
+        $this->container['include_activity_files'] = $include_activity_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_files_meta_data
+     * @return bool
+     */
+    public function getIncludeActivityFilesMetaData()
+    {
+        return $this->container['include_activity_files_meta_data'];
+    }
+
+    /**
+     * Sets include_activity_files_meta_data
+     * @param bool $include_activity_files_meta_data
+     * @return $this
+     */
+    public function setIncludeActivityFilesMetaData($include_activity_files_meta_data)
+    {
+        $this->container['include_activity_files_meta_data'] = $include_activity_files_meta_data;
 
         return $this;
     }
