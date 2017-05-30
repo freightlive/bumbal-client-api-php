@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Type of this Activity | [optional] 
 **activity_type_id** | **int** | TypeID of this Activity | 
-**status_id** | **int** | Activity Status Id | [optional] 
 **status_name** | **string** | Activity Status | [optional] 
 **instructions** | [**\BumbalClient\Model\InstructionModel[]**](InstructionModel.md) |  | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
@@ -42,7 +41,8 @@ Name | Type | Description | Notes
 **time_slots** | [**\BumbalClient\Model\TimeSlotModel[]**](TimeSlotModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**meta_data** | **object** |  | [optional] 
+**meta_data_objects** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

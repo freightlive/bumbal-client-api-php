@@ -266,7 +266,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -287,7 +287,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets nr
-     * @param string $nr
+     * @param string $nr 
      * @return $this
      */
     public function setNr($nr)
@@ -333,7 +333,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description
+     * @param string $description 
      * @return $this
      */
     public function setDescription($description)
@@ -354,7 +354,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets nr_of_packages
-     * @param string $nr_of_packages
+     * @param string $nr_of_packages 
      * @return $this
      */
     public function setNrOfPackages($nr_of_packages)
@@ -375,7 +375,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets length
-     * @param float $length
+     * @param float $length 
      * @return $this
      */
     public function setLength($length)
@@ -396,7 +396,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets width
-     * @param float $width
+     * @param float $width 
      * @return $this
      */
     public function setWidth($width)
@@ -417,7 +417,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets height
-     * @param float $height
+     * @param float $height 
      * @return $this
      */
     public function setHeight($height)
@@ -438,7 +438,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets volume
-     * @param float $volume
+     * @param float $volume 
      * @return $this
      */
     public function setVolume($volume)
@@ -459,7 +459,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets barcode
-     * @param string $barcode
+     * @param string $barcode 
      * @return $this
      */
     public function setBarcode($barcode)
@@ -480,7 +480,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets packagevalue
-     * @param float $packagevalue
+     * @param float $packagevalue 
      * @return $this
      */
     public function setPackagevalue($packagevalue)
@@ -501,7 +501,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)

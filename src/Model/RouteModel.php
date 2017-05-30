@@ -349,7 +349,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets nr_of_stops
-     * @param int $nr_of_stops
+     * @param int $nr_of_stops 
      * @return $this
      */
     public function setNrOfStops($nr_of_stops)
@@ -370,7 +370,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int $driver_id
+     * @param int $driver_id 
      * @return $this
      */
     public function setDriverId($driver_id)
@@ -391,7 +391,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car_id
-     * @param int $car_id
+     * @param int $car_id 
      * @return $this
      */
     public function setCarId($car_id)
@@ -412,7 +412,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets link_id
-     * @param string $link_id
+     * @param string $link_id 
      * @return $this
      */
     public function setLinkId($link_id)
@@ -433,7 +433,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time
-     * @param \DateTime $earliest_date_time
+     * @param \DateTime $earliest_date_time 
      * @return $this
      */
     public function setEarliestDateTime($earliest_date_time)
@@ -454,7 +454,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_date_time
-     * @param \DateTime $latest_date_time
+     * @param \DateTime $latest_date_time 
      * @return $this
      */
     public function setLatestDateTime($latest_date_time)
@@ -475,7 +475,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets gps_locations
-     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations
+     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations 
      * @return $this
      */
     public function setGpsLocations($gps_locations)
@@ -496,7 +496,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_known_position
-     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position 
      * @return $this
      */
     public function setLatestKnownPosition($latest_known_position)
@@ -517,7 +517,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets activity_ids
-     * @param object $activity_ids
+     * @param object $activity_ids 
      * @return $this
      */
     public function setActivityIds($activity_ids)

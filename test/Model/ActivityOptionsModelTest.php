@@ -199,4 +199,12 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "include_activity_files_meta_data_objects"
+     */
+    public function testPropertyIncludeActivityFilesMetaDataObjects()
+    {
+
+    }
+
 }
