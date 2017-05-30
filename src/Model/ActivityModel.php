@@ -69,6 +69,7 @@ class ActivityModel implements ArrayAccess
         'id' => 'int',
         'nr' => 'string',
         'activity_type_name' => 'string',
+        'status_id' => 'int',
         'activity_type_id' => 'int',
         'status_name' => 'string',
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
@@ -122,6 +123,7 @@ class ActivityModel implements ArrayAccess
         'id' => 'id',
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
+        'status_id' => 'status_id',
         'activity_type_id' => 'activity_type_id',
         'status_name' => 'status_name',
         'instructions' => 'instructions',
@@ -171,6 +173,7 @@ class ActivityModel implements ArrayAccess
         'id' => 'setId',
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
+        'status_id' => 'setStatusId',
         'activity_type_id' => 'setActivityTypeId',
         'status_name' => 'setStatusName',
         'instructions' => 'setInstructions',
@@ -220,6 +223,7 @@ class ActivityModel implements ArrayAccess
         'id' => 'getId',
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
+        'status_id' => 'getStatusId',
         'activity_type_id' => 'getActivityTypeId',
         'status_name' => 'getStatusName',
         'instructions' => 'getInstructions',
@@ -340,6 +344,7 @@ class ActivityModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
@@ -496,6 +501,27 @@ class ActivityModel implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'activity_type_name', must be one of 'pickup', 'dropoff', 'route_start', 'route_end', 'stop', 'combi'");
         }
         $this->container['activity_type_name'] = $activity_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int $status_id StatusID of this Activity
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $this->container['status_id'] = $status_id;
 
         return $this;
     }
