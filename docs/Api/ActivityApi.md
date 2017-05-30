@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data)
 
 Find activity by ID
 
@@ -127,9 +127,11 @@ $include_driver_info = true; // bool | Include driver data
 $include_activity_communication = true; // bool | Include Communication Settings
 $include_activity_links = true; // bool | Include Link Data
 $include_package_lines_info = true; // bool | Include PackageLines
+$include_activity_files = true; // bool | Include Activity files
+$include_activity_files_meta_data = true; // bool | Include Activity files meta data
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -153,6 +155,8 @@ Name | Type | Description  | Notes
  **include_activity_communication** | **bool**| Include Communication Settings |
  **include_activity_links** | **bool**| Include Link Data |
  **include_package_lines_info** | **bool**| Include PackageLines |
+ **include_activity_files** | **bool**| Include Activity files |
+ **include_activity_files_meta_data** | **bool**| Include Activity files meta data |
 
 ### Return type
 
