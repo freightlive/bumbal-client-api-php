@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **updated_at** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
+**link** | **string[]** | Activity Link ids | [optional] 
+**links** | **string[]** | Activity Link ids | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

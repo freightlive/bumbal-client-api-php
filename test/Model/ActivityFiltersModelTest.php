@@ -135,4 +135,20 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "link"
+     */
+    public function testPropertyLink()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
 }
