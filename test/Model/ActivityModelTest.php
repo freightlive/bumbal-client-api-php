@@ -120,17 +120,17 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status_id"
+     * Test attribute "activity_type_id"
      */
-    public function testPropertyStatusId()
+    public function testPropertyActivityTypeId()
     {
 
     }
 
     /**
-     * Test attribute "activity_type_id"
+     * Test attribute "status_id"
      */
-    public function testPropertyActivityTypeId()
+    public function testPropertyStatusId()
     {
 
     }

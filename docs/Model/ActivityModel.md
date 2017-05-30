@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** | Unique Identifier | 
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Type of this Activity | [optional] 
-**status_id** | **int** | StatusID of this Activity | [optional] 
 **activity_type_id** | **int** | TypeID of this Activity | 
+**status_id** | **int** | StatusId of this Activity, 28: activity_cancelled, 20: activity_incomplete, 21: activity_new, 39: activity_awaiting, 22: activity_accepted, 3: activity_planned, 4: activity_in_progress, 9: activity_executed | [optional] 
 **status_name** | **string** | Activity Status | [optional] 
 **instructions** | [**\BumbalClient\Model\InstructionModel[]**](InstructionModel.md) |  | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
