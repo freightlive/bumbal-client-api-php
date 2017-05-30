@@ -69,6 +69,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'bool',
         'include_activity_type_name' => 'bool',
         'include_activity_meta_data' => 'bool',
+        'include_activity_meta_data_objects' => 'bool',
         'include_address_object' => 'bool',
         'include_time_slots' => 'bool',
         'include_time_slot_tags' => 'bool',
@@ -95,6 +96,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'include_activity_status',
         'include_activity_type_name' => 'include_activity_type_name',
         'include_activity_meta_data' => 'include_activity_meta_data',
+        'include_activity_meta_data_objects' => 'include_activity_meta_data_objects',
         'include_address_object' => 'include_address_object',
         'include_time_slots' => 'include_time_slots',
         'include_time_slot_tags' => 'include_time_slot_tags',
@@ -117,6 +119,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'setIncludeActivityStatus',
         'include_activity_type_name' => 'setIncludeActivityTypeName',
         'include_activity_meta_data' => 'setIncludeActivityMetaData',
+        'include_activity_meta_data_objects' => 'setIncludeActivityMetaDataObjects',
         'include_address_object' => 'setIncludeAddressObject',
         'include_time_slots' => 'setIncludeTimeSlots',
         'include_time_slot_tags' => 'setIncludeTimeSlotTags',
@@ -139,6 +142,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'getIncludeActivityStatus',
         'include_activity_type_name' => 'getIncludeActivityTypeName',
         'include_activity_meta_data' => 'getIncludeActivityMetaData',
+        'include_activity_meta_data_objects' => 'getIncludeActivityMetaDataObjects',
         'include_address_object' => 'getIncludeAddressObject',
         'include_time_slots' => 'getIncludeTimeSlots',
         'include_time_slot_tags' => 'getIncludeTimeSlotTags',
@@ -186,6 +190,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_status'] = isset($data['include_activity_status']) ? $data['include_activity_status'] : null;
         $this->container['include_activity_type_name'] = isset($data['include_activity_type_name']) ? $data['include_activity_type_name'] : null;
         $this->container['include_activity_meta_data'] = isset($data['include_activity_meta_data']) ? $data['include_activity_meta_data'] : null;
+        $this->container['include_activity_meta_data_objects'] = isset($data['include_activity_meta_data_objects']) ? $data['include_activity_meta_data_objects'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
         $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
@@ -281,6 +286,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityMetaData($include_activity_meta_data)
     {
         $this->container['include_activity_meta_data'] = $include_activity_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_meta_data_objects
+     * @return bool
+     */
+    public function getIncludeActivityMetaDataObjects()
+    {
+        return $this->container['include_activity_meta_data_objects'];
+    }
+
+    /**
+     * Sets include_activity_meta_data_objects
+     * @param bool $include_activity_meta_data_objects 
+     * @return $this
+     */
+    public function setIncludeActivityMetaDataObjects($include_activity_meta_data_objects)
+    {
+        $this->container['include_activity_meta_data_objects'] = $include_activity_meta_data_objects;
 
         return $this;
     }

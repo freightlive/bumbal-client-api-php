@@ -156,11 +156,11 @@ Name | Type | Description  | Notes
  **include_route_info** | **bool**| Include route data |
  **include_driver_info** | **bool**| Include driver data |
  **include_activity_communication** | **bool**| Include Communication Settings |
- **include_activity_links** | **bool**| Include Link Data |
- **include_package_lines_info** | **bool**| Include PackageLines |
- **include_activity_files** | **bool**| Include files |
- **include_activity_files_meta_data** | **bool**| Include files meta data |
- **include_activity_files_meta_data_objects** | **bool**| Include files meta data objects |
+ **include_activity_links** | **bool**| Include Link Data | [optional]
+ **include_package_lines_info** | **bool**| Include PackageLines | [optional]
+ **include_activity_files** | **bool**| Include files | [optional]
+ **include_activity_files_meta_data** | **bool**| Include files meta data | [optional]
+ **include_activity_files_meta_data_objects** | **bool**| Include files meta data objects | [optional]
 
 ### Return type
 

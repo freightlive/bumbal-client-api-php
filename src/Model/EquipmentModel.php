@@ -344,7 +344,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets capacity_loading_meter
-     * @param float $capacity_loading_meter
+     * @param float $capacity_loading_meter 
      * @return $this
      */
     public function setCapacityLoadingMeter($capacity_loading_meter)

@@ -120,6 +120,14 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_activity_meta_data_objects"
+     */
+    public function testPropertyIncludeActivityMetaDataObjects()
+    {
+
+    }
+
+    /**
      * Test attribute "include_address_object"
      */
     public function testPropertyIncludeAddressObject()
