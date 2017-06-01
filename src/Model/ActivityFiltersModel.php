@@ -70,6 +70,7 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_to' => '\DateTime',
         'updated_at' => '\DateTime',
         'status' => 'string[]',
+        'activity_type_id' => 'int[]',
         'route_id' => 'int[]',
         'link' => 'object[]',
         'links' => 'object[]'
@@ -89,6 +90,7 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_to' => 'date_time_to',
         'updated_at' => 'updated_at',
         'status' => 'status',
+        'activity_type_id' => 'activity_type_id',
         'route_id' => 'route_id',
         'link' => 'link',
         'links' => 'links'
@@ -104,6 +106,7 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_to' => 'setDateTimeTo',
         'updated_at' => 'setUpdatedAt',
         'status' => 'setStatus',
+        'activity_type_id' => 'setActivityTypeId',
         'route_id' => 'setRouteId',
         'link' => 'setLink',
         'links' => 'setLinks'
@@ -119,6 +122,7 @@ class ActivityFiltersModel implements ArrayAccess
         'date_time_to' => 'getDateTimeTo',
         'updated_at' => 'getUpdatedAt',
         'status' => 'getStatus',
+        'activity_type_id' => 'getActivityTypeId',
         'route_id' => 'getRouteId',
         'link' => 'getLink',
         'links' => 'getLinks'
@@ -159,6 +163,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
@@ -267,6 +272,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_type_id
+     * @return int[]
+     */
+    public function getActivityTypeId()
+    {
+        return $this->container['activity_type_id'];
+    }
+
+    /**
+     * Sets activity_type_id
+     * @param int[] $activity_type_id Activity type id
+     * @return $this
+     */
+    public function setActivityTypeId($activity_type_id)
+    {
+        $this->container['activity_type_id'] = $activity_type_id;
 
         return $this;
     }

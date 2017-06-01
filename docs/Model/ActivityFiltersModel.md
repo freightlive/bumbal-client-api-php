@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **date_time_to** | [**\DateTime**](\DateTime.md) | DateTime To | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
+**activity_type_id** | **int[]** | Activity type id | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
 **links** | **object[]** | Activity Link ids | [optional] 
