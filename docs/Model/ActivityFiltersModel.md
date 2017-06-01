@@ -5,7 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date_time_from** | [**\DateTime**](\DateTime.md) | DateTime From | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | DateTime To | [optional] 
-**updated_at** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
+**updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
+**updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 
 **route_id** | **int[]** | Route id | [optional] 

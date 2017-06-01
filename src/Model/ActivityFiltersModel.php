@@ -68,7 +68,8 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
-        'updated_at' => '\DateTime',
+        'updated_at_since' => '\DateTime',
+        'updated_at_till' => '\DateTime',
         'status' => 'string[]',
         'activity_type_id' => 'int[]',
         'route_id' => 'int[]',
@@ -88,7 +89,8 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
-        'updated_at' => 'updated_at',
+        'updated_at_since' => 'updated_at_since',
+        'updated_at_till' => 'updated_at_till',
         'status' => 'status',
         'activity_type_id' => 'activity_type_id',
         'route_id' => 'route_id',
@@ -104,7 +106,8 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $setters = [
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
-        'updated_at' => 'setUpdatedAt',
+        'updated_at_since' => 'setUpdatedAtSince',
+        'updated_at_till' => 'setUpdatedAtTill',
         'status' => 'setStatus',
         'activity_type_id' => 'setActivityTypeId',
         'route_id' => 'setRouteId',
@@ -120,7 +123,8 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $getters = [
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
-        'updated_at' => 'getUpdatedAt',
+        'updated_at_since' => 'getUpdatedAtSince',
+        'updated_at_till' => 'getUpdatedAtTill',
         'status' => 'getStatus',
         'activity_type_id' => 'getActivityTypeId',
         'route_id' => 'getRouteId',
@@ -161,7 +165,8 @@ class ActivityFiltersModel implements ArrayAccess
     {
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
+        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
@@ -235,22 +240,43 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets updated_at
+     * Gets updated_at_since
      * @return \DateTime
      */
-    public function getUpdatedAt()
+    public function getUpdatedAtSince()
     {
-        return $this->container['updated_at'];
+        return $this->container['updated_at_since'];
     }
 
     /**
-     * Sets updated_at
-     * @param \DateTime $updated_at Show updated since
+     * Sets updated_at_since
+     * @param \DateTime $updated_at_since Show updated since
      * @return $this
      */
-    public function setUpdatedAt($updated_at)
+    public function setUpdatedAtSince($updated_at_since)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['updated_at_since'] = $updated_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at_till
+     * @return \DateTime
+     */
+    public function getUpdatedAtTill()
+    {
+        return $this->container['updated_at_till'];
+    }
+
+    /**
+     * Sets updated_at_till
+     * @param \DateTime $updated_at_till Show updated till
+     * @return $this
+     */
+    public function setUpdatedAtTill($updated_at_till)
+    {
+        $this->container['updated_at_till'] = $updated_at_till;
 
         return $this;
     }

@@ -112,9 +112,17 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "updated_at_since"
      */
-    public function testPropertyUpdatedAt()
+    public function testPropertyUpdatedAtSince()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
     {
 
     }
