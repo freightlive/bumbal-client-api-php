@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
+**status_id** | **int[]** | Activity Status id | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
