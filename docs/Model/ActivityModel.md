@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **send_invite** | **bool** | Send invite | [optional] 
 **sequence_nr** | **int** | Sequence number on Route | [optional] 
 **reference** | **string** | Reference of this activity | [optional] 
+**description** | **string** | description of this activity | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | Earliest date-time | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | latest date-time | [optional] 
 **duration** | **int** | Duration of this activity in minutes | [optional] 

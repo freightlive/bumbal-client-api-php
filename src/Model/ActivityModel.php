@@ -79,6 +79,7 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'bool',
         'sequence_nr' => 'int',
         'reference' => 'string',
+        'description' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'duration' => 'int',
@@ -133,6 +134,7 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'send_invite',
         'sequence_nr' => 'sequence_nr',
         'reference' => 'reference',
+        'description' => 'description',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'duration' => 'duration',
@@ -183,6 +185,7 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'setSendInvite',
         'sequence_nr' => 'setSequenceNr',
         'reference' => 'setReference',
+        'description' => 'setDescription',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'duration' => 'setDuration',
@@ -233,6 +236,7 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'getSendInvite',
         'sequence_nr' => 'getSequenceNr',
         'reference' => 'getReference',
+        'description' => 'getDescription',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'duration' => 'getDuration',
@@ -354,6 +358,7 @@ class ActivityModel implements ArrayAccess
         $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
@@ -715,6 +720,27 @@ class ActivityModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description description of this activity
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }
