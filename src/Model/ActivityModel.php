@@ -75,7 +75,6 @@ class ActivityModel implements ArrayAccess
         'remarks' => 'string',
         'locked' => 'bool',
         'top_priority' => 'bool',
-        'send_invite' => 'bool',
         'sequence_nr' => 'int',
         'reference' => 'string',
         'date_time_from' => '\DateTime',
@@ -126,7 +125,6 @@ class ActivityModel implements ArrayAccess
         'remarks' => 'remarks',
         'locked' => 'locked',
         'top_priority' => 'top_priority',
-        'send_invite' => 'send_invite',
         'sequence_nr' => 'sequence_nr',
         'reference' => 'reference',
         'date_time_from' => 'date_time_from',
@@ -173,7 +171,6 @@ class ActivityModel implements ArrayAccess
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
         'top_priority' => 'setTopPriority',
-        'send_invite' => 'setSendInvite',
         'sequence_nr' => 'setSequenceNr',
         'reference' => 'setReference',
         'date_time_from' => 'setDateTimeFrom',
@@ -220,7 +217,6 @@ class ActivityModel implements ArrayAccess
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
         'top_priority' => 'getTopPriority',
-        'send_invite' => 'getSendInvite',
         'sequence_nr' => 'getSequenceNr',
         'reference' => 'getReference',
         'date_time_from' => 'getDateTimeFrom',
@@ -338,7 +334,6 @@ class ActivityModel implements ArrayAccess
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
-        $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
@@ -616,27 +611,6 @@ class ActivityModel implements ArrayAccess
     public function setTopPriority($top_priority)
     {
         $this->container['top_priority'] = $top_priority;
-
-        return $this;
-    }
-
-    /**
-     * Gets send_invite
-     * @return bool
-     */
-    public function getSendInvite()
-    {
-        return $this->container['send_invite'];
-    }
-
-    /**
-     * Sets send_invite
-     * @param bool $send_invite Send invite
-     * @return $this
-     */
-    public function setSendInvite($send_invite)
-    {
-        $this->container['send_invite'] = $send_invite;
 
         return $this;
     }

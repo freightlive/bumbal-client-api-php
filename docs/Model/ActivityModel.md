@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **remarks** | **string** | Remarks about this activity | [optional] 
 **locked** | **bool** | Activity locked on a Route | [optional] 
 **top_priority** | **bool** | Activity has top priority | [optional] 
-**send_invite** | **bool** | Send invite | [optional] 
 **sequence_nr** | **int** | Sequence number on Route | [optional] 
 **reference** | **string** | Reference of this activity | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | Earliest date-time | [optional] 

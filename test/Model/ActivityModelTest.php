@@ -168,14 +168,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "send_invite"
-     */
-    public function testPropertySendInvite()
-    {
-
-    }
-
-    /**
      * Test attribute "sequence_nr"
      */
     public function testPropertySequenceNr()
