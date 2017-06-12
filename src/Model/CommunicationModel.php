@@ -66,11 +66,14 @@ class CommunicationModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'saywhen' => 'bool',
         'send_invite' => 'bool',
+        'send_planned' => 'bool',
         'send_eta' => 'bool',
-        'email' => 'string',
-        'phone_nr' => 'string'
+        'send_executed' => 'bool',
+        'send_cancelled' => 'bool',
+        'saywhen_status_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,11 +86,14 @@ class CommunicationModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'saywhen' => 'saywhen',
         'send_invite' => 'send_invite',
+        'send_planned' => 'send_planned',
         'send_eta' => 'send_eta',
-        'email' => 'email',
-        'phone_nr' => 'phone_nr'
+        'send_executed' => 'send_executed',
+        'send_cancelled' => 'send_cancelled',
+        'saywhen_status_name' => 'saywhen_status_name'
     ];
 
 
@@ -96,11 +102,14 @@ class CommunicationModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'saywhen' => 'setSaywhen',
         'send_invite' => 'setSendInvite',
+        'send_planned' => 'setSendPlanned',
         'send_eta' => 'setSendEta',
-        'email' => 'setEmail',
-        'phone_nr' => 'setPhoneNr'
+        'send_executed' => 'setSendExecuted',
+        'send_cancelled' => 'setSendCancelled',
+        'saywhen_status_name' => 'setSaywhenStatusName'
     ];
 
 
@@ -109,11 +118,14 @@ class CommunicationModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'saywhen' => 'getSaywhen',
         'send_invite' => 'getSendInvite',
+        'send_planned' => 'getSendPlanned',
         'send_eta' => 'getSendEta',
-        'email' => 'getEmail',
-        'phone_nr' => 'getPhoneNr'
+        'send_executed' => 'getSendExecuted',
+        'send_cancelled' => 'getSendCancelled',
+        'saywhen_status_name' => 'getSaywhenStatusName'
     ];
 
     public static function attributeMap()
@@ -131,8 +143,36 @@ class CommunicationModel implements ArrayAccess
         return self::$getters;
     }
 
+    const SAYWHEN_STATUS_NAME_CANCELLED = 'cancelled';
+    const SAYWHEN_STATUS_NAME_OFFERED = 'offered';
+    const SAYWHEN_STATUS_NAME_PREFFED = 'preffed';
+    const SAYWHEN_STATUS_NAME_CONFIRMED = 'confirmed';
+    const SAYWHEN_STATUS_NAME_ACCEPTED = 'accepted';
+    const SAYWHEN_STATUS_NAME_PLANNED = 'planned';
+    const SAYWHEN_STATUS_NAME_SCHEDULED = 'scheduled';
+    const SAYWHEN_STATUS_NAME_STARTED = 'started';
+    const SAYWHEN_STATUS_NAME_COMPLETED = 'completed';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSaywhenStatusNameAllowableValues()
+    {
+        return [
+            self::SAYWHEN_STATUS_NAME_CANCELLED,
+            self::SAYWHEN_STATUS_NAME_OFFERED,
+            self::SAYWHEN_STATUS_NAME_PREFFED,
+            self::SAYWHEN_STATUS_NAME_CONFIRMED,
+            self::SAYWHEN_STATUS_NAME_ACCEPTED,
+            self::SAYWHEN_STATUS_NAME_PLANNED,
+            self::SAYWHEN_STATUS_NAME_SCHEDULED,
+            self::SAYWHEN_STATUS_NAME_STARTED,
+            self::SAYWHEN_STATUS_NAME_COMPLETED,
+        ];
+    }
     
 
     /**
@@ -147,11 +187,14 @@ class CommunicationModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['saywhen'] = isset($data['saywhen']) ? $data['saywhen'] : null;
         $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
+        $this->container['send_planned'] = isset($data['send_planned']) ? $data['send_planned'] : null;
         $this->container['send_eta'] = isset($data['send_eta']) ? $data['send_eta'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['phone_nr'] = isset($data['phone_nr']) ? $data['phone_nr'] : null;
+        $this->container['send_executed'] = isset($data['send_executed']) ? $data['send_executed'] : null;
+        $this->container['send_cancelled'] = isset($data['send_cancelled']) ? $data['send_cancelled'] : null;
+        $this->container['saywhen_status_name'] = isset($data['saywhen_status_name']) ? $data['saywhen_status_name'] : null;
     }
 
     /**
@@ -162,6 +205,14 @@ class CommunicationModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
+        $allowed_values = ["cancelled", "offered", "preffed", "confirmed", "accepted", "planned", "scheduled", "started", "completed"];
+        if (!in_array($this->container['saywhen_status_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'saywhen_status_name', must be one of 'cancelled', 'offered', 'preffed', 'confirmed', 'accepted', 'planned', 'scheduled', 'started', 'completed'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -173,9 +224,37 @@ class CommunicationModel implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['id'] === null) {
+            return false;
+        }
+        $allowed_values = ["cancelled", "offered", "preffed", "confirmed", "accepted", "planned", "scheduled", "started", "completed"];
+        if (!in_array($this->container['saywhen_status_name'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id 
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets saywhen
@@ -188,7 +267,7 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets saywhen
-     * @param bool $saywhen Make use of SayWhen
+     * @param bool $saywhen Whether or not activity should be synced with Saywhen
      * @return $this
      */
     public function setSaywhen($saywhen)
@@ -209,12 +288,33 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets send_invite
-     * @param bool $send_invite Send an invitation to make an appointment
+     * @param bool $send_invite Send invite
      * @return $this
      */
     public function setSendInvite($send_invite)
     {
         $this->container['send_invite'] = $send_invite;
+
+        return $this;
+    }
+
+    /**
+     * Gets send_planned
+     * @return bool
+     */
+    public function getSendPlanned()
+    {
+        return $this->container['send_planned'];
+    }
+
+    /**
+     * Sets send_planned
+     * @param bool $send_planned Send planned notice
+     * @return $this
+     */
+    public function setSendPlanned($send_planned)
+    {
+        $this->container['send_planned'] = $send_planned;
 
         return $this;
     }
@@ -230,7 +330,7 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets send_eta
-     * @param bool $send_eta Send ETA messages
+     * @param bool $send_eta Send eta notice
      * @return $this
      */
     public function setSendEta($send_eta)
@@ -241,43 +341,68 @@ class CommunicationModel implements ArrayAccess
     }
 
     /**
-     * Gets email
-     * @return string
+     * Gets send_executed
+     * @return bool
      */
-    public function getEmail()
+    public function getSendExecuted()
     {
-        return $this->container['email'];
+        return $this->container['send_executed'];
     }
 
     /**
-     * Sets email
-     * @param string $email The email address to which to communicate
+     * Sets send_executed
+     * @param bool $send_executed Send executed notice
      * @return $this
      */
-    public function setEmail($email)
+    public function setSendExecuted($send_executed)
     {
-        $this->container['email'] = $email;
+        $this->container['send_executed'] = $send_executed;
 
         return $this;
     }
 
     /**
-     * Gets phone_nr
-     * @return string
+     * Gets send_cancelled
+     * @return bool
      */
-    public function getPhoneNr()
+    public function getSendCancelled()
     {
-        return $this->container['phone_nr'];
+        return $this->container['send_cancelled'];
     }
 
     /**
-     * Sets phone_nr
-     * @param string $phone_nr The phone number to which to communicate
+     * Sets send_cancelled
+     * @param bool $send_cancelled Send cancelled notice
      * @return $this
      */
-    public function setPhoneNr($phone_nr)
+    public function setSendCancelled($send_cancelled)
     {
-        $this->container['phone_nr'] = $phone_nr;
+        $this->container['send_cancelled'] = $send_cancelled;
+
+        return $this;
+    }
+
+    /**
+     * Gets saywhen_status_name
+     * @return string
+     */
+    public function getSaywhenStatusName()
+    {
+        return $this->container['saywhen_status_name'];
+    }
+
+    /**
+     * Sets saywhen_status_name
+     * @param string $saywhen_status_name Saywhen Status name
+     * @return $this
+     */
+    public function setSaywhenStatusName($saywhen_status_name)
+    {
+        $allowed_values = array('cancelled', 'offered', 'preffed', 'confirmed', 'accepted', 'planned', 'scheduled', 'started', 'completed');
+        if (!is_null($saywhen_status_name) && (!in_array($saywhen_status_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'saywhen_status_name', must be one of 'cancelled', 'offered', 'preffed', 'confirmed', 'accepted', 'planned', 'scheduled', 'started', 'completed'");
+        }
+        $this->container['saywhen_status_name'] = $saywhen_status_name;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityFiltersModelTest
+ * CommunicationOptionsModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * ActivityFiltersModelTest Class Doc Comment
+ * CommunicationOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityFiltersModel
+// * @description CommunicationOptionsModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
+class CommunicationOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,89 +88,41 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ActivityFiltersModel"
+     * Test "CommunicationOptionsModel"
      */
-    public function testActivityFiltersModel()
+    public function testCommunicationOptionsModel()
     {
 
     }
 
     /**
-     * Test attribute "date_time_from"
+     * Test attribute "include_phone_nrs"
      */
-    public function testPropertyDateTimeFrom()
+    public function testPropertyIncludePhoneNrs()
     {
 
     }
 
     /**
-     * Test attribute "date_time_to"
+     * Test attribute "include_address_tags"
      */
-    public function testPropertyDateTimeTo()
+    public function testPropertyIncludeAddressTags()
     {
 
     }
 
     /**
-     * Test attribute "updated_at_since"
+     * Test attribute "include_party_info"
      */
-    public function testPropertyUpdatedAtSince()
+    public function testPropertyIncludePartyInfo()
     {
 
     }
 
     /**
-     * Test attribute "updated_at_till"
+     * Test attribute "include_address_type_ids"
      */
-    public function testPropertyUpdatedAtTill()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "status_id"
-     */
-    public function testPropertyStatusId()
-    {
-
-    }
-
-    /**
-     * Test attribute "activity_type_id"
-     */
-    public function testPropertyActivityTypeId()
-    {
-
-    }
-
-    /**
-     * Test attribute "route_id"
-     */
-    public function testPropertyRouteId()
-    {
-
-    }
-
-    /**
-     * Test attribute "link"
-     */
-    public function testPropertyLink()
-    {
-
-    }
-
-    /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
+    public function testPropertyIncludeAddressTypeIds()
     {
 
     }

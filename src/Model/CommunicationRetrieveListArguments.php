@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityRetrieveListArguments
+ * CommunicationRetrieveListArguments
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ActivityRetrieveListArguments Class Doc Comment
+ * CommunicationRetrieveListArguments Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,25 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityRetrieveListArguments implements ArrayAccess
+class CommunicationRetrieveListArguments implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ActivityRetrieveListArguments';
+    protected static $swaggerModelName = 'CommunicationRetrieveListArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ActivityOptionsModel',
-        'filters' => '\BumbalClient\Model\ActivityFiltersModel',
+        'options' => '\BumbalClient\Model\AddressOptionsModel',
+        'filters' => '\BumbalClient\Model\AddressFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'sorting_column' => 'string',
-        'sorting_direction' => 'string',
         'search_text' => 'string'
     ];
 
@@ -89,8 +87,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'sorting_column' => 'sorting_column',
-        'sorting_direction' => 'sorting_direction',
         'search_text' => 'search_text'
     ];
 
@@ -104,8 +100,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'sorting_column' => 'setSortingColumn',
-        'sorting_direction' => 'setSortingDirection',
         'search_text' => 'setSearchText'
     ];
 
@@ -119,8 +113,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'sorting_column' => 'getSortingColumn',
-        'sorting_direction' => 'getSortingDirection',
         'search_text' => 'getSearchText'
     ];
 
@@ -139,40 +131,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
-    const SORTING_COLUMN_ID = 'id';
-    const SORTING_COLUMN_NAME = 'name';
-    const SORTING_COLUMN_DESCRIPTION = 'description';
-    const SORTING_COLUMN_SUBJECT = 'subject';
-    const SORTING_DIRECTION_ASC = 'ASC';
-    const SORTING_DIRECTION_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getSortingColumnAllowableValues()
-    {
-        return [
-            self::SORTING_COLUMN_ID,
-            self::SORTING_COLUMN_NAME,
-            self::SORTING_COLUMN_DESCRIPTION,
-            self::SORTING_COLUMN_SUBJECT,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getSortingDirectionAllowableValues()
-    {
-        return [
-            self::SORTING_DIRECTION_ASC,
-            self::SORTING_DIRECTION_DESC,
-        ];
-    }
     
 
     /**
@@ -191,8 +151,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
-        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
@@ -204,16 +162,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        $allowed_values = ["id", "name", "description", "subject"];
-        if (!in_array($this->container['sorting_column'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'.";
-        }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'.";
-        }
-
         return $invalid_properties;
     }
 
@@ -225,21 +173,13 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = ["id", "name", "description", "subject"];
-        if (!in_array($this->container['sorting_column'], $allowed_values)) {
-            return false;
-        }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\ActivityOptionsModel
+     * @return \BumbalClient\Model\AddressOptionsModel
      */
     public function getOptions()
     {
@@ -248,7 +188,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\ActivityOptionsModel $options 
+     * @param \BumbalClient\Model\AddressOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -260,7 +200,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\ActivityFiltersModel
+     * @return \BumbalClient\Model\AddressFiltersModel
      */
     public function getFilters()
     {
@@ -269,7 +209,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ActivityFiltersModel $filters 
+     * @param \BumbalClient\Model\AddressFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
@@ -317,56 +257,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets sorting_column
-     * @return string
-     */
-    public function getSortingColumn()
-    {
-        return $this->container['sorting_column'];
-    }
-
-    /**
-     * Sets sorting_column
-     * @param string $sorting_column Sorting Column
-     * @return $this
-     */
-    public function setSortingColumn($sorting_column)
-    {
-        $allowed_values = array('id', 'name', 'description', 'subject');
-        if (!is_null($sorting_column) && (!in_array($sorting_column, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'");
-        }
-        $this->container['sorting_column'] = $sorting_column;
-
-        return $this;
-    }
-
-    /**
-     * Gets sorting_direction
-     * @return string
-     */
-    public function getSortingDirection()
-    {
-        return $this->container['sorting_direction'];
-    }
-
-    /**
-     * Sets sorting_direction
-     * @param string $sorting_direction Sorting Direction
-     * @return $this
-     */
-    public function setSortingDirection($sorting_direction)
-    {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($sorting_direction) && (!in_array($sorting_direction, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['sorting_direction'] = $sorting_direction;
 
         return $this;
     }

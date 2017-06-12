@@ -96,6 +96,14 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
      * Test attribute "saywhen"
      */
     public function testPropertySaywhen()
@@ -112,6 +120,14 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "send_planned"
+     */
+    public function testPropertySendPlanned()
+    {
+
+    }
+
+    /**
      * Test attribute "send_eta"
      */
     public function testPropertySendEta()
@@ -120,17 +136,25 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "send_executed"
      */
-    public function testPropertyEmail()
+    public function testPropertySendExecuted()
     {
 
     }
 
     /**
-     * Test attribute "phone_nr"
+     * Test attribute "send_cancelled"
      */
-    public function testPropertyPhoneNr()
+    public function testPropertySendCancelled()
+    {
+
+    }
+
+    /**
+     * Test attribute "saywhen_status_name"
+     */
+    public function testPropertySaywhenStatusName()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityFiltersModelTest
+ * CommunicationFiltersModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * ActivityFiltersModelTest Class Doc Comment
+ * CommunicationFiltersModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description ActivityFiltersModel
+// * @description CommunicationFiltersModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
+class CommunicationFiltersModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,89 +88,25 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ActivityFiltersModel"
+     * Test "CommunicationFiltersModel"
      */
-    public function testActivityFiltersModel()
+    public function testCommunicationFiltersModel()
     {
 
     }
 
     /**
-     * Test attribute "date_time_from"
+     * Test attribute "id"
      */
-    public function testPropertyDateTimeFrom()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "date_time_to"
+     * Test attribute "saywhen"
      */
-    public function testPropertyDateTimeTo()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at_since"
-     */
-    public function testPropertyUpdatedAtSince()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at_till"
-     */
-    public function testPropertyUpdatedAtTill()
-    {
-
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "status_id"
-     */
-    public function testPropertyStatusId()
-    {
-
-    }
-
-    /**
-     * Test attribute "activity_type_id"
-     */
-    public function testPropertyActivityTypeId()
-    {
-
-    }
-
-    /**
-     * Test attribute "route_id"
-     */
-    public function testPropertyRouteId()
-    {
-
-    }
-
-    /**
-     * Test attribute "link"
-     */
-    public function testPropertyLink()
-    {
-
-    }
-
-    /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
+    public function testPropertySaywhen()
     {
 
     }

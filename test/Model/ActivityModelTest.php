@@ -128,6 +128,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status_id"
+     */
+    public function testPropertyStatusId()
+    {
+
+    }
+
+    /**
      * Test attribute "status_name"
      */
     public function testPropertyStatusName()
@@ -179,6 +187,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "reference"
      */
     public function testPropertyReference()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
 
     }
@@ -395,6 +411,22 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data_objects"
+     */
+    public function testPropertyMetaDataObjects()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
     {
 
     }

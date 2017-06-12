@@ -103,7 +103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects)
 
 Find activity by ID
 
@@ -119,17 +119,21 @@ $activity_id = 789; // int | ID of activity to return
 $include_activity_status = true; // bool | Show the text value of the status
 $include_activity_type_name = true; // bool | Show the text value of the activity type
 $include_activity_meta_data = true; // bool | Include meta data connected to this Activity
+$include_activity_meta_data_objects = true; // bool | Include meta data objects connected to this Activity
 $include_address_object = true; // bool | Include address data
 $include_time_slots = true; // bool | Include TimeSlots
 $include_time_slot_tags = true; // bool | Include tags from TimeSlots
 $include_route_info = true; // bool | Include route data
 $include_driver_info = true; // bool | Include driver data
-$include_activity_communication = true; // bool | Include Communication Settings
+$include_communication = true; // bool | Include Communication Settings
 $include_activity_links = true; // bool | Include Link Data
 $include_package_lines_info = true; // bool | Include PackageLines
+$include_activity_files = true; // bool | Include files
+$include_activity_files_meta_data = true; // bool | Include files meta data
+$include_activity_files_meta_data_objects = true; // bool | Include files meta data objects
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_activity_communication, $include_activity_links, $include_package_lines_info);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -145,14 +149,18 @@ Name | Type | Description  | Notes
  **include_activity_status** | **bool**| Show the text value of the status |
  **include_activity_type_name** | **bool**| Show the text value of the activity type |
  **include_activity_meta_data** | **bool**| Include meta data connected to this Activity |
+ **include_activity_meta_data_objects** | **bool**| Include meta data objects connected to this Activity |
  **include_address_object** | **bool**| Include address data |
  **include_time_slots** | **bool**| Include TimeSlots |
  **include_time_slot_tags** | **bool**| Include tags from TimeSlots |
  **include_route_info** | **bool**| Include route data |
  **include_driver_info** | **bool**| Include driver data |
- **include_activity_communication** | **bool**| Include Communication Settings |
- **include_activity_links** | **bool**| Include Link Data |
- **include_package_lines_info** | **bool**| Include PackageLines |
+ **include_communication** | **bool**| Include Communication Settings |
+ **include_activity_links** | **bool**| Include Link Data | [optional]
+ **include_package_lines_info** | **bool**| Include PackageLines | [optional]
+ **include_activity_files** | **bool**| Include files | [optional]
+ **include_activity_files_meta_data** | **bool**| Include files meta data | [optional]
+ **include_activity_files_meta_data_objects** | **bool**| Include files meta data objects | [optional]
 
 ### Return type
 
