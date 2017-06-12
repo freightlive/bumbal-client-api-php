@@ -120,14 +120,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_activity_meta_data_objects"
-     */
-    public function testPropertyIncludeActivityMetaDataObjects()
-    {
-
-    }
-
-    /**
      * Test attribute "include_address_object"
      */
     public function testPropertyIncludeAddressObject()
@@ -187,30 +179,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_package_lines_info"
      */
     public function testPropertyIncludePackageLinesInfo()
-    {
-
-    }
-
-    /**
-     * Test attribute "include_activity_files"
-     */
-    public function testPropertyIncludeActivityFiles()
-    {
-
-    }
-
-    /**
-     * Test attribute "include_activity_files_meta_data"
-     */
-    public function testPropertyIncludeActivityFilesMetaData()
-    {
-
-    }
-
-    /**
-     * Test attribute "include_activity_files_meta_data_objects"
-     */
-    public function testPropertyIncludeActivityFilesMetaDataObjects()
     {
 
     }

@@ -70,7 +70,6 @@ class ActivityModel implements ArrayAccess
         'nr' => 'string',
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
-        'status_id' => 'int',
         'status_name' => 'string',
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
@@ -79,7 +78,6 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'bool',
         'sequence_nr' => 'int',
         'reference' => 'string',
-        'description' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'duration' => 'int',
@@ -106,9 +104,7 @@ class ActivityModel implements ArrayAccess
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'communication' => '\BumbalClient\Model\CommunicationModel',
-        'meta_data' => 'object',
-        'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
-        'files' => '\BumbalClient\Model\FileModel[]'
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     public static function swaggerTypes()
@@ -125,7 +121,6 @@ class ActivityModel implements ArrayAccess
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
-        'status_id' => 'status_id',
         'status_name' => 'status_name',
         'instructions' => 'instructions',
         'remarks' => 'remarks',
@@ -134,7 +129,6 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'send_invite',
         'sequence_nr' => 'sequence_nr',
         'reference' => 'reference',
-        'description' => 'description',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'duration' => 'duration',
@@ -161,9 +155,7 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'time_slots',
         'links' => 'links',
         'communication' => 'communication',
-        'meta_data' => 'meta_data',
-        'meta_data_objects' => 'meta_data_objects',
-        'files' => 'files'
+        'meta_data' => 'meta_data'
     ];
 
 
@@ -176,7 +168,6 @@ class ActivityModel implements ArrayAccess
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
-        'status_id' => 'setStatusId',
         'status_name' => 'setStatusName',
         'instructions' => 'setInstructions',
         'remarks' => 'setRemarks',
@@ -185,7 +176,6 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'setSendInvite',
         'sequence_nr' => 'setSequenceNr',
         'reference' => 'setReference',
-        'description' => 'setDescription',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'duration' => 'setDuration',
@@ -212,9 +202,7 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'setTimeSlots',
         'links' => 'setLinks',
         'communication' => 'setCommunication',
-        'meta_data' => 'setMetaData',
-        'meta_data_objects' => 'setMetaDataObjects',
-        'files' => 'setFiles'
+        'meta_data' => 'setMetaData'
     ];
 
 
@@ -227,7 +215,6 @@ class ActivityModel implements ArrayAccess
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
-        'status_id' => 'getStatusId',
         'status_name' => 'getStatusName',
         'instructions' => 'getInstructions',
         'remarks' => 'getRemarks',
@@ -236,7 +223,6 @@ class ActivityModel implements ArrayAccess
         'send_invite' => 'getSendInvite',
         'sequence_nr' => 'getSequenceNr',
         'reference' => 'getReference',
-        'description' => 'getDescription',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'duration' => 'getDuration',
@@ -263,9 +249,7 @@ class ActivityModel implements ArrayAccess
         'time_slots' => 'getTimeSlots',
         'links' => 'getLinks',
         'communication' => 'getCommunication',
-        'meta_data' => 'getMetaData',
-        'meta_data_objects' => 'getMetaDataObjects',
-        'files' => 'getFiles'
+        'meta_data' => 'getMetaData'
     ];
 
     public static function attributeMap()
@@ -349,7 +333,6 @@ class ActivityModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
-        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
@@ -358,7 +341,6 @@ class ActivityModel implements ArrayAccess
         $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
@@ -386,8 +368,6 @@ class ActivityModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
-        $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
-        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
     /**
@@ -527,27 +507,6 @@ class ActivityModel implements ArrayAccess
     public function setActivityTypeId($activity_type_id)
     {
         $this->container['activity_type_id'] = $activity_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets status_id
-     * @return int
-     */
-    public function getStatusId()
-    {
-        return $this->container['status_id'];
-    }
-
-    /**
-     * Sets status_id
-     * @param int $status_id StatusId of this Activity, 28: activity_cancelled, 20: activity_incomplete, 21: activity_new, 39: activity_awaiting, 22: activity_accepted, 3: activity_planned, 4: activity_in_progress, 9: activity_executed
-     * @return $this
-     */
-    public function setStatusId($status_id)
-    {
-        $this->container['status_id'] = $status_id;
 
         return $this;
     }
@@ -720,27 +679,6 @@ class ActivityModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     * @param string $description description of this activity
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
 
         return $this;
     }
@@ -1293,7 +1231,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return object
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -1302,54 +1240,12 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param object $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets meta_data_objects
-     * @return \BumbalClient\Model\MetaDataModel[]
-     */
-    public function getMetaDataObjects()
-    {
-        return $this->container['meta_data_objects'];
-    }
-
-    /**
-     * Sets meta_data_objects
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects 
-     * @return $this
-     */
-    public function setMetaDataObjects($meta_data_objects)
-    {
-        $this->container['meta_data_objects'] = $meta_data_objects;
-
-        return $this;
-    }
-
-    /**
-     * Gets files
-     * @return \BumbalClient\Model\FileModel[]
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
-     * @return $this
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
 
         return $this;
     }

@@ -68,14 +68,9 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
-        'updated_at_since' => '\DateTime',
-        'updated_at_till' => '\DateTime',
+        'updated_at' => '\DateTime',
         'status' => 'string[]',
-        'status_id' => 'int[]',
-        'activity_type_id' => 'int[]',
-        'route_id' => 'int[]',
-        'link' => 'object[]',
-        'links' => 'object[]'
+        'route_id' => 'int[]'
     ];
 
     public static function swaggerTypes()
@@ -90,14 +85,9 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
-        'updated_at_since' => 'updated_at_since',
-        'updated_at_till' => 'updated_at_till',
+        'updated_at' => 'updated_at',
         'status' => 'status',
-        'status_id' => 'status_id',
-        'activity_type_id' => 'activity_type_id',
-        'route_id' => 'route_id',
-        'link' => 'link',
-        'links' => 'links'
+        'route_id' => 'route_id'
     ];
 
 
@@ -108,14 +98,9 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $setters = [
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
-        'updated_at_since' => 'setUpdatedAtSince',
-        'updated_at_till' => 'setUpdatedAtTill',
+        'updated_at' => 'setUpdatedAt',
         'status' => 'setStatus',
-        'status_id' => 'setStatusId',
-        'activity_type_id' => 'setActivityTypeId',
-        'route_id' => 'setRouteId',
-        'link' => 'setLink',
-        'links' => 'setLinks'
+        'route_id' => 'setRouteId'
     ];
 
 
@@ -126,14 +111,9 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $getters = [
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
-        'updated_at_since' => 'getUpdatedAtSince',
-        'updated_at_till' => 'getUpdatedAtTill',
+        'updated_at' => 'getUpdatedAt',
         'status' => 'getStatus',
-        'status_id' => 'getStatusId',
-        'activity_type_id' => 'getActivityTypeId',
-        'route_id' => 'getRouteId',
-        'link' => 'getLink',
-        'links' => 'getLinks'
+        'route_id' => 'getRouteId'
     ];
 
     public static function attributeMap()
@@ -169,14 +149,9 @@ class ActivityFiltersModel implements ArrayAccess
     {
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
-        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
-        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
-        $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
-        $this->container['link'] = isset($data['link']) ? $data['link'] : null;
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -245,43 +220,22 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets updated_at_since
+     * Gets updated_at
      * @return \DateTime
      */
-    public function getUpdatedAtSince()
+    public function getUpdatedAt()
     {
-        return $this->container['updated_at_since'];
+        return $this->container['updated_at'];
     }
 
     /**
-     * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * Sets updated_at
+     * @param \DateTime $updated_at Show updated since
      * @return $this
      */
-    public function setUpdatedAtSince($updated_at_since)
+    public function setUpdatedAt($updated_at)
     {
-        $this->container['updated_at_since'] = $updated_at_since;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at_till
-     * @return \DateTime
-     */
-    public function getUpdatedAtTill()
-    {
-        return $this->container['updated_at_till'];
-    }
-
-    /**
-     * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
-     * @return $this
-     */
-    public function setUpdatedAtTill($updated_at_till)
-    {
-        $this->container['updated_at_till'] = $updated_at_till;
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
@@ -308,48 +262,6 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets status_id
-     * @return int[]
-     */
-    public function getStatusId()
-    {
-        return $this->container['status_id'];
-    }
-
-    /**
-     * Sets status_id
-     * @param int[] $status_id Activity Status id
-     * @return $this
-     */
-    public function setStatusId($status_id)
-    {
-        $this->container['status_id'] = $status_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets activity_type_id
-     * @return int[]
-     */
-    public function getActivityTypeId()
-    {
-        return $this->container['activity_type_id'];
-    }
-
-    /**
-     * Sets activity_type_id
-     * @param int[] $activity_type_id Activity type id
-     * @return $this
-     */
-    public function setActivityTypeId($activity_type_id)
-    {
-        $this->container['activity_type_id'] = $activity_type_id;
-
-        return $this;
-    }
-
-    /**
      * Gets route_id
      * @return int[]
      */
@@ -366,48 +278,6 @@ class ActivityFiltersModel implements ArrayAccess
     public function setRouteId($route_id)
     {
         $this->container['route_id'] = $route_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets link
-     * @return object[]
-     */
-    public function getLink()
-    {
-        return $this->container['link'];
-    }
-
-    /**
-     * Sets link
-     * @param object[] $link Activity Link ids
-     * @return $this
-     */
-    public function setLink($link)
-    {
-        $this->container['link'] = $link;
-
-        return $this;
-    }
-
-    /**
-     * Gets links
-     * @return object[]
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     * @param object[] $links Activity Link ids
-     * @return $this
-     */
-    public function setLinks($links)
-    {
-        $this->container['links'] = $links;
 
         return $this;
     }

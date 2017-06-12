@@ -191,12 +191,4 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "meta_data_objects"
-     */
-    public function testPropertyMetaDataObjects()
-    {
-
-    }
-
 }

@@ -112,17 +112,9 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "updated_at_since"
+     * Test attribute "updated_at"
      */
-    public function testPropertyUpdatedAtSince()
-    {
-
-    }
-
-    /**
-     * Test attribute "updated_at_till"
-     */
-    public function testPropertyUpdatedAtTill()
+    public function testPropertyUpdatedAt()
     {
 
     }
@@ -136,41 +128,9 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status_id"
-     */
-    public function testPropertyStatusId()
-    {
-
-    }
-
-    /**
-     * Test attribute "activity_type_id"
-     */
-    public function testPropertyActivityTypeId()
-    {
-
-    }
-
-    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()
-    {
-
-    }
-
-    /**
-     * Test attribute "link"
-     */
-    public function testPropertyLink()
-    {
-
-    }
-
-    /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
     {
 
     }
