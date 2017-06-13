@@ -100,6 +100,7 @@ class ActivityModel implements ArrayAccess
         'driver_full_name' => 'string',
         'driver_email' => 'string',
         'address' => '\BumbalClient\Model\AddressModel',
+        'depot_address' => '\BumbalClient\Model\AddressModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
@@ -154,6 +155,7 @@ class ActivityModel implements ArrayAccess
         'driver_full_name' => 'driver_full_name',
         'driver_email' => 'driver_email',
         'address' => 'address',
+        'depot_address' => 'depot_address',
         'tags' => 'tags',
         'package_lines' => 'package_lines',
         'time_slots' => 'time_slots',
@@ -204,6 +206,7 @@ class ActivityModel implements ArrayAccess
         'driver_full_name' => 'setDriverFullName',
         'driver_email' => 'setDriverEmail',
         'address' => 'setAddress',
+        'depot_address' => 'setDepotAddress',
         'tags' => 'setTags',
         'package_lines' => 'setPackageLines',
         'time_slots' => 'setTimeSlots',
@@ -254,6 +257,7 @@ class ActivityModel implements ArrayAccess
         'driver_full_name' => 'getDriverFullName',
         'driver_email' => 'getDriverEmail',
         'address' => 'getAddress',
+        'depot_address' => 'getDepotAddress',
         'tags' => 'getTags',
         'package_lines' => 'getPackageLines',
         'time_slots' => 'getTimeSlots',
@@ -375,6 +379,7 @@ class ActivityModel implements ArrayAccess
         $this->container['driver_full_name'] = isset($data['driver_full_name']) ? $data['driver_full_name'] : null;
         $this->container['driver_email'] = isset($data['driver_email']) ? $data['driver_email'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
@@ -1156,6 +1161,27 @@ class ActivityModel implements ArrayAccess
     public function setAddress($address)
     {
         $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets depot_address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getDepotAddress()
+    {
+        return $this->container['depot_address'];
+    }
+
+    /**
+     * Sets depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address 
+     * @return $this
+     */
+    public function setDepotAddress($depot_address)
+    {
+        $this->container['depot_address'] = $depot_address;
 
         return $this;
     }

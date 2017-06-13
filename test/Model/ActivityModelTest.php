@@ -368,6 +368,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "depot_address"
+     */
+    public function testPropertyDepotAddress()
+    {
+
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()
