@@ -132,18 +132,18 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settingss
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
-*Tag_typeApi* | [**createTagType**](docs/Api/Tag_typeApi.md#createtagtype) | **POST** /tag-type | Add a new Tag type
-*Tag_typeApi* | [**deleteTagType**](docs/Api/Tag_typeApi.md#deletetagtype) | **DELETE** /tag-type/{tagTypeId} | Delete a Tag type
-*Tag_typeApi* | [**retrieveListTagType**](docs/Api/Tag_typeApi.md#retrievelisttagtype) | **PUT** /tag-type | Retrieve List of Tag types
-*Tag_typeApi* | [**retrieveTagType**](docs/Api/Tag_typeApi.md#retrievetagtype) | **GET** /tag-type/{tagTypeId} | Retrieve a Tag type
-*Tag_typeApi* | [**setTagType**](docs/Api/Tag_typeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
-*Tag_typeApi* | [**updateTagType**](docs/Api/Tag_typeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
 *TagsApi* | [**createTag**](docs/Api/TagsApi.md#createtag) | **POST** /tags | Add a new Tag
 *TagsApi* | [**deleteTag**](docs/Api/TagsApi.md#deletetag) | **DELETE** /tags/{tagId} | Delete a Tag
 *TagsApi* | [**retrieveListTags**](docs/Api/TagsApi.md#retrievelisttags) | **PUT** /tags | Retrieve List of Tags
 *TagsApi* | [**retrieveTag**](docs/Api/TagsApi.md#retrievetag) | **GET** /tags/{tagId} | Retrieve a Tag
 *TagsApi* | [**setTags**](docs/Api/TagsApi.md#settags) | **POST** /tags/set | Set (create or update) Tag
 *TagsApi* | [**updateTag**](docs/Api/TagsApi.md#updatetag) | **PUT** /tags/{tagId} | Update a Tag
+*TagtypeApi* | [**createTagType**](docs/Api/TagtypeApi.md#createtagtype) | **POST** /tag-type | Add a new Tag type
+*TagtypeApi* | [**deleteTagType**](docs/Api/TagtypeApi.md#deletetagtype) | **DELETE** /tag-type/{tagTypeId} | Delete a Tag type
+*TagtypeApi* | [**retrieveListTagType**](docs/Api/TagtypeApi.md#retrievelisttagtype) | **PUT** /tag-type | Retrieve List of Tag types
+*TagtypeApi* | [**retrieveTagType**](docs/Api/TagtypeApi.md#retrievetagtype) | **GET** /tag-type/{tagTypeId} | Retrieve a Tag type
+*TagtypeApi* | [**setTagType**](docs/Api/TagtypeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
+*TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
 *TracktraceApi* | [**retrieveActivityStatus**](docs/Api/TracktraceApi.md#retrieveactivitystatus) | **GET** /track-trace/retrieve-activity-status/{activityId} | Retrieve Activity Status
 *TracktraceApi* | [**retrieveRouteStatus**](docs/Api/TracktraceApi.md#retrieveroutestatus) | **GET** /track-trace/retrieve-route-status/{routeId} | Retrieve Route Status
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Userss
