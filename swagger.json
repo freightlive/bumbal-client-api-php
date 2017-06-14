@@ -1884,7 +1884,7 @@
         }
       }
     },
-    "/tag-type/{id}" : {
+    "/tag-type/{tagTypeId}" : {
       "get" : {
         "tags" : [ "tag_type" ],
         "summary" : "Retrieve a Tag type",
@@ -4363,7 +4363,7 @@
     "TagTypeModel" : {
       "required" : [ "id" ],
       "properties" : {
-        "id" : {
+        "tagTypeId" : {
           "description" : "Unique Tag type ID",
           "type" : "integer",
           "format" : "int64",
