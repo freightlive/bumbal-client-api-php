@@ -1790,6 +1790,41 @@
       }
     },
     "/tag-type" : {
+      "put" : {
+        "tags" : [ "tag_type" ],
+        "summary" : "Retrieve List of Tag types",
+        "description" : "Retrieve List of Tags",
+        "operationId" : "retrieveListTagType",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "arguments",
+          "in" : "body",
+          "description" : "Tag types RetrieveList Arguments",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/TagTypeRetrieveListArguments"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/TagTypeModel"
+              },
+              "xml" : {
+                "name" : "TagType",
+                "wrapped" : true
+              }
+            }
+          },
+          "405" : {
+            "description" : "Invalid input"
+          }
+        }
+      },
       "post" : {
         "tags" : [ "tag_type" ],
         "summary" : "Add a new Tag type",
@@ -1830,7 +1865,7 @@
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
-          "description" : "tag type ids",
+          "description" : "tag type data",
           "required" : false,
           "schema" : {
             "$ref" : "#/definitions/TagTypeModel"
@@ -1889,47 +1924,18 @@
             "description" : "Invalid input"
           }
         }
-      }
-    },
-    "/tags/{tagId}" : {
-      "get" : {
-        "tags" : [ "tags" ],
-        "summary" : "Retrieve a Tag",
-        "description" : "Retrieve an Tag",
-        "operationId" : "retrieveTag",
-        "consumes" : [ "application/json", "application/xml" ],
-        "produces" : [ "application/json", "application/xml" ],
-        "parameters" : [ {
-          "name" : "tagId",
-          "in" : "path",
-          "description" : "ID of tag to retrieve",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/TagModel"
-            }
-          },
-          "405" : {
-            "description" : "Invalid input"
-          }
-        }
       },
       "put" : {
-        "tags" : [ "tags" ],
-        "summary" : "Update a Tag",
-        "description" : "Update an Tag",
-        "operationId" : "updateTag",
+        "tags" : [ "tag_type" ],
+        "summary" : "Update a Tag type",
+        "description" : "Update a Tag type",
+        "operationId" : "updateTagType",
         "consumes" : [ "application/json", "application/xml" ],
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
-          "name" : "tagId",
+          "name" : "id",
           "in" : "path",
-          "description" : "ID of tag to update",
+          "description" : "ID of tag type to update",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
@@ -1947,16 +1953,16 @@
         }
       },
       "delete" : {
-        "tags" : [ "tags" ],
-        "summary" : "Delete a Tag",
-        "description" : "Delete a Tag",
-        "operationId" : "deleteTag",
+        "tags" : [ "tag_type" ],
+        "summary" : "Delete a Tag type",
+        "description" : "Delete a Tag type",
+        "operationId" : "deleteTagType",
         "consumes" : [ "application/json", "application/xml" ],
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
-          "name" : "tagId",
+          "name" : "id",
           "in" : "path",
-          "description" : "ID of tag to delete",
+          "description" : "ID of tag type to delete",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
@@ -2055,6 +2061,89 @@
           "schema" : {
             "$ref" : "#/definitions/TagModel"
           }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ApiResponse"
+            }
+          },
+          "405" : {
+            "description" : "Invalid input"
+          }
+        }
+      }
+    },
+    "/tags/{tagId}" : {
+      "get" : {
+        "tags" : [ "tags" ],
+        "summary" : "Retrieve a Tag",
+        "description" : "Retrieve an Tag",
+        "operationId" : "retrieveTag",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "tagId",
+          "in" : "path",
+          "description" : "ID of tag to retrieve",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/TagModel"
+            }
+          },
+          "405" : {
+            "description" : "Invalid input"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "tags" ],
+        "summary" : "Update a Tag",
+        "description" : "Update an Tag",
+        "operationId" : "updateTag",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "tagId",
+          "in" : "path",
+          "description" : "ID of tag to update",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ApiResponse"
+            }
+          },
+          "405" : {
+            "description" : "Invalid input"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "tags" ],
+        "summary" : "Delete a Tag",
+        "description" : "Delete a Tag",
+        "operationId" : "deleteTag",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "tagId",
+          "in" : "path",
+          "description" : "ID of tag to delete",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
         } ],
         "responses" : {
           "200" : {
