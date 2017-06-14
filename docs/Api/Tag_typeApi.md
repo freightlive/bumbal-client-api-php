@@ -40,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/\BumbalClient\Model\TagTypeModel.md)| Tag type object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/\BumbalClient\Model\TagTypeModel.md)| Tag type object that needs to be created |
 
 ### Return type
 

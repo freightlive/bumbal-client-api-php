@@ -106,11 +106,11 @@ class Tag_typeApi
      *
      * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function createTagType($body = null)
+    public function createTagType($body)
     {
         list($response) = $this->createTagTypeWithHttpInfo($body);
         return $response;
@@ -121,12 +121,16 @@ class Tag_typeApi
      *
      * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTagTypeWithHttpInfo($body = null)
+    public function createTagTypeWithHttpInfo($body)
     {
+        // verify the required parameter 'body' is set
+        if ($body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $body when calling createTagType');
+        }
         // parse inputs
         $resourcePath = "/tag-type";
         $httpBody = '';
