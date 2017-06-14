@@ -157,6 +157,9 @@ class TagTypeModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+        if ($this->container['tag_type_id'] === null) {
+            $invalid_properties[] = "'tag_type_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -168,6 +171,9 @@ class TagTypeModel implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['tag_type_id'] === null) {
+            return false;
+        }
         return true;
     }
 

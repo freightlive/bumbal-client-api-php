@@ -148,7 +148,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTagType**
-> \BumbalClient\Model\TagModel retrieveTagType($tag_type_id, $name, $include_object_types)
+> \BumbalClient\Model\TagTypeModel retrieveTagType($tag_type_id, $name, $include_object_types)
 
 Retrieve a Tag type
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel**](../Model/TagModel.md)
+[**\BumbalClient\Model\TagTypeModel**](../Model/TagTypeModel.md)
 
 ### Authorization
 

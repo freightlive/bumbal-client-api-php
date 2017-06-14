@@ -359,7 +359,7 @@ class TagtypeApi
      * @param int $name name of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagModel
+     * @return \BumbalClient\Model\TagTypeModel
      */
     public function retrieveTagType($tag_type_id, $name, $include_object_types = null)
     {
@@ -376,7 +376,7 @@ class TagtypeApi
      * @param int $name name of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TagTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveTagTypeWithHttpInfo($tag_type_id, $name, $include_object_types = null)
     {
@@ -438,15 +438,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagModel',
+                '\BumbalClient\Model\TagTypeModel',
                 '/tag-type/{tagTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
