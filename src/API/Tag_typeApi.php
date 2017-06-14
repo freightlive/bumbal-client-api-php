@@ -1,6 +1,6 @@
 <?php
 /**
- * TagsApi
+ * Tag_typeApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \BumbalClient\Configuration;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * TagsApi Class Doc Comment
+ * Tag_typeApi Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
@@ -54,7 +54,7 @@ use \BumbalClient\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TagsApi
+class Tag_typeApi
 {
     /**
      * API Client
@@ -93,7 +93,7 @@ class TagsApi
      *
      * @param \BumbalClient\ApiClient $apiClient set the API client
      *
-     * @return TagsApi
+     * @return Tag_typeApi
      */
     public function setApiClient(\BumbalClient\ApiClient $apiClient)
     {
@@ -102,33 +102,33 @@ class TagsApi
     }
 
     /**
-     * Operation createTag
+     * Operation createTagType
      *
-     * Add a new Tag
+     * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagModel $body Tag object that needs to be created (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function createTag($body = null)
+    public function createTagType($body = null)
     {
-        list($response) = $this->createTagWithHttpInfo($body);
+        list($response) = $this->createTagTypeWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation createTagWithHttpInfo
+     * Operation createTagTypeWithHttpInfo
      *
-     * Add a new Tag
+     * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagModel $body Tag object that needs to be created (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTagWithHttpInfo($body = null)
+    public function createTagTypeWithHttpInfo($body = null)
     {
         // parse inputs
-        $resourcePath = "/tags";
+        $resourcePath = "/tag-type";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -163,7 +163,7 @@ class TagsApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/tags'
+                '/tag-type'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -180,37 +180,37 @@ class TagsApi
     }
 
     /**
-     * Operation deleteTag
+     * Operation deleteTagType
      *
-     * Delete a Tag
+     * Delete a Tag type
      *
-     * @param int $tag_id ID of tag to delete (required)
+     * @param int $tag_type_id ID of tag type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function deleteTag($tag_id)
+    public function deleteTagType($tag_type_id)
     {
-        list($response) = $this->deleteTagWithHttpInfo($tag_id);
+        list($response) = $this->deleteTagTypeWithHttpInfo($tag_type_id);
         return $response;
     }
 
     /**
-     * Operation deleteTagWithHttpInfo
+     * Operation deleteTagTypeWithHttpInfo
      *
-     * Delete a Tag
+     * Delete a Tag type
      *
-     * @param int $tag_id ID of tag to delete (required)
+     * @param int $tag_type_id ID of tag type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteTagWithHttpInfo($tag_id)
+    public function deleteTagTypeWithHttpInfo($tag_type_id)
     {
-        // verify the required parameter 'tag_id' is set
-        if ($tag_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $tag_id when calling deleteTag');
+        // verify the required parameter 'tag_type_id' is set
+        if ($tag_type_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tag_type_id when calling deleteTagType');
         }
         // parse inputs
-        $resourcePath = "/tags/{tagId}";
+        $resourcePath = "/tag-type/{tagTypeId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -222,10 +222,10 @@ class TagsApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($tag_id !== null) {
+        if ($tag_type_id !== null) {
             $resourcePath = str_replace(
-                "{" . "tagId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($tag_id),
+                "{" . "tagTypeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($tag_type_id),
                 $resourcePath
             );
         }
@@ -248,7 +248,7 @@ class TagsApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/tags/{tagId}'
+                '/tag-type/{tagTypeId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -265,37 +265,37 @@ class TagsApi
     }
 
     /**
-     * Operation retrieveListTags
+     * Operation retrieveListTagType
      *
-     * Retrieve List of Tags
+     * Retrieve List of Tag types
      *
-     * @param \BumbalClient\Model\TagsRetrieveListArguments $arguments Tags RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagTypeModel[]
      */
-    public function retrieveListTags($arguments)
+    public function retrieveListTagType($arguments)
     {
-        list($response) = $this->retrieveListTagsWithHttpInfo($arguments);
+        list($response) = $this->retrieveListTagTypeWithHttpInfo($arguments);
         return $response;
     }
 
     /**
-     * Operation retrieveListTagsWithHttpInfo
+     * Operation retrieveListTagTypeWithHttpInfo
      *
-     * Retrieve List of Tags
+     * Retrieve List of Tag types
      *
-     * @param \BumbalClient\Model\TagsRetrieveListArguments $arguments Tags RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TagTypeModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveListTagsWithHttpInfo($arguments)
+    public function retrieveListTagTypeWithHttpInfo($arguments)
     {
         // verify the required parameter 'arguments' is set
         if ($arguments === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListTags');
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListTagType');
         }
         // parse inputs
-        $resourcePath = "/tags";
+        $resourcePath = "/tag-type";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -329,15 +329,15 @@ class TagsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagModel[]',
-                '/tags'
+                '\BumbalClient\Model\TagTypeModel[]',
+                '/tag-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -347,37 +347,45 @@ class TagsApi
     }
 
     /**
-     * Operation retrieveTag
+     * Operation retrieveTagType
      *
-     * Retrieve a Tag
+     * Retrieve a Tag type
      *
-     * @param int $tag_id ID of tag to retrieve (required)
+     * @param int $tag_type_id ID of tag type to retrieve (required)
+     * @param int $name name of tag type to retrieve (required)
+     * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\TagModel
      */
-    public function retrieveTag($tag_id)
+    public function retrieveTagType($tag_type_id, $name, $include_object_types = null)
     {
-        list($response) = $this->retrieveTagWithHttpInfo($tag_id);
+        list($response) = $this->retrieveTagTypeWithHttpInfo($tag_type_id, $name, $include_object_types);
         return $response;
     }
 
     /**
-     * Operation retrieveTagWithHttpInfo
+     * Operation retrieveTagTypeWithHttpInfo
      *
-     * Retrieve a Tag
+     * Retrieve a Tag type
      *
-     * @param int $tag_id ID of tag to retrieve (required)
+     * @param int $tag_type_id ID of tag type to retrieve (required)
+     * @param int $name name of tag type to retrieve (required)
+     * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\TagModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveTagWithHttpInfo($tag_id)
+    public function retrieveTagTypeWithHttpInfo($tag_type_id, $name, $include_object_types = null)
     {
-        // verify the required parameter 'tag_id' is set
-        if ($tag_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $tag_id when calling retrieveTag');
+        // verify the required parameter 'tag_type_id' is set
+        if ($tag_type_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tag_type_id when calling retrieveTagType');
+        }
+        // verify the required parameter 'name' is set
+        if ($name === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $name when calling retrieveTagType');
         }
         // parse inputs
-        $resourcePath = "/tags/{tagId}";
+        $resourcePath = "/tag-type/{tagTypeId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -388,11 +396,23 @@ class TagsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // query params
+        if ($include_object_types !== null) {
+            $queryParams['include_object_types'] = $this->apiClient->getSerializer()->toQueryValue($include_object_types);
+        }
         // path params
-        if ($tag_id !== null) {
+        if ($tag_type_id !== null) {
             $resourcePath = str_replace(
-                "{" . "tagId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($tag_id),
+                "{" . "tagTypeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($tag_type_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($name !== null) {
+            $resourcePath = str_replace(
+                "{" . "name" . "}",
+                $this->apiClient->getSerializer()->toPathValue($name),
                 $resourcePath
             );
         }
@@ -415,7 +435,7 @@ class TagsApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\TagModel',
-                '/tags/{tagId}'
+                '/tag-type/{tagTypeId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagModel', $httpHeader), $statusCode, $httpHeader];
@@ -432,33 +452,33 @@ class TagsApi
     }
 
     /**
-     * Operation setTags
+     * Operation setTagType
      *
-     * Set (create or update) Tag
+     * Set (create or update) Tag type
      *
-     * @param \BumbalClient\Model\TagModel $body tag type ids (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body tag type data (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function setTags($body = null)
+    public function setTagType($body = null)
     {
-        list($response) = $this->setTagsWithHttpInfo($body);
+        list($response) = $this->setTagTypeWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation setTagsWithHttpInfo
+     * Operation setTagTypeWithHttpInfo
      *
-     * Set (create or update) Tag
+     * Set (create or update) Tag type
      *
-     * @param \BumbalClient\Model\TagModel $body tag type ids (optional)
+     * @param \BumbalClient\Model\TagTypeModel $body tag type data (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setTagsWithHttpInfo($body = null)
+    public function setTagTypeWithHttpInfo($body = null)
     {
         // parse inputs
-        $resourcePath = "/tags/set";
+        $resourcePath = "/tag-type/set";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -493,7 +513,7 @@ class TagsApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/tags/set'
+                '/tag-type/set'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -510,37 +530,37 @@ class TagsApi
     }
 
     /**
-     * Operation updateTag
+     * Operation updateTagType
      *
-     * Update a Tag
+     * Update a Tag type
      *
-     * @param int $tag_id ID of tag to update (required)
+     * @param int $tag_type_id ID of tag type to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateTag($tag_id)
+    public function updateTagType($tag_type_id)
     {
-        list($response) = $this->updateTagWithHttpInfo($tag_id);
+        list($response) = $this->updateTagTypeWithHttpInfo($tag_type_id);
         return $response;
     }
 
     /**
-     * Operation updateTagWithHttpInfo
+     * Operation updateTagTypeWithHttpInfo
      *
-     * Update a Tag
+     * Update a Tag type
      *
-     * @param int $tag_id ID of tag to update (required)
+     * @param int $tag_type_id ID of tag type to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateTagWithHttpInfo($tag_id)
+    public function updateTagTypeWithHttpInfo($tag_type_id)
     {
-        // verify the required parameter 'tag_id' is set
-        if ($tag_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $tag_id when calling updateTag');
+        // verify the required parameter 'tag_type_id' is set
+        if ($tag_type_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $tag_type_id when calling updateTagType');
         }
         // parse inputs
-        $resourcePath = "/tags/{tagId}";
+        $resourcePath = "/tag-type/{tagTypeId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -552,10 +572,10 @@ class TagsApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($tag_id !== null) {
+        if ($tag_type_id !== null) {
             $resourcePath = str_replace(
-                "{" . "tagId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($tag_id),
+                "{" . "tagTypeId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($tag_type_id),
                 $resourcePath
             );
         }
@@ -578,7 +598,7 @@ class TagsApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/tags/{tagId}'
+                '/tag-type/{tagTypeId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

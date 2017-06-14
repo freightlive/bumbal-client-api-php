@@ -1,6 +1,6 @@
 <?php
 /**
- * TagsApiTest
+ * Tag_typeApiTest
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * TagsApiTest Class Doc Comment
+ * Tag_typeApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
@@ -54,7 +54,7 @@ use \BumbalClient\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class TagsApiTest extends \PHPUnit_Framework_TestCase
+class Tag_typeApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -90,67 +90,67 @@ class TagsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createTag
+     * Test case for createTagType
      *
-     * Add a new Tag.
+     * Add a new Tag type.
      *
      */
-    public function testCreateTag()
+    public function testCreateTagType()
     {
 
     }
 
     /**
-     * Test case for deleteTag
+     * Test case for deleteTagType
      *
-     * Delete a Tag.
+     * Delete a Tag type.
      *
      */
-    public function testDeleteTag()
+    public function testDeleteTagType()
     {
 
     }
 
     /**
-     * Test case for retrieveListTags
+     * Test case for retrieveListTagType
      *
-     * Retrieve List of Tags.
+     * Retrieve List of Tag types.
      *
      */
-    public function testRetrieveListTags()
+    public function testRetrieveListTagType()
     {
 
     }
 
     /**
-     * Test case for retrieveTag
+     * Test case for retrieveTagType
      *
-     * Retrieve a Tag.
+     * Retrieve a Tag type.
      *
      */
-    public function testRetrieveTag()
+    public function testRetrieveTagType()
     {
 
     }
 
     /**
-     * Test case for setTags
+     * Test case for setTagType
      *
-     * Set (create or update) Tag.
+     * Set (create or update) Tag type.
      *
      */
-    public function testSetTags()
+    public function testSetTagType()
     {
 
     }
 
     /**
-     * Test case for updateTag
+     * Test case for updateTagType
      *
-     * Update a Tag.
+     * Update a Tag type.
      *
      */
-    public function testUpdateTag()
+    public function testUpdateTagType()
     {
 
     }

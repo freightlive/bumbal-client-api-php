@@ -1,6 +1,6 @@
 <?php
 /**
- * TagModel
+ * TagTypeFiltersModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TagModel Class Doc Comment
+ * TagTypeFiltersModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,23 +53,20 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TagModel implements ArrayAccess
+class TagTypeFiltersModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TagModel';
+    protected static $swaggerModelName = 'TagTypeFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'object_type' => 'int',
-        'tag_type_id' => 'int',
-        'tag_type_name' => 'string'
+        
     ];
 
     public static function swaggerTypes()
@@ -82,10 +79,7 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'object_type' => 'object_type',
-        'tag_type_id' => 'tag_type_id',
-        'tag_type_name' => 'tag_type_name'
+        
     ];
 
 
@@ -94,10 +88,7 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'object_type' => 'setObjectType',
-        'tag_type_id' => 'setTagTypeId',
-        'tag_type_name' => 'setTagTypeName'
+        
     ];
 
 
@@ -106,10 +97,7 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'object_type' => 'getObjectType',
-        'tag_type_id' => 'getTagTypeId',
-        'tag_type_name' => 'getTagTypeName'
+        
     ];
 
     public static function attributeMap()
@@ -143,10 +131,6 @@ class TagModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
-        $this->container['tag_type_name'] = isset($data['tag_type_name']) ? $data['tag_type_name'] : null;
     }
 
     /**
@@ -157,9 +141,6 @@ class TagModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -171,96 +152,9 @@ class TagModel implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
-            return false;
-        }
         return true;
     }
 
-
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id Unique ID
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_type
-     * @return int
-     */
-    public function getObjectType()
-    {
-        return $this->container['object_type'];
-    }
-
-    /**
-     * Sets object_type
-     * @param int $object_type Object type ID
-     * @return $this
-     */
-    public function setObjectType($object_type)
-    {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets tag_type_id
-     * @return int
-     */
-    public function getTagTypeId()
-    {
-        return $this->container['tag_type_id'];
-    }
-
-    /**
-     * Sets tag_type_id
-     * @param int $tag_type_id Tag Type ID
-     * @return $this
-     */
-    public function setTagTypeId($tag_type_id)
-    {
-        $this->container['tag_type_id'] = $tag_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets tag_type_name
-     * @return string
-     */
-    public function getTagTypeName()
-    {
-        return $this->container['tag_type_name'];
-    }
-
-    /**
-     * Sets tag_type_name
-     * @param string $tag_type_name Tag Type Name
-     * @return $this
-     */
-    public function setTagTypeName($tag_type_name)
-    {
-        $this->container['tag_type_name'] = $tag_type_name;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

@@ -1,6 +1,6 @@
 <?php
 /**
- * TagModel
+ * TagTypeRetrieveListArguments
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * TagModel Class Doc Comment
+ * TagTypeRetrieveListArguments Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,23 +53,24 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TagModel implements ArrayAccess
+class TagTypeRetrieveListArguments implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TagModel';
+    protected static $swaggerModelName = 'TagTypeRetrieveListArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'object_type' => 'int',
-        'tag_type_id' => 'int',
-        'tag_type_name' => 'string'
+        'options' => '\BumbalClient\Model\TagTypeOptionsModel',
+        'filters' => '\BumbalClient\Model\TagTypeFiltersModel',
+        'limit' => 'int',
+        'offset' => 'int',
+        'search_text' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -82,10 +83,11 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'object_type' => 'object_type',
-        'tag_type_id' => 'tag_type_id',
-        'tag_type_name' => 'tag_type_name'
+        'options' => 'options',
+        'filters' => 'filters',
+        'limit' => 'limit',
+        'offset' => 'offset',
+        'search_text' => 'search_text'
     ];
 
 
@@ -94,10 +96,11 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'object_type' => 'setObjectType',
-        'tag_type_id' => 'setTagTypeId',
-        'tag_type_name' => 'setTagTypeName'
+        'options' => 'setOptions',
+        'filters' => 'setFilters',
+        'limit' => 'setLimit',
+        'offset' => 'setOffset',
+        'search_text' => 'setSearchText'
     ];
 
 
@@ -106,10 +109,11 @@ class TagModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'object_type' => 'getObjectType',
-        'tag_type_id' => 'getTagTypeId',
-        'tag_type_name' => 'getTagTypeName'
+        'options' => 'getOptions',
+        'filters' => 'getFilters',
+        'limit' => 'getLimit',
+        'offset' => 'getOffset',
+        'search_text' => 'getSearchText'
     ];
 
     public static function attributeMap()
@@ -143,10 +147,11 @@ class TagModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
-        $this->container['tag_type_name'] = isset($data['tag_type_name']) ? $data['tag_type_name'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
     /**
@@ -157,9 +162,6 @@ class TagModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -171,93 +173,111 @@ class TagModel implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets options
+     * @return \BumbalClient\Model\TagTypeOptionsModel
      */
-    public function getId()
+    public function getOptions()
     {
-        return $this->container['id'];
+        return $this->container['options'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique ID
+     * Sets options
+     * @param \BumbalClient\Model\TagTypeOptionsModel $options 
      * @return $this
      */
-    public function setId($id)
+    public function setOptions($options)
     {
-        $this->container['id'] = $id;
+        $this->container['options'] = $options;
 
         return $this;
     }
 
     /**
-     * Gets object_type
-     * @return int
+     * Gets filters
+     * @return \BumbalClient\Model\TagTypeFiltersModel
      */
-    public function getObjectType()
+    public function getFilters()
     {
-        return $this->container['object_type'];
+        return $this->container['filters'];
     }
 
     /**
-     * Sets object_type
-     * @param int $object_type Object type ID
+     * Sets filters
+     * @param \BumbalClient\Model\TagTypeFiltersModel $filters 
      * @return $this
      */
-    public function setObjectType($object_type)
+    public function setFilters($filters)
     {
-        $this->container['object_type'] = $object_type;
+        $this->container['filters'] = $filters;
 
         return $this;
     }
 
     /**
-     * Gets tag_type_id
+     * Gets limit
      * @return int
      */
-    public function getTagTypeId()
+    public function getLimit()
     {
-        return $this->container['tag_type_id'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets tag_type_id
-     * @param int $tag_type_id Tag Type ID
+     * Sets limit
+     * @param int $limit 
      * @return $this
      */
-    public function setTagTypeId($tag_type_id)
+    public function setLimit($limit)
     {
-        $this->container['tag_type_id'] = $tag_type_id;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets tag_type_name
+     * Gets offset
+     * @return int
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     * @param int $offset 
+     * @return $this
+     */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_text
      * @return string
      */
-    public function getTagTypeName()
+    public function getSearchText()
     {
-        return $this->container['tag_type_name'];
+        return $this->container['search_text'];
     }
 
     /**
-     * Sets tag_type_name
-     * @param string $tag_type_name Tag Type Name
+     * Sets search_text
+     * @param string $search_text 
      * @return $this
      */
-    public function setTagTypeName($tag_type_name)
+    public function setSearchText($search_text)
     {
-        $this->container['tag_type_name'] = $tag_type_name;
+        $this->container['search_text'] = $search_text;
 
         return $this;
     }
