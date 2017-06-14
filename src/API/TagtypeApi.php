@@ -356,14 +356,13 @@ class TagtypeApi
      * Retrieve a Tag type
      *
      * @param int $tag_type_id ID of tag type to retrieve (required)
-     * @param int $name name of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\TagTypeModel
      */
-    public function retrieveTagType($tag_type_id, $name, $include_object_types = null)
+    public function retrieveTagType($tag_type_id, $include_object_types = null)
     {
-        list($response) = $this->retrieveTagTypeWithHttpInfo($tag_type_id, $name, $include_object_types);
+        list($response) = $this->retrieveTagTypeWithHttpInfo($tag_type_id, $include_object_types);
         return $response;
     }
 
@@ -373,20 +372,15 @@ class TagtypeApi
      * Retrieve a Tag type
      *
      * @param int $tag_type_id ID of tag type to retrieve (required)
-     * @param int $name name of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\TagTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveTagTypeWithHttpInfo($tag_type_id, $name, $include_object_types = null)
+    public function retrieveTagTypeWithHttpInfo($tag_type_id, $include_object_types = null)
     {
         // verify the required parameter 'tag_type_id' is set
         if ($tag_type_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $tag_type_id when calling retrieveTagType');
-        }
-        // verify the required parameter 'name' is set
-        if ($name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling retrieveTagType');
         }
         // parse inputs
         $resourcePath = "/tag-type/{tagTypeId}";
@@ -409,14 +403,6 @@ class TagtypeApi
             $resourcePath = str_replace(
                 "{" . "tagTypeId" . "}",
                 $this->apiClient->getSerializer()->toPathValue($tag_type_id),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($name !== null) {
-            $resourcePath = str_replace(
-                "{" . "name" . "}",
-                $this->apiClient->getSerializer()->toPathValue($name),
                 $resourcePath
             );
         }

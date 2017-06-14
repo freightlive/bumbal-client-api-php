@@ -148,7 +148,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTagType**
-> \BumbalClient\Model\TagTypeModel retrieveTagType($tag_type_id, $name, $include_object_types)
+> \BumbalClient\Model\TagTypeModel retrieveTagType($tag_type_id, $include_object_types)
 
 Retrieve a Tag type
 
@@ -161,11 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
 $tag_type_id = 789; // int | ID of tag type to retrieve
-$name = 789; // int | name of tag type to retrieve
 $include_object_types = true; // bool | Show the text value of the status
 
 try {
-    $result = $api_instance->retrieveTagType($tag_type_id, $name, $include_object_types);
+    $result = $api_instance->retrieveTagType($tag_type_id, $include_object_types);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagtypeApi->retrieveTagType: ', $e->getMessage(), PHP_EOL;
@@ -178,7 +177,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tag_type_id** | **int**| ID of tag type to retrieve |
- **name** | **int**| name of tag type to retrieve |
  **include_object_types** | **bool**| Show the text value of the status | [optional]
 
 ### Return type
