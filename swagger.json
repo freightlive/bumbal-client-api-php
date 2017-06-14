@@ -1849,7 +1849,7 @@
         }
       }
     },
-    "/tag-type/{tagTypeId}" : {
+    "/tag-type/{id}" : {
       "get" : {
         "tags" : [ "tag_type" ],
         "summary" : "Retrieve a Tag type",
