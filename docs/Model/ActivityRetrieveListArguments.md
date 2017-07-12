@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient/Model\ActivityOptionsModel**](ActivityOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient/Model\ActivityFiltersModel**](ActivityFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\ActivityOptionsModel**](ActivityOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\ActivityFiltersModel**](ActivityFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

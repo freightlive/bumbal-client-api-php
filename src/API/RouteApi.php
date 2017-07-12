@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -106,9 +106,9 @@ class RouteApi
      *
      * Add a new Route
      *
-     * @param \BumbalClient/Model\RouteModel $body Route object that needs to be created (optional)
+     * @param \BumbalClient\Model\RouteModel $body Route object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function createRoute($body = null)
     {
@@ -121,9 +121,9 @@ class RouteApi
      *
      * Add a new Route
      *
-     * @param \BumbalClient/Model\RouteModel $body Route object that needs to be created (optional)
+     * @param \BumbalClient\Model\RouteModel $body Route object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRouteWithHttpInfo($body = null)
     {
@@ -167,15 +167,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/route'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -192,7 +192,7 @@ class RouteApi
      * @param int $route_id ID of route to update (required)
      * @param bool $cancel_activities Cancel activities on Route (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteRoute($route_id, $cancel_activities)
     {
@@ -208,7 +208,7 @@ class RouteApi
      * @param int $route_id ID of route to update (required)
      * @param bool $cancel_activities Cancel activities on Route (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRouteWithHttpInfo($route_id, $cancel_activities)
     {
@@ -267,15 +267,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/route/{routeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -289,9 +289,9 @@ class RouteApi
      *
      * Retrieve List of Routes
      *
-     * @param \BumbalClient/Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\RouteModel[]
+     * @return \BumbalClient\Model\RouteModel[]
      */
     public function retrieveListRoute($arguments)
     {
@@ -304,9 +304,9 @@ class RouteApi
      *
      * Retrieve List of Routes
      *
-     * @param \BumbalClient/Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\RouteModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RouteModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListRouteWithHttpInfo($arguments)
     {
@@ -354,15 +354,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\RouteModel[]',
+                '\BumbalClient\Model\RouteModel[]',
                 '/route'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\RouteModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RouteModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\RouteModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RouteModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -386,7 +386,7 @@ class RouteApi
      * @param bool $include_latest_position Include Latest Known GPS location (required)
      * @param bool $include_activity_ids Include Activity ids (optional, default to true)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\RouteModel
+     * @return \BumbalClient\Model\RouteModel
      */
     public function retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids = null)
     {
@@ -409,7 +409,7 @@ class RouteApi
      * @param bool $include_latest_position Include Latest Known GPS location (required)
      * @param bool $include_activity_ids Include Activity ids (optional, default to true)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids = null)
     {
@@ -520,15 +520,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\RouteModel',
+                '\BumbalClient\Model\RouteModel',
                 '/route/{routeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\RouteModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RouteModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\RouteModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RouteModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -544,7 +544,7 @@ class RouteApi
      *
      * @param int $route_id ID of route to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updateRoute($route_id)
     {
@@ -559,7 +559,7 @@ class RouteApi
      *
      * @param int $route_id ID of route to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateRouteWithHttpInfo($route_id)
     {
@@ -610,15 +610,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/route/{routeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

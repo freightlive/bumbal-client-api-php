@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class FileRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient/Model\FileOptionsModel',
-        'filters' => '\BumbalClient/Model\FileFiltersModel',
+        'options' => '\BumbalClient\Model\FileOptionsModel',
+        'filters' => '\BumbalClient\Model\FileFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -179,7 +179,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient/Model\FileOptionsModel
+     * @return \BumbalClient\Model\FileOptionsModel
      */
     public function getOptions()
     {
@@ -188,7 +188,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient/Model\FileOptionsModel $options
+     * @param \BumbalClient\Model\FileOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -200,7 +200,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient/Model\FileFiltersModel
+     * @return \BumbalClient\Model\FileFiltersModel
      */
     public function getFilters()
     {
@@ -209,7 +209,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient/Model\FileFiltersModel $filters
+     * @param \BumbalClient\Model\FileFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -108,7 +108,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteRecurrence($recurrence_id)
     {
@@ -123,7 +123,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRecurrenceWithHttpInfo($recurrence_id)
     {
@@ -174,15 +174,15 @@ class RecurrenceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/recurrence/{recurrenceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -196,9 +196,9 @@ class RecurrenceApi
      *
      * Retrieve List of Recurrences
      *
-     * @param \BumbalClient/Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\RecurrenceModel[]
+     * @return \BumbalClient\Model\RecurrenceModel[]
      */
     public function retrieveListRecurrence($arguments)
     {
@@ -211,9 +211,9 @@ class RecurrenceApi
      *
      * Retrieve List of Recurrences
      *
-     * @param \BumbalClient/Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\RecurrenceRetrieveListArguments $arguments Recurrence RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\RecurrenceModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RecurrenceModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListRecurrenceWithHttpInfo($arguments)
     {
@@ -261,15 +261,15 @@ class RecurrenceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\RecurrenceModel[]',
+                '\BumbalClient\Model\RecurrenceModel[]',
                 '/recurrence'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\RecurrenceModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RecurrenceModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\RecurrenceModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RecurrenceModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -285,7 +285,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\RecurrenceModel
+     * @return \BumbalClient\Model\RecurrenceModel
      */
     public function retrieveRecurrence($recurrence_id)
     {
@@ -300,7 +300,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\RecurrenceModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RecurrenceModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRecurrenceWithHttpInfo($recurrence_id)
     {
@@ -351,15 +351,15 @@ class RecurrenceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\RecurrenceModel',
+                '\BumbalClient\Model\RecurrenceModel',
                 '/recurrence/{recurrenceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\RecurrenceModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RecurrenceModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\RecurrenceModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RecurrenceModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -375,7 +375,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updateRecurrence($recurrence_id)
     {
@@ -390,7 +390,7 @@ class RecurrenceApi
      *
      * @param int $recurrence_id ID of recurrence to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateRecurrenceWithHttpInfo($recurrence_id)
     {
@@ -441,15 +441,15 @@ class RecurrenceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/recurrence/{recurrenceId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

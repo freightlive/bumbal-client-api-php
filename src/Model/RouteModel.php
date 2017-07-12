@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -76,8 +76,8 @@ class RouteModel implements ArrayAccess
         'link_id' => 'string',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
-        'gps_locations' => '\BumbalClient/Model\GPSLocationModel[]',
-        'latest_known_position' => '\BumbalClient/Model\GPSLocationModel',
+        'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
+        'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
         'activity_ids' => 'object'
     ];
 
@@ -466,7 +466,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets gps_locations
-     * @return \BumbalClient/Model\GPSLocationModel[]
+     * @return \BumbalClient\Model\GPSLocationModel[]
      */
     public function getGpsLocations()
     {
@@ -475,7 +475,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets gps_locations
-     * @param \BumbalClient/Model\GPSLocationModel[] $gps_locations
+     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations
      * @return $this
      */
     public function setGpsLocations($gps_locations)
@@ -487,7 +487,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets latest_known_position
-     * @return \BumbalClient/Model\GPSLocationModel
+     * @return \BumbalClient\Model\GPSLocationModel
      */
     public function getLatestKnownPosition()
     {
@@ -496,7 +496,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_known_position
-     * @param \BumbalClient/Model\GPSLocationModel $latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
      * @return $this
      */
     public function setLatestKnownPosition($latest_known_position)

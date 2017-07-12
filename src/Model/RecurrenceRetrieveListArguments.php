@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient/Model\RecurrenceOptionsModel',
-        'filters' => '\BumbalClient/Model\RecurrenceFiltersModel',
+        'options' => '\BumbalClient\Model\RecurrenceOptionsModel',
+        'filters' => '\BumbalClient\Model\RecurrenceFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -179,7 +179,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient/Model\RecurrenceOptionsModel
+     * @return \BumbalClient\Model\RecurrenceOptionsModel
      */
     public function getOptions()
     {
@@ -188,7 +188,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient/Model\RecurrenceOptionsModel $options
+     * @param \BumbalClient\Model\RecurrenceOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -200,7 +200,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient/Model\RecurrenceFiltersModel
+     * @return \BumbalClient\Model\RecurrenceFiltersModel
      */
     public function getFilters()
     {
@@ -209,7 +209,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient/Model\RecurrenceFiltersModel $filters
+     * @param \BumbalClient\Model\RecurrenceFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

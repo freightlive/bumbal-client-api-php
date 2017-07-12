@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAddress**
-> \BumbalClient/Model\ApiResponse createAddress($body)
+> \BumbalClient\Model\ApiResponse createAddress($body)
 
 Add a new Address
 
@@ -29,7 +29,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$body = new \BumbalClient/Model\AddressModel(); // \BumbalClient/Model\AddressModel | Address object that needs to be created
+$body = new \BumbalClient\Model\AddressModel(); // \BumbalClient\Model\AddressModel | Address object that needs to be created
 
 try {
     $result = $api_instance->createAddress($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient/Model\AddressModel**](../Model/\BumbalClient/Model\AddressModel.md)| Address object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\AddressModel**](../Model/\BumbalClient\Model\AddressModel.md)| Address object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAddress**
-> \BumbalClient/Model\ApiResponse deleteAddress($address_id)
+> \BumbalClient\Model\ApiResponse deleteAddress($address_id)
 
 Delete an Address
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAddress**
-> \BumbalClient/Model\AddressModel retrieveAddress($address_id)
+> \BumbalClient\Model\AddressModel retrieveAddress($address_id)
 
 Retrieve a Address
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\AddressModel**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAddress**
-> \BumbalClient/Model\AddressModel[] retrieveListAddress($arguments)
+> \BumbalClient\Model\AddressModel[] retrieveListAddress($arguments)
 
 Retrieve List of Addresses
 
@@ -179,7 +179,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$arguments = new \BumbalClient/Model\AddressRetrieveListArguments(); // \BumbalClient/Model\AddressRetrieveListArguments | Address RetrieveList Arguments
+$arguments = new \BumbalClient\Model\AddressRetrieveListArguments(); // \BumbalClient\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListAddress($arguments);
@@ -194,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient/Model\AddressRetrieveListArguments**](../Model/\BumbalClient/Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/\BumbalClient\Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient/Model\AddressModel[]**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressModel[]**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddress**
-> \BumbalClient/Model\ApiResponse updateAddress($address_id)
+> \BumbalClient\Model\ApiResponse updateAddress($address_id)
 
 Update a Address
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

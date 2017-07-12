@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -107,7 +107,7 @@ class WorkerApi
      * Add Action To Worker Stack
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function addActionToWorkerStack()
     {
@@ -121,7 +121,7 @@ class WorkerApi
      * Add Action To Worker Stack
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addActionToWorkerStackWithHttpInfo()
     {
@@ -160,15 +160,15 @@ class WorkerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/worker/add-action-to-stack'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

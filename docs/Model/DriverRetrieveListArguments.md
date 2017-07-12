@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient/Model\DriverOptionsModel**](DriverOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient/Model\DriverFiltersModel**](DriverFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\DriverOptionsModel**](DriverOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\DriverFiltersModel**](DriverFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

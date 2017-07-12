@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListSettings**
-> \BumbalClient/Model\SettingsModel[] retrieveListSettings($arguments)
+> \BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
 
 Retrieve List of Settingss
 
@@ -27,7 +27,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
-$arguments = new \BumbalClient/Model\SettingsRetrieveListArguments(); // \BumbalClient/Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
+$arguments = new \BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListSettings($arguments);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient/Model\SettingsRetrieveListArguments**](../Model/\BumbalClient/Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/\BumbalClient\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient/Model\SettingsModel[]**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveSettings**
-> \BumbalClient/Model\SettingsModel retrieveSettings($settings_id)
+> \BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
 
 Retrieve a Settings
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\SettingsModel**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSettings**
-> \BumbalClient/Model\ApiResponse updateSettings($settings_id)
+> \BumbalClient\Model\ApiResponse updateSettings($settings_id)
 
 Update a Settings
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

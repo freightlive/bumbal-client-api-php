@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -78,7 +78,7 @@ class FileModel implements ArrayAccess
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'meta_data' => 'object',
-        'meta_data_objects' => '\BumbalClient/Model\MetaDataModel[]'
+        'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     public static function swaggerTypes()
@@ -477,7 +477,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets meta_data_objects
-     * @return \BumbalClient/Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaDataObjects()
     {
@@ -486,7 +486,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data_objects
-     * @param \BumbalClient/Model\MetaDataModel[] $meta_data_objects
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects
      * @return $this
      */
     public function setMetaDataObjects($meta_data_objects)

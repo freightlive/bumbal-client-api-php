@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **autoPlanCheckProgress**
-> \BumbalClient/Model\ApiResponse autoPlanCheckProgress($process_uuid)
+> \BumbalClient\Model\ApiResponse autoPlanCheckProgress($process_uuid)
 
 Check Progress on a Auto Plan Process
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlanFinish**
-> \BumbalClient/Model\ApiResponse autoPlanFinish()
+> \BumbalClient\Model\ApiResponse autoPlanFinish()
 
 Finish a Auto Plan Process
 
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlanStart**
-> \BumbalClient/Model\ApiResponse autoPlanStart()
+> \BumbalClient\Model\ApiResponse autoPlanStart()
 
 Start a Auto Plan Process
 
@@ -138,7 +138,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

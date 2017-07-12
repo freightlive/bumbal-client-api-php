@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -81,9 +81,9 @@ class AddressModel implements ArrayAccess
         'latitude' => 'string',
         'longitude' => 'string',
         'contact_person' => 'string',
-        'links' => '\BumbalClient/Model\LinkModel[]',
-        'meta_data' => '\BumbalClient/Model\MetaDataModel[]',
-        'tags' => '\BumbalClient/Model\TagModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     public static function swaggerTypes()
@@ -565,7 +565,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient/Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -574,7 +574,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient/Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -586,7 +586,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient/Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -595,7 +595,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient/Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -607,7 +607,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient/Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -616,7 +616,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient/Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)

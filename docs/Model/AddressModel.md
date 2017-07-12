@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **latitude** | **string** |  | [optional] 
 **longitude** | **string** |  | [optional] 
 **contact_person** | **string** |  | [optional] 
-**links** | [**\BumbalClient/Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient/Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**tags** | [**\BumbalClient/Model\TagModel[]**](TagModel.md) |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

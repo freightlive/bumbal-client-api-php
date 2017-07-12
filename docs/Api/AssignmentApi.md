@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAssignment**
-> \BumbalClient/Model\ApiResponse createAssignment($body)
+> \BumbalClient\Model\ApiResponse createAssignment($body)
 
 Add a new Assignment
 
@@ -29,7 +29,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
-$body = new \BumbalClient/Model\AssignmentModel(); // \BumbalClient/Model\AssignmentModel | Assignment object that needs to be created
+$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object that needs to be created
 
 try {
     $result = $api_instance->createAssignment($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient/Model\AssignmentModel**](../Model/\BumbalClient/Model\AssignmentModel.md)| Assignment object that needs to be created |
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object that needs to be created |
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAssignment**
-> \BumbalClient/Model\ApiResponse deleteAssignment($assignment_id)
+> \BumbalClient\Model\ApiResponse deleteAssignment($assignment_id)
 
 Delete an Assignment
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAssignment**
-> \BumbalClient/Model\AssignmentModel retrieveAssignment($assignment_id)
+> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id)
 
 Retrieve a Assignment
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient/Model\AssignmentModel**](../Model/AssignmentModel.md)
+[**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAssignment**
-> \BumbalClient/Model\AssignmentModel[] retrieveListAssignment($arguments)
+> \BumbalClient\Model\AssignmentModel[] retrieveListAssignment($arguments)
 
 Retrieve List of Assignments
 
@@ -179,7 +179,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
-$arguments = new \BumbalClient/Model\AssignmentRetrieveListArguments(); // \BumbalClient/Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
+$arguments = new \BumbalClient\Model\AssignmentRetrieveListArguments(); // \BumbalClient\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListAssignment($arguments);
@@ -194,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient/Model\AssignmentRetrieveListArguments**](../Model/\BumbalClient/Model\AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/\BumbalClient\Model\AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient/Model\AssignmentModel[]**](../Model/AssignmentModel.md)
+[**\BumbalClient\Model\AssignmentModel[]**](../Model/AssignmentModel.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAssignment**
-> \BumbalClient/Model\ApiResponse updateAssignment($assignment_id, $body)
+> \BumbalClient\Model\ApiResponse updateAssignment($assignment_id, $body)
 
 Update a Assignment
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to update
-$body = new \BumbalClient/Model\AssignmentModel(); // \BumbalClient/Model\AssignmentModel | Assignment object that needs to be updated
+$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object that needs to be updated
 
 try {
     $result = $api_instance->updateAssignment($assignment_id, $body);
@@ -246,11 +246,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to update |
- **body** | [**\BumbalClient/Model\AssignmentModel**](../Model/\BumbalClient/Model\AssignmentModel.md)| Assignment object that needs to be updated |
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object that needs to be updated |
 
 ### Return type
 
-[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/bumbal/bumbal-client-api.git"
+      "url": "https://github.com/bumbal/bumbal-client-api-php.git"
     }
   ],
   "require": {
-    "bumbal/bumbal-client-api": "*@dev"
+    "bumbal/bumbal-client-api-php": "*@dev"
   }
 }
 ```
@@ -62,7 +62,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient/Model\ActivityModel(); // \BumbalClient/Model\ActivityModel | Activity object
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
 
 try {
     $result = $api_instance->createActivity($body);

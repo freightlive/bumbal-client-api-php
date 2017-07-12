@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -77,7 +77,7 @@ class PackageLineModel implements ArrayAccess
         'volume' => 'float',
         'barcode' => 'string',
         'packagevalue' => 'float',
-        'links' => '\BumbalClient/Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
     public static function swaggerTypes()
@@ -492,7 +492,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient/Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -501,7 +501,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient/Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

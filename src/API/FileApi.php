@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient/API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -106,9 +106,9 @@ class FileApi
      *
      * Add a new File
      *
-     * @param \BumbalClient/Model\FileModel $body File object that needs to be created (optional)
+     * @param \BumbalClient\Model\FileModel $body File object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function createFile($body = null)
     {
@@ -121,9 +121,9 @@ class FileApi
      *
      * Add a new File
      *
-     * @param \BumbalClient/Model\FileModel $body File object that needs to be created (optional)
+     * @param \BumbalClient\Model\FileModel $body File object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFileWithHttpInfo($body = null)
     {
@@ -167,15 +167,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/file'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class FileApi
      *
      * @param int $file_id ID of file to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteFile($file_id)
     {
@@ -206,7 +206,7 @@ class FileApi
      *
      * @param int $file_id ID of file to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFileWithHttpInfo($file_id)
     {
@@ -257,15 +257,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/file/{fileId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,7 +281,7 @@ class FileApi
      *
      * @param int $file_id ID of file to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\FileModel
+     * @return \BumbalClient\Model\FileModel
      */
     public function retrieveFile($file_id)
     {
@@ -296,7 +296,7 @@ class FileApi
      *
      * @param int $file_id ID of file to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\FileModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\FileModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveFileWithHttpInfo($file_id)
     {
@@ -347,15 +347,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\FileModel',
+                '\BumbalClient\Model\FileModel',
                 '/file/{fileId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\FileModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\FileModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\FileModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\FileModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -369,9 +369,9 @@ class FileApi
      *
      * Retrieve List of Files
      *
-     * @param \BumbalClient/Model\FileRetrieveListArguments $arguments File RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\FileRetrieveListArguments $arguments File RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function retrieveListFile($arguments)
     {
@@ -384,9 +384,9 @@ class FileApi
      *
      * Retrieve List of Files
      *
-     * @param \BumbalClient/Model\FileRetrieveListArguments $arguments File RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\FileRetrieveListArguments $arguments File RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\FileModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\FileModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListFileWithHttpInfo($arguments)
     {
@@ -434,15 +434,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\FileModel[]',
+                '\BumbalClient\Model\FileModel[]',
                 '/file'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\FileModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\FileModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\FileModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\FileModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -458,7 +458,7 @@ class FileApi
      *
      * @param int $file_id ID of file to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient/Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updateFile($file_id)
     {
@@ -473,7 +473,7 @@ class FileApi
      *
      * @param int $file_id ID of file to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateFileWithHttpInfo($file_id)
     {
@@ -524,15 +524,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient/Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/file/{fileId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
