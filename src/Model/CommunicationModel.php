@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\Model;
+namespace BumbalClient/Model;
 
 use \ArrayAccess;
 
@@ -68,11 +68,15 @@ class CommunicationModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'saywhen' => 'bool',
+        'bumbal' => 'bool',
         'send_invite' => 'bool',
         'send_planned' => 'bool',
         'send_eta' => 'bool',
         'send_executed' => 'bool',
         'send_cancelled' => 'bool',
+        'email' => 'string',
+        'phone_nr' => 'string',
+        'saywhen_status_id' => 'int',
         'saywhen_status_name' => 'string'
     ];
 
@@ -88,11 +92,15 @@ class CommunicationModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'saywhen' => 'saywhen',
+        'bumbal' => 'bumbal',
         'send_invite' => 'send_invite',
         'send_planned' => 'send_planned',
         'send_eta' => 'send_eta',
         'send_executed' => 'send_executed',
         'send_cancelled' => 'send_cancelled',
+        'email' => 'email',
+        'phone_nr' => 'phone_nr',
+        'saywhen_status_id' => 'saywhen_status_id',
         'saywhen_status_name' => 'saywhen_status_name'
     ];
 
@@ -104,11 +112,15 @@ class CommunicationModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'saywhen' => 'setSaywhen',
+        'bumbal' => 'setBumbal',
         'send_invite' => 'setSendInvite',
         'send_planned' => 'setSendPlanned',
         'send_eta' => 'setSendEta',
         'send_executed' => 'setSendExecuted',
         'send_cancelled' => 'setSendCancelled',
+        'email' => 'setEmail',
+        'phone_nr' => 'setPhoneNr',
+        'saywhen_status_id' => 'setSaywhenStatusId',
         'saywhen_status_name' => 'setSaywhenStatusName'
     ];
 
@@ -120,11 +132,15 @@ class CommunicationModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'saywhen' => 'getSaywhen',
+        'bumbal' => 'getBumbal',
         'send_invite' => 'getSendInvite',
         'send_planned' => 'getSendPlanned',
         'send_eta' => 'getSendEta',
         'send_executed' => 'getSendExecuted',
         'send_cancelled' => 'getSendCancelled',
+        'email' => 'getEmail',
+        'phone_nr' => 'getPhoneNr',
+        'saywhen_status_id' => 'getSaywhenStatusId',
         'saywhen_status_name' => 'getSaywhenStatusName'
     ];
 
@@ -189,11 +205,15 @@ class CommunicationModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['saywhen'] = isset($data['saywhen']) ? $data['saywhen'] : null;
+        $this->container['bumbal'] = isset($data['bumbal']) ? $data['bumbal'] : null;
         $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
         $this->container['send_planned'] = isset($data['send_planned']) ? $data['send_planned'] : null;
         $this->container['send_eta'] = isset($data['send_eta']) ? $data['send_eta'] : null;
         $this->container['send_executed'] = isset($data['send_executed']) ? $data['send_executed'] : null;
         $this->container['send_cancelled'] = isset($data['send_cancelled']) ? $data['send_cancelled'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['phone_nr'] = isset($data['phone_nr']) ? $data['phone_nr'] : null;
+        $this->container['saywhen_status_id'] = isset($data['saywhen_status_id']) ? $data['saywhen_status_id'] : null;
         $this->container['saywhen_status_name'] = isset($data['saywhen_status_name']) ? $data['saywhen_status_name'] : null;
     }
 
@@ -246,7 +266,7 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -273,6 +293,27 @@ class CommunicationModel implements ArrayAccess
     public function setSaywhen($saywhen)
     {
         $this->container['saywhen'] = $saywhen;
+
+        return $this;
+    }
+
+    /**
+     * Gets bumbal
+     * @return bool
+     */
+    public function getBumbal()
+    {
+        return $this->container['bumbal'];
+    }
+
+    /**
+     * Sets bumbal
+     * @param bool $bumbal Whether or not activity is handled by Bumbal Communication Server
+     * @return $this
+     */
+    public function setBumbal($bumbal)
+    {
+        $this->container['bumbal'] = $bumbal;
 
         return $this;
     }
@@ -378,6 +419,69 @@ class CommunicationModel implements ArrayAccess
     public function setSendCancelled($send_cancelled)
     {
         $this->container['send_cancelled'] = $send_cancelled;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Email for customer communication
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_nr
+     * @return string
+     */
+    public function getPhoneNr()
+    {
+        return $this->container['phone_nr'];
+    }
+
+    /**
+     * Sets phone_nr
+     * @param string $phone_nr Phone nr for customer communication
+     * @return $this
+     */
+    public function setPhoneNr($phone_nr)
+    {
+        $this->container['phone_nr'] = $phone_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets saywhen_status_id
+     * @return int
+     */
+    public function getSaywhenStatusId()
+    {
+        return $this->container['saywhen_status_id'];
+    }
+
+    /**
+     * Sets saywhen_status_id
+     * @param int $saywhen_status_id Saywhen StatusId of this Activity, 1:cancelled, 2:offered, 3:preffed, 4:confirmed, 5:accepted, 6:planned, 7:scheduled, 8:started, 9:completed
+     * @return $this
+     */
+    public function setSaywhenStatusId($saywhen_status_id)
+    {
+        $this->container['saywhen_status_id'] = $saywhen_status_id;
 
         return $this;
     }

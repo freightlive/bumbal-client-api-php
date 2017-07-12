@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteRecurrence**
-> \BumbalClient\Model\ApiResponse deleteRecurrence($recurrence_id)
+> \BumbalClient/Model\ApiResponse deleteRecurrence($recurrence_id)
 
 Delete an Recurrence
 
@@ -21,6 +21,11 @@ Delete an Recurrence
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
@@ -42,11 +47,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -56,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRecurrence**
-> \BumbalClient\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
+> \BumbalClient/Model\RecurrenceModel[] retrieveListRecurrence($arguments)
 
 Retrieve List of Recurrences
 
@@ -67,8 +72,13 @@ Retrieve List of Recurrences
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\RecurrenceApi();
-$arguments = new \BumbalClient\Model\RecurrenceRetrieveListArguments(); // \BumbalClient\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
+$arguments = new \BumbalClient/Model\RecurrenceRetrieveListArguments(); // \BumbalClient/Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListRecurrence($arguments);
@@ -83,15 +93,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/\BumbalClient\Model\RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\RecurrenceRetrieveListArguments**](../Model/\BumbalClient/Model\RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
+[**\BumbalClient/Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -101,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRecurrence**
-> \BumbalClient\Model\RecurrenceModel retrieveRecurrence($recurrence_id)
+> \BumbalClient/Model\RecurrenceModel retrieveRecurrence($recurrence_id)
 
 Retrieve a Recurrence
 
@@ -111,6 +121,11 @@ Retrieve an Recurrence
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to retrieve
@@ -132,11 +147,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)
+[**\BumbalClient/Model\RecurrenceModel**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -146,7 +161,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRecurrence**
-> \BumbalClient\Model\ApiResponse updateRecurrence($recurrence_id)
+> \BumbalClient/Model\ApiResponse updateRecurrence($recurrence_id)
 
 Update a Recurrence
 
@@ -156,6 +171,11 @@ Update an Recurrence
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
@@ -177,11 +197,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

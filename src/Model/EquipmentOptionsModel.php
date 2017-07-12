@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\Model;
+namespace BumbalClient/Model;
 
 use \ArrayAccess;
 
@@ -168,7 +168,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_status
-     * @param bool $include_activity_status 
+     * @param bool $include_activity_status
      * @return $this
      */
     public function setIncludeActivityStatus($include_activity_status)

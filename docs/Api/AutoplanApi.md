@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **autoPlanCheckProgress**
-> \BumbalClient\Model\ApiResponse autoPlanCheckProgress($process_uuid)
+> \BumbalClient/Model\ApiResponse autoPlanCheckProgress($process_uuid)
 
 Check Progress on a Auto Plan Process
 
@@ -20,6 +20,11 @@ Check Progress on a Auto Plan Process
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AutoplanApi();
 $process_uuid = 789; // int | UUID of the process to check the progress of
@@ -41,11 +46,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -55,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlanFinish**
-> \BumbalClient\Model\ApiResponse autoPlanFinish()
+> \BumbalClient/Model\ApiResponse autoPlanFinish()
 
 Finish a Auto Plan Process
 
@@ -65,6 +70,11 @@ Finish a Auto Plan Process
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AutoplanApi();
 
@@ -82,11 +92,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -96,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlanStart**
-> \BumbalClient\Model\ApiResponse autoPlanStart()
+> \BumbalClient/Model\ApiResponse autoPlanStart()
 
 Start a Auto Plan Process
 
@@ -106,6 +116,11 @@ Start a Auto Plan Process
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AutoplanApi();
 
@@ -123,11 +138,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

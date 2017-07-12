@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **link_id** | **string** |  | [optional] 
 **earliest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **latest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**gps_locations** | [**\BumbalClient\Model\GPSLocationModel[]**](GPSLocationModel.md) |  | [optional] 
-**latest_known_position** | [**\BumbalClient\Model\GPSLocationModel**](GPSLocationModel.md) |  | [optional] 
+**gps_locations** | [**\BumbalClient/Model\GPSLocationModel[]**](GPSLocationModel.md) |  | [optional] 
+**latest_known_position** | [**\BumbalClient/Model\GPSLocationModel**](GPSLocationModel.md) |  | [optional] 
 **activity_ids** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

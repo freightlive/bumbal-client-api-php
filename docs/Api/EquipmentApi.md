@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createEquipment**
-> \BumbalClient\Model\ApiResponse createEquipment($body)
+> \BumbalClient/Model\ApiResponse createEquipment($body)
 
 Add a new Equipment
 
@@ -23,8 +23,13 @@ Add a new Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\EquipmentApi();
-$body = new \BumbalClient\Model\EquipmentModel(); // \BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
+$body = new \BumbalClient/Model\EquipmentModel(); // \BumbalClient/Model\EquipmentModel | Equipment object that needs to be created
 
 try {
     $result = $api_instance->createEquipment($body);
@@ -39,15 +44,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/\BumbalClient\Model\EquipmentModel.md)| Equipment object that needs to be created | [optional]
+ **body** | [**\BumbalClient/Model\EquipmentModel**](../Model/\BumbalClient/Model\EquipmentModel.md)| Equipment object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -57,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteEquipment**
-> \BumbalClient\Model\ApiResponse deleteEquipment($equipment_id)
+> \BumbalClient/Model\ApiResponse deleteEquipment($equipment_id)
 
 Delete an Equipment
 
@@ -67,6 +72,11 @@ Delete an Equipment
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
@@ -88,11 +98,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -102,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveEquipment**
-> \BumbalClient\Model\EquipmentModel retrieveEquipment($equipment_id)
+> \BumbalClient/Model\EquipmentModel retrieveEquipment($equipment_id)
 
 Retrieve a Equipment
 
@@ -112,6 +122,11 @@ Retrieve an Equipment
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to retrieve
@@ -133,11 +148,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)
+[**\BumbalClient/Model\EquipmentModel**](../Model/EquipmentModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -147,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListEquipment**
-> \BumbalClient\Model\EquipmentModel[] retrieveListEquipment($arguments)
+> \BumbalClient/Model\EquipmentModel[] retrieveListEquipment($arguments)
 
 Retrieve List of Equipment
 
@@ -158,8 +173,13 @@ Retrieve List of Equipment
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\EquipmentApi();
-$arguments = new \BumbalClient\Model\EquipmentRetrieveListArguments(); // \BumbalClient\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
+$arguments = new \BumbalClient/Model\EquipmentRetrieveListArguments(); // \BumbalClient/Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListEquipment($arguments);
@@ -174,15 +194,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/\BumbalClient\Model\EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\EquipmentRetrieveListArguments**](../Model/\BumbalClient/Model\EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
+[**\BumbalClient/Model\EquipmentModel[]**](../Model/EquipmentModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -192,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEquipment**
-> \BumbalClient\Model\ApiResponse updateEquipment($equipment_id)
+> \BumbalClient/Model\ApiResponse updateEquipment($equipment_id)
 
 Update a Equipment
 
@@ -202,6 +222,11 @@ Update an Equipment
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
@@ -223,11 +248,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/bumbal/bumbal-client-api-php.git"
+      "url": "https://github.com/bumbal/bumbal-client-api.git"
     }
   ],
   "require": {
-    "bumbal/bumbal-client-api-php": "*@dev"
+    "bumbal/bumbal-client-api": "*@dev"
   }
 }
 ```
@@ -56,8 +56,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
+$body = new \BumbalClient/Model\ActivityModel(); // \BumbalClient/Model\ActivityModel | Activity object
 
 try {
     $result = $api_instance->createActivity($body);
@@ -136,7 +141,6 @@ Class | Method | HTTP request | Description
 *TagsApi* | [**deleteTag**](docs/Api/TagsApi.md#deletetag) | **DELETE** /tags/{tagId} | Delete a Tag
 *TagsApi* | [**retrieveListTags**](docs/Api/TagsApi.md#retrievelisttags) | **PUT** /tags | Retrieve List of Tags
 *TagsApi* | [**retrieveTag**](docs/Api/TagsApi.md#retrievetag) | **GET** /tags/{tagId} | Retrieve a Tag
-*TagsApi* | [**setTags**](docs/Api/TagsApi.md#settags) | **POST** /tags/set | Set (create or update) Tag
 *TagsApi* | [**updateTag**](docs/Api/TagsApi.md#updatetag) | **PUT** /tags/{tagId} | Update a Tag
 *TagtypeApi* | [**createTagType**](docs/Api/TagtypeApi.md#createtagtype) | **POST** /tag-type | Add a new Tag type
 *TagtypeApi* | [**deleteTagType**](docs/Api/TagtypeApi.md#deletetagtype) | **DELETE** /tag-type/{tagTypeId} | Delete a Tag type
@@ -168,10 +172,7 @@ Class | Method | HTTP request | Description
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
- - [CommunicationFiltersModel](docs/Model/CommunicationFiltersModel.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
- - [CommunicationOptionsModel](docs/Model/CommunicationOptionsModel.md)
- - [CommunicationRetrieveListArguments](docs/Model/CommunicationRetrieveListArguments.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
  - [DriverModel](docs/Model/DriverModel.md)
  - [DriverOptionsModel](docs/Model/DriverOptionsModel.md)

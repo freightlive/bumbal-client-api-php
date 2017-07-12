@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\PartyOptionsModel**](PartyOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\PartyFiltersModel**](PartyFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient/Model\PartyOptionsModel**](PartyOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient/Model\PartyFiltersModel**](PartyFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

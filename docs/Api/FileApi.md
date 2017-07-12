@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createFile**
-> \BumbalClient\Model\ApiResponse createFile($body)
+> \BumbalClient/Model\ApiResponse createFile($body)
 
 Add a new File
 
@@ -23,8 +23,13 @@ Add a new File
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\FileApi();
-$body = new \BumbalClient\Model\FileModel(); // \BumbalClient\Model\FileModel | File object that needs to be created
+$body = new \BumbalClient/Model\FileModel(); // \BumbalClient/Model\FileModel | File object that needs to be created
 
 try {
     $result = $api_instance->createFile($body);
@@ -39,15 +44,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\FileModel**](../Model/\BumbalClient\Model\FileModel.md)| File object that needs to be created | [optional]
+ **body** | [**\BumbalClient/Model\FileModel**](../Model/\BumbalClient/Model\FileModel.md)| File object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -57,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteFile**
-> \BumbalClient\Model\ApiResponse deleteFile($file_id)
+> \BumbalClient/Model\ApiResponse deleteFile($file_id)
 
 Delete an File
 
@@ -67,6 +72,11 @@ Delete an File
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
 $file_id = 789; // int | ID of file to update
@@ -88,11 +98,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -102,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveFile**
-> \BumbalClient\Model\FileModel retrieveFile($file_id)
+> \BumbalClient/Model\FileModel retrieveFile($file_id)
 
 Retrieve a File
 
@@ -112,6 +122,11 @@ Retrieve an File
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
 $file_id = 789; // int | ID of file to retrieve
@@ -133,11 +148,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\FileModel**](../Model/FileModel.md)
+[**\BumbalClient/Model\FileModel**](../Model/FileModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -147,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListFile**
-> \BumbalClient\Model\FileModel[] retrieveListFile($arguments)
+> \BumbalClient/Model\FileModel[] retrieveListFile($arguments)
 
 Retrieve List of Files
 
@@ -158,8 +173,13 @@ Retrieve List of Files
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\FileApi();
-$arguments = new \BumbalClient\Model\FileRetrieveListArguments(); // \BumbalClient\Model\FileRetrieveListArguments | File RetrieveList Arguments
+$arguments = new \BumbalClient/Model\FileRetrieveListArguments(); // \BumbalClient/Model\FileRetrieveListArguments | File RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListFile($arguments);
@@ -174,15 +194,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\FileRetrieveListArguments**](../Model/\BumbalClient\Model\FileRetrieveListArguments.md)| File RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\FileRetrieveListArguments**](../Model/\BumbalClient/Model\FileRetrieveListArguments.md)| File RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\FileModel[]**](../Model/FileModel.md)
+[**\BumbalClient/Model\FileModel[]**](../Model/FileModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -192,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateFile**
-> \BumbalClient\Model\ApiResponse updateFile($file_id)
+> \BumbalClient/Model\ApiResponse updateFile($file_id)
 
 Update a File
 
@@ -202,6 +222,11 @@ Update an File
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
 $file_id = 789; // int | ID of file to update
@@ -223,11 +248,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

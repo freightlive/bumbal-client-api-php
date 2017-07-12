@@ -134,17 +134,6 @@ class TagsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for setTags
-     *
-     * Set (create or update) Tag.
-     *
-     */
-    public function testSetTags()
-    {
-
-    }
-
-    /**
      * Test case for updateTag
      *
      * Update a Tag.

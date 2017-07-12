@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveActivityStatus**
-> \BumbalClient\Model\ApiResponse retrieveActivityStatus($activity_id)
+> \BumbalClient/Model\ApiResponse retrieveActivityStatus($activity_id)
 
 Retrieve Activity Status
 
@@ -19,6 +19,11 @@ Retrieve Activity Status
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TracktraceApi();
 $activity_id = 789; // int | ID of the activity to retrieve
@@ -40,11 +45,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -54,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRouteStatus**
-> \BumbalClient\Model\ApiResponse retrieveRouteStatus($route_id)
+> \BumbalClient/Model\ApiResponse retrieveRouteStatus($route_id)
 
 Retrieve Route Status
 
@@ -64,6 +69,11 @@ Retrieve Route Status
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TracktraceApi();
 $route_id = 789; // int | ID of the route to retrieve
@@ -85,11 +95,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

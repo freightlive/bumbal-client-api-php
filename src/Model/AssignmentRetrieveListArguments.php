@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\Model;
+namespace BumbalClient/Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class AssignmentRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\AssignmentOptionsModel',
-        'filters' => '\BumbalClient\Model\AddressFiltersModel',
+        'options' => '\BumbalClient/Model\AssignmentOptionsModel',
+        'filters' => '\BumbalClient/Model\AddressFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -179,7 +179,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\AssignmentOptionsModel
+     * @return \BumbalClient/Model\AssignmentOptionsModel
      */
     public function getOptions()
     {
@@ -188,7 +188,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AssignmentOptionsModel $options 
+     * @param \BumbalClient/Model\AssignmentOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -200,7 +200,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\AddressFiltersModel
+     * @return \BumbalClient/Model\AddressFiltersModel
      */
     public function getFilters()
     {
@@ -209,7 +209,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AddressFiltersModel $filters 
+     * @param \BumbalClient/Model\AddressFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -230,7 +230,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -251,7 +251,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -272,7 +272,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

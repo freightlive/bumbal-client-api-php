@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveAddressApplied**
-> \BumbalClient\Model\AddressAppliedModel retrieveAddressApplied($address_id)
+> \BumbalClient/Model\AddressAppliedModel retrieveAddressApplied($address_id)
 
 Retrieve an Applied Address
 
@@ -19,6 +19,11 @@ Retrieve an Applied Address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of the applied address to retrieve
@@ -40,11 +45,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
+[**\BumbalClient/Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -54,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddressApplied**
-> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id)
+> \BumbalClient/Model\ApiResponse updateAddressApplied($address_id)
 
 Update a Address
 
@@ -64,6 +69,11 @@ Update an Address
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of address to update
@@ -85,11 +95,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

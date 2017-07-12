@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\API;
+namespace BumbalClient/API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -106,9 +106,9 @@ class SettingsApi
      *
      * Retrieve List of Settingss
      *
-     * @param \BumbalClient\Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\SettingsModel[]
+     * @return \BumbalClient/Model\SettingsModel[]
      */
     public function retrieveListSettings($arguments)
     {
@@ -121,9 +121,9 @@ class SettingsApi
      *
      * Retrieve List of Settingss
      *
-     * @param \BumbalClient\Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\SettingsModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\SettingsModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListSettingsWithHttpInfo($arguments)
     {
@@ -158,6 +158,11 @@ class SettingsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -166,15 +171,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\SettingsModel[]',
+                '\BumbalClient/Model\SettingsModel[]',
                 '/settings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\SettingsModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\SettingsModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -190,7 +195,7 @@ class SettingsApi
      *
      * @param int $settings_id ID of settings to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\SettingsModel
+     * @return \BumbalClient/Model\SettingsModel
      */
     public function retrieveSettings($settings_id)
     {
@@ -205,7 +210,7 @@ class SettingsApi
      *
      * @param int $settings_id ID of settings to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\SettingsModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\SettingsModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveSettingsWithHttpInfo($settings_id)
     {
@@ -243,6 +248,11 @@ class SettingsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -251,15 +261,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\SettingsModel',
+                '\BumbalClient/Model\SettingsModel',
                 '/settings/{settingsId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\SettingsModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\SettingsModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -275,7 +285,7 @@ class SettingsApi
      *
      * @param int $settings_id ID of settings to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function updateSettings($settings_id)
     {
@@ -290,7 +300,7 @@ class SettingsApi
      *
      * @param int $settings_id ID of settings to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSettingsWithHttpInfo($settings_id)
     {
@@ -328,6 +338,11 @@ class SettingsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -336,15 +351,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/settings/{settingsId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

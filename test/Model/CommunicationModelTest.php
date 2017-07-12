@@ -112,6 +112,14 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bumbal"
+     */
+    public function testPropertyBumbal()
+    {
+
+    }
+
+    /**
      * Test attribute "send_invite"
      */
     public function testPropertySendInvite()
@@ -147,6 +155,30 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "send_cancelled"
      */
     public function testPropertySendCancelled()
+    {
+
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone_nr"
+     */
+    public function testPropertyPhoneNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "saywhen_status_id"
+     */
+    public function testPropertySaywhenStatusId()
     {
 
     }

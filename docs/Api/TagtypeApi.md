@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTagType**
-> \BumbalClient\Model\ApiResponse createTagType($body)
+> \BumbalClient/Model\ApiResponse createTagType($body)
 
 Add a new Tag type
 
@@ -24,8 +24,13 @@ Add a new Tag type
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$body = new \BumbalClient\Model\TagTypeModel(); // \BumbalClient\Model\TagTypeModel | Tag type object that needs to be created
+$body = new \BumbalClient/Model\TagTypeModel(); // \BumbalClient/Model\TagTypeModel | Tag type object that needs to be created
 
 try {
     $result = $api_instance->createTagType($body);
@@ -40,15 +45,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/\BumbalClient\Model\TagTypeModel.md)| Tag type object that needs to be created |
+ **body** | [**\BumbalClient/Model\TagTypeModel**](../Model/\BumbalClient/Model\TagTypeModel.md)| Tag type object that needs to be created |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -58,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTagType**
-> \BumbalClient\Model\ApiResponse deleteTagType($tag_type_id)
+> \BumbalClient/Model\ApiResponse deleteTagType($tag_type_id)
 
 Delete a Tag type
 
@@ -68,6 +73,11 @@ Delete a Tag type
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
 $tag_type_id = 789; // int | ID of tag type to delete
@@ -89,11 +99,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -103,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTagType**
-> \BumbalClient\Model\TagTypeModel[] retrieveListTagType($arguments)
+> \BumbalClient/Model\TagTypeModel[] retrieveListTagType($arguments)
 
 Retrieve List of Tag types
 
@@ -114,8 +124,13 @@ Retrieve List of Tags
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$arguments = new \BumbalClient\Model\TagTypeRetrieveListArguments(); // \BumbalClient\Model\TagTypeRetrieveListArguments | Tag types RetrieveList Arguments
+$arguments = new \BumbalClient/Model\TagTypeRetrieveListArguments(); // \BumbalClient/Model\TagTypeRetrieveListArguments | Tag types RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListTagType($arguments);
@@ -130,15 +145,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TagTypeRetrieveListArguments**](../Model/\BumbalClient\Model\TagTypeRetrieveListArguments.md)| Tag types RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\TagTypeRetrieveListArguments**](../Model/\BumbalClient/Model\TagTypeRetrieveListArguments.md)| Tag types RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TagTypeModel[]**](../Model/TagTypeModel.md)
+[**\BumbalClient/Model\TagTypeModel[]**](../Model/TagTypeModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -148,7 +163,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTagType**
-> \BumbalClient\Model\TagTypeModel retrieveTagType($tag_type_id, $include_object_types)
+> \BumbalClient/Model\TagTypeModel retrieveTagType($tag_type_id, $include_object_types)
 
 Retrieve a Tag type
 
@@ -158,6 +173,11 @@ Retrieve an Tag type
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
 $tag_type_id = 789; // int | ID of tag type to retrieve
@@ -181,11 +201,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagTypeModel**](../Model/TagTypeModel.md)
+[**\BumbalClient/Model\TagTypeModel**](../Model/TagTypeModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -195,7 +215,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setTagType**
-> \BumbalClient\Model\ApiResponse setTagType($body)
+> \BumbalClient/Model\ApiResponse setTagType($body)
 
 Set (create or update) Tag type
 
@@ -206,8 +226,13 @@ Set (create or update) Tag type. If a tag type with same name is found in Bumbal
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$body = new \BumbalClient\Model\TagTypeModel(); // \BumbalClient\Model\TagTypeModel | tag type data
+$body = new \BumbalClient/Model\TagTypeModel(); // \BumbalClient/Model\TagTypeModel | tag type data
 
 try {
     $result = $api_instance->setTagType($body);
@@ -222,15 +247,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/\BumbalClient\Model\TagTypeModel.md)| tag type data | [optional]
+ **body** | [**\BumbalClient/Model\TagTypeModel**](../Model/\BumbalClient/Model\TagTypeModel.md)| tag type data | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -240,7 +265,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTagType**
-> \BumbalClient\Model\ApiResponse updateTagType($tag_type_id)
+> \BumbalClient/Model\ApiResponse updateTagType($tag_type_id)
 
 Update a Tag type
 
@@ -250,6 +275,11 @@ Update a Tag type
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
 $tag_type_id = 789; // int | ID of tag type to update
@@ -271,11 +301,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

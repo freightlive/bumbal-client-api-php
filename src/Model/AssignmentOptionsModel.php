@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\Model;
+namespace BumbalClient/Model;
 
 use \ArrayAccess;
 
@@ -168,7 +168,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * @param bool $include_phone_nrs
      * @return $this
      */
     public function setIncludePhoneNrs($include_phone_nrs)

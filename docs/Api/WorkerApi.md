@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **addActionToWorkerStack**
-> \BumbalClient\Model\ApiResponse addActionToWorkerStack()
+> \BumbalClient/Model\ApiResponse addActionToWorkerStack()
 
 Add Action To Worker Stack
 
@@ -18,6 +18,11 @@ Add Action To Worker Stack
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\WorkerApi();
 
@@ -35,11 +40,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

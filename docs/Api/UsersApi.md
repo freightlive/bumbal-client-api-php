@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListUsers**
-> \BumbalClient\Model\UsersModel[] retrieveListUsers($arguments)
+> \BumbalClient/Model\UsersModel[] retrieveListUsers($arguments)
 
 Retrieve List of Userss
 
@@ -21,8 +21,13 @@ Retrieve List of Userss
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\UsersApi();
-$arguments = new \BumbalClient\Model\UsersRetrieveListArguments(); // \BumbalClient\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
+$arguments = new \BumbalClient/Model\UsersRetrieveListArguments(); // \BumbalClient/Model\UsersRetrieveListArguments | Users RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListUsers($arguments);
@@ -37,15 +42,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/\BumbalClient\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\UsersRetrieveListArguments**](../Model/\BumbalClient/Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\UsersModel[]**](../Model/UsersModel.md)
+[**\BumbalClient/Model\UsersModel[]**](../Model/UsersModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -55,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \BumbalClient\Model\UsersModel retrieveUsers($users_id)
+> \BumbalClient/Model\UsersModel retrieveUsers($users_id)
 
 Retrieve a Users
 
@@ -65,6 +70,11 @@ Retrieve an Users
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
 $users_id = 789; // int | ID of users to retrieve
@@ -86,11 +96,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient/Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -100,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUsers**
-> \BumbalClient\Model\ApiResponse updateUsers($users_id)
+> \BumbalClient/Model\ApiResponse updateUsers($users_id)
 
 Update a Users
 
@@ -110,6 +120,11 @@ Update a Setting
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
 $users_id = 789; // int | ID of users to update
@@ -131,11 +146,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

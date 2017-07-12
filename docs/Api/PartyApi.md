@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createParty**
-> \BumbalClient\Model\ApiResponse createParty($body)
+> \BumbalClient/Model\ApiResponse createParty($body)
 
 Add a new Party
 
@@ -23,8 +23,13 @@ Add a new Party
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\PartyApi();
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object that needs to be created
+$body = new \BumbalClient/Model\PartyModel(); // \BumbalClient/Model\PartyModel | Party object that needs to be created
 
 try {
     $result = $api_instance->createParty($body);
@@ -39,15 +44,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/\BumbalClient\Model\PartyModel.md)| Party object that needs to be created | [optional]
+ **body** | [**\BumbalClient/Model\PartyModel**](../Model/\BumbalClient/Model\PartyModel.md)| Party object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -57,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteParty**
-> \BumbalClient\Model\ApiResponse deleteParty($party_id)
+> \BumbalClient/Model\ApiResponse deleteParty($party_id)
 
 Delete an Party
 
@@ -67,6 +72,11 @@ Delete an Party
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to update
@@ -88,11 +98,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -102,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListParty**
-> \BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
+> \BumbalClient/Model\PartyModel[] retrieveListParty($arguments)
 
 Retrieve List of Parties
 
@@ -113,8 +123,13 @@ Retrieve List of Parties
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\PartyApi();
-$arguments = new \BumbalClient\Model\PartyRetrieveListArguments(); // \BumbalClient\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
+$arguments = new \BumbalClient/Model\PartyRetrieveListArguments(); // \BumbalClient/Model\PartyRetrieveListArguments | Party RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListParty($arguments);
@@ -129,15 +144,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/\BumbalClient\Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\PartyRetrieveListArguments**](../Model/\BumbalClient/Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
+[**\BumbalClient/Model\PartyModel[]**](../Model/PartyModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -147,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveParty**
-> \BumbalClient\Model\PartyModel retrieveParty($party_id)
+> \BumbalClient/Model\PartyModel retrieveParty($party_id)
 
 Retrieve a Party
 
@@ -157,6 +172,11 @@ Retrieve an Party
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to retrieve
@@ -178,11 +198,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)
+[**\BumbalClient/Model\PartyModel**](../Model/PartyModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -192,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateParty**
-> \BumbalClient\Model\ApiResponse updateParty($party_id)
+> \BumbalClient/Model\ApiResponse updateParty($party_id)
 
 Update a Party
 
@@ -202,6 +222,11 @@ Update an Party
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to update
@@ -223,11 +248,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

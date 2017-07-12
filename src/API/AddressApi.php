@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\API;
+namespace BumbalClient/API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -106,9 +106,9 @@ class AddressApi
      *
      * Add a new Address
      *
-     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
+     * @param \BumbalClient/Model\AddressModel $body Address object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function createAddress($body = null)
     {
@@ -121,9 +121,9 @@ class AddressApi
      *
      * Add a new Address
      *
-     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
+     * @param \BumbalClient/Model\AddressModel $body Address object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAddressWithHttpInfo($body = null)
     {
@@ -154,6 +154,11 @@ class AddressApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -162,15 +167,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/address'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,7 +191,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function deleteAddress($address_id)
     {
@@ -201,7 +206,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAddressWithHttpInfo($address_id)
     {
@@ -239,6 +244,11 @@ class AddressApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -247,15 +257,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/address/{addressId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -271,7 +281,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\AddressModel
+     * @return \BumbalClient/Model\AddressModel
      */
     public function retrieveAddress($address_id)
     {
@@ -286,7 +296,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\AddressModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\AddressModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveAddressWithHttpInfo($address_id)
     {
@@ -324,6 +334,11 @@ class AddressApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -332,15 +347,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\AddressModel',
+                '\BumbalClient/Model\AddressModel',
                 '/address/{addressId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\AddressModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\AddressModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -354,9 +369,9 @@ class AddressApi
      *
      * Retrieve List of Addresses
      *
-     * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\AddressModel[]
+     * @return \BumbalClient/Model\AddressModel[]
      */
     public function retrieveListAddress($arguments)
     {
@@ -369,9 +384,9 @@ class AddressApi
      *
      * Retrieve List of Addresses
      *
-     * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\AddressModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\AddressModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListAddressWithHttpInfo($arguments)
     {
@@ -406,6 +421,11 @@ class AddressApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -414,15 +434,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\AddressModel[]',
+                '\BumbalClient/Model\AddressModel[]',
                 '/address'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\AddressModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\AddressModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -438,7 +458,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function updateAddress($address_id)
     {
@@ -453,7 +473,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAddressWithHttpInfo($address_id)
     {
@@ -491,6 +511,11 @@ class AddressApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -499,15 +524,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/address/{addressId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

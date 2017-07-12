@@ -8,12 +8,11 @@ Method | HTTP request | Description
 [**deleteTag**](TagsApi.md#deleteTag) | **DELETE** /tags/{tagId} | Delete a Tag
 [**retrieveListTags**](TagsApi.md#retrieveListTags) | **PUT** /tags | Retrieve List of Tags
 [**retrieveTag**](TagsApi.md#retrieveTag) | **GET** /tags/{tagId} | Retrieve a Tag
-[**setTags**](TagsApi.md#setTags) | **POST** /tags/set | Set (create or update) Tag
 [**updateTag**](TagsApi.md#updateTag) | **PUT** /tags/{tagId} | Update a Tag
 
 
 # **createTag**
-> \BumbalClient\Model\ApiResponse createTag($body)
+> \BumbalClient/Model\ApiResponse createTag($body)
 
 Add a new Tag
 
@@ -24,8 +23,13 @@ Add a new Tag
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\TagsApi();
-$body = new \BumbalClient\Model\TagModel(); // \BumbalClient\Model\TagModel | Tag object that needs to be created
+$body = new \BumbalClient/Model\TagModel(); // \BumbalClient/Model\TagModel | Tag object that needs to be created
 
 try {
     $result = $api_instance->createTag($body);
@@ -40,15 +44,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagModel**](../Model/\BumbalClient\Model\TagModel.md)| Tag object that needs to be created | [optional]
+ **body** | [**\BumbalClient/Model\TagModel**](../Model/\BumbalClient/Model\TagModel.md)| Tag object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -58,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTag**
-> \BumbalClient\Model\ApiResponse deleteTag($tag_id)
+> \BumbalClient/Model\ApiResponse deleteTag($tag_id)
 
 Delete a Tag
 
@@ -68,6 +72,11 @@ Delete a Tag
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to delete
@@ -89,11 +98,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -103,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTags**
-> \BumbalClient\Model\TagModel[] retrieveListTags($arguments)
+> \BumbalClient/Model\TagModel[] retrieveListTags($arguments)
 
 Retrieve List of Tags
 
@@ -114,8 +123,13 @@ Retrieve List of Tags
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\TagsApi();
-$arguments = new \BumbalClient\Model\TagsRetrieveListArguments(); // \BumbalClient\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
+$arguments = new \BumbalClient/Model\TagsRetrieveListArguments(); // \BumbalClient/Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListTags($arguments);
@@ -130,15 +144,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TagsRetrieveListArguments**](../Model/\BumbalClient\Model\TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\TagsRetrieveListArguments**](../Model/\BumbalClient/Model\TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel[]**](../Model/TagModel.md)
+[**\BumbalClient/Model\TagModel[]**](../Model/TagModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -148,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTag**
-> \BumbalClient\Model\TagModel retrieveTag($tag_id)
+> \BumbalClient/Model\TagModel retrieveTag($tag_id)
 
 Retrieve a Tag
 
@@ -158,6 +172,11 @@ Retrieve an Tag
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to retrieve
@@ -179,56 +198,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel**](../Model/TagModel.md)
+[**\BumbalClient/Model\TagModel**](../Model/TagModel.md)
 
 ### Authorization
 
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **setTags**
-> \BumbalClient\Model\ApiResponse setTags($body)
-
-Set (create or update) Tag
-
-Set (create or update) Tag. If a tag with same name is found in Bumbal, the tag type id is returned.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new BumbalClient\Api\TagsApi();
-$body = new \BumbalClient\Model\TagModel(); // \BumbalClient\Model\TagModel | tag type ids
-
-try {
-    $result = $api_instance->setTags($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TagsApi->setTags: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagModel**](../Model/\BumbalClient\Model\TagModel.md)| tag type ids | [optional]
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -238,7 +212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTag**
-> \BumbalClient\Model\ApiResponse updateTag($tag_id)
+> \BumbalClient/Model\ApiResponse updateTag($tag_id)
 
 Update a Tag
 
@@ -248,6 +222,11 @@ Update an Tag
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagsApi();
 $tag_id = 789; // int | ID of tag to update
@@ -269,11 +248,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 

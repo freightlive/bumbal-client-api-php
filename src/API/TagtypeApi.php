@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\API;
+namespace BumbalClient/API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -106,9 +106,9 @@ class TagtypeApi
      *
      * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (required)
+     * @param \BumbalClient/Model\TagTypeModel $body Tag type object that needs to be created (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function createTagType($body)
     {
@@ -121,9 +121,9 @@ class TagtypeApi
      *
      * Add a new Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body Tag type object that needs to be created (required)
+     * @param \BumbalClient/Model\TagTypeModel $body Tag type object that needs to be created (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagTypeWithHttpInfo($body)
     {
@@ -158,6 +158,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -166,15 +171,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/tag-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -190,7 +195,7 @@ class TagtypeApi
      *
      * @param int $tag_type_id ID of tag type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function deleteTagType($tag_type_id)
     {
@@ -205,7 +210,7 @@ class TagtypeApi
      *
      * @param int $tag_type_id ID of tag type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTagTypeWithHttpInfo($tag_type_id)
     {
@@ -243,6 +248,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -251,15 +261,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/tag-type/{tagTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -273,9 +283,9 @@ class TagtypeApi
      *
      * Retrieve List of Tag types
      *
-     * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagTypeModel[]
+     * @return \BumbalClient/Model\TagTypeModel[]
      */
     public function retrieveListTagType($arguments)
     {
@@ -288,9 +298,9 @@ class TagtypeApi
      *
      * Retrieve List of Tag types
      *
-     * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
+     * @param \BumbalClient/Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagTypeModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\TagTypeModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListTagTypeWithHttpInfo($arguments)
     {
@@ -325,6 +335,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -333,15 +348,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagTypeModel[]',
+                '\BumbalClient/Model\TagTypeModel[]',
                 '/tag-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\TagTypeModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\TagTypeModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -358,7 +373,7 @@ class TagtypeApi
      * @param int $tag_type_id ID of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagTypeModel
+     * @return \BumbalClient/Model\TagTypeModel
      */
     public function retrieveTagType($tag_type_id, $include_object_types = null)
     {
@@ -374,7 +389,7 @@ class TagtypeApi
      * @param int $tag_type_id ID of tag type to retrieve (required)
      * @param bool $include_object_types Show the text value of the status (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\TagTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveTagTypeWithHttpInfo($tag_type_id, $include_object_types = null)
     {
@@ -416,6 +431,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -424,15 +444,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagTypeModel',
+                '\BumbalClient/Model\TagTypeModel',
                 '/tag-type/{tagTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\TagTypeModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\TagTypeModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -446,9 +466,9 @@ class TagtypeApi
      *
      * Set (create or update) Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body tag type data (optional)
+     * @param \BumbalClient/Model\TagTypeModel $body tag type data (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function setTagType($body = null)
     {
@@ -461,9 +481,9 @@ class TagtypeApi
      *
      * Set (create or update) Tag type
      *
-     * @param \BumbalClient\Model\TagTypeModel $body tag type data (optional)
+     * @param \BumbalClient/Model\TagTypeModel $body tag type data (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setTagTypeWithHttpInfo($body = null)
     {
@@ -494,6 +514,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -502,15 +527,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/tag-type/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -526,7 +551,7 @@ class TagtypeApi
      *
      * @param int $tag_type_id ID of tag type to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient/Model\ApiResponse
      */
     public function updateTagType($tag_type_id)
     {
@@ -541,7 +566,7 @@ class TagtypeApi
      *
      * @param int $tag_type_id ID of tag type to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient/Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTagTypeWithHttpInfo($tag_type_id)
     {
@@ -579,6 +604,11 @@ class TagtypeApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -587,15 +617,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient/Model\ApiResponse',
                 '/tag-type/{tagTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient/Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient/Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

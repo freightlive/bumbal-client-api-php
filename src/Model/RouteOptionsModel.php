@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\Model;
+namespace BumbalClient/Model;
 
 use \ArrayAccess;
 
@@ -209,7 +209,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_info
-     * @param bool $include_address_info 
+     * @param bool $include_address_info
      * @return $this
      */
     public function setIncludeAddressInfo($include_address_info)
@@ -230,7 +230,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_status
-     * @param bool $include_route_status 
+     * @param bool $include_route_status
      * @return $this
      */
     public function setIncludeRouteStatus($include_route_status)
@@ -251,7 +251,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_tags
-     * @param bool $include_route_tags 
+     * @param bool $include_route_tags
      * @return $this
      */
     public function setIncludeRouteTags($include_route_tags)
@@ -272,7 +272,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_info
-     * @param bool $include_driver_info 
+     * @param bool $include_driver_info
      * @return $this
      */
     public function setIncludeDriverInfo($include_driver_info)
@@ -293,7 +293,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_info_car
-     * @param bool $include_equipment_info_car 
+     * @param bool $include_equipment_info_car
      * @return $this
      */
     public function setIncludeEquipmentInfoCar($include_equipment_info_car)
@@ -314,7 +314,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_gps_locations
-     * @param bool $include_gps_locations 
+     * @param bool $include_gps_locations
      * @return $this
      */
     public function setIncludeGpsLocations($include_gps_locations)
@@ -335,7 +335,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_ids
-     * @param bool $include_activity_ids 
+     * @param bool $include_activity_ids
      * @return $this
      */
     public function setIncludeActivityIds($include_activity_ids)
@@ -356,7 +356,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_latest_position
-     * @param bool $include_latest_position 
+     * @param bool $include_latest_position
      * @return $this
      */
     public function setIncludeLatestPosition($include_latest_position)

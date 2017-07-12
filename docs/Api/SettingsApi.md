@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListSettings**
-> \BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
+> \BumbalClient/Model\SettingsModel[] retrieveListSettings($arguments)
 
 Retrieve List of Settingss
 
@@ -21,8 +21,13 @@ Retrieve List of Settingss
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
 $api_instance = new BumbalClient\Api\SettingsApi();
-$arguments = new \BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
+$arguments = new \BumbalClient/Model\SettingsRetrieveListArguments(); // \BumbalClient/Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListSettings($arguments);
@@ -37,15 +42,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/\BumbalClient\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient/Model\SettingsRetrieveListArguments**](../Model/\BumbalClient/Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
+[**\BumbalClient/Model\SettingsModel[]**](../Model/SettingsModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -55,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveSettings**
-> \BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
+> \BumbalClient/Model\SettingsModel retrieveSettings($settings_id)
 
 Retrieve a Settings
 
@@ -65,6 +70,11 @@ Retrieve an Settings
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to retrieve
@@ -86,11 +96,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
+[**\BumbalClient/Model\SettingsModel**](../Model/SettingsModel.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
@@ -100,7 +110,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSettings**
-> \BumbalClient\Model\ApiResponse updateSettings($settings_id)
+> \BumbalClient/Model\ApiResponse updateSettings($settings_id)
 
 Update a Settings
 
@@ -110,6 +120,11 @@ Update a Setting
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to update
@@ -131,11 +146,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient/Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
-No authorization required
+[api_key](../../README.md#api_key)
 
 ### HTTP request headers
 
