@@ -168,7 +168,7 @@ class TagTypeOptionsModel implements ArrayAccess
 
     /**
      * Sets include_object_types
-     * @param bool $include_object_types
+     * @param bool $include_object_types 
      * @return $this
      */
     public function setIncludeObjectTypes($include_object_types)

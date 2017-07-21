@@ -101,7 +101,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://localhost/api/v2';
+    protected $host = 'http://localhost/api/v2';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout

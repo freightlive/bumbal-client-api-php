@@ -72,7 +72,7 @@ class ActivityApi
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
-            $apiClient->getConfig()->setHost('https://localhost/api/v2');
+            $apiClient->getConfig()->setHost('http://localhost/api/v2');
         }
 
         $this->apiClient = $apiClient;

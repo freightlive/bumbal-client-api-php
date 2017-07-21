@@ -76,7 +76,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost/api/v2*
+All URIs are relative to *http://localhost/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -115,6 +115,12 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
+*NoteApi* | [**createNote**](docs/Api/NoteApi.md#createnote) | **POST** /note | Add a note
+*NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
+*NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
+*NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
+*NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
+*NoteApi* | [**updateNote**](docs/Api/NoteApi.md#updatenote) | **PUT** /note/{noteId} | Update a note
 *PartyApi* | [**createParty**](docs/Api/PartyApi.md#createparty) | **POST** /party | Add a new Party
 *PartyApi* | [**deleteParty**](docs/Api/PartyApi.md#deleteparty) | **DELETE** /party/{partyId} | Delete an Party
 *PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Parties
@@ -189,6 +195,10 @@ Class | Method | HTTP request | Description
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [LinkModel](docs/Model/LinkModel.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)
+ - [NoteFiltersModel](docs/Model/NoteFiltersModel.md)
+ - [NoteModel](docs/Model/NoteModel.md)
+ - [NoteOptionsModel](docs/Model/NoteOptionsModel.md)
+ - [NoteRetrieveListArguments](docs/Model/NoteRetrieveListArguments.md)
  - [PackageLineModel](docs/Model/PackageLineModel.md)
  - [PartyFiltersModel](docs/Model/PartyFiltersModel.md)
  - [PartyModel](docs/Model/PartyModel.md)

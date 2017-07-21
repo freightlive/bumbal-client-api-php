@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **route_earliest_date_time** | [**\DateTime**](\DateTime.md) | Earliest date-time of route | [optional] 
 **route_latest_date_time** | [**\DateTime**](\DateTime.md) | Latest date-time of route | [optional] 
 **route_status_id** | **int** | Status ID of this Route | [optional] 
-**route_status_name** | **int** | Status Name of this Route | [optional] 
+**route_status_name** | **string** | Status Name of this Route | [optional] 
 **route_nr_of_stops** | **int** | Number of stops on this route | [optional] 
 **route_overdue** | **bool** | Route is overdue | [optional] 
 **driver_id** | **int** | Driver ID connected to this route/activity | [optional] 

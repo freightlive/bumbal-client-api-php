@@ -1,6 +1,6 @@
 # BumbalClient\ActivityApi
 
-All URIs are relative to *https://localhost/api/v2*
+All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an Activity
 
-Create or update an Activity. If id or links are set in the data, and a corresponding activity   *     is found in Bumbal, an update will be performed.
+Create or update an Activity. If id or links are set in the data, and a corresponding activity    *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

@@ -90,7 +90,7 @@ class ActivityModel implements ArrayAccess
         'route_earliest_date_time' => '\DateTime',
         'route_latest_date_time' => '\DateTime',
         'route_status_id' => 'int',
-        'route_status_name' => 'int',
+        'route_status_name' => 'string',
         'route_nr_of_stops' => 'int',
         'route_overdue' => 'bool',
         'driver_id' => 'int',
@@ -588,7 +588,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets instructions
-     * @param \BumbalClient\Model\InstructionModel[] $instructions
+     * @param \BumbalClient\Model\InstructionModel[] $instructions 
      * @return $this
      */
     public function setInstructions($instructions)
@@ -957,7 +957,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets route_status_name
-     * @return int
+     * @return string
      */
     public function getRouteStatusName()
     {
@@ -966,7 +966,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_status_name
-     * @param int $route_status_name Status Name of this Route
+     * @param string $route_status_name Status Name of this Route
      * @return $this
      */
     public function setRouteStatusName($route_status_name)
@@ -1155,7 +1155,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address 
      * @return $this
      */
     public function setAddress($address)
@@ -1176,7 +1176,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \BumbalClient\Model\AddressModel $depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address 
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -1197,7 +1197,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -1218,7 +1218,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets package_lines
-     * @param \BumbalClient\Model\PackageLineModel[] $package_lines
+     * @param \BumbalClient\Model\PackageLineModel[] $package_lines 
      * @return $this
      */
     public function setPackageLines($package_lines)
@@ -1239,7 +1239,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets time_slots
-     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots
+     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots 
      * @return $this
      */
     public function setTimeSlots($time_slots)
@@ -1260,7 +1260,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -1281,7 +1281,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \BumbalClient\Model\CommunicationModel $communication
+     * @param \BumbalClient\Model\CommunicationModel $communication 
      * @return $this
      */
     public function setCommunication($communication)
@@ -1302,7 +1302,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param object $meta_data
+     * @param object $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1323,7 +1323,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data_objects
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects 
      * @return $this
      */
     public function setMetaDataObjects($meta_data_objects)
@@ -1344,7 +1344,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)
