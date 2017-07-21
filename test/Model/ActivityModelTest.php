@@ -432,6 +432,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "note_objects"
+     */
+    public function testPropertyNoteObjects()
+    {
+
+    }
+
+    /**
      * Test attribute "files"
      */
     public function testPropertyFiles()

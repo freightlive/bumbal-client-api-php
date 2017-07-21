@@ -108,6 +108,7 @@ class ActivityModel implements ArrayAccess
         'communication' => '\BumbalClient\Model\CommunicationModel',
         'meta_data' => 'object',
         'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
+        'note_objects' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]'
     ];
 
@@ -163,6 +164,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'communication',
         'meta_data' => 'meta_data',
         'meta_data_objects' => 'meta_data_objects',
+        'note_objects' => 'note_objects',
         'files' => 'files'
     ];
 
@@ -214,6 +216,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'setCommunication',
         'meta_data' => 'setMetaData',
         'meta_data_objects' => 'setMetaDataObjects',
+        'note_objects' => 'setNoteObjects',
         'files' => 'setFiles'
     ];
 
@@ -265,6 +268,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'getCommunication',
         'meta_data' => 'getMetaData',
         'meta_data_objects' => 'getMetaDataObjects',
+        'note_objects' => 'getNoteObjects',
         'files' => 'getFiles'
     ];
 
@@ -387,6 +391,7 @@ class ActivityModel implements ArrayAccess
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
+        $this->container['note_objects'] = isset($data['note_objects']) ? $data['note_objects'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
@@ -1329,6 +1334,27 @@ class ActivityModel implements ArrayAccess
     public function setMetaDataObjects($meta_data_objects)
     {
         $this->container['meta_data_objects'] = $meta_data_objects;
+
+        return $this;
+    }
+
+    /**
+     * Gets note_objects
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNoteObjects()
+    {
+        return $this->container['note_objects'];
+    }
+
+    /**
+     * Sets note_objects
+     * @param \BumbalClient\Model\NoteModel[] $note_objects 
+     * @return $this
+     */
+    public function setNoteObjects($note_objects)
+    {
+        $this->container['note_objects'] = $note_objects;
 
         return $this;
     }
