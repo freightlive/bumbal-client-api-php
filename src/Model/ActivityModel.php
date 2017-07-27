@@ -108,7 +108,7 @@ class ActivityModel implements ArrayAccess
         'communication' => '\BumbalClient\Model\CommunicationModel',
         'meta_data' => 'object',
         'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
-        'note_objects' => '\BumbalClient\Model\NoteModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]'
     ];
 
@@ -164,7 +164,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'communication',
         'meta_data' => 'meta_data',
         'meta_data_objects' => 'meta_data_objects',
-        'note_objects' => 'note_objects',
+        'notes' => 'notes',
         'files' => 'files'
     ];
 
@@ -216,7 +216,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'setCommunication',
         'meta_data' => 'setMetaData',
         'meta_data_objects' => 'setMetaDataObjects',
-        'note_objects' => 'setNoteObjects',
+        'notes' => 'setNotes',
         'files' => 'setFiles'
     ];
 
@@ -268,7 +268,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'getCommunication',
         'meta_data' => 'getMetaData',
         'meta_data_objects' => 'getMetaDataObjects',
-        'note_objects' => 'getNoteObjects',
+        'notes' => 'getNotes',
         'files' => 'getFiles'
     ];
 
@@ -391,7 +391,7 @@ class ActivityModel implements ArrayAccess
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
-        $this->container['note_objects'] = isset($data['note_objects']) ? $data['note_objects'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
     }
 
@@ -1339,22 +1339,22 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
-     * Gets note_objects
+     * Gets notes
      * @return \BumbalClient\Model\NoteModel[]
      */
-    public function getNoteObjects()
+    public function getNotes()
     {
-        return $this->container['note_objects'];
+        return $this->container['notes'];
     }
 
     /**
-     * Sets note_objects
-     * @param \BumbalClient\Model\NoteModel[] $note_objects 
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
-    public function setNoteObjects($note_objects)
+    public function setNotes($notes)
     {
-        $this->container['note_objects'] = $note_objects;
+        $this->container['notes'] = $notes;
 
         return $this;
     }

@@ -45,7 +45,7 @@ Name | Type | Description | Notes
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
 **meta_data** | **object** |  | [optional] 
 **meta_data_objects** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**note_objects** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
+**notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

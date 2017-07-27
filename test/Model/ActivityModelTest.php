@@ -432,9 +432,9 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "note_objects"
+     * Test attribute "notes"
      */
-    public function testPropertyNoteObjects()
+    public function testPropertyNotes()
     {
 
     }
