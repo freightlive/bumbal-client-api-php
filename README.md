@@ -121,6 +121,12 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
 *NoteApi* | [**updateNote**](docs/Api/NoteApi.md#updatenote) | **PUT** /note/{noteId} | Update a note
+*PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an PackageLine
+*PackagelineApi* | [**deletePackageLine**](docs/Api/PackagelineApi.md#deletepackageline) | **DELETE** /package-line/{packageLineId} | Delete an package-line
+*PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines
+*PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
+*PackagelineApi* | [**setPackageLine**](docs/Api/PackagelineApi.md#setpackageline) | **POST** /package-line/set | Set (create or update) an PackageLine
+*PackagelineApi* | [**updatePackageLine**](docs/Api/PackagelineApi.md#updatepackageline) | **PUT** /package-line/{packageLineId} | Update a package-line
 *PartyApi* | [**createParty**](docs/Api/PartyApi.md#createparty) | **POST** /party | Add a new Party
 *PartyApi* | [**deleteParty**](docs/Api/PartyApi.md#deleteparty) | **DELETE** /party/{partyId} | Delete an Party
 *PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Parties
@@ -199,7 +205,10 @@ Class | Method | HTTP request | Description
  - [NoteModel](docs/Model/NoteModel.md)
  - [NoteOptionsModel](docs/Model/NoteOptionsModel.md)
  - [NoteRetrieveListArguments](docs/Model/NoteRetrieveListArguments.md)
+ - [PackageLineFiltersModel](docs/Model/PackageLineFiltersModel.md)
  - [PackageLineModel](docs/Model/PackageLineModel.md)
+ - [PackageLineOptionsModel](docs/Model/PackageLineOptionsModel.md)
+ - [PackageLineRetrieveListArguments](docs/Model/PackageLineRetrieveListArguments.md)
  - [PartyFiltersModel](docs/Model/PartyFiltersModel.md)
  - [PartyModel](docs/Model/PartyModel.md)
  - [PartyOptionsModel](docs/Model/PartyOptionsModel.md)

@@ -109,7 +109,9 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'object',
         'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
-        'files' => '\BumbalClient\Model\FileModel[]'
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -165,7 +167,9 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'meta_data_objects' => 'meta_data_objects',
         'notes' => 'notes',
-        'files' => 'files'
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -217,7 +221,9 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'meta_data_objects' => 'setMetaDataObjects',
         'notes' => 'setNotes',
-        'files' => 'setFiles'
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -269,7 +275,9 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'meta_data_objects' => 'getMetaDataObjects',
         'notes' => 'getNotes',
-        'files' => 'getFiles'
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -393,6 +401,8 @@ class ActivityModel implements ArrayAccess
         $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -1376,6 +1386,48 @@ class ActivityModel implements ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }
