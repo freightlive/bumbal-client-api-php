@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **capacity_loading_weight** | **float** | total weight for all packages in package line, used for any capacity related calculations | [optional] 
 **description** | **string** | description of this package_line | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**activity_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **activity_id** | **int[]** | Activity id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

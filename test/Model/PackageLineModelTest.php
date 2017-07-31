@@ -104,6 +104,14 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "activity_id"
+     */
+    public function testPropertyActivityId()
+    {
+
+    }
+
+    /**
      * Test attribute "nr"
      */
     public function testPropertyNr()
@@ -112,17 +120,9 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "package_type"
+     * Test attribute "status_id"
      */
-    public function testPropertyPackageType()
-    {
-
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
+    public function testPropertyStatusId()
     {
 
     }
@@ -131,6 +131,22 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "nr_of_packages"
      */
     public function testPropertyNrOfPackages()
+    {
+
+    }
+
+    /**
+     * Test attribute "package_type_name"
+     */
+    public function testPropertyPackageTypeName()
+    {
+
+    }
+
+    /**
+     * Test attribute "package_type_id"
+     */
+    public function testPropertyPackageTypeId()
     {
 
     }
@@ -160,9 +176,65 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "volume"
+     * Test attribute "unit_volume"
      */
-    public function testPropertyVolume()
+    public function testPropertyUnitVolume()
+    {
+
+    }
+
+    /**
+     * Test attribute "net_weight_unit"
+     */
+    public function testPropertyNetWeightUnit()
+    {
+
+    }
+
+    /**
+     * Test attribute "net_weight_total"
+     */
+    public function testPropertyNetWeightTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "tare_weight_unit"
+     */
+    public function testPropertyTareWeightUnit()
+    {
+
+    }
+
+    /**
+     * Test attribute "tare_weight_total"
+     */
+    public function testPropertyTareWeightTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "gross_weight_unit"
+     */
+    public function testPropertyGrossWeightUnit()
+    {
+
+    }
+
+    /**
+     * Test attribute "gross_weight_total"
+     */
+    public function testPropertyGrossWeightTotal()
+    {
+
+    }
+
+    /**
+     * Test attribute "unit_loading_meter"
+     */
+    public function testPropertyUnitLoadingMeter()
     {
 
     }
@@ -176,9 +248,89 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "packagevalue"
+     * Test attribute "adr"
      */
-    public function testPropertyPackagevalue()
+    public function testPropertyAdr()
+    {
+
+    }
+
+    /**
+     * Test attribute "adr_class"
+     */
+    public function testPropertyAdrClass()
+    {
+
+    }
+
+    /**
+     * Test attribute "adr_un_nr"
+     */
+    public function testPropertyAdrUnNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "temp"
+     */
+    public function testPropertyTemp()
+    {
+
+    }
+
+    /**
+     * Test attribute "temp_min"
+     */
+    public function testPropertyTempMin()
+    {
+
+    }
+
+    /**
+     * Test attribute "temp_max"
+     */
+    public function testPropertyTempMax()
+    {
+
+    }
+
+    /**
+     * Test attribute "capacity_volume"
+     */
+    public function testPropertyCapacityVolume()
+    {
+
+    }
+
+    /**
+     * Test attribute "capacity_loading_meter"
+     */
+    public function testPropertyCapacityLoadingMeter()
+    {
+
+    }
+
+    /**
+     * Test attribute "capacity_loading_weight"
+     */
+    public function testPropertyCapacityLoadingWeight()
+    {
+
+    }
+
+    /**
+     * Test attribute "hs_code"
+     */
+    public function testPropertyHsCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
 
     }
@@ -187,6 +339,62 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "links"
      */
     public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "activity_links"
+     */
+    public function testPropertyActivityLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data_objects"
+     */
+    public function testPropertyMetaDataObjects()
+    {
+
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
     {
 
     }

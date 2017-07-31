@@ -288,6 +288,14 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "activity_links"
+     */
+    public function testPropertyActivityLinks()
+    {
+
+    }
+
+    /**
      * Test attribute "activity_id"
      */
     public function testPropertyActivityId()

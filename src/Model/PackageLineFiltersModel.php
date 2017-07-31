@@ -90,6 +90,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'capacity_loading_weight' => 'float',
         'description' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
+        'activity_links' => '\BumbalClient\Model\LinkModel[]',
         'activity_id' => 'int[]'
     ];
 
@@ -127,6 +128,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'capacity_loading_weight' => 'capacity_loading_weight',
         'description' => 'description',
         'links' => 'links',
+        'activity_links' => 'activity_links',
         'activity_id' => 'activity_id'
     ];
 
@@ -160,6 +162,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'capacity_loading_weight' => 'setCapacityLoadingWeight',
         'description' => 'setDescription',
         'links' => 'setLinks',
+        'activity_links' => 'setActivityLinks',
         'activity_id' => 'setActivityId'
     ];
 
@@ -193,6 +196,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'capacity_loading_weight' => 'getCapacityLoadingWeight',
         'description' => 'getDescription',
         'links' => 'getLinks',
+        'activity_links' => 'getActivityLinks',
         'activity_id' => 'getActivityId'
     ];
 
@@ -251,6 +255,7 @@ class PackageLineFiltersModel implements ArrayAccess
         $this->container['capacity_loading_weight'] = isset($data['capacity_loading_weight']) ? $data['capacity_loading_weight'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
     }
 
@@ -777,6 +782,27 @@ class PackageLineFiltersModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getActivityLinks()
+    {
+        return $this->container['activity_links'];
+    }
+
+    /**
+     * Sets activity_links
+     * @param \BumbalClient\Model\LinkModel[] $activity_links 
+     * @return $this
+     */
+    public function setActivityLinks($activity_links)
+    {
+        $this->container['activity_links'] = $activity_links;
 
         return $this;
     }
