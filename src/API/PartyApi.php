@@ -104,9 +104,9 @@ class PartyApi
     /**
      * Operation createParty
      *
-     * Add a new Party
+     * Create or update an Party
      *
-     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be created (optional)
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -119,9 +119,9 @@ class PartyApi
     /**
      * Operation createPartyWithHttpInfo
      *
-     * Add a new Party
+     * Create or update an Party
      *
-     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be created (optional)
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -187,9 +187,9 @@ class PartyApi
     /**
      * Operation deleteParty
      *
-     * Delete an Party
+     * Delete an party
      *
-     * @param int $party_id ID of party to update (required)
+     * @param int $party_id ID of the party to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -202,9 +202,9 @@ class PartyApi
     /**
      * Operation deletePartyWithHttpInfo
      *
-     * Delete an Party
+     * Delete an party
      *
-     * @param int $party_id ID of party to update (required)
+     * @param int $party_id ID of the party to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -277,7 +277,7 @@ class PartyApi
     /**
      * Operation retrieveListParty
      *
-     * Retrieve List of Parties
+     * Retrieve List of Partys
      *
      * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -292,7 +292,7 @@ class PartyApi
     /**
      * Operation retrieveListPartyWithHttpInfo
      *
-     * Retrieve List of Parties
+     * Retrieve List of Partys
      *
      * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -364,32 +364,56 @@ class PartyApi
     /**
      * Operation retrieveParty
      *
-     * Retrieve a Party
+     * Find party by ID
      *
-     * @param int $party_id ID of party to retrieve (required)
+     * @param int $party_id ID of party to return (required)
+     * @param bool $include_party_links Include Link Data (required)
+     * @param bool $include_party_files Include files (required)
+     * @param bool $include_party_files_meta_data Include files meta data (required)
+     * @param bool $include_party_files_meta_data_objects Include files meta data objects (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\PartyModel
      */
-    public function retrieveParty($party_id)
+    public function retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data, $include_party_files_meta_data_objects)
     {
-        list($response) = $this->retrievePartyWithHttpInfo($party_id);
+        list($response) = $this->retrievePartyWithHttpInfo($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data, $include_party_files_meta_data_objects);
         return $response;
     }
 
     /**
      * Operation retrievePartyWithHttpInfo
      *
-     * Retrieve a Party
+     * Find party by ID
      *
-     * @param int $party_id ID of party to retrieve (required)
+     * @param int $party_id ID of party to return (required)
+     * @param bool $include_party_links Include Link Data (required)
+     * @param bool $include_party_files Include files (required)
+     * @param bool $include_party_files_meta_data Include files meta data (required)
+     * @param bool $include_party_files_meta_data_objects Include files meta data objects (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\PartyModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrievePartyWithHttpInfo($party_id)
+    public function retrievePartyWithHttpInfo($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data, $include_party_files_meta_data_objects)
     {
         // verify the required parameter 'party_id' is set
         if ($party_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $party_id when calling retrieveParty');
+        }
+        // verify the required parameter 'include_party_links' is set
+        if ($include_party_links === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_party_links when calling retrieveParty');
+        }
+        // verify the required parameter 'include_party_files' is set
+        if ($include_party_files === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_party_files when calling retrieveParty');
+        }
+        // verify the required parameter 'include_party_files_meta_data' is set
+        if ($include_party_files_meta_data === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_party_files_meta_data when calling retrieveParty');
+        }
+        // verify the required parameter 'include_party_files_meta_data_objects' is set
+        if ($include_party_files_meta_data_objects === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_party_files_meta_data_objects when calling retrieveParty');
         }
         // parse inputs
         $resourcePath = "/party/{partyId}";
@@ -403,6 +427,22 @@ class PartyApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // query params
+        if ($include_party_links !== null) {
+            $queryParams['include_party_links'] = $this->apiClient->getSerializer()->toQueryValue($include_party_links);
+        }
+        // query params
+        if ($include_party_files !== null) {
+            $queryParams['include_party_files'] = $this->apiClient->getSerializer()->toQueryValue($include_party_files);
+        }
+        // query params
+        if ($include_party_files_meta_data !== null) {
+            $queryParams['include_party_files_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_party_files_meta_data);
+        }
+        // query params
+        if ($include_party_files_meta_data_objects !== null) {
+            $queryParams['include_party_files_meta_data_objects'] = $this->apiClient->getSerializer()->toQueryValue($include_party_files_meta_data_objects);
+        }
         // path params
         if ($party_id !== null) {
             $resourcePath = str_replace(
@@ -452,30 +492,115 @@ class PartyApi
     }
 
     /**
-     * Operation updateParty
+     * Operation setParty
      *
-     * Update a Party
+     * Set (create or update) an Party
      *
-     * @param int $party_id ID of party to update (required)
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateParty($party_id)
+    public function setParty($body = null)
     {
-        list($response) = $this->updatePartyWithHttpInfo($party_id);
+        list($response) = $this->setPartyWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation setPartyWithHttpInfo
+     *
+     * Set (create or update) an Party
+     *
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function setPartyWithHttpInfo($body = null)
+    {
+        // parse inputs
+        $resourcePath = "/party/set";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/party/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateParty
+     *
+     * Update a party
+     *
+     * @param int $party_id ID of party to update (required)
+     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function updateParty($party_id, $body = null)
+    {
+        list($response) = $this->updatePartyWithHttpInfo($party_id, $body);
         return $response;
     }
 
     /**
      * Operation updatePartyWithHttpInfo
      *
-     * Update a Party
+     * Update a party
      *
      * @param int $party_id ID of party to update (required)
+     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePartyWithHttpInfo($party_id)
+    public function updatePartyWithHttpInfo($party_id, $body = null)
     {
         // verify the required parameter 'party_id' is set
         if ($party_id === null) {
@@ -504,7 +629,12 @@ class PartyApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

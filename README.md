@@ -93,11 +93,12 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /address/{addressId} | Update a Address
 *AddressappliedApi* | [**retrieveAddressApplied**](docs/Api/AddressappliedApi.md#retrieveaddressapplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
 *AddressappliedApi* | [**updateAddressApplied**](docs/Api/AddressappliedApi.md#updateaddressapplied) | **PUT** /address-applied/{addressId} | Update a Address
-*AssignmentApi* | [**createAssignment**](docs/Api/AssignmentApi.md#createassignment) | **POST** /assignment | Add a new Assignment
-*AssignmentApi* | [**deleteAssignment**](docs/Api/AssignmentApi.md#deleteassignment) | **DELETE** /assignment/{assignmentId} | Delete an Assignment
-*AssignmentApi* | [**retrieveAssignment**](docs/Api/AssignmentApi.md#retrieveassignment) | **GET** /assignment/{assignmentId} | Retrieve a Assignment
+*AssignmentApi* | [**createAssignment**](docs/Api/AssignmentApi.md#createassignment) | **POST** /assignment | Create or update an Assignment
+*AssignmentApi* | [**deleteAssignment**](docs/Api/AssignmentApi.md#deleteassignment) | **DELETE** /assignment/{assignmentId} | Delete an assignment
+*AssignmentApi* | [**retrieveAssignment**](docs/Api/AssignmentApi.md#retrieveassignment) | **GET** /assignment/{assignmentId} | Find assignment by ID
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
-*AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a Assignment
+*AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
+*AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
 *AutoplanApi* | [**autoPlanCheckProgress**](docs/Api/AutoplanApi.md#autoplancheckprogress) | **GET** /auto-plan/check-progress/{processUUID} | Check Progress on a Auto Plan Process
 *AutoplanApi* | [**autoPlanFinish**](docs/Api/AutoplanApi.md#autoplanfinish) | **POST** /auto-plan/finish | Finish a Auto Plan Process
 *AutoplanApi* | [**autoPlanStart**](docs/Api/AutoplanApi.md#autoplanstart) | **POST** /auto-plan/start | Start a Auto Plan Process
@@ -127,11 +128,12 @@ Class | Method | HTTP request | Description
 *PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
 *PackagelineApi* | [**setPackageLine**](docs/Api/PackagelineApi.md#setpackageline) | **POST** /package-line/set | Set (create or update) an PackageLine
 *PackagelineApi* | [**updatePackageLine**](docs/Api/PackagelineApi.md#updatepackageline) | **PUT** /package-line/{packageLineId} | Update a package-line
-*PartyApi* | [**createParty**](docs/Api/PartyApi.md#createparty) | **POST** /party | Add a new Party
-*PartyApi* | [**deleteParty**](docs/Api/PartyApi.md#deleteparty) | **DELETE** /party/{partyId} | Delete an Party
-*PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Parties
-*PartyApi* | [**retrieveParty**](docs/Api/PartyApi.md#retrieveparty) | **GET** /party/{partyId} | Retrieve a Party
-*PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a Party
+*PartyApi* | [**createParty**](docs/Api/PartyApi.md#createparty) | **POST** /party | Create or update an Party
+*PartyApi* | [**deleteParty**](docs/Api/PartyApi.md#deleteparty) | **DELETE** /party/{partyId} | Delete an party
+*PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Partys
+*PartyApi* | [**retrieveParty**](docs/Api/PartyApi.md#retrieveparty) | **GET** /party/{partyId} | Find party by ID
+*PartyApi* | [**setParty**](docs/Api/PartyApi.md#setparty) | **POST** /party/set | Set (create or update) an Party
+*PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
 *PlannerApi* | [**plannerCalculateDriveTime**](docs/Api/PlannerApi.md#plannercalculatedrivetime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
 *PlannerApi* | [**plannerChangeActivitySequence**](docs/Api/PlannerApi.md#plannerchangeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
@@ -145,6 +147,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
+*RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settingss
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings

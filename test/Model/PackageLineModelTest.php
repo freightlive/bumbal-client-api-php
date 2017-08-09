@@ -336,14 +336,6 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
-    {
-
-    }
-
-    /**
      * Test attribute "activity_links"
      */
     public function testPropertyActivityLinks()
@@ -352,17 +344,17 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "links"
      */
-    public function testPropertyMetaData()
+    public function testPropertyLinks()
     {
 
     }
 
     /**
-     * Test attribute "meta_data_objects"
+     * Test attribute "meta_data"
      */
-    public function testPropertyMetaDataObjects()
+    public function testPropertyMetaData()
     {
 
     }

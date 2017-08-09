@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteRoute**](RouteApi.md#deleteRoute) | **DELETE** /route/{routeId} | Delete an Route
 [**retrieveListRoute**](RouteApi.md#retrieveListRoute) | **PUT** /route | Retrieve List of Routes
 [**retrieveRoute**](RouteApi.md#retrieveRoute) | **GET** /route/{routeId} | Retrieve a Route
+[**setRoute**](RouteApi.md#setRoute) | **POST** /route/set | Set (create or update) an Route
 [**updateRoute**](RouteApi.md#updateRoute) | **PUT** /route/{routeId} | Update a Route
 
 
@@ -217,6 +218,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\RouteModel**](../Model/RouteModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setRoute**
+> \BumbalClient\Model\ApiResponse setRoute($body)
+
+Set (create or update) an Route
+
+Set (create or update) an Route. If id or links are set in the data, and a corresponding route is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RouteApi();
+$body = new \BumbalClient\Model\RouteModel(); // \BumbalClient\Model\RouteModel | Route object
+
+try {
+    $result = $api_instance->setRoute($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RouteApi->setRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\RouteModel**](../Model/\BumbalClient\Model\RouteModel.md)| Route object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

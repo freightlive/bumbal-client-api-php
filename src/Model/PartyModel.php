@@ -66,7 +66,23 @@ class PartyModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'id' => 'int',
+        'party_type_name' => 'string',
+        'party_type_id' => 'int',
+        'address' => '\BumbalClient\Model\AddressModel',
+        'address_id' => 'int',
+        'name_1' => 'string',
+        'name_2' => 'string',
+        'nr' => 'string',
+        'contact_person' => 'string',
+        'url' => 'string',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +95,23 @@ class PartyModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'party_type_name' => 'party_type_name',
+        'party_type_id' => 'party_type_id',
+        'address' => 'address',
+        'address_id' => 'address_id',
+        'name_1' => 'name_1',
+        'name_2' => 'name_2',
+        'nr' => 'nr',
+        'contact_person' => 'contact_person',
+        'url' => 'url',
+        'tags' => 'tags',
+        'links' => 'links',
+        'meta_data' => 'meta_data',
+        'notes' => 'notes',
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -88,7 +120,23 @@ class PartyModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'party_type_name' => 'setPartyTypeName',
+        'party_type_id' => 'setPartyTypeId',
+        'address' => 'setAddress',
+        'address_id' => 'setAddressId',
+        'name_1' => 'setName1',
+        'name_2' => 'setName2',
+        'nr' => 'setNr',
+        'contact_person' => 'setContactPerson',
+        'url' => 'setUrl',
+        'tags' => 'setTags',
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
+        'notes' => 'setNotes',
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -97,7 +145,23 @@ class PartyModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'party_type_name' => 'getPartyTypeName',
+        'party_type_id' => 'getPartyTypeId',
+        'address' => 'getAddress',
+        'address_id' => 'getAddressId',
+        'name_1' => 'getName1',
+        'name_2' => 'getName2',
+        'nr' => 'getNr',
+        'contact_person' => 'getContactPerson',
+        'url' => 'getUrl',
+        'tags' => 'getTags',
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
+        'notes' => 'getNotes',
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -115,8 +179,22 @@ class PartyModel implements ArrayAccess
         return self::$getters;
     }
 
+    const PARTY_TYPE_NAME_CONTRACTOR = 'contractor';
+    const PARTY_TYPE_NAME_BOOKING = 'booking';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPartyTypeNameAllowableValues()
+    {
+        return [
+            self::PARTY_TYPE_NAME_CONTRACTOR,
+            self::PARTY_TYPE_NAME_BOOKING,
+        ];
+    }
     
 
     /**
@@ -132,6 +210,22 @@ class PartyModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['party_type_name'] = isset($data['party_type_name']) ? $data['party_type_name'] : null;
+        $this->container['party_type_id'] = isset($data['party_type_id']) ? $data['party_type_id'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
+        $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
+        $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
+        $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
+        $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -145,6 +239,11 @@ class PartyModel implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
+        $allowed_values = ["contractor", "booking"];
+        if (!in_array($this->container['party_type_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'party_type_name', must be one of 'contractor', 'booking'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -157,6 +256,10 @@ class PartyModel implements ArrayAccess
     public function valid()
     {
         if ($this->container['id'] === null) {
+            return false;
+        }
+        $allowed_values = ["contractor", "booking"];
+        if (!in_array($this->container['party_type_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -174,12 +277,352 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id Unique Identifier
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_type_name
+     * @return string
+     */
+    public function getPartyTypeName()
+    {
+        return $this->container['party_type_name'];
+    }
+
+    /**
+     * Sets party_type_name
+     * @param string $party_type_name Type of this party
+     * @return $this
+     */
+    public function setPartyTypeName($party_type_name)
+    {
+        $allowed_values = array('contractor', 'booking');
+        if (!is_null($party_type_name) && (!in_array($party_type_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'party_type_name', must be one of 'contractor', 'booking'");
+        }
+        $this->container['party_type_name'] = $party_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_type_id
+     * @return int
+     */
+    public function getPartyTypeId()
+    {
+        return $this->container['party_type_id'];
+    }
+
+    /**
+     * Sets party_type_id
+     * @param int $party_type_id PartyTypeID of this party. 2 = contractor, 3 = booking
+     * @return $this
+     */
+    public function setPartyTypeId($party_type_id)
+    {
+        $this->container['party_type_id'] = $party_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     * @param \BumbalClient\Model\AddressModel $address 
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_id
+     * @return int
+     */
+    public function getAddressId()
+    {
+        return $this->container['address_id'];
+    }
+
+    /**
+     * Sets address_id
+     * @param int $address_id Address ID (unique)
+     * @return $this
+     */
+    public function setAddressId($address_id)
+    {
+        $this->container['address_id'] = $address_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name_1
+     * @return string
+     */
+    public function getName1()
+    {
+        return $this->container['name_1'];
+    }
+
+    /**
+     * Sets name_1
+     * @param string $name_1 Name 1 for party
+     * @return $this
+     */
+    public function setName1($name_1)
+    {
+        $this->container['name_1'] = $name_1;
+
+        return $this;
+    }
+
+    /**
+     * Gets name_2
+     * @return string
+     */
+    public function getName2()
+    {
+        return $this->container['name_2'];
+    }
+
+    /**
+     * Sets name_2
+     * @param string $name_2 Name 2 for party
+     * @return $this
+     */
+    public function setName2($name_2)
+    {
+        $this->container['name_2'] = $name_2;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr
+     * @return string
+     */
+    public function getNr()
+    {
+        return $this->container['nr'];
+    }
+
+    /**
+     * Sets nr
+     * @param string $nr Number of this party
+     * @return $this
+     */
+    public function setNr($nr)
+    {
+        $this->container['nr'] = $nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets contact_person
+     * @return string
+     */
+    public function getContactPerson()
+    {
+        return $this->container['contact_person'];
+    }
+
+    /**
+     * Sets contact_person
+     * @param string $contact_person Contact person for party
+     * @return $this
+     */
+    public function setContactPerson($contact_person)
+    {
+        $this->container['contact_person'] = $contact_person;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     * @param string $url Url for party website
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

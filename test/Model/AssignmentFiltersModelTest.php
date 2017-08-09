@@ -95,4 +95,44 @@ class AssignmentFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
+    {
+
+    }
+
 }

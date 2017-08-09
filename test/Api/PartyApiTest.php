@@ -92,7 +92,7 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createParty
      *
-     * Add a new Party.
+     * Create or update an Party.
      *
      */
     public function testCreateParty()
@@ -103,7 +103,7 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteParty
      *
-     * Delete an Party.
+     * Delete an party.
      *
      */
     public function testDeleteParty()
@@ -114,7 +114,7 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveListParty
      *
-     * Retrieve List of Parties.
+     * Retrieve List of Partys.
      *
      */
     public function testRetrieveListParty()
@@ -125,7 +125,7 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveParty
      *
-     * Retrieve a Party.
+     * Find party by ID.
      *
      */
     public function testRetrieveParty()
@@ -134,9 +134,20 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setParty
+     *
+     * Set (create or update) an Party.
+     *
+     */
+    public function testSetParty()
+    {
+
+    }
+
+    /**
      * Test case for updateParty
      *
-     * Update a Party.
+     * Update a party.
      *
      */
     public function testUpdateParty()

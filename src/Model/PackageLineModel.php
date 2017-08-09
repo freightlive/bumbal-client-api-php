@@ -96,10 +96,9 @@ class PackageLineModel implements ArrayAccess
         'capacity_loading_weight' => 'float',
         'hs_code' => 'string',
         'description' => 'string',
-        'links' => '\BumbalClient\Model\LinkModel[]',
         'activity_links' => '\BumbalClient\Model\LinkModel[]',
-        'meta_data' => 'object',
-        'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
@@ -146,10 +145,9 @@ class PackageLineModel implements ArrayAccess
         'capacity_loading_weight' => 'capacity_loading_weight',
         'hs_code' => 'hs_code',
         'description' => 'description',
-        'links' => 'links',
         'activity_links' => 'activity_links',
+        'links' => 'links',
         'meta_data' => 'meta_data',
-        'meta_data_objects' => 'meta_data_objects',
         'notes' => 'notes',
         'files' => 'files',
         'created_at' => 'created_at',
@@ -192,10 +190,9 @@ class PackageLineModel implements ArrayAccess
         'capacity_loading_weight' => 'setCapacityLoadingWeight',
         'hs_code' => 'setHsCode',
         'description' => 'setDescription',
-        'links' => 'setLinks',
         'activity_links' => 'setActivityLinks',
+        'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'meta_data_objects' => 'setMetaDataObjects',
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
@@ -238,10 +235,9 @@ class PackageLineModel implements ArrayAccess
         'capacity_loading_weight' => 'getCapacityLoadingWeight',
         'hs_code' => 'getHsCode',
         'description' => 'getDescription',
-        'links' => 'getLinks',
         'activity_links' => 'getActivityLinks',
+        'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'meta_data_objects' => 'getMetaDataObjects',
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
@@ -309,10 +305,9 @@ class PackageLineModel implements ArrayAccess
         $this->container['capacity_loading_weight'] = isset($data['capacity_loading_weight']) ? $data['capacity_loading_weight'] : null;
         $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
-        $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
@@ -979,27 +974,6 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
-     * Gets links
-     * @return \BumbalClient\Model\LinkModel[]
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
-     * @return $this
-     */
-    public function setLinks($links)
-    {
-        $this->container['links'] = $links;
-
-        return $this;
-    }
-
-    /**
      * Gets activity_links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -1021,8 +995,29 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
      * Gets meta_data
-     * @return object
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -1031,33 +1026,12 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param object $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets meta_data_objects
-     * @return \BumbalClient\Model\MetaDataModel[]
-     */
-    public function getMetaDataObjects()
-    {
-        return $this->container['meta_data_objects'];
-    }
-
-    /**
-     * Sets meta_data_objects
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects 
-     * @return $this
-     */
-    public function setMetaDataObjects($meta_data_objects)
-    {
-        $this->container['meta_data_objects'] = $meta_data_objects;
 
         return $this;
     }

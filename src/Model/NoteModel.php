@@ -75,7 +75,8 @@ class NoteModel implements ArrayAccess
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
-        'links' => '\BumbalClient\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     public static function swaggerTypes()
@@ -97,7 +98,8 @@ class NoteModel implements ArrayAccess
         'title' => 'title',
         'updated_by_name' => 'updated_by_name',
         'content' => 'content',
-        'links' => 'links'
+        'links' => 'links',
+        'meta_data' => 'meta_data'
     ];
 
 
@@ -115,7 +117,8 @@ class NoteModel implements ArrayAccess
         'title' => 'setTitle',
         'updated_by_name' => 'setUpdatedByName',
         'content' => 'setContent',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData'
     ];
 
 
@@ -133,7 +136,8 @@ class NoteModel implements ArrayAccess
         'title' => 'getTitle',
         'updated_by_name' => 'getUpdatedByName',
         'content' => 'getContent',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData'
     ];
 
     public static function attributeMap()
@@ -177,6 +181,7 @@ class NoteModel implements ArrayAccess
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
     /**
@@ -414,6 +419,27 @@ class NoteModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

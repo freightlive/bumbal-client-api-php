@@ -14,8 +14,7 @@ Name | Type | Description | Notes
 **updated_by** | **int** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at | [optional] 
-**meta_data** | **object** |  | [optional] 
-**meta_data_objects** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

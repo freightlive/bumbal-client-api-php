@@ -120,9 +120,17 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "status_name"
      */
-    public function testPropertyStatus()
+    public function testPropertyStatusName()
+    {
+
+    }
+
+    /**
+     * Test attribute "status_id"
+     */
+    public function testPropertyStatusId()
     {
 
     }
@@ -144,6 +152,14 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "driver_link"
+     */
+    public function testPropertyDriverLink()
+    {
+
+    }
+
+    /**
      * Test attribute "car_id"
      */
     public function testPropertyCarId()
@@ -152,9 +168,25 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "link_id"
+     * Test attribute "car_link"
      */
-    public function testPropertyLinkId()
+    public function testPropertyCarLink()
+    {
+
+    }
+
+    /**
+     * Test attribute "trailer_id"
+     */
+    public function testPropertyTrailerId()
+    {
+
+    }
+
+    /**
+     * Test attribute "trailer_link"
+     */
+    public function testPropertyTrailerLink()
     {
 
     }
@@ -192,9 +224,105 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence_id"
+     */
+    public function testPropertyRecurrenceId()
+    {
+
+    }
+
+    /**
+     * Test attribute "recurrence_nr"
+     */
+    public function testPropertyRecurrenceNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "overdue"
+     */
+    public function testPropertyOverdue()
+    {
+
+    }
+
+    /**
+     * Test attribute "blocked"
+     */
+    public function testPropertyBlocked()
+    {
+
+    }
+
+    /**
+     * Test attribute "start_address"
+     */
+    public function testPropertyStartAddress()
+    {
+
+    }
+
+    /**
+     * Test attribute "end_address"
+     */
+    public function testPropertyEndAddress()
+    {
+
+    }
+
+    /**
      * Test attribute "activity_ids"
      */
     public function testPropertyActivityIds()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
     {
 
     }

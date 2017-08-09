@@ -72,7 +72,8 @@ class EquipmentModel implements ArrayAccess
         'registration_nr' => 'string',
         'capacity_volume' => 'float',
         'capacity_loading_meter' => 'float',
-        'capacity_weight' => 'float'
+        'capacity_weight' => 'float',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     public static function swaggerTypes()
@@ -91,7 +92,8 @@ class EquipmentModel implements ArrayAccess
         'registration_nr' => 'registration_nr',
         'capacity_volume' => 'capacity_volume',
         'capacity_loading_meter' => 'capacity_loading_meter',
-        'capacity_weight' => 'capacity_weight'
+        'capacity_weight' => 'capacity_weight',
+        'meta_data' => 'meta_data'
     ];
 
 
@@ -106,7 +108,8 @@ class EquipmentModel implements ArrayAccess
         'registration_nr' => 'setRegistrationNr',
         'capacity_volume' => 'setCapacityVolume',
         'capacity_loading_meter' => 'setCapacityLoadingMeter',
-        'capacity_weight' => 'setCapacityWeight'
+        'capacity_weight' => 'setCapacityWeight',
+        'meta_data' => 'setMetaData'
     ];
 
 
@@ -121,7 +124,8 @@ class EquipmentModel implements ArrayAccess
         'registration_nr' => 'getRegistrationNr',
         'capacity_volume' => 'getCapacityVolume',
         'capacity_loading_meter' => 'getCapacityLoadingMeter',
-        'capacity_weight' => 'getCapacityWeight'
+        'capacity_weight' => 'getCapacityWeight',
+        'meta_data' => 'getMetaData'
     ];
 
     public static function attributeMap()
@@ -178,6 +182,7 @@ class EquipmentModel implements ArrayAccess
         $this->container['capacity_volume'] = isset($data['capacity_volume']) ? $data['capacity_volume'] : null;
         $this->container['capacity_loading_meter'] = isset($data['capacity_loading_meter']) ? $data['capacity_loading_meter'] : null;
         $this->container['capacity_weight'] = isset($data['capacity_weight']) ? $data['capacity_weight'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
     /**
@@ -371,6 +376,27 @@ class EquipmentModel implements ArrayAccess
     public function setCapacityWeight($capacity_weight)
     {
         $this->container['capacity_weight'] = $capacity_weight;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

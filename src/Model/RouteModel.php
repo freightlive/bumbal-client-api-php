@@ -69,16 +69,32 @@ class RouteModel implements ArrayAccess
         'id' => 'int',
         'nr' => 'string',
         'name' => 'string',
-        'status' => 'string',
+        'status_name' => 'string',
+        'status_id' => 'int',
         'nr_of_stops' => 'int',
         'driver_id' => 'int',
+        'driver_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
-        'link_id' => 'string',
+        'car_link' => '\BumbalClient\Model\LinkModel[]',
+        'trailer_id' => 'int',
+        'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
         'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
         'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
-        'activity_ids' => 'object'
+        'recurrence_id' => 'int',
+        'recurrence_nr' => 'int',
+        'overdue' => 'bool',
+        'blocked' => 'bool',
+        'start_address' => '\BumbalClient\Model\AddressModel',
+        'end_address' => '\BumbalClient\Model\AddressModel',
+        'activity_ids' => 'object',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -94,16 +110,32 @@ class RouteModel implements ArrayAccess
         'id' => 'id',
         'nr' => 'nr',
         'name' => 'name',
-        'status' => 'status',
+        'status_name' => 'status_name',
+        'status_id' => 'status_id',
         'nr_of_stops' => 'nr_of_stops',
         'driver_id' => 'driver_id',
+        'driver_link' => 'driver_link',
         'car_id' => 'car_id',
-        'link_id' => 'link_id',
+        'car_link' => 'car_link',
+        'trailer_id' => 'trailer_id',
+        'trailer_link' => 'trailer_link',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
         'gps_locations' => 'gps_locations',
         'latest_known_position' => 'latest_known_position',
-        'activity_ids' => 'activity_ids'
+        'recurrence_id' => 'recurrence_id',
+        'recurrence_nr' => 'recurrence_nr',
+        'overdue' => 'overdue',
+        'blocked' => 'blocked',
+        'start_address' => 'start_address',
+        'end_address' => 'end_address',
+        'activity_ids' => 'activity_ids',
+        'links' => 'links',
+        'meta_data' => 'meta_data',
+        'notes' => 'notes',
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -115,16 +147,32 @@ class RouteModel implements ArrayAccess
         'id' => 'setId',
         'nr' => 'setNr',
         'name' => 'setName',
-        'status' => 'setStatus',
+        'status_name' => 'setStatusName',
+        'status_id' => 'setStatusId',
         'nr_of_stops' => 'setNrOfStops',
         'driver_id' => 'setDriverId',
+        'driver_link' => 'setDriverLink',
         'car_id' => 'setCarId',
-        'link_id' => 'setLinkId',
+        'car_link' => 'setCarLink',
+        'trailer_id' => 'setTrailerId',
+        'trailer_link' => 'setTrailerLink',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
         'gps_locations' => 'setGpsLocations',
         'latest_known_position' => 'setLatestKnownPosition',
-        'activity_ids' => 'setActivityIds'
+        'recurrence_id' => 'setRecurrenceId',
+        'recurrence_nr' => 'setRecurrenceNr',
+        'overdue' => 'setOverdue',
+        'blocked' => 'setBlocked',
+        'start_address' => 'setStartAddress',
+        'end_address' => 'setEndAddress',
+        'activity_ids' => 'setActivityIds',
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
+        'notes' => 'setNotes',
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -136,16 +184,32 @@ class RouteModel implements ArrayAccess
         'id' => 'getId',
         'nr' => 'getNr',
         'name' => 'getName',
-        'status' => 'getStatus',
+        'status_name' => 'getStatusName',
+        'status_id' => 'getStatusId',
         'nr_of_stops' => 'getNrOfStops',
         'driver_id' => 'getDriverId',
+        'driver_link' => 'getDriverLink',
         'car_id' => 'getCarId',
-        'link_id' => 'getLinkId',
+        'car_link' => 'getCarLink',
+        'trailer_id' => 'getTrailerId',
+        'trailer_link' => 'getTrailerLink',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
         'gps_locations' => 'getGpsLocations',
         'latest_known_position' => 'getLatestKnownPosition',
-        'activity_ids' => 'getActivityIds'
+        'recurrence_id' => 'getRecurrenceId',
+        'recurrence_nr' => 'getRecurrenceNr',
+        'overdue' => 'getOverdue',
+        'blocked' => 'getBlocked',
+        'start_address' => 'getStartAddress',
+        'end_address' => 'getEndAddress',
+        'activity_ids' => 'getActivityIds',
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
+        'notes' => 'getNotes',
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -163,10 +227,14 @@ class RouteModel implements ArrayAccess
         return self::$getters;
     }
 
-    const STATUS_PLANNED = 'route_planned';
-    const STATUS_IN_PROGRESS = 'route_in_progress';
-    const STATUS_EXECUTED = 'route_executed';
-    const STATUS_CANCELLED = 'route_cancelled';
+    const STATUS_NAME_CANCELLED = 'route_cancelled';
+    const STATUS_NAME_PLANNED = 'route_planned';
+    const STATUS_NAME_IN_PROGRESS = 'route_in_progress';
+    const STATUS_NAME_EXECUTED = 'route_executed';
+    const STATUS_ID_29 = 29;
+    const STATUS_ID_1 = 1;
+    const STATUS_ID_2 = 2;
+    const STATUS_ID_8 = 8;
     
 
     
@@ -174,13 +242,27 @@ class RouteModel implements ArrayAccess
      * Gets allowable values of the enum
      * @return string[]
      */
-    public function getStatusAllowableValues()
+    public function getStatusNameAllowableValues()
     {
         return [
-            self::STATUS_PLANNED,
-            self::STATUS_IN_PROGRESS,
-            self::STATUS_EXECUTED,
-            self::STATUS_CANCELLED,
+            self::STATUS_NAME_CANCELLED,
+            self::STATUS_NAME_PLANNED,
+            self::STATUS_NAME_IN_PROGRESS,
+            self::STATUS_NAME_EXECUTED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusIdAllowableValues()
+    {
+        return [
+            self::STATUS_ID_29,
+            self::STATUS_ID_1,
+            self::STATUS_ID_2,
+            self::STATUS_ID_8,
         ];
     }
     
@@ -200,16 +282,32 @@ class RouteModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
+        $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
-        $this->container['link_id'] = isset($data['link_id']) ? $data['link_id'] : null;
+        $this->container['car_link'] = isset($data['car_link']) ? $data['car_link'] : null;
+        $this->container['trailer_id'] = isset($data['trailer_id']) ? $data['trailer_id'] : null;
+        $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['gps_locations'] = isset($data['gps_locations']) ? $data['gps_locations'] : null;
         $this->container['latest_known_position'] = isset($data['latest_known_position']) ? $data['latest_known_position'] : null;
+        $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
+        $this->container['recurrence_nr'] = isset($data['recurrence_nr']) ? $data['recurrence_nr'] : null;
+        $this->container['overdue'] = isset($data['overdue']) ? $data['overdue'] : null;
+        $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
+        $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
+        $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -223,9 +321,14 @@ class RouteModel implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        $allowed_values = ["route_planned", "route_in_progress", "route_executed", "route_cancelled"];
-        if (!in_array($this->container['status'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'status', must be one of 'route_planned', 'route_in_progress', 'route_executed', 'route_cancelled'.";
+        $allowed_values = ["route_cancelled", "route_planned", "route_in_progress", "route_executed"];
+        if (!in_array($this->container['status_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status_name', must be one of 'route_cancelled', 'route_planned', 'route_in_progress', 'route_executed'.";
+        }
+
+        $allowed_values = ["29", "1", "2", "8"];
+        if (!in_array($this->container['status_id'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status_id', must be one of '29', '1', '2', '8'.";
         }
 
         return $invalid_properties;
@@ -242,8 +345,12 @@ class RouteModel implements ArrayAccess
         if ($this->container['id'] === null) {
             return false;
         }
-        $allowed_values = ["route_planned", "route_in_progress", "route_executed", "route_cancelled"];
-        if (!in_array($this->container['status'], $allowed_values)) {
+        $allowed_values = ["route_cancelled", "route_planned", "route_in_progress", "route_executed"];
+        if (!in_array($this->container['status_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["29", "1", "2", "8"];
+        if (!in_array($this->container['status_id'], $allowed_values)) {
             return false;
         }
         return true;
@@ -261,7 +368,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Unique Identifier
+     * @param int $id Unique ID of Route
      * @return $this
      */
     public function setId($id)
@@ -282,7 +389,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets nr
-     * @param string $nr Alternative Identifier
+     * @param string $nr Non-Unique number of Route
      * @return $this
      */
     public function setNr($nr)
@@ -314,26 +421,51 @@ class RouteModel implements ArrayAccess
     }
 
     /**
-     * Gets status
+     * Gets status_name
      * @return string
      */
-    public function getStatus()
+    public function getStatusName()
     {
-        return $this->container['status'];
+        return $this->container['status_name'];
     }
 
     /**
-     * Sets status
-     * @param string $status Route Status
+     * Sets status_name
+     * @param string $status_name Route Status
      * @return $this
      */
-    public function setStatus($status)
+    public function setStatusName($status_name)
     {
-        $allowed_values = array('route_planned', 'route_in_progress', 'route_executed', 'route_cancelled');
-        if (!is_null($status) && (!in_array($status, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'route_planned', 'route_in_progress', 'route_executed', 'route_cancelled'");
+        $allowed_values = array('route_cancelled', 'route_planned', 'route_in_progress', 'route_executed');
+        if (!is_null($status_name) && (!in_array($status_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'status_name', must be one of 'route_cancelled', 'route_planned', 'route_in_progress', 'route_executed'");
         }
-        $this->container['status'] = $status;
+        $this->container['status_name'] = $status_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int $status_id Status ID of Route, 29:route_cancelled, 1:route_planned, 2:route_in_progress, 8:route_executed
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $allowed_values = array('29', '1', '2', '8');
+        if (!is_null($status_id) && (!in_array($status_id, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'status_id', must be one of '29', '1', '2', '8'");
+        }
+        $this->container['status_id'] = $status_id;
 
         return $this;
     }
@@ -349,7 +481,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets nr_of_stops
-     * @param int $nr_of_stops 
+     * @param int $nr_of_stops number of stops on this route (excluding start_route and end_route activities)
      * @return $this
      */
     public function setNrOfStops($nr_of_stops)
@@ -381,6 +513,27 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets driver_link
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getDriverLink()
+    {
+        return $this->container['driver_link'];
+    }
+
+    /**
+     * Sets driver_link
+     * @param \BumbalClient\Model\LinkModel[] $driver_link 
+     * @return $this
+     */
+    public function setDriverLink($driver_link)
+    {
+        $this->container['driver_link'] = $driver_link;
+
+        return $this;
+    }
+
+    /**
      * Gets car_id
      * @return int
      */
@@ -402,22 +555,64 @@ class RouteModel implements ArrayAccess
     }
 
     /**
-     * Gets link_id
-     * @return string
+     * Gets car_link
+     * @return \BumbalClient\Model\LinkModel[]
      */
-    public function getLinkId()
+    public function getCarLink()
     {
-        return $this->container['link_id'];
+        return $this->container['car_link'];
     }
 
     /**
-     * Sets link_id
-     * @param string $link_id 
+     * Sets car_link
+     * @param \BumbalClient\Model\LinkModel[] $car_link 
      * @return $this
      */
-    public function setLinkId($link_id)
+    public function setCarLink($car_link)
     {
-        $this->container['link_id'] = $link_id;
+        $this->container['car_link'] = $car_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets trailer_id
+     * @return int
+     */
+    public function getTrailerId()
+    {
+        return $this->container['trailer_id'];
+    }
+
+    /**
+     * Sets trailer_id
+     * @param int $trailer_id 
+     * @return $this
+     */
+    public function setTrailerId($trailer_id)
+    {
+        $this->container['trailer_id'] = $trailer_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets trailer_link
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getTrailerLink()
+    {
+        return $this->container['trailer_link'];
+    }
+
+    /**
+     * Sets trailer_link
+     * @param \BumbalClient\Model\LinkModel[] $trailer_link 
+     * @return $this
+     */
+    public function setTrailerLink($trailer_link)
+    {
+        $this->container['trailer_link'] = $trailer_link;
 
         return $this;
     }
@@ -507,6 +702,132 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets recurrence_id
+     * @return int
+     */
+    public function getRecurrenceId()
+    {
+        return $this->container['recurrence_id'];
+    }
+
+    /**
+     * Sets recurrence_id
+     * @param int $recurrence_id id of recurrence where route belongs to
+     * @return $this
+     */
+    public function setRecurrenceId($recurrence_id)
+    {
+        $this->container['recurrence_id'] = $recurrence_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_nr
+     * @return int
+     */
+    public function getRecurrenceNr()
+    {
+        return $this->container['recurrence_nr'];
+    }
+
+    /**
+     * Sets recurrence_nr
+     * @param int $recurrence_nr nr within recurrence where route belongs to
+     * @return $this
+     */
+    public function setRecurrenceNr($recurrence_nr)
+    {
+        $this->container['recurrence_nr'] = $recurrence_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets overdue
+     * @return bool
+     */
+    public function getOverdue()
+    {
+        return $this->container['overdue'];
+    }
+
+    /**
+     * Sets overdue
+     * @param bool $overdue whether any activity on route is overdue
+     * @return $this
+     */
+    public function setOverdue($overdue)
+    {
+        $this->container['overdue'] = $overdue;
+
+        return $this;
+    }
+
+    /**
+     * Gets blocked
+     * @return bool
+     */
+    public function getBlocked()
+    {
+        return $this->container['blocked'];
+    }
+
+    /**
+     * Sets blocked
+     * @param bool $blocked a blocked route can not be auto-filled by customer calendars
+     * @return $this
+     */
+    public function setBlocked($blocked)
+    {
+        $this->container['blocked'] = $blocked;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getStartAddress()
+    {
+        return $this->container['start_address'];
+    }
+
+    /**
+     * Sets start_address
+     * @param \BumbalClient\Model\AddressModel $start_address 
+     * @return $this
+     */
+    public function setStartAddress($start_address)
+    {
+        $this->container['start_address'] = $start_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getEndAddress()
+    {
+        return $this->container['end_address'];
+    }
+
+    /**
+     * Sets end_address
+     * @param \BumbalClient\Model\AddressModel $end_address 
+     * @return $this
+     */
+    public function setEndAddress($end_address)
+    {
+        $this->container['end_address'] = $end_address;
+
+        return $this;
+    }
+
+    /**
      * Gets activity_ids
      * @return object
      */
@@ -523,6 +844,132 @@ class RouteModel implements ArrayAccess
     public function setActivityIds($activity_ids)
     {
         $this->container['activity_ids'] = $activity_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

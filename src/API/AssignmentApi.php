@@ -104,13 +104,13 @@ class AssignmentApi
     /**
      * Operation createAssignment
      *
-     * Add a new Assignment
+     * Create or update an Assignment
      *
-     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be created (required)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function createAssignment($body)
+    public function createAssignment($body = null)
     {
         list($response) = $this->createAssignmentWithHttpInfo($body);
         return $response;
@@ -119,18 +119,14 @@ class AssignmentApi
     /**
      * Operation createAssignmentWithHttpInfo
      *
-     * Add a new Assignment
+     * Create or update an Assignment
      *
-     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be created (required)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createAssignmentWithHttpInfo($body)
+    public function createAssignmentWithHttpInfo($body = null)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling createAssignment');
-        }
         // parse inputs
         $resourcePath = "/assignment";
         $httpBody = '';
@@ -191,9 +187,9 @@ class AssignmentApi
     /**
      * Operation deleteAssignment
      *
-     * Delete an Assignment
+     * Delete an assignment
      *
-     * @param int $assignment_id ID of assignment to update (required)
+     * @param int $assignment_id ID of the assignment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -206,9 +202,9 @@ class AssignmentApi
     /**
      * Operation deleteAssignmentWithHttpInfo
      *
-     * Delete an Assignment
+     * Delete an assignment
      *
-     * @param int $assignment_id ID of assignment to update (required)
+     * @param int $assignment_id ID of the assignment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -281,32 +277,56 @@ class AssignmentApi
     /**
      * Operation retrieveAssignment
      *
-     * Retrieve a Assignment
+     * Find assignment by ID
      *
-     * @param int $assignment_id ID of assignment to retrieve (required)
+     * @param int $assignment_id ID of assignment to return (required)
+     * @param bool $include_assignment_links Include Link Data (required)
+     * @param bool $include_assignment_files Include files (required)
+     * @param bool $include_assignment_files_meta_data Include files meta data (required)
+     * @param bool $include_assignment_files_meta_data_objects Include files meta data objects (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\AssignmentModel
      */
-    public function retrieveAssignment($assignment_id)
+    public function retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data, $include_assignment_files_meta_data_objects)
     {
-        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id);
+        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data, $include_assignment_files_meta_data_objects);
         return $response;
     }
 
     /**
      * Operation retrieveAssignmentWithHttpInfo
      *
-     * Retrieve a Assignment
+     * Find assignment by ID
      *
-     * @param int $assignment_id ID of assignment to retrieve (required)
+     * @param int $assignment_id ID of assignment to return (required)
+     * @param bool $include_assignment_links Include Link Data (required)
+     * @param bool $include_assignment_files Include files (required)
+     * @param bool $include_assignment_files_meta_data Include files meta data (required)
+     * @param bool $include_assignment_files_meta_data_objects Include files meta data objects (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\AssignmentModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveAssignmentWithHttpInfo($assignment_id)
+    public function retrieveAssignmentWithHttpInfo($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data, $include_assignment_files_meta_data_objects)
     {
         // verify the required parameter 'assignment_id' is set
         if ($assignment_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $assignment_id when calling retrieveAssignment');
+        }
+        // verify the required parameter 'include_assignment_links' is set
+        if ($include_assignment_links === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_links when calling retrieveAssignment');
+        }
+        // verify the required parameter 'include_assignment_files' is set
+        if ($include_assignment_files === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_files when calling retrieveAssignment');
+        }
+        // verify the required parameter 'include_assignment_files_meta_data' is set
+        if ($include_assignment_files_meta_data === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_files_meta_data when calling retrieveAssignment');
+        }
+        // verify the required parameter 'include_assignment_files_meta_data_objects' is set
+        if ($include_assignment_files_meta_data_objects === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_files_meta_data_objects when calling retrieveAssignment');
         }
         // parse inputs
         $resourcePath = "/assignment/{assignmentId}";
@@ -320,6 +340,22 @@ class AssignmentApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // query params
+        if ($include_assignment_links !== null) {
+            $queryParams['include_assignment_links'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_links);
+        }
+        // query params
+        if ($include_assignment_files !== null) {
+            $queryParams['include_assignment_files'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_files);
+        }
+        // query params
+        if ($include_assignment_files_meta_data !== null) {
+            $queryParams['include_assignment_files_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_files_meta_data);
+        }
+        // query params
+        if ($include_assignment_files_meta_data_objects !== null) {
+            $queryParams['include_assignment_files_meta_data_objects'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_files_meta_data_objects);
+        }
         // path params
         if ($assignment_id !== null) {
             $resourcePath = str_replace(
@@ -456,16 +492,99 @@ class AssignmentApi
     }
 
     /**
-     * Operation updateAssignment
+     * Operation setAssignment
      *
-     * Update a Assignment
+     * Set (create or update) an Assignment
      *
-     * @param int $assignment_id ID of assignment to update (required)
-     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (required)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateAssignment($assignment_id, $body)
+    public function setAssignment($body = null)
+    {
+        list($response) = $this->setAssignmentWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation setAssignmentWithHttpInfo
+     *
+     * Set (create or update) an Assignment
+     *
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function setAssignmentWithHttpInfo($body = null)
+    {
+        // parse inputs
+        $resourcePath = "/assignment/set";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/assignment/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateAssignment
+     *
+     * Update a assignment
+     *
+     * @param int $assignment_id ID of assignment to update (required)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function updateAssignment($assignment_id, $body = null)
     {
         list($response) = $this->updateAssignmentWithHttpInfo($assignment_id, $body);
         return $response;
@@ -474,22 +593,18 @@ class AssignmentApi
     /**
      * Operation updateAssignmentWithHttpInfo
      *
-     * Update a Assignment
+     * Update a assignment
      *
      * @param int $assignment_id ID of assignment to update (required)
-     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (required)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAssignmentWithHttpInfo($assignment_id, $body)
+    public function updateAssignmentWithHttpInfo($assignment_id, $body = null)
     {
         // verify the required parameter 'assignment_id' is set
         if ($assignment_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $assignment_id when calling updateAssignment');
-        }
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling updateAssignment');
         }
         // parse inputs
         $resourcePath = "/assignment/{assignmentId}";

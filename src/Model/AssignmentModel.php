@@ -69,11 +69,18 @@ class AssignmentModel implements ArrayAccess
         'id' => 'int',
         'status_id' => 'int',
         'nr' => 'string',
+        'party_link' => '\BumbalClient\Model\LinkModel[]',
         'reference' => 'string',
         'description' => 'string',
         'remarks' => 'string',
         'date_time_from' => '\DateTime',
-        'date_time_to' => '\DateTime'
+        'date_time_to' => '\DateTime',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -89,11 +96,18 @@ class AssignmentModel implements ArrayAccess
         'id' => 'id',
         'status_id' => 'status_id',
         'nr' => 'nr',
+        'party_link' => 'party_link',
         'reference' => 'reference',
         'description' => 'description',
         'remarks' => 'remarks',
         'date_time_from' => 'date_time_from',
-        'date_time_to' => 'date_time_to'
+        'date_time_to' => 'date_time_to',
+        'links' => 'links',
+        'meta_data' => 'meta_data',
+        'notes' => 'notes',
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -105,11 +119,18 @@ class AssignmentModel implements ArrayAccess
         'id' => 'setId',
         'status_id' => 'setStatusId',
         'nr' => 'setNr',
+        'party_link' => 'setPartyLink',
         'reference' => 'setReference',
         'description' => 'setDescription',
         'remarks' => 'setRemarks',
         'date_time_from' => 'setDateTimeFrom',
-        'date_time_to' => 'setDateTimeTo'
+        'date_time_to' => 'setDateTimeTo',
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
+        'notes' => 'setNotes',
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -121,11 +142,18 @@ class AssignmentModel implements ArrayAccess
         'id' => 'getId',
         'status_id' => 'getStatusId',
         'nr' => 'getNr',
+        'party_link' => 'getPartyLink',
         'reference' => 'getReference',
         'description' => 'getDescription',
         'remarks' => 'getRemarks',
         'date_time_from' => 'getDateTimeFrom',
-        'date_time_to' => 'getDateTimeTo'
+        'date_time_to' => 'getDateTimeTo',
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
+        'notes' => 'getNotes',
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -182,11 +210,18 @@ class AssignmentModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
+        $this->container['party_link'] = isset($data['party_link']) ? $data['party_link'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -301,6 +336,27 @@ class AssignmentModel implements ArrayAccess
     }
 
     /**
+     * Gets party_link
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getPartyLink()
+    {
+        return $this->container['party_link'];
+    }
+
+    /**
+     * Sets party_link
+     * @param \BumbalClient\Model\LinkModel[] $party_link 
+     * @return $this
+     */
+    public function setPartyLink($party_link)
+    {
+        $this->container['party_link'] = $party_link;
+
+        return $this;
+    }
+
+    /**
      * Gets reference
      * @return string
      */
@@ -401,6 +457,132 @@ class AssignmentModel implements ArrayAccess
     public function setDateTimeTo($date_time_to)
     {
         $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

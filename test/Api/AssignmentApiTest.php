@@ -92,7 +92,7 @@ class AssignmentApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createAssignment
      *
-     * Add a new Assignment.
+     * Create or update an Assignment.
      *
      */
     public function testCreateAssignment()
@@ -103,7 +103,7 @@ class AssignmentApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteAssignment
      *
-     * Delete an Assignment.
+     * Delete an assignment.
      *
      */
     public function testDeleteAssignment()
@@ -114,7 +114,7 @@ class AssignmentApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveAssignment
      *
-     * Retrieve a Assignment.
+     * Find assignment by ID.
      *
      */
     public function testRetrieveAssignment()
@@ -134,9 +134,20 @@ class AssignmentApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setAssignment
+     *
+     * Set (create or update) an Assignment.
+     *
+     */
+    public function testSetAssignment()
+    {
+
+    }
+
+    /**
      * Test case for updateAssignment
      *
-     * Update a Assignment.
+     * Update a assignment.
      *
      */
     public function testUpdateAssignment()

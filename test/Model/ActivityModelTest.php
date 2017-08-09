@@ -376,14 +376,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
-     */
-    public function testPropertyTags()
-    {
-
-    }
-
-    /**
      * Test attribute "package_lines"
      */
     public function testPropertyPackageLines()
@@ -400,14 +392,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
-    {
-
-    }
-
-    /**
      * Test attribute "communication"
      */
     public function testPropertyCommunication()
@@ -416,17 +400,33 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "assignment_link"
      */
-    public function testPropertyMetaData()
+    public function testPropertyAssignmentLink()
     {
 
     }
 
     /**
-     * Test attribute "meta_data_objects"
+     * Test attribute "tags"
      */
-    public function testPropertyMetaDataObjects()
+    public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
     {
 
     }

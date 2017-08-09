@@ -134,6 +134,17 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setRoute
+     *
+     * Set (create or update) an Route.
+     *
+     */
+    public function testSetRoute()
+    {
+
+    }
+
+    /**
      * Test case for updateRoute
      *
      * Update a Route.

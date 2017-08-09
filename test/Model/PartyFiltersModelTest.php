@@ -95,4 +95,100 @@ class PartyFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "party_type_name"
+     */
+    public function testPropertyPartyTypeName()
+    {
+
+    }
+
+    /**
+     * Test attribute "party_type_id"
+     */
+    public function testPropertyPartyTypeId()
+    {
+
+    }
+
+    /**
+     * Test attribute "address_id"
+     */
+    public function testPropertyAddressId()
+    {
+
+    }
+
+    /**
+     * Test attribute "name_1"
+     */
+    public function testPropertyName1()
+    {
+
+    }
+
+    /**
+     * Test attribute "name_2"
+     */
+    public function testPropertyName2()
+    {
+
+    }
+
+    /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "contact_person"
+     */
+    public function testPropertyContactPerson()
+    {
+
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
+    {
+
+    }
+
 }

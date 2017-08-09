@@ -103,4 +103,132 @@ class PartyModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "party_type_name"
+     */
+    public function testPropertyPartyTypeName()
+    {
+
+    }
+
+    /**
+     * Test attribute "party_type_id"
+     */
+    public function testPropertyPartyTypeId()
+    {
+
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+
+    }
+
+    /**
+     * Test attribute "address_id"
+     */
+    public function testPropertyAddressId()
+    {
+
+    }
+
+    /**
+     * Test attribute "name_1"
+     */
+    public function testPropertyName1()
+    {
+
+    }
+
+    /**
+     * Test attribute "name_2"
+     */
+    public function testPropertyName2()
+    {
+
+    }
+
+    /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "contact_person"
+     */
+    public function testPropertyContactPerson()
+    {
+
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
 }

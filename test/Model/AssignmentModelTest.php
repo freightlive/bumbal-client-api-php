@@ -120,6 +120,14 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "party_link"
+     */
+    public function testPropertyPartyLink()
+    {
+
+    }
+
+    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()
@@ -155,6 +163,54 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "date_time_to"
      */
     public function testPropertyDateTimeTo()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
     {
 
     }

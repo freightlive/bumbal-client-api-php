@@ -103,4 +103,12 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
 }
