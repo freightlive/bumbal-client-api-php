@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArgumentsTest
+ * TrailerModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * DriverRetrieveListArgumentsTest Class Doc Comment
+ * TrailerModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverRetrieveListArguments
+// * @description TrailerModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class TrailerModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,81 @@ class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverRetrieveListArguments"
+     * Test "TrailerModel"
      */
-    public function testDriverRetrieveListArguments()
+    public function testTrailerModel()
     {
 
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "id"
      */
-    public function testPropertyOptions()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "tags"
      */
-    public function testPropertyFilters()
+    public function testPropertyTags()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "links"
      */
-    public function testPropertyLimit()
+    public function testPropertyLinks()
     {
 
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "meta_data"
      */
-    public function testPropertyOffset()
+    public function testPropertyMetaData()
     {
 
     }
 
     /**
-     * Test attribute "sorting_column"
+     * Test attribute "trailers"
      */
-    public function testPropertySortingColumn()
+    public function testPropertyTrailers()
     {
 
     }
 
     /**
-     * Test attribute "sorting_direction"
+     * Test attribute "files"
      */
-    public function testPropertySortingDirection()
+    public function testPropertyFiles()
     {
 
     }
 
     /**
-     * Test attribute "search_text"
+     * Test attribute "created_at"
      */
-    public function testPropertySearchText()
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_by_name"
+     */
+    public function testPropertyUpdatedByName()
     {
 
     }

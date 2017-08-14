@@ -90,12 +90,67 @@ class DriverApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createDriver
+     *
+     * Add a driver.
+     *
+     */
+    public function testCreateDriver()
+    {
+
+    }
+
+    /**
+     * Test case for deleteDriver
+     *
+     * Delete an driver.
+     *
+     */
+    public function testDeleteDriver()
+    {
+
+    }
+
+    /**
+     * Test case for retrieveDriver
+     *
+     * Find driver by ID.
+     *
+     */
+    public function testRetrieveDriver()
+    {
+
+    }
+
+    /**
      * Test case for retrieveListDriver
      *
      * Retrieve List of Drivers.
      *
      */
     public function testRetrieveListDriver()
+    {
+
+    }
+
+    /**
+     * Test case for setDriver
+     *
+     * Set (create or update) a driver.
+     *
+     */
+    public function testSetDriver()
+    {
+
+    }
+
+    /**
+     * Test case for updateDriver
+     *
+     * Update a driver.
+     *
+     */
+    public function testUpdateDriver()
     {
 
     }

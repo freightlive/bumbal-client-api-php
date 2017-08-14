@@ -1,23 +1,23 @@
-# BumbalClient\DriverApi
+# BumbalClient\TrailerApi
 
 All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDriver**](DriverApi.md#createDriver) | **POST** /driver | Add a driver
-[**deleteDriver**](DriverApi.md#deleteDriver) | **DELETE** /driver/{driverId} | Delete an driver
-[**retrieveDriver**](DriverApi.md#retrieveDriver) | **GET** /driver/{driverId} | Find driver by ID
-[**retrieveListDriver**](DriverApi.md#retrieveListDriver) | **PUT** /driver | Retrieve List of Drivers
-[**setDriver**](DriverApi.md#setDriver) | **POST** /driver/set | Set (create or update) a driver
-[**updateDriver**](DriverApi.md#updateDriver) | **PUT** /driver/{driverId} | Update a driver
+[**createTrailer**](TrailerApi.md#createTrailer) | **POST** /trailer | Add a trailer
+[**deleteTrailer**](TrailerApi.md#deleteTrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
+[**retrieveListTrailer**](TrailerApi.md#retrieveListTrailer) | **PUT** /trailer | Retrieve List of Trailers
+[**retrieveTrailer**](TrailerApi.md#retrieveTrailer) | **GET** /trailer/{trailerId} | Find trailer by ID
+[**setTrailer**](TrailerApi.md#setTrailer) | **POST** /trailer/set | Set (create or update) a trailer
+[**updateTrailer**](TrailerApi.md#updateTrailer) | **PUT** /trailer/{trailerId} | Update a trailer
 
 
-# **createDriver**
-> \BumbalClient\Model\ApiResponse createDriver($body)
+# **createTrailer**
+> \BumbalClient\Model\ApiResponse createTrailer($body)
 
-Add a driver
+Add a trailer
 
-Add a driver
+Add a trailer
 
 ### Example
 ```php
@@ -29,14 +29,14 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\DriverApi();
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object that needs to be created
+$api_instance = new BumbalClient\Api\TrailerApi();
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be created
 
 try {
-    $result = $api_instance->createDriver($body);
+    $result = $api_instance->createTrailer($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriverApi->createDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrailerApi->createTrailer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be created | [optional]
 
 ### Return type
 
@@ -62,12 +62,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteDriver**
-> \BumbalClient\Model\ApiResponse deleteDriver($driver_id)
+# **deleteTrailer**
+> \BumbalClient\Model\ApiResponse deleteTrailer($trailer_id)
 
-Delete an driver
+Delete an trailer
 
-Delete an driver
+Delete an trailer
 
 ### Example
 ```php
@@ -79,14 +79,14 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\DriverApi();
-$driver_id = 789; // int | ID of the driver to delete
+$api_instance = new BumbalClient\Api\TrailerApi();
+$trailer_id = 789; // int | ID of the trailer to delete
 
 try {
-    $result = $api_instance->deleteDriver($driver_id);
+    $result = $api_instance->deleteTrailer($trailer_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriverApi->deleteDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrailerApi->deleteTrailer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_id** | **int**| ID of the driver to delete |
+ **trailer_id** | **int**| ID of the trailer to delete |
 
 ### Return type
 
@@ -112,12 +112,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **retrieveDriver**
-> \BumbalClient\Model\DriverModel retrieveDriver($driver_id, $include_driver_tags, $include_updated_by)
+# **retrieveListTrailer**
+> \BumbalClient\Model\TrailerModel[] retrieveListTrailer($arguments)
 
-Find driver by ID
+Retrieve List of Trailers
 
-Returns a single driver
+Retrieve List of Trailers
 
 ### Example
 ```php
@@ -129,16 +129,66 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\DriverApi();
-$driver_id = 789; // int | ID of driver to return
-$include_driver_tags = true; // bool | a list of tags bound to driver
+$api_instance = new BumbalClient\Api\TrailerApi();
+$arguments = new \BumbalClient\Model\TrailerRetrieveListArguments(); // \BumbalClient\Model\TrailerRetrieveListArguments | Trailer RetrieveList Arguments
+
+try {
+    $result = $api_instance->retrieveListTrailer($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TrailerApi->retrieveListTrailer: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/\BumbalClient\Model\TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\TrailerModel[]**](../Model/TrailerModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **retrieveTrailer**
+> \BumbalClient\Model\TrailerModel retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
+
+Find trailer by ID
+
+Returns a single trailer
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\TrailerApi();
+$trailer_id = 789; // int | ID of trailer to return
+$include_trailer_tags = true; // bool | a list of tags bound to trailer
 $include_updated_by = true; // bool | include updated_by_name
 
 try {
-    $result = $api_instance->retrieveDriver($driver_id, $include_driver_tags, $include_updated_by);
+    $result = $api_instance->retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriverApi->retrieveDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrailerApi->retrieveTrailer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -147,13 +197,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_id** | **int**| ID of driver to return |
- **include_driver_tags** | **bool**| a list of tags bound to driver | [default to true]
+ **trailer_id** | **int**| ID of trailer to return |
+ **include_trailer_tags** | **bool**| a list of tags bound to trailer | [default to true]
  **include_updated_by** | **bool**| include updated_by_name | [default to true]
 
 ### Return type
 
-[**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)
+[**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)
 
 ### Authorization
 
@@ -166,62 +216,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **retrieveListDriver**
-> \BumbalClient\Model\DriverModel[] retrieveListDriver($arguments)
+# **setTrailer**
+> \BumbalClient\Model\ApiResponse setTrailer($body)
 
-Retrieve List of Drivers
+Set (create or update) a trailer
 
-Retrieve List of Drivers
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-
-$api_instance = new BumbalClient\Api\DriverApi();
-$arguments = new \BumbalClient\Model\DriverRetrieveListArguments(); // \BumbalClient\Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
-
-try {
-    $result = $api_instance->retrieveListDriver($arguments);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DriverApi->retrieveListDriver: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\DriverRetrieveListArguments**](../Model/\BumbalClient\Model\DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
-
-### Return type
-
-[**\BumbalClient\Model\DriverModel[]**](../Model/DriverModel.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **setDriver**
-> \BumbalClient\Model\ApiResponse setDriver($body)
-
-Set (create or update) a driver
-
-Set (create or update) a driver. If id or links are set in the data, and a corresponding driver is found in Bumbal, an update will be performed.
+Set (create or update) a trailer. If id or links are set in the data, and a corresponding trailer is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -233,14 +233,14 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\DriverApi();
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object
+$api_instance = new BumbalClient\Api\TrailerApi();
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object
 
 try {
-    $result = $api_instance->setDriver($body);
+    $result = $api_instance->setTrailer($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriverApi->setDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrailerApi->setTrailer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -249,7 +249,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object | [optional]
 
 ### Return type
 
@@ -266,12 +266,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateDriver**
-> \BumbalClient\Model\ApiResponse updateDriver($driver_id, $body)
+# **updateTrailer**
+> \BumbalClient\Model\ApiResponse updateTrailer($trailer_id, $body)
 
-Update a driver
+Update a trailer
 
-Update a driver
+Update a trailer
 
 ### Example
 ```php
@@ -283,15 +283,15 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\DriverApi();
-$driver_id = 789; // int | ID of driver to update
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object that needs to be updated
+$api_instance = new BumbalClient\Api\TrailerApi();
+$trailer_id = 789; // int | ID of trailer to update
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be updated
 
 try {
-    $result = $api_instance->updateDriver($driver_id, $body);
+    $result = $api_instance->updateTrailer($trailer_id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DriverApi->updateDriver: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TrailerApi->updateTrailer: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -300,8 +300,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **driver_id** | **int**| ID of driver to update |
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object that needs to be updated | [optional]
+ **trailer_id** | **int**| ID of trailer to update |
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be updated | [optional]
 
 ### Return type
 

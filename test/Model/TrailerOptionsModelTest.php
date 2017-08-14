@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArgumentsTest
+ * TrailerOptionsModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * DriverRetrieveListArgumentsTest Class Doc Comment
+ * TrailerOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverRetrieveListArguments
+// * @description TrailerOptionsModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class TrailerOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,41 @@ class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverRetrieveListArguments"
+     * Test "TrailerOptionsModel"
      */
-    public function testDriverRetrieveListArguments()
+    public function testTrailerOptionsModel()
     {
 
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "include_trailer_tags"
      */
-    public function testPropertyOptions()
+    public function testPropertyIncludeTrailerTags()
     {
 
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "include_trailer_meta_data"
      */
-    public function testPropertyFilters()
+    public function testPropertyIncludeTrailerMetaData()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "include_trailer_links"
      */
-    public function testPropertyLimit()
+    public function testPropertyIncludeTrailerLinks()
     {
 
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "include_updated_by_name"
      */
-    public function testPropertyOffset()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
+    public function testPropertyIncludeUpdatedByName()
     {
 
     }

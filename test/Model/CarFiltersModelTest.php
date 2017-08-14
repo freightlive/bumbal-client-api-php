@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArgumentsTest
+ * CarFiltersModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * DriverRetrieveListArgumentsTest Class Doc Comment
+ * CarFiltersModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverRetrieveListArguments
+// * @description CarFiltersModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class CarFiltersModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,41 @@ class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverRetrieveListArguments"
+     * Test "CarFiltersModel"
      */
-    public function testDriverRetrieveListArguments()
+    public function testCarFiltersModel()
     {
 
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "id"
      */
-    public function testPropertyOptions()
+    public function testPropertyId()
     {
 
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "links"
      */
-    public function testPropertyFilters()
+    public function testPropertyLinks()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "updated_at_since"
      */
-    public function testPropertyLimit()
+    public function testPropertyUpdatedAtSince()
     {
 
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "updated_at_till"
      */
-    public function testPropertyOffset()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
+    public function testPropertyUpdatedAtTill()
     {
 
     }

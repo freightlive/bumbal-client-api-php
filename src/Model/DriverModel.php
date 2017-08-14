@@ -67,7 +67,14 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'drivers' => '\BumbalClient\Model\DriverModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'updated_by_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +88,14 @@ class DriverModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'meta_data' => 'meta_data'
+        'tags' => 'tags',
+        'links' => 'links',
+        'meta_data' => 'meta_data',
+        'drivers' => 'drivers',
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'updated_by_name' => 'updated_by_name'
     ];
 
 
@@ -91,7 +105,14 @@ class DriverModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'meta_data' => 'setMetaData'
+        'tags' => 'setTags',
+        'links' => 'setLinks',
+        'meta_data' => 'setMetaData',
+        'drivers' => 'setDrivers',
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'updated_by_name' => 'setUpdatedByName'
     ];
 
 
@@ -101,7 +122,14 @@ class DriverModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'meta_data' => 'getMetaData'
+        'tags' => 'getTags',
+        'links' => 'getLinks',
+        'meta_data' => 'getMetaData',
+        'drivers' => 'getDrivers',
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'updated_by_name' => 'getUpdatedByName'
     ];
 
     public static function attributeMap()
@@ -136,7 +164,14 @@ class DriverModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['drivers'] = isset($data['drivers']) ? $data['drivers'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
     }
 
     /**
@@ -179,12 +214,54 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id Unique Identifier
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -206,6 +283,111 @@ class DriverModel implements ArrayAccess
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets drivers
+     * @return \BumbalClient\Model\DriverModel[]
+     */
+    public function getDrivers()
+    {
+        return $this->container['drivers'];
+    }
+
+    /**
+     * Sets drivers
+     * @param \BumbalClient\Model\DriverModel[] $drivers 
+     * @return $this
+     */
+    public function setDrivers($drivers)
+    {
+        $this->container['drivers'] = $drivers;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by_name
+     * @return string
+     */
+    public function getUpdatedByName()
+    {
+        return $this->container['updated_by_name'];
+    }
+
+    /**
+     * Sets updated_by_name
+     * @param string $updated_by_name Driver updated by user full name
+     * @return $this
+     */
+    public function setUpdatedByName($updated_by_name)
+    {
+        $this->container['updated_by_name'] = $updated_by_name;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverApi
+ * CarApi
  * PHP version 5
  *
  * @category Class
@@ -46,7 +46,7 @@ use \BumbalClient\Configuration;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * DriverApi Class Doc Comment
+ * CarApi Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
@@ -54,7 +54,7 @@ use \BumbalClient\ObjectSerializer;
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DriverApi
+class CarApi
 {
     /**
      * API Client
@@ -93,7 +93,7 @@ class DriverApi
      *
      * @param \BumbalClient\ApiClient $apiClient set the API client
      *
-     * @return DriverApi
+     * @return CarApi
      */
     public function setApiClient(\BumbalClient\ApiClient $apiClient)
     {
@@ -102,33 +102,33 @@ class DriverApi
     }
 
     /**
-     * Operation createDriver
+     * Operation createCar
      *
-     * Add a driver
+     * Add a car
      *
-     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be created (optional)
+     * @param \BumbalClient\Model\CarModel $body Car object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function createDriver($body = null)
+    public function createCar($body = null)
     {
-        list($response) = $this->createDriverWithHttpInfo($body);
+        list($response) = $this->createCarWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation createDriverWithHttpInfo
+     * Operation createCarWithHttpInfo
      *
-     * Add a driver
+     * Add a car
      *
-     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be created (optional)
+     * @param \BumbalClient\Model\CarModel $body Car object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createDriverWithHttpInfo($body = null)
+    public function createCarWithHttpInfo($body = null)
     {
         // parse inputs
-        $resourcePath = "/driver";
+        $resourcePath = "/car";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -168,7 +168,7 @@ class DriverApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/driver'
+                '/car'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -185,37 +185,37 @@ class DriverApi
     }
 
     /**
-     * Operation deleteDriver
+     * Operation deleteCar
      *
-     * Delete an driver
+     * Delete an car
      *
-     * @param int $driver_id ID of the driver to delete (required)
+     * @param int $car_id ID of the car to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function deleteDriver($driver_id)
+    public function deleteCar($car_id)
     {
-        list($response) = $this->deleteDriverWithHttpInfo($driver_id);
+        list($response) = $this->deleteCarWithHttpInfo($car_id);
         return $response;
     }
 
     /**
-     * Operation deleteDriverWithHttpInfo
+     * Operation deleteCarWithHttpInfo
      *
-     * Delete an driver
+     * Delete an car
      *
-     * @param int $driver_id ID of the driver to delete (required)
+     * @param int $car_id ID of the car to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteDriverWithHttpInfo($driver_id)
+    public function deleteCarWithHttpInfo($car_id)
     {
-        // verify the required parameter 'driver_id' is set
-        if ($driver_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $driver_id when calling deleteDriver');
+        // verify the required parameter 'car_id' is set
+        if ($car_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $car_id when calling deleteCar');
         }
         // parse inputs
-        $resourcePath = "/driver/{driverId}";
+        $resourcePath = "/car/{carId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -227,10 +227,10 @@ class DriverApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($driver_id !== null) {
+        if ($car_id !== null) {
             $resourcePath = str_replace(
-                "{" . "driverId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($driver_id),
+                "{" . "carId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($car_id),
                 $resourcePath
             );
         }
@@ -258,7 +258,7 @@ class DriverApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/driver/{driverId}'
+                '/car/{carId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -275,49 +275,49 @@ class DriverApi
     }
 
     /**
-     * Operation retrieveDriver
+     * Operation retrieveCar
      *
-     * Find driver by ID
+     * Find car by ID
      *
-     * @param int $driver_id ID of driver to return (required)
-     * @param bool $include_driver_tags a list of tags bound to driver (required)
+     * @param int $car_id ID of car to return (required)
+     * @param bool $include_car_tags a list of tags bound to car (required)
      * @param bool $include_updated_by include updated_by_name (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\DriverModel
+     * @return \BumbalClient\Model\CarModel
      */
-    public function retrieveDriver($driver_id, $include_driver_tags, $include_updated_by)
+    public function retrieveCar($car_id, $include_car_tags, $include_updated_by)
     {
-        list($response) = $this->retrieveDriverWithHttpInfo($driver_id, $include_driver_tags, $include_updated_by);
+        list($response) = $this->retrieveCarWithHttpInfo($car_id, $include_car_tags, $include_updated_by);
         return $response;
     }
 
     /**
-     * Operation retrieveDriverWithHttpInfo
+     * Operation retrieveCarWithHttpInfo
      *
-     * Find driver by ID
+     * Find car by ID
      *
-     * @param int $driver_id ID of driver to return (required)
-     * @param bool $include_driver_tags a list of tags bound to driver (required)
+     * @param int $car_id ID of car to return (required)
+     * @param bool $include_car_tags a list of tags bound to car (required)
      * @param bool $include_updated_by include updated_by_name (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\DriverModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CarModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveDriverWithHttpInfo($driver_id, $include_driver_tags, $include_updated_by)
+    public function retrieveCarWithHttpInfo($car_id, $include_car_tags, $include_updated_by)
     {
-        // verify the required parameter 'driver_id' is set
-        if ($driver_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $driver_id when calling retrieveDriver');
+        // verify the required parameter 'car_id' is set
+        if ($car_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $car_id when calling retrieveCar');
         }
-        // verify the required parameter 'include_driver_tags' is set
-        if ($include_driver_tags === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_driver_tags when calling retrieveDriver');
+        // verify the required parameter 'include_car_tags' is set
+        if ($include_car_tags === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_car_tags when calling retrieveCar');
         }
         // verify the required parameter 'include_updated_by' is set
         if ($include_updated_by === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_updated_by when calling retrieveDriver');
+            throw new \InvalidArgumentException('Missing the required parameter $include_updated_by when calling retrieveCar');
         }
         // parse inputs
-        $resourcePath = "/driver/{driverId}";
+        $resourcePath = "/car/{carId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -329,18 +329,18 @@ class DriverApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // query params
-        if ($include_driver_tags !== null) {
-            $queryParams['include_driver_tags'] = $this->apiClient->getSerializer()->toQueryValue($include_driver_tags);
+        if ($include_car_tags !== null) {
+            $queryParams['include_car_tags'] = $this->apiClient->getSerializer()->toQueryValue($include_car_tags);
         }
         // query params
         if ($include_updated_by !== null) {
             $queryParams['include_updated_by'] = $this->apiClient->getSerializer()->toQueryValue($include_updated_by);
         }
         // path params
-        if ($driver_id !== null) {
+        if ($car_id !== null) {
             $resourcePath = str_replace(
-                "{" . "driverId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($driver_id),
+                "{" . "carId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($car_id),
                 $resourcePath
             );
         }
@@ -367,15 +367,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\DriverModel',
-                '/driver/{driverId}'
+                '\BumbalClient\Model\CarModel',
+                '/car/{carId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\DriverModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CarModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\DriverModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CarModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -385,37 +385,37 @@ class DriverApi
     }
 
     /**
-     * Operation retrieveListDriver
+     * Operation retrieveListCar
      *
-     * Retrieve List of Drivers
+     * Retrieve List of Cars
      *
-     * @param \BumbalClient\Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\CarRetrieveListArguments $arguments Car RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\DriverModel[]
+     * @return \BumbalClient\Model\CarModel[]
      */
-    public function retrieveListDriver($arguments)
+    public function retrieveListCar($arguments)
     {
-        list($response) = $this->retrieveListDriverWithHttpInfo($arguments);
+        list($response) = $this->retrieveListCarWithHttpInfo($arguments);
         return $response;
     }
 
     /**
-     * Operation retrieveListDriverWithHttpInfo
+     * Operation retrieveListCarWithHttpInfo
      *
-     * Retrieve List of Drivers
+     * Retrieve List of Cars
      *
-     * @param \BumbalClient\Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\CarRetrieveListArguments $arguments Car RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\DriverModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CarModel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveListDriverWithHttpInfo($arguments)
+    public function retrieveListCarWithHttpInfo($arguments)
     {
         // verify the required parameter 'arguments' is set
         if ($arguments === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListDriver');
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling retrieveListCar');
         }
         // parse inputs
-        $resourcePath = "/driver";
+        $resourcePath = "/car";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -454,15 +454,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\DriverModel[]',
-                '/driver'
+                '\BumbalClient\Model\CarModel[]',
+                '/car'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\DriverModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CarModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\DriverModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CarModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -472,33 +472,33 @@ class DriverApi
     }
 
     /**
-     * Operation setDriver
+     * Operation setCar
      *
-     * Set (create or update) a driver
+     * Set (create or update) a car
      *
-     * @param \BumbalClient\Model\DriverModel $body Driver object (optional)
+     * @param \BumbalClient\Model\CarModel $body Car object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function setDriver($body = null)
+    public function setCar($body = null)
     {
-        list($response) = $this->setDriverWithHttpInfo($body);
+        list($response) = $this->setCarWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation setDriverWithHttpInfo
+     * Operation setCarWithHttpInfo
      *
-     * Set (create or update) a driver
+     * Set (create or update) a car
      *
-     * @param \BumbalClient\Model\DriverModel $body Driver object (optional)
+     * @param \BumbalClient\Model\CarModel $body Car object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setDriverWithHttpInfo($body = null)
+    public function setCarWithHttpInfo($body = null)
     {
         // parse inputs
-        $resourcePath = "/driver/set";
+        $resourcePath = "/car/set";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -538,7 +538,7 @@ class DriverApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/driver/set'
+                '/car/set'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -555,39 +555,39 @@ class DriverApi
     }
 
     /**
-     * Operation updateDriver
+     * Operation updateCar
      *
-     * Update a driver
+     * Update a car
      *
-     * @param int $driver_id ID of driver to update (required)
-     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be updated (optional)
+     * @param int $car_id ID of car to update (required)
+     * @param \BumbalClient\Model\CarModel $body Car object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateDriver($driver_id, $body = null)
+    public function updateCar($car_id, $body = null)
     {
-        list($response) = $this->updateDriverWithHttpInfo($driver_id, $body);
+        list($response) = $this->updateCarWithHttpInfo($car_id, $body);
         return $response;
     }
 
     /**
-     * Operation updateDriverWithHttpInfo
+     * Operation updateCarWithHttpInfo
      *
-     * Update a driver
+     * Update a car
      *
-     * @param int $driver_id ID of driver to update (required)
-     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be updated (optional)
+     * @param int $car_id ID of car to update (required)
+     * @param \BumbalClient\Model\CarModel $body Car object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateDriverWithHttpInfo($driver_id, $body = null)
+    public function updateCarWithHttpInfo($car_id, $body = null)
     {
-        // verify the required parameter 'driver_id' is set
-        if ($driver_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $driver_id when calling updateDriver');
+        // verify the required parameter 'car_id' is set
+        if ($car_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $car_id when calling updateCar');
         }
         // parse inputs
-        $resourcePath = "/driver/{driverId}";
+        $resourcePath = "/car/{carId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -599,10 +599,10 @@ class DriverApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($driver_id !== null) {
+        if ($car_id !== null) {
             $resourcePath = str_replace(
-                "{" . "driverId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($driver_id),
+                "{" . "carId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($car_id),
                 $resourcePath
             );
         }
@@ -635,7 +635,7 @@ class DriverApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/driver/{driverId}'
+                '/car/{carId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

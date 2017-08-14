@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArgumentsTest
+ * CarRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * DriverRetrieveListArgumentsTest Class Doc Comment
+ * CarRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverRetrieveListArguments
+// * @description CarRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class CarRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverRetrieveListArguments"
+     * Test "CarRetrieveListArguments"
      */
-    public function testDriverRetrieveListArguments()
+    public function testCarRetrieveListArguments()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverOptionsModel
+ * TrailerOptionsModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverOptionsModel Class Doc Comment
+ * TrailerOptionsModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,22 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverOptionsModel implements ArrayAccess
+class TrailerOptionsModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverOptionsModel';
+    protected static $swaggerModelName = 'TrailerOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_driver_tags' => 'bool',
-        'include_driver_meta_data' => 'bool',
-        'include_driver_links' => 'bool',
+        'include_trailer_tags' => 'bool',
+        'include_trailer_meta_data' => 'bool',
+        'include_trailer_links' => 'bool',
         'include_updated_by_name' => 'bool'
     ];
 
@@ -82,9 +82,9 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_driver_tags' => 'include_driver_tags',
-        'include_driver_meta_data' => 'include_driver_meta_data',
-        'include_driver_links' => 'include_driver_links',
+        'include_trailer_tags' => 'include_trailer_tags',
+        'include_trailer_meta_data' => 'include_trailer_meta_data',
+        'include_trailer_links' => 'include_trailer_links',
         'include_updated_by_name' => 'include_updated_by_name'
     ];
 
@@ -94,9 +94,9 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_driver_tags' => 'setIncludeDriverTags',
-        'include_driver_meta_data' => 'setIncludeDriverMetaData',
-        'include_driver_links' => 'setIncludeDriverLinks',
+        'include_trailer_tags' => 'setIncludeTrailerTags',
+        'include_trailer_meta_data' => 'setIncludeTrailerMetaData',
+        'include_trailer_links' => 'setIncludeTrailerLinks',
         'include_updated_by_name' => 'setIncludeUpdatedByName'
     ];
 
@@ -106,9 +106,9 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_driver_tags' => 'getIncludeDriverTags',
-        'include_driver_meta_data' => 'getIncludeDriverMetaData',
-        'include_driver_links' => 'getIncludeDriverLinks',
+        'include_trailer_tags' => 'getIncludeTrailerTags',
+        'include_trailer_meta_data' => 'getIncludeTrailerMetaData',
+        'include_trailer_links' => 'getIncludeTrailerLinks',
         'include_updated_by_name' => 'getIncludeUpdatedByName'
     ];
 
@@ -143,9 +143,9 @@ class DriverOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_driver_tags'] = isset($data['include_driver_tags']) ? $data['include_driver_tags'] : null;
-        $this->container['include_driver_meta_data'] = isset($data['include_driver_meta_data']) ? $data['include_driver_meta_data'] : null;
-        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_trailer_tags'] = isset($data['include_trailer_tags']) ? $data['include_trailer_tags'] : null;
+        $this->container['include_trailer_meta_data'] = isset($data['include_trailer_meta_data']) ? $data['include_trailer_meta_data'] : null;
+        $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
         $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
     }
 
@@ -173,64 +173,64 @@ class DriverOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_driver_tags
+     * Gets include_trailer_tags
      * @return bool
      */
-    public function getIncludeDriverTags()
+    public function getIncludeTrailerTags()
     {
-        return $this->container['include_driver_tags'];
+        return $this->container['include_trailer_tags'];
     }
 
     /**
-     * Sets include_driver_tags
-     * @param bool $include_driver_tags 
+     * Sets include_trailer_tags
+     * @param bool $include_trailer_tags 
      * @return $this
      */
-    public function setIncludeDriverTags($include_driver_tags)
+    public function setIncludeTrailerTags($include_trailer_tags)
     {
-        $this->container['include_driver_tags'] = $include_driver_tags;
+        $this->container['include_trailer_tags'] = $include_trailer_tags;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_meta_data
+     * Gets include_trailer_meta_data
      * @return bool
      */
-    public function getIncludeDriverMetaData()
+    public function getIncludeTrailerMetaData()
     {
-        return $this->container['include_driver_meta_data'];
+        return $this->container['include_trailer_meta_data'];
     }
 
     /**
-     * Sets include_driver_meta_data
-     * @param bool $include_driver_meta_data 
+     * Sets include_trailer_meta_data
+     * @param bool $include_trailer_meta_data 
      * @return $this
      */
-    public function setIncludeDriverMetaData($include_driver_meta_data)
+    public function setIncludeTrailerMetaData($include_trailer_meta_data)
     {
-        $this->container['include_driver_meta_data'] = $include_driver_meta_data;
+        $this->container['include_trailer_meta_data'] = $include_trailer_meta_data;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_links
+     * Gets include_trailer_links
      * @return bool
      */
-    public function getIncludeDriverLinks()
+    public function getIncludeTrailerLinks()
     {
-        return $this->container['include_driver_links'];
+        return $this->container['include_trailer_links'];
     }
 
     /**
-     * Sets include_driver_links
-     * @param bool $include_driver_links 
+     * Sets include_trailer_links
+     * @param bool $include_trailer_links 
      * @return $this
      */
-    public function setIncludeDriverLinks($include_driver_links)
+    public function setIncludeTrailerLinks($include_trailer_links)
     {
-        $this->container['include_driver_links'] = $include_driver_links;
+        $this->container['include_trailer_links'] = $include_trailer_links;
 
         return $this;
     }

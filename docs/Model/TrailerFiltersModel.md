@@ -1,10 +1,10 @@
-# DriverFiltersModel
+# TrailerFiltersModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int[]** | Driver id&#39;s | [optional] 
-**links** | **object[]** | Driver Link ids | [optional] 
+**id** | **int[]** | Trailer id&#39;s | [optional] 
+**links** | **object[]** | Trailer Link ids | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 

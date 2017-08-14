@@ -96,9 +96,33 @@ class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_phone_nrs"
+     * Test attribute "include_driver_tags"
      */
-    public function testPropertyIncludePhoneNrs()
+    public function testPropertyIncludeDriverTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_driver_meta_data"
+     */
+    public function testPropertyIncludeDriverMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_driver_links"
+     */
+    public function testPropertyIncludeDriverLinks()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_updated_by_name"
+     */
+    public function testPropertyIncludeUpdatedByName()
     {
 
     }

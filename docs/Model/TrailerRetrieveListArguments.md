@@ -1,10 +1,10 @@
-# DriverRetrieveListArguments
+# TrailerRetrieveListArguments
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\DriverOptionsModel**](DriverOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\DriverFiltersModel**](DriverFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\TrailerOptionsModel**](TrailerOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\TrailerFiltersModel**](TrailerFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

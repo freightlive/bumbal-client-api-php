@@ -104,9 +104,65 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+
+    }
+
+    /**
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "drivers"
+     */
+    public function testPropertyDrivers()
+    {
+
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_by_name"
+     */
+    public function testPropertyUpdatedByName()
     {
 
     }

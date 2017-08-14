@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArguments
+ * TrailerRetrieveListArguments
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverRetrieveListArguments Class Doc Comment
+ * TrailerRetrieveListArguments Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,21 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArguments implements ArrayAccess
+class TrailerRetrieveListArguments implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverRetrieveListArguments';
+    protected static $swaggerModelName = 'TrailerRetrieveListArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\DriverOptionsModel',
-        'filters' => '\BumbalClient\Model\DriverFiltersModel',
+        'options' => '\BumbalClient\Model\TrailerOptionsModel',
+        'filters' => '\BumbalClient\Model\TrailerFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -239,7 +239,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\DriverOptionsModel
+     * @return \BumbalClient\Model\TrailerOptionsModel
      */
     public function getOptions()
     {
@@ -248,7 +248,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\DriverOptionsModel $options 
+     * @param \BumbalClient\Model\TrailerOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -260,7 +260,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\DriverFiltersModel
+     * @return \BumbalClient\Model\TrailerFiltersModel
      */
     public function getFilters()
     {
@@ -269,7 +269,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\DriverFiltersModel $filters 
+     * @param \BumbalClient\Model\TrailerFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

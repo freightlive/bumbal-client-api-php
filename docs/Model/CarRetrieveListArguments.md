@@ -1,10 +1,10 @@
-# DriverRetrieveListArguments
+# CarRetrieveListArguments
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\DriverOptionsModel**](DriverOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\DriverFiltersModel**](DriverFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\CarOptionsModel**](CarOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\CarFiltersModel**](CarFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

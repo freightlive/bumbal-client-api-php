@@ -102,7 +102,18 @@ Class | Method | HTTP request | Description
 *AutoplanApi* | [**autoPlanCheckProgress**](docs/Api/AutoplanApi.md#autoplancheckprogress) | **GET** /auto-plan/check-progress/{processUUID} | Check Progress on a Auto Plan Process
 *AutoplanApi* | [**autoPlanFinish**](docs/Api/AutoplanApi.md#autoplanfinish) | **POST** /auto-plan/finish | Finish a Auto Plan Process
 *AutoplanApi* | [**autoPlanStart**](docs/Api/AutoplanApi.md#autoplanstart) | **POST** /auto-plan/start | Start a Auto Plan Process
+*CarApi* | [**createCar**](docs/Api/CarApi.md#createcar) | **POST** /car | Add a car
+*CarApi* | [**deleteCar**](docs/Api/CarApi.md#deletecar) | **DELETE** /car/{carId} | Delete an car
+*CarApi* | [**retrieveCar**](docs/Api/CarApi.md#retrievecar) | **GET** /car/{carId} | Find car by ID
+*CarApi* | [**retrieveListCar**](docs/Api/CarApi.md#retrievelistcar) | **PUT** /car | Retrieve List of Cars
+*CarApi* | [**setCar**](docs/Api/CarApi.md#setcar) | **POST** /car/set | Set (create or update) a car
+*CarApi* | [**updateCar**](docs/Api/CarApi.md#updatecar) | **PUT** /car/{carId} | Update a car
+*DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
+*DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
+*DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
 *DriverApi* | [**retrieveListDriver**](docs/Api/DriverApi.md#retrievelistdriver) | **PUT** /driver | Retrieve List of Drivers
+*DriverApi* | [**setDriver**](docs/Api/DriverApi.md#setdriver) | **POST** /driver/set | Set (create or update) a driver
+*DriverApi* | [**updateDriver**](docs/Api/DriverApi.md#updatedriver) | **PUT** /driver/{driverId} | Update a driver
 *EquipmentApi* | [**createEquipment**](docs/Api/EquipmentApi.md#createequipment) | **POST** /equipment | Add a new Equipment
 *EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment
 *EquipmentApi* | [**retrieveEquipment**](docs/Api/EquipmentApi.md#retrieveequipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
@@ -165,6 +176,12 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
 *TracktraceApi* | [**retrieveActivityStatus**](docs/Api/TracktraceApi.md#retrieveactivitystatus) | **GET** /track-trace/retrieve-activity-status/{activityId} | Retrieve Activity Status
 *TracktraceApi* | [**retrieveRouteStatus**](docs/Api/TracktraceApi.md#retrieveroutestatus) | **GET** /track-trace/retrieve-route-status/{routeId} | Retrieve Route Status
+*TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
+*TrailerApi* | [**deleteTrailer**](docs/Api/TrailerApi.md#deletetrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
+*TrailerApi* | [**retrieveListTrailer**](docs/Api/TrailerApi.md#retrievelisttrailer) | **PUT** /trailer | Retrieve List of Trailers
+*TrailerApi* | [**retrieveTrailer**](docs/Api/TrailerApi.md#retrievetrailer) | **GET** /trailer/{trailerId} | Find trailer by ID
+*TrailerApi* | [**setTrailer**](docs/Api/TrailerApi.md#settrailer) | **POST** /trailer/set | Set (create or update) a trailer
+*TrailerApi* | [**updateTrailer**](docs/Api/TrailerApi.md#updatetrailer) | **PUT** /trailer/{trailerId} | Update a trailer
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Userss
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
@@ -187,6 +204,10 @@ Class | Method | HTTP request | Description
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
+ - [CarFiltersModel](docs/Model/CarFiltersModel.md)
+ - [CarModel](docs/Model/CarModel.md)
+ - [CarOptionsModel](docs/Model/CarOptionsModel.md)
+ - [CarRetrieveListArguments](docs/Model/CarRetrieveListArguments.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
  - [DriverModel](docs/Model/DriverModel.md)
@@ -237,6 +258,10 @@ Class | Method | HTTP request | Description
  - [TagsOptionsModel](docs/Model/TagsOptionsModel.md)
  - [TagsRetrieveListArguments](docs/Model/TagsRetrieveListArguments.md)
  - [TimeSlotModel](docs/Model/TimeSlotModel.md)
+ - [TrailerFiltersModel](docs/Model/TrailerFiltersModel.md)
+ - [TrailerModel](docs/Model/TrailerModel.md)
+ - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
+ - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersModel](docs/Model/UsersModel.md)
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)

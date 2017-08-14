@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverOptionsModel
+ * TrailerFiltersModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverOptionsModel Class Doc Comment
+ * TrailerFiltersModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,23 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverOptionsModel implements ArrayAccess
+class TrailerFiltersModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverOptionsModel';
+    protected static $swaggerModelName = 'TrailerFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_driver_tags' => 'bool',
-        'include_driver_meta_data' => 'bool',
-        'include_driver_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'id' => 'int[]',
+        'links' => 'object[]',
+        'updated_at_since' => '\DateTime',
+        'updated_at_till' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -82,10 +82,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_driver_tags' => 'include_driver_tags',
-        'include_driver_meta_data' => 'include_driver_meta_data',
-        'include_driver_links' => 'include_driver_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'id' => 'id',
+        'links' => 'links',
+        'updated_at_since' => 'updated_at_since',
+        'updated_at_till' => 'updated_at_till'
     ];
 
 
@@ -94,10 +94,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_driver_tags' => 'setIncludeDriverTags',
-        'include_driver_meta_data' => 'setIncludeDriverMetaData',
-        'include_driver_links' => 'setIncludeDriverLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'id' => 'setId',
+        'links' => 'setLinks',
+        'updated_at_since' => 'setUpdatedAtSince',
+        'updated_at_till' => 'setUpdatedAtTill'
     ];
 
 
@@ -106,10 +106,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_driver_tags' => 'getIncludeDriverTags',
-        'include_driver_meta_data' => 'getIncludeDriverMetaData',
-        'include_driver_links' => 'getIncludeDriverLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'id' => 'getId',
+        'links' => 'getLinks',
+        'updated_at_since' => 'getUpdatedAtSince',
+        'updated_at_till' => 'getUpdatedAtTill'
     ];
 
     public static function attributeMap()
@@ -143,10 +143,10 @@ class DriverOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_driver_tags'] = isset($data['include_driver_tags']) ? $data['include_driver_tags'] : null;
-        $this->container['include_driver_meta_data'] = isset($data['include_driver_meta_data']) ? $data['include_driver_meta_data'] : null;
-        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
+        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
     }
 
     /**
@@ -173,85 +173,85 @@ class DriverOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_driver_tags
-     * @return bool
+     * Gets id
+     * @return int[]
      */
-    public function getIncludeDriverTags()
+    public function getId()
     {
-        return $this->container['include_driver_tags'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets include_driver_tags
-     * @param bool $include_driver_tags 
+     * Sets id
+     * @param int[] $id Trailer id's
      * @return $this
      */
-    public function setIncludeDriverTags($include_driver_tags)
+    public function setId($id)
     {
-        $this->container['include_driver_tags'] = $include_driver_tags;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_meta_data
-     * @return bool
+     * Gets links
+     * @return object[]
      */
-    public function getIncludeDriverMetaData()
+    public function getLinks()
     {
-        return $this->container['include_driver_meta_data'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets include_driver_meta_data
-     * @param bool $include_driver_meta_data 
+     * Sets links
+     * @param object[] $links Trailer Link ids
      * @return $this
      */
-    public function setIncludeDriverMetaData($include_driver_meta_data)
+    public function setLinks($links)
     {
-        $this->container['include_driver_meta_data'] = $include_driver_meta_data;
+        $this->container['links'] = $links;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_links
-     * @return bool
+     * Gets updated_at_since
+     * @return \DateTime
      */
-    public function getIncludeDriverLinks()
+    public function getUpdatedAtSince()
     {
-        return $this->container['include_driver_links'];
+        return $this->container['updated_at_since'];
     }
 
     /**
-     * Sets include_driver_links
-     * @param bool $include_driver_links 
+     * Sets updated_at_since
+     * @param \DateTime $updated_at_since Show updated since
      * @return $this
      */
-    public function setIncludeDriverLinks($include_driver_links)
+    public function setUpdatedAtSince($updated_at_since)
     {
-        $this->container['include_driver_links'] = $include_driver_links;
+        $this->container['updated_at_since'] = $updated_at_since;
 
         return $this;
     }
 
     /**
-     * Gets include_updated_by_name
-     * @return bool
+     * Gets updated_at_till
+     * @return \DateTime
      */
-    public function getIncludeUpdatedByName()
+    public function getUpdatedAtTill()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['updated_at_till'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * Sets updated_at_till
+     * @param \DateTime $updated_at_till Show updated till
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setUpdatedAtTill($updated_at_till)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['updated_at_till'] = $updated_at_till;
 
         return $this;
     }

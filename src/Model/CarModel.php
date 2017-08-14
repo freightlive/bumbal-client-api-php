@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverFiltersModel
+ * CarModel
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverFiltersModel Class Doc Comment
+ * CarModel Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,23 +53,28 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverFiltersModel implements ArrayAccess
+class CarModel implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverFiltersModel';
+    protected static $swaggerModelName = 'CarModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'links' => 'object[]',
-        'updated_at_since' => '\DateTime',
-        'updated_at_till' => '\DateTime'
+        'id' => 'int',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'cars' => '\BumbalClient\Model\CarModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime',
+        'updated_by_name' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -83,9 +88,14 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'tags' => 'tags',
         'links' => 'links',
-        'updated_at_since' => 'updated_at_since',
-        'updated_at_till' => 'updated_at_till'
+        'meta_data' => 'meta_data',
+        'cars' => 'cars',
+        'files' => 'files',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at',
+        'updated_by_name' => 'updated_by_name'
     ];
 
 
@@ -95,9 +105,14 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'tags' => 'setTags',
         'links' => 'setLinks',
-        'updated_at_since' => 'setUpdatedAtSince',
-        'updated_at_till' => 'setUpdatedAtTill'
+        'meta_data' => 'setMetaData',
+        'cars' => 'setCars',
+        'files' => 'setFiles',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt',
+        'updated_by_name' => 'setUpdatedByName'
     ];
 
 
@@ -107,9 +122,14 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'tags' => 'getTags',
         'links' => 'getLinks',
-        'updated_at_since' => 'getUpdatedAtSince',
-        'updated_at_till' => 'getUpdatedAtTill'
+        'meta_data' => 'getMetaData',
+        'cars' => 'getCars',
+        'files' => 'getFiles',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt',
+        'updated_by_name' => 'getUpdatedByName'
     ];
 
     public static function attributeMap()
@@ -144,9 +164,14 @@ class DriverFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
-        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
-        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['cars'] = isset($data['cars']) ? $data['cars'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
     }
 
     /**
@@ -157,6 +182,9 @@ class DriverFiltersModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -168,13 +196,16 @@ class DriverFiltersModel implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['id'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
      * Gets id
-     * @return int[]
+     * @return int
      */
     public function getId()
     {
@@ -183,7 +214,7 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id Driver id's
+     * @param int $id Unique Identifier
      * @return $this
      */
     public function setId($id)
@@ -194,8 +225,29 @@ class DriverFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
      * Gets links
-     * @return object[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -204,7 +256,7 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param object[] $links Driver Link ids
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -215,43 +267,127 @@ class DriverFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets updated_at_since
-     * @return \DateTime
+     * Gets meta_data
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
-    public function getUpdatedAtSince()
+    public function getMetaData()
     {
-        return $this->container['updated_at_since'];
+        return $this->container['meta_data'];
     }
 
     /**
-     * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * Sets meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
-    public function setUpdatedAtSince($updated_at_since)
+    public function setMetaData($meta_data)
     {
-        $this->container['updated_at_since'] = $updated_at_since;
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }
 
     /**
-     * Gets updated_at_till
-     * @return \DateTime
+     * Gets cars
+     * @return \BumbalClient\Model\CarModel[]
      */
-    public function getUpdatedAtTill()
+    public function getCars()
     {
-        return $this->container['updated_at_till'];
+        return $this->container['cars'];
     }
 
     /**
-     * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
+     * Sets cars
+     * @param \BumbalClient\Model\CarModel[] $cars 
      * @return $this
      */
-    public function setUpdatedAtTill($updated_at_till)
+    public function setCars($cars)
     {
-        $this->container['updated_at_till'] = $updated_at_till;
+        $this->container['cars'] = $cars;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_by_name
+     * @return string
+     */
+    public function getUpdatedByName()
+    {
+        return $this->container['updated_by_name'];
+    }
+
+    /**
+     * Sets updated_by_name
+     * @param string $updated_by_name Car updated by user full name
+     * @return $this
+     */
+    public function setUpdatedByName($updated_by_name)
+    {
+        $this->container['updated_by_name'] = $updated_by_name;
 
         return $this;
     }
