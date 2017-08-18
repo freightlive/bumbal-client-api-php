@@ -400,6 +400,22 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "assignment_link"
+     */
+    public function testPropertyAssignmentLink()
+    {
+
+    }
+
+    /**
+     * Test attribute "route_link"
+     */
+    public function testPropertyRouteLink()
+    {
+
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()
