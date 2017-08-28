@@ -109,7 +109,7 @@ class UserApi
      * @param string $username Party Username (required)
      * @param string $password Party Password (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\UserModel
+     * @return \BumbalClient\Model\UsersModel
      */
     public function checkCredentialsUser($username, $password)
     {
@@ -125,7 +125,7 @@ class UserApi
      * @param string $username Party Username (required)
      * @param string $password Party Password (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\UserModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkCredentialsUserWithHttpInfo($username, $password)
     {
@@ -180,15 +180,15 @@ class UserApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\UserModel',
+                '\BumbalClient\Model\UsersModel',
                 '/user/check-credentials'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UserModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UserModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

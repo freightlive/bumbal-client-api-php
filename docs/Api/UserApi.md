@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **checkCredentialsUser**
-> \BumbalClient\Model\UserModel checkCredentialsUser($username, $password)
+> \BumbalClient\Model\UsersModel checkCredentialsUser($username, $password)
 
 Checks the credentials of a User
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\UserModel**](../Model/UserModel.md)
+[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
