@@ -106,14 +106,14 @@ class UsersApi
      *
      * Checks the credentials of a User
      *
-     * @param string $username Party Username (required)
-     * @param string $password Party Password (required)
+     * @param string $email User Email (required)
+     * @param string $password User Password (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\UsersModel
      */
-    public function checkCredentialsUser($username, $password)
+    public function checkCredentialsUser($email, $password)
     {
-        list($response) = $this->checkCredentialsUserWithHttpInfo($username, $password);
+        list($response) = $this->checkCredentialsUserWithHttpInfo($email, $password);
         return $response;
     }
 
@@ -122,23 +122,23 @@ class UsersApi
      *
      * Checks the credentials of a User
      *
-     * @param string $username Party Username (required)
-     * @param string $password Party Password (required)
+     * @param string $email User Email (required)
+     * @param string $password User Password (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function checkCredentialsUserWithHttpInfo($username, $password)
+    public function checkCredentialsUserWithHttpInfo($email, $password)
     {
-        // verify the required parameter 'username' is set
-        if ($username === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $username when calling checkCredentialsUser');
+        // verify the required parameter 'email' is set
+        if ($email === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling checkCredentialsUser');
         }
         // verify the required parameter 'password' is set
         if ($password === null) {
             throw new \InvalidArgumentException('Missing the required parameter $password when calling checkCredentialsUser');
         }
         // parse inputs
-        $resourcePath = "/user/check-credentials";
+        $resourcePath = "/users/check-credentials";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -150,8 +150,8 @@ class UsersApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // query params
-        if ($username !== null) {
-            $queryParams['username'] = $this->apiClient->getSerializer()->toQueryValue($username);
+        if ($email !== null) {
+            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($email);
         }
         // query params
         if ($password !== null) {
@@ -181,7 +181,7 @@ class UsersApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\UsersModel',
-                '/user/check-credentials'
+                '/users/check-credentials'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel', $httpHeader), $statusCode, $httpHeader];

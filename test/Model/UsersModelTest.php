@@ -120,6 +120,14 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "party_id"
+     */
+    public function testPropertyPartyId()
+    {
+
+    }
+
+    /**
      * Test attribute "role_name"
      */
     public function testPropertyRoleName()

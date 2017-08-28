@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | 
 **uuid** | **int** | unique per user | [optional] 
 **role_id** | **int** | id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin | [optional] 
+**party_id** | **int** | Associated Party ID | [optional] 
 **role_name** | **string** | Role name | [optional] 
 **first_name** | **string** | First name | [optional] 
 **name_prefix** | **string** | Name prefix | [optional] 

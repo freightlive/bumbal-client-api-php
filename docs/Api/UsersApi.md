@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /user/check-credentials | Checks the credentials of a User
+[**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Userss
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
 [**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
 
 
 # **checkCredentialsUser**
-> \BumbalClient\Model\UsersModel checkCredentialsUser($username, $password)
+> \BumbalClient\Model\UsersModel checkCredentialsUser($email, $password)
 
 Checks the credentials of a User
 
@@ -28,11 +28,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$username = "username_example"; // string | Party Username
-$password = "password_example"; // string | Party Password
+$email = "email_example"; // string | User Email
+$password = "password_example"; // string | User Password
 
 try {
-    $result = $api_instance->checkCredentialsUser($username, $password);
+    $result = $api_instance->checkCredentialsUser($email, $password);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->checkCredentialsUser: ', $e->getMessage(), PHP_EOL;
@@ -44,8 +44,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Party Username |
- **password** | **string**| Party Password |
+ **email** | **string**| User Email |
+ **password** | **string**| User Password |
 
 ### Return type
 
