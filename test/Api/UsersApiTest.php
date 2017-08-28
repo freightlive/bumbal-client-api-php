@@ -90,6 +90,17 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for checkCredentialsUser
+     *
+     * Checks the credentials of a User.
+     *
+     */
+    public function testCheckCredentialsUser()
+    {
+
+    }
+
+    /**
      * Test case for retrieveListUsers
      *
      * Retrieve List of Userss.

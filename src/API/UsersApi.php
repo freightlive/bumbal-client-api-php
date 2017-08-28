@@ -102,6 +102,102 @@ class UsersApi
     }
 
     /**
+     * Operation checkCredentialsUser
+     *
+     * Checks the credentials of a User
+     *
+     * @param string $username Party Username (required)
+     * @param string $password Party Password (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function checkCredentialsUser($username, $password)
+    {
+        list($response) = $this->checkCredentialsUserWithHttpInfo($username, $password);
+        return $response;
+    }
+
+    /**
+     * Operation checkCredentialsUserWithHttpInfo
+     *
+     * Checks the credentials of a User
+     *
+     * @param string $username Party Username (required)
+     * @param string $password Party Password (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function checkCredentialsUserWithHttpInfo($username, $password)
+    {
+        // verify the required parameter 'username' is set
+        if ($username === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $username when calling checkCredentialsUser');
+        }
+        // verify the required parameter 'password' is set
+        if ($password === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $password when calling checkCredentialsUser');
+        }
+        // parse inputs
+        $resourcePath = "/user/check-credentials";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // query params
+        if ($username !== null) {
+            $queryParams['username'] = $this->apiClient->getSerializer()->toQueryValue($username);
+        }
+        // query params
+        if ($password !== null) {
+            $queryParams['password'] = $this->apiClient->getSerializer()->toQueryValue($password);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\UsersModel',
+                '/user/check-credentials'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersModel', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveListUsers
      *
      * Retrieve List of Userss
