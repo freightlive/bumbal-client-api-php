@@ -112,9 +112,57 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+
+    }
+
+    /**
+     * Test attribute "status_id"
+     */
+    public function testPropertyStatusId()
+    {
+
+    }
+
+    /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+
+    }
+
+    /**
      * Test attribute "nr_of_packages"
      */
     public function testPropertyNrOfPackages()
+    {
+
+    }
+
+    /**
+     * Test attribute "package_type_name"
+     */
+    public function testPropertyPackageTypeName()
+    {
+
+    }
+
+    /**
+     * Test attribute "package_type_id"
+     */
+    public function testPropertyPackageTypeId()
     {
 
     }
@@ -224,6 +272,22 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "adr_class"
+     */
+    public function testPropertyAdrClass()
+    {
+
+    }
+
+    /**
+     * Test attribute "adr_un_nr"
+     */
+    public function testPropertyAdrUnNr()
+    {
+
+    }
+
+    /**
      * Test attribute "temp"
      */
     public function testPropertyTemp()
@@ -267,6 +331,14 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "capacity_loading_weight"
      */
     public function testPropertyCapacityLoadingWeight()
+    {
+
+    }
+
+    /**
+     * Test attribute "hs_code"
+     */
+    public function testPropertyHsCode()
     {
 
     }

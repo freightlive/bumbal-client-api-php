@@ -70,6 +70,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\RecurrenceFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
+        'sorting_column' => 'string',
+        'sorting_direction' => 'string',
         'search_text' => 'string'
     ];
 
@@ -87,6 +89,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
+        'sorting_column' => 'sorting_column',
+        'sorting_direction' => 'sorting_direction',
         'search_text' => 'search_text'
     ];
 
@@ -100,6 +104,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
+        'sorting_column' => 'setSortingColumn',
+        'sorting_direction' => 'setSortingDirection',
         'search_text' => 'setSearchText'
     ];
 
@@ -113,6 +119,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
+        'sorting_column' => 'getSortingColumn',
+        'sorting_direction' => 'getSortingDirection',
         'search_text' => 'getSearchText'
     ];
 
@@ -131,8 +139,40 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
+    const SORTING_COLUMN_ID = 'id';
+    const SORTING_COLUMN_NAME = 'name';
+    const SORTING_COLUMN_DESCRIPTION = 'description';
+    const SORTING_COLUMN_SUBJECT = 'subject';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingColumnAllowableValues()
+    {
+        return [
+            self::SORTING_COLUMN_ID,
+            self::SORTING_COLUMN_NAME,
+            self::SORTING_COLUMN_DESCRIPTION,
+            self::SORTING_COLUMN_SUBJECT,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingDirectionAllowableValues()
+    {
+        return [
+            self::SORTING_DIRECTION_ASC,
+            self::SORTING_DIRECTION_DESC,
+        ];
+    }
     
 
     /**
@@ -151,6 +191,8 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
@@ -162,6 +204,16 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+        $allowed_values = ["id", "name", "description", "subject"];
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'.";
+        }
+
+        $allowed_values = ["ASC", "DESC"];
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -173,6 +225,14 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
      */
     public function valid()
     {
+        $allowed_values = ["id", "name", "description", "subject"];
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["ASC", "DESC"];
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -188,7 +248,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\RecurrenceOptionsModel $options 
+     * @param \BumbalClient\Model\RecurrenceOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +269,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\RecurrenceFiltersModel $filters 
+     * @param \BumbalClient\Model\RecurrenceFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -230,7 +290,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -251,12 +311,62 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_column
+     * @return string
+     */
+    public function getSortingColumn()
+    {
+        return $this->container['sorting_column'];
+    }
+
+    /**
+     * Sets sorting_column
+     * @param string $sorting_column Sorting Column
+     * @return $this
+     */
+    public function setSortingColumn($sorting_column)
+    {
+        $allowed_values = array('id', 'name', 'description', 'subject');
+        if (!is_null($sorting_column) && (!in_array($sorting_column, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'");
+        }
+        $this->container['sorting_column'] = $sorting_column;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_direction
+     * @return string
+     */
+    public function getSortingDirection()
+    {
+        return $this->container['sorting_direction'];
+    }
+
+    /**
+     * Sets sorting_direction
+     * @param string $sorting_direction Sorting Direction
+     * @return $this
+     */
+    public function setSortingDirection($sorting_direction)
+    {
+        $allowed_values = array('ASC', 'DESC');
+        if (!is_null($sorting_direction) && (!in_array($sorting_direction, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'");
+        }
+        $this->container['sorting_direction'] = $sorting_direction;
 
         return $this;
     }
@@ -272,7 +382,7 @@ class RecurrenceRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

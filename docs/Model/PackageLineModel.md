@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **activity_id** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
 **nr** | **string** | Number of this PackageLine | [optional] 
 **status_id** | **int** | StatusId of this PackageLine, 31: package_line_cancelled, 23: package_line_incomplete, 24: package_line_new, 42: package_line_awaiting, 25: package_line_accepted, 10: package_line_planned, 11: package_line_in_progress, 12: package_line_executed | [optional] 
+**status_name** | **string** | PackageLine Status | [optional] 
 **nr_of_packages** | **int** | Number of packages in package line | [optional] 
 **package_type_name** | **string** | Type of the Packages in the package line | [optional] 
 **package_type_id** | **int** | ID of the package type for the packages in this PackageLine | [optional] 

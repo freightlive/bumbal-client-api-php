@@ -70,7 +70,6 @@ class TrailerModel implements ArrayAccess
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'trailers' => '\BumbalClient\Model\TrailerModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
@@ -91,7 +90,6 @@ class TrailerModel implements ArrayAccess
         'tags' => 'tags',
         'links' => 'links',
         'meta_data' => 'meta_data',
-        'trailers' => 'trailers',
         'files' => 'files',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
@@ -108,7 +106,6 @@ class TrailerModel implements ArrayAccess
         'tags' => 'setTags',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'trailers' => 'setTrailers',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
@@ -125,7 +122,6 @@ class TrailerModel implements ArrayAccess
         'tags' => 'getTags',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'trailers' => 'getTrailers',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
@@ -167,7 +163,6 @@ class TrailerModel implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
-        $this->container['trailers'] = isset($data['trailers']) ? $data['trailers'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -235,7 +230,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -256,7 +251,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -277,33 +272,12 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets trailers
-     * @return \BumbalClient\Model\TrailerModel[]
-     */
-    public function getTrailers()
-    {
-        return $this->container['trailers'];
-    }
-
-    /**
-     * Sets trailers
-     * @param \BumbalClient\Model\TrailerModel[] $trailers 
-     * @return $this
-     */
-    public function setTrailers($trailers)
-    {
-        $this->container['trailers'] = $trailers;
 
         return $this;
     }
@@ -319,7 +293,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

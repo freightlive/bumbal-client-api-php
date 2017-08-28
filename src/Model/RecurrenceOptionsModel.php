@@ -66,7 +66,10 @@ class RecurrenceOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_recurrence_tags' => 'bool',
+        'include_recurrence_meta_data' => 'bool',
+        'include_recurrence_links' => 'bool',
+        'include_updated_by_name' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +82,10 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_recurrence_tags' => 'include_recurrence_tags',
+        'include_recurrence_meta_data' => 'include_recurrence_meta_data',
+        'include_recurrence_links' => 'include_recurrence_links',
+        'include_updated_by_name' => 'include_updated_by_name'
     ];
 
 
@@ -88,7 +94,10 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_recurrence_tags' => 'setIncludeRecurrenceTags',
+        'include_recurrence_meta_data' => 'setIncludeRecurrenceMetaData',
+        'include_recurrence_links' => 'setIncludeRecurrenceLinks',
+        'include_updated_by_name' => 'setIncludeUpdatedByName'
     ];
 
 
@@ -97,7 +106,10 @@ class RecurrenceOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_recurrence_tags' => 'getIncludeRecurrenceTags',
+        'include_recurrence_meta_data' => 'getIncludeRecurrenceMetaData',
+        'include_recurrence_links' => 'getIncludeRecurrenceLinks',
+        'include_updated_by_name' => 'getIncludeUpdatedByName'
     ];
 
     public static function attributeMap()
@@ -131,7 +143,10 @@ class RecurrenceOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_recurrence_tags'] = isset($data['include_recurrence_tags']) ? $data['include_recurrence_tags'] : null;
+        $this->container['include_recurrence_meta_data'] = isset($data['include_recurrence_meta_data']) ? $data['include_recurrence_meta_data'] : null;
+        $this->container['include_recurrence_links'] = isset($data['include_recurrence_links']) ? $data['include_recurrence_links'] : null;
+        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
     }
 
     /**
@@ -158,22 +173,85 @@ class RecurrenceOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_phone_nrs
+     * Gets include_recurrence_tags
      * @return bool
      */
-    public function getIncludePhoneNrs()
+    public function getIncludeRecurrenceTags()
     {
-        return $this->container['include_phone_nrs'];
+        return $this->container['include_recurrence_tags'];
     }
 
     /**
-     * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * Sets include_recurrence_tags
+     * @param bool $include_recurrence_tags
      * @return $this
      */
-    public function setIncludePhoneNrs($include_phone_nrs)
+    public function setIncludeRecurrenceTags($include_recurrence_tags)
     {
-        $this->container['include_phone_nrs'] = $include_phone_nrs;
+        $this->container['include_recurrence_tags'] = $include_recurrence_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_recurrence_meta_data
+     * @return bool
+     */
+    public function getIncludeRecurrenceMetaData()
+    {
+        return $this->container['include_recurrence_meta_data'];
+    }
+
+    /**
+     * Sets include_recurrence_meta_data
+     * @param bool $include_recurrence_meta_data
+     * @return $this
+     */
+    public function setIncludeRecurrenceMetaData($include_recurrence_meta_data)
+    {
+        $this->container['include_recurrence_meta_data'] = $include_recurrence_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_recurrence_links
+     * @return bool
+     */
+    public function getIncludeRecurrenceLinks()
+    {
+        return $this->container['include_recurrence_links'];
+    }
+
+    /**
+     * Sets include_recurrence_links
+     * @param bool $include_recurrence_links
+     * @return $this
+     */
+    public function setIncludeRecurrenceLinks($include_recurrence_links)
+    {
+        $this->container['include_recurrence_links'] = $include_recurrence_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_updated_by_name
+     * @return bool
+     */
+    public function getIncludeUpdatedByName()
+    {
+        return $this->container['include_updated_by_name'];
+    }
+
+    /**
+     * Sets include_updated_by_name
+     * @param bool $include_updated_by_name
+     * @return $this
+     */
+    public function setIncludeUpdatedByName($include_updated_by_name)
+    {
+        $this->container['include_updated_by_name'] = $include_updated_by_name;
 
         return $this;
     }

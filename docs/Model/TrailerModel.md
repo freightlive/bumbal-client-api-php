@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**trailers** | [**\BumbalClient\Model\TrailerModel[]**](TrailerModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 

@@ -68,7 +68,13 @@ class PackageLineFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
+        'id' => 'int[]',
+        'nr' => 'string[]',
+        'status_id' => 'int[]',
+        'status_name' => 'string[]',
         'nr_of_packages' => 'int',
+        'package_type_name' => 'string[]',
+        'package_type_id' => 'int[]',
         'length' => 'float',
         'width' => 'float',
         'height' => 'float',
@@ -82,12 +88,15 @@ class PackageLineFiltersModel implements ArrayAccess
         'unit_loading_meter' => 'float',
         'barcode' => 'string[]',
         'adr' => 'bool',
+        'adr_class' => 'int[]',
+        'adr_un_nr' => 'int[]',
         'temp' => 'bool',
         'temp_min' => 'float',
         'temp_max' => 'float',
         'capacity_volume' => 'float',
         'capacity_loading_meter' => 'float',
         'capacity_loading_weight' => 'float',
+        'hs_code' => 'string[]',
         'description' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'activity_links' => '\BumbalClient\Model\LinkModel[]',
@@ -106,7 +115,13 @@ class PackageLineFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
+        'id' => 'id',
+        'nr' => 'nr',
+        'status_id' => 'status_id',
+        'status_name' => 'status_name',
         'nr_of_packages' => 'nr_of_packages',
+        'package_type_name' => 'package_type_name',
+        'package_type_id' => 'package_type_id',
         'length' => 'length',
         'width' => 'width',
         'height' => 'height',
@@ -120,12 +135,15 @@ class PackageLineFiltersModel implements ArrayAccess
         'unit_loading_meter' => 'unit_loading_meter',
         'barcode' => 'barcode',
         'adr' => 'ADR',
+        'adr_class' => 'ADR_class',
+        'adr_un_nr' => 'ADR_UN_nr',
         'temp' => 'temp',
         'temp_min' => 'temp_min',
         'temp_max' => 'temp_max',
         'capacity_volume' => 'capacity_volume',
         'capacity_loading_meter' => 'capacity_loading_meter',
         'capacity_loading_weight' => 'capacity_loading_weight',
+        'hs_code' => 'hs_code',
         'description' => 'description',
         'links' => 'links',
         'activity_links' => 'activity_links',
@@ -140,7 +158,13 @@ class PackageLineFiltersModel implements ArrayAccess
     protected static $setters = [
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
+        'id' => 'setId',
+        'nr' => 'setNr',
+        'status_id' => 'setStatusId',
+        'status_name' => 'setStatusName',
         'nr_of_packages' => 'setNrOfPackages',
+        'package_type_name' => 'setPackageTypeName',
+        'package_type_id' => 'setPackageTypeId',
         'length' => 'setLength',
         'width' => 'setWidth',
         'height' => 'setHeight',
@@ -154,12 +178,15 @@ class PackageLineFiltersModel implements ArrayAccess
         'unit_loading_meter' => 'setUnitLoadingMeter',
         'barcode' => 'setBarcode',
         'adr' => 'setAdr',
+        'adr_class' => 'setAdrClass',
+        'adr_un_nr' => 'setAdrUnNr',
         'temp' => 'setTemp',
         'temp_min' => 'setTempMin',
         'temp_max' => 'setTempMax',
         'capacity_volume' => 'setCapacityVolume',
         'capacity_loading_meter' => 'setCapacityLoadingMeter',
         'capacity_loading_weight' => 'setCapacityLoadingWeight',
+        'hs_code' => 'setHsCode',
         'description' => 'setDescription',
         'links' => 'setLinks',
         'activity_links' => 'setActivityLinks',
@@ -174,7 +201,13 @@ class PackageLineFiltersModel implements ArrayAccess
     protected static $getters = [
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
+        'id' => 'getId',
+        'nr' => 'getNr',
+        'status_id' => 'getStatusId',
+        'status_name' => 'getStatusName',
         'nr_of_packages' => 'getNrOfPackages',
+        'package_type_name' => 'getPackageTypeName',
+        'package_type_id' => 'getPackageTypeId',
         'length' => 'getLength',
         'width' => 'getWidth',
         'height' => 'getHeight',
@@ -188,12 +221,15 @@ class PackageLineFiltersModel implements ArrayAccess
         'unit_loading_meter' => 'getUnitLoadingMeter',
         'barcode' => 'getBarcode',
         'adr' => 'getAdr',
+        'adr_class' => 'getAdrClass',
+        'adr_un_nr' => 'getAdrUnNr',
         'temp' => 'getTemp',
         'temp_min' => 'getTempMin',
         'temp_max' => 'getTempMax',
         'capacity_volume' => 'getCapacityVolume',
         'capacity_loading_meter' => 'getCapacityLoadingMeter',
         'capacity_loading_weight' => 'getCapacityLoadingWeight',
+        'hs_code' => 'getHsCode',
         'description' => 'getDescription',
         'links' => 'getLinks',
         'activity_links' => 'getActivityLinks',
@@ -233,7 +269,13 @@ class PackageLineFiltersModel implements ArrayAccess
     {
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
+        $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['nr_of_packages'] = isset($data['nr_of_packages']) ? $data['nr_of_packages'] : null;
+        $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
+        $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
         $this->container['length'] = isset($data['length']) ? $data['length'] : null;
         $this->container['width'] = isset($data['width']) ? $data['width'] : null;
         $this->container['height'] = isset($data['height']) ? $data['height'] : null;
@@ -247,12 +289,15 @@ class PackageLineFiltersModel implements ArrayAccess
         $this->container['unit_loading_meter'] = isset($data['unit_loading_meter']) ? $data['unit_loading_meter'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
         $this->container['adr'] = isset($data['adr']) ? $data['adr'] : null;
+        $this->container['adr_class'] = isset($data['adr_class']) ? $data['adr_class'] : null;
+        $this->container['adr_un_nr'] = isset($data['adr_un_nr']) ? $data['adr_un_nr'] : null;
         $this->container['temp'] = isset($data['temp']) ? $data['temp'] : null;
         $this->container['temp_min'] = isset($data['temp_min']) ? $data['temp_min'] : null;
         $this->container['temp_max'] = isset($data['temp_max']) ? $data['temp_max'] : null;
         $this->container['capacity_volume'] = isset($data['capacity_volume']) ? $data['capacity_volume'] : null;
         $this->container['capacity_loading_meter'] = isset($data['capacity_loading_meter']) ? $data['capacity_loading_meter'] : null;
         $this->container['capacity_loading_weight'] = isset($data['capacity_loading_weight']) ? $data['capacity_loading_weight'] : null;
+        $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
@@ -325,6 +370,90 @@ class PackageLineFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Bumbal package line id's
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr
+     * @return string[]
+     */
+    public function getNr()
+    {
+        return $this->container['nr'];
+    }
+
+    /**
+     * Sets nr
+     * @param string[] $nr PackageLine numbers
+     * @return $this
+     */
+    public function setNr($nr)
+    {
+        $this->container['nr'] = $nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_id
+     * @return int[]
+     */
+    public function getStatusId()
+    {
+        return $this->container['status_id'];
+    }
+
+    /**
+     * Sets status_id
+     * @param int[] $status_id StatusIds of PackageLine, 31: package_line_cancelled, 23: package_line_incomplete, 24: package_line_new, 42: package_line_awaiting, 25: package_line_accepted, 10: package_line_planned, 11: package_line_in_progress, 12: package_line_executed
+     * @return $this
+     */
+    public function setStatusId($status_id)
+    {
+        $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_name
+     * @return string[]
+     */
+    public function getStatusName()
+    {
+        return $this->container['status_name'];
+    }
+
+    /**
+     * Sets status_name
+     * @param string[] $status_name PackageLine Status
+     * @return $this
+     */
+    public function setStatusName($status_name)
+    {
+        $this->container['status_name'] = $status_name;
+
+        return $this;
+    }
+
+    /**
      * Gets nr_of_packages
      * @return int
      */
@@ -341,6 +470,48 @@ class PackageLineFiltersModel implements ArrayAccess
     public function setNrOfPackages($nr_of_packages)
     {
         $this->container['nr_of_packages'] = $nr_of_packages;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_type_name
+     * @return string[]
+     */
+    public function getPackageTypeName()
+    {
+        return $this->container['package_type_name'];
+    }
+
+    /**
+     * Sets package_type_name
+     * @param string[] $package_type_name Type of the Packages
+     * @return $this
+     */
+    public function setPackageTypeName($package_type_name)
+    {
+        $this->container['package_type_name'] = $package_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_type_id
+     * @return int[]
+     */
+    public function getPackageTypeId()
+    {
+        return $this->container['package_type_id'];
+    }
+
+    /**
+     * Sets package_type_id
+     * @param int[] $package_type_id ID of the package type for the packages
+     * @return $this
+     */
+    public function setPackageTypeId($package_type_id)
+    {
+        $this->container['package_type_id'] = $package_type_id;
 
         return $this;
     }
@@ -619,6 +790,48 @@ class PackageLineFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets adr_class
+     * @return int[]
+     */
+    public function getAdrClass()
+    {
+        return $this->container['adr_class'];
+    }
+
+    /**
+     * Sets adr_class
+     * @param int[] $adr_class ADR class of packages in package line
+     * @return $this
+     */
+    public function setAdrClass($adr_class)
+    {
+        $this->container['adr_class'] = $adr_class;
+
+        return $this;
+    }
+
+    /**
+     * Gets adr_un_nr
+     * @return int[]
+     */
+    public function getAdrUnNr()
+    {
+        return $this->container['adr_un_nr'];
+    }
+
+    /**
+     * Sets adr_un_nr
+     * @param int[] $adr_un_nr ADR UN Nr of packages in package line
+     * @return $this
+     */
+    public function setAdrUnNr($adr_un_nr)
+    {
+        $this->container['adr_un_nr'] = $adr_un_nr;
+
+        return $this;
+    }
+
+    /**
      * Gets temp
      * @return bool
      */
@@ -745,6 +958,27 @@ class PackageLineFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets hs_code
+     * @return string[]
+     */
+    public function getHsCode()
+    {
+        return $this->container['hs_code'];
+    }
+
+    /**
+     * Sets hs_code
+     * @param string[] $hs_code Harmonized System code for packages
+     * @return $this
+     */
+    public function setHsCode($hs_code)
+    {
+        $this->container['hs_code'] = $hs_code;
+
+        return $this;
+    }
+
+    /**
      * Gets description
      * @return string
      */
@@ -776,7 +1010,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -797,7 +1031,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\Model\LinkModel[] $activity_links 
+     * @param \BumbalClient\Model\LinkModel[] $activity_links
      * @return $this
      */
     public function setActivityLinks($activity_links)

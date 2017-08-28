@@ -183,7 +183,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * @param bool $include_phone_nrs
      * @return $this
      */
     public function setIncludePhoneNrs($include_phone_nrs)
@@ -204,7 +204,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_tags
-     * @param bool $include_address_tags 
+     * @param bool $include_address_tags
      * @return $this
      */
     public function setIncludeAddressTags($include_address_tags)
@@ -225,7 +225,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_party_info
-     * @param bool $include_party_info 
+     * @param bool $include_party_info
      * @return $this
      */
     public function setIncludePartyInfo($include_party_info)
@@ -246,7 +246,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_type_ids
-     * @param bool $include_address_type_ids 
+     * @param bool $include_address_type_ids
      * @return $this
      */
     public function setIncludeAddressTypeIds($include_address_type_ids)

@@ -128,6 +128,14 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+
+    }
+
+    /**
      * Test attribute "nr_of_packages"
      */
     public function testPropertyNrOfPackages()

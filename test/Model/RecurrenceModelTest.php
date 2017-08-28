@@ -103,4 +103,156 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "type_id"
+     */
+    public function testPropertyTypeId()
+    {
+
+    }
+
+    /**
+     * Test attribute "recurrence_type_name"
+     */
+    public function testPropertyRecurrenceTypeName()
+    {
+
+    }
+
+    /**
+     * Test attribute "start_date"
+     */
+    public function testPropertyStartDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "end_date"
+     */
+    public function testPropertyEndDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "period_id"
+     */
+    public function testPropertyPeriodId()
+    {
+
+    }
+
+    /**
+     * Test attribute "recurrence_period_name"
+     */
+    public function testPropertyRecurrencePeriodName()
+    {
+
+    }
+
+    /**
+     * Test attribute "frequency"
+     */
+    public function testPropertyFrequency()
+    {
+
+    }
+
+    /**
+     * Test attribute "count"
+     */
+    public function testPropertyCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "show_ahead"
+     */
+    public function testPropertyShowAhead()
+    {
+
+    }
+
+    /**
+     * Test attribute "current"
+     */
+    public function testPropertyCurrent()
+    {
+
+    }
+
+    /**
+     * Test attribute "summary"
+     */
+    public function testPropertySummary()
+    {
+
+    }
+
+    /**
+     * Test attribute "next_run"
+     */
+    public function testPropertyNextRun()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_run"
+     */
+    public function testPropertyLastRun()
+    {
+
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_by_name"
+     */
+    public function testPropertyUpdatedByName()
+    {
+
+    }
+
 }

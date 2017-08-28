@@ -128,14 +128,6 @@ class CarModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "cars"
-     */
-    public function testPropertyCars()
-    {
-
-    }
-
-    /**
      * Test attribute "files"
      */
     public function testPropertyFiles()

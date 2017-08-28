@@ -248,7 +248,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\PackageLineOptionsModel $options 
+     * @param \BumbalClient\Model\PackageLineOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -269,7 +269,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\PackageLineFiltersModel $filters 
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -290,7 +290,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -311,7 +311,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -382,7 +382,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

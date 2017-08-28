@@ -183,7 +183,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_tags
-     * @param bool $include_driver_tags 
+     * @param bool $include_driver_tags
      * @return $this
      */
     public function setIncludeDriverTags($include_driver_tags)
@@ -204,7 +204,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_meta_data
-     * @param bool $include_driver_meta_data 
+     * @param bool $include_driver_meta_data
      * @return $this
      */
     public function setIncludeDriverMetaData($include_driver_meta_data)
@@ -225,7 +225,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_links
-     * @param bool $include_driver_links 
+     * @param bool $include_driver_links
      * @return $this
      */
     public function setIncludeDriverLinks($include_driver_links)
@@ -246,7 +246,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * @param bool $include_updated_by_name
      * @return $this
      */
     public function setIncludeUpdatedByName($include_updated_by_name)

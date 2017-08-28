@@ -128,14 +128,6 @@ class TrailerModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "trailers"
-     */
-    public function testPropertyTrailers()
-    {
-
-    }
-
-    /**
      * Test attribute "files"
      */
     public function testPropertyFiles()

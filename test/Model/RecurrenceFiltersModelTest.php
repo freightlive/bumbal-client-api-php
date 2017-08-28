@@ -95,4 +95,28 @@ class RecurrenceFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
+    {
+
+    }
+
 }

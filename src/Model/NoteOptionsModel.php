@@ -183,7 +183,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_tags
-     * @param bool $include_note_tags 
+     * @param bool $include_note_tags
      * @return $this
      */
     public function setIncludeNoteTags($include_note_tags)
@@ -204,7 +204,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_tag_type_link_ids
-     * @param bool $include_note_tag_type_link_ids 
+     * @param bool $include_note_tag_type_link_ids
      * @return $this
      */
     public function setIncludeNoteTagTypeLinkIds($include_note_tag_type_link_ids)
@@ -225,7 +225,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_object_link_ids
-     * @param bool $include_note_object_link_ids 
+     * @param bool $include_note_object_link_ids
      * @return $this
      */
     public function setIncludeNoteObjectLinkIds($include_note_object_link_ids)
@@ -246,7 +246,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by
-     * @param bool $include_updated_by 
+     * @param bool $include_updated_by
      * @return $this
      */
     public function setIncludeUpdatedBy($include_updated_by)

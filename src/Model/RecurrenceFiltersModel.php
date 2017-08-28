@@ -66,7 +66,9 @@ class RecurrenceFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'id' => 'int[]',
+        'updated_at_since' => '\DateTime',
+        'updated_at_till' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +81,9 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'id' => 'id',
+        'updated_at_since' => 'updated_at_since',
+        'updated_at_till' => 'updated_at_till'
     ];
 
 
@@ -88,7 +92,9 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'id' => 'setId',
+        'updated_at_since' => 'setUpdatedAtSince',
+        'updated_at_till' => 'setUpdatedAtTill'
     ];
 
 
@@ -97,7 +103,9 @@ class RecurrenceFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'id' => 'getId',
+        'updated_at_since' => 'getUpdatedAtSince',
+        'updated_at_till' => 'getUpdatedAtTill'
     ];
 
     public static function attributeMap()
@@ -131,6 +139,9 @@ class RecurrenceFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
+        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
     }
 
     /**
@@ -155,6 +166,69 @@ class RecurrenceFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Recurrence id's
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at_since
+     * @return \DateTime
+     */
+    public function getUpdatedAtSince()
+    {
+        return $this->container['updated_at_since'];
+    }
+
+    /**
+     * Sets updated_at_since
+     * @param \DateTime $updated_at_since Show updated since
+     * @return $this
+     */
+    public function setUpdatedAtSince($updated_at_since)
+    {
+        $this->container['updated_at_since'] = $updated_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at_till
+     * @return \DateTime
+     */
+    public function getUpdatedAtTill()
+    {
+        return $this->container['updated_at_till'];
+    }
+
+    /**
+     * Sets updated_at_till
+     * @param \DateTime $updated_at_till Show updated till
+     * @return $this
+     */
+    public function setUpdatedAtTill($updated_at_till)
+    {
+        $this->container['updated_at_till'] = $updated_at_till;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

@@ -103,4 +103,100 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+
+    }
+
+    /**
+     * Test attribute "role_id"
+     */
+    public function testPropertyRoleId()
+    {
+
+    }
+
+    /**
+     * Test attribute "role_name"
+     */
+    public function testPropertyRoleName()
+    {
+
+    }
+
+    /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+
+    }
+
+    /**
+     * Test attribute "name_prefix"
+     */
+    public function testPropertyNamePrefix()
+    {
+
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+
+    }
+
+    /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+
+    }
+
+    /**
+     * Test attribute "password"
+     */
+    public function testPropertyPassword()
+    {
+
+    }
+
+    /**
+     * Test attribute "lang_code"
+     */
+    public function testPropertyLangCode()
+    {
+
+    }
+
+    /**
+     * Test attribute "address_id"
+     */
+    public function testPropertyAddressId()
+    {
+
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+
+    }
+
 }

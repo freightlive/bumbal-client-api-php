@@ -66,7 +66,19 @@ class UsersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int'
+        'id' => 'int',
+        'uuid' => 'int',
+        'role_id' => 'int',
+        'role_name' => 'string',
+        'first_name' => 'string',
+        'name_prefix' => 'string',
+        'last_name' => 'string',
+        'full_name' => 'string',
+        'email' => 'string',
+        'password' => 'string',
+        'lang_code' => 'string',
+        'address_id' => 'int',
+        'address' => '\BumbalClient\Model\AddressModel'
     ];
 
     public static function swaggerTypes()
@@ -79,7 +91,19 @@ class UsersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'role_id' => 'role_id',
+        'role_name' => 'role_name',
+        'first_name' => 'first_name',
+        'name_prefix' => 'name_prefix',
+        'last_name' => 'last_name',
+        'full_name' => 'full_name',
+        'email' => 'email',
+        'password' => 'password',
+        'lang_code' => 'lang_code',
+        'address_id' => 'address_id',
+        'address' => 'address'
     ];
 
 
@@ -88,7 +112,19 @@ class UsersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'role_id' => 'setRoleId',
+        'role_name' => 'setRoleName',
+        'first_name' => 'setFirstName',
+        'name_prefix' => 'setNamePrefix',
+        'last_name' => 'setLastName',
+        'full_name' => 'setFullName',
+        'email' => 'setEmail',
+        'password' => 'setPassword',
+        'lang_code' => 'setLangCode',
+        'address_id' => 'setAddressId',
+        'address' => 'setAddress'
     ];
 
 
@@ -97,7 +133,19 @@ class UsersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'role_id' => 'getRoleId',
+        'role_name' => 'getRoleName',
+        'first_name' => 'getFirstName',
+        'name_prefix' => 'getNamePrefix',
+        'last_name' => 'getLastName',
+        'full_name' => 'getFullName',
+        'email' => 'getEmail',
+        'password' => 'getPassword',
+        'lang_code' => 'getLangCode',
+        'address_id' => 'getAddressId',
+        'address' => 'getAddress'
     ];
 
     public static function attributeMap()
@@ -115,8 +163,28 @@ class UsersModel implements ArrayAccess
         return self::$getters;
     }
 
+    const ROLE_NAME_GUEST = 'Guest';
+    const ROLE_NAME_DRIVER = 'Driver';
+    const ROLE_NAME_PLANNER = 'Planner';
+    const ROLE_NAME_MANAGER = 'Manager';
+    const ROLE_NAME_ADMIN = 'Admin';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getRoleNameAllowableValues()
+    {
+        return [
+            self::ROLE_NAME_GUEST,
+            self::ROLE_NAME_DRIVER,
+            self::ROLE_NAME_PLANNER,
+            self::ROLE_NAME_MANAGER,
+            self::ROLE_NAME_ADMIN,
+        ];
+    }
     
 
     /**
@@ -132,6 +200,18 @@ class UsersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['role_id'] = isset($data['role_id']) ? $data['role_id'] : null;
+        $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['name_prefix'] = isset($data['name_prefix']) ? $data['name_prefix'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
+        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
     }
 
     /**
@@ -145,6 +225,11 @@ class UsersModel implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
+        $allowed_values = ["Guest", "Driver", "Planner", "Manager", "Admin"];
+        if (!in_array($this->container['role_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'role_name', must be one of 'Guest', 'Driver', 'Planner', 'Manager', 'Admin'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -157,6 +242,10 @@ class UsersModel implements ArrayAccess
     public function valid()
     {
         if ($this->container['id'] === null) {
+            return false;
+        }
+        $allowed_values = ["Guest", "Driver", "Planner", "Manager", "Admin"];
+        if (!in_array($this->container['role_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -174,12 +263,268 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     * @return int
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     * @param int $uuid unique per user
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets role_id
+     * @return int
+     */
+    public function getRoleId()
+    {
+        return $this->container['role_id'];
+    }
+
+    /**
+     * Sets role_id
+     * @param int $role_id id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin
+     * @return $this
+     */
+    public function setRoleId($role_id)
+    {
+        $this->container['role_id'] = $role_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets role_name
+     * @return string
+     */
+    public function getRoleName()
+    {
+        return $this->container['role_name'];
+    }
+
+    /**
+     * Sets role_name
+     * @param string $role_name Role name
+     * @return $this
+     */
+    public function setRoleName($role_name)
+    {
+        $allowed_values = array('Guest', 'Driver', 'Planner', 'Manager', 'Admin');
+        if (!is_null($role_name) && (!in_array($role_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'role_name', must be one of 'Guest', 'Driver', 'Planner', 'Manager', 'Admin'");
+        }
+        $this->container['role_name'] = $role_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name First name
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets name_prefix
+     * @return string
+     */
+    public function getNamePrefix()
+    {
+        return $this->container['name_prefix'];
+    }
+
+    /**
+     * Sets name_prefix
+     * @param string $name_prefix Name prefix
+     * @return $this
+     */
+    public function setNamePrefix($name_prefix)
+    {
+        $this->container['name_prefix'] = $name_prefix;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name Last name
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name Full name
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email user email (used for login)
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     * @param string $password user password (set only, no read)
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets lang_code
+     * @return string
+     */
+    public function getLangCode()
+    {
+        return $this->container['lang_code'];
+    }
+
+    /**
+     * Sets lang_code
+     * @param string $lang_code lang code (nl = default)
+     * @return $this
+     */
+    public function setLangCode($lang_code)
+    {
+        $this->container['lang_code'] = $lang_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_id
+     * @return int
+     */
+    public function getAddressId()
+    {
+        return $this->container['address_id'];
+    }
+
+    /**
+     * Sets address_id
+     * @param int $address_id id of the user address
+     * @return $this
+     */
+    public function setAddressId($address_id)
+    {
+        $this->container['address_id'] = $address_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     * @return \BumbalClient\Model\AddressModel
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     * @param \BumbalClient\Model\AddressModel $address user address (mostly interesting for drivers)
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
 
         return $this;
     }

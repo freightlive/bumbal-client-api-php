@@ -188,7 +188,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UsersOptionsModel $options 
+     * @param \BumbalClient\Model\UsersOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +209,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UsersFiltersModel $filters 
+     * @param \BumbalClient\Model\UsersFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -230,7 +230,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -251,7 +251,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -272,7 +272,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

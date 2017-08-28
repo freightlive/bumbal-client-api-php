@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an Assignment
 
-Create or update an Assignment. If id or links are set in the data, and a corresponding assignment    *     is found in Bumbal, an update will be performed.
+Create or update an Assignment. If id or links are set in the data, and a corresponding assignment   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

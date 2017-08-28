@@ -70,6 +70,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'int[]',
         'nr' => 'string',
         'status_id' => 'int',
+        'status_name' => 'string',
         'nr_of_packages' => 'int',
         'package_type_name' => 'string',
         'package_type_id' => 'int',
@@ -119,6 +120,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'activity_id',
         'nr' => 'nr',
         'status_id' => 'status_id',
+        'status_name' => 'status_name',
         'nr_of_packages' => 'nr_of_packages',
         'package_type_name' => 'package_type_name',
         'package_type_id' => 'package_type_id',
@@ -164,6 +166,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'setActivityId',
         'nr' => 'setNr',
         'status_id' => 'setStatusId',
+        'status_name' => 'setStatusName',
         'nr_of_packages' => 'setNrOfPackages',
         'package_type_name' => 'setPackageTypeName',
         'package_type_id' => 'setPackageTypeId',
@@ -209,6 +212,7 @@ class PackageLineModel implements ArrayAccess
         'activity_id' => 'getActivityId',
         'nr' => 'getNr',
         'status_id' => 'getStatusId',
+        'status_name' => 'getStatusName',
         'nr_of_packages' => 'getNrOfPackages',
         'package_type_name' => 'getPackageTypeName',
         'package_type_id' => 'getPackageTypeId',
@@ -259,8 +263,34 @@ class PackageLineModel implements ArrayAccess
         return self::$getters;
     }
 
+    const STATUS_NAME_CANCELLED = 'package_line_cancelled';
+    const STATUS_NAME_INCOMPLETE = 'package_line_incomplete';
+    const STATUS_NAME_NEW = 'package_line_new';
+    const STATUS_NAME_AWAITING = 'package_line_awaiting';
+    const STATUS_NAME_ACCEPTED = 'package_line_accepted';
+    const STATUS_NAME_PLANNED = 'package_line_planned';
+    const STATUS_NAME_IN_PROGRESS = 'package_line_in_progress';
+    const STATUS_NAME_EXECUTED = 'package_line_executed';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusNameAllowableValues()
+    {
+        return [
+            self::STATUS_NAME_CANCELLED,
+            self::STATUS_NAME_INCOMPLETE,
+            self::STATUS_NAME_NEW,
+            self::STATUS_NAME_AWAITING,
+            self::STATUS_NAME_ACCEPTED,
+            self::STATUS_NAME_PLANNED,
+            self::STATUS_NAME_IN_PROGRESS,
+            self::STATUS_NAME_EXECUTED,
+        ];
+    }
     
 
     /**
@@ -279,6 +309,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['nr_of_packages'] = isset($data['nr_of_packages']) ? $data['nr_of_packages'] : null;
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
         $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
@@ -325,6 +356,11 @@ class PackageLineModel implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
+        $allowed_values = ["package_line_cancelled", "package_line_incomplete", "package_line_new", "package_line_awaiting", "package_line_accepted", "package_line_planned", "package_line_in_progress", "package_line_executed"];
+        if (!in_array($this->container['status_name'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status_name', must be one of 'package_line_cancelled', 'package_line_incomplete', 'package_line_new', 'package_line_awaiting', 'package_line_accepted', 'package_line_planned', 'package_line_in_progress', 'package_line_executed'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -337,6 +373,10 @@ class PackageLineModel implements ArrayAccess
     public function valid()
     {
         if ($this->container['id'] === null) {
+            return false;
+        }
+        $allowed_values = ["package_line_cancelled", "package_line_incomplete", "package_line_new", "package_line_awaiting", "package_line_accepted", "package_line_planned", "package_line_in_progress", "package_line_executed"];
+        if (!in_array($this->container['status_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -423,6 +463,31 @@ class PackageLineModel implements ArrayAccess
     public function setStatusId($status_id)
     {
         $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets status_name
+     * @return string
+     */
+    public function getStatusName()
+    {
+        return $this->container['status_name'];
+    }
+
+    /**
+     * Sets status_name
+     * @param string $status_name PackageLine Status
+     * @return $this
+     */
+    public function setStatusName($status_name)
+    {
+        $allowed_values = array('package_line_cancelled', 'package_line_incomplete', 'package_line_new', 'package_line_awaiting', 'package_line_accepted', 'package_line_planned', 'package_line_in_progress', 'package_line_executed');
+        if (!is_null($status_name) && (!in_array($status_name, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'status_name', must be one of 'package_line_cancelled', 'package_line_incomplete', 'package_line_new', 'package_line_awaiting', 'package_line_accepted', 'package_line_planned', 'package_line_in_progress', 'package_line_executed'");
+        }
+        $this->container['status_name'] = $status_name;
 
         return $this;
     }
@@ -1005,7 +1070,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -1026,7 +1091,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1047,7 +1112,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -1068,7 +1133,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
