@@ -68,15 +68,13 @@ class TimeSlotModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'activity_id' => 'int',
-        'time_slot_type' => 'string',
         'date_from' => '\DateTime',
         'time_from' => 'string',
         'date_time_from' => '\DateTime',
         'date_to' => '\DateTime',
         'time_to' => 'string',
         'date_time_to' => '\DateTime',
-        'duration' => 'int',
-        'priority' => 'int'
+        'planned' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -91,15 +89,13 @@ class TimeSlotModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'activity_id' => 'activity_id',
-        'time_slot_type' => 'time_slot_type',
         'date_from' => 'date_from',
         'time_from' => 'time_from',
         'date_time_from' => 'date_time_from',
         'date_to' => 'date_to',
         'time_to' => 'time_to',
         'date_time_to' => 'date_time_to',
-        'duration' => 'duration',
-        'priority' => 'priority'
+        'planned' => 'planned'
     ];
 
 
@@ -110,15 +106,13 @@ class TimeSlotModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'activity_id' => 'setActivityId',
-        'time_slot_type' => 'setTimeSlotType',
         'date_from' => 'setDateFrom',
         'time_from' => 'setTimeFrom',
         'date_time_from' => 'setDateTimeFrom',
         'date_to' => 'setDateTo',
         'time_to' => 'setTimeTo',
         'date_time_to' => 'setDateTimeTo',
-        'duration' => 'setDuration',
-        'priority' => 'setPriority'
+        'planned' => 'setPlanned'
     ];
 
 
@@ -129,15 +123,13 @@ class TimeSlotModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'activity_id' => 'getActivityId',
-        'time_slot_type' => 'getTimeSlotType',
         'date_from' => 'getDateFrom',
         'time_from' => 'getTimeFrom',
         'date_time_from' => 'getDateTimeFrom',
         'date_to' => 'getDateTo',
         'time_to' => 'getTimeTo',
         'date_time_to' => 'getDateTimeTo',
-        'duration' => 'getDuration',
-        'priority' => 'getPriority'
+        'planned' => 'getPlanned'
     ];
 
     public static function attributeMap()
@@ -155,24 +147,8 @@ class TimeSlotModel implements ArrayAccess
         return self::$getters;
     }
 
-    const TIME_SLOT_TYPE_FIRST_ENTRY = 'first-entry';
-    const TIME_SLOT_TYPE_PLANNED = 'planned';
-    const TIME_SLOT_TYPE_ACTUAL = 'actual';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTimeSlotTypeAllowableValues()
-    {
-        return [
-            self::TIME_SLOT_TYPE_FIRST_ENTRY,
-            self::TIME_SLOT_TYPE_PLANNED,
-            self::TIME_SLOT_TYPE_ACTUAL,
-        ];
-    }
     
 
     /**
@@ -189,15 +165,13 @@ class TimeSlotModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
-        $this->container['time_slot_type'] = isset($data['time_slot_type']) ? $data['time_slot_type'] : null;
         $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['planned'] = isset($data['planned']) ? $data['planned'] : null;
     }
 
     /**
@@ -214,14 +188,6 @@ class TimeSlotModel implements ArrayAccess
         if ($this->container['activity_id'] === null) {
             $invalid_properties[] = "'activity_id' can't be null";
         }
-        if ($this->container['time_slot_type'] === null) {
-            $invalid_properties[] = "'time_slot_type' can't be null";
-        }
-        $allowed_values = ["first-entry", "planned", "actual"];
-        if (!in_array($this->container['time_slot_type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'time_slot_type', must be one of 'first-entry', 'planned', 'actual'.";
-        }
-
         return $invalid_properties;
     }
 
@@ -237,13 +203,6 @@ class TimeSlotModel implements ArrayAccess
             return false;
         }
         if ($this->container['activity_id'] === null) {
-            return false;
-        }
-        if ($this->container['time_slot_type'] === null) {
-            return false;
-        }
-        $allowed_values = ["first-entry", "planned", "actual"];
-        if (!in_array($this->container['time_slot_type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -288,31 +247,6 @@ class TimeSlotModel implements ArrayAccess
     public function setActivityId($activity_id)
     {
         $this->container['activity_id'] = $activity_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets time_slot_type
-     * @return string
-     */
-    public function getTimeSlotType()
-    {
-        return $this->container['time_slot_type'];
-    }
-
-    /**
-     * Sets time_slot_type
-     * @param string $time_slot_type TimeSlot Type
-     * @return $this
-     */
-    public function setTimeSlotType($time_slot_type)
-    {
-        $allowed_values = array('first-entry', 'planned', 'actual');
-        if ((!in_array($time_slot_type, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'time_slot_type', must be one of 'first-entry', 'planned', 'actual'");
-        }
-        $this->container['time_slot_type'] = $time_slot_type;
 
         return $this;
     }
@@ -444,43 +378,22 @@ class TimeSlotModel implements ArrayAccess
     }
 
     /**
-     * Gets duration
-     * @return int
+     * Gets planned
+     * @return bool
      */
-    public function getDuration()
+    public function getPlanned()
     {
-        return $this->container['duration'];
+        return $this->container['planned'];
     }
 
     /**
-     * Sets duration
-     * @param int $duration Duration in minutes
+     * Sets planned
+     * @param bool $planned true if this time_slot was used to plan the activity within
      * @return $this
      */
-    public function setDuration($duration)
+    public function setPlanned($planned)
     {
-        $this->container['duration'] = $duration;
-
-        return $this;
-    }
-
-    /**
-     * Gets priority
-     * @return int
-     */
-    public function getPriority()
-    {
-        return $this->container['priority'];
-    }
-
-    /**
-     * Sets priority
-     * @param int $priority Priority Level
-     * @return $this
-     */
-    public function setPriority($priority)
-    {
-        $this->container['priority'] = $priority;
+        $this->container['planned'] = $planned;
 
         return $this;
     }

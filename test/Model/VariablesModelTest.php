@@ -1,6 +1,6 @@
 <?php
 /**
- * TimeSlotModelTest
+ * VariablesModelTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * TimeSlotModelTest Class Doc Comment
+ * VariablesModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description TimeSlotModel
+// * @description VariablesModel
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TimeSlotModelTest extends \PHPUnit_Framework_TestCase
+class VariablesModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,81 +88,33 @@ class TimeSlotModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TimeSlotModel"
+     * Test "VariablesModel"
      */
-    public function testTimeSlotModel()
+    public function testVariablesModel()
     {
 
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "tags"
      */
-    public function testPropertyId()
+    public function testPropertyTags()
     {
 
     }
 
     /**
-     * Test attribute "activity_id"
+     * Test attribute "constants"
      */
-    public function testPropertyActivityId()
+    public function testPropertyConstants()
     {
 
     }
 
     /**
-     * Test attribute "date_from"
+     * Test attribute "uom"
      */
-    public function testPropertyDateFrom()
-    {
-
-    }
-
-    /**
-     * Test attribute "time_from"
-     */
-    public function testPropertyTimeFrom()
-    {
-
-    }
-
-    /**
-     * Test attribute "date_time_from"
-     */
-    public function testPropertyDateTimeFrom()
-    {
-
-    }
-
-    /**
-     * Test attribute "date_to"
-     */
-    public function testPropertyDateTo()
-    {
-
-    }
-
-    /**
-     * Test attribute "time_to"
-     */
-    public function testPropertyTimeTo()
-    {
-
-    }
-
-    /**
-     * Test attribute "date_time_to"
-     */
-    public function testPropertyDateTimeTo()
-    {
-
-    }
-
-    /**
-     * Test attribute "planned"
-     */
-    public function testPropertyPlanned()
+    public function testPropertyUom()
     {
 
     }

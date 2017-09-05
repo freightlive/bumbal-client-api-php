@@ -163,6 +163,7 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settingss
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
+*SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
 *TagsApi* | [**createTag**](docs/Api/TagsApi.md#createtag) | **POST** /tags | Add a new Tag
 *TagsApi* | [**deleteTag**](docs/Api/TagsApi.md#deletetag) | **DELETE** /tags/{tagId} | Delete a Tag
 *TagsApi* | [**retrieveListTags**](docs/Api/TagsApi.md#retrievelisttags) | **PUT** /tags | Retrieve List of Tags
@@ -267,6 +268,7 @@ Class | Method | HTTP request | Description
  - [UsersModel](docs/Model/UsersModel.md)
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)
+ - [VariablesModel](docs/Model/VariablesModel.md)
 
 
 ## Documentation For Authorization
