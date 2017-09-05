@@ -67,6 +67,8 @@ class TimeSlotModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'time_slot_type' => 'string',
+        'time_slot_type_id' => 'int',
         'activity_id' => 'int',
         'date_from' => '\DateTime',
         'time_from' => 'string',
@@ -88,6 +90,8 @@ class TimeSlotModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'time_slot_type' => 'time_slot_type',
+        'time_slot_type_id' => 'time_slot_type_id',
         'activity_id' => 'activity_id',
         'date_from' => 'date_from',
         'time_from' => 'time_from',
@@ -105,6 +109,8 @@ class TimeSlotModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'time_slot_type' => 'setTimeSlotType',
+        'time_slot_type_id' => 'setTimeSlotTypeId',
         'activity_id' => 'setActivityId',
         'date_from' => 'setDateFrom',
         'time_from' => 'setTimeFrom',
@@ -122,6 +128,8 @@ class TimeSlotModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'time_slot_type' => 'getTimeSlotType',
+        'time_slot_type_id' => 'getTimeSlotTypeId',
         'activity_id' => 'getActivityId',
         'date_from' => 'getDateFrom',
         'time_from' => 'getTimeFrom',
@@ -164,6 +172,8 @@ class TimeSlotModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['time_slot_type'] = isset($data['time_slot_type']) ? $data['time_slot_type'] : null;
+        $this->container['time_slot_type_id'] = isset($data['time_slot_type_id']) ? $data['time_slot_type_id'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
         $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
@@ -226,6 +236,48 @@ class TimeSlotModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slot_type
+     * @return string
+     */
+    public function getTimeSlotType()
+    {
+        return $this->container['time_slot_type'];
+    }
+
+    /**
+     * Sets time_slot_type
+     * @param string $time_slot_type Time Slot Type
+     * @return $this
+     */
+    public function setTimeSlotType($time_slot_type)
+    {
+        $this->container['time_slot_type'] = $time_slot_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slot_type_id
+     * @return int
+     */
+    public function getTimeSlotTypeId()
+    {
+        return $this->container['time_slot_type_id'];
+    }
+
+    /**
+     * Sets time_slot_type_id
+     * @param int $time_slot_type_id Time Slot Type ID
+     * @return $this
+     */
+    public function setTimeSlotTypeId($time_slot_type_id)
+    {
+        $this->container['time_slot_type_id'] = $time_slot_type_id;
 
         return $this;
     }

@@ -104,6 +104,22 @@ class TimeSlotModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "time_slot_type"
+     */
+    public function testPropertyTimeSlotType()
+    {
+
+    }
+
+    /**
+     * Test attribute "time_slot_type_id"
+     */
+    public function testPropertyTimeSlotTypeId()
+    {
+
+    }
+
+    /**
      * Test attribute "activity_id"
      */
     public function testPropertyActivityId()

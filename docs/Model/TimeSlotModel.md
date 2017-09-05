@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
+**time_slot_type** | **string** | Time Slot Type | [optional] 
+**time_slot_type_id** | **int** | Time Slot Type ID | [optional] 
 **activity_id** | **int** | Activity ID to which this TimeSlot belongs | 
 **date_from** | [**\DateTime**](Date.md) |  | [optional] 
 **time_from** | **string** |  | [optional] 
