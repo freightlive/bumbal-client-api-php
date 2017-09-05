@@ -176,6 +176,14 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_communication_object"
+     */
+    public function testPropertyIncludeCommunicationObject()
+    {
+
+    }
+
+    /**
      * Test attribute "include_activity_links"
      */
     public function testPropertyIncludeActivityLinks()
@@ -211,6 +219,22 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_activity_files_meta_data_objects"
      */
     public function testPropertyIncludeActivityFilesMetaDataObjects()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_activity_tags"
+     */
+    public function testPropertyIncludeActivityTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "include_tag_type_name"
+     */
+    public function testPropertyIncludeTagTypeName()
     {
 
     }

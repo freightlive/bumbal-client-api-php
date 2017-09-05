@@ -76,11 +76,14 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'bool',
         'include_driver_info' => 'bool',
         'include_communication' => 'bool',
+        'include_communication_object' => 'bool',
         'include_activity_links' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_activity_files' => 'bool',
         'include_activity_files_meta_data' => 'bool',
-        'include_activity_files_meta_data_objects' => 'bool'
+        'include_activity_files_meta_data_objects' => 'bool',
+        'include_activity_tags' => 'bool',
+        'include_tag_type_name' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -103,11 +106,14 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'include_route_info',
         'include_driver_info' => 'include_driver_info',
         'include_communication' => 'include_communication',
+        'include_communication_object' => 'include_communication_object',
         'include_activity_links' => 'include_activity_links',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_activity_files' => 'include_activity_files',
         'include_activity_files_meta_data' => 'include_activity_files_meta_data',
-        'include_activity_files_meta_data_objects' => 'include_activity_files_meta_data_objects'
+        'include_activity_files_meta_data_objects' => 'include_activity_files_meta_data_objects',
+        'include_activity_tags' => 'include_activity_tags',
+        'include_tag_type_name' => 'include_tag_type_name'
     ];
 
 
@@ -126,11 +132,14 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'setIncludeRouteInfo',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_communication' => 'setIncludeCommunication',
+        'include_communication_object' => 'setIncludeCommunicationObject',
         'include_activity_links' => 'setIncludeActivityLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_activity_files' => 'setIncludeActivityFiles',
         'include_activity_files_meta_data' => 'setIncludeActivityFilesMetaData',
-        'include_activity_files_meta_data_objects' => 'setIncludeActivityFilesMetaDataObjects'
+        'include_activity_files_meta_data_objects' => 'setIncludeActivityFilesMetaDataObjects',
+        'include_activity_tags' => 'setIncludeActivityTags',
+        'include_tag_type_name' => 'setIncludeTagTypeName'
     ];
 
 
@@ -149,11 +158,14 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'getIncludeRouteInfo',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_communication' => 'getIncludeCommunication',
+        'include_communication_object' => 'getIncludeCommunicationObject',
         'include_activity_links' => 'getIncludeActivityLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_activity_files' => 'getIncludeActivityFiles',
         'include_activity_files_meta_data' => 'getIncludeActivityFilesMetaData',
-        'include_activity_files_meta_data_objects' => 'getIncludeActivityFilesMetaDataObjects'
+        'include_activity_files_meta_data_objects' => 'getIncludeActivityFilesMetaDataObjects',
+        'include_activity_tags' => 'getIncludeActivityTags',
+        'include_tag_type_name' => 'getIncludeTagTypeName'
     ];
 
     public static function attributeMap()
@@ -197,11 +209,14 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
+        $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
         $this->container['include_activity_files_meta_data'] = isset($data['include_activity_files_meta_data']) ? $data['include_activity_files_meta_data'] : null;
         $this->container['include_activity_files_meta_data_objects'] = isset($data['include_activity_files_meta_data_objects']) ? $data['include_activity_files_meta_data_objects'] : null;
+        $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
+        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
     }
 
     /**
@@ -438,6 +453,27 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
+     * Gets include_communication_object
+     * @return bool
+     */
+    public function getIncludeCommunicationObject()
+    {
+        return $this->container['include_communication_object'];
+    }
+
+    /**
+     * Sets include_communication_object
+     * @param bool $include_communication_object
+     * @return $this
+     */
+    public function setIncludeCommunicationObject($include_communication_object)
+    {
+        $this->container['include_communication_object'] = $include_communication_object;
+
+        return $this;
+    }
+
+    /**
      * Gets include_activity_links
      * @return bool
      */
@@ -538,6 +574,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityFilesMetaDataObjects($include_activity_files_meta_data_objects)
     {
         $this->container['include_activity_files_meta_data_objects'] = $include_activity_files_meta_data_objects;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_tags
+     * @return bool
+     */
+    public function getIncludeActivityTags()
+    {
+        return $this->container['include_activity_tags'];
+    }
+
+    /**
+     * Sets include_activity_tags
+     * @param bool $include_activity_tags
+     * @return $this
+     */
+    public function setIncludeActivityTags($include_activity_tags)
+    {
+        $this->container['include_activity_tags'] = $include_activity_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_type_name
+     * @return bool
+     */
+    public function getIncludeTagTypeName()
+    {
+        return $this->container['include_tag_type_name'];
+    }
+
+    /**
+     * Sets include_tag_type_name
+     * @param bool $include_tag_type_name
+     * @return $this
+     */
+    public function setIncludeTagTypeName($include_tag_type_name)
+    {
+        $this->container['include_tag_type_name'] = $include_tag_type_name;
 
         return $this;
     }
