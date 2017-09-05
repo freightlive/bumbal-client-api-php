@@ -521,7 +521,7 @@ class ActivityApi
      *
      * @param \BumbalClient\Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ActivityModel[]
+     * @return \BumbalClient\Model\ActivityListResponse
      */
     public function retrieveListActivity($arguments)
     {
@@ -536,7 +536,7 @@ class ActivityApi
      *
      * @param \BumbalClient\Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ActivityModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ActivityListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListActivityWithHttpInfo($arguments)
     {
@@ -584,15 +584,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ActivityModel[]',
+                '\BumbalClient\Model\ActivityListResponse',
                 '/activity'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

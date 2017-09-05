@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListActivity**
-> \BumbalClient\Model\ActivityModel[] retrieveListActivity($arguments)
+> \BumbalClient\Model\ActivityListResponse retrieveListActivity($arguments)
 
 Retrieve List of Activities
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ActivityModel[]**](../Model/ActivityModel.md)
+[**\BumbalClient\Model\ActivityListResponse**](../Model/ActivityListResponse.md)
 
 ### Authorization
 
