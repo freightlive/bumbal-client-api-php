@@ -67,10 +67,12 @@ class AddressModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'full_name' => 'string',
         'name_1' => 'string',
         'name_2' => 'string',
         'street_1' => 'string',
         'street_2' => 'string',
+        'full_addressline' => 'string',
         'house_nr' => 'string',
         'house_nr_addendum' => 'string',
         'zipcode' => 'string',
@@ -97,10 +99,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'full_name' => 'full_name',
         'name_1' => 'name_1',
         'name_2' => 'name_2',
         'street_1' => 'street_1',
         'street_2' => 'street_2',
+        'full_addressline' => 'full_addressline',
         'house_nr' => 'house_nr',
         'house_nr_addendum' => 'house_nr_addendum',
         'zipcode' => 'zipcode',
@@ -123,10 +127,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'full_name' => 'setFullName',
         'name_1' => 'setName1',
         'name_2' => 'setName2',
         'street_1' => 'setStreet1',
         'street_2' => 'setStreet2',
+        'full_addressline' => 'setFullAddressline',
         'house_nr' => 'setHouseNr',
         'house_nr_addendum' => 'setHouseNrAddendum',
         'zipcode' => 'setZipcode',
@@ -149,10 +155,12 @@ class AddressModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'full_name' => 'getFullName',
         'name_1' => 'getName1',
         'name_2' => 'getName2',
         'street_1' => 'getStreet1',
         'street_2' => 'getStreet2',
+        'full_addressline' => 'getFullAddressline',
         'house_nr' => 'getHouseNr',
         'house_nr_addendum' => 'getHouseNrAddendum',
         'zipcode' => 'getZipcode',
@@ -200,10 +208,12 @@ class AddressModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
         $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
         $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
         $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
+        $this->container['full_addressline'] = isset($data['full_addressline']) ? $data['full_addressline'] : null;
         $this->container['house_nr'] = isset($data['house_nr']) ? $data['house_nr'] : null;
         $this->container['house_nr_addendum'] = isset($data['house_nr_addendum']) ? $data['house_nr_addendum'] : null;
         $this->container['zipcode'] = isset($data['zipcode']) ? $data['zipcode'] : null;
@@ -265,6 +275,27 @@ class AddressModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }
@@ -349,6 +380,27 @@ class AddressModel implements ArrayAccess
     public function setStreet2($street_2)
     {
         $this->container['street_2'] = $street_2;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_addressline
+     * @return string
+     */
+    public function getFullAddressline()
+    {
+        return $this->container['full_addressline'];
+    }
+
+    /**
+     * Sets full_addressline
+     * @param string $full_addressline
+     * @return $this
+     */
+    public function setFullAddressline($full_addressline)
+    {
+        $this->container['full_addressline'] = $full_addressline;
 
         return $this;
     }

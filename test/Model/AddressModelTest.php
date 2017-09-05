@@ -104,6 +104,14 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+
+    }
+
+    /**
      * Test attribute "name_1"
      */
     public function testPropertyName1()
@@ -131,6 +139,14 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "street_2"
      */
     public function testPropertyStreet2()
+    {
+
+    }
+
+    /**
+     * Test attribute "full_addressline"
+     */
+    public function testPropertyFullAddressline()
     {
 
     }
