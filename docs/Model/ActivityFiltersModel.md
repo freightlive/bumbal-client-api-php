@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **status_id** | **int[]** | Activity Status id | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
+**party_id** | **int** | Party ID | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
 **links** | **object[]** | Activity Link ids | [optional] 
 

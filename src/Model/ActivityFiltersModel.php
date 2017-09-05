@@ -74,6 +74,7 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'int[]',
         'activity_type_id' => 'int[]',
         'route_id' => 'int[]',
+        'party_id' => 'int',
         'link' => 'object[]',
         'links' => 'object[]'
     ];
@@ -96,6 +97,7 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'status_id',
         'activity_type_id' => 'activity_type_id',
         'route_id' => 'route_id',
+        'party_id' => 'party_id',
         'link' => 'link',
         'links' => 'links'
     ];
@@ -114,6 +116,7 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'setStatusId',
         'activity_type_id' => 'setActivityTypeId',
         'route_id' => 'setRouteId',
+        'party_id' => 'setPartyId',
         'link' => 'setLink',
         'links' => 'setLinks'
     ];
@@ -132,6 +135,7 @@ class ActivityFiltersModel implements ArrayAccess
         'status_id' => 'getStatusId',
         'activity_type_id' => 'getActivityTypeId',
         'route_id' => 'getRouteId',
+        'party_id' => 'getPartyId',
         'link' => 'getLink',
         'links' => 'getLinks'
     ];
@@ -175,6 +179,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
@@ -366,6 +371,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setRouteId($route_id)
     {
         $this->container['route_id'] = $route_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id Party ID
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
 
         return $this;
     }
