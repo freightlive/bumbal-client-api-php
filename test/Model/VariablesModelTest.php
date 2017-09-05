@@ -96,25 +96,9 @@ class VariablesModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "content"
      */
-    public function testPropertyTags()
-    {
-
-    }
-
-    /**
-     * Test attribute "constants"
-     */
-    public function testPropertyConstants()
-    {
-
-    }
-
-    /**
-     * Test attribute "uom"
-     */
-    public function testPropertyUom()
+    public function testPropertyContent()
     {
 
     }

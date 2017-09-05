@@ -66,9 +66,7 @@ class VariablesModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tags' => 'string[]',
-        'constants' => 'string[]',
-        'uom' => 'string[]'
+        'content' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -81,9 +79,7 @@ class VariablesModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tags' => 'tags',
-        'constants' => 'constants',
-        'uom' => 'uom'
+        'content' => 'content'
     ];
 
 
@@ -92,9 +88,7 @@ class VariablesModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tags' => 'setTags',
-        'constants' => 'setConstants',
-        'uom' => 'setUom'
+        'content' => 'setContent'
     ];
 
 
@@ -103,9 +97,7 @@ class VariablesModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tags' => 'getTags',
-        'constants' => 'getConstants',
-        'uom' => 'getUom'
+        'content' => 'getContent'
     ];
 
     public static function attributeMap()
@@ -139,9 +131,7 @@ class VariablesModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['constants'] = isset($data['constants']) ? $data['constants'] : null;
-        $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
+        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
     }
 
     /**
@@ -168,64 +158,22 @@ class VariablesModel implements ArrayAccess
 
 
     /**
-     * Gets tags
-     * @return string[]
+     * Gets content
+     * @return string
      */
-    public function getTags()
+    public function getContent()
     {
-        return $this->container['tags'];
+        return $this->container['content'];
     }
 
     /**
-     * Sets tags
-     * @param string[] $tags
+     * Sets content
+     * @param string $content
      * @return $this
      */
-    public function setTags($tags)
+    public function setContent($content)
     {
-        $this->container['tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets constants
-     * @return string[]
-     */
-    public function getConstants()
-    {
-        return $this->container['constants'];
-    }
-
-    /**
-     * Sets constants
-     * @param string[] $constants
-     * @return $this
-     */
-    public function setConstants($constants)
-    {
-        $this->container['constants'] = $constants;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom
-     * @return string[]
-     */
-    public function getUom()
-    {
-        return $this->container['uom'];
-    }
-
-    /**
-     * Sets uom
-     * @param string[] $uom
-     * @return $this
-     */
-    public function setUom($uom)
-    {
-        $this->container['uom'] = $uom;
+        $this->container['content'] = $content;
 
         return $this;
     }
