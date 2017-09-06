@@ -248,6 +248,14 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_assignment_object"
+     */
+    public function testPropertyIncludeAssignmentObject()
+    {
+
+    }
+
+    /**
      * Test attribute "include_activity_record_info"
      */
     public function testPropertyIncludeActivityRecordInfo()
