@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAddress**](AddressApi.md#createAddress) | **POST** /address | Add a new Address
+[**createAddress**](AddressApi.md#createAddress) | **POST** /address/set | Add a new Address
 [**deleteAddress**](AddressApi.md#deleteAddress) | **DELETE** /address/{addressId} | Delete an Address
 [**retrieveAddress**](AddressApi.md#retrieveAddress) | **GET** /address/{addressId} | Retrieve a Address
 [**retrieveListAddress**](AddressApi.md#retrieveListAddress) | **PUT** /address | Retrieve List of Addresses

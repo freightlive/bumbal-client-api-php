@@ -128,7 +128,7 @@ class AddressApi
     public function createAddressWithHttpInfo($body = null)
     {
         // parse inputs
-        $resourcePath = "/address";
+        $resourcePath = "/address/set";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -168,7 +168,7 @@ class AddressApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/address'
+                '/address/set'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
