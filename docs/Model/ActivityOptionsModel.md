@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **include_activity_files_meta_data_objects** | **bool** |  | [optional] 
 **include_activity_tags** | **bool** |  | [optional] 
 **include_tag_type_name** | **bool** |  | [optional] 
+**include_assignment_nr** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

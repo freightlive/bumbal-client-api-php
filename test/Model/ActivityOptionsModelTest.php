@@ -239,4 +239,12 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "include_assignment_nr"
+     */
+    public function testPropertyIncludeAssignmentNr()
+    {
+
+    }
+
 }
