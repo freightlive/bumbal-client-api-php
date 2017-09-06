@@ -111,4 +111,12 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "party_id"
+     */
+    public function testPropertyPartyId()
+    {
+
+    }
+
 }

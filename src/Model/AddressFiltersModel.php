@@ -67,7 +67,8 @@ class AddressFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'address_type_id' => 'string[]',
-        'address_tags' => 'string[]'
+        'address_tags' => 'string[]',
+        'party_id' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -81,7 +82,8 @@ class AddressFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'address_type_id' => 'address_type_id',
-        'address_tags' => 'address_tags'
+        'address_tags' => 'address_tags',
+        'party_id' => 'party_id'
     ];
 
 
@@ -91,7 +93,8 @@ class AddressFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'address_type_id' => 'setAddressTypeId',
-        'address_tags' => 'setAddressTags'
+        'address_tags' => 'setAddressTags',
+        'party_id' => 'setPartyId'
     ];
 
 
@@ -101,7 +104,8 @@ class AddressFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'address_type_id' => 'getAddressTypeId',
-        'address_tags' => 'getAddressTags'
+        'address_tags' => 'getAddressTags',
+        'party_id' => 'getPartyId'
     ];
 
     public static function attributeMap()
@@ -137,6 +141,7 @@ class AddressFiltersModel implements ArrayAccess
     {
         $this->container['address_type_id'] = isset($data['address_type_id']) ? $data['address_type_id'] : null;
         $this->container['address_tags'] = isset($data['address_tags']) ? $data['address_tags'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
     }
 
     /**
@@ -200,6 +205,27 @@ class AddressFiltersModel implements ArrayAccess
     public function setAddressTags($address_tags)
     {
         $this->container['address_tags'] = $address_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id Party ID
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
 
         return $this;
     }
