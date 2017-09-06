@@ -72,6 +72,8 @@ class ActivityModel implements ArrayAccess
         'activity_type_id' => 'int',
         'status_id' => 'int',
         'status_name' => 'string',
+        'assignment_id' => 'int',
+        'assignment_nr' => 'string',
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
         'locked' => 'bool',
@@ -132,6 +134,8 @@ class ActivityModel implements ArrayAccess
         'activity_type_id' => 'activity_type_id',
         'status_id' => 'status_id',
         'status_name' => 'status_name',
+        'assignment_id' => 'assignment_id',
+        'assignment_nr' => 'assignment_nr',
         'instructions' => 'instructions',
         'remarks' => 'remarks',
         'locked' => 'locked',
@@ -188,6 +192,8 @@ class ActivityModel implements ArrayAccess
         'activity_type_id' => 'setActivityTypeId',
         'status_id' => 'setStatusId',
         'status_name' => 'setStatusName',
+        'assignment_id' => 'setAssignmentId',
+        'assignment_nr' => 'setAssignmentNr',
         'instructions' => 'setInstructions',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
@@ -244,6 +250,8 @@ class ActivityModel implements ArrayAccess
         'activity_type_id' => 'getActivityTypeId',
         'status_id' => 'getStatusId',
         'status_name' => 'getStatusName',
+        'assignment_id' => 'getAssignmentId',
+        'assignment_nr' => 'getAssignmentNr',
         'instructions' => 'getInstructions',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
@@ -371,6 +379,8 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
+        $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
+        $this->container['assignment_nr'] = isset($data['assignment_nr']) ? $data['assignment_nr'] : null;
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
@@ -592,6 +602,48 @@ class ActivityModel implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'status_name', must be one of 'activity_new', 'activity_accepted', 'activity_planned', 'activity_in_progress', 'activity_executed', 'activity_cancelled', 'activity_awaiting'");
         }
         $this->container['status_name'] = $status_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_id
+     * @return int
+     */
+    public function getAssignmentId()
+    {
+        return $this->container['assignment_id'];
+    }
+
+    /**
+     * Sets assignment_id
+     * @param int $assignment_id Assignment ID
+     * @return $this
+     */
+    public function setAssignmentId($assignment_id)
+    {
+        $this->container['assignment_id'] = $assignment_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_nr
+     * @return string
+     */
+    public function getAssignmentNr()
+    {
+        return $this->container['assignment_nr'];
+    }
+
+    /**
+     * Sets assignment_nr
+     * @param string $assignment_nr Assignment NR
+     * @return $this
+     */
+    public function setAssignmentNr($assignment_nr)
+    {
+        $this->container['assignment_nr'] = $assignment_nr;
 
         return $this;
     }

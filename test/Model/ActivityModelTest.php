@@ -144,6 +144,22 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "assignment_id"
+     */
+    public function testPropertyAssignmentId()
+    {
+
+    }
+
+    /**
+     * Test attribute "assignment_nr"
+     */
+    public function testPropertyAssignmentNr()
+    {
+
+    }
+
+    /**
      * Test attribute "instructions"
      */
     public function testPropertyInstructions()
