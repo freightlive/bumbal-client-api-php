@@ -371,7 +371,7 @@ class AddressApi
      *
      * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\AddressModel[]
+     * @return \BumbalClient\Model\AddressListResponse
      */
     public function retrieveListAddress($arguments)
     {
@@ -386,7 +386,7 @@ class AddressApi
      *
      * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\AddressModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AddressListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListAddressWithHttpInfo($arguments)
     {
@@ -434,15 +434,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\AddressModel[]',
+                '\BumbalClient\Model\AddressListResponse',
                 '/address'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

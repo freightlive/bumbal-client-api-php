@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include_phone_nrs** | **bool** |  | [optional] 
+**include_emails** | **bool** |  | [optional] 
 **include_address_tags** | **bool** |  | [optional] 
 **include_party_info** | **bool** |  | [optional] 
 **include_address_type_ids** | **bool** |  | [optional] 

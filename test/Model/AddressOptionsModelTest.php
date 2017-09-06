@@ -104,6 +104,14 @@ class AddressOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_emails"
+     */
+    public function testPropertyIncludeEmails()
+    {
+
+    }
+
+    /**
      * Test attribute "include_address_tags"
      */
     public function testPropertyIncludeAddressTags()

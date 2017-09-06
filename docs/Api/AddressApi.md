@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAddress**
-> \BumbalClient\Model\AddressModel[] retrieveListAddress($arguments)
+> \BumbalClient\Model\AddressListResponse retrieveListAddress($arguments)
 
 Retrieve List of Addresses
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AddressModel[]**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressListResponse**](../Model/AddressListResponse.md)
 
 ### Authorization
 

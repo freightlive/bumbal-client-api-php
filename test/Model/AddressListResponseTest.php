@@ -1,6 +1,6 @@
 <?php
 /**
- * AddressRetrieveListArgumentsTest
+ * AddressListResponseTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace BumbalClient;
 
 /**
- * AddressRetrieveListArgumentsTest Class Doc Comment
+ * AddressListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description AddressRetrieveListArguments
+// * @description AddressListResponse
 /**
  * @package     BumbalClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddressRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class AddressListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,57 +88,41 @@ class AddressRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AddressRetrieveListArguments"
+     * Test "AddressListResponse"
      */
-    public function testAddressRetrieveListArguments()
+    public function testAddressListResponse()
     {
 
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "items"
      */
-    public function testPropertyOptions()
+    public function testPropertyItems()
     {
 
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyFilters()
+    public function testPropertyCountFiltered()
     {
 
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyLimit()
+    public function testPropertyCountUnfiltered()
     {
 
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "count_limited"
      */
-    public function testPropertyOffset()
-    {
-
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
-    {
-
-    }
-
-    /**
-     * Test attribute "as_list"
-     */
-    public function testPropertyAsList()
+    public function testPropertyCountLimited()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AddressOptionsModel
+ * AddressListResponse
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AddressOptionsModel Class Doc Comment
+ * AddressListResponse Class Doc Comment
  *
  * @category    Class */
 /**
@@ -53,24 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddressOptionsModel implements ArrayAccess
+class AddressListResponse implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AddressOptionsModel';
+    protected static $swaggerModelName = 'AddressListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool',
-        'include_emails' => 'bool',
-        'include_address_tags' => 'bool',
-        'include_party_info' => 'bool',
-        'include_address_type_ids' => 'bool'
+        'items' => '\BumbalClient\Model\AddressModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -83,11 +82,10 @@ class AddressOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs',
-        'include_emails' => 'include_emails',
-        'include_address_tags' => 'include_address_tags',
-        'include_party_info' => 'include_party_info',
-        'include_address_type_ids' => 'include_address_type_ids'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -96,11 +94,10 @@ class AddressOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs',
-        'include_emails' => 'setIncludeEmails',
-        'include_address_tags' => 'setIncludeAddressTags',
-        'include_party_info' => 'setIncludePartyInfo',
-        'include_address_type_ids' => 'setIncludeAddressTypeIds'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -109,11 +106,10 @@ class AddressOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs',
-        'include_emails' => 'getIncludeEmails',
-        'include_address_tags' => 'getIncludeAddressTags',
-        'include_party_info' => 'getIncludePartyInfo',
-        'include_address_type_ids' => 'getIncludeAddressTypeIds'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -147,11 +143,10 @@ class AddressOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
-        $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;
-        $this->container['include_address_tags'] = isset($data['include_address_tags']) ? $data['include_address_tags'] : null;
-        $this->container['include_party_info'] = isset($data['include_party_info']) ? $data['include_party_info'] : null;
-        $this->container['include_address_type_ids'] = isset($data['include_address_type_ids']) ? $data['include_address_type_ids'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -178,106 +173,85 @@ class AddressOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_phone_nrs
-     * @return bool
+     * Gets items
+     * @return \BumbalClient\Model\AddressModel[]
      */
-    public function getIncludePhoneNrs()
+    public function getItems()
     {
-        return $this->container['include_phone_nrs'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets include_phone_nrs
-     * @param bool $include_phone_nrs
+     * Sets items
+     * @param \BumbalClient\Model\AddressModel[] $items
      * @return $this
      */
-    public function setIncludePhoneNrs($include_phone_nrs)
+    public function setItems($items)
     {
-        $this->container['include_phone_nrs'] = $include_phone_nrs;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets include_emails
-     * @return bool
+     * Gets count_filtered
+     * @return int
      */
-    public function getIncludeEmails()
+    public function getCountFiltered()
     {
-        return $this->container['include_emails'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets include_emails
-     * @param bool $include_emails
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setIncludeEmails($include_emails)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['include_emails'] = $include_emails;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets include_address_tags
-     * @return bool
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getIncludeAddressTags()
+    public function getCountUnfiltered()
     {
-        return $this->container['include_address_tags'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets include_address_tags
-     * @param bool $include_address_tags
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setIncludeAddressTags($include_address_tags)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['include_address_tags'] = $include_address_tags;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets include_party_info
-     * @return bool
+     * Gets count_limited
+     * @return int
      */
-    public function getIncludePartyInfo()
+    public function getCountLimited()
     {
-        return $this->container['include_party_info'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets include_party_info
-     * @param bool $include_party_info
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setIncludePartyInfo($include_party_info)
+    public function setCountLimited($count_limited)
     {
-        $this->container['include_party_info'] = $include_party_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_address_type_ids
-     * @return bool
-     */
-    public function getIncludeAddressTypeIds()
-    {
-        return $this->container['include_address_type_ids'];
-    }
-
-    /**
-     * Sets include_address_type_ids
-     * @param bool $include_address_type_ids
-     * @return $this
-     */
-    public function setIncludeAddressTypeIds($include_address_type_ids)
-    {
-        $this->container['include_address_type_ids'] = $include_address_type_ids;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }
