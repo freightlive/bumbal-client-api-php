@@ -67,6 +67,7 @@ class AssignmentModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'party_id' => 'int',
         'status_id' => 'int',
         'nr' => 'string',
         'party_link' => '\BumbalClient\Model\LinkModel[]',
@@ -94,6 +95,7 @@ class AssignmentModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'party_id' => 'party_id',
         'status_id' => 'status_id',
         'nr' => 'nr',
         'party_link' => 'party_link',
@@ -117,6 +119,7 @@ class AssignmentModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'party_id' => 'setPartyId',
         'status_id' => 'setStatusId',
         'nr' => 'setNr',
         'party_link' => 'setPartyLink',
@@ -140,6 +143,7 @@ class AssignmentModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'party_id' => 'getPartyId',
         'status_id' => 'getStatusId',
         'nr' => 'getNr',
         'party_link' => 'getPartyLink',
@@ -208,6 +212,7 @@ class AssignmentModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['party_link'] = isset($data['party_link']) ? $data['party_link'] : null;
@@ -285,6 +290,27 @@ class AssignmentModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id Party ID
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
 
         return $this;
     }

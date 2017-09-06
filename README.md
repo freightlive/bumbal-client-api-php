@@ -62,13 +62,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
+$activity_id = 789; // int | ID of the activity to delete
 
 try {
-    $result = $api_instance->createActivity($body);
+    $result = $api_instance->deleteActivity($activity_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ActivityApi->createActivity: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActivityApi->deleteActivity: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -80,7 +80,6 @@ All URIs are relative to *http://localhost/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ActivityApi* | [**createActivity**](docs/Api/ActivityApi.md#createactivity) | **POST** /activity | Create or update an Activity
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities

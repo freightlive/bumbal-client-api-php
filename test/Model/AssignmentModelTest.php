@@ -104,6 +104,14 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "party_id"
+     */
+    public function testPropertyPartyId()
+    {
+
+    }
+
+    /**
      * Test attribute "status_id"
      */
     public function testPropertyStatusId()
