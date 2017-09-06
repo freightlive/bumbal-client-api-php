@@ -115,8 +115,10 @@ class ActivityModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'activity_created_at' => '\DateTime',
+        'activity_updated_at' => '\DateTime',
+        'activity_created_by' => 'int',
+        'activity_updated_by' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -178,8 +180,10 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'notes' => 'notes',
         'files' => 'files',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'activity_created_at' => 'activity_created_at',
+        'activity_updated_at' => 'activity_updated_at',
+        'activity_created_by' => 'activity_created_by',
+        'activity_updated_by' => 'activity_updated_by'
     ];
 
 
@@ -237,8 +241,10 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
         'files' => 'setFiles',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'activity_created_at' => 'setActivityCreatedAt',
+        'activity_updated_at' => 'setActivityUpdatedAt',
+        'activity_created_by' => 'setActivityCreatedBy',
+        'activity_updated_by' => 'setActivityUpdatedBy'
     ];
 
 
@@ -296,8 +302,10 @@ class ActivityModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
         'files' => 'getFiles',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'activity_created_at' => 'getActivityCreatedAt',
+        'activity_updated_at' => 'getActivityUpdatedAt',
+        'activity_created_by' => 'getActivityCreatedBy',
+        'activity_updated_by' => 'getActivityUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -426,8 +434,10 @@ class ActivityModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['activity_created_at'] = isset($data['activity_created_at']) ? $data['activity_created_at'] : null;
+        $this->container['activity_updated_at'] = isset($data['activity_updated_at']) ? $data['activity_updated_at'] : null;
+        $this->container['activity_created_by'] = isset($data['activity_created_by']) ? $data['activity_created_by'] : null;
+        $this->container['activity_updated_by'] = isset($data['activity_updated_by']) ? $data['activity_updated_by'] : null;
     }
 
     /**
@@ -1515,43 +1525,85 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets activity_created_at
      * @return \DateTime
      */
-    public function getCreatedAt()
+    public function getActivityCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['activity_created_at'];
     }
 
     /**
-     * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * Sets activity_created_at
+     * @param \DateTime $activity_created_at created_at date time
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setActivityCreatedAt($activity_created_at)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['activity_created_at'] = $activity_created_at;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets activity_updated_at
      * @return \DateTime
      */
-    public function getUpdatedAt()
+    public function getActivityUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['activity_updated_at'];
     }
 
     /**
-     * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * Sets activity_updated_at
+     * @param \DateTime $activity_updated_at updated_at date time
      * @return $this
      */
-    public function setUpdatedAt($updated_at)
+    public function setActivityUpdatedAt($activity_updated_at)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['activity_updated_at'] = $activity_updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_created_by
+     * @return int
+     */
+    public function getActivityCreatedBy()
+    {
+        return $this->container['activity_created_by'];
+    }
+
+    /**
+     * Sets activity_created_by
+     * @param int $activity_created_by created_by user id
+     * @return $this
+     */
+    public function setActivityCreatedBy($activity_created_by)
+    {
+        $this->container['activity_created_by'] = $activity_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_updated_by
+     * @return int
+     */
+    public function getActivityUpdatedBy()
+    {
+        return $this->container['activity_updated_by'];
+    }
+
+    /**
+     * Sets activity_updated_by
+     * @param int $activity_updated_by created_by user id
+     * @return $this
+     */
+    public function setActivityUpdatedBy($activity_updated_by)
+    {
+        $this->container['activity_updated_by'] = $activity_updated_by;
 
         return $this;
     }

@@ -52,8 +52,10 @@ Name | Type | Description | Notes
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
-**updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
+**activity_created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
+**activity_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
+**activity_created_by** | **int** | created_by user id | [optional] 
+**activity_updated_by** | **int** | created_by user id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

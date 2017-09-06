@@ -488,17 +488,33 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "activity_created_at"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyActivityCreatedAt()
     {
 
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "activity_updated_at"
      */
-    public function testPropertyUpdatedAt()
+    public function testPropertyActivityUpdatedAt()
+    {
+
+    }
+
+    /**
+     * Test attribute "activity_created_by"
+     */
+    public function testPropertyActivityCreatedBy()
+    {
+
+    }
+
+    /**
+     * Test attribute "activity_updated_by"
+     */
+    public function testPropertyActivityUpdatedBy()
     {
 
     }
