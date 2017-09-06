@@ -66,7 +66,7 @@ class AddressFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_type_id' => 'string[]',
+        'address_type_id' => 'int[]',
         'address_tags' => 'string[]',
         'party_id' => 'int'
     ];
@@ -169,7 +169,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Gets address_type_id
-     * @return string[]
+     * @return int[]
      */
     public function getAddressTypeId()
     {
@@ -178,7 +178,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Sets address_type_id
-     * @param string[] $address_type_id Address Types
+     * @param int[] $address_type_id Address Types
      * @return $this
      */
     public function setAddressTypeId($address_type_id)

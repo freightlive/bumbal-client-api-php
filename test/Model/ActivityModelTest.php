@@ -376,6 +376,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "addressapplied_id"
+     */
+    public function testPropertyAddressappliedId()
+    {
+
+    }
+
+    /**
      * Test attribute "address_id"
      */
     public function testPropertyAddressId()

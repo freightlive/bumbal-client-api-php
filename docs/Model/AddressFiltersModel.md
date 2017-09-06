@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address_type_id** | **string[]** | Address Types | [optional] 
+**address_type_id** | **int[]** | Address Types | [optional] 
 **address_tags** | **string[]** | Address Tags | [optional] 
 **party_id** | **int** | Party ID | [optional] 
 
