@@ -144,7 +144,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
     }
 
     const SORTING_COLUMN_ACTIVITYSTATUS_ID = 'activity.status_id';
-    const SORTING_COLUMN_NR = 'nr';
+    const SORTING_COLUMN_ACTIVITYNR = 'activity.nr';
     const SORTING_COLUMN_ACTIVITY_TYPE_ID = 'activity_type_id';
     const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
     const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
@@ -161,7 +161,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
     {
         return [
             self::SORTING_COLUMN_ACTIVITYSTATUS_ID,
-            self::SORTING_COLUMN_NR,
+            self::SORTING_COLUMN_ACTIVITYNR,
             self::SORTING_COLUMN_ACTIVITY_TYPE_ID,
             self::SORTING_COLUMN_SEARCH_ZIP,
             self::SORTING_COLUMN_DATE_TIME_FROM,
@@ -211,9 +211,9 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        $allowed_values = ["activity.status_id", "nr", "activity_type_id", "search_zip", "date_time_from"];
+        $allowed_values = ["activity.status_id", "activity.nr", "activity_type_id", "search_zip", "date_time_from"];
         if (!in_array($this->container['sorting_column'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from'.";
+            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'activity.status_id', 'activity.nr', 'activity_type_id', 'search_zip', 'date_time_from'.";
         }
 
         $allowed_values = ["asc", "desc"];
@@ -232,7 +232,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = ["activity.status_id", "nr", "activity_type_id", "search_zip", "date_time_from"];
+        $allowed_values = ["activity.status_id", "activity.nr", "activity_type_id", "search_zip", "date_time_from"];
         if (!in_array($this->container['sorting_column'], $allowed_values)) {
             return false;
         }
@@ -344,9 +344,9 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function setSortingColumn($sorting_column)
     {
-        $allowed_values = array('activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from');
+        $allowed_values = array('activity.status_id', 'activity.nr', 'activity_type_id', 'search_zip', 'date_time_from');
         if (!is_null($sorting_column) && (!in_array($sorting_column, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from'");
+            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'activity.status_id', 'activity.nr', 'activity_type_id', 'search_zip', 'date_time_from'");
         }
         $this->container['sorting_column'] = $sorting_column;
 
