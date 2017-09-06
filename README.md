@@ -92,7 +92,6 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /address/{addressId} | Update a Address
 *AddressappliedApi* | [**retrieveAddressApplied**](docs/Api/AddressappliedApi.md#retrieveaddressapplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
 *AddressappliedApi* | [**updateAddressApplied**](docs/Api/AddressappliedApi.md#updateaddressapplied) | **PUT** /address-applied/{addressId} | Update a Address
-*AssignmentApi* | [**createAssignment**](docs/Api/AssignmentApi.md#createassignment) | **POST** /assignment | Create or update an Assignment
 *AssignmentApi* | [**deleteAssignment**](docs/Api/AssignmentApi.md#deleteassignment) | **DELETE** /assignment/{assignmentId} | Delete an assignment
 *AssignmentApi* | [**retrieveAssignment**](docs/Api/AssignmentApi.md#retrieveassignment) | **GET** /assignment/{assignmentId} | Find assignment by ID
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments

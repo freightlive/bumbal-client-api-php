@@ -90,17 +90,6 @@ class AssignmentApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createAssignment
-     *
-     * Create or update an Assignment.
-     *
-     */
-    public function testCreateAssignment()
-    {
-
-    }
-
-    /**
      * Test case for deleteAssignment
      *
      * Delete an assignment.
