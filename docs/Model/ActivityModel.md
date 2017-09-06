@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **driver_name_prefix** | **string** | Driver prefix | [optional] 
 **driver_full_name** | **string** | Driver full name | [optional] 
 **driver_email** | **string** | Driver email | [optional] 
+**address_id** | **int** | Address ID | [optional] 
 **address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 

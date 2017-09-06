@@ -99,6 +99,7 @@ class ActivityModel implements ArrayAccess
         'driver_name_prefix' => 'string',
         'driver_full_name' => 'string',
         'driver_email' => 'string',
+        'address_id' => 'int',
         'address' => '\BumbalClient\Model\AddressModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
@@ -158,6 +159,7 @@ class ActivityModel implements ArrayAccess
         'driver_name_prefix' => 'driver_name_prefix',
         'driver_full_name' => 'driver_full_name',
         'driver_email' => 'driver_email',
+        'address_id' => 'address_id',
         'address' => 'address',
         'depot_address' => 'depot_address',
         'package_lines' => 'package_lines',
@@ -213,6 +215,7 @@ class ActivityModel implements ArrayAccess
         'driver_name_prefix' => 'setDriverNamePrefix',
         'driver_full_name' => 'setDriverFullName',
         'driver_email' => 'setDriverEmail',
+        'address_id' => 'setAddressId',
         'address' => 'setAddress',
         'depot_address' => 'setDepotAddress',
         'package_lines' => 'setPackageLines',
@@ -268,6 +271,7 @@ class ActivityModel implements ArrayAccess
         'driver_name_prefix' => 'getDriverNamePrefix',
         'driver_full_name' => 'getDriverFullName',
         'driver_email' => 'getDriverEmail',
+        'address_id' => 'getAddressId',
         'address' => 'getAddress',
         'depot_address' => 'getDepotAddress',
         'package_lines' => 'getPackageLines',
@@ -394,6 +398,7 @@ class ActivityModel implements ArrayAccess
         $this->container['driver_name_prefix'] = isset($data['driver_name_prefix']) ? $data['driver_name_prefix'] : null;
         $this->container['driver_full_name'] = isset($data['driver_full_name']) ? $data['driver_full_name'] : null;
         $this->container['driver_email'] = isset($data['driver_email']) ? $data['driver_email'] : null;
+        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
@@ -1154,6 +1159,27 @@ class ActivityModel implements ArrayAccess
     public function setDriverEmail($driver_email)
     {
         $this->container['driver_email'] = $driver_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_id
+     * @return int
+     */
+    public function getAddressId()
+    {
+        return $this->container['address_id'];
+    }
+
+    /**
+     * Sets address_id
+     * @param int $address_id Address ID
+     * @return $this
+     */
+    public function setAddressId($address_id)
+    {
+        $this->container['address_id'] = $address_id;
 
         return $this;
     }
