@@ -143,12 +143,13 @@ class ActivityRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
-    const SORTING_COLUMN_ID = 'id';
-    const SORTING_COLUMN_NAME = 'name';
-    const SORTING_COLUMN_DESCRIPTION = 'description';
-    const SORTING_COLUMN_SUBJECT = 'subject';
-    const SORTING_DIRECTION_ASC = 'ASC';
-    const SORTING_DIRECTION_DESC = 'DESC';
+    const SORTING_COLUMN_ACTIVITYSTATUS_ID = 'activity.status_id';
+    const SORTING_COLUMN_NR = 'nr';
+    const SORTING_COLUMN_ACTIVITY_TYPE_ID = 'activity_type_id';
+    const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
+    const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
     
@@ -159,10 +160,11 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function getSortingColumnAllowableValues()
     {
         return [
-            self::SORTING_COLUMN_ID,
-            self::SORTING_COLUMN_NAME,
-            self::SORTING_COLUMN_DESCRIPTION,
-            self::SORTING_COLUMN_SUBJECT,
+            self::SORTING_COLUMN_ACTIVITYSTATUS_ID,
+            self::SORTING_COLUMN_NR,
+            self::SORTING_COLUMN_ACTIVITY_TYPE_ID,
+            self::SORTING_COLUMN_SEARCH_ZIP,
+            self::SORTING_COLUMN_DATE_TIME_FROM,
         ];
     }
     
@@ -209,14 +211,14 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
-        $allowed_values = ["id", "name", "description", "subject"];
+        $allowed_values = ["activity.status_id", "nr", "activity_type_id", "search_zip", "date_time_from"];
         if (!in_array($this->container['sorting_column'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'.";
+            $invalid_properties[] = "invalid value for 'sorting_column', must be one of 'activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from'.";
         }
 
-        $allowed_values = ["ASC", "DESC"];
+        $allowed_values = ["asc", "desc"];
         if (!in_array($this->container['sorting_direction'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'.";
+            $invalid_properties[] = "invalid value for 'sorting_direction', must be one of 'asc', 'desc'.";
         }
 
         return $invalid_properties;
@@ -230,11 +232,11 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function valid()
     {
-        $allowed_values = ["id", "name", "description", "subject"];
+        $allowed_values = ["activity.status_id", "nr", "activity_type_id", "search_zip", "date_time_from"];
         if (!in_array($this->container['sorting_column'], $allowed_values)) {
             return false;
         }
-        $allowed_values = ["ASC", "DESC"];
+        $allowed_values = ["asc", "desc"];
         if (!in_array($this->container['sorting_direction'], $allowed_values)) {
             return false;
         }
@@ -342,9 +344,9 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function setSortingColumn($sorting_column)
     {
-        $allowed_values = array('id', 'name', 'description', 'subject');
+        $allowed_values = array('activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from');
         if (!is_null($sorting_column) && (!in_array($sorting_column, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'id', 'name', 'description', 'subject'");
+            throw new \InvalidArgumentException("Invalid value for 'sorting_column', must be one of 'activity.status_id', 'nr', 'activity_type_id', 'search_zip', 'date_time_from'");
         }
         $this->container['sorting_column'] = $sorting_column;
 
@@ -367,9 +369,9 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function setSortingDirection($sorting_direction)
     {
-        $allowed_values = array('ASC', 'DESC');
+        $allowed_values = array('asc', 'desc');
         if (!is_null($sorting_direction) && (!in_array($sorting_direction, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'sorting_direction', must be one of 'ASC', 'DESC'");
+            throw new \InvalidArgumentException("Invalid value for 'sorting_direction', must be one of 'asc', 'desc'");
         }
         $this->container['sorting_direction'] = $sorting_direction;
 
