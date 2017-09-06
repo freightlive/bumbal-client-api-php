@@ -67,6 +67,7 @@ class AddressModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'summary' => 'string',
         'full_name' => 'string',
         'name_1' => 'string',
         'name_2' => 'string',
@@ -99,6 +100,7 @@ class AddressModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'summary' => 'summary',
         'full_name' => 'full_name',
         'name_1' => 'name_1',
         'name_2' => 'name_2',
@@ -127,6 +129,7 @@ class AddressModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'summary' => 'setSummary',
         'full_name' => 'setFullName',
         'name_1' => 'setName1',
         'name_2' => 'setName2',
@@ -155,6 +158,7 @@ class AddressModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'summary' => 'getSummary',
         'full_name' => 'getFullName',
         'name_1' => 'getName1',
         'name_2' => 'getName2',
@@ -208,6 +212,7 @@ class AddressModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
         $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
@@ -275,6 +280,27 @@ class AddressModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets summary
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->container['summary'];
+    }
+
+    /**
+     * Sets summary
+     * @param string $summary
+     * @return $this
+     */
+    public function setSummary($summary)
+    {
+        $this->container['summary'] = $summary;
 
         return $this;
     }
