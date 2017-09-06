@@ -84,7 +84,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_files_meta_data_objects' => 'bool',
         'include_activity_tags' => 'bool',
         'include_tag_type_name' => 'bool',
-        'include_assignment_nr' => 'bool'
+        'include_assignment_nr' => 'bool',
+        'include_activity_record_info' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -115,7 +116,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_files_meta_data_objects' => 'include_activity_files_meta_data_objects',
         'include_activity_tags' => 'include_activity_tags',
         'include_tag_type_name' => 'include_tag_type_name',
-        'include_assignment_nr' => 'include_assignment_nr'
+        'include_assignment_nr' => 'include_assignment_nr',
+        'include_activity_record_info' => 'include_activity_record_info'
     ];
 
 
@@ -142,7 +144,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_files_meta_data_objects' => 'setIncludeActivityFilesMetaDataObjects',
         'include_activity_tags' => 'setIncludeActivityTags',
         'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_assignment_nr' => 'setIncludeAssignmentNr'
+        'include_assignment_nr' => 'setIncludeAssignmentNr',
+        'include_activity_record_info' => 'setIncludeActivityRecordInfo'
     ];
 
 
@@ -169,7 +172,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_files_meta_data_objects' => 'getIncludeActivityFilesMetaDataObjects',
         'include_activity_tags' => 'getIncludeActivityTags',
         'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_assignment_nr' => 'getIncludeAssignmentNr'
+        'include_assignment_nr' => 'getIncludeAssignmentNr',
+        'include_activity_record_info' => 'getIncludeActivityRecordInfo'
     ];
 
     public static function attributeMap()
@@ -222,6 +226,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
+        $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
     }
 
     /**
@@ -642,6 +647,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeAssignmentNr($include_assignment_nr)
     {
         $this->container['include_assignment_nr'] = $include_assignment_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_record_info
+     * @return bool
+     */
+    public function getIncludeActivityRecordInfo()
+    {
+        return $this->container['include_activity_record_info'];
+    }
+
+    /**
+     * Sets include_activity_record_info
+     * @param bool $include_activity_record_info
+     * @return $this
+     */
+    public function setIncludeActivityRecordInfo($include_activity_record_info)
+    {
+        $this->container['include_activity_record_info'] = $include_activity_record_info;
 
         return $this;
     }
