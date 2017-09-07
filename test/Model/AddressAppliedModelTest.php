@@ -104,6 +104,30 @@ class AddressAppliedModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "party_id"
+     */
+    public function testPropertyPartyId()
+    {
+
+    }
+
+    /**
+     * Test attribute "summary"
+     */
+    public function testPropertySummary()
+    {
+
+    }
+
+    /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+
+    }
+
+    /**
      * Test attribute "name_1"
      */
     public function testPropertyName1()
@@ -184,9 +208,41 @@ class AddressAppliedModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "emails"
+     */
+    public function testPropertyEmails()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone_nrs"
+     */
+    public function testPropertyPhoneNrs()
+    {
+
+    }
+
+    /**
      * Test attribute "contact_person"
      */
     public function testPropertyContactPerson()
+    {
+
+    }
+
+    /**
+     * Test attribute "latitude"
+     */
+    public function testPropertyLatitude()
+    {
+
+    }
+
+    /**
+     * Test attribute "longitude"
+     */
+    public function testPropertyLongitude()
     {
 
     }

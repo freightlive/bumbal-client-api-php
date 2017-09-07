@@ -67,6 +67,9 @@ class AddressAppliedModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'party_id' => 'int',
+        'summary' => 'string',
+        'full_name' => 'string',
         'name_1' => 'string',
         'street_1' => 'string',
         'street_2' => 'string',
@@ -77,7 +80,11 @@ class AddressAppliedModel implements ArrayAccess
         'state' => 'string',
         'iso_country' => 'string',
         'email' => 'string',
-        'contact_person' => 'string'
+        'emails' => 'string[]',
+        'phone_nrs' => 'string[]',
+        'contact_person' => 'string',
+        'latitude' => 'string',
+        'longitude' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -91,6 +98,9 @@ class AddressAppliedModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'party_id' => 'party_id',
+        'summary' => 'summary',
+        'full_name' => 'full_name',
         'name_1' => 'name_1',
         'street_1' => 'street_1',
         'street_2' => 'street_2',
@@ -101,7 +111,11 @@ class AddressAppliedModel implements ArrayAccess
         'state' => 'state',
         'iso_country' => 'iso_country',
         'email' => 'email',
-        'contact_person' => 'contact_person'
+        'emails' => 'emails',
+        'phone_nrs' => 'phone_nrs',
+        'contact_person' => 'contact_person',
+        'latitude' => 'latitude',
+        'longitude' => 'longitude'
     ];
 
 
@@ -111,6 +125,9 @@ class AddressAppliedModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'party_id' => 'setPartyId',
+        'summary' => 'setSummary',
+        'full_name' => 'setFullName',
         'name_1' => 'setName1',
         'street_1' => 'setStreet1',
         'street_2' => 'setStreet2',
@@ -121,7 +138,11 @@ class AddressAppliedModel implements ArrayAccess
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
         'email' => 'setEmail',
-        'contact_person' => 'setContactPerson'
+        'emails' => 'setEmails',
+        'phone_nrs' => 'setPhoneNrs',
+        'contact_person' => 'setContactPerson',
+        'latitude' => 'setLatitude',
+        'longitude' => 'setLongitude'
     ];
 
 
@@ -131,6 +152,9 @@ class AddressAppliedModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'party_id' => 'getPartyId',
+        'summary' => 'getSummary',
+        'full_name' => 'getFullName',
         'name_1' => 'getName1',
         'street_1' => 'getStreet1',
         'street_2' => 'getStreet2',
@@ -141,7 +165,11 @@ class AddressAppliedModel implements ArrayAccess
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
         'email' => 'getEmail',
-        'contact_person' => 'getContactPerson'
+        'emails' => 'getEmails',
+        'phone_nrs' => 'getPhoneNrs',
+        'contact_person' => 'getContactPerson',
+        'latitude' => 'getLatitude',
+        'longitude' => 'getLongitude'
     ];
 
     public static function attributeMap()
@@ -176,6 +204,9 @@ class AddressAppliedModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
         $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
         $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
@@ -186,7 +217,11 @@ class AddressAppliedModel implements ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
+        $this->container['phone_nrs'] = isset($data['phone_nrs']) ? $data['phone_nrs'] : null;
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
+        $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
+        $this->container['longitude'] = isset($data['longitude']) ? $data['longitude'] : null;
     }
 
     /**
@@ -235,6 +270,69 @@ class AddressAppliedModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets summary
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->container['summary'];
+    }
+
+    /**
+     * Sets summary
+     * @param string $summary
+     * @return $this
+     */
+    public function setSummary($summary)
+    {
+        $this->container['summary'] = $summary;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }
@@ -450,6 +548,48 @@ class AddressAppliedModel implements ArrayAccess
     }
 
     /**
+     * Gets emails
+     * @return string[]
+     */
+    public function getEmails()
+    {
+        return $this->container['emails'];
+    }
+
+    /**
+     * Sets emails
+     * @param string[] $emails
+     * @return $this
+     */
+    public function setEmails($emails)
+    {
+        $this->container['emails'] = $emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_nrs
+     * @return string[]
+     */
+    public function getPhoneNrs()
+    {
+        return $this->container['phone_nrs'];
+    }
+
+    /**
+     * Sets phone_nrs
+     * @param string[] $phone_nrs
+     * @return $this
+     */
+    public function setPhoneNrs($phone_nrs)
+    {
+        $this->container['phone_nrs'] = $phone_nrs;
+
+        return $this;
+    }
+
+    /**
      * Gets contact_person
      * @return string
      */
@@ -466,6 +606,48 @@ class AddressAppliedModel implements ArrayAccess
     public function setContactPerson($contact_person)
     {
         $this->container['contact_person'] = $contact_person;
+
+        return $this;
+    }
+
+    /**
+     * Gets latitude
+     * @return string
+     */
+    public function getLatitude()
+    {
+        return $this->container['latitude'];
+    }
+
+    /**
+     * Sets latitude
+     * @param string $latitude
+     * @return $this
+     */
+    public function setLatitude($latitude)
+    {
+        $this->container['latitude'] = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * Gets longitude
+     * @return string
+     */
+    public function getLongitude()
+    {
+        return $this->container['longitude'];
+    }
+
+    /**
+     * Sets longitude
+     * @param string $longitude
+     * @return $this
+     */
+    public function setLongitude($longitude)
+    {
+        $this->container['longitude'] = $longitude;
 
         return $this;
     }

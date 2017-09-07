@@ -224,6 +224,22 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "emails"
+     */
+    public function testPropertyEmails()
+    {
+
+    }
+
+    /**
+     * Test attribute "phone_nrs"
+     */
+    public function testPropertyPhoneNrs()
+    {
+
+    }
+
+    /**
      * Test attribute "latitude"
      */
     public function testPropertyLatitude()

@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
+**emails** | **string[]** |  | [optional] 
+**phone_nrs** | **string[]** |  | [optional] 
 **latitude** | **string** |  | [optional] 
 **longitude** | **string** |  | [optional] 
 **contact_person** | **string** |  | [optional] 

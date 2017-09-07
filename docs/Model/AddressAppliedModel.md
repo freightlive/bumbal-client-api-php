@@ -4,6 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
+**party_id** | **int** |  | [optional] 
+**summary** | **string** |  | [optional] 
+**full_name** | **string** |  | [optional] 
 **name_1** | **string** |  | [optional] 
 **street_1** | **string** |  | [optional] 
 **street_2** | **string** |  | [optional] 
@@ -14,7 +17,11 @@ Name | Type | Description | Notes
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
+**emails** | **string[]** |  | [optional] 
+**phone_nrs** | **string[]** |  | [optional] 
 **contact_person** | **string** |  | [optional] 
+**latitude** | **string** |  | [optional] 
+**longitude** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
