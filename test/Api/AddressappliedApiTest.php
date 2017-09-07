@@ -103,7 +103,7 @@ class AddressappliedApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updateAddressApplied
      *
-     * Update a Address.
+     * Update a AddressApplied.
      *
      */
     public function testUpdateAddressApplied()

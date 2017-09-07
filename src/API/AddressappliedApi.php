@@ -194,28 +194,30 @@ class AddressappliedApi
     /**
      * Operation updateAddressApplied
      *
-     * Update a Address
+     * Update a AddressApplied
      *
      * @param int $address_id ID of address to update (required)
+     * @param \BumbalClient\Model\AddressAppliedModel $body AddressApplied object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateAddressApplied($address_id)
+    public function updateAddressApplied($address_id, $body = null)
     {
-        list($response) = $this->updateAddressAppliedWithHttpInfo($address_id);
+        list($response) = $this->updateAddressAppliedWithHttpInfo($address_id, $body);
         return $response;
     }
 
     /**
      * Operation updateAddressAppliedWithHttpInfo
      *
-     * Update a Address
+     * Update a AddressApplied
      *
      * @param int $address_id ID of address to update (required)
+     * @param \BumbalClient\Model\AddressAppliedModel $body AddressApplied object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateAddressAppliedWithHttpInfo($address_id)
+    public function updateAddressAppliedWithHttpInfo($address_id, $body = null)
     {
         // verify the required parameter 'address_id' is set
         if ($address_id === null) {
@@ -244,7 +246,12 @@ class AddressappliedApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

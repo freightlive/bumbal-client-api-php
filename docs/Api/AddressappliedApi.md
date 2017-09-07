@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**retrieveAddressApplied**](AddressappliedApi.md#retrieveAddressApplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
-[**updateAddressApplied**](AddressappliedApi.md#updateAddressApplied) | **PUT** /address-applied/{addressId} | Update a Address
+[**updateAddressApplied**](AddressappliedApi.md#updateAddressApplied) | **PUT** /address-applied/{addressId} | Update a AddressApplied
 
 
 # **retrieveAddressApplied**
@@ -59,11 +59,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddressApplied**
-> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id)
+> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id, $body)
 
-Update a Address
+Update a AddressApplied
 
-Update an Address
+Update an AddressApplied
 
 ### Example
 ```php
@@ -77,9 +77,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of address to update
+$body = new \BumbalClient\Model\AddressAppliedModel(); // \BumbalClient\Model\AddressAppliedModel | AddressApplied object that needs to be updated
 
 try {
-    $result = $api_instance->updateAddressApplied($address_id);
+    $result = $api_instance->updateAddressApplied($address_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressappliedApi->updateAddressApplied: ', $e->getMessage(), PHP_EOL;
@@ -92,6 +93,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| ID of address to update |
+ **body** | [**\BumbalClient\Model\AddressAppliedModel**](../Model/\BumbalClient\Model\AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
 
 ### Return type
 
