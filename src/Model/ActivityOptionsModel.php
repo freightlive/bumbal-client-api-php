@@ -86,7 +86,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'bool',
         'include_assignment_nr' => 'bool',
         'include_assignment_object' => 'bool',
-        'include_activity_record_info' => 'bool'
+        'include_activity_record_info' => 'bool',
+        'include_activity_notes' => 'bool',
+        'include_activity_note_tags' => 'bool'
     ];
 
     public static function swaggerTypes()
@@ -119,7 +121,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'include_tag_type_name',
         'include_assignment_nr' => 'include_assignment_nr',
         'include_assignment_object' => 'include_assignment_object',
-        'include_activity_record_info' => 'include_activity_record_info'
+        'include_activity_record_info' => 'include_activity_record_info',
+        'include_activity_notes' => 'include_activity_notes',
+        'include_activity_note_tags' => 'include_activity_note_tags'
     ];
 
 
@@ -148,7 +152,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_assignment_nr' => 'setIncludeAssignmentNr',
         'include_assignment_object' => 'setIncludeAssignmentObject',
-        'include_activity_record_info' => 'setIncludeActivityRecordInfo'
+        'include_activity_record_info' => 'setIncludeActivityRecordInfo',
+        'include_activity_notes' => 'setIncludeActivityNotes',
+        'include_activity_note_tags' => 'setIncludeActivityNoteTags'
     ];
 
 
@@ -177,7 +183,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_assignment_nr' => 'getIncludeAssignmentNr',
         'include_assignment_object' => 'getIncludeAssignmentObject',
-        'include_activity_record_info' => 'getIncludeActivityRecordInfo'
+        'include_activity_record_info' => 'getIncludeActivityRecordInfo',
+        'include_activity_notes' => 'getIncludeActivityNotes',
+        'include_activity_note_tags' => 'getIncludeActivityNoteTags'
     ];
 
     public static function attributeMap()
@@ -232,6 +240,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
         $this->container['include_assignment_object'] = isset($data['include_assignment_object']) ? $data['include_assignment_object'] : null;
         $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
+        $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
+        $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
     }
 
     /**
@@ -694,6 +704,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityRecordInfo($include_activity_record_info)
     {
         $this->container['include_activity_record_info'] = $include_activity_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_notes
+     * @return bool
+     */
+    public function getIncludeActivityNotes()
+    {
+        return $this->container['include_activity_notes'];
+    }
+
+    /**
+     * Sets include_activity_notes
+     * @param bool $include_activity_notes
+     * @return $this
+     */
+    public function setIncludeActivityNotes($include_activity_notes)
+    {
+        $this->container['include_activity_notes'] = $include_activity_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_note_tags
+     * @return bool
+     */
+    public function getIncludeActivityNoteTags()
+    {
+        return $this->container['include_activity_note_tags'];
+    }
+
+    /**
+     * Sets include_activity_note_tags
+     * @param bool $include_activity_note_tags
+     * @return $this
+     */
+    public function setIncludeActivityNoteTags($include_activity_note_tags)
+    {
+        $this->container['include_activity_note_tags'] = $include_activity_note_tags;
 
         return $this;
     }
