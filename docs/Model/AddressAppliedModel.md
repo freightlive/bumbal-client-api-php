@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **summary** | **string** |  | [optional] 
 **full_name** | **string** |  | [optional] 
 **name_1** | **string** |  | [optional] 
+**name_2** | **string** |  | [optional] 
 **street_1** | **string** |  | [optional] 
 **street_2** | **string** |  | [optional] 
 **house_nr** | **string** |  | [optional] 

@@ -136,6 +136,14 @@ class AddressAppliedModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name_2"
+     */
+    public function testPropertyName2()
+    {
+
+    }
+
+    /**
      * Test attribute "street_1"
      */
     public function testPropertyStreet1()

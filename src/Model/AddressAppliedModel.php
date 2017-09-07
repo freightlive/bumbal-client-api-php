@@ -71,6 +71,7 @@ class AddressAppliedModel implements ArrayAccess
         'summary' => 'string',
         'full_name' => 'string',
         'name_1' => 'string',
+        'name_2' => 'string',
         'street_1' => 'string',
         'street_2' => 'string',
         'house_nr' => 'string',
@@ -102,6 +103,7 @@ class AddressAppliedModel implements ArrayAccess
         'summary' => 'summary',
         'full_name' => 'full_name',
         'name_1' => 'name_1',
+        'name_2' => 'name_2',
         'street_1' => 'street_1',
         'street_2' => 'street_2',
         'house_nr' => 'house_nr',
@@ -129,6 +131,7 @@ class AddressAppliedModel implements ArrayAccess
         'summary' => 'setSummary',
         'full_name' => 'setFullName',
         'name_1' => 'setName1',
+        'name_2' => 'setName2',
         'street_1' => 'setStreet1',
         'street_2' => 'setStreet2',
         'house_nr' => 'setHouseNr',
@@ -156,6 +159,7 @@ class AddressAppliedModel implements ArrayAccess
         'summary' => 'getSummary',
         'full_name' => 'getFullName',
         'name_1' => 'getName1',
+        'name_2' => 'getName2',
         'street_1' => 'getStreet1',
         'street_2' => 'getStreet2',
         'house_nr' => 'getHouseNr',
@@ -208,6 +212,7 @@ class AddressAppliedModel implements ArrayAccess
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
+        $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
         $this->container['street_1'] = isset($data['street_1']) ? $data['street_1'] : null;
         $this->container['street_2'] = isset($data['street_2']) ? $data['street_2'] : null;
         $this->container['house_nr'] = isset($data['house_nr']) ? $data['house_nr'] : null;
@@ -354,6 +359,27 @@ class AddressAppliedModel implements ArrayAccess
     public function setName1($name_1)
     {
         $this->container['name_1'] = $name_1;
+
+        return $this;
+    }
+
+    /**
+     * Gets name_2
+     * @return string
+     */
+    public function getName2()
+    {
+        return $this->container['name_2'];
+    }
+
+    /**
+     * Sets name_2
+     * @param string $name_2
+     * @return $this
+     */
+    public function setName2($name_2)
+    {
+        $this->container['name_2'] = $name_2;
 
         return $this;
     }
