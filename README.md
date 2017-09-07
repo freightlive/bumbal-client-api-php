@@ -85,11 +85,10 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
-*AddressApi* | [**createAddress**](docs/Api/AddressApi.md#createaddress) | **POST** /address/set | Add a new Address
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an Address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
-*AddressApi* | [**updateAddress**](docs/Api/AddressApi.md#updateaddress) | **PUT** /address/{addressId} | Update a Address
+*AddressApi* | [**setAddress**](docs/Api/AddressApi.md#setaddress) | **POST** /address/set | Add a new Address
 *AddressappliedApi* | [**retrieveAddressApplied**](docs/Api/AddressappliedApi.md#retrieveaddressapplied) | **GET** /address-applied/{addressId} | Retrieve an Applied Address
 *AddressappliedApi* | [**updateAddressApplied**](docs/Api/AddressappliedApi.md#updateaddressapplied) | **PUT** /address-applied/{addressId} | Update a AddressApplied
 *AssignmentApi* | [**deleteAssignment**](docs/Api/AssignmentApi.md#deleteassignment) | **DELETE** /assignment/{assignmentId} | Delete an assignment
