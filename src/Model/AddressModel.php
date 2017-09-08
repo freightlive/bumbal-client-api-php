@@ -81,9 +81,8 @@ class AddressModel implements ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'iso_country' => 'string',
-        'email' => 'string',
-        'emails' => 'string[]',
-        'phone_nrs' => 'string[]',
+        'emails' => '\BumbalClient\Model\EmailModel[]',
+        'phone_nrs' => '\BumbalClient\Model\PhoneNrModel[]',
         'latitude' => 'string',
         'longitude' => 'string',
         'contact_person' => 'string',
@@ -117,7 +116,6 @@ class AddressModel implements ArrayAccess
         'city' => 'city',
         'state' => 'state',
         'iso_country' => 'iso_country',
-        'email' => 'email',
         'emails' => 'emails',
         'phone_nrs' => 'phone_nrs',
         'latitude' => 'latitude',
@@ -149,7 +147,6 @@ class AddressModel implements ArrayAccess
         'city' => 'setCity',
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
-        'email' => 'setEmail',
         'emails' => 'setEmails',
         'phone_nrs' => 'setPhoneNrs',
         'latitude' => 'setLatitude',
@@ -181,7 +178,6 @@ class AddressModel implements ArrayAccess
         'city' => 'getCity',
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
-        'email' => 'getEmail',
         'emails' => 'getEmails',
         'phone_nrs' => 'getPhoneNrs',
         'latitude' => 'getLatitude',
@@ -238,7 +234,6 @@ class AddressModel implements ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
         $this->container['phone_nrs'] = isset($data['phone_nrs']) ? $data['phone_nrs'] : null;
         $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
@@ -594,29 +589,8 @@ class AddressModel implements ArrayAccess
     }
 
     /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
      * Gets emails
-     * @return string[]
+     * @return \BumbalClient\Model\EmailModel[]
      */
     public function getEmails()
     {
@@ -625,7 +599,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets emails
-     * @param string[] $emails
+     * @param \BumbalClient\Model\EmailModel[] $emails
      * @return $this
      */
     public function setEmails($emails)
@@ -637,7 +611,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets phone_nrs
-     * @return string[]
+     * @return \BumbalClient\Model\PhoneNrModel[]
      */
     public function getPhoneNrs()
     {
@@ -646,7 +620,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets phone_nrs
-     * @param string[] $phone_nrs
+     * @param \BumbalClient\Model\PhoneNrModel[] $phone_nrs
      * @return $this
      */
     public function setPhoneNrs($phone_nrs)

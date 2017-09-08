@@ -216,14 +216,6 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-
-    }
-
-    /**
      * Test attribute "emails"
      */
     public function testPropertyEmails()
