@@ -280,4 +280,94 @@ class TracktraceApi
             throw $e;
         }
     }
+
+    /**
+     * Operation trackTraceCalculateETA
+     *
+     * Calculate ETA for Activity
+     *
+     * @param int $activity_id ID of the activity to calculate ETA for (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function trackTraceCalculateETA($activity_id)
+    {
+        list($response) = $this->trackTraceCalculateETAWithHttpInfo($activity_id);
+        return $response;
+    }
+
+    /**
+     * Operation trackTraceCalculateETAWithHttpInfo
+     *
+     * Calculate ETA for Activity
+     *
+     * @param int $activity_id ID of the activity to calculate ETA for (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function trackTraceCalculateETAWithHttpInfo($activity_id)
+    {
+        // verify the required parameter 'activity_id' is set
+        if ($activity_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $activity_id when calling trackTraceCalculateETA');
+        }
+        // parse inputs
+        $resourcePath = "/track-trace/calculate-eta/{activityId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($activity_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "activityId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($activity_id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/track-trace/calculate-eta/{activityId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }

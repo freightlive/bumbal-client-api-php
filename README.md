@@ -174,6 +174,7 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
 *TracktraceApi* | [**retrieveActivityStatus**](docs/Api/TracktraceApi.md#retrieveactivitystatus) | **GET** /track-trace/retrieve-activity-status/{activityId} | Retrieve Activity Status
 *TracktraceApi* | [**retrieveRouteStatus**](docs/Api/TracktraceApi.md#retrieveroutestatus) | **GET** /track-trace/retrieve-route-status/{routeId} | Retrieve Route Status
+*TracktraceApi* | [**trackTraceCalculateETA**](docs/Api/TracktraceApi.md#tracktracecalculateeta) | **GET** /track-trace/calculate-eta/{activityId} | Calculate ETA for Activity
 *TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
 *TrailerApi* | [**deleteTrailer**](docs/Api/TrailerApi.md#deletetrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
 *TrailerApi* | [**retrieveListTrailer**](docs/Api/TrailerApi.md#retrievelisttrailer) | **PUT** /trailer | Retrieve List of Trailers
