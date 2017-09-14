@@ -66,7 +66,7 @@ class SayWhenVisitModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
+        'id' => 'string',
         'current_state' => 'string',
         'status' => 'string',
         'offered_by_owner' => 'string',
@@ -195,7 +195,7 @@ class SayWhenVisitModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return string
      */
     public function getId()
     {
@@ -204,7 +204,7 @@ class SayWhenVisitModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id SayWhen Visit ID
+     * @param string $id SayWhen Visit ID
      * @return $this
      */
     public function setId($id)
