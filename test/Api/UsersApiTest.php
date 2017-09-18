@@ -125,7 +125,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setUser
      *
-     * Set (create or update) an User.
+     * Set (create or update) a User.
      *
      */
     public function testSetUser()

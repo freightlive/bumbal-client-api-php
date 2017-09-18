@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Userss
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
-[**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) an User
+[**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) a User
 [**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
 
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 Retrieve a Users
 
-Retrieve an Users
+Retrieve a Users
 
 ### Example
 ```php
@@ -166,9 +166,9 @@ Name | Type | Description  | Notes
 # **setUser**
 > \BumbalClient\Model\ApiResponse setUser($body)
 
-Set (create or update) an User
+Set (create or update) a User
 
-Set (create or update) an User. If id or links are set in the data, and a corresponding users is found in Bumbal, an update will be performed.
+Set (create or update) a User. If id or links are set in the data, and a corresponding users is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

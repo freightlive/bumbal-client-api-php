@@ -377,7 +377,7 @@ class UsersApi
     /**
      * Operation setUser
      *
-     * Set (create or update) an User
+     * Set (create or update) a User
      *
      * @param \BumbalClient\Model\UsersModel $body User object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -392,7 +392,7 @@ class UsersApi
     /**
      * Operation setUserWithHttpInfo
      *
-     * Set (create or update) an User
+     * Set (create or update) a User
      *
      * @param \BumbalClient\Model\UsersModel $body User object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response

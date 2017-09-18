@@ -67,6 +67,8 @@ class TrailerModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'name' => 'string',
+        'registration_nr' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -87,6 +89,8 @@ class TrailerModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'name' => 'name',
+        'registration_nr' => 'registration_nr',
         'tags' => 'tags',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -103,6 +107,8 @@ class TrailerModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'name' => 'setName',
+        'registration_nr' => 'setRegistrationNr',
         'tags' => 'setTags',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -119,6 +125,8 @@ class TrailerModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'name' => 'getName',
+        'registration_nr' => 'getRegistrationNr',
         'tags' => 'getTags',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -160,6 +168,8 @@ class TrailerModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -215,6 +225,48 @@ class TrailerModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets registration_nr
+     * @return string
+     */
+    public function getRegistrationNr()
+    {
+        return $this->container['registration_nr'];
+    }
+
+    /**
+     * Sets registration_nr
+     * @param string $registration_nr registration_nr
+     * @return $this
+     */
+    public function setRegistrationNr($registration_nr)
+    {
+        $this->container['registration_nr'] = $registration_nr;
 
         return $this;
     }
