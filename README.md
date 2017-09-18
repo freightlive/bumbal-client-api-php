@@ -186,6 +186,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Userss
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
+*UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) an User
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
 *WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
 

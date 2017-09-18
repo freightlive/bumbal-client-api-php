@@ -278,7 +278,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_status
-     * @param bool $include_activity_status
+     * @param bool $include_activity_status 
      * @return $this
      */
     public function setIncludeActivityStatus($include_activity_status)
@@ -299,7 +299,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_type_name
-     * @param bool $include_activity_type_name
+     * @param bool $include_activity_type_name 
      * @return $this
      */
     public function setIncludeActivityTypeName($include_activity_type_name)
@@ -320,7 +320,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_meta_data
-     * @param bool $include_activity_meta_data
+     * @param bool $include_activity_meta_data 
      * @return $this
      */
     public function setIncludeActivityMetaData($include_activity_meta_data)
@@ -341,7 +341,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_meta_data_objects
-     * @param bool $include_activity_meta_data_objects
+     * @param bool $include_activity_meta_data_objects 
      * @return $this
      */
     public function setIncludeActivityMetaDataObjects($include_activity_meta_data_objects)
@@ -362,7 +362,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_object
-     * @param bool $include_address_object
+     * @param bool $include_address_object 
      * @return $this
      */
     public function setIncludeAddressObject($include_address_object)
@@ -383,7 +383,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_time_slots
-     * @param bool $include_time_slots
+     * @param bool $include_time_slots 
      * @return $this
      */
     public function setIncludeTimeSlots($include_time_slots)
@@ -404,7 +404,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_time_slot_tags
-     * @param bool $include_time_slot_tags
+     * @param bool $include_time_slot_tags 
      * @return $this
      */
     public function setIncludeTimeSlotTags($include_time_slot_tags)
@@ -425,7 +425,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_info
-     * @param bool $include_route_info
+     * @param bool $include_route_info 
      * @return $this
      */
     public function setIncludeRouteInfo($include_route_info)
@@ -446,7 +446,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_info
-     * @param bool $include_driver_info
+     * @param bool $include_driver_info 
      * @return $this
      */
     public function setIncludeDriverInfo($include_driver_info)
@@ -467,7 +467,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication
-     * @param bool $include_communication
+     * @param bool $include_communication 
      * @return $this
      */
     public function setIncludeCommunication($include_communication)
@@ -488,7 +488,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_communication_object
-     * @param bool $include_communication_object
+     * @param bool $include_communication_object 
      * @return $this
      */
     public function setIncludeCommunicationObject($include_communication_object)
@@ -509,7 +509,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_links
-     * @param bool $include_activity_links
+     * @param bool $include_activity_links 
      * @return $this
      */
     public function setIncludeActivityLinks($include_activity_links)
@@ -530,7 +530,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_lines_info
-     * @param bool $include_package_lines_info
+     * @param bool $include_package_lines_info 
      * @return $this
      */
     public function setIncludePackageLinesInfo($include_package_lines_info)
@@ -551,7 +551,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_files
-     * @param bool $include_activity_files
+     * @param bool $include_activity_files 
      * @return $this
      */
     public function setIncludeActivityFiles($include_activity_files)
@@ -572,7 +572,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_files_meta_data
-     * @param bool $include_activity_files_meta_data
+     * @param bool $include_activity_files_meta_data 
      * @return $this
      */
     public function setIncludeActivityFilesMetaData($include_activity_files_meta_data)
@@ -593,7 +593,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_files_meta_data_objects
-     * @param bool $include_activity_files_meta_data_objects
+     * @param bool $include_activity_files_meta_data_objects 
      * @return $this
      */
     public function setIncludeActivityFilesMetaDataObjects($include_activity_files_meta_data_objects)
@@ -614,7 +614,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_tags
-     * @param bool $include_activity_tags
+     * @param bool $include_activity_tags 
      * @return $this
      */
     public function setIncludeActivityTags($include_activity_tags)
@@ -635,7 +635,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_type_name
-     * @param bool $include_tag_type_name
+     * @param bool $include_tag_type_name 
      * @return $this
      */
     public function setIncludeTagTypeName($include_tag_type_name)
@@ -656,7 +656,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_assignment_nr
-     * @param bool $include_assignment_nr
+     * @param bool $include_assignment_nr 
      * @return $this
      */
     public function setIncludeAssignmentNr($include_assignment_nr)
@@ -677,7 +677,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_assignment_object
-     * @param bool $include_assignment_object
+     * @param bool $include_assignment_object 
      * @return $this
      */
     public function setIncludeAssignmentObject($include_assignment_object)
@@ -698,7 +698,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_record_info
-     * @param bool $include_activity_record_info
+     * @param bool $include_activity_record_info 
      * @return $this
      */
     public function setIncludeActivityRecordInfo($include_activity_record_info)
@@ -719,7 +719,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_notes
-     * @param bool $include_activity_notes
+     * @param bool $include_activity_notes 
      * @return $this
      */
     public function setIncludeActivityNotes($include_activity_notes)
@@ -740,7 +740,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_note_tags
-     * @param bool $include_activity_note_tags
+     * @param bool $include_activity_note_tags 
      * @return $this
      */
     public function setIncludeActivityNoteTags($include_activity_note_tags)

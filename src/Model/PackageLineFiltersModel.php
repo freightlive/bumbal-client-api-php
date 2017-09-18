@@ -1010,7 +1010,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -1031,7 +1031,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\Model\LinkModel[] $activity_links
+     * @param \BumbalClient\Model\LinkModel[] $activity_links 
      * @return $this
      */
     public function setActivityLinks($activity_links)

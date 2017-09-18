@@ -84,6 +84,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'duration' => 'int',
+        'active' => 'bool',
         'route_id' => 'string',
         'route_nr' => 'string',
         'route_name' => 'string',
@@ -111,6 +112,7 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => '\BumbalClient\Model\LinkModel',
         'route_link' => '\BumbalClient\Model\LinkModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
+        'tag_names' => 'null[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
@@ -149,6 +151,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'duration' => 'duration',
+        'active' => 'active',
         'route_id' => 'route_id',
         'route_nr' => 'route_nr',
         'route_name' => 'route_name',
@@ -176,6 +179,7 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'assignment_link',
         'route_link' => 'route_link',
         'tags' => 'tags',
+        'tag_names' => 'tag_names',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
@@ -210,6 +214,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'duration' => 'setDuration',
+        'active' => 'setActive',
         'route_id' => 'setRouteId',
         'route_nr' => 'setRouteNr',
         'route_name' => 'setRouteName',
@@ -237,6 +242,7 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'setAssignmentLink',
         'route_link' => 'setRouteLink',
         'tags' => 'setTags',
+        'tag_names' => 'setTagNames',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
@@ -271,6 +277,7 @@ class ActivityModel implements ArrayAccess
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'duration' => 'getDuration',
+        'active' => 'getActive',
         'route_id' => 'getRouteId',
         'route_nr' => 'getRouteNr',
         'route_name' => 'getRouteName',
@@ -298,6 +305,7 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'getAssignmentLink',
         'route_link' => 'getRouteLink',
         'tags' => 'getTags',
+        'tag_names' => 'getTagNames',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
@@ -403,6 +411,7 @@ class ActivityModel implements ArrayAccess
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['route_nr'] = isset($data['route_nr']) ? $data['route_nr'] : null;
         $this->container['route_name'] = isset($data['route_name']) ? $data['route_name'] : null;
@@ -430,6 +439,7 @@ class ActivityModel implements ArrayAccess
         $this->container['assignment_link'] = isset($data['assignment_link']) ? $data['assignment_link'] : null;
         $this->container['route_link'] = isset($data['route_link']) ? $data['route_link'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
@@ -674,7 +684,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets instructions
-     * @param \BumbalClient\Model\InstructionModel[] $instructions
+     * @param \BumbalClient\Model\InstructionModel[] $instructions 
      * @return $this
      */
     public function setInstructions($instructions)
@@ -869,6 +879,27 @@ class ActivityModel implements ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: activity has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }
@@ -1283,7 +1314,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address 
      * @return $this
      */
     public function setAddress($address)
@@ -1304,7 +1335,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \BumbalClient\Model\AddressModel $depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address 
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -1325,7 +1356,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets package_lines
-     * @param \BumbalClient\Model\PackageLineModel[] $package_lines
+     * @param \BumbalClient\Model\PackageLineModel[] $package_lines 
      * @return $this
      */
     public function setPackageLines($package_lines)
@@ -1346,7 +1377,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets time_slots
-     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots
+     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots 
      * @return $this
      */
     public function setTimeSlots($time_slots)
@@ -1367,7 +1398,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \BumbalClient\Model\CommunicationModel $communication
+     * @param \BumbalClient\Model\CommunicationModel $communication 
      * @return $this
      */
     public function setCommunication($communication)
@@ -1388,7 +1419,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment_link
-     * @param \BumbalClient\Model\LinkModel $assignment_link
+     * @param \BumbalClient\Model\LinkModel $assignment_link 
      * @return $this
      */
     public function setAssignmentLink($assignment_link)
@@ -1409,7 +1440,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_link
-     * @param \BumbalClient\Model\LinkModel $route_link
+     * @param \BumbalClient\Model\LinkModel $route_link 
      * @return $this
      */
     public function setRouteLink($route_link)
@@ -1430,12 +1461,33 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return null[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param null[] $tag_names 
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
 
         return $this;
     }
@@ -1451,7 +1503,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -1472,7 +1524,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1493,7 +1545,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -1514,7 +1566,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)

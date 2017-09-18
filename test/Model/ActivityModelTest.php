@@ -240,6 +240,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+
+    }
+
+    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()
@@ -451,6 +459,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "tags"
      */
     public function testPropertyTags()
+    {
+
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
     {
 
     }

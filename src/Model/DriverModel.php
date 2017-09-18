@@ -235,7 +235,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -256,7 +256,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -277,7 +277,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -298,7 +298,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets drivers
-     * @param \BumbalClient\Model\DriverModel[] $drivers
+     * @param \BumbalClient\Model\DriverModel[] $drivers 
      * @return $this
      */
     public function setDrivers($drivers)
@@ -319,7 +319,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)

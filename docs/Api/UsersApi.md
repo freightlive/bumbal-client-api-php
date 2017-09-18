@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Userss
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
+[**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) an User
 [**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
 
 
@@ -150,6 +151,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setUser**
+> \BumbalClient\Model\ApiResponse setUser($body)
+
+Set (create or update) an User
+
+Set (create or update) an User. If id or links are set in the data, and a corresponding users is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$body = new \BumbalClient\Model\UsersModel(); // \BumbalClient\Model\UsersModel | User object
+
+try {
+    $result = $api_instance->setUser($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->setUser: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\UsersModel**](../Model/\BumbalClient\Model\UsersModel.md)| User object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

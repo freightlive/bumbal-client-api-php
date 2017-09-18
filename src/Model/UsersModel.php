@@ -268,7 +268,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
