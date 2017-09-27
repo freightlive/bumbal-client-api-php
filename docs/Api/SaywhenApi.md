@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **saywhenRetrievePortalURL**
-> \BumbalClient\BumbalClient\Model\ApiResponse saywhenRetrievePortalURL($activity_id)
+> \BumbalClient\Model\ApiResponse saywhenRetrievePortalURL($activity_id)
 
 Retrieve SayWhen Portal URL
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saywhenRetrieveStatus**
-> \BumbalClient\BumbalClient\Model\SayWhenVisitModel saywhenRetrieveStatus($activity_id)
+> \BumbalClient\Model\SayWhenVisitModel saywhenRetrieveStatus($activity_id)
 
 Retrieve SayWhen Status
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\SayWhenVisitModel**](../Model/SayWhenVisitModel.md)
+[**\BumbalClient\Model\SayWhenVisitModel**](../Model/SayWhenVisitModel.md)
 
 ### Authorization
 

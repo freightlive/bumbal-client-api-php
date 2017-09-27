@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -57,10 +57,10 @@ class CarModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'registration_nr' => 'string',
-        'tags' => '\BumbalClient\BumbalClient\Model\TagModel[]',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'files' => '\BumbalClient\BumbalClient\Model\FileModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'updated_by_name' => 'string'
@@ -285,7 +285,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient\BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -294,7 +294,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -306,7 +306,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -315,7 +315,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -327,7 +327,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -336,7 +336,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -348,7 +348,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \BumbalClient\BumbalClient\Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -357,7 +357,7 @@ class CarModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

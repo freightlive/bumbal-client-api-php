@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -86,8 +86,8 @@ class PackageLineFiltersModel implements ArrayAccess
         'capacity_loading_weight' => 'float',
         'hs_code' => 'string[]',
         'description' => 'string',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'activity_links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'activity_links' => '\BumbalClient\Model\LinkModel[]',
         'activity_id' => 'int[]'
     ];
 
@@ -1038,7 +1038,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -1047,7 +1047,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -1059,7 +1059,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Gets activity_links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getActivityLinks()
     {
@@ -1068,7 +1068,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $activity_links
+     * @param \BumbalClient\Model\LinkModel[] $activity_links
      * @return $this
      */
     public function setActivityLinks($activity_links)

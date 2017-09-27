@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -68,8 +68,8 @@ class AddressAppliedModel implements ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'iso_country' => 'string',
-        'emails' => '\BumbalClient\BumbalClient\Model\EmailModel[]',
-        'phone_nrs' => '\BumbalClient\BumbalClient\Model\PhoneNrModel[]',
+        'emails' => '\BumbalClient\Model\EmailModel[]',
+        'phone_nrs' => '\BumbalClient\Model\PhoneNrModel[]',
         'contact_person' => 'string',
         'latitude' => 'string',
         'longitude' => 'string'
@@ -570,7 +570,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Gets emails
-     * @return \BumbalClient\BumbalClient\Model\EmailModel[]
+     * @return \BumbalClient\Model\EmailModel[]
      */
     public function getEmails()
     {
@@ -579,7 +579,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets emails
-     * @param \BumbalClient\BumbalClient\Model\EmailModel[] $emails
+     * @param \BumbalClient\Model\EmailModel[] $emails
      * @return $this
      */
     public function setEmails($emails)
@@ -591,7 +591,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Gets phone_nrs
-     * @return \BumbalClient\BumbalClient\Model\PhoneNrModel[]
+     * @return \BumbalClient\Model\PhoneNrModel[]
      */
     public function getPhoneNrs()
     {
@@ -600,7 +600,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets phone_nrs
-     * @param \BumbalClient\BumbalClient\Model\PhoneNrModel[] $phone_nrs
+     * @param \BumbalClient\Model\PhoneNrModel[] $phone_nrs
      * @return $this
      */
     public function setPhoneNrs($phone_nrs)

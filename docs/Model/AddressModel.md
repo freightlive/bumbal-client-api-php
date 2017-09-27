@@ -18,14 +18,14 @@ Name | Type | Description | Notes
 **city** | **string** |  | [optional] 
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
-**emails** | [**\BumbalClient\BumbalClient\Model\EmailModel[]**](EmailModel.md) |  | [optional] 
-**phone_nrs** | [**\BumbalClient\BumbalClient\Model\PhoneNrModel[]**](PhoneNrModel.md) |  | [optional] 
+**emails** | [**\BumbalClient\Model\EmailModel[]**](EmailModel.md) |  | [optional] 
+**phone_nrs** | [**\BumbalClient\Model\PhoneNrModel[]**](PhoneNrModel.md) |  | [optional] 
 **latitude** | **string** |  | [optional] 
 **longitude** | **string** |  | [optional] 
 **contact_person** | **string** |  | [optional] 
-**links** | [**\BumbalClient\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**tags** | [**\BumbalClient\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

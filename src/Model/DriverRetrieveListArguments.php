@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class DriverRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\DriverOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\DriverFiltersModel',
+        'options' => '\BumbalClient\Model\DriverOptionsModel',
+        'filters' => '\BumbalClient\Model\DriverFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -254,7 +254,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\DriverOptionsModel
+     * @return \BumbalClient\Model\DriverOptionsModel
      */
     public function getOptions()
     {
@@ -263,7 +263,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\DriverOptionsModel $options
+     * @param \BumbalClient\Model\DriverOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -275,7 +275,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\DriverFiltersModel
+     * @return \BumbalClient\Model\DriverFiltersModel
      */
     public function getFilters()
     {
@@ -284,7 +284,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\DriverFiltersModel $filters
+     * @param \BumbalClient\Model\DriverFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

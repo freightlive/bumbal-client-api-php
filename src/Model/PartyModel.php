@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -57,18 +57,18 @@ class PartyModel implements ArrayAccess
         'id' => 'int',
         'party_type_name' => 'string',
         'party_type_id' => 'int',
-        'address' => '\BumbalClient\BumbalClient\Model\AddressModel',
+        'address' => '\BumbalClient\Model\AddressModel',
         'address_id' => 'int',
         'name_1' => 'string',
         'name_2' => 'string',
         'nr' => 'string',
         'contact_person' => 'string',
         'url' => 'string',
-        'tags' => '\BumbalClient\BumbalClient\Model\TagModel[]',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'notes' => '\BumbalClient\BumbalClient\Model\NoteModel[]',
-        'files' => '\BumbalClient\BumbalClient\Model\FileModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -362,7 +362,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets address
-     * @return \BumbalClient\BumbalClient\Model\AddressModel
+     * @return \BumbalClient\Model\AddressModel
      */
     public function getAddress()
     {
@@ -371,7 +371,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address
      * @return $this
      */
     public function setAddress($address)
@@ -509,7 +509,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient\BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -518,7 +518,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -530,7 +530,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -539,7 +539,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -551,7 +551,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -560,7 +560,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -572,7 +572,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets notes
-     * @return \BumbalClient\BumbalClient\Model\NoteModel[]
+     * @return \BumbalClient\Model\NoteModel[]
      */
     public function getNotes()
     {
@@ -581,7 +581,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -593,7 +593,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \BumbalClient\BumbalClient\Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -602,7 +602,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

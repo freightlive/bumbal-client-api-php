@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **systemGetVariables**
-> \BumbalClient\BumbalClient\Model\VariablesModel systemGetVariables()
+> \BumbalClient\Model\VariablesModel systemGetVariables()
 
 Retrieve System Variables
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\VariablesModel**](../Model/VariablesModel.md)
+[**\BumbalClient\Model\VariablesModel**](../Model/VariablesModel.md)
 
 ### Authorization
 

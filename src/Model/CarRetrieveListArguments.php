@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class CarRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\CarOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\CarFiltersModel',
+        'options' => '\BumbalClient\Model\CarOptionsModel',
+        'filters' => '\BumbalClient\Model\CarFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -254,7 +254,7 @@ class CarRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\CarOptionsModel
+     * @return \BumbalClient\Model\CarOptionsModel
      */
     public function getOptions()
     {
@@ -263,7 +263,7 @@ class CarRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\CarOptionsModel $options
+     * @param \BumbalClient\Model\CarOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -275,7 +275,7 @@ class CarRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\CarFiltersModel
+     * @return \BumbalClient\Model\CarFiltersModel
      */
     public function getFilters()
     {
@@ -284,7 +284,7 @@ class CarRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\CarFiltersModel $filters
+     * @param \BumbalClient\Model\CarFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

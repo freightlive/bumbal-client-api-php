@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveAddressApplied**
-> \BumbalClient\BumbalClient\Model\AddressAppliedModel retrieveAddressApplied($address_id)
+> \BumbalClient\Model\AddressAppliedModel retrieveAddressApplied($address_id)
 
 Retrieve an Applied Address
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
+[**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddressApplied**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateAddressApplied($address_id, $body)
+> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id, $body)
 
 Update a AddressApplied
 
@@ -77,7 +77,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of address to update
-$body = new \BumbalClient\BumbalClient\Model\AddressAppliedModel(); // \BumbalClient\BumbalClient\Model\AddressAppliedModel | AddressApplied object that needs to be updated
+$body = new \BumbalClient\Model\AddressAppliedModel(); // \BumbalClient\Model\AddressAppliedModel | AddressApplied object that needs to be updated
 
 try {
     $result = $api_instance->updateAddressApplied($address_id, $body);
@@ -93,11 +93,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| ID of address to update |
- **body** | [**\BumbalClient\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

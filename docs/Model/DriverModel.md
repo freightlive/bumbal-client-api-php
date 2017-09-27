@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | 
-**tags** | [**\BumbalClient\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**links** | [**\BumbalClient\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**drivers** | [**\BumbalClient\BumbalClient\Model\DriverModel[]**](DriverModel.md) |  | [optional] 
-**files** | [**\BumbalClient\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**drivers** | [**\BumbalClient\Model\DriverModel[]**](DriverModel.md) |  | [optional] 
+**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **updated_by_name** | **string** | Driver updated by user full name | [optional] 

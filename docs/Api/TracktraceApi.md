@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveActivityStatus**
-> \BumbalClient\BumbalClient\Model\ApiResponse retrieveActivityStatus($activity_id)
+> \BumbalClient\Model\ApiResponse retrieveActivityStatus($activity_id)
 
 Retrieve Activity Status
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRouteStatus**
-> \BumbalClient\BumbalClient\Model\ApiResponse retrieveRouteStatus($route_id)
+> \BumbalClient\Model\ApiResponse retrieveRouteStatus($route_id)
 
 Retrieve Route Status
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackTraceCalculateETA**
-> \BumbalClient\BumbalClient\Model\ApiResponse trackTraceCalculateETA($activity_id)
+> \BumbalClient\Model\ApiResponse trackTraceCalculateETA($activity_id)
 
 Calculate ETA for Activity
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

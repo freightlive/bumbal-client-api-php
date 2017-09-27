@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -63,8 +63,8 @@ class NoteModel implements ArrayAccess
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     /**
@@ -417,7 +417,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -426,7 +426,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -438,7 +438,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -447,7 +447,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

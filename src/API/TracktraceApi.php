@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class TracktraceApi
      *
      * @param int $activity_id ID of the activity to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function retrieveActivityStatus($activity_id)
     {
@@ -109,7 +109,7 @@ class TracktraceApi
      *
      * @param int $activity_id ID of the activity to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveActivityStatusWithHttpInfo($activity_id)
     {
@@ -157,15 +157,15 @@ class TracktraceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/track-trace/retrieve-activity-status/{activityId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -181,7 +181,7 @@ class TracktraceApi
      *
      * @param int $route_id ID of the route to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function retrieveRouteStatus($route_id)
     {
@@ -196,7 +196,7 @@ class TracktraceApi
      *
      * @param int $route_id ID of the route to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveRouteStatusWithHttpInfo($route_id)
     {
@@ -244,15 +244,15 @@ class TracktraceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/track-trace/retrieve-route-status/{routeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -268,7 +268,7 @@ class TracktraceApi
      *
      * @param int $activity_id ID of the activity to calculate ETA for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function trackTraceCalculateETA($activity_id)
     {
@@ -283,7 +283,7 @@ class TracktraceApi
      *
      * @param int $activity_id ID of the activity to calculate ETA for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackTraceCalculateETAWithHttpInfo($activity_id)
     {
@@ -331,15 +331,15 @@ class TracktraceApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/track-trace/calculate-eta/{activityId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

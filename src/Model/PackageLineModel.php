@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -85,11 +85,11 @@ class PackageLineModel implements ArrayAccess
         'capacity_loading_weight' => 'float',
         'hs_code' => 'string',
         'description' => 'string',
-        'activity_links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'notes' => '\BumbalClient\BumbalClient\Model\NoteModel[]',
-        'files' => '\BumbalClient\BumbalClient\Model\FileModel[]',
+        'activity_links' => '\BumbalClient\Model\LinkModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -1088,7 +1088,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets activity_links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getActivityLinks()
     {
@@ -1097,7 +1097,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $activity_links links to activities connected to this package_line
+     * @param \BumbalClient\Model\LinkModel[] $activity_links links to activities connected to this package_line
      * @return $this
      */
     public function setActivityLinks($activity_links)
@@ -1109,7 +1109,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -1118,7 +1118,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -1130,7 +1130,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -1139,7 +1139,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1151,7 +1151,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets notes
-     * @return \BumbalClient\BumbalClient\Model\NoteModel[]
+     * @return \BumbalClient\Model\NoteModel[]
      */
     public function getNotes()
     {
@@ -1160,7 +1160,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -1172,7 +1172,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \BumbalClient\BumbalClient\Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -1181,7 +1181,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

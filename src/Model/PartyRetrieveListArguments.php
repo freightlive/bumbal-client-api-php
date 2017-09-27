@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class PartyRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\PartyOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\PartyFiltersModel',
+        'options' => '\BumbalClient\Model\PartyOptionsModel',
+        'filters' => '\BumbalClient\Model\PartyFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -186,7 +186,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\PartyOptionsModel
+     * @return \BumbalClient\Model\PartyOptionsModel
      */
     public function getOptions()
     {
@@ -195,7 +195,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\PartyOptionsModel $options
+     * @param \BumbalClient\Model\PartyOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +207,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\PartyFiltersModel
+     * @return \BumbalClient\Model\PartyFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +216,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\PartyFiltersModel $filters
+     * @param \BumbalClient\Model\PartyFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

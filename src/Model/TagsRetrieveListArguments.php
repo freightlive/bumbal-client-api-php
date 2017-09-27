@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class TagsRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\TagsOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\TagsFiltersModel',
+        'options' => '\BumbalClient\Model\TagsOptionsModel',
+        'filters' => '\BumbalClient\Model\TagsFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -186,7 +186,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\TagsOptionsModel
+     * @return \BumbalClient\Model\TagsOptionsModel
      */
     public function getOptions()
     {
@@ -195,7 +195,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\TagsOptionsModel $options
+     * @param \BumbalClient\Model\TagsOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +207,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\TagsFiltersModel
+     * @return \BumbalClient\Model\TagsFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +216,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\TagsFiltersModel $filters
+     * @param \BumbalClient\Model\TagsFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

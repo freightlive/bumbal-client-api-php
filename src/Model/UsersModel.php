@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -67,7 +67,7 @@ class UsersModel implements ArrayAccess
         'password' => 'string',
         'lang_code' => 'string',
         'address_id' => 'int',
-        'address' => '\BumbalClient\BumbalClient\Model\AddressModel'
+        'address' => '\BumbalClient\Model\AddressModel'
     ];
 
     /**
@@ -560,7 +560,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets address
-     * @return \BumbalClient\BumbalClient\Model\AddressModel
+     * @return \BumbalClient\Model\AddressModel
      */
     public function getAddress()
     {
@@ -569,7 +569,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $address user address (mostly interesting for drivers)
+     * @param \BumbalClient\Model\AddressModel $address user address (mostly interesting for drivers)
      * @return $this
      */
     public function setAddress($address)

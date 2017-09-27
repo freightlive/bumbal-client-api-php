@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -65,7 +65,7 @@ class FileModel implements ArrayAccess
         'updated_by' => 'int',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]'
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     /**
@@ -465,7 +465,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -474,7 +474,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

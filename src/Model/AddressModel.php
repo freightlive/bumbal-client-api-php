@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -69,14 +69,14 @@ class AddressModel implements ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'iso_country' => 'string',
-        'emails' => '\BumbalClient\BumbalClient\Model\EmailModel[]',
-        'phone_nrs' => '\BumbalClient\BumbalClient\Model\PhoneNrModel[]',
+        'emails' => '\BumbalClient\Model\EmailModel[]',
+        'phone_nrs' => '\BumbalClient\Model\PhoneNrModel[]',
         'latitude' => 'string',
         'longitude' => 'string',
         'contact_person' => 'string',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'tags' => '\BumbalClient\BumbalClient\Model\TagModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     /**
@@ -615,7 +615,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets emails
-     * @return \BumbalClient\BumbalClient\Model\EmailModel[]
+     * @return \BumbalClient\Model\EmailModel[]
      */
     public function getEmails()
     {
@@ -624,7 +624,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets emails
-     * @param \BumbalClient\BumbalClient\Model\EmailModel[] $emails
+     * @param \BumbalClient\Model\EmailModel[] $emails
      * @return $this
      */
     public function setEmails($emails)
@@ -636,7 +636,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets phone_nrs
-     * @return \BumbalClient\BumbalClient\Model\PhoneNrModel[]
+     * @return \BumbalClient\Model\PhoneNrModel[]
      */
     public function getPhoneNrs()
     {
@@ -645,7 +645,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets phone_nrs
-     * @param \BumbalClient\BumbalClient\Model\PhoneNrModel[] $phone_nrs
+     * @param \BumbalClient\Model\PhoneNrModel[] $phone_nrs
      * @return $this
      */
     public function setPhoneNrs($phone_nrs)
@@ -720,7 +720,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -729,7 +729,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -741,7 +741,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -750,7 +750,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -762,7 +762,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient\BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -771,7 +771,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
