@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/\BumbalClient\Model\EquipmentModel.md)| Equipment object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)| Equipment object that needs to be created | [optional]
 
 ### Return type
 
@@ -194,7 +194,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/\BumbalClient\Model\EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
 
 ### Return type
 

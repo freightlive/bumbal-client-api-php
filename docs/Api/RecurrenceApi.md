@@ -93,7 +93,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/\BumbalClient\Model\RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
 
 ### Return type
 
