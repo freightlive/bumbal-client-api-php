@@ -201,12 +201,13 @@ class ActivityApi
      * @param bool $include_activity_record_info Include Activity Info (required)
      * @param bool $include_activity_notes Include Activity Notes (required)
      * @param bool $include_activity_note_tags Include Activity Note Tags (required)
+     * @param bool $include_depot_address_object Include Depot Address Object (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ActivityModel
      */
-    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags)
+    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object)
     {
-        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags);
+        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object);
         return $response;
     }
 
@@ -237,10 +238,11 @@ class ActivityApi
      * @param bool $include_activity_record_info Include Activity Info (required)
      * @param bool $include_activity_notes Include Activity Notes (required)
      * @param bool $include_activity_note_tags Include Activity Note Tags (required)
+     * @param bool $include_depot_address_object Include Depot Address Object (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags)
+    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -329,6 +331,10 @@ class ActivityApi
         // verify the required parameter 'include_activity_note_tags' is set
         if ($include_activity_note_tags === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_activity_note_tags when calling retrieveActivity');
+        }
+        // verify the required parameter 'include_depot_address_object' is set
+        if ($include_depot_address_object === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_depot_address_object when calling retrieveActivity');
         }
         // parse inputs
         $resourcePath = "/activity/{activityId}";
@@ -425,6 +431,10 @@ class ActivityApi
         // query params
         if ($include_activity_note_tags !== null) {
             $queryParams['include_activity_note_tags'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_note_tags);
+        }
+        // query params
+        if ($include_depot_address_object !== null) {
+            $queryParams['include_depot_address_object'] = $this->apiClient->getSerializer()->toQueryValue($include_depot_address_object);
         }
         // path params
         if ($activity_id !== null) {

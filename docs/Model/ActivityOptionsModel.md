@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **include_activity_record_info** | **bool** |  | [optional] 
 **include_activity_notes** | **bool** |  | [optional] 
 **include_activity_note_tags** | **bool** |  | [optional] 
+**include_depot_address_object** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

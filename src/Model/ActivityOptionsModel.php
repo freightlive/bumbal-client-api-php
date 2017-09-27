@@ -76,7 +76,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment_object' => 'bool',
         'include_activity_record_info' => 'bool',
         'include_activity_notes' => 'bool',
-        'include_activity_note_tags' => 'bool'
+        'include_activity_note_tags' => 'bool',
+        'include_depot_address_object' => 'bool'
     ];
 
     /**
@@ -106,7 +107,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment_object' => null,
         'include_activity_record_info' => null,
         'include_activity_notes' => null,
-        'include_activity_note_tags' => null
+        'include_activity_note_tags' => null,
+        'include_depot_address_object' => null
     ];
 
     public static function swaggerTypes()
@@ -146,7 +148,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment_object' => 'include_assignment_object',
         'include_activity_record_info' => 'include_activity_record_info',
         'include_activity_notes' => 'include_activity_notes',
-        'include_activity_note_tags' => 'include_activity_note_tags'
+        'include_activity_note_tags' => 'include_activity_note_tags',
+        'include_depot_address_object' => 'include_depot_address_object'
     ];
 
 
@@ -177,7 +180,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment_object' => 'setIncludeAssignmentObject',
         'include_activity_record_info' => 'setIncludeActivityRecordInfo',
         'include_activity_notes' => 'setIncludeActivityNotes',
-        'include_activity_note_tags' => 'setIncludeActivityNoteTags'
+        'include_activity_note_tags' => 'setIncludeActivityNoteTags',
+        'include_depot_address_object' => 'setIncludeDepotAddressObject'
     ];
 
 
@@ -208,7 +212,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment_object' => 'getIncludeAssignmentObject',
         'include_activity_record_info' => 'getIncludeActivityRecordInfo',
         'include_activity_notes' => 'getIncludeActivityNotes',
-        'include_activity_note_tags' => 'getIncludeActivityNoteTags'
+        'include_activity_note_tags' => 'getIncludeActivityNoteTags',
+        'include_depot_address_object' => 'getIncludeDepotAddressObject'
     ];
 
     public static function attributeMap()
@@ -265,6 +270,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
+        $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
     }
 
     /**
@@ -771,6 +777,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityNoteTags($include_activity_note_tags)
     {
         $this->container['include_activity_note_tags'] = $include_activity_note_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_depot_address_object
+     * @return bool
+     */
+    public function getIncludeDepotAddressObject()
+    {
+        return $this->container['include_depot_address_object'];
+    }
+
+    /**
+     * Sets include_depot_address_object
+     * @param bool $include_depot_address_object
+     * @return $this
+     */
+    public function setIncludeDepotAddressObject($include_depot_address_object)
+    {
+        $this->container['include_depot_address_object'] = $include_depot_address_object;
 
         return $this;
     }

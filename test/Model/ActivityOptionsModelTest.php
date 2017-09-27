@@ -237,4 +237,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeActivityNoteTags()
     {
     }
+
+    /**
+     * Test attribute "include_depot_address_object"
+     */
+    public function testPropertyIncludeDepotAddressObject()
+    {
+    }
 }
