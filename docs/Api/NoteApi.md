@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)| Note object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\NoteModel**](../Model/\BumbalClient\Model\NoteModel.md)| Note object that needs to be created | [optional]
 
 ### Return type
 
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\NoteRetrieveListArguments**](../Model/NoteRetrieveListArguments.md)| Note RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\NoteRetrieveListArguments**](../Model/\BumbalClient\Model\NoteRetrieveListArguments.md)| Note RetrieveList Arguments |
 
 ### Return type
 
@@ -253,7 +253,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)| Note object | [optional]
+ **body** | [**\BumbalClient\Model\NoteModel**](../Model/\BumbalClient\Model\NoteModel.md)| Note object | [optional]
 
 ### Return type
 
@@ -305,7 +305,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **note_id** | **int**| ID of note to update |
- **body** | [**\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)| Note object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\NoteModel**](../Model/\BumbalClient\Model\NoteModel.md)| Note object that needs to be updated | [optional]
 
 ### Return type
 

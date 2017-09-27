@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object that needs to be created | [optional]
 
 ### Return type
 
@@ -199,7 +199,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\DriverRetrieveListArguments**](../Model/DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\DriverRetrieveListArguments**](../Model/\BumbalClient\Model\DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
 
 ### Return type
 
@@ -249,7 +249,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object | [optional]
+ **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object | [optional]
 
 ### Return type
 
@@ -301,7 +301,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **driver_id** | **int**| ID of driver to update |
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\DriverModel**](../Model/\BumbalClient\Model\DriverModel.md)| Driver object that needs to be updated | [optional]
 
 ### Return type
 

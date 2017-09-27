@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagModel**](../Model/TagModel.md)| Tag object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TagModel**](../Model/\BumbalClient\Model\TagModel.md)| Tag object that needs to be created | [optional]
 
 ### Return type
 
@@ -144,7 +144,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TagsRetrieveListArguments**](../Model/TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\TagsRetrieveListArguments**](../Model/\BumbalClient\Model\TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
 
 ### Return type
 
