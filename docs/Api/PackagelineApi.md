@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **createPackageLine**
-> \BumbalClient\Model\ApiResponse createPackageLine($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createPackageLine($body)
 
 Create or update an PackageLine
 
-Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line    *     is found in Bumbal, an update will be performed.
+Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
-$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine object
+$body = new \BumbalClient\BumbalClient\Model\PackageLineModel(); // \BumbalClient\BumbalClient\Model\PackageLineModel | PackageLine object
 
 try {
     $result = $api_instance->createPackageLine($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePackageLine**
-> \BumbalClient\Model\ApiResponse deletePackageLine($package_line_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deletePackageLine($package_line_id)
 
 Delete an package-line
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPackageLine**
-> \BumbalClient\Model\PackageLineModel[] retrieveListPackageLine($arguments)
+> \BumbalClient\BumbalClient\Model\PackageLineModel[] retrieveListPackageLine($arguments)
 
 Retrieve List of PackageLines
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
-$arguments = new \BumbalClient\Model\PackageLineRetrieveListArguments(); // \BumbalClient\Model\PackageLineRetrieveListArguments | PackageLine RetrieveList Arguments
+$arguments = new \BumbalClient\BumbalClient\Model\PackageLineRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\PackageLineRetrieveListArguments | PackageLine RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListPackageLine($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PackageLineRetrieveListArguments**](../Model/\BumbalClient\Model\PackageLineRetrieveListArguments.md)| PackageLine RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\PackageLineRetrieveListArguments**](../Model/PackageLineRetrieveListArguments.md)| PackageLine RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PackageLineModel[]**](../Model/PackageLineModel.md)
+[**\BumbalClient\BumbalClient\Model\PackageLineModel[]**](../Model/PackageLineModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrievePackageLine**
-> \BumbalClient\Model\PackageLineModel retrievePackageLine($package_line_id, $include_package_line_status, $include_package_line_type_name, $include_package_line_meta_data, $include_package_line_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_package_line_links, $include_package_lines_info, $include_package_line_files, $include_package_line_files_meta_data, $include_package_line_files_meta_data_objects)
+> \BumbalClient\BumbalClient\Model\PackageLineModel retrievePackageLine($package_line_id, $include_package_line_status, $include_package_line_type_name, $include_package_line_meta_data, $include_package_line_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_package_line_links, $include_package_lines_info, $include_package_line_files, $include_package_line_files_meta_data, $include_package_line_files_meta_data_objects)
 
 Find package-line by ID
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)
+[**\BumbalClient\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setPackageLine**
-> \BumbalClient\Model\ApiResponse setPackageLine($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setPackageLine($body)
 
 Set (create or update) an PackageLine
 
@@ -260,7 +260,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
-$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine object
+$body = new \BumbalClient\BumbalClient\Model\PackageLineModel(); // \BumbalClient\BumbalClient\Model\PackageLineModel | PackageLine object
 
 try {
     $result = $api_instance->setPackageLine($body);
@@ -275,11 +275,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePackageLine**
-> \BumbalClient\Model\ApiResponse updatePackageLine($package_line_id, $body)
+> \BumbalClient\BumbalClient\Model\ApiResponse updatePackageLine($package_line_id, $body)
 
 Update a package-line
 
@@ -311,7 +311,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
 $package_line_id = 789; // int | ID of package-line to update
-$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine object that needs to be updated
+$body = new \BumbalClient\BumbalClient\Model\PackageLineModel(); // \BumbalClient\BumbalClient\Model\PackageLineModel | PackageLine object that needs to be updated
 
 try {
     $result = $api_instance->updatePackageLine($package_line_id, $body);
@@ -327,11 +327,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **package_line_id** | **int**| ID of package-line to update |
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

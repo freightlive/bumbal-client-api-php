@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **plannerAddActivitiesToRoute**
-> \BumbalClient\Model\ApiResponse plannerAddActivitiesToRoute()
+> \BumbalClient\BumbalClient\Model\ApiResponse plannerAddActivitiesToRoute()
 
 Add Activities To Route
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerCalculateDriveTime**
-> \BumbalClient\Model\ApiResponse plannerCalculateDriveTime()
+> \BumbalClient\BumbalClient\Model\ApiResponse plannerCalculateDriveTime()
 
 Calculate Drive Time
 
@@ -90,7 +90,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerChangeActivitySequence**
-> \BumbalClient\Model\ApiResponse plannerChangeActivitySequence()
+> \BumbalClient\BumbalClient\Model\ApiResponse plannerChangeActivitySequence()
 
 Change Activity Sequence
 
@@ -136,7 +136,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerLockActivities**
-> \BumbalClient\Model\ApiResponse plannerLockActivities()
+> \BumbalClient\BumbalClient\Model\ApiResponse plannerLockActivities()
 
 Lock Activities on Route
 
@@ -182,7 +182,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerRemoveActivitiesFromRoute**
-> \BumbalClient\Model\ApiResponse plannerRemoveActivitiesFromRoute()
+> \BumbalClient\BumbalClient\Model\ApiResponse plannerRemoveActivitiesFromRoute()
 
 Remove Activities From Route
 
@@ -228,7 +228,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
