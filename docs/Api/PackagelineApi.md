@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an PackageLine
 
-Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line   *     is found in Bumbal, an update will be performed.
+Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line    *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object | [optional]
+ **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object | [optional]
 
 ### Return type
 
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PackageLineRetrieveListArguments**](../Model/PackageLineRetrieveListArguments.md)| PackageLine RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\PackageLineRetrieveListArguments**](../Model/\BumbalClient\Model\PackageLineRetrieveListArguments.md)| PackageLine RetrieveList Arguments |
 
 ### Return type
 
@@ -275,7 +275,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object | [optional]
+ **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object | [optional]
 
 ### Return type
 
@@ -327,7 +327,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **package_line_id** | **int**| ID of package-line to update |
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/\BumbalClient\Model\PackageLineModel.md)| PackageLine object that needs to be updated | [optional]
 
 ### Return type
 

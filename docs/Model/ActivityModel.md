@@ -50,7 +50,7 @@ Name | Type | Description | Notes
 **assignment_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 
 **route_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**tag_names** | [**null[]**](.md) |  | [optional] 
+**tag_names** | **object** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
