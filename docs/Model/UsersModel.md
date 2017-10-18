@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **lang_code** | **string** | lang code (nl &#x3D; default) | [optional] 
 **address_id** | **int** | id of the user address | [optional] 
 **address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

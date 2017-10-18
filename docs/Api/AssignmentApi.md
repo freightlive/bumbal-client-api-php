@@ -152,7 +152,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/\BumbalClient\Model\AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
 
 ### Return type
 
@@ -202,7 +202,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object | [optional]
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object | [optional]
 
 ### Return type
 
@@ -254,7 +254,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to update |
- **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/\BumbalClient\Model\AssignmentModel.md)| Assignment object that needs to be updated | [optional]
 
 ### Return type
 
