@@ -90,45 +90,23 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for autoPlan
-     *
-     * Plan a certain activity in any fitting route.
-     *
-     */
-    public function testAutoPlan()
-    {
-
-    }
-
-    /**
-     * Test case for checkAvailability
-     *
-     * check availability in planning for a certain set of activity properties.
-     *
-     */
-    public function testCheckAvailability()
-    {
-
-    }
-
-    /**
-     * Test case for checkAvailabilityResult
-     *
-     * Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled..
-     *
-     */
-    public function testCheckAvailabilityResult()
-    {
-
-    }
-
-    /**
      * Test case for plannerAddActivitiesToRoute
      *
      * Add Activities To Route.
      *
      */
     public function testPlannerAddActivitiesToRoute()
+    {
+
+    }
+
+    /**
+     * Test case for plannerAutoPlan
+     *
+     * Plan a certain activity in any fitting route.
+     *
+     */
+    public function testPlannerAutoPlan()
     {
 
     }
@@ -151,6 +129,28 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPlannerChangeActivitySequence()
+    {
+
+    }
+
+    /**
+     * Test case for plannerCheckAvailability
+     *
+     * check availability in planning for a certain set of activity properties.
+     *
+     */
+    public function testPlannerCheckAvailability()
+    {
+
+    }
+
+    /**
+     * Test case for plannerCheckAvailabilityResult
+     *
+     * Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled..
+     *
+     */
+    public function testPlannerCheckAvailabilityResult()
     {
 
     }

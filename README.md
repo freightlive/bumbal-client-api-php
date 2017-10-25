@@ -142,12 +142,12 @@ Class | Method | HTTP request | Description
 *PartyApi* | [**retrieveParty**](docs/Api/PartyApi.md#retrieveparty) | **GET** /party/{partyId} | Find party by ID
 *PartyApi* | [**setParty**](docs/Api/PartyApi.md#setparty) | **POST** /party/set | Set (create or update) an Party
 *PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
-*PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
-*PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
-*PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
+*PlannerApi* | [**plannerAutoPlan**](docs/Api/PlannerApi.md#plannerautoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**plannerCalculateDriveTime**](docs/Api/PlannerApi.md#plannercalculatedrivetime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
 *PlannerApi* | [**plannerChangeActivitySequence**](docs/Api/PlannerApi.md#plannerchangeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
+*PlannerApi* | [**plannerCheckAvailability**](docs/Api/PlannerApi.md#plannercheckavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
+*PlannerApi* | [**plannerCheckAvailabilityResult**](docs/Api/PlannerApi.md#plannercheckavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerLockActivities**](docs/Api/PlannerApi.md#plannerlockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**plannerRemoveActivitiesFromRoute**](docs/Api/PlannerApi.md#plannerremoveactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
