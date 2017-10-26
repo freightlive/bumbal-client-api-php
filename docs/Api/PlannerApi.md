@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerCheckAvailability**
-> \BumbalClient\Model\ApiResponse plannerCheckAvailability()
+> \BumbalClient\Model\ApiResponse plannerCheckAvailability($arguments)
 
 check availability in planning for a certain set of activity properties
 
@@ -216,9 +216,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerCheckAvailability();
+    $result = $api_instance->plannerCheckAvailability($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->plannerCheckAvailability: ', $e->getMessage(), PHP_EOL;
@@ -227,7 +228,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 

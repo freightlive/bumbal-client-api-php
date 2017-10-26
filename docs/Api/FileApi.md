@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\FileModel**](../Model/\BumbalClient\Model\FileModel.md)| File object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be created | [optional]
 
 ### Return type
 
@@ -194,7 +194,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\FileRetrieveListArguments**](../Model/\BumbalClient\Model\FileRetrieveListArguments.md)| File RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\FileRetrieveListArguments**](../Model/FileRetrieveListArguments.md)| File RetrieveList Arguments |
 
 ### Return type
 
