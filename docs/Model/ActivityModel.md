@@ -60,6 +60,7 @@ Name | Type | Description | Notes
 **activity_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **activity_created_by** | **int** | created_by user id | [optional] 
 **activity_updated_by** | **int** | created_by user id | [optional] 
+**exclude_webhooks** | [**\BumbalClient\Model\ExcludeWebHooksModel**](ExcludeWebHooksModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

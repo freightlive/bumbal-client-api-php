@@ -230,6 +230,7 @@ Class | Method | HTTP request | Description
  - [EquipmentModel](docs/Model/EquipmentModel.md)
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
+ - [ExcludeWebHooksModel](docs/Model/ExcludeWebHooksModel.md)
  - [FileFiltersModel](docs/Model/FileFiltersModel.md)
  - [FileModel](docs/Model/FileModel.md)
  - [FileOptionsModel](docs/Model/FileOptionsModel.md)

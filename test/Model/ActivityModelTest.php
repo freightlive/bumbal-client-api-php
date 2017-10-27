@@ -475,4 +475,11 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyActivityUpdatedBy()
     {
     }
+
+    /**
+     * Test attribute "exclude_webhooks"
+     */
+    public function testPropertyExcludeWebhooks()
+    {
+    }
 }

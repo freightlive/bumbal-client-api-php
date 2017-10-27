@@ -110,7 +110,8 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => '\DateTime',
         'activity_updated_at' => '\DateTime',
         'activity_created_by' => 'int',
-        'activity_updated_by' => 'int'
+        'activity_updated_by' => 'int',
+        'exclude_webhooks' => '\BumbalClient\Model\ExcludeWebHooksModel'
     ];
 
     /**
@@ -174,7 +175,8 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'date-time',
         'activity_updated_at' => 'date-time',
         'activity_created_by' => null,
-        'activity_updated_by' => null
+        'activity_updated_by' => null,
+        'exclude_webhooks' => null
     ];
 
     public static function swaggerTypes()
@@ -248,7 +250,8 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'activity_created_at',
         'activity_updated_at' => 'activity_updated_at',
         'activity_created_by' => 'activity_created_by',
-        'activity_updated_by' => 'activity_updated_by'
+        'activity_updated_by' => 'activity_updated_by',
+        'exclude_webhooks' => 'exclude_webhooks'
     ];
 
 
@@ -313,7 +316,8 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'setActivityCreatedAt',
         'activity_updated_at' => 'setActivityUpdatedAt',
         'activity_created_by' => 'setActivityCreatedBy',
-        'activity_updated_by' => 'setActivityUpdatedBy'
+        'activity_updated_by' => 'setActivityUpdatedBy',
+        'exclude_webhooks' => 'setExcludeWebhooks'
     ];
 
 
@@ -378,7 +382,8 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'getActivityCreatedAt',
         'activity_updated_at' => 'getActivityUpdatedAt',
         'activity_created_by' => 'getActivityCreatedBy',
-        'activity_updated_by' => 'getActivityUpdatedBy'
+        'activity_updated_by' => 'getActivityUpdatedBy',
+        'exclude_webhooks' => 'getExcludeWebhooks'
     ];
 
     public static function attributeMap()
@@ -517,6 +522,7 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_updated_at'] = isset($data['activity_updated_at']) ? $data['activity_updated_at'] : null;
         $this->container['activity_created_by'] = isset($data['activity_created_by']) ? $data['activity_created_by'] : null;
         $this->container['activity_updated_by'] = isset($data['activity_updated_by']) ? $data['activity_updated_by'] : null;
+        $this->container['exclude_webhooks'] = isset($data['exclude_webhooks']) ? $data['exclude_webhooks'] : null;
     }
 
     /**
@@ -1785,6 +1791,27 @@ class ActivityModel implements ArrayAccess
     public function setActivityUpdatedBy($activity_updated_by)
     {
         $this->container['activity_updated_by'] = $activity_updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets exclude_webhooks
+     * @return \BumbalClient\Model\ExcludeWebHooksModel
+     */
+    public function getExcludeWebhooks()
+    {
+        return $this->container['exclude_webhooks'];
+    }
+
+    /**
+     * Sets exclude_webhooks
+     * @param \BumbalClient\Model\ExcludeWebHooksModel $exclude_webhooks 
+     * @return $this
+     */
+    public function setExcludeWebhooks($exclude_webhooks)
+    {
+        $this->container['exclude_webhooks'] = $exclude_webhooks;
 
         return $this;
     }
