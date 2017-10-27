@@ -62,6 +62,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'bool',
         'include_time_slot_tags' => 'bool',
         'include_route_info' => 'bool',
+        'include_route' => 'bool',
+        'include_package_lines' => 'bool',
         'include_driver_info' => 'bool',
         'include_communication' => 'bool',
         'include_communication_object' => 'bool',
@@ -93,6 +95,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => null,
         'include_time_slot_tags' => null,
         'include_route_info' => null,
+        'include_route' => null,
+        'include_package_lines' => null,
         'include_driver_info' => null,
         'include_communication' => null,
         'include_communication_object' => null,
@@ -134,6 +138,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'include_time_slots',
         'include_time_slot_tags' => 'include_time_slot_tags',
         'include_route_info' => 'include_route_info',
+        'include_route' => 'include_route',
+        'include_package_lines' => 'include_package_lines',
         'include_driver_info' => 'include_driver_info',
         'include_communication' => 'include_communication',
         'include_communication_object' => 'include_communication_object',
@@ -166,6 +172,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'setIncludeTimeSlots',
         'include_time_slot_tags' => 'setIncludeTimeSlotTags',
         'include_route_info' => 'setIncludeRouteInfo',
+        'include_route' => 'setIncludeRoute',
+        'include_package_lines' => 'setIncludePackageLines',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_communication' => 'setIncludeCommunication',
         'include_communication_object' => 'setIncludeCommunicationObject',
@@ -198,6 +206,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_time_slots' => 'getIncludeTimeSlots',
         'include_time_slot_tags' => 'getIncludeTimeSlotTags',
         'include_route_info' => 'getIncludeRouteInfo',
+        'include_route' => 'getIncludeRoute',
+        'include_package_lines' => 'getIncludePackageLines',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_communication' => 'getIncludeCommunication',
         'include_communication_object' => 'getIncludeCommunicationObject',
@@ -255,6 +265,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
         $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
+        $this->container['include_route'] = isset($data['include_route']) ? $data['include_route'] : null;
+        $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
@@ -462,6 +474,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeRouteInfo($include_route_info)
     {
         $this->container['include_route_info'] = $include_route_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_route
+     * @return bool
+     */
+    public function getIncludeRoute()
+    {
+        return $this->container['include_route'];
+    }
+
+    /**
+     * Sets include_route
+     * @param bool $include_route 
+     * @return $this
+     */
+    public function setIncludeRoute($include_route)
+    {
+        $this->container['include_route'] = $include_route;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_package_lines
+     * @return bool
+     */
+    public function getIncludePackageLines()
+    {
+        return $this->container['include_package_lines'];
+    }
+
+    /**
+     * Sets include_package_lines
+     * @param bool $include_package_lines 
+     * @return $this
+     */
+    public function setIncludePackageLines($include_package_lines)
+    {
+        $this->container['include_package_lines'] = $include_package_lines;
 
         return $this;
     }

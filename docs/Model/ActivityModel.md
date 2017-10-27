@@ -49,6 +49,7 @@ Name | Type | Description | Notes
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
 **assignment_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 
 **route_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 
+**route** | [**\BumbalClient\Model\RouteModel[]**](RouteModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **tag_names** | **object** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
