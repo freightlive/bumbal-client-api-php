@@ -1,6 +1,6 @@
 <?php
 /**
- * MetaDataModel
+ * ConfigModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * MetaDataModel Class Doc Comment
+ * ConfigModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MetaDataModel implements ArrayAccess
+class ConfigModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,15 @@ class MetaDataModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'MetaDataModel';
+    protected static $swaggerModelName = 'ConfigModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'value' => 'string'
+        'options' => 'string',
+        'key_ring' => 'string'
     ];
 
     /**
@@ -64,9 +63,8 @@ class MetaDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'name' => null,
-        'value' => null
+        'options' => 'JSON formatted string with options',
+        'key_ring' => 'JSON formatted string with the keyRing'
     ];
 
     public static function swaggerTypes()
@@ -84,9 +82,8 @@ class MetaDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'value' => 'value'
+        'options' => 'options',
+        'key_ring' => 'keyRing'
     ];
 
 
@@ -95,9 +92,8 @@ class MetaDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'value' => 'setValue'
+        'options' => 'setOptions',
+        'key_ring' => 'setKeyRing'
     ];
 
 
@@ -106,9 +102,8 @@ class MetaDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'value' => 'getValue'
+        'options' => 'getOptions',
+        'key_ring' => 'getKeyRing'
     ];
 
     public static function attributeMap()
@@ -142,9 +137,8 @@ class MetaDataModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['key_ring'] = isset($data['key_ring']) ? $data['key_ring'] : null;
     }
 
     /**
@@ -156,9 +150,6 @@ class MetaDataModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -171,72 +162,48 @@ class MetaDataModel implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['id'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets options
+     * @return string
      */
-    public function getId()
+    public function getOptions()
     {
-        return $this->container['id'];
+        return $this->container['options'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique ID
+     * Sets options
+     * @param string $options
      * @return $this
      */
-    public function setId($id)
+    public function setOptions($options)
     {
-        $this->container['id'] = $id;
+        $this->container['options'] = $options;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets key_ring
      * @return string
      */
-    public function getName()
+    public function getKeyRing()
     {
-        return $this->container['name'];
+        return $this->container['key_ring'];
     }
 
     /**
-     * Sets name
-     * @param string $name Name
+     * Sets key_ring
+     * @param string $key_ring
      * @return $this
      */
-    public function setName($name)
+    public function setKeyRing($key_ring)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     * @return string
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     * @param string $value Value
-     * @return $this
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['key_ring'] = $key_ring;
 
         return $this;
     }

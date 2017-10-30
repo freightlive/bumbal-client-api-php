@@ -143,7 +143,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/\BumbalClient\Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
 
 ### Return type
 
@@ -193,7 +193,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\AddressModel**](../Model/\BumbalClient\Model\AddressModel.md)| Address object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)| Address object that needs to be created | [optional]
 
 ### Return type
 

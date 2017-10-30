@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create or update an Party
 
-Create or update an Party. If id or links are set in the data, and a corresponding party    *     is found in Bumbal, an update will be performed.
+Create or update an Party. If id or links are set in the data, and a corresponding party   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/\BumbalClient\Model\PartyModel.md)| Party object | [optional]
+ **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
 
 ### Return type
 
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/\BumbalClient\Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
 
 ### Return type
 
@@ -253,7 +253,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/\BumbalClient\Model\PartyModel.md)| Party object | [optional]
+ **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
 
 ### Return type
 
@@ -305,7 +305,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **party_id** | **int**| ID of party to update |
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/\BumbalClient\Model\PartyModel.md)| Party object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object that needs to be updated | [optional]
 
 ### Return type
 

@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **include_time_slots** | **bool** |  | [optional] 
 **include_time_slot_tags** | **bool** |  | [optional] 
 **include_route_info** | **bool** |  | [optional] 
-**include_route** | **bool** |  | [optional] 
-**include_package_lines** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 
 **include_communication** | **bool** |  | [optional] 
 **include_communication_object** | **bool** |  | [optional] 

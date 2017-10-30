@@ -93,7 +93,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| ID of address to update |
- **body** | [**\BumbalClient\Model\AddressAppliedModel**](../Model/\BumbalClient\Model\AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
 
 ### Return type
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * MetaDataModelTest
+ * ConfigModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * MetaDataModelTest Class Doc Comment
+ * ConfigModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description MetaDataModel
+// * @description ConfigModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class MetaDataModelTest extends \PHPUnit_Framework_TestCase
+class ConfigModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,30 +71,23 @@ class MetaDataModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "MetaDataModel"
+     * Test "ConfigModel"
      */
-    public function testMetaDataModel()
+    public function testConfigModel()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "options"
      */
-    public function testPropertyId()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "key_ring"
      */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
+    public function testPropertyKeyRing()
     {
     }
 }

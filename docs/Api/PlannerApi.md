@@ -231,7 +231,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/\BumbalClient\Model\CheckAvailabilityArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
