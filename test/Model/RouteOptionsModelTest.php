@@ -78,9 +78,9 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_address_info"
+     * Test attribute "include_address_object"
      */
-    public function testPropertyIncludeAddressInfo()
+    public function testPropertyIncludeAddressObject()
     {
     }
 

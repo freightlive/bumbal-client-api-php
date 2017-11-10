@@ -57,7 +57,7 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'updated_at' => '\DateTime',
-        'status' => '\DateTime',
+        'status' => 'int',
         'driver_id' => 'int'
     ];
 
@@ -69,7 +69,7 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'updated_at' => 'date-time',
-        'status' => 'date-time',
+        'status' => 'int64',
         'driver_id' => 'int64'
     ];
 
@@ -249,7 +249,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets status
-     * @return \DateTime
+     * @return int
      */
     public function getStatus()
     {
@@ -258,7 +258,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets status
-     * @param \DateTime $status
+     * @param int $status
      * @return $this
      */
     public function setStatus($status)

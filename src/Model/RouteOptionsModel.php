@@ -54,7 +54,7 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_address_info' => 'bool',
+        'include_address_object' => 'bool',
         'include_route_status' => 'bool',
         'include_route_tags' => 'bool',
         'include_driver_info' => 'bool',
@@ -69,7 +69,7 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_address_info' => null,
+        'include_address_object' => null,
         'include_route_status' => null,
         'include_route_tags' => null,
         'include_driver_info' => null,
@@ -94,7 +94,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_address_info' => 'include_address_info',
+        'include_address_object' => 'include_address_object',
         'include_route_status' => 'include_route_status',
         'include_route_tags' => 'include_route_tags',
         'include_driver_info' => 'include_driver_info',
@@ -110,7 +110,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_address_info' => 'setIncludeAddressInfo',
+        'include_address_object' => 'setIncludeAddressObject',
         'include_route_status' => 'setIncludeRouteStatus',
         'include_route_tags' => 'setIncludeRouteTags',
         'include_driver_info' => 'setIncludeDriverInfo',
@@ -126,7 +126,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_address_info' => 'getIncludeAddressInfo',
+        'include_address_object' => 'getIncludeAddressObject',
         'include_route_status' => 'getIncludeRouteStatus',
         'include_route_tags' => 'getIncludeRouteTags',
         'include_driver_info' => 'getIncludeDriverInfo',
@@ -167,7 +167,7 @@ class RouteOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_address_info'] = isset($data['include_address_info']) ? $data['include_address_info'] : null;
+        $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_route_status'] = isset($data['include_route_status']) ? $data['include_route_status'] : null;
         $this->container['include_route_tags'] = isset($data['include_route_tags']) ? $data['include_route_tags'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
@@ -203,22 +203,22 @@ class RouteOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_address_info
+     * Gets include_address_object
      * @return bool
      */
-    public function getIncludeAddressInfo()
+    public function getIncludeAddressObject()
     {
-        return $this->container['include_address_info'];
+        return $this->container['include_address_object'];
     }
 
     /**
-     * Sets include_address_info
-     * @param bool $include_address_info
+     * Sets include_address_object
+     * @param bool $include_address_object
      * @return $this
      */
-    public function setIncludeAddressInfo($include_address_info)
+    public function setIncludeAddressObject($include_address_object)
     {
-        $this->container['include_address_info'] = $include_address_info;
+        $this->container['include_address_object'] = $include_address_object;
 
         return $this;
     }
