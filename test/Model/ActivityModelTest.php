@@ -400,6 +400,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "route"
+     */
+    public function testPropertyRoute()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()

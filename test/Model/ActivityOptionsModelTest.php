@@ -134,6 +134,20 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_route"
+     */
+    public function testPropertyIncludeRoute()
+    {
+    }
+
+    /**
+     * Test attribute "include_package_lines"
+     */
+    public function testPropertyIncludePackageLines()
+    {
+    }
+
+    /**
      * Test attribute "include_driver_info"
      */
     public function testPropertyIncludeDriverInfo()

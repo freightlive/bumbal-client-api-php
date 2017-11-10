@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRoute**
-> \BumbalClient\Model\RouteModel[] retrieveListRoute($arguments)
+> \BumbalClient\Model\RouteListResponse retrieveListRoute($arguments)
 
 Retrieve List of Routes
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\RouteModel[]**](../Model/RouteModel.md)
+[**\BumbalClient\Model\RouteListResponse**](../Model/RouteListResponse.md)
 
 ### Authorization
 

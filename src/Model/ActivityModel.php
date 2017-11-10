@@ -100,6 +100,7 @@ class ActivityModel implements ArrayAccess
         'communication' => '\BumbalClient\Model\CommunicationModel',
         'assignment_link' => '\BumbalClient\Model\LinkModel',
         'route_link' => '\BumbalClient\Model\LinkModel',
+        'route' => '\BumbalClient\Model\RouteModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'object',
         'links' => '\BumbalClient\Model\LinkModel[]',
@@ -163,6 +164,7 @@ class ActivityModel implements ArrayAccess
         'communication' => null,
         'assignment_link' => null,
         'route_link' => null,
+        'route' => null,
         'tags' => null,
         'tag_names' => null,
         'links' => null,
@@ -236,6 +238,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'communication',
         'assignment_link' => 'assignment_link',
         'route_link' => 'route_link',
+        'route' => 'route',
         'tags' => 'tags',
         'tag_names' => 'tag_names',
         'links' => 'links',
@@ -300,6 +303,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'setCommunication',
         'assignment_link' => 'setAssignmentLink',
         'route_link' => 'setRouteLink',
+        'route' => 'setRoute',
         'tags' => 'setTags',
         'tag_names' => 'setTagNames',
         'links' => 'setLinks',
@@ -364,6 +368,7 @@ class ActivityModel implements ArrayAccess
         'communication' => 'getCommunication',
         'assignment_link' => 'getAssignmentLink',
         'route_link' => 'getRouteLink',
+        'route' => 'getRoute',
         'tags' => 'getTags',
         'tag_names' => 'getTagNames',
         'links' => 'getLinks',
@@ -501,6 +506,7 @@ class ActivityModel implements ArrayAccess
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['assignment_link'] = isset($data['assignment_link']) ? $data['assignment_link'] : null;
         $this->container['route_link'] = isset($data['route_link']) ? $data['route_link'] : null;
+        $this->container['route'] = isset($data['route']) ? $data['route'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
@@ -1548,6 +1554,27 @@ class ActivityModel implements ArrayAccess
     public function setRouteLink($route_link)
     {
         $this->container['route_link'] = $route_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets route
+     * @return \BumbalClient\Model\RouteModel[]
+     */
+    public function getRoute()
+    {
+        return $this->container['route'];
+    }
+
+    /**
+     * Sets route
+     * @param \BumbalClient\Model\RouteModel[] $route
+     * @return $this
+     */
+    public function setRoute($route)
+    {
+        $this->container['route'] = $route;
 
         return $this;
     }

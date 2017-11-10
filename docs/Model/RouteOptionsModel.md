@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**include_address_info** | **bool** |  | 
+**include_address_info** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
 **include_route_tags** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 

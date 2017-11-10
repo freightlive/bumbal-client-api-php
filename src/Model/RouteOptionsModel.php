@@ -186,9 +186,6 @@ class RouteOptionsModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['include_address_info'] === null) {
-            $invalid_properties[] = "'include_address_info' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -201,9 +198,6 @@ class RouteOptionsModel implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['include_address_info'] === null) {
-            return false;
-        }
         return true;
     }
 

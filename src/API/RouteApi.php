@@ -271,7 +271,7 @@ class RouteApi
      *
      * @param \BumbalClient\Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\RouteModel[]
+     * @return \BumbalClient\Model\RouteListResponse
      */
     public function retrieveListRoute($arguments)
     {
@@ -286,7 +286,7 @@ class RouteApi
      *
      * @param \BumbalClient\Model\RouteRetrieveListArguments $arguments Route RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\RouteModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\RouteListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListRouteWithHttpInfo($arguments)
     {
@@ -331,15 +331,15 @@ class RouteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\RouteModel[]',
+                '\BumbalClient\Model\RouteListResponse',
                 '/route'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RouteModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\RouteListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RouteModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\RouteListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
