@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRoute**
-> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids)
+> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
 
 Retrieve a Route
 
@@ -183,17 +183,17 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\RouteApi();
 $route_id = 789; // int | ID of route to retrieve
-$include_address_info = true; // bool | Include Address info
+$include_address_object = true; // bool | Include Address Objects
 $include_route_status = true; // bool | Include Status Name
 $include_route_tags = true; // bool | Include Tags
 $include_driver_info = true; // bool | Include Driver info
 $include_equipment_info_car = true; // bool | Include Equipment info car
-$include_gps_locations = true; // bool | Include GPS locations
-$include_latest_position = true; // bool | Include Latest Known GPS location
-$include_activity_ids = true; // bool | Include Activity ids
+$include_gps_locations = false; // bool | Include GPS locations
+$include_activity_ids = false; // bool | Include Activity IDs
+$include_latest_position = false; // bool | Include Latest Known GPS location
 
 try {
-    $result = $api_instance->retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids);
+    $result = $api_instance->retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RouteApi->retrieveRoute: ', $e->getMessage(), PHP_EOL;
@@ -206,14 +206,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **route_id** | **int**| ID of route to retrieve |
- **include_address_info** | **bool**| Include Address info | [default to true]
+ **include_address_object** | **bool**| Include Address Objects | [default to true]
  **include_route_status** | **bool**| Include Status Name | [default to true]
  **include_route_tags** | **bool**| Include Tags | [default to true]
  **include_driver_info** | **bool**| Include Driver info | [default to true]
  **include_equipment_info_car** | **bool**| Include Equipment info car | [default to true]
- **include_gps_locations** | **bool**| Include GPS locations | [default to true]
- **include_latest_position** | **bool**| Include Latest Known GPS location | [default to true]
- **include_activity_ids** | **bool**| Include Activity ids | [optional] [default to true]
+ **include_gps_locations** | **bool**| Include GPS locations | [default to false]
+ **include_activity_ids** | **bool**| Include Activity IDs | [default to false]
+ **include_latest_position** | **bool**| Include Latest Known GPS location | [default to false]
 
 ### Return type
 

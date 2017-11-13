@@ -354,20 +354,20 @@ class RouteApi
      * Retrieve a Route
      *
      * @param int $route_id ID of route to retrieve (required)
-     * @param bool $include_address_info Include Address info (required)
+     * @param bool $include_address_object Include Address Objects (required)
      * @param bool $include_route_status Include Status Name (required)
      * @param bool $include_route_tags Include Tags (required)
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
-     * @param bool $include_activity_ids Include Activity ids (optional, default to true)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\RouteModel
      */
-    public function retrieveRoute($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids = 'true')
+    public function retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
     {
-        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids);
+        list($response) = $this->retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position);
         return $response;
     }
 
@@ -377,26 +377,26 @@ class RouteApi
      * Retrieve a Route
      *
      * @param int $route_id ID of route to retrieve (required)
-     * @param bool $include_address_info Include Address info (required)
+     * @param bool $include_address_object Include Address Objects (required)
      * @param bool $include_route_status Include Status Name (required)
      * @param bool $include_route_tags Include Tags (required)
      * @param bool $include_driver_info Include Driver info (required)
      * @param bool $include_equipment_info_car Include Equipment info car (required)
      * @param bool $include_gps_locations Include GPS locations (required)
+     * @param bool $include_activity_ids Include Activity IDs (required)
      * @param bool $include_latest_position Include Latest Known GPS location (required)
-     * @param bool $include_activity_ids Include Activity ids (optional, default to true)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\RouteModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveRouteWithHttpInfo($route_id, $include_address_info, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_latest_position, $include_activity_ids = 'true')
+    public function retrieveRouteWithHttpInfo($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
     {
         // verify the required parameter 'route_id' is set
         if ($route_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $route_id when calling retrieveRoute');
         }
-        // verify the required parameter 'include_address_info' is set
-        if ($include_address_info === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_address_info when calling retrieveRoute');
+        // verify the required parameter 'include_address_object' is set
+        if ($include_address_object === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_address_object when calling retrieveRoute');
         }
         // verify the required parameter 'include_route_status' is set
         if ($include_route_status === null) {
@@ -418,6 +418,10 @@ class RouteApi
         if ($include_gps_locations === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_gps_locations when calling retrieveRoute');
         }
+        // verify the required parameter 'include_activity_ids' is set
+        if ($include_activity_ids === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_activity_ids when calling retrieveRoute');
+        }
         // verify the required parameter 'include_latest_position' is set
         if ($include_latest_position === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_latest_position when calling retrieveRoute');
@@ -435,8 +439,8 @@ class RouteApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // query params
-        if ($include_address_info !== null) {
-            $queryParams['include_address_info'] = $this->apiClient->getSerializer()->toQueryValue($include_address_info);
+        if ($include_address_object !== null) {
+            $queryParams['include_address_object'] = $this->apiClient->getSerializer()->toQueryValue($include_address_object);
         }
         // query params
         if ($include_route_status !== null) {
@@ -459,12 +463,12 @@ class RouteApi
             $queryParams['include_gps_locations'] = $this->apiClient->getSerializer()->toQueryValue($include_gps_locations);
         }
         // query params
-        if ($include_latest_position !== null) {
-            $queryParams['include_latest_position'] = $this->apiClient->getSerializer()->toQueryValue($include_latest_position);
-        }
-        // query params
         if ($include_activity_ids !== null) {
             $queryParams['include_activity_ids'] = $this->apiClient->getSerializer()->toQueryValue($include_activity_ids);
+        }
+        // query params
+        if ($include_latest_position !== null) {
+            $queryParams['include_latest_position'] = $this->apiClient->getSerializer()->toQueryValue($include_latest_position);
         }
         // path params
         if ($route_id !== null) {
