@@ -1,6 +1,6 @@
 <?php
 /**
- * AssignmentRetrieveListArgumentsTest
+ * AssignmentListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * AssignmentRetrieveListArgumentsTest Class Doc Comment
+ * AssignmentListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description AssignmentRetrieveListArguments
+// * @description AssignmentListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AssignmentRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class AssignmentListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,37 @@ class AssignmentRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AssignmentRetrieveListArguments"
+     * Test "AssignmentListResponse"
      */
-    public function testAssignmentRetrieveListArguments()
+    public function testAssignmentListResponse()
     {
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "items"
      */
-    public function testPropertyOptions()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyFilters()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyLimit()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "count_limited"
      */
-    public function testPropertyOffset()
-    {
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-    }
-
-    /**
-     * Test attribute "as_list"
-     */
-    public function testPropertyAsList()
+    public function testPropertyCountLimited()
     {
     }
 }

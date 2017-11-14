@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
  - [AddressRetrieveListArguments](docs/Model/AddressRetrieveListArguments.md)
  - [ApiResponse](docs/Model/ApiResponse.md)
  - [AssignmentFiltersModel](docs/Model/AssignmentFiltersModel.md)
+ - [AssignmentListResponse](docs/Model/AssignmentListResponse.md)
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)

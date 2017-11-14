@@ -55,10 +55,13 @@ class AssignmentRetrieveListArguments implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'options' => '\BumbalClient\Model\AssignmentOptionsModel',
-        'filters' => '\BumbalClient\Model\AddressFiltersModel',
+        'filters' => '\BumbalClient\Model\AssignmentFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'sorting_column' => 'string',
+        'sorting_direction' => 'string',
+        'as_list' => 'bool'
     ];
 
     /**
@@ -70,7 +73,10 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null
+        'search_text' => null,
+        'sorting_column' => null,
+        'sorting_direction' => null,
+        'as_list' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +98,10 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text'
+        'search_text' => 'search_text',
+        'sorting_column' => 'sorting_column',
+        'sorting_direction' => 'sorting_direction',
+        'as_list' => 'as_list'
     ];
 
 
@@ -105,7 +114,10 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'sorting_column' => 'setSortingColumn',
+        'sorting_direction' => 'setSortingDirection',
+        'as_list' => 'setAsList'
     ];
 
 
@@ -118,7 +130,10 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'sorting_column' => 'getSortingColumn',
+        'sorting_direction' => 'getSortingDirection',
+        'as_list' => 'getAsList'
     ];
 
     public static function attributeMap()
@@ -136,8 +151,36 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
+    const SORTING_COLUMN_ASSIGNMENTNR = 'assignment.nr';
+    const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingColumnAllowableValues()
+    {
+        return [
+            self::SORTING_COLUMN_ASSIGNMENTNR,
+            self::SORTING_COLUMN_DATE_TIME_FROM,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingDirectionAllowableValues()
+    {
+        return [
+            self::SORTING_DIRECTION_ASC,
+            self::SORTING_DIRECTION_DESC,
+        ];
+    }
     
 
     /**
@@ -157,6 +200,9 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
 
     /**
@@ -167,6 +213,22 @@ class AssignmentRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_column', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_direction', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
 
         return $invalid_properties;
     }
@@ -180,6 +242,14 @@ class AssignmentRetrieveListArguments implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -207,7 +277,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\AddressFiltersModel
+     * @return \BumbalClient\Model\AssignmentFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +286,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AddressFiltersModel $filters
+     * @param \BumbalClient\Model\AssignmentFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -285,6 +355,87 @@ class AssignmentRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_column
+     * @return string
+     */
+    public function getSortingColumn()
+    {
+        return $this->container['sorting_column'];
+    }
+
+    /**
+     * Sets sorting_column
+     * @param string $sorting_column Sorting Column
+     * @return $this
+     */
+    public function setSortingColumn($sorting_column)
+    {
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!is_null($sorting_column) && !in_array($sorting_column, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_column', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_column'] = $sorting_column;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_direction
+     * @return string
+     */
+    public function getSortingDirection()
+    {
+        return $this->container['sorting_direction'];
+    }
+
+    /**
+     * Sets sorting_direction
+     * @param string $sorting_direction Sorting Direction
+     * @return $this
+     */
+    public function setSortingDirection($sorting_direction)
+    {
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!is_null($sorting_direction) && !in_array($sorting_direction, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_direction', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_direction'] = $sorting_direction;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
 
         return $this;
     }

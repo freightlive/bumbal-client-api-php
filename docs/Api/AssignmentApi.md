@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAssignment**
-> \BumbalClient\Model\AssignmentModel[] retrieveListAssignment($arguments)
+> \BumbalClient\Model\AssignmentListResponse retrieveListAssignment($arguments)
 
 Retrieve List of Assignments
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AssignmentModel[]**](../Model/AssignmentModel.md)
+[**\BumbalClient\Model\AssignmentListResponse**](../Model/AssignmentListResponse.md)
 
 ### Authorization
 
