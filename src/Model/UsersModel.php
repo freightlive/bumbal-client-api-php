@@ -67,7 +67,10 @@ class UsersModel implements ArrayAccess
         'password' => 'string',
         'lang_code' => 'string',
         'address_id' => 'int',
-        'address' => '\BumbalClient\Model\AddressModel',
+        'addresses' => '\BumbalClient\Model\AddressModel[]',
+        'removed' => 'bool',
+        'active' => 'bool',
+        'tag_names' => 'object',
         'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
@@ -89,7 +92,10 @@ class UsersModel implements ArrayAccess
         'password' => null,
         'lang_code' => null,
         'address_id' => 'int64',
-        'address' => null,
+        'addresses' => null,
+        'removed' => null,
+        'active' => null,
+        'tag_names' => null,
         'links' => null
     ];
 
@@ -121,7 +127,10 @@ class UsersModel implements ArrayAccess
         'password' => 'password',
         'lang_code' => 'lang_code',
         'address_id' => 'address_id',
-        'address' => 'address',
+        'addresses' => 'addresses',
+        'removed' => 'removed',
+        'active' => 'active',
+        'tag_names' => 'tag_names',
         'links' => 'links'
     ];
 
@@ -144,7 +153,10 @@ class UsersModel implements ArrayAccess
         'password' => 'setPassword',
         'lang_code' => 'setLangCode',
         'address_id' => 'setAddressId',
-        'address' => 'setAddress',
+        'addresses' => 'setAddresses',
+        'removed' => 'setRemoved',
+        'active' => 'setActive',
+        'tag_names' => 'setTagNames',
         'links' => 'setLinks'
     ];
 
@@ -167,7 +179,10 @@ class UsersModel implements ArrayAccess
         'password' => 'getPassword',
         'lang_code' => 'getLangCode',
         'address_id' => 'getAddressId',
-        'address' => 'getAddress',
+        'addresses' => 'getAddresses',
+        'removed' => 'getRemoved',
+        'active' => 'getActive',
+        'tag_names' => 'getTagNames',
         'links' => 'getLinks'
     ];
 
@@ -235,7 +250,10 @@ class UsersModel implements ArrayAccess
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
         $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
+        $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
@@ -565,22 +583,85 @@ class UsersModel implements ArrayAccess
     }
 
     /**
-     * Gets address
-     * @return \BumbalClient\Model\AddressModel
+     * Gets addresses
+     * @return \BumbalClient\Model\AddressModel[]
      */
-    public function getAddress()
+    public function getAddresses()
     {
-        return $this->container['address'];
+        return $this->container['addresses'];
     }
 
     /**
-     * Sets address
-     * @param \BumbalClient\Model\AddressModel $address user address (mostly interesting for drivers)
+     * Sets addresses
+     * @param \BumbalClient\Model\AddressModel[] $addresses user address (mostly interesting for drivers)
      * @return $this
      */
-    public function setAddress($address)
+    public function setAddresses($addresses)
     {
-        $this->container['address'] = $address;
+        $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets removed
+     * @return bool
+     */
+    public function getRemoved()
+    {
+        return $this->container['removed'];
+    }
+
+    /**
+     * Sets removed
+     * @param bool $removed Whether user is removed or not
+     * @return $this
+     */
+    public function setRemoved($removed)
+    {
+        $this->container['removed'] = $removed;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active Whether user is still active or not
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return object
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param object $tag_names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
 
         return $this;
     }

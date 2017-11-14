@@ -54,7 +54,10 @@ class UsersFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'id' => 'int',
+        'uuid' => 'int',
+        'role_id' => 'int',
+        'party_id' => 'int'
     ];
 
     /**
@@ -62,7 +65,10 @@ class UsersFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'id' => 'int64',
+        'uuid' => 'int64',
+        'role_id' => 'int64',
+        'party_id' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class UsersFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'role_id' => 'role_id',
+        'party_id' => 'party_id'
     ];
 
 
@@ -89,7 +98,10 @@ class UsersFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'role_id' => 'setRoleId',
+        'party_id' => 'setPartyId'
     ];
 
 
@@ -98,7 +110,10 @@ class UsersFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'role_id' => 'getRoleId',
+        'party_id' => 'getPartyId'
     ];
 
     public static function attributeMap()
@@ -132,6 +147,10 @@ class UsersFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['role_id'] = isset($data['role_id']) ? $data['role_id'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
     }
 
     /**
@@ -158,6 +177,90 @@ class UsersFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     * @return int
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     * @param int $uuid unique per user
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets role_id
+     * @return int
+     */
+    public function getRoleId()
+    {
+        return $this->container['role_id'];
+    }
+
+    /**
+     * Sets role_id
+     * @param int $role_id id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin
+     * @return $this
+     */
+    public function setRoleId($role_id)
+    {
+        $this->container['role_id'] = $role_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id Associated Party ID
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

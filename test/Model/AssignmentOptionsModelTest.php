@@ -78,9 +78,9 @@ class AssignmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_phone_nrs"
+     * Test attribute "include_activities"
      */
-    public function testPropertyIncludePhoneNrs()
+    public function testPropertyIncludeActivities()
     {
     }
 }

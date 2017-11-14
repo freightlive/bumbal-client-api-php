@@ -76,4 +76,32 @@ class UsersFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testUsersFiltersModel()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
+     * Test attribute "role_id"
+     */
+    public function testPropertyRoleId()
+    {
+    }
+
+    /**
+     * Test attribute "party_id"
+     */
+    public function testPropertyPartyId()
+    {
+    }
 }

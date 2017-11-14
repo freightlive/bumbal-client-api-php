@@ -84,6 +84,7 @@ class ActivityModel implements ArrayAccess
         'route_status_name' => 'string',
         'route_nr_of_stops' => 'int',
         'route_overdue' => 'bool',
+        'user_id' => 'int',
         'driver_id' => 'int',
         'driver_first_name' => 'string',
         'driver_last_name' => 'string',
@@ -148,6 +149,7 @@ class ActivityModel implements ArrayAccess
         'route_status_name' => null,
         'route_nr_of_stops' => null,
         'route_overdue' => null,
+        'user_id' => null,
         'driver_id' => null,
         'driver_first_name' => null,
         'driver_last_name' => null,
@@ -222,6 +224,7 @@ class ActivityModel implements ArrayAccess
         'route_status_name' => 'route_status_name',
         'route_nr_of_stops' => 'route_nr_of_stops',
         'route_overdue' => 'route_overdue',
+        'user_id' => 'user_id',
         'driver_id' => 'driver_id',
         'driver_first_name' => 'driver_first_name',
         'driver_last_name' => 'driver_last_name',
@@ -287,6 +290,7 @@ class ActivityModel implements ArrayAccess
         'route_status_name' => 'setRouteStatusName',
         'route_nr_of_stops' => 'setRouteNrOfStops',
         'route_overdue' => 'setRouteOverdue',
+        'user_id' => 'setUserId',
         'driver_id' => 'setDriverId',
         'driver_first_name' => 'setDriverFirstName',
         'driver_last_name' => 'setDriverLastName',
@@ -352,6 +356,7 @@ class ActivityModel implements ArrayAccess
         'route_status_name' => 'getRouteStatusName',
         'route_nr_of_stops' => 'getRouteNrOfStops',
         'route_overdue' => 'getRouteOverdue',
+        'user_id' => 'getUserId',
         'driver_id' => 'getDriverId',
         'driver_first_name' => 'getDriverFirstName',
         'driver_last_name' => 'getDriverLastName',
@@ -490,6 +495,7 @@ class ActivityModel implements ArrayAccess
         $this->container['route_status_name'] = isset($data['route_status_name']) ? $data['route_status_name'] : null;
         $this->container['route_nr_of_stops'] = isset($data['route_nr_of_stops']) ? $data['route_nr_of_stops'] : null;
         $this->container['route_overdue'] = isset($data['route_overdue']) ? $data['route_overdue'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['driver_first_name'] = isset($data['driver_first_name']) ? $data['driver_first_name'] : null;
         $this->container['driver_last_name'] = isset($data['driver_last_name']) ? $data['driver_last_name'] : null;
@@ -1218,6 +1224,27 @@ class ActivityModel implements ArrayAccess
     public function setRouteOverdue($route_overdue)
     {
         $this->container['route_overdue'] = $route_overdue;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     * @param int $user_id ID of the user who will execute this activity
+     * @return $this
+     */
+    public function setUserId($user_id)
+    {
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

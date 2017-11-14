@@ -54,7 +54,7 @@ class AssignmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_activities' => 'bool'
     ];
 
     /**
@@ -62,7 +62,7 @@ class AssignmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_phone_nrs' => null
+        'include_activities' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_activities' => 'include_activities'
     ];
 
 
@@ -89,7 +89,7 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_activities' => 'setIncludeActivities'
     ];
 
 
@@ -98,7 +98,7 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_activities' => 'getIncludeActivities'
     ];
 
     public static function attributeMap()
@@ -132,7 +132,7 @@ class AssignmentOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_activities'] = isset($data['include_activities']) ? $data['include_activities'] : null;
     }
 
     /**
@@ -161,22 +161,22 @@ class AssignmentOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_phone_nrs
+     * Gets include_activities
      * @return bool
      */
-    public function getIncludePhoneNrs()
+    public function getIncludeActivities()
     {
-        return $this->container['include_phone_nrs'];
+        return $this->container['include_activities'];
     }
 
     /**
-     * Sets include_phone_nrs
-     * @param bool $include_phone_nrs
+     * Sets include_activities
+     * @param bool $include_activities
      * @return $this
      */
-    public function setIncludePhoneNrs($include_phone_nrs)
+    public function setIncludeActivities($include_activities)
     {
-        $this->container['include_phone_nrs'] = $include_phone_nrs;
+        $this->container['include_activities'] = $include_activities;
 
         return $this;
     }

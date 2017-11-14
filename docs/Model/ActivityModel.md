@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **route_status_name** | **string** | Status Name of this Route | [optional] 
 **route_nr_of_stops** | **int** | Number of stops on this route | [optional] 
 **route_overdue** | **bool** | Route is overdue | [optional] 
+**user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **driver_id** | **int** | Driver ID connected to this route/activity | [optional] 
 **driver_first_name** | **string** | Driver first name | [optional] 
 **driver_last_name** | **string** | Driver last name | [optional] 

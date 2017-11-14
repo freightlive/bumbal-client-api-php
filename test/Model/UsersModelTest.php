@@ -169,9 +169,30 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "addresses"
      */
-    public function testPropertyAddress()
+    public function testPropertyAddresses()
+    {
+    }
+
+    /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
     {
     }
 

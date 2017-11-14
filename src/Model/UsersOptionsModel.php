@@ -54,7 +54,8 @@ class UsersOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_phone_nrs' => 'bool',
+        'include_addresses' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class UsersOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_phone_nrs' => null
+        'include_phone_nrs' => null,
+        'include_addresses' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_phone_nrs' => 'include_phone_nrs',
+        'include_addresses' => 'include_addresses'
     ];
 
 
@@ -89,7 +92,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_phone_nrs' => 'setIncludePhoneNrs',
+        'include_addresses' => 'setIncludeAddresses'
     ];
 
 
@@ -98,7 +102,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_phone_nrs' => 'getIncludePhoneNrs',
+        'include_addresses' => 'getIncludeAddresses'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class UsersOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_addresses'] = isset($data['include_addresses']) ? $data['include_addresses'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class UsersOptionsModel implements ArrayAccess
     public function setIncludePhoneNrs($include_phone_nrs)
     {
         $this->container['include_phone_nrs'] = $include_phone_nrs;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_addresses
+     * @return bool
+     */
+    public function getIncludeAddresses()
+    {
+        return $this->container['include_addresses'];
+    }
+
+    /**
+     * Sets include_addresses
+     * @param bool $include_addresses
+     * @return $this
+     */
+    public function setIncludeAddresses($include_addresses)
+    {
+        $this->container['include_addresses'] = $include_addresses;
 
         return $this;
     }

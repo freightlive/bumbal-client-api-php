@@ -83,4 +83,11 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludePhoneNrs()
     {
     }
+
+    /**
+     * Test attribute "include_addresses"
+     */
+    public function testPropertyIncludeAddresses()
+    {
+    }
 }
