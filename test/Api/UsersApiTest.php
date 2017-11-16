@@ -85,7 +85,7 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveListUsers
      *
-     * Retrieve List of Userss.
+     * Retrieve List of Users.
      *
      */
     public function testRetrieveListUsers()

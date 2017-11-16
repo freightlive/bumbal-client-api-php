@@ -99,16 +99,16 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "party_id"
+     * Test attribute "role_name"
      */
-    public function testPropertyPartyId()
+    public function testPropertyRoleName()
     {
     }
 
     /**
-     * Test attribute "role_name"
+     * Test attribute "party_id"
      */
-    public function testPropertyRoleName()
+    public function testPropertyPartyId()
     {
     }
 

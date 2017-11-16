@@ -183,11 +183,11 @@ class UsersApi
     /**
      * Operation retrieveListUsers
      *
-     * Retrieve List of Userss
+     * Retrieve List of Users
      *
      * @param \BumbalClient\Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\UsersModel[]
+     * @return \BumbalClient\Model\UsersListResponse
      */
     public function retrieveListUsers($arguments)
     {
@@ -198,11 +198,11 @@ class UsersApi
     /**
      * Operation retrieveListUsersWithHttpInfo
      *
-     * Retrieve List of Userss
+     * Retrieve List of Users
      *
      * @param \BumbalClient\Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\UsersModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\UsersListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListUsersWithHttpInfo($arguments)
     {
@@ -247,15 +247,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\UsersModel[]',
+                '\BumbalClient\Model\UsersListResponse',
                 '/users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

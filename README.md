@@ -188,7 +188,7 @@ Class | Method | HTTP request | Description
 *TrailerApi* | [**setTrailer**](docs/Api/TrailerApi.md#settrailer) | **POST** /trailer/set | Set (create or update) a trailer
 *TrailerApi* | [**updateTrailer**](docs/Api/TrailerApi.md#updatetrailer) | **PUT** /trailer/{trailerId} | Update a trailer
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
-*UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Userss
+*UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
@@ -282,6 +282,7 @@ Class | Method | HTTP request | Description
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
+ - [UsersListResponse](docs/Model/UsersListResponse.md)
  - [UsersModel](docs/Model/UsersModel.md)
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)

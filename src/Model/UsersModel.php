@@ -57,8 +57,8 @@ class UsersModel implements ArrayAccess
         'id' => 'int',
         'uuid' => 'int',
         'role_id' => 'int',
-        'party_id' => 'int',
         'role_name' => 'string',
+        'party_id' => 'int',
         'first_name' => 'string',
         'name_prefix' => 'string',
         'last_name' => 'string',
@@ -82,8 +82,8 @@ class UsersModel implements ArrayAccess
         'id' => 'int64',
         'uuid' => 'int64',
         'role_id' => 'int64',
-        'party_id' => 'int64',
         'role_name' => null,
+        'party_id' => 'int64',
         'first_name' => null,
         'name_prefix' => null,
         'last_name' => null,
@@ -117,8 +117,8 @@ class UsersModel implements ArrayAccess
         'id' => 'id',
         'uuid' => 'uuid',
         'role_id' => 'role_id',
-        'party_id' => 'party_id',
         'role_name' => 'role_name',
+        'party_id' => 'party_id',
         'first_name' => 'first_name',
         'name_prefix' => 'name_prefix',
         'last_name' => 'last_name',
@@ -143,8 +143,8 @@ class UsersModel implements ArrayAccess
         'id' => 'setId',
         'uuid' => 'setUuid',
         'role_id' => 'setRoleId',
-        'party_id' => 'setPartyId',
         'role_name' => 'setRoleName',
+        'party_id' => 'setPartyId',
         'first_name' => 'setFirstName',
         'name_prefix' => 'setNamePrefix',
         'last_name' => 'setLastName',
@@ -169,8 +169,8 @@ class UsersModel implements ArrayAccess
         'id' => 'getId',
         'uuid' => 'getUuid',
         'role_id' => 'getRoleId',
-        'party_id' => 'getPartyId',
         'role_name' => 'getRoleName',
+        'party_id' => 'getPartyId',
         'first_name' => 'getFirstName',
         'name_prefix' => 'getNamePrefix',
         'last_name' => 'getLastName',
@@ -240,8 +240,8 @@ class UsersModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['role_id'] = isset($data['role_id']) ? $data['role_id'] : null;
-        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['role_name'] = isset($data['role_name']) ? $data['role_name'] : null;
+        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['name_prefix'] = isset($data['name_prefix']) ? $data['name_prefix'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
@@ -364,27 +364,6 @@ class UsersModel implements ArrayAccess
     }
 
     /**
-     * Gets party_id
-     * @return int
-     */
-    public function getPartyId()
-    {
-        return $this->container['party_id'];
-    }
-
-    /**
-     * Sets party_id
-     * @param int $party_id Associated Party ID
-     * @return $this
-     */
-    public function setPartyId($party_id)
-    {
-        $this->container['party_id'] = $party_id;
-
-        return $this;
-    }
-
-    /**
      * Gets role_name
      * @return string
      */
@@ -410,6 +389,27 @@ class UsersModel implements ArrayAccess
             );
         }
         $this->container['role_name'] = $role_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_id
+     * @return int
+     */
+    public function getPartyId()
+    {
+        return $this->container['party_id'];
+    }
+
+    /**
+     * Sets party_id
+     * @param int $party_id Associated Party ID
+     * @return $this
+     */
+    public function setPartyId($party_id)
+    {
+        $this->container['party_id'] = $party_id;
 
         return $this;
     }

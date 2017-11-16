@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
-[**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Userss
+[**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Users
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
 [**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) a User
 [**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
@@ -64,11 +64,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListUsers**
-> \BumbalClient\Model\UsersModel[] retrieveListUsers($arguments)
+> \BumbalClient\Model\UsersListResponse retrieveListUsers($arguments)
 
-Retrieve List of Userss
+Retrieve List of Users
 
-Retrieve List of Userss
+Retrieve List of Users
 
 ### Example
 ```php
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\UsersModel[]**](../Model/UsersModel.md)
+[**\BumbalClient\Model\UsersListResponse**](../Model/UsersListResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModelTest
+ * UsersListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * UsersOptionsModelTest Class Doc Comment
+ * UsersListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description UsersOptionsModel
+// * @description UsersListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
+class UsersListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,37 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UsersOptionsModel"
+     * Test "UsersListResponse"
      */
-    public function testUsersOptionsModel()
+    public function testUsersListResponse()
     {
     }
 
     /**
-     * Test attribute "include_addresses"
+     * Test attribute "items"
      */
-    public function testPropertyIncludeAddresses()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "include_user_meta_data"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyIncludeUserMetaData()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "include_user_tags"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyIncludeUserTags()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "include_party_name"
+     * Test attribute "count_limited"
      */
-    public function testPropertyIncludePartyName()
+    public function testPropertyCountLimited()
     {
     }
 }

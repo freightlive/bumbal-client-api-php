@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModel
+ * UsersListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * UsersOptionsModel Class Doc Comment
+ * UsersListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModel implements ArrayAccess
+class UsersListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,17 @@ class UsersOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UsersOptionsModel';
+    protected static $swaggerModelName = 'UsersListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_addresses' => 'bool',
-        'include_user_meta_data' => 'bool',
-        'include_user_tags' => 'bool',
-        'include_party_name' => 'bool'
+        'items' => '\BumbalClient\Model\UsersModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -65,10 +65,10 @@ class UsersOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_addresses' => null,
-        'include_user_meta_data' => null,
-        'include_user_tags' => null,
-        'include_party_name' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +86,10 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_addresses' => 'include_addresses',
-        'include_user_meta_data' => 'include_user_meta_data',
-        'include_user_tags' => 'include_user_tags',
-        'include_party_name' => 'include_party_name'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -98,10 +98,10 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_addresses' => 'setIncludeAddresses',
-        'include_user_meta_data' => 'setIncludeUserMetaData',
-        'include_user_tags' => 'setIncludeUserTags',
-        'include_party_name' => 'setIncludePartyName'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -110,10 +110,10 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_addresses' => 'getIncludeAddresses',
-        'include_user_meta_data' => 'getIncludeUserMetaData',
-        'include_user_tags' => 'getIncludeUserTags',
-        'include_party_name' => 'getIncludePartyName'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -147,10 +147,10 @@ class UsersOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_addresses'] = isset($data['include_addresses']) ? $data['include_addresses'] : null;
-        $this->container['include_user_meta_data'] = isset($data['include_user_meta_data']) ? $data['include_user_meta_data'] : null;
-        $this->container['include_user_tags'] = isset($data['include_user_tags']) ? $data['include_user_tags'] : null;
-        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -179,85 +179,85 @@ class UsersOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_addresses
-     * @return bool
+     * Gets items
+     * @return \BumbalClient\Model\UsersModel[]
      */
-    public function getIncludeAddresses()
+    public function getItems()
     {
-        return $this->container['include_addresses'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets include_addresses
-     * @param bool $include_addresses
+     * Sets items
+     * @param \BumbalClient\Model\UsersModel[] $items
      * @return $this
      */
-    public function setIncludeAddresses($include_addresses)
+    public function setItems($items)
     {
-        $this->container['include_addresses'] = $include_addresses;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets include_user_meta_data
-     * @return bool
+     * Gets count_filtered
+     * @return int
      */
-    public function getIncludeUserMetaData()
+    public function getCountFiltered()
     {
-        return $this->container['include_user_meta_data'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets include_user_meta_data
-     * @param bool $include_user_meta_data
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setIncludeUserMetaData($include_user_meta_data)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['include_user_meta_data'] = $include_user_meta_data;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets include_user_tags
-     * @return bool
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getIncludeUserTags()
+    public function getCountUnfiltered()
     {
-        return $this->container['include_user_tags'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets include_user_tags
-     * @param bool $include_user_tags
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setIncludeUserTags($include_user_tags)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['include_user_tags'] = $include_user_tags;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets include_party_name
-     * @return bool
+     * Gets count_limited
+     * @return int
      */
-    public function getIncludePartyName()
+    public function getCountLimited()
     {
-        return $this->container['include_party_name'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets include_party_name
-     * @param bool $include_party_name
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setIncludePartyName($include_party_name)
+    public function setCountLimited($count_limited)
     {
-        $this->container['include_party_name'] = $include_party_name;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }
