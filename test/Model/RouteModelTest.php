@@ -134,6 +134,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user_link"
+     */
+    public function testPropertyUserLink()
+    {
+    }
+
+    /**
      * Test attribute "car_id"
      */
     public function testPropertyCarId()

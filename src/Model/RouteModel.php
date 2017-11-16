@@ -62,6 +62,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'int',
         'driver_id' => 'int',
         'driver_link' => '\BumbalClient\Model\LinkModel[]',
+        'user_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
         'car_link' => '\BumbalClient\Model\LinkModel[]',
         'trailer_id' => 'int',
@@ -98,6 +99,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => null,
         'driver_id' => null,
         'driver_link' => null,
+        'user_link' => null,
         'car_id' => null,
         'car_link' => null,
         'trailer_id' => null,
@@ -144,6 +146,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'nr_of_stops',
         'driver_id' => 'driver_id',
         'driver_link' => 'driver_link',
+        'user_link' => 'user_link',
         'car_id' => 'car_id',
         'car_link' => 'car_link',
         'trailer_id' => 'trailer_id',
@@ -181,6 +184,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'setNrOfStops',
         'driver_id' => 'setDriverId',
         'driver_link' => 'setDriverLink',
+        'user_link' => 'setUserLink',
         'car_id' => 'setCarId',
         'car_link' => 'setCarLink',
         'trailer_id' => 'setTrailerId',
@@ -218,6 +222,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'getNrOfStops',
         'driver_id' => 'getDriverId',
         'driver_link' => 'getDriverLink',
+        'user_link' => 'getUserLink',
         'car_id' => 'getCarId',
         'car_link' => 'getCarLink',
         'trailer_id' => 'getTrailerId',
@@ -316,6 +321,7 @@ class RouteModel implements ArrayAccess
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
+        $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
         $this->container['car_link'] = isset($data['car_link']) ? $data['car_link'] : null;
         $this->container['trailer_id'] = isset($data['trailer_id']) ? $data['trailer_id'] : null;
@@ -576,6 +582,27 @@ class RouteModel implements ArrayAccess
     public function setDriverLink($driver_link)
     {
         $this->container['driver_link'] = $driver_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_link
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getUserLink()
+    {
+        return $this->container['user_link'];
+    }
+
+    /**
+     * Sets user_link
+     * @param \BumbalClient\Model\LinkModel[] $user_link
+     * @return $this
+     */
+    public function setUserLink($user_link)
+    {
+        $this->container['user_link'] = $user_link;
 
         return $this;
     }
