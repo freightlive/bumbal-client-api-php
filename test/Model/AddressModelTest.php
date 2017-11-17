@@ -237,4 +237,18 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTags()
     {
     }
+
+    /**
+     * Test attribute "object_type"
+     */
+    public function testPropertyObjectType()
+    {
+    }
+
+    /**
+     * Test attribute "object_id"
+     */
+    public function testPropertyObjectId()
+    {
+    }
 }

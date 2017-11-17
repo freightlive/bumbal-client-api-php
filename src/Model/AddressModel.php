@@ -76,7 +76,9 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'tags' => '\BumbalClient\Model\TagModel[]'
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'object_type' => 'int',
+        'object_id' => 'int'
     ];
 
     /**
@@ -106,7 +108,9 @@ class AddressModel implements ArrayAccess
         'contact_person' => null,
         'links' => null,
         'meta_data' => null,
-        'tags' => null
+        'tags' => null,
+        'object_type' => null,
+        'object_id' => null
     ];
 
     public static function swaggerTypes()
@@ -146,7 +150,9 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'contact_person',
         'links' => 'links',
         'meta_data' => 'meta_data',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'object_type' => 'object_type',
+        'object_id' => 'object_id'
     ];
 
 
@@ -177,7 +183,9 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'setContactPerson',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'object_type' => 'setObjectType',
+        'object_id' => 'setObjectId'
     ];
 
 
@@ -208,7 +216,9 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'getContactPerson',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'object_type' => 'getObjectType',
+        'object_id' => 'getObjectId'
     ];
 
     public static function attributeMap()
@@ -265,6 +275,8 @@ class AddressModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -777,6 +789,48 @@ class AddressModel implements ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type
+     * @return int
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param int $object_type
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_id
+     * @return int
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int $object_id
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }
