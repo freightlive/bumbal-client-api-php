@@ -113,6 +113,13 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "account_name"
+     */
+    public function testPropertyAccountName()
+    {
+    }
+
+    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()
