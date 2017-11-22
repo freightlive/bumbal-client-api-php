@@ -183,6 +183,34 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "planned_driving_duration"
+     */
+    public function testPropertyPlannedDrivingDuration()
+    {
+    }
+
+    /**
+     * Test attribute "planned_waiting_duration"
+     */
+    public function testPropertyPlannedWaitingDuration()
+    {
+    }
+
+    /**
+     * Test attribute "planned_activity_duration"
+     */
+    public function testPropertyPlannedActivityDuration()
+    {
+    }
+
+    /**
+     * Test attribute "planned_total_duration"
+     */
+    public function testPropertyPlannedTotalDuration()
+    {
+    }
+
+    /**
      * Test attribute "gps_locations"
      */
     public function testPropertyGpsLocations()

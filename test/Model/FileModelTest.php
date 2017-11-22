@@ -99,6 +99,13 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "file_type_name"
+     */
+    public function testPropertyFileTypeName()
+    {
+    }
+
+    /**
      * Test attribute "object_id"
      */
     public function testPropertyObjectId()
@@ -127,6 +134,13 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "meta_data_objects"
+     */
+    public function testPropertyMetaDataObjects()
+    {
+    }
+
+    /**
      * Test attribute "created_by"
      */
     public function testPropertyCreatedBy()
@@ -151,13 +165,6 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "updated_at"
      */
     public function testPropertyUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "meta_data"
-     */
-    public function testPropertyMetaData()
     {
     }
 }

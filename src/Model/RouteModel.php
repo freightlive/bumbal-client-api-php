@@ -69,6 +69,10 @@ class RouteModel implements ArrayAccess
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
+        'planned_driving_duration' => 'int',
+        'planned_waiting_duration' => 'int',
+        'planned_activity_duration' => 'int',
+        'planned_total_duration' => 'int',
         'gps_locations' => '\BumbalClient\Model\GPSLocationModel[]',
         'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
         'recurrence_id' => 'int',
@@ -106,6 +110,10 @@ class RouteModel implements ArrayAccess
         'trailer_link' => null,
         'earliest_date_time' => 'date-time',
         'latest_date_time' => 'date-time',
+        'planned_driving_duration' => null,
+        'planned_waiting_duration' => null,
+        'planned_activity_duration' => null,
+        'planned_total_duration' => null,
         'gps_locations' => null,
         'latest_known_position' => null,
         'recurrence_id' => null,
@@ -153,6 +161,10 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'trailer_link',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
+        'planned_driving_duration' => 'planned_driving_duration',
+        'planned_waiting_duration' => 'planned_waiting_duration',
+        'planned_activity_duration' => 'planned_activity_duration',
+        'planned_total_duration' => 'planned_total_duration',
         'gps_locations' => 'gps_locations',
         'latest_known_position' => 'latest_known_position',
         'recurrence_id' => 'recurrence_id',
@@ -191,6 +203,10 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'setTrailerLink',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
+        'planned_driving_duration' => 'setPlannedDrivingDuration',
+        'planned_waiting_duration' => 'setPlannedWaitingDuration',
+        'planned_activity_duration' => 'setPlannedActivityDuration',
+        'planned_total_duration' => 'setPlannedTotalDuration',
         'gps_locations' => 'setGpsLocations',
         'latest_known_position' => 'setLatestKnownPosition',
         'recurrence_id' => 'setRecurrenceId',
@@ -229,6 +245,10 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'getTrailerLink',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
+        'planned_driving_duration' => 'getPlannedDrivingDuration',
+        'planned_waiting_duration' => 'getPlannedWaitingDuration',
+        'planned_activity_duration' => 'getPlannedActivityDuration',
+        'planned_total_duration' => 'getPlannedTotalDuration',
         'gps_locations' => 'getGpsLocations',
         'latest_known_position' => 'getLatestKnownPosition',
         'recurrence_id' => 'getRecurrenceId',
@@ -328,6 +348,10 @@ class RouteModel implements ArrayAccess
         $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
+        $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
+        $this->container['planned_waiting_duration'] = isset($data['planned_waiting_duration']) ? $data['planned_waiting_duration'] : null;
+        $this->container['planned_activity_duration'] = isset($data['planned_activity_duration']) ? $data['planned_activity_duration'] : null;
+        $this->container['planned_total_duration'] = isset($data['planned_total_duration']) ? $data['planned_total_duration'] : null;
         $this->container['gps_locations'] = isset($data['gps_locations']) ? $data['gps_locations'] : null;
         $this->container['latest_known_position'] = isset($data['latest_known_position']) ? $data['latest_known_position'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
@@ -729,6 +753,90 @@ class RouteModel implements ArrayAccess
     public function setLatestDateTime($latest_date_time)
     {
         $this->container['latest_date_time'] = $latest_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_driving_duration
+     * @return int
+     */
+    public function getPlannedDrivingDuration()
+    {
+        return $this->container['planned_driving_duration'];
+    }
+
+    /**
+     * Sets planned_driving_duration
+     * @param int $planned_driving_duration Planned driving duration of this route in minutes
+     * @return $this
+     */
+    public function setPlannedDrivingDuration($planned_driving_duration)
+    {
+        $this->container['planned_driving_duration'] = $planned_driving_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_waiting_duration
+     * @return int
+     */
+    public function getPlannedWaitingDuration()
+    {
+        return $this->container['planned_waiting_duration'];
+    }
+
+    /**
+     * Sets planned_waiting_duration
+     * @param int $planned_waiting_duration Planned waiting duration of this route in minutes
+     * @return $this
+     */
+    public function setPlannedWaitingDuration($planned_waiting_duration)
+    {
+        $this->container['planned_waiting_duration'] = $planned_waiting_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_activity_duration
+     * @return int
+     */
+    public function getPlannedActivityDuration()
+    {
+        return $this->container['planned_activity_duration'];
+    }
+
+    /**
+     * Sets planned_activity_duration
+     * @param int $planned_activity_duration Planned duration for all activities in this route in minutes
+     * @return $this
+     */
+    public function setPlannedActivityDuration($planned_activity_duration)
+    {
+        $this->container['planned_activity_duration'] = $planned_activity_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_total_duration
+     * @return int
+     */
+    public function getPlannedTotalDuration()
+    {
+        return $this->container['planned_total_duration'];
+    }
+
+    /**
+     * Sets planned_total_duration
+     * @param int $planned_total_duration Total planned duration of this route in minutes
+     * @return $this
+     */
+    public function setPlannedTotalDuration($planned_total_duration)
+    {
+        $this->container['planned_total_duration'] = $planned_total_duration;
 
         return $this;
     }

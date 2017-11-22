@@ -76,4 +76,32 @@ class FileOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testFileOptionsModel()
     {
     }
+
+    /**
+     * Test attribute "include_file_meta_data"
+     */
+    public function testPropertyIncludeFileMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_type_name"
+     */
+    public function testPropertyIncludeTagTypeName()
+    {
+    }
+
+    /**
+     * Test attribute "include_file_tags"
+     */
+    public function testPropertyIncludeFileTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_file_record_info"
+     */
+    public function testPropertyIncludeFileRecordInfo()
+    {
+    }
 }

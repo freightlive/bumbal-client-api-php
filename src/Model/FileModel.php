@@ -57,15 +57,16 @@ class FileModel implements ArrayAccess
         'id' => 'int',
         'uuid' => 'string',
         'file_type_id' => 'int',
+        'file_type_name' => 'string',
         'object_id' => 'int',
         'object_type' => 'int',
         'reference' => 'string',
         'location' => 'string',
+        'meta_data_objects' => '\BumbalClient\Model\MetaDataModel[]',
         'created_by' => 'int',
         'updated_by' => 'int',
         'created_at' => '\DateTime',
-        'updated_at' => '\DateTime',
-        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
+        'updated_at' => '\DateTime'
     ];
 
     /**
@@ -74,17 +75,18 @@ class FileModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'uuid' => 'string36',
-        'file_type_id' => 'int11',
-        'object_id' => 'int11',
-        'object_type' => 'int11',
-        'reference' => 'string64',
-        'location' => 'string255',
-        'created_by' => 'int11',
-        'updated_by' => 'int11',
+        'uuid' => null,
+        'file_type_id' => 'int64',
+        'file_type_name' => null,
+        'object_id' => 'int64',
+        'object_type' => 'int64',
+        'reference' => null,
+        'location' => null,
+        'meta_data_objects' => null,
+        'created_by' => 'int64',
+        'updated_by' => 'int64',
         'created_at' => 'date-time',
-        'updated_at' => 'date-time',
-        'meta_data' => null
+        'updated_at' => 'date-time'
     ];
 
     public static function swaggerTypes()
@@ -105,15 +107,16 @@ class FileModel implements ArrayAccess
         'id' => 'id',
         'uuid' => 'uuid',
         'file_type_id' => 'file_type_id',
+        'file_type_name' => 'file_type_name',
         'object_id' => 'object_id',
         'object_type' => 'object_type',
         'reference' => 'reference',
         'location' => 'location',
+        'meta_data_objects' => 'meta_data_objects',
         'created_by' => 'created_by',
         'updated_by' => 'updated_by',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
-        'meta_data' => 'meta_data'
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -125,15 +128,16 @@ class FileModel implements ArrayAccess
         'id' => 'setId',
         'uuid' => 'setUuid',
         'file_type_id' => 'setFileTypeId',
+        'file_type_name' => 'setFileTypeName',
         'object_id' => 'setObjectId',
         'object_type' => 'setObjectType',
         'reference' => 'setReference',
         'location' => 'setLocation',
+        'meta_data_objects' => 'setMetaDataObjects',
         'created_by' => 'setCreatedBy',
         'updated_by' => 'setUpdatedBy',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
-        'meta_data' => 'setMetaData'
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -145,15 +149,16 @@ class FileModel implements ArrayAccess
         'id' => 'getId',
         'uuid' => 'getUuid',
         'file_type_id' => 'getFileTypeId',
+        'file_type_name' => 'getFileTypeName',
         'object_id' => 'getObjectId',
         'object_type' => 'getObjectType',
         'reference' => 'getReference',
         'location' => 'getLocation',
+        'meta_data_objects' => 'getMetaDataObjects',
         'created_by' => 'getCreatedBy',
         'updated_by' => 'getUpdatedBy',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
-        'meta_data' => 'getMetaData'
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -190,15 +195,16 @@ class FileModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['file_type_id'] = isset($data['file_type_id']) ? $data['file_type_id'] : null;
+        $this->container['file_type_name'] = isset($data['file_type_name']) ? $data['file_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['meta_data_objects'] = isset($data['meta_data_objects']) ? $data['meta_data_objects'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
         $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
     /**
@@ -296,6 +302,27 @@ class FileModel implements ArrayAccess
     }
 
     /**
+     * Gets file_type_name
+     * @return string
+     */
+    public function getFileTypeName()
+    {
+        return $this->container['file_type_name'];
+    }
+
+    /**
+     * Sets file_type_name
+     * @param string $file_type_name
+     * @return $this
+     */
+    public function setFileTypeName($file_type_name)
+    {
+        $this->container['file_type_name'] = $file_type_name;
+
+        return $this;
+    }
+
+    /**
      * Gets object_id
      * @return int
      */
@@ -380,6 +407,27 @@ class FileModel implements ArrayAccess
     }
 
     /**
+     * Gets meta_data_objects
+     * @return \BumbalClient\Model\MetaDataModel[]
+     */
+    public function getMetaDataObjects()
+    {
+        return $this->container['meta_data_objects'];
+    }
+
+    /**
+     * Sets meta_data_objects
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data_objects
+     * @return $this
+     */
+    public function setMetaDataObjects($meta_data_objects)
+    {
+        $this->container['meta_data_objects'] = $meta_data_objects;
+
+        return $this;
+    }
+
+    /**
      * Gets created_by
      * @return int
      */
@@ -459,27 +507,6 @@ class FileModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets meta_data
-     * @return \BumbalClient\Model\MetaDataModel[]
-     */
-    public function getMetaData()
-    {
-        return $this->container['meta_data'];
-    }
-
-    /**
-     * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
-     * @return $this
-     */
-    public function setMetaData($meta_data)
-    {
-        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }
