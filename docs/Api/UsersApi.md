@@ -96,7 +96,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/\BumbalClient\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
 
 ### Return type
 
@@ -196,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)| User object | [optional]
+ **body** | [**\BumbalClient\Model\UsersModel**](../Model/\BumbalClient\Model\UsersModel.md)| User object | [optional]
 
 ### Return type
 

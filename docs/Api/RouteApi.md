@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\RouteModel**](../Model/RouteModel.md)| Route object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\RouteModel**](../Model/\BumbalClient\Model\RouteModel.md)| Route object that needs to be created | [optional]
 
 ### Return type
 
@@ -147,7 +147,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\RouteRetrieveListArguments**](../Model/RouteRetrieveListArguments.md)| Route RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\RouteRetrieveListArguments**](../Model/\BumbalClient\Model\RouteRetrieveListArguments.md)| Route RetrieveList Arguments |
 
 ### Return type
 
@@ -263,7 +263,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\RouteModel**](../Model/RouteModel.md)| Route object | [optional]
+ **body** | [**\BumbalClient\Model\RouteModel**](../Model/\BumbalClient\Model\RouteModel.md)| Route object | [optional]
 
 ### Return type
 

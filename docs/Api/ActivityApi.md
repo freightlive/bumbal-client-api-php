@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_route, $include_assignment, $include_package_lines, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object)
 
 Find activity by ID
 
@@ -88,26 +88,27 @@ $include_address_object = true; // bool | Include address data
 $include_time_slots = true; // bool | Include TimeSlots
 $include_time_slot_tags = true; // bool | Include tags from TimeSlots
 $include_route_info = true; // bool | Include route data
+$include_route = true; // bool | Include Route
+$include_package_lines = true; // bool | Include package lines
+$include_package_lines_info = true; // bool | Include PackageLines
 $include_driver_info = true; // bool | Include driver data
 $include_communication = true; // bool | Include Communication Settings
 $include_communication_object = true; // bool | Include Communication Object
 $include_activity_links = true; // bool | Include Link Data
-$include_package_lines_info = true; // bool | Include PackageLines
 $include_activity_files = true; // bool | Include files
 $include_activity_files_meta_data = true; // bool | Include files meta data
 $include_activity_files_meta_data_objects = true; // bool | Include files meta data objects
 $include_assignment_nr = true; // bool | Include Assignment Nr
-$include_route = true; // bool | Include Route
 $include_assignment = true; // bool | Include Assignment
-$include_package_lines = true; // bool | Include package lines
-$include_assignment_object = true; // bool | Include Assignment Object
+$include_activity_tags = true; // bool | Include Activity Tags
+$include_tag_type_name = true; // bool | Include Activity Tag type names
 $include_activity_record_info = true; // bool | Include Activity Info
 $include_activity_notes = true; // bool | Include Activity Notes
 $include_activity_note_tags = true; // bool | Include Activity Note Tags
 $include_depot_address_object = true; // bool | Include Depot Address Object
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_package_lines_info, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_route, $include_assignment, $include_package_lines, $include_assignment_object, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_activity_meta_data_objects, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_activity_files_meta_data_objects, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -128,19 +129,20 @@ Name | Type | Description  | Notes
  **include_time_slots** | **bool**| Include TimeSlots | [default to true]
  **include_time_slot_tags** | **bool**| Include tags from TimeSlots | [default to true]
  **include_route_info** | **bool**| Include route data | [default to true]
+ **include_route** | **bool**| Include Route | [default to true]
+ **include_package_lines** | **bool**| Include package lines | [default to true]
+ **include_package_lines_info** | **bool**| Include PackageLines | [default to true]
  **include_driver_info** | **bool**| Include driver data | [default to true]
  **include_communication** | **bool**| Include Communication Settings | [default to true]
  **include_communication_object** | **bool**| Include Communication Object | [default to true]
  **include_activity_links** | **bool**| Include Link Data | [default to true]
- **include_package_lines_info** | **bool**| Include PackageLines | [default to true]
  **include_activity_files** | **bool**| Include files | [default to true]
  **include_activity_files_meta_data** | **bool**| Include files meta data | [default to true]
  **include_activity_files_meta_data_objects** | **bool**| Include files meta data objects | [default to true]
  **include_assignment_nr** | **bool**| Include Assignment Nr | [default to true]
- **include_route** | **bool**| Include Route | [default to true]
  **include_assignment** | **bool**| Include Assignment | [default to true]
- **include_package_lines** | **bool**| Include package lines | [default to true]
- **include_assignment_object** | **bool**| Include Assignment Object | [default to true]
+ **include_activity_tags** | **bool**| Include Activity Tags | [default to true]
+ **include_tag_type_name** | **bool**| Include Activity Tag type names | [default to true]
  **include_activity_record_info** | **bool**| Include Activity Info | [default to true]
  **include_activity_notes** | **bool**| Include Activity Notes | [default to true]
  **include_activity_note_tags** | **bool**| Include Activity Note Tags | [default to true]
@@ -194,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/\BumbalClient\Model\ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
 
 ### Return type
 
@@ -244,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object | [optional]
 
 ### Return type
 
@@ -296,7 +298,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of activity to update |
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object that needs to be updated | [optional]
 
 ### Return type
 

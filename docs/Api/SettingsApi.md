@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/\BumbalClient\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
