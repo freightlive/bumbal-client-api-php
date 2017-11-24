@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be created | [optional]
 
 ### Return type
 
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/\BumbalClient\Model\TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
 
 ### Return type
 
@@ -249,7 +249,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object | [optional]
 
 ### Return type
 
@@ -301,7 +301,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trailer_id** | **int**| ID of trailer to update |
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be updated | [optional]
 
 ### Return type
 

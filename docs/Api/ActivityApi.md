@@ -196,7 +196,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/\BumbalClient\Model\ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
 
 ### Return type
 
@@ -246,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
 
 ### Return type
 
@@ -298,7 +298,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of activity to update |
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/\BumbalClient\Model\ActivityModel.md)| Activity object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object that needs to be updated | [optional]
 
 ### Return type
 
