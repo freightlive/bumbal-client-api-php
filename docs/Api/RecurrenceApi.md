@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteRecurrence**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteRecurrence($recurrence_id)
+> \BumbalClient\Model\ApiResponse deleteRecurrence($recurrence_id)
 
 Delete an Recurrence
 
@@ -23,20 +23,15 @@ Delete an Recurrence
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\RecurrenceApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
 
 try {
-    $result = $apiInstance->deleteRecurrence($recurrence_id);
+    $result = $api_instance->deleteRecurrence($recurrence_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecurrenceApi->deleteRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRecurrence**
-> \BumbalClient\BumbalClient\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
+> \BumbalClient\Model\RecurrenceModel[] retrieveListRecurrence($arguments)
 
 Retrieve List of Recurrences
 
@@ -78,20 +73,15 @@ Retrieve List of Recurrences
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\RecurrenceApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$arguments = new \BumbalClient\BumbalClient\Model\RecurrenceRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
+$api_instance = new BumbalClient\Api\RecurrenceApi();
+$arguments = new \BumbalClient\Model\RecurrenceRetrieveListArguments(); // \BumbalClient\Model\RecurrenceRetrieveListArguments | Recurrence RetrieveList Arguments
 
 try {
-    $result = $apiInstance->retrieveListRecurrence($arguments);
+    $result = $api_instance->retrieveListRecurrence($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecurrenceApi->retrieveListRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -103,11 +93,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\RecurrenceRetrieveListArguments**](../Model/RecurrenceRetrieveListArguments.md)| Recurrence RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
+[**\BumbalClient\Model\RecurrenceModel[]**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
@@ -121,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRecurrence**
-> \BumbalClient\BumbalClient\Model\RecurrenceModel retrieveRecurrence($recurrence_id)
+> \BumbalClient\Model\RecurrenceModel retrieveRecurrence($recurrence_id)
 
 Retrieve a Recurrence
 
@@ -133,20 +123,15 @@ Retrieve an Recurrence
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\RecurrenceApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to retrieve
 
 try {
-    $result = $apiInstance->retrieveRecurrence($recurrence_id);
+    $result = $api_instance->retrieveRecurrence($recurrence_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecurrenceApi->retrieveRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -162,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)
+[**\BumbalClient\Model\RecurrenceModel**](../Model/RecurrenceModel.md)
 
 ### Authorization
 
@@ -176,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRecurrence**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateRecurrence($recurrence_id)
+> \BumbalClient\Model\ApiResponse updateRecurrence($recurrence_id)
 
 Update a Recurrence
 
@@ -188,20 +173,15 @@ Update an Recurrence
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\RecurrenceApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\RecurrenceApi();
 $recurrence_id = 789; // int | ID of recurrence to update
 
 try {
-    $result = $apiInstance->updateRecurrence($recurrence_id);
+    $result = $api_instance->updateRecurrence($recurrence_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RecurrenceApi->updateRecurrence: ', $e->getMessage(), PHP_EOL;
@@ -217,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

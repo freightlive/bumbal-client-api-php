@@ -16,11 +16,11 @@ Name | Type | Description | Notes
 **password** | **string** | user password (set only, no read) | [optional] 
 **lang_code** | **string** | lang code (nl &#x3D; default) | [optional] 
 **address_id** | **int** | id of the user address | [optional] 
-**addresses** | [**\BumbalClient\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
+**addresses** | [**\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tag_names** | **object** |  | [optional] 
-**links** | [**\BumbalClient\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
