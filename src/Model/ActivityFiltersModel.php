@@ -54,6 +54,7 @@ class ActivityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'updated_at_since' => '\DateTime',
@@ -73,6 +74,7 @@ class ActivityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => 'int64',
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'updated_at_since' => 'date-time',
@@ -102,6 +104,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'updated_at_since' => 'updated_at_since',
@@ -122,6 +125,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'updated_at_since' => 'setUpdatedAtSince',
@@ -142,6 +146,7 @@ class ActivityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'updated_at_since' => 'getUpdatedAtSince',
@@ -187,6 +192,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
@@ -225,6 +231,27 @@ class ActivityFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id Unique Identifier
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets date_time_from
