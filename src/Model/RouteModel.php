@@ -87,7 +87,8 @@ class RouteModel implements ArrayAccess
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'updated_at' => '\DateTime',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     /**
@@ -128,7 +129,8 @@ class RouteModel implements ArrayAccess
         'notes' => null,
         'files' => null,
         'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'updated_at' => 'date-time',
+        'tags' => null
     ];
 
     public static function swaggerTypes()
@@ -179,7 +181,8 @@ class RouteModel implements ArrayAccess
         'notes' => 'notes',
         'files' => 'files',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'updated_at' => 'updated_at',
+        'tags' => 'tags'
     ];
 
 
@@ -221,7 +224,8 @@ class RouteModel implements ArrayAccess
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'updated_at' => 'setUpdatedAt',
+        'tags' => 'setTags'
     ];
 
 
@@ -263,7 +267,8 @@ class RouteModel implements ArrayAccess
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'updated_at' => 'getUpdatedAt',
+        'tags' => 'getTags'
     ];
 
     public static function attributeMap()
@@ -367,6 +372,7 @@ class RouteModel implements ArrayAccess
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1152,6 +1158,27 @@ class RouteModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

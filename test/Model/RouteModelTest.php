@@ -314,4 +314,11 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUpdatedAt()
     {
     }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
 }
