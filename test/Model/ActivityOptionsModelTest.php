@@ -106,6 +106,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_address"
+     */
+    public function testPropertyIncludeAddress()
+    {
+    }
+
+    /**
      * Test attribute "include_address_object"
      */
     public function testPropertyIncludeAddressObject()

@@ -249,7 +249,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_notes
-     * @param bool $include_package_line_notes 
+     * @param bool $include_package_line_notes
      * @return $this
      */
     public function setIncludePackageLineNotes($include_package_line_notes)
@@ -270,7 +270,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_tags
-     * @param bool $include_package_line_tags 
+     * @param bool $include_package_line_tags
      * @return $this
      */
     public function setIncludePackageLineTags($include_package_line_tags)
@@ -291,7 +291,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_type_name
-     * @param bool $include_package_type_name 
+     * @param bool $include_package_type_name
      * @return $this
      */
     public function setIncludePackageTypeName($include_package_type_name)
@@ -312,7 +312,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_references
-     * @param bool $include_package_line_references 
+     * @param bool $include_package_line_references
      * @return $this
      */
     public function setIncludePackageLineReferences($include_package_line_references)
@@ -333,7 +333,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files_record_info
-     * @param bool $include_package_line_files_record_info 
+     * @param bool $include_package_line_files_record_info
      * @return $this
      */
     public function setIncludePackageLineFilesRecordInfo($include_package_line_files_record_info)
@@ -354,7 +354,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_record_info
-     * @param bool $include_package_line_record_info 
+     * @param bool $include_package_line_record_info
      * @return $this
      */
     public function setIncludePackageLineRecordInfo($include_package_line_record_info)
@@ -375,7 +375,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_ids
-     * @param bool $include_activity_ids 
+     * @param bool $include_activity_ids
      * @return $this
      */
     public function setIncludeActivityIds($include_activity_ids)
@@ -396,7 +396,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_meta_data
-     * @param bool $include_package_line_meta_data 
+     * @param bool $include_package_line_meta_data
      * @return $this
      */
     public function setIncludePackageLineMetaData($include_package_line_meta_data)
@@ -417,7 +417,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_meta_data_objects
-     * @param bool $include_package_line_meta_data_objects 
+     * @param bool $include_package_line_meta_data_objects
      * @return $this
      */
     public function setIncludePackageLineMetaDataObjects($include_package_line_meta_data_objects)
@@ -438,7 +438,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_links
-     * @param bool $include_package_line_links 
+     * @param bool $include_package_line_links
      * @return $this
      */
     public function setIncludePackageLineLinks($include_package_line_links)
@@ -459,7 +459,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_lines_info
-     * @param bool $include_package_lines_info 
+     * @param bool $include_package_lines_info
      * @return $this
      */
     public function setIncludePackageLinesInfo($include_package_lines_info)
@@ -480,7 +480,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files
-     * @param bool $include_package_line_files 
+     * @param bool $include_package_line_files
      * @return $this
      */
     public function setIncludePackageLineFiles($include_package_line_files)
@@ -501,7 +501,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files_meta_data
-     * @param bool $include_package_line_files_meta_data 
+     * @param bool $include_package_line_files_meta_data
      * @return $this
      */
     public function setIncludePackageLineFilesMetaData($include_package_line_files_meta_data)
@@ -522,7 +522,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files_meta_data_objects
-     * @param bool $include_package_line_files_meta_data_objects 
+     * @param bool $include_package_line_files_meta_data_objects
      * @return $this
      */
     public function setIncludePackageLineFilesMetaDataObjects($include_package_line_files_meta_data_objects)

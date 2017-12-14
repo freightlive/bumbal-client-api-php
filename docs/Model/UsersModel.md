@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tag_names** | **object** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

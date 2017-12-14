@@ -171,7 +171,7 @@ class TagsOptionsModel implements ArrayAccess
 
     /**
      * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * @param bool $include_phone_nrs
      * @return $this
      */
     public function setIncludePhoneNrs($include_phone_nrs)

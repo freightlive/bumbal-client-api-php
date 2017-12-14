@@ -71,7 +71,8 @@ class UsersModel implements ArrayAccess
         'removed' => 'bool',
         'active' => 'bool',
         'tag_names' => 'object',
-        'links' => '\BumbalClient\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     /**
@@ -96,7 +97,8 @@ class UsersModel implements ArrayAccess
         'removed' => null,
         'active' => null,
         'tag_names' => null,
-        'links' => null
+        'links' => null,
+        'tags' => null
     ];
 
     public static function swaggerTypes()
@@ -131,7 +133,8 @@ class UsersModel implements ArrayAccess
         'removed' => 'removed',
         'active' => 'active',
         'tag_names' => 'tag_names',
-        'links' => 'links'
+        'links' => 'links',
+        'tags' => 'tags'
     ];
 
 
@@ -157,7 +160,8 @@ class UsersModel implements ArrayAccess
         'removed' => 'setRemoved',
         'active' => 'setActive',
         'tag_names' => 'setTagNames',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'tags' => 'setTags'
     ];
 
 
@@ -183,7 +187,8 @@ class UsersModel implements ArrayAccess
         'removed' => 'getRemoved',
         'active' => 'getActive',
         'tag_names' => 'getTagNames',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'tags' => 'getTags'
     ];
 
     public static function attributeMap()
@@ -255,6 +260,7 @@ class UsersModel implements ArrayAccess
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -311,7 +317,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -656,7 +662,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param object $tag_names 
+     * @param object $tag_names
      * @return $this
      */
     public function setTagNames($tag_names)
@@ -677,12 +683,33 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

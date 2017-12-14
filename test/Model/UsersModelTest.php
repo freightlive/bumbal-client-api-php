@@ -202,4 +202,11 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyLinks()
     {
     }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
 }
