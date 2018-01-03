@@ -56,7 +56,7 @@ class CapacityModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'capacity_type_id' => 'int',
-        'capacity_type' => '\BumbalClient\Model\CapacityTypeModel[]',
+        'capacity_type' => '\BumbalClient\Model\CapacityTypeModel',
         'capacity_value' => 'string',
         'unit_values' => 'object',
         'total_values' => 'object',
@@ -246,7 +246,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Gets capacity_type
-     * @return \BumbalClient\Model\CapacityTypeModel[]
+     * @return \BumbalClient\Model\CapacityTypeModel
      */
     public function getCapacityType()
     {
@@ -255,7 +255,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets capacity_type
-     * @param \BumbalClient\Model\CapacityTypeModel[] $capacity_type
+     * @param \BumbalClient\Model\CapacityTypeModel $capacity_type
      * @return $this
      */
     public function setCapacityType($capacity_type)
