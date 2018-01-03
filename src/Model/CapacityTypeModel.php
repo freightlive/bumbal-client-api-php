@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityModel
+ * CapacityTypeModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CapacityModel Class Doc Comment
+ * CapacityTypeModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityModel implements ArrayAccess
+class CapacityTypeModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class CapacityModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CapacityModel';
+    protected static $swaggerModelName = 'CapacityTypeModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,12 +55,10 @@ class CapacityModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'capacity_type_id' => 'int',
-        'capacity_type' => '\BumbalClient\Model\CapacityTypeModel[]',
-        'capacity_value' => 'string',
-        'unit_values' => 'object',
-        'total_values' => 'object',
-        'value' => 'string'
+        'name' => 'string',
+        'properties' => 'object',
+        'uom_id' => 'string',
+        'uom' => 'object'
     ];
 
     /**
@@ -69,12 +67,10 @@ class CapacityModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'capacity_type_id' => null,
-        'capacity_type' => null,
-        'capacity_value' => null,
-        'unit_values' => null,
-        'total_values' => null,
-        'value' => null
+        'name' => null,
+        'properties' => null,
+        'uom_id' => null,
+        'uom' => null
     ];
 
     public static function swaggerTypes()
@@ -93,12 +89,10 @@ class CapacityModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'capacity_type_id' => 'capacity_type_id',
-        'capacity_type' => 'capacity_type',
-        'capacity_value' => 'capacity_value',
-        'unit_values' => 'unit_values',
-        'total_values' => 'total_values',
-        'value' => 'value'
+        'name' => 'name',
+        'properties' => 'properties',
+        'uom_id' => 'uom_id',
+        'uom' => 'uom'
     ];
 
 
@@ -108,12 +102,10 @@ class CapacityModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'capacity_type_id' => 'setCapacityTypeId',
-        'capacity_type' => 'setCapacityType',
-        'capacity_value' => 'setCapacityValue',
-        'unit_values' => 'setUnitValues',
-        'total_values' => 'setTotalValues',
-        'value' => 'setValue'
+        'name' => 'setName',
+        'properties' => 'setProperties',
+        'uom_id' => 'setUomId',
+        'uom' => 'setUom'
     ];
 
 
@@ -123,12 +115,10 @@ class CapacityModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'capacity_type_id' => 'getCapacityTypeId',
-        'capacity_type' => 'getCapacityType',
-        'capacity_value' => 'getCapacityValue',
-        'unit_values' => 'getUnitValues',
-        'total_values' => 'getTotalValues',
-        'value' => 'getValue'
+        'name' => 'getName',
+        'properties' => 'getProperties',
+        'uom_id' => 'getUomId',
+        'uom' => 'getUom'
     ];
 
     public static function attributeMap()
@@ -163,12 +153,10 @@ class CapacityModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
-        $this->container['capacity_type'] = isset($data['capacity_type']) ? $data['capacity_type'] : null;
-        $this->container['capacity_value'] = isset($data['capacity_value']) ? $data['capacity_value'] : null;
-        $this->container['unit_values'] = isset($data['unit_values']) ? $data['unit_values'] : null;
-        $this->container['total_values'] = isset($data['total_values']) ? $data['total_values'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
+        $this->container['uom_id'] = isset($data['uom_id']) ? $data['uom_id'] : null;
+        $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
     }
 
     /**
@@ -180,9 +168,6 @@ class CapacityModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -195,9 +180,6 @@ class CapacityModel implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['id'] === null) {
-            return false;
-        }
         return true;
     }
 
@@ -224,127 +206,85 @@ class CapacityModel implements ArrayAccess
     }
 
     /**
-     * Gets capacity_type_id
-     * @return int
-     */
-    public function getCapacityTypeId()
-    {
-        return $this->container['capacity_type_id'];
-    }
-
-    /**
-     * Sets capacity_type_id
-     * @param int $capacity_type_id id for capacity type
-     * @return $this
-     */
-    public function setCapacityTypeId($capacity_type_id)
-    {
-        $this->container['capacity_type_id'] = $capacity_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets capacity_type
-     * @return \BumbalClient\Model\CapacityTypeModel[]
-     */
-    public function getCapacityType()
-    {
-        return $this->container['capacity_type'];
-    }
-
-    /**
-     * Sets capacity_type
-     * @param \BumbalClient\Model\CapacityTypeModel[] $capacity_type
-     * @return $this
-     */
-    public function setCapacityType($capacity_type)
-    {
-        $this->container['capacity_type'] = $capacity_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets capacity_value
+     * Gets name
      * @return string
      */
-    public function getCapacityValue()
+    public function getName()
     {
-        return $this->container['capacity_value'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets capacity_value
-     * @param string $capacity_value Capacity value
+     * Sets name
+     * @param string $name name of this capacity type
      * @return $this
      */
-    public function setCapacityValue($capacity_value)
+    public function setName($name)
     {
-        $this->container['capacity_value'] = $capacity_value;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets unit_values
+     * Gets properties
      * @return object
      */
-    public function getUnitValues()
+    public function getProperties()
     {
-        return $this->container['unit_values'];
+        return $this->container['properties'];
     }
 
     /**
-     * Sets unit_values
-     * @param object $unit_values
+     * Sets properties
+     * @param object $properties
      * @return $this
      */
-    public function setUnitValues($unit_values)
+    public function setProperties($properties)
     {
-        $this->container['unit_values'] = $unit_values;
+        $this->container['properties'] = $properties;
 
         return $this;
     }
 
     /**
-     * Gets total_values
-     * @return object
-     */
-    public function getTotalValues()
-    {
-        return $this->container['total_values'];
-    }
-
-    /**
-     * Sets total_values
-     * @param object $total_values
-     * @return $this
-     */
-    public function setTotalValues($total_values)
-    {
-        $this->container['total_values'] = $total_values;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
+     * Gets uom_id
      * @return string
      */
-    public function getValue()
+    public function getUomId()
     {
-        return $this->container['value'];
+        return $this->container['uom_id'];
     }
 
     /**
-     * Sets value
-     * @param string $value Value
+     * Sets uom_id
+     * @param string $uom_id Unit of Measurement ID
      * @return $this
      */
-    public function setValue($value)
+    public function setUomId($uom_id)
     {
-        $this->container['value'] = $value;
+        $this->container['uom_id'] = $uom_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uom
+     * @return object
+     */
+    public function getUom()
+    {
+        return $this->container['uom'];
+    }
+
+    /**
+     * Sets uom
+     * @param object $uom
+     * @return $this
+     */
+    public function setUom($uom)
+    {
+        $this->container['uom'] = $uom;
 
         return $this;
     }

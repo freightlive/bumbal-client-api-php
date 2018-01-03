@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityModelTest
+ * CapacityTypeModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * CapacityModelTest Class Doc Comment
+ * CapacityTypeModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description CapacityModel
+// * @description CapacityTypeModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityModelTest extends \PHPUnit_Framework_TestCase
+class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CapacityModel"
+     * Test "CapacityTypeModel"
      */
-    public function testCapacityModel()
+    public function testCapacityTypeModel()
     {
     }
 
@@ -85,44 +85,30 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "capacity_type_id"
+     * Test attribute "name"
      */
-    public function testPropertyCapacityTypeId()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "capacity_type"
+     * Test attribute "properties"
      */
-    public function testPropertyCapacityType()
+    public function testPropertyProperties()
     {
     }
 
     /**
-     * Test attribute "capacity_value"
+     * Test attribute "uom_id"
      */
-    public function testPropertyCapacityValue()
+    public function testPropertyUomId()
     {
     }
 
     /**
-     * Test attribute "unit_values"
+     * Test attribute "uom"
      */
-    public function testPropertyUnitValues()
-    {
-    }
-
-    /**
-     * Test attribute "total_values"
-     */
-    public function testPropertyTotalValues()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
+    public function testPropertyUom()
     {
     }
 }

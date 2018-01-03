@@ -213,6 +213,7 @@ Class | Method | HTTP request | Description
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
+ - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
  - [CarFiltersModel](docs/Model/CarFiltersModel.md)
  - [CarModel](docs/Model/CarModel.md)
  - [CarOptionsModel](docs/Model/CarOptionsModel.md)
