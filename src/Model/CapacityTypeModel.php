@@ -56,7 +56,7 @@ class CapacityTypeModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
-        'properties' => 'object',
+        'properties' => 'string[]',
         'uom_id' => 'string',
         'uom' => 'object'
     ];
@@ -228,7 +228,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Gets properties
-     * @return object
+     * @return string[]
      */
     public function getProperties()
     {
@@ -237,7 +237,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets properties
-     * @param object $properties
+     * @param string[] $properties extra properties of this capacity type
      * @return $this
      */
     public function setProperties($properties)
