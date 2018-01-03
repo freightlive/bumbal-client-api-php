@@ -265,4 +265,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeDepotAddressObject()
     {
     }
+
+    /**
+     * Test attribute "include_capacity_object"
+     */
+    public function testPropertyIncludeCapacityObject()
+    {
+    }
 }

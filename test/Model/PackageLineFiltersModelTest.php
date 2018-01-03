@@ -141,79 +141,16 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "length"
+     * Test attribute "applied_capacities"
      */
-    public function testPropertyLength()
+    public function testPropertyAppliedCapacities()
     {
     }
 
     /**
-     * Test attribute "width"
+     * Test attribute "capacities"
      */
-    public function testPropertyWidth()
-    {
-    }
-
-    /**
-     * Test attribute "height"
-     */
-    public function testPropertyHeight()
-    {
-    }
-
-    /**
-     * Test attribute "unit_volume"
-     */
-    public function testPropertyUnitVolume()
-    {
-    }
-
-    /**
-     * Test attribute "net_weight_unit"
-     */
-    public function testPropertyNetWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "net_weight_total"
-     */
-    public function testPropertyNetWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "tare_weight_unit"
-     */
-    public function testPropertyTareWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "tare_weight_total"
-     */
-    public function testPropertyTareWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "gross_weight_unit"
-     */
-    public function testPropertyGrossWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "gross_weight_total"
-     */
-    public function testPropertyGrossWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "unit_loading_meter"
-     */
-    public function testPropertyUnitLoadingMeter()
+    public function testPropertyCapacities()
     {
     }
 
@@ -263,27 +200,6 @@ class PackageLineFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "temp_max"
      */
     public function testPropertyTempMax()
-    {
-    }
-
-    /**
-     * Test attribute "capacity_volume"
-     */
-    public function testPropertyCapacityVolume()
-    {
-    }
-
-    /**
-     * Test attribute "capacity_loading_meter"
-     */
-    public function testPropertyCapacityLoadingMeter()
-    {
-    }
-
-    /**
-     * Test attribute "capacity_loading_weight"
-     */
-    public function testPropertyCapacityLoadingWeight()
     {
     }
 

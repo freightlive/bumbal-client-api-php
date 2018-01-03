@@ -92,6 +92,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+    }
+
+    /**
      * Test attribute "summary"
      */
     public function testPropertySummary()
@@ -183,6 +190,34 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "time_from"
+     */
+    public function testPropertyTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "time_to"
+     */
+    public function testPropertyTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "duration"
+     */
+    public function testPropertyDuration()
+    {
+    }
+
+    /**
+     * Test attribute "address_type_names"
+     */
+    public function testPropertyAddressTypeNames()
+    {
+    }
+
+    /**
      * Test attribute "emails"
      */
     public function testPropertyEmails()
@@ -228,6 +263,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
     {
     }
 

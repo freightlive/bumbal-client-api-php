@@ -62,17 +62,6 @@ class PackageLineModel implements ArrayAccess
         'nr_of_packages' => 'int',
         'package_type_name' => 'string',
         'package_type_id' => 'int',
-        'length' => 'float',
-        'width' => 'float',
-        'height' => 'float',
-        'unit_volume' => 'float',
-        'net_weight_unit' => 'float',
-        'net_weight_total' => 'float',
-        'tare_weight_unit' => 'float',
-        'tare_weight_total' => 'float',
-        'gross_weight_unit' => 'float',
-        'gross_weight_total' => 'float',
-        'unit_loading_meter' => 'float',
         'barcode' => 'string',
         'adr' => 'bool',
         'adr_class' => 'int',
@@ -80,11 +69,10 @@ class PackageLineModel implements ArrayAccess
         'temp' => 'bool',
         'temp_min' => 'float',
         'temp_max' => 'float',
-        'capacity_volume' => 'float',
-        'capacity_loading_meter' => 'float',
-        'capacity_loading_weight' => 'float',
         'hs_code' => 'string',
         'description' => 'string',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_links' => '\BumbalClient\Model\LinkModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -107,17 +95,6 @@ class PackageLineModel implements ArrayAccess
         'nr_of_packages' => 'int64',
         'package_type_name' => null,
         'package_type_id' => null,
-        'length' => 'float',
-        'width' => 'float',
-        'height' => 'float',
-        'unit_volume' => 'float',
-        'net_weight_unit' => 'float',
-        'net_weight_total' => 'float',
-        'tare_weight_unit' => 'float',
-        'tare_weight_total' => 'float',
-        'gross_weight_unit' => 'float',
-        'gross_weight_total' => 'float',
-        'unit_loading_meter' => 'float',
         'barcode' => null,
         'adr' => null,
         'adr_class' => 'int64',
@@ -125,11 +102,10 @@ class PackageLineModel implements ArrayAccess
         'temp' => null,
         'temp_min' => 'float',
         'temp_max' => 'float',
-        'capacity_volume' => 'float',
-        'capacity_loading_meter' => 'float',
-        'capacity_loading_weight' => 'float',
         'hs_code' => null,
         'description' => null,
+        'applied_capacities' => null,
+        'capacities' => null,
         'activity_links' => null,
         'links' => null,
         'meta_data' => null,
@@ -162,17 +138,6 @@ class PackageLineModel implements ArrayAccess
         'nr_of_packages' => 'nr_of_packages',
         'package_type_name' => 'package_type_name',
         'package_type_id' => 'package_type_id',
-        'length' => 'length',
-        'width' => 'width',
-        'height' => 'height',
-        'unit_volume' => 'unit_volume',
-        'net_weight_unit' => 'net_weight_unit',
-        'net_weight_total' => 'net_weight_total',
-        'tare_weight_unit' => 'tare_weight_unit',
-        'tare_weight_total' => 'tare_weight_total',
-        'gross_weight_unit' => 'gross_weight_unit',
-        'gross_weight_total' => 'gross_weight_total',
-        'unit_loading_meter' => 'unit_loading_meter',
         'barcode' => 'barcode',
         'adr' => 'ADR',
         'adr_class' => 'ADR_class',
@@ -180,11 +145,10 @@ class PackageLineModel implements ArrayAccess
         'temp' => 'temp',
         'temp_min' => 'temp_min',
         'temp_max' => 'temp_max',
-        'capacity_volume' => 'capacity_volume',
-        'capacity_loading_meter' => 'capacity_loading_meter',
-        'capacity_loading_weight' => 'capacity_loading_weight',
         'hs_code' => 'hs_code',
         'description' => 'description',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'activity_links' => 'activity_links',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -208,17 +172,6 @@ class PackageLineModel implements ArrayAccess
         'nr_of_packages' => 'setNrOfPackages',
         'package_type_name' => 'setPackageTypeName',
         'package_type_id' => 'setPackageTypeId',
-        'length' => 'setLength',
-        'width' => 'setWidth',
-        'height' => 'setHeight',
-        'unit_volume' => 'setUnitVolume',
-        'net_weight_unit' => 'setNetWeightUnit',
-        'net_weight_total' => 'setNetWeightTotal',
-        'tare_weight_unit' => 'setTareWeightUnit',
-        'tare_weight_total' => 'setTareWeightTotal',
-        'gross_weight_unit' => 'setGrossWeightUnit',
-        'gross_weight_total' => 'setGrossWeightTotal',
-        'unit_loading_meter' => 'setUnitLoadingMeter',
         'barcode' => 'setBarcode',
         'adr' => 'setAdr',
         'adr_class' => 'setAdrClass',
@@ -226,11 +179,10 @@ class PackageLineModel implements ArrayAccess
         'temp' => 'setTemp',
         'temp_min' => 'setTempMin',
         'temp_max' => 'setTempMax',
-        'capacity_volume' => 'setCapacityVolume',
-        'capacity_loading_meter' => 'setCapacityLoadingMeter',
-        'capacity_loading_weight' => 'setCapacityLoadingWeight',
         'hs_code' => 'setHsCode',
         'description' => 'setDescription',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'activity_links' => 'setActivityLinks',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -254,17 +206,6 @@ class PackageLineModel implements ArrayAccess
         'nr_of_packages' => 'getNrOfPackages',
         'package_type_name' => 'getPackageTypeName',
         'package_type_id' => 'getPackageTypeId',
-        'length' => 'getLength',
-        'width' => 'getWidth',
-        'height' => 'getHeight',
-        'unit_volume' => 'getUnitVolume',
-        'net_weight_unit' => 'getNetWeightUnit',
-        'net_weight_total' => 'getNetWeightTotal',
-        'tare_weight_unit' => 'getTareWeightUnit',
-        'tare_weight_total' => 'getTareWeightTotal',
-        'gross_weight_unit' => 'getGrossWeightUnit',
-        'gross_weight_total' => 'getGrossWeightTotal',
-        'unit_loading_meter' => 'getUnitLoadingMeter',
         'barcode' => 'getBarcode',
         'adr' => 'getAdr',
         'adr_class' => 'getAdrClass',
@@ -272,11 +213,10 @@ class PackageLineModel implements ArrayAccess
         'temp' => 'getTemp',
         'temp_min' => 'getTempMin',
         'temp_max' => 'getTempMax',
-        'capacity_volume' => 'getCapacityVolume',
-        'capacity_loading_meter' => 'getCapacityLoadingMeter',
-        'capacity_loading_weight' => 'getCapacityLoadingWeight',
         'hs_code' => 'getHsCode',
         'description' => 'getDescription',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'activity_links' => 'getActivityLinks',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -351,17 +291,6 @@ class PackageLineModel implements ArrayAccess
         $this->container['nr_of_packages'] = isset($data['nr_of_packages']) ? $data['nr_of_packages'] : null;
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
         $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
-        $this->container['length'] = isset($data['length']) ? $data['length'] : null;
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
-        $this->container['unit_volume'] = isset($data['unit_volume']) ? $data['unit_volume'] : null;
-        $this->container['net_weight_unit'] = isset($data['net_weight_unit']) ? $data['net_weight_unit'] : null;
-        $this->container['net_weight_total'] = isset($data['net_weight_total']) ? $data['net_weight_total'] : null;
-        $this->container['tare_weight_unit'] = isset($data['tare_weight_unit']) ? $data['tare_weight_unit'] : null;
-        $this->container['tare_weight_total'] = isset($data['tare_weight_total']) ? $data['tare_weight_total'] : null;
-        $this->container['gross_weight_unit'] = isset($data['gross_weight_unit']) ? $data['gross_weight_unit'] : null;
-        $this->container['gross_weight_total'] = isset($data['gross_weight_total']) ? $data['gross_weight_total'] : null;
-        $this->container['unit_loading_meter'] = isset($data['unit_loading_meter']) ? $data['unit_loading_meter'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
         $this->container['adr'] = isset($data['adr']) ? $data['adr'] : null;
         $this->container['adr_class'] = isset($data['adr_class']) ? $data['adr_class'] : null;
@@ -369,11 +298,10 @@ class PackageLineModel implements ArrayAccess
         $this->container['temp'] = isset($data['temp']) ? $data['temp'] : null;
         $this->container['temp_min'] = isset($data['temp_min']) ? $data['temp_min'] : null;
         $this->container['temp_max'] = isset($data['temp_max']) ? $data['temp_max'] : null;
-        $this->container['capacity_volume'] = isset($data['capacity_volume']) ? $data['capacity_volume'] : null;
-        $this->container['capacity_loading_meter'] = isset($data['capacity_loading_meter']) ? $data['capacity_loading_meter'] : null;
-        $this->container['capacity_loading_weight'] = isset($data['capacity_loading_weight']) ? $data['capacity_loading_weight'] : null;
         $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -604,237 +532,6 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
-     * Gets length
-     * @return float
-     */
-    public function getLength()
-    {
-        return $this->container['length'];
-    }
-
-    /**
-     * Sets length
-     * @param float $length length of a single package in this package line
-     * @return $this
-     */
-    public function setLength($length)
-    {
-        $this->container['length'] = $length;
-
-        return $this;
-    }
-
-    /**
-     * Gets width
-     * @return float
-     */
-    public function getWidth()
-    {
-        return $this->container['width'];
-    }
-
-    /**
-     * Sets width
-     * @param float $width width of a single package in this package line
-     * @return $this
-     */
-    public function setWidth($width)
-    {
-        $this->container['width'] = $width;
-
-        return $this;
-    }
-
-    /**
-     * Gets height
-     * @return float
-     */
-    public function getHeight()
-    {
-        return $this->container['height'];
-    }
-
-    /**
-     * Sets height
-     * @param float $height height of a single package in this package line
-     * @return $this
-     */
-    public function setHeight($height)
-    {
-        $this->container['height'] = $height;
-
-        return $this;
-    }
-
-    /**
-     * Gets unit_volume
-     * @return float
-     */
-    public function getUnitVolume()
-    {
-        return $this->container['unit_volume'];
-    }
-
-    /**
-     * Sets unit_volume
-     * @param float $unit_volume volume of a single package in this package line
-     * @return $this
-     */
-    public function setUnitVolume($unit_volume)
-    {
-        $this->container['unit_volume'] = $unit_volume;
-
-        return $this;
-    }
-
-    /**
-     * Gets net_weight_unit
-     * @return float
-     */
-    public function getNetWeightUnit()
-    {
-        return $this->container['net_weight_unit'];
-    }
-
-    /**
-     * Sets net_weight_unit
-     * @param float $net_weight_unit net weight of a single package in this package line
-     * @return $this
-     */
-    public function setNetWeightUnit($net_weight_unit)
-    {
-        $this->container['net_weight_unit'] = $net_weight_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets net_weight_total
-     * @return float
-     */
-    public function getNetWeightTotal()
-    {
-        return $this->container['net_weight_total'];
-    }
-
-    /**
-     * Sets net_weight_total
-     * @param float $net_weight_total net weight of a all packages in this package line
-     * @return $this
-     */
-    public function setNetWeightTotal($net_weight_total)
-    {
-        $this->container['net_weight_total'] = $net_weight_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets tare_weight_unit
-     * @return float
-     */
-    public function getTareWeightUnit()
-    {
-        return $this->container['tare_weight_unit'];
-    }
-
-    /**
-     * Sets tare_weight_unit
-     * @param float $tare_weight_unit tare weight of a single package in this package line
-     * @return $this
-     */
-    public function setTareWeightUnit($tare_weight_unit)
-    {
-        $this->container['tare_weight_unit'] = $tare_weight_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets tare_weight_total
-     * @return float
-     */
-    public function getTareWeightTotal()
-    {
-        return $this->container['tare_weight_total'];
-    }
-
-    /**
-     * Sets tare_weight_total
-     * @param float $tare_weight_total tare weight of a all packages in this package line
-     * @return $this
-     */
-    public function setTareWeightTotal($tare_weight_total)
-    {
-        $this->container['tare_weight_total'] = $tare_weight_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets gross_weight_unit
-     * @return float
-     */
-    public function getGrossWeightUnit()
-    {
-        return $this->container['gross_weight_unit'];
-    }
-
-    /**
-     * Sets gross_weight_unit
-     * @param float $gross_weight_unit gross weight of a single package in this package line
-     * @return $this
-     */
-    public function setGrossWeightUnit($gross_weight_unit)
-    {
-        $this->container['gross_weight_unit'] = $gross_weight_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets gross_weight_total
-     * @return float
-     */
-    public function getGrossWeightTotal()
-    {
-        return $this->container['gross_weight_total'];
-    }
-
-    /**
-     * Sets gross_weight_total
-     * @param float $gross_weight_total gross weight of a all packages in this package line
-     * @return $this
-     */
-    public function setGrossWeightTotal($gross_weight_total)
-    {
-        $this->container['gross_weight_total'] = $gross_weight_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets unit_loading_meter
-     * @return float
-     */
-    public function getUnitLoadingMeter()
-    {
-        return $this->container['unit_loading_meter'];
-    }
-
-    /**
-     * Sets unit_loading_meter
-     * @param float $unit_loading_meter loading meter of a single package in this package line
-     * @return $this
-     */
-    public function setUnitLoadingMeter($unit_loading_meter)
-    {
-        $this->container['unit_loading_meter'] = $unit_loading_meter;
-
-        return $this;
-    }
-
-    /**
      * Gets barcode
      * @return string
      */
@@ -982,69 +679,6 @@ class PackageLineModel implements ArrayAccess
     }
 
     /**
-     * Gets capacity_volume
-     * @return float
-     */
-    public function getCapacityVolume()
-    {
-        return $this->container['capacity_volume'];
-    }
-
-    /**
-     * Sets capacity_volume
-     * @param float $capacity_volume total volume for all packages in package line, used for any capacity related calculations
-     * @return $this
-     */
-    public function setCapacityVolume($capacity_volume)
-    {
-        $this->container['capacity_volume'] = $capacity_volume;
-
-        return $this;
-    }
-
-    /**
-     * Gets capacity_loading_meter
-     * @return float
-     */
-    public function getCapacityLoadingMeter()
-    {
-        return $this->container['capacity_loading_meter'];
-    }
-
-    /**
-     * Sets capacity_loading_meter
-     * @param float $capacity_loading_meter total loading meter for all packages in package line, used for any capacity related calculations
-     * @return $this
-     */
-    public function setCapacityLoadingMeter($capacity_loading_meter)
-    {
-        $this->container['capacity_loading_meter'] = $capacity_loading_meter;
-
-        return $this;
-    }
-
-    /**
-     * Gets capacity_loading_weight
-     * @return float
-     */
-    public function getCapacityLoadingWeight()
-    {
-        return $this->container['capacity_loading_weight'];
-    }
-
-    /**
-     * Sets capacity_loading_weight
-     * @param float $capacity_loading_weight total weight for all packages in package line, used for any capacity related calculations
-     * @return $this
-     */
-    public function setCapacityLoadingWeight($capacity_loading_weight)
-    {
-        $this->container['capacity_loading_weight'] = $capacity_loading_weight;
-
-        return $this;
-    }
-
-    /**
      * Gets hs_code
      * @return string
      */
@@ -1082,6 +716,48 @@ class PackageLineModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets applied_capacities
+     * @return object
+     */
+    public function getAppliedCapacities()
+    {
+        return $this->container['applied_capacities'];
+    }
+
+    /**
+     * Sets applied_capacities
+     * @param object $applied_capacities
+     * @return $this
+     */
+    public function setAppliedCapacities($applied_capacities)
+    {
+        $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
+     */
+    public function getCapacities()
+    {
+        return $this->container['capacities'];
+    }
+
+    /**
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @return $this
+     */
+    public function setCapacities($capacities)
+    {
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }

@@ -47,6 +47,8 @@ Name | Type | Description | Notes
 **address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address_id** | **int** | Depot Address ID | [optional] 
+**applied_capacities** | **object** |  | [optional] 
+**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
 **time_slots** | [**\BumbalClient\Model\TimeSlotModel[]**](TimeSlotModel.md) |  | [optional] 
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 

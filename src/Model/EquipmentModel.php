@@ -58,9 +58,8 @@ class EquipmentModel implements ArrayAccess
         'equipment_type' => 'string',
         'info' => 'string',
         'registration_nr' => 'string',
-        'capacity_volume' => 'float',
-        'capacity_loading_meter' => 'float',
-        'capacity_weight' => 'float',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
@@ -73,9 +72,8 @@ class EquipmentModel implements ArrayAccess
         'equipment_type' => null,
         'info' => null,
         'registration_nr' => null,
-        'capacity_volume' => 'float',
-        'capacity_loading_meter' => 'float',
-        'capacity_weight' => 'float',
+        'applied_capacities' => null,
+        'capacities' => null,
         'meta_data' => null
     ];
 
@@ -98,9 +96,8 @@ class EquipmentModel implements ArrayAccess
         'equipment_type' => 'equipment_type',
         'info' => 'info',
         'registration_nr' => 'registration_nr',
-        'capacity_volume' => 'capacity_volume',
-        'capacity_loading_meter' => 'capacity_loading_meter',
-        'capacity_weight' => 'capacity_weight',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'meta_data' => 'meta_data'
     ];
 
@@ -114,9 +111,8 @@ class EquipmentModel implements ArrayAccess
         'equipment_type' => 'setEquipmentType',
         'info' => 'setInfo',
         'registration_nr' => 'setRegistrationNr',
-        'capacity_volume' => 'setCapacityVolume',
-        'capacity_loading_meter' => 'setCapacityLoadingMeter',
-        'capacity_weight' => 'setCapacityWeight',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'meta_data' => 'setMetaData'
     ];
 
@@ -130,9 +126,8 @@ class EquipmentModel implements ArrayAccess
         'equipment_type' => 'getEquipmentType',
         'info' => 'getInfo',
         'registration_nr' => 'getRegistrationNr',
-        'capacity_volume' => 'getCapacityVolume',
-        'capacity_loading_meter' => 'getCapacityLoadingMeter',
-        'capacity_weight' => 'getCapacityWeight',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'meta_data' => 'getMetaData'
     ];
 
@@ -187,9 +182,8 @@ class EquipmentModel implements ArrayAccess
         $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
         $this->container['info'] = isset($data['info']) ? $data['info'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
-        $this->container['capacity_volume'] = isset($data['capacity_volume']) ? $data['capacity_volume'] : null;
-        $this->container['capacity_loading_meter'] = isset($data['capacity_loading_meter']) ? $data['capacity_loading_meter'] : null;
-        $this->container['capacity_weight'] = isset($data['capacity_weight']) ? $data['capacity_weight'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
@@ -336,64 +330,43 @@ class EquipmentModel implements ArrayAccess
     }
 
     /**
-     * Gets capacity_volume
-     * @return float
+     * Gets applied_capacities
+     * @return object
      */
-    public function getCapacityVolume()
+    public function getAppliedCapacities()
     {
-        return $this->container['capacity_volume'];
+        return $this->container['applied_capacities'];
     }
 
     /**
-     * Sets capacity_volume
-     * @param float $capacity_volume
+     * Sets applied_capacities
+     * @param object $applied_capacities
      * @return $this
      */
-    public function setCapacityVolume($capacity_volume)
+    public function setAppliedCapacities($applied_capacities)
     {
-        $this->container['capacity_volume'] = $capacity_volume;
+        $this->container['applied_capacities'] = $applied_capacities;
 
         return $this;
     }
 
     /**
-     * Gets capacity_loading_meter
-     * @return float
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
      */
-    public function getCapacityLoadingMeter()
+    public function getCapacities()
     {
-        return $this->container['capacity_loading_meter'];
+        return $this->container['capacities'];
     }
 
     /**
-     * Sets capacity_loading_meter
-     * @param float $capacity_loading_meter
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
-    public function setCapacityLoadingMeter($capacity_loading_meter)
+    public function setCapacities($capacities)
     {
-        $this->container['capacity_loading_meter'] = $capacity_loading_meter;
-
-        return $this;
-    }
-
-    /**
-     * Gets capacity_weight
-     * @return float
-     */
-    public function getCapacityWeight()
-    {
-        return $this->container['capacity_weight'];
-    }
-
-    /**
-     * Sets capacity_weight
-     * @param float $capacity_weight
-     * @return $this
-     */
-    public function setCapacityWeight($capacity_weight)
-    {
-        $this->container['capacity_weight'] = $capacity_weight;
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }

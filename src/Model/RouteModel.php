@@ -81,6 +81,9 @@ class RouteModel implements ArrayAccess
         'blocked' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
+        'planned_capacities' => 'object',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_ids' => 'object',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -123,6 +126,9 @@ class RouteModel implements ArrayAccess
         'blocked' => null,
         'start_address' => null,
         'end_address' => null,
+        'planned_capacities' => null,
+        'applied_capacities' => null,
+        'capacities' => null,
         'activity_ids' => null,
         'links' => null,
         'meta_data' => null,
@@ -175,6 +181,9 @@ class RouteModel implements ArrayAccess
         'blocked' => 'blocked',
         'start_address' => 'start_address',
         'end_address' => 'end_address',
+        'planned_capacities' => 'planned_capacities',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'activity_ids' => 'activity_ids',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -218,6 +227,9 @@ class RouteModel implements ArrayAccess
         'blocked' => 'setBlocked',
         'start_address' => 'setStartAddress',
         'end_address' => 'setEndAddress',
+        'planned_capacities' => 'setPlannedCapacities',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'activity_ids' => 'setActivityIds',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -261,6 +273,9 @@ class RouteModel implements ArrayAccess
         'blocked' => 'getBlocked',
         'start_address' => 'getStartAddress',
         'end_address' => 'getEndAddress',
+        'planned_capacities' => 'getPlannedCapacities',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'activity_ids' => 'getActivityIds',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -365,6 +380,9 @@ class RouteModel implements ArrayAccess
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
         $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
+        $this->container['planned_capacities'] = isset($data['planned_capacities']) ? $data['planned_capacities'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -1011,6 +1029,69 @@ class RouteModel implements ArrayAccess
     public function setEndAddress($end_address)
     {
         $this->container['end_address'] = $end_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_capacities
+     * @return object
+     */
+    public function getPlannedCapacities()
+    {
+        return $this->container['planned_capacities'];
+    }
+
+    /**
+     * Sets planned_capacities
+     * @param object $planned_capacities
+     * @return $this
+     */
+    public function setPlannedCapacities($planned_capacities)
+    {
+        $this->container['planned_capacities'] = $planned_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets applied_capacities
+     * @return object
+     */
+    public function getAppliedCapacities()
+    {
+        return $this->container['applied_capacities'];
+    }
+
+    /**
+     * Sets applied_capacities
+     * @param object $applied_capacities
+     * @return $this
+     */
+    public function setAppliedCapacities($applied_capacities)
+    {
+        $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
+     */
+    public function getCapacities()
+    {
+        return $this->container['capacities'];
+    }
+
+    /**
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @return $this
+     */
+    public function setCapacities($capacities)
+    {
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }

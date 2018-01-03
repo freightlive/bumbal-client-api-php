@@ -134,83 +134,6 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "length"
-     */
-    public function testPropertyLength()
-    {
-    }
-
-    /**
-     * Test attribute "width"
-     */
-    public function testPropertyWidth()
-    {
-    }
-
-    /**
-     * Test attribute "height"
-     */
-    public function testPropertyHeight()
-    {
-    }
-
-    /**
-     * Test attribute "unit_volume"
-     */
-    public function testPropertyUnitVolume()
-    {
-    }
-
-    /**
-     * Test attribute "net_weight_unit"
-     */
-    public function testPropertyNetWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "net_weight_total"
-     */
-    public function testPropertyNetWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "tare_weight_unit"
-     */
-    public function testPropertyTareWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "tare_weight_total"
-     */
-    public function testPropertyTareWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "gross_weight_unit"
-     */
-    public function testPropertyGrossWeightUnit()
-    {
-    }
-
-    /**
-     * Test attribute "gross_weight_total"
-     */
-    public function testPropertyGrossWeightTotal()
-    {
-    }
-
-    /**
-     * Test attribute "unit_loading_meter"
-     */
-    public function testPropertyUnitLoadingMeter()
-    {
-    }
-
-    /**
      * Test attribute "barcode"
      */
     public function testPropertyBarcode()
@@ -260,27 +183,6 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "capacity_volume"
-     */
-    public function testPropertyCapacityVolume()
-    {
-    }
-
-    /**
-     * Test attribute "capacity_loading_meter"
-     */
-    public function testPropertyCapacityLoadingMeter()
-    {
-    }
-
-    /**
-     * Test attribute "capacity_loading_weight"
-     */
-    public function testPropertyCapacityLoadingWeight()
-    {
-    }
-
-    /**
      * Test attribute "hs_code"
      */
     public function testPropertyHsCode()
@@ -291,6 +193,20 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "description"
      */
     public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "applied_capacities"
+     */
+    public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "capacities"
+     */
+    public function testPropertyCapacities()
     {
     }
 

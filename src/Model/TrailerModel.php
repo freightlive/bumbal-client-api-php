@@ -57,6 +57,8 @@ class TrailerModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'registration_nr' => 'string',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -74,6 +76,8 @@ class TrailerModel implements ArrayAccess
         'id' => 'int64',
         'name' => null,
         'registration_nr' => null,
+        'applied_capacities' => null,
+        'capacities' => null,
         'tags' => null,
         'links' => null,
         'meta_data' => null,
@@ -101,6 +105,8 @@ class TrailerModel implements ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'registration_nr' => 'registration_nr',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'tags' => 'tags',
         'links' => 'links',
         'meta_data' => 'meta_data',
@@ -119,6 +125,8 @@ class TrailerModel implements ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'tags' => 'setTags',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
@@ -137,6 +145,8 @@ class TrailerModel implements ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'tags' => 'getTags',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
@@ -180,6 +190,8 @@ class TrailerModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -279,6 +291,48 @@ class TrailerModel implements ArrayAccess
     public function setRegistrationNr($registration_nr)
     {
         $this->container['registration_nr'] = $registration_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets applied_capacities
+     * @return object
+     */
+    public function getAppliedCapacities()
+    {
+        return $this->container['applied_capacities'];
+    }
+
+    /**
+     * Sets applied_capacities
+     * @param object $applied_capacities
+     * @return $this
+     */
+    public function setAppliedCapacities($applied_capacities)
+    {
+        $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
+     */
+    public function getCapacities()
+    {
+        return $this->container['capacities'];
+    }
+
+    /**
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @return $this
+     */
+    public function setCapacities($capacities)
+    {
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }

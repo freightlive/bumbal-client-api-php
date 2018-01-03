@@ -267,6 +267,27 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "planned_capacities"
+     */
+    public function testPropertyPlannedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "applied_capacities"
+     */
+    public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "capacities"
+     */
+    public function testPropertyCapacities()
+    {
+    }
+
+    /**
      * Test attribute "activity_ids"
      */
     public function testPropertyActivityIds()

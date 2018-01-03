@@ -1,6 +1,6 @@
 <?php
 /**
- * EquipmentModelTest
+ * CapacityModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * EquipmentModelTest Class Doc Comment
+ * CapacityModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description EquipmentModel
+// * @description CapacityModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class EquipmentModelTest extends \PHPUnit_Framework_TestCase
+class CapacityModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "EquipmentModel"
+     * Test "CapacityModel"
      */
-    public function testEquipmentModel()
+    public function testCapacityModel()
     {
     }
 
@@ -85,44 +85,44 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "equipment_type"
+     * Test attribute "capacity_type_id"
      */
-    public function testPropertyEquipmentType()
+    public function testPropertyCapacityTypeId()
     {
     }
 
     /**
-     * Test attribute "info"
+     * Test attribute "capacity_type_name"
      */
-    public function testPropertyInfo()
+    public function testPropertyCapacityTypeName()
     {
     }
 
     /**
-     * Test attribute "registration_nr"
+     * Test attribute "capacity_value"
      */
-    public function testPropertyRegistrationNr()
+    public function testPropertyCapacityValue()
     {
     }
 
     /**
-     * Test attribute "applied_capacities"
+     * Test attribute "unit_values"
      */
-    public function testPropertyAppliedCapacities()
+    public function testPropertyUnitValues()
     {
     }
 
     /**
-     * Test attribute "capacities"
+     * Test attribute "total_values"
      */
-    public function testPropertyCapacities()
+    public function testPropertyTotalValues()
     {
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "value"
      */
-    public function testPropertyMetaData()
+    public function testPropertyValue()
     {
     }
 }

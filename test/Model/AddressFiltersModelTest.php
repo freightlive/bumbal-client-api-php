@@ -106,6 +106,13 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+    }
+
+    /**
      * Test attribute "object_id"
      */
     public function testPropertyObjectId()

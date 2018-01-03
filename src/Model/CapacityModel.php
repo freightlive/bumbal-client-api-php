@@ -1,6 +1,6 @@
 <?php
 /**
- * AddressFiltersModel
+ * CapacityModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AddressFiltersModel Class Doc Comment
+ * CapacityModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AddressFiltersModel implements ArrayAccess
+class CapacityModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,19 +47,20 @@ class AddressFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AddressFiltersModel';
+    protected static $swaggerModelName = 'CapacityModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'address_type_id' => 'int[]',
-        'address_tags' => 'string[]',
-        'party_id' => 'int',
-        'object_type' => 'int',
-        'code' => 'string',
-        'object_id' => 'int'
+        'id' => 'int',
+        'capacity_type_id' => 'int',
+        'capacity_type_name' => 'string',
+        'capacity_value' => 'string',
+        'unit_values' => 'object',
+        'total_values' => 'object',
+        'value' => 'string'
     ];
 
     /**
@@ -67,12 +68,13 @@ class AddressFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'address_type_id' => null,
-        'address_tags' => null,
-        'party_id' => null,
-        'object_type' => null,
-        'code' => null,
-        'object_id' => null
+        'id' => 'int64',
+        'capacity_type_id' => null,
+        'capacity_type_name' => null,
+        'capacity_value' => null,
+        'unit_values' => null,
+        'total_values' => null,
+        'value' => null
     ];
 
     public static function swaggerTypes()
@@ -90,12 +92,13 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'address_type_id' => 'address_type_id',
-        'address_tags' => 'address_tags',
-        'party_id' => 'party_id',
-        'object_type' => 'object_type',
-        'code' => 'code',
-        'object_id' => 'object_id'
+        'id' => 'id',
+        'capacity_type_id' => 'capacity_type_id',
+        'capacity_type_name' => 'capacity_type_name',
+        'capacity_value' => 'capacity_value',
+        'unit_values' => 'unit_values',
+        'total_values' => 'total_values',
+        'value' => 'value'
     ];
 
 
@@ -104,12 +107,13 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'address_type_id' => 'setAddressTypeId',
-        'address_tags' => 'setAddressTags',
-        'party_id' => 'setPartyId',
-        'object_type' => 'setObjectType',
-        'code' => 'setCode',
-        'object_id' => 'setObjectId'
+        'id' => 'setId',
+        'capacity_type_id' => 'setCapacityTypeId',
+        'capacity_type_name' => 'setCapacityTypeName',
+        'capacity_value' => 'setCapacityValue',
+        'unit_values' => 'setUnitValues',
+        'total_values' => 'setTotalValues',
+        'value' => 'setValue'
     ];
 
 
@@ -118,12 +122,13 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'address_type_id' => 'getAddressTypeId',
-        'address_tags' => 'getAddressTags',
-        'party_id' => 'getPartyId',
-        'object_type' => 'getObjectType',
-        'code' => 'getCode',
-        'object_id' => 'getObjectId'
+        'id' => 'getId',
+        'capacity_type_id' => 'getCapacityTypeId',
+        'capacity_type_name' => 'getCapacityTypeName',
+        'capacity_value' => 'getCapacityValue',
+        'unit_values' => 'getUnitValues',
+        'total_values' => 'getTotalValues',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -157,12 +162,13 @@ class AddressFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['address_type_id'] = isset($data['address_type_id']) ? $data['address_type_id'] : null;
-        $this->container['address_tags'] = isset($data['address_tags']) ? $data['address_tags'] : null;
-        $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
+        $this->container['capacity_type_name'] = isset($data['capacity_type_name']) ? $data['capacity_type_name'] : null;
+        $this->container['capacity_value'] = isset($data['capacity_value']) ? $data['capacity_value'] : null;
+        $this->container['unit_values'] = isset($data['unit_values']) ? $data['unit_values'] : null;
+        $this->container['total_values'] = isset($data['total_values']) ? $data['total_values'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -174,6 +180,9 @@ class AddressFiltersModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -186,132 +195,156 @@ class AddressFiltersModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['id'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets address_type_id
-     * @return int[]
-     */
-    public function getAddressTypeId()
-    {
-        return $this->container['address_type_id'];
-    }
-
-    /**
-     * Sets address_type_id
-     * @param int[] $address_type_id Address Types
-     * @return $this
-     */
-    public function setAddressTypeId($address_type_id)
-    {
-        $this->container['address_type_id'] = $address_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_tags
-     * @return string[]
-     */
-    public function getAddressTags()
-    {
-        return $this->container['address_tags'];
-    }
-
-    /**
-     * Sets address_tags
-     * @param string[] $address_tags Address Tags
-     * @return $this
-     */
-    public function setAddressTags($address_tags)
-    {
-        $this->container['address_tags'] = $address_tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets party_id
+     * Gets id
      * @return int
      */
-    public function getPartyId()
+    public function getId()
     {
-        return $this->container['party_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets party_id
-     * @param int $party_id Party ID
+     * Sets id
+     * @param int $id Unique ID
      * @return $this
      */
-    public function setPartyId($party_id)
+    public function setId($id)
     {
-        $this->container['party_id'] = $party_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets object_type
+     * Gets capacity_type_id
      * @return int
      */
-    public function getObjectType()
+    public function getCapacityTypeId()
     {
-        return $this->container['object_type'];
+        return $this->container['capacity_type_id'];
     }
 
     /**
-     * Sets object_type
-     * @param int $object_type
+     * Sets capacity_type_id
+     * @param int $capacity_type_id id for capacity type
      * @return $this
      */
-    public function setObjectType($object_type)
+    public function setCapacityTypeId($capacity_type_id)
     {
-        $this->container['object_type'] = $object_type;
+        $this->container['capacity_type_id'] = $capacity_type_id;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets capacity_type_name
      * @return string
      */
-    public function getCode()
+    public function getCapacityTypeName()
     {
-        return $this->container['code'];
+        return $this->container['capacity_type_name'];
     }
 
     /**
-     * Sets code
-     * @param string $code
+     * Sets capacity_type_name
+     * @param string $capacity_type_name Capacity type name
      * @return $this
      */
-    public function setCode($code)
+    public function setCapacityTypeName($capacity_type_name)
     {
-        $this->container['code'] = $code;
+        $this->container['capacity_type_name'] = $capacity_type_name;
 
         return $this;
     }
 
     /**
-     * Gets object_id
-     * @return int
+     * Gets capacity_value
+     * @return string
      */
-    public function getObjectId()
+    public function getCapacityValue()
     {
-        return $this->container['object_id'];
+        return $this->container['capacity_value'];
     }
 
     /**
-     * Sets object_id
-     * @param int $object_id
+     * Sets capacity_value
+     * @param string $capacity_value Capacity value
      * @return $this
      */
-    public function setObjectId($object_id)
+    public function setCapacityValue($capacity_value)
     {
-        $this->container['object_id'] = $object_id;
+        $this->container['capacity_value'] = $capacity_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets unit_values
+     * @return object
+     */
+    public function getUnitValues()
+    {
+        return $this->container['unit_values'];
+    }
+
+    /**
+     * Sets unit_values
+     * @param object $unit_values
+     * @return $this
+     */
+    public function setUnitValues($unit_values)
+    {
+        $this->container['unit_values'] = $unit_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_values
+     * @return object
+     */
+    public function getTotalValues()
+    {
+        return $this->container['total_values'];
+    }
+
+    /**
+     * Sets total_values
+     * @param object $total_values
+     * @return $this
+     */
+    public function setTotalValues($total_values)
+    {
+        $this->container['total_values'] = $total_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     * @return string
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     * @param string $value Value
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -56,6 +56,7 @@ class AddressModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'party_id' => 'int',
+        'code' => 'string',
         'summary' => 'string',
         'full_name' => 'string',
         'name_1' => 'string',
@@ -69,6 +70,10 @@ class AddressModel implements ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'iso_country' => 'string',
+        'time_from' => 'string',
+        'time_to' => 'string',
+        'duration' => 'int',
+        'address_type_names' => 'object',
         'emails' => '\BumbalClient\Model\EmailModel[]',
         'phone_nrs' => '\BumbalClient\Model\PhoneNrModel[]',
         'latitude' => 'string',
@@ -76,6 +81,7 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'tag_names' => 'object',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'object_type' => 'int',
         'object_id' => 'int'
@@ -88,6 +94,7 @@ class AddressModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'party_id' => null,
+        'code' => null,
         'summary' => null,
         'full_name' => null,
         'name_1' => null,
@@ -101,6 +108,10 @@ class AddressModel implements ArrayAccess
         'city' => null,
         'state' => null,
         'iso_country' => null,
+        'time_from' => null,
+        'time_to' => null,
+        'duration' => null,
+        'address_type_names' => null,
         'emails' => null,
         'phone_nrs' => null,
         'latitude' => null,
@@ -108,6 +119,7 @@ class AddressModel implements ArrayAccess
         'contact_person' => null,
         'links' => null,
         'meta_data' => null,
+        'tag_names' => null,
         'tags' => null,
         'object_type' => null,
         'object_id' => null
@@ -130,6 +142,7 @@ class AddressModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'party_id' => 'party_id',
+        'code' => 'code',
         'summary' => 'summary',
         'full_name' => 'full_name',
         'name_1' => 'name_1',
@@ -143,6 +156,10 @@ class AddressModel implements ArrayAccess
         'city' => 'city',
         'state' => 'state',
         'iso_country' => 'iso_country',
+        'time_from' => 'time_from',
+        'time_to' => 'time_to',
+        'duration' => 'duration',
+        'address_type_names' => 'address_type_names',
         'emails' => 'emails',
         'phone_nrs' => 'phone_nrs',
         'latitude' => 'latitude',
@@ -150,6 +167,7 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'contact_person',
         'links' => 'links',
         'meta_data' => 'meta_data',
+        'tag_names' => 'tag_names',
         'tags' => 'tags',
         'object_type' => 'object_type',
         'object_id' => 'object_id'
@@ -163,6 +181,7 @@ class AddressModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'party_id' => 'setPartyId',
+        'code' => 'setCode',
         'summary' => 'setSummary',
         'full_name' => 'setFullName',
         'name_1' => 'setName1',
@@ -176,6 +195,10 @@ class AddressModel implements ArrayAccess
         'city' => 'setCity',
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
+        'time_from' => 'setTimeFrom',
+        'time_to' => 'setTimeTo',
+        'duration' => 'setDuration',
+        'address_type_names' => 'setAddressTypeNames',
         'emails' => 'setEmails',
         'phone_nrs' => 'setPhoneNrs',
         'latitude' => 'setLatitude',
@@ -183,6 +206,7 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'setContactPerson',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
+        'tag_names' => 'setTagNames',
         'tags' => 'setTags',
         'object_type' => 'setObjectType',
         'object_id' => 'setObjectId'
@@ -196,6 +220,7 @@ class AddressModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'party_id' => 'getPartyId',
+        'code' => 'getCode',
         'summary' => 'getSummary',
         'full_name' => 'getFullName',
         'name_1' => 'getName1',
@@ -209,6 +234,10 @@ class AddressModel implements ArrayAccess
         'city' => 'getCity',
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
+        'time_from' => 'getTimeFrom',
+        'time_to' => 'getTimeTo',
+        'duration' => 'getDuration',
+        'address_type_names' => 'getAddressTypeNames',
         'emails' => 'getEmails',
         'phone_nrs' => 'getPhoneNrs',
         'latitude' => 'getLatitude',
@@ -216,6 +245,7 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'getContactPerson',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
+        'tag_names' => 'getTagNames',
         'tags' => 'getTags',
         'object_type' => 'getObjectType',
         'object_id' => 'getObjectId'
@@ -254,6 +284,7 @@ class AddressModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
@@ -267,6 +298,10 @@ class AddressModel implements ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
+        $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
+        $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
+        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['address_type_names'] = isset($data['address_type_names']) ? $data['address_type_names'] : null;
         $this->container['emails'] = isset($data['emails']) ? $data['emails'] : null;
         $this->container['phone_nrs'] = isset($data['phone_nrs']) ? $data['phone_nrs'] : null;
         $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
@@ -274,6 +309,7 @@ class AddressModel implements ArrayAccess
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
@@ -348,6 +384,27 @@ class AddressModel implements ArrayAccess
     public function setPartyId($party_id)
     {
         $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }
@@ -626,6 +683,90 @@ class AddressModel implements ArrayAccess
     }
 
     /**
+     * Gets time_from
+     * @return string
+     */
+    public function getTimeFrom()
+    {
+        return $this->container['time_from'];
+    }
+
+    /**
+     * Sets time_from
+     * @param string $time_from
+     * @return $this
+     */
+    public function setTimeFrom($time_from)
+    {
+        $this->container['time_from'] = $time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_to
+     * @return string
+     */
+    public function getTimeTo()
+    {
+        return $this->container['time_to'];
+    }
+
+    /**
+     * Sets time_to
+     * @param string $time_to
+     * @return $this
+     */
+    public function setTimeTo($time_to)
+    {
+        $this->container['time_to'] = $time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets duration
+     * @return int
+     */
+    public function getDuration()
+    {
+        return $this->container['duration'];
+    }
+
+    /**
+     * Sets duration
+     * @param int $duration Default duration for activities on this address in minutes
+     * @return $this
+     */
+    public function setDuration($duration)
+    {
+        $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_type_names
+     * @return object
+     */
+    public function getAddressTypeNames()
+    {
+        return $this->container['address_type_names'];
+    }
+
+    /**
+     * Sets address_type_names
+     * @param object $address_type_names
+     * @return $this
+     */
+    public function setAddressTypeNames($address_type_names)
+    {
+        $this->container['address_type_names'] = $address_type_names;
+
+        return $this;
+    }
+
+    /**
      * Gets emails
      * @return \BumbalClient\Model\EmailModel[]
      */
@@ -768,6 +909,27 @@ class AddressModel implements ArrayAccess
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return object
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param object $tag_names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
 
         return $this;
     }

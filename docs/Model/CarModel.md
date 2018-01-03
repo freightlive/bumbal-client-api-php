@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** | Unique Identifier | 
 **name** | **string** | name | [optional] 
 **registration_nr** | **string** | registration_nr | [optional] 
+**applied_capacities** | **object** |  | [optional] 
+**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 

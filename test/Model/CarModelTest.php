@@ -99,6 +99,20 @@ class CarModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "applied_capacities"
+     */
+    public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "capacities"
+     */
+    public function testPropertyCapacities()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()

@@ -98,6 +98,8 @@ class ActivityModel implements ArrayAccess
         'address' => '\BumbalClient\Model\AddressModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
+        'applied_capacities' => 'object',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'communication' => '\BumbalClient\Model\CommunicationModel',
@@ -165,6 +167,8 @@ class ActivityModel implements ArrayAccess
         'address' => null,
         'depot_address' => null,
         'depot_address_id' => null,
+        'applied_capacities' => null,
+        'capacities' => null,
         'package_lines' => null,
         'time_slots' => null,
         'communication' => null,
@@ -242,6 +246,8 @@ class ActivityModel implements ArrayAccess
         'address' => 'address',
         'depot_address' => 'depot_address',
         'depot_address_id' => 'depot_address_id',
+        'applied_capacities' => 'applied_capacities',
+        'capacities' => 'capacities',
         'package_lines' => 'package_lines',
         'time_slots' => 'time_slots',
         'communication' => 'communication',
@@ -310,6 +316,8 @@ class ActivityModel implements ArrayAccess
         'address' => 'setAddress',
         'depot_address' => 'setDepotAddress',
         'depot_address_id' => 'setDepotAddressId',
+        'applied_capacities' => 'setAppliedCapacities',
+        'capacities' => 'setCapacities',
         'package_lines' => 'setPackageLines',
         'time_slots' => 'setTimeSlots',
         'communication' => 'setCommunication',
@@ -378,6 +386,8 @@ class ActivityModel implements ArrayAccess
         'address' => 'getAddress',
         'depot_address' => 'getDepotAddress',
         'depot_address_id' => 'getDepotAddressId',
+        'applied_capacities' => 'getAppliedCapacities',
+        'capacities' => 'getCapacities',
         'package_lines' => 'getPackageLines',
         'time_slots' => 'getTimeSlots',
         'communication' => 'getCommunication',
@@ -519,6 +529,8 @@ class ActivityModel implements ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
+        $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
+        $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
@@ -1530,6 +1542,48 @@ class ActivityModel implements ArrayAccess
     public function setDepotAddressId($depot_address_id)
     {
         $this->container['depot_address_id'] = $depot_address_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets applied_capacities
+     * @return object
+     */
+    public function getAppliedCapacities()
+    {
+        return $this->container['applied_capacities'];
+    }
+
+    /**
+     * Sets applied_capacities
+     * @param object $applied_capacities
+     * @return $this
+     */
+    public function setAppliedCapacities($applied_capacities)
+    {
+        $this->container['applied_capacities'] = $applied_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacities
+     * @return \BumbalClient\Model\CapacityModel[]
+     */
+    public function getCapacities()
+    {
+        return $this->container['capacities'];
+    }
+
+    /**
+     * Sets capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @return $this
+     */
+    public function setCapacities($capacities)
+    {
+        $this->container['capacities'] = $capacities;
 
         return $this;
     }
