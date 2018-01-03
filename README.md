@@ -178,9 +178,7 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**retrieveTagType**](docs/Api/TagtypeApi.md#retrievetagtype) | **GET** /tag-type/{tagTypeId} | Retrieve a Tag type
 *TagtypeApi* | [**setTagType**](docs/Api/TagtypeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
-*TracktraceApi* | [**retrieveActivityStatus**](docs/Api/TracktraceApi.md#retrieveactivitystatus) | **GET** /track-trace/retrieve-activity-status/{activityId} | Retrieve Activity Status
-*TracktraceApi* | [**retrieveRouteStatus**](docs/Api/TracktraceApi.md#retrieveroutestatus) | **GET** /track-trace/retrieve-route-status/{routeId} | Retrieve Route Status
-*TracktraceApi* | [**trackTraceCalculateETA**](docs/Api/TracktraceApi.md#tracktracecalculateeta) | **GET** /track-trace/calculate-eta/{activityId} | Calculate ETA for Activity
+*TrackandtraceApi* | [**trackAndTraceCalculateETA**](docs/Api/TrackandtraceApi.md#trackandtracecalculateeta) | **GET** /track-and-trace/calculate-eta/{activityId} | Calculate ETA for Activity
 *TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
 *TrailerApi* | [**deleteTrailer**](docs/Api/TrailerApi.md#deletetrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
 *TrailerApi* | [**retrieveListTrailer**](docs/Api/TrailerApi.md#retrievelisttrailer) | **PUT** /trailer | Retrieve List of Trailers
