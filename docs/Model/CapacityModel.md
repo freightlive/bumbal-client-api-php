@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID | 
 **capacity_type_id** | **int** | id for capacity type | [optional] 
-**capacity_type** | [**\BumbalClient\BumbalClient\Model\CapacityTypeModel**](CapacityTypeModel.md) |  | [optional] 
+**capacity_type** | [**\BumbalClient\Model\CapacityTypeModel**](CapacityTypeModel.md) |  | [optional] 
 **capacity_value** | **string** | Capacity value | [optional] 
 **unit_values** | **object** |  | [optional] 
 **total_values** | **object** |  | [optional] 
