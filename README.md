@@ -144,12 +144,14 @@ Class | Method | HTTP request | Description
 *PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
 *PlannerApi* | [**plannerAutoPlan**](docs/Api/PlannerApi.md#plannerautoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
+*PlannerApi* | [**plannerAutoPlanResult**](docs/Api/PlannerApi.md#plannerautoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerCalculateDriveTime**](docs/Api/PlannerApi.md#plannercalculatedrivetime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
 *PlannerApi* | [**plannerChangeActivitySequence**](docs/Api/PlannerApi.md#plannerchangeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**plannerCheckAvailability**](docs/Api/PlannerApi.md#plannercheckavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**plannerCheckAvailabilityResult**](docs/Api/PlannerApi.md#plannercheckavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerLockActivities**](docs/Api/PlannerApi.md#plannerlockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**plannerRemoveActivitiesFromRoute**](docs/Api/PlannerApi.md#plannerremoveactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+*PlannerApi* | [**plannerStartAutoPlan**](docs/Api/PlannerApi.md#plannerstartautoplan) | **POST** /planner/start-auto-plan | start auto plan for a known uuid
 *PlannerApi* | [**plannerStartCheckAvailability**](docs/Api/PlannerApi.md#plannerstartcheckavailability) | **POST** /planner/start-check-availability | start check availability for a known uuid
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
@@ -213,6 +215,10 @@ Class | Method | HTTP request | Description
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
+ - [AutoPlanArguments](docs/Model/AutoPlanArguments.md)
+ - [AutoPlanDataModel](docs/Model/AutoPlanDataModel.md)
+ - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
+ - [AutoPlanOptionsModel](docs/Model/AutoPlanOptionsModel.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
  - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
  - [CarFiltersModel](docs/Model/CarFiltersModel.md)

@@ -93,6 +93,16 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for plannerAutoPlanResult
+     *
+     * Fetch current result for a auto plan Request. This could be done, in progress or cancelled..
+     *
+     */
+    public function testPlannerAutoPlanResult()
+    {
+    }
+
+    /**
      * Test case for plannerCalculateDriveTime
      *
      * Calculate Drive Time.
@@ -149,6 +159,16 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPlannerRemoveActivitiesFromRoute()
+    {
+    }
+
+    /**
+     * Test case for plannerStartAutoPlan
+     *
+     * start auto plan for a known uuid.
+     *
+     */
+    public function testPlannerStartAutoPlan()
     {
     }
 
