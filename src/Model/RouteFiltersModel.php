@@ -54,6 +54,7 @@ class RouteFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'updated_at' => '\DateTime',
@@ -66,6 +67,7 @@ class RouteFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => 'int64',
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'updated_at' => 'date-time',
@@ -88,6 +90,7 @@ class RouteFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'updated_at' => 'updated_at',
@@ -101,6 +104,7 @@ class RouteFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'updated_at' => 'setUpdatedAt',
@@ -114,6 +118,7 @@ class RouteFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'updated_at' => 'getUpdatedAt',
@@ -152,6 +157,7 @@ class RouteFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -185,6 +191,27 @@ class RouteFiltersModel implements ArrayAccess
 
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id Unique Identifier
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
      * Gets date_time_from
      * @return \DateTime
      */
@@ -195,7 +222,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from 
+     * @param \DateTime $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -216,7 +243,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to 
+     * @param \DateTime $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -237,7 +264,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at 
+     * @param \DateTime $updated_at
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -258,7 +285,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets status
-     * @param int $status 
+     * @param int $status
      * @return $this
      */
     public function setStatus($status)
@@ -279,7 +306,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int $driver_id 
+     * @param int $driver_id
      * @return $this
      */
     public function setDriverId($driver_id)

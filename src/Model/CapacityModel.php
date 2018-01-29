@@ -255,7 +255,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets capacity_type
-     * @param \BumbalClient\Model\CapacityTypeModel $capacity_type 
+     * @param \BumbalClient\Model\CapacityTypeModel $capacity_type
      * @return $this
      */
     public function setCapacityType($capacity_type)
@@ -297,7 +297,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets unit_values
-     * @param object $unit_values 
+     * @param object $unit_values
      * @return $this
      */
     public function setUnitValues($unit_values)
@@ -318,7 +318,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets total_values
-     * @param object $total_values 
+     * @param object $total_values
      * @return $this
      */
     public function setTotalValues($total_values)

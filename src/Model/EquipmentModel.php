@@ -247,7 +247,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -298,7 +298,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets info
-     * @param string $info 
+     * @param string $info
      * @return $this
      */
     public function setInfo($info)
@@ -319,7 +319,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets registration_nr
-     * @param string $registration_nr 
+     * @param string $registration_nr
      * @return $this
      */
     public function setRegistrationNr($registration_nr)
@@ -340,7 +340,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -361,7 +361,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -382,7 +382,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
