@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **nr_of_stops** | **int** | number of stops on this route (excluding start_route and end_route activities) | [optional] 
 **driver_id** | **int** |  | [optional] 
 **driver_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**driver** | [**\BumbalClient\Model\UsersModel[]**](UsersModel.md) |  | [optional] 
+**driver** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
 **user_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **car_id** | **int** |  | [optional] 
 **car_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 

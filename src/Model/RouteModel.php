@@ -62,7 +62,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'int',
         'driver_id' => 'int',
         'driver_link' => '\BumbalClient\Model\LinkModel[]',
-        'driver' => '\BumbalClient\Model\UsersModel[]',
+        'driver' => '\BumbalClient\Model\UsersModel',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
         'car_link' => '\BumbalClient\Model\LinkModel[]',
@@ -654,7 +654,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets driver
-     * @return \BumbalClient\Model\UsersModel[]
+     * @return \BumbalClient\Model\UsersModel
      */
     public function getDriver()
     {
@@ -663,7 +663,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\UsersModel[] $driver
+     * @param \BumbalClient\Model\UsersModel $driver
      * @return $this
      */
     public function setDriver($driver)
