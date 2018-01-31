@@ -54,9 +54,16 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'include_address' => 'bool',
         'include_address_object' => 'bool',
         'include_route_status' => 'bool',
         'include_route_tags' => 'bool',
+        'include_driver' => 'bool',
+        'include_driver_links' => 'bool',
+        'include_car' => 'bool',
+        'include_car_links' => 'bool',
+        'include_trailer' => 'bool',
+        'include_trailer_links' => 'bool',
         'include_driver_info' => 'bool',
         'include_equipment_info_car' => 'bool',
         'include_gps_locations' => 'bool',
@@ -69,9 +76,16 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'include_address' => null,
         'include_address_object' => null,
         'include_route_status' => null,
         'include_route_tags' => null,
+        'include_driver' => null,
+        'include_driver_links' => null,
+        'include_car' => null,
+        'include_car_links' => null,
+        'include_trailer' => null,
+        'include_trailer_links' => null,
         'include_driver_info' => null,
         'include_equipment_info_car' => null,
         'include_gps_locations' => null,
@@ -94,9 +108,16 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'include_address' => 'include_address',
         'include_address_object' => 'include_address_object',
         'include_route_status' => 'include_route_status',
         'include_route_tags' => 'include_route_tags',
+        'include_driver' => 'include_driver',
+        'include_driver_links' => 'include_driver_links',
+        'include_car' => 'include_car',
+        'include_car_links' => 'include_car_links',
+        'include_trailer' => 'include_trailer',
+        'include_trailer_links' => 'include_trailer_links',
         'include_driver_info' => 'include_driver_info',
         'include_equipment_info_car' => 'include_equipment_info_car',
         'include_gps_locations' => 'include_gps_locations',
@@ -110,9 +131,16 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'include_address' => 'setIncludeAddress',
         'include_address_object' => 'setIncludeAddressObject',
         'include_route_status' => 'setIncludeRouteStatus',
         'include_route_tags' => 'setIncludeRouteTags',
+        'include_driver' => 'setIncludeDriver',
+        'include_driver_links' => 'setIncludeDriverLinks',
+        'include_car' => 'setIncludeCar',
+        'include_car_links' => 'setIncludeCarLinks',
+        'include_trailer' => 'setIncludeTrailer',
+        'include_trailer_links' => 'setIncludeTrailerLinks',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_equipment_info_car' => 'setIncludeEquipmentInfoCar',
         'include_gps_locations' => 'setIncludeGpsLocations',
@@ -126,9 +154,16 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'include_address' => 'getIncludeAddress',
         'include_address_object' => 'getIncludeAddressObject',
         'include_route_status' => 'getIncludeRouteStatus',
         'include_route_tags' => 'getIncludeRouteTags',
+        'include_driver' => 'getIncludeDriver',
+        'include_driver_links' => 'getIncludeDriverLinks',
+        'include_car' => 'getIncludeCar',
+        'include_car_links' => 'getIncludeCarLinks',
+        'include_trailer' => 'getIncludeTrailer',
+        'include_trailer_links' => 'getIncludeTrailerLinks',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_equipment_info_car' => 'getIncludeEquipmentInfoCar',
         'include_gps_locations' => 'getIncludeGpsLocations',
@@ -167,9 +202,16 @@ class RouteOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_route_status'] = isset($data['include_route_status']) ? $data['include_route_status'] : null;
         $this->container['include_route_tags'] = isset($data['include_route_tags']) ? $data['include_route_tags'] : null;
+        $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
+        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
+        $this->container['include_car_links'] = isset($data['include_car_links']) ? $data['include_car_links'] : null;
+        $this->container['include_trailer'] = isset($data['include_trailer']) ? $data['include_trailer'] : null;
+        $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_equipment_info_car'] = isset($data['include_equipment_info_car']) ? $data['include_equipment_info_car'] : null;
         $this->container['include_gps_locations'] = isset($data['include_gps_locations']) ? $data['include_gps_locations'] : null;
@@ -201,6 +243,27 @@ class RouteOptionsModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets include_address
+     * @return bool
+     */
+    public function getIncludeAddress()
+    {
+        return $this->container['include_address'];
+    }
+
+    /**
+     * Sets include_address
+     * @param bool $include_address
+     * @return $this
+     */
+    public function setIncludeAddress($include_address)
+    {
+        $this->container['include_address'] = $include_address;
+
+        return $this;
+    }
 
     /**
      * Gets include_address_object
@@ -261,6 +324,132 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeRouteTags($include_route_tags)
     {
         $this->container['include_route_tags'] = $include_route_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver
+     * @return bool
+     */
+    public function getIncludeDriver()
+    {
+        return $this->container['include_driver'];
+    }
+
+    /**
+     * Sets include_driver
+     * @param bool $include_driver
+     * @return $this
+     */
+    public function setIncludeDriver($include_driver)
+    {
+        $this->container['include_driver'] = $include_driver;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_links
+     * @return bool
+     */
+    public function getIncludeDriverLinks()
+    {
+        return $this->container['include_driver_links'];
+    }
+
+    /**
+     * Sets include_driver_links
+     * @param bool $include_driver_links
+     * @return $this
+     */
+    public function setIncludeDriverLinks($include_driver_links)
+    {
+        $this->container['include_driver_links'] = $include_driver_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_car
+     * @return bool
+     */
+    public function getIncludeCar()
+    {
+        return $this->container['include_car'];
+    }
+
+    /**
+     * Sets include_car
+     * @param bool $include_car
+     * @return $this
+     */
+    public function setIncludeCar($include_car)
+    {
+        $this->container['include_car'] = $include_car;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_car_links
+     * @return bool
+     */
+    public function getIncludeCarLinks()
+    {
+        return $this->container['include_car_links'];
+    }
+
+    /**
+     * Sets include_car_links
+     * @param bool $include_car_links
+     * @return $this
+     */
+    public function setIncludeCarLinks($include_car_links)
+    {
+        $this->container['include_car_links'] = $include_car_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_trailer
+     * @return bool
+     */
+    public function getIncludeTrailer()
+    {
+        return $this->container['include_trailer'];
+    }
+
+    /**
+     * Sets include_trailer
+     * @param bool $include_trailer
+     * @return $this
+     */
+    public function setIncludeTrailer($include_trailer)
+    {
+        $this->container['include_trailer'] = $include_trailer;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_trailer_links
+     * @return bool
+     */
+    public function getIncludeTrailerLinks()
+    {
+        return $this->container['include_trailer_links'];
+    }
+
+    /**
+     * Sets include_trailer_links
+     * @param bool $include_trailer_links
+     * @return $this
+     */
+    public function setIncludeTrailerLinks($include_trailer_links)
+    {
+        $this->container['include_trailer_links'] = $include_trailer_links;
 
         return $this;
     }

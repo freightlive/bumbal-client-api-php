@@ -85,6 +85,41 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "first_name"
+     */
+    public function testPropertyFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "last_name"
+     */
+    public function testPropertyLastName()
+    {
+    }
+
+    /**
+     * Test attribute "prefix"
+     */
+    public function testPropertyPrefix()
+    {
+    }
+
+    /**
+     * Test attribute "full_name"
+     */
+    public function testPropertyFullName()
+    {
+    }
+
+    /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()
@@ -106,37 +141,30 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "drivers"
+     * Test attribute "driver_created_at"
      */
-    public function testPropertyDrivers()
+    public function testPropertyDriverCreatedAt()
     {
     }
 
     /**
-     * Test attribute "files"
+     * Test attribute "driver_updated_at"
      */
-    public function testPropertyFiles()
+    public function testPropertyDriverUpdatedAt()
     {
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "driver_created_by"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyDriverCreatedBy()
     {
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "driver_updated_by"
      */
-    public function testPropertyUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "updated_by_name"
-     */
-    public function testPropertyUpdatedByName()
+    public function testPropertyDriverUpdatedBy()
     {
     }
 }

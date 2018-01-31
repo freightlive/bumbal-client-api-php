@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListDriver**
-> \BumbalClient\Model\DriverModel[] retrieveListDriver($arguments)
+> \BumbalClient\Model\DriverListResponse retrieveListDriver($arguments)
 
 Retrieve List of Drivers
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\DriverModel[]**](../Model/DriverModel.md)
+[**\BumbalClient\Model\DriverListResponse**](../Model/DriverListResponse.md)
 
 ### Authorization
 

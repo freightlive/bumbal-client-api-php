@@ -85,16 +85,16 @@ class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_driver_meta_data"
+     * Test attribute "include_driver_links"
      */
-    public function testPropertyIncludeDriverMetaData()
+    public function testPropertyIncludeDriverLinks()
     {
     }
 
     /**
-     * Test attribute "include_driver_links"
+     * Test attribute "include_driver_meta_data"
      */
-    public function testPropertyIncludeDriverLinks()
+    public function testPropertyIncludeDriverMetaData()
     {
     }
 

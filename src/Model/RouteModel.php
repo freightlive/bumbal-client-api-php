@@ -62,11 +62,14 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'int',
         'driver_id' => 'int',
         'driver_link' => '\BumbalClient\Model\LinkModel[]',
+        'driver' => '\BumbalClient\Model\UsersModel[]',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
         'car_link' => '\BumbalClient\Model\LinkModel[]',
+        'car' => '\BumbalClient\Model\CarModel',
         'trailer_id' => 'int',
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
+        'trailer' => '\BumbalClient\Model\TrailerModel',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
         'planned_driving_duration' => 'int',
@@ -107,11 +110,14 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => null,
         'driver_id' => null,
         'driver_link' => null,
+        'driver' => null,
         'user_link' => null,
         'car_id' => null,
         'car_link' => null,
+        'car' => null,
         'trailer_id' => null,
         'trailer_link' => null,
+        'trailer' => null,
         'earliest_date_time' => 'date-time',
         'latest_date_time' => 'date-time',
         'planned_driving_duration' => null,
@@ -162,11 +168,14 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'nr_of_stops',
         'driver_id' => 'driver_id',
         'driver_link' => 'driver_link',
+        'driver' => 'driver',
         'user_link' => 'user_link',
         'car_id' => 'car_id',
         'car_link' => 'car_link',
+        'car' => 'car',
         'trailer_id' => 'trailer_id',
         'trailer_link' => 'trailer_link',
+        'trailer' => 'trailer',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
         'planned_driving_duration' => 'planned_driving_duration',
@@ -208,11 +217,14 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'setNrOfStops',
         'driver_id' => 'setDriverId',
         'driver_link' => 'setDriverLink',
+        'driver' => 'setDriver',
         'user_link' => 'setUserLink',
         'car_id' => 'setCarId',
         'car_link' => 'setCarLink',
+        'car' => 'setCar',
         'trailer_id' => 'setTrailerId',
         'trailer_link' => 'setTrailerLink',
+        'trailer' => 'setTrailer',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
@@ -254,11 +266,14 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'getNrOfStops',
         'driver_id' => 'getDriverId',
         'driver_link' => 'getDriverLink',
+        'driver' => 'getDriver',
         'user_link' => 'getUserLink',
         'car_id' => 'getCarId',
         'car_link' => 'getCarLink',
+        'car' => 'getCar',
         'trailer_id' => 'getTrailerId',
         'trailer_link' => 'getTrailerLink',
+        'trailer' => 'getTrailer',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
@@ -361,11 +376,14 @@ class RouteModel implements ArrayAccess
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
+        $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
         $this->container['car_link'] = isset($data['car_link']) ? $data['car_link'] : null;
+        $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['trailer_id'] = isset($data['trailer_id']) ? $data['trailer_id'] : null;
         $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
+        $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
@@ -635,6 +653,27 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets driver
+     * @return \BumbalClient\Model\UsersModel[]
+     */
+    public function getDriver()
+    {
+        return $this->container['driver'];
+    }
+
+    /**
+     * Sets driver
+     * @param \BumbalClient\Model\UsersModel[] $driver
+     * @return $this
+     */
+    public function setDriver($driver)
+    {
+        $this->container['driver'] = $driver;
+
+        return $this;
+    }
+
+    /**
      * Gets user_link
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -698,6 +737,27 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets car
+     * @return \BumbalClient\Model\CarModel
+     */
+    public function getCar()
+    {
+        return $this->container['car'];
+    }
+
+    /**
+     * Sets car
+     * @param \BumbalClient\Model\CarModel $car
+     * @return $this
+     */
+    public function setCar($car)
+    {
+        $this->container['car'] = $car;
+
+        return $this;
+    }
+
+    /**
      * Gets trailer_id
      * @return int
      */
@@ -735,6 +795,27 @@ class RouteModel implements ArrayAccess
     public function setTrailerLink($trailer_link)
     {
         $this->container['trailer_link'] = $trailer_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets trailer
+     * @return \BumbalClient\Model\TrailerModel
+     */
+    public function getTrailer()
+    {
+        return $this->container['trailer'];
+    }
+
+    /**
+     * Sets trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @return $this
+     */
+    public function setTrailer($trailer)
+    {
+        $this->container['trailer'] = $trailer;
 
         return $this;
     }

@@ -134,6 +134,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "driver"
+     */
+    public function testPropertyDriver()
+    {
+    }
+
+    /**
      * Test attribute "user_link"
      */
     public function testPropertyUserLink()
@@ -155,6 +162,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "car"
+     */
+    public function testPropertyCar()
+    {
+    }
+
+    /**
      * Test attribute "trailer_id"
      */
     public function testPropertyTrailerId()
@@ -165,6 +179,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "trailer_link"
      */
     public function testPropertyTrailerLink()
+    {
+    }
+
+    /**
+     * Test attribute "trailer"
+     */
+    public function testPropertyTrailer()
     {
     }
 

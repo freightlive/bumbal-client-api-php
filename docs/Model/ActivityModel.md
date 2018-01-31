@@ -41,7 +41,6 @@ Name | Type | Description | Notes
 **driver_last_name** | **string** | Driver last name | [optional] 
 **driver_name_prefix** | **string** | Driver prefix | [optional] 
 **driver_full_name** | **string** | Driver full name | [optional] 
-**driver_email** | **string** | Driver email | [optional] 
 **addressapplied_id** | **int** | Address Applied ID | [optional] 
 **address_id** | **int** | Address ID | [optional] 
 **address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 

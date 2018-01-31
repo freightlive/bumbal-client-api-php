@@ -344,13 +344,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "driver_email"
-     */
-    public function testPropertyDriverEmail()
-    {
-    }
-
-    /**
      * Test attribute "addressapplied_id"
      */
     public function testPropertyAddressappliedId()

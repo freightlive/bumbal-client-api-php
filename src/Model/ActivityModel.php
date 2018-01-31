@@ -92,7 +92,6 @@ class ActivityModel implements ArrayAccess
         'driver_last_name' => 'string',
         'driver_name_prefix' => 'string',
         'driver_full_name' => 'string',
-        'driver_email' => 'string',
         'addressapplied_id' => 'int',
         'address_id' => 'int',
         'address' => '\BumbalClient\Model\AddressModel',
@@ -161,7 +160,6 @@ class ActivityModel implements ArrayAccess
         'driver_last_name' => null,
         'driver_name_prefix' => null,
         'driver_full_name' => null,
-        'driver_email' => null,
         'addressapplied_id' => null,
         'address_id' => null,
         'address' => null,
@@ -240,7 +238,6 @@ class ActivityModel implements ArrayAccess
         'driver_last_name' => 'driver_last_name',
         'driver_name_prefix' => 'driver_name_prefix',
         'driver_full_name' => 'driver_full_name',
-        'driver_email' => 'driver_email',
         'addressapplied_id' => 'addressapplied_id',
         'address_id' => 'address_id',
         'address' => 'address',
@@ -310,7 +307,6 @@ class ActivityModel implements ArrayAccess
         'driver_last_name' => 'setDriverLastName',
         'driver_name_prefix' => 'setDriverNamePrefix',
         'driver_full_name' => 'setDriverFullName',
-        'driver_email' => 'setDriverEmail',
         'addressapplied_id' => 'setAddressappliedId',
         'address_id' => 'setAddressId',
         'address' => 'setAddress',
@@ -380,7 +376,6 @@ class ActivityModel implements ArrayAccess
         'driver_last_name' => 'getDriverLastName',
         'driver_name_prefix' => 'getDriverNamePrefix',
         'driver_full_name' => 'getDriverFullName',
-        'driver_email' => 'getDriverEmail',
         'addressapplied_id' => 'getAddressappliedId',
         'address_id' => 'getAddressId',
         'address' => 'getAddress',
@@ -523,7 +518,6 @@ class ActivityModel implements ArrayAccess
         $this->container['driver_last_name'] = isset($data['driver_last_name']) ? $data['driver_last_name'] : null;
         $this->container['driver_name_prefix'] = isset($data['driver_name_prefix']) ? $data['driver_name_prefix'] : null;
         $this->container['driver_full_name'] = isset($data['driver_full_name']) ? $data['driver_full_name'] : null;
-        $this->container['driver_email'] = isset($data['driver_email']) ? $data['driver_email'] : null;
         $this->container['addressapplied_id'] = isset($data['addressapplied_id']) ? $data['addressapplied_id'] : null;
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
@@ -1416,27 +1410,6 @@ class ActivityModel implements ArrayAccess
     public function setDriverFullName($driver_full_name)
     {
         $this->container['driver_full_name'] = $driver_full_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets driver_email
-     * @return string
-     */
-    public function getDriverEmail()
-    {
-        return $this->container['driver_email'];
-    }
-
-    /**
-     * Sets driver_email
-     * @param string $driver_email Driver email
-     * @return $this
-     */
-    public function setDriverEmail($driver_email)
-    {
-        $this->container['driver_email'] = $driver_email;
 
         return $this;
     }

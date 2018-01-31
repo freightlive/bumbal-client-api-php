@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverOptionsModel
+ * DriverListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverOptionsModel Class Doc Comment
+ * DriverListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverOptionsModel implements ArrayAccess
+class DriverListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,17 @@ class DriverOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverOptionsModel';
+    protected static $swaggerModelName = 'DriverListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_driver_tags' => 'bool',
-        'include_driver_links' => 'bool',
-        'include_driver_meta_data' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'items' => '\BumbalClient\Model\DriverModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -65,10 +65,10 @@ class DriverOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_driver_tags' => null,
-        'include_driver_links' => null,
-        'include_driver_meta_data' => null,
-        'include_updated_by_name' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +86,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_driver_tags' => 'include_driver_tags',
-        'include_driver_links' => 'include_driver_links',
-        'include_driver_meta_data' => 'include_driver_meta_data',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -98,10 +98,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_driver_tags' => 'setIncludeDriverTags',
-        'include_driver_links' => 'setIncludeDriverLinks',
-        'include_driver_meta_data' => 'setIncludeDriverMetaData',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -110,10 +110,10 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_driver_tags' => 'getIncludeDriverTags',
-        'include_driver_links' => 'getIncludeDriverLinks',
-        'include_driver_meta_data' => 'getIncludeDriverMetaData',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -147,10 +147,10 @@ class DriverOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_driver_tags'] = isset($data['include_driver_tags']) ? $data['include_driver_tags'] : null;
-        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
-        $this->container['include_driver_meta_data'] = isset($data['include_driver_meta_data']) ? $data['include_driver_meta_data'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -179,85 +179,85 @@ class DriverOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_driver_tags
-     * @return bool
+     * Gets items
+     * @return \BumbalClient\Model\DriverModel[]
      */
-    public function getIncludeDriverTags()
+    public function getItems()
     {
-        return $this->container['include_driver_tags'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets include_driver_tags
-     * @param bool $include_driver_tags
+     * Sets items
+     * @param \BumbalClient\Model\DriverModel[] $items
      * @return $this
      */
-    public function setIncludeDriverTags($include_driver_tags)
+    public function setItems($items)
     {
-        $this->container['include_driver_tags'] = $include_driver_tags;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_links
-     * @return bool
+     * Gets count_filtered
+     * @return int
      */
-    public function getIncludeDriverLinks()
+    public function getCountFiltered()
     {
-        return $this->container['include_driver_links'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets include_driver_links
-     * @param bool $include_driver_links
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setIncludeDriverLinks($include_driver_links)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['include_driver_links'] = $include_driver_links;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_meta_data
-     * @return bool
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getIncludeDriverMetaData()
+    public function getCountUnfiltered()
     {
-        return $this->container['include_driver_meta_data'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets include_driver_meta_data
-     * @param bool $include_driver_meta_data
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setIncludeDriverMetaData($include_driver_meta_data)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['include_driver_meta_data'] = $include_driver_meta_data;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets include_updated_by_name
-     * @return bool
+     * Gets count_limited
+     * @return int
      */
-    public function getIncludeUpdatedByName()
+    public function getCountLimited()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setCountLimited($count_limited)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

@@ -67,7 +67,7 @@ class RouteFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
+        'id' => 'int',
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'updated_at' => 'date-time',

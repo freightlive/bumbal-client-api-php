@@ -55,14 +55,18 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'first_name' => 'string',
+        'last_name' => 'string',
+        'prefix' => 'string',
+        'full_name' => 'string',
+        'email' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'drivers' => '\BumbalClient\Model\DriverModel[]',
-        'files' => '\BumbalClient\Model\FileModel[]',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime',
-        'updated_by_name' => 'string'
+        'driver_created_at' => '\DateTime',
+        'driver_updated_at' => '\DateTime',
+        'driver_created_by' => 'int',
+        'driver_updated_by' => 'int'
     ];
 
     /**
@@ -71,14 +75,18 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'first_name' => null,
+        'last_name' => null,
+        'prefix' => null,
+        'full_name' => null,
+        'email' => null,
         'tags' => null,
         'links' => null,
         'meta_data' => null,
-        'drivers' => null,
-        'files' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time',
-        'updated_by_name' => null
+        'driver_created_at' => 'date-time',
+        'driver_updated_at' => 'date-time',
+        'driver_created_by' => null,
+        'driver_updated_by' => null
     ];
 
     public static function swaggerTypes()
@@ -97,14 +105,18 @@ class DriverModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'prefix' => 'prefix',
+        'full_name' => 'full_name',
+        'email' => 'email',
         'tags' => 'tags',
         'links' => 'links',
         'meta_data' => 'meta_data',
-        'drivers' => 'drivers',
-        'files' => 'files',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at',
-        'updated_by_name' => 'updated_by_name'
+        'driver_created_at' => 'driver_created_at',
+        'driver_updated_at' => 'driver_updated_at',
+        'driver_created_by' => 'driver_created_by',
+        'driver_updated_by' => 'driver_updated_by'
     ];
 
 
@@ -114,14 +126,18 @@ class DriverModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'first_name' => 'setFirstName',
+        'last_name' => 'setLastName',
+        'prefix' => 'setPrefix',
+        'full_name' => 'setFullName',
+        'email' => 'setEmail',
         'tags' => 'setTags',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'drivers' => 'setDrivers',
-        'files' => 'setFiles',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt',
-        'updated_by_name' => 'setUpdatedByName'
+        'driver_created_at' => 'setDriverCreatedAt',
+        'driver_updated_at' => 'setDriverUpdatedAt',
+        'driver_created_by' => 'setDriverCreatedBy',
+        'driver_updated_by' => 'setDriverUpdatedBy'
     ];
 
 
@@ -131,14 +147,18 @@ class DriverModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'first_name' => 'getFirstName',
+        'last_name' => 'getLastName',
+        'prefix' => 'getPrefix',
+        'full_name' => 'getFullName',
+        'email' => 'getEmail',
         'tags' => 'getTags',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'drivers' => 'getDrivers',
-        'files' => 'getFiles',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt',
-        'updated_by_name' => 'getUpdatedByName'
+        'driver_created_at' => 'getDriverCreatedAt',
+        'driver_updated_at' => 'getDriverUpdatedAt',
+        'driver_created_by' => 'getDriverCreatedBy',
+        'driver_updated_by' => 'getDriverUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -173,14 +193,18 @@ class DriverModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
-        $this->container['drivers'] = isset($data['drivers']) ? $data['drivers'] : null;
-        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
+        $this->container['driver_created_at'] = isset($data['driver_created_at']) ? $data['driver_created_at'] : null;
+        $this->container['driver_updated_at'] = isset($data['driver_updated_at']) ? $data['driver_updated_at'] : null;
+        $this->container['driver_created_by'] = isset($data['driver_created_by']) ? $data['driver_created_by'] : null;
+        $this->container['driver_updated_by'] = isset($data['driver_updated_by']) ? $data['driver_updated_by'] : null;
     }
 
     /**
@@ -231,6 +255,111 @@ class DriverModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets first_name
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->container['first_name'];
+    }
+
+    /**
+     * Sets first_name
+     * @param string $first_name First Name
+     * @return $this
+     */
+    public function setFirstName($first_name)
+    {
+        $this->container['first_name'] = $first_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets last_name
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->container['last_name'];
+    }
+
+    /**
+     * Sets last_name
+     * @param string $last_name Last Name
+     * @return $this
+     */
+    public function setLastName($last_name)
+    {
+        $this->container['last_name'] = $last_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets prefix
+     * @return string
+     */
+    public function getPrefix()
+    {
+        return $this->container['prefix'];
+    }
+
+    /**
+     * Sets prefix
+     * @param string $prefix Name Prefix
+     * @return $this
+     */
+    public function setPrefix($prefix)
+    {
+        $this->container['prefix'] = $prefix;
+
+        return $this;
+    }
+
+    /**
+     * Gets full_name
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->container['full_name'];
+    }
+
+    /**
+     * Sets full_name
+     * @param string $full_name Full name
+     * @return $this
+     */
+    public function setFullName($full_name)
+    {
+        $this->container['full_name'] = $full_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets email
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     * @param string $email Email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
 
         return $this;
     }
@@ -299,106 +428,85 @@ class DriverModel implements ArrayAccess
     }
 
     /**
-     * Gets drivers
-     * @return \BumbalClient\Model\DriverModel[]
-     */
-    public function getDrivers()
-    {
-        return $this->container['drivers'];
-    }
-
-    /**
-     * Sets drivers
-     * @param \BumbalClient\Model\DriverModel[] $drivers
-     * @return $this
-     */
-    public function setDrivers($drivers)
-    {
-        $this->container['drivers'] = $drivers;
-
-        return $this;
-    }
-
-    /**
-     * Gets files
-     * @return \BumbalClient\Model\FileModel[]
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
-     * @return $this
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
+     * Gets driver_created_at
      * @return \DateTime
      */
-    public function getCreatedAt()
+    public function getDriverCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['driver_created_at'];
     }
 
     /**
-     * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * Sets driver_created_at
+     * @param \DateTime $driver_created_at created_at date time
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setDriverCreatedAt($driver_created_at)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['driver_created_at'] = $driver_created_at;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets driver_updated_at
      * @return \DateTime
      */
-    public function getUpdatedAt()
+    public function getDriverUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['driver_updated_at'];
     }
 
     /**
-     * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * Sets driver_updated_at
+     * @param \DateTime $driver_updated_at updated_at date time
      * @return $this
      */
-    public function setUpdatedAt($updated_at)
+    public function setDriverUpdatedAt($driver_updated_at)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['driver_updated_at'] = $driver_updated_at;
 
         return $this;
     }
 
     /**
-     * Gets updated_by_name
-     * @return string
+     * Gets driver_created_by
+     * @return int
      */
-    public function getUpdatedByName()
+    public function getDriverCreatedBy()
     {
-        return $this->container['updated_by_name'];
+        return $this->container['driver_created_by'];
     }
 
     /**
-     * Sets updated_by_name
-     * @param string $updated_by_name Driver updated by user full name
+     * Sets driver_created_by
+     * @param int $driver_created_by created_by user id
      * @return $this
      */
-    public function setUpdatedByName($updated_by_name)
+    public function setDriverCreatedBy($driver_created_by)
     {
-        $this->container['updated_by_name'] = $updated_by_name;
+        $this->container['driver_created_by'] = $driver_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver_updated_by
+     * @return int
+     */
+    public function getDriverUpdatedBy()
+    {
+        return $this->container['driver_updated_by'];
+    }
+
+    /**
+     * Sets driver_updated_by
+     * @param int $driver_updated_by created_by user id
+     * @return $this
+     */
+    public function setDriverUpdatedBy($driver_updated_by)
+    {
+        $this->container['driver_updated_by'] = $driver_updated_by;
 
         return $this;
     }

@@ -78,6 +78,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_address"
+     */
+    public function testPropertyIncludeAddress()
+    {
+    }
+
+    /**
      * Test attribute "include_address_object"
      */
     public function testPropertyIncludeAddressObject()
@@ -95,6 +102,48 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_route_tags"
      */
     public function testPropertyIncludeRouteTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_driver"
+     */
+    public function testPropertyIncludeDriver()
+    {
+    }
+
+    /**
+     * Test attribute "include_driver_links"
+     */
+    public function testPropertyIncludeDriverLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_car"
+     */
+    public function testPropertyIncludeCar()
+    {
+    }
+
+    /**
+     * Test attribute "include_car_links"
+     */
+    public function testPropertyIncludeCarLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_trailer"
+     */
+    public function testPropertyIncludeTrailer()
+    {
+    }
+
+    /**
+     * Test attribute "include_trailer_links"
+     */
+    public function testPropertyIncludeTrailerLinks()
     {
     }
 

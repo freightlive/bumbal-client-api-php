@@ -3,9 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**include_address** | **bool** |  | [optional] 
 **include_address_object** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
 **include_route_tags** | **bool** |  | [optional] 
+**include_driver** | **bool** |  | [optional] 
+**include_driver_links** | **bool** |  | [optional] 
+**include_car** | **bool** |  | [optional] 
+**include_car_links** | **bool** |  | [optional] 
+**include_trailer** | **bool** |  | [optional] 
+**include_trailer_links** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 
 **include_equipment_info_car** | **bool** |  | [optional] 
 **include_gps_locations** | **bool** |  | [optional] 

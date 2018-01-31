@@ -54,7 +54,7 @@ class DriverFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
+        'id' => 'int',
         'links' => 'object[]',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime'
@@ -180,7 +180,7 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int[]
+     * @return int
      */
     public function getId()
     {
@@ -189,7 +189,7 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id Driver id's
+     * @param int $id Driver id's
      * @return $this
      */
     public function setId($id)

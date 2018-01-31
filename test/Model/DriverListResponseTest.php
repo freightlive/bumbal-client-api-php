@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverRetrieveListArgumentsTest
+ * DriverListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * DriverRetrieveListArgumentsTest Class Doc Comment
+ * DriverListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverRetrieveListArguments
+// * @description DriverListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class DriverListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,37 @@ class DriverRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverRetrieveListArguments"
+     * Test "DriverListResponse"
      */
-    public function testDriverRetrieveListArguments()
+    public function testDriverListResponse()
     {
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "items"
      */
-    public function testPropertyOptions()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyFilters()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyLimit()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "count_limited"
      */
-    public function testPropertyOffset()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
-    {
-    }
-
-    /**
-     * Test attribute "as_list"
-     */
-    public function testPropertyAsList()
+    public function testPropertyCountLimited()
     {
     }
 }
