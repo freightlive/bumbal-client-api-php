@@ -143,13 +143,16 @@ Class | Method | HTTP request | Description
 *PartyApi* | [**setParty**](docs/Api/PartyApi.md#setparty) | **POST** /party/set | Set (create or update) an Party
 *PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
+*PlannerApi* | [**plannerApplyPlanning**](docs/Api/PlannerApi.md#plannerapplyplanning) | **POST** /planner/apply-planning-route | Apply a planning schema
 *PlannerApi* | [**plannerAutoPlan**](docs/Api/PlannerApi.md#plannerautoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
+*PlannerApi* | [**plannerAutoPlanResult**](docs/Api/PlannerApi.md#plannerautoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerCalculateDriveTime**](docs/Api/PlannerApi.md#plannercalculatedrivetime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
 *PlannerApi* | [**plannerChangeActivitySequence**](docs/Api/PlannerApi.md#plannerchangeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**plannerCheckAvailability**](docs/Api/PlannerApi.md#plannercheckavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**plannerCheckAvailabilityResult**](docs/Api/PlannerApi.md#plannercheckavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**plannerLockActivities**](docs/Api/PlannerApi.md#plannerlockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**plannerRemoveActivitiesFromRoute**](docs/Api/PlannerApi.md#plannerremoveactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+*PlannerApi* | [**plannerStartAutoPlan**](docs/Api/PlannerApi.md#plannerstartautoplan) | **POST** /planner/start-auto-plan | start auto plan for a known uuid
 *PlannerApi* | [**plannerStartCheckAvailability**](docs/Api/PlannerApi.md#plannerstartcheckavailability) | **POST** /planner/start-check-availability | start check availability for a known uuid
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
@@ -179,7 +182,7 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**retrieveTagType**](docs/Api/TagtypeApi.md#retrievetagtype) | **GET** /tag-type/{tagTypeId} | Retrieve a Tag type
 *TagtypeApi* | [**setTagType**](docs/Api/TagtypeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
-*TrackandtraceApi* | [**trackAndTraceCalculateETA**](docs/Api/TrackandtraceApi.md#trackandtracecalculateeta) | **GET** /track-and-trace/calculate-eta/{activityId} | Calculate ETA for Activity
+*TracktraceApi* | [**trackTraceCalculateETA**](docs/Api/TracktraceApi.md#tracktracecalculateeta) | **GET** /track-and-trace/calculate-eta/{activityId} | Calculate ETA for Activity
 *TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
 *TrailerApi* | [**deleteTrailer**](docs/Api/TrailerApi.md#deletetrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
 *TrailerApi* | [**retrieveListTrailer**](docs/Api/TrailerApi.md#retrievelisttrailer) | **PUT** /trailer | Retrieve List of Trailers
@@ -208,11 +211,19 @@ Class | Method | HTTP request | Description
  - [AddressOptionsModel](docs/Model/AddressOptionsModel.md)
  - [AddressRetrieveListArguments](docs/Model/AddressRetrieveListArguments.md)
  - [ApiResponse](docs/Model/ApiResponse.md)
+ - [ApplyPlanningArguments](docs/Model/ApplyPlanningArguments.md)
+ - [ApplyPlanningDataModel](docs/Model/ApplyPlanningDataModel.md)
+ - [ApplyPlanningFiltersModel](docs/Model/ApplyPlanningFiltersModel.md)
+ - [ApplyPlanningOptionsModel](docs/Model/ApplyPlanningOptionsModel.md)
  - [AssignmentFiltersModel](docs/Model/AssignmentFiltersModel.md)
  - [AssignmentListResponse](docs/Model/AssignmentListResponse.md)
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
+ - [AutoPlanArguments](docs/Model/AutoPlanArguments.md)
+ - [AutoPlanDataModel](docs/Model/AutoPlanDataModel.md)
+ - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
+ - [AutoPlanOptionsModel](docs/Model/AutoPlanOptionsModel.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
  - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
  - [CarFiltersModel](docs/Model/CarFiltersModel.md)

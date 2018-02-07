@@ -85,6 +85,27 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
+     * Test attribute "addresses"
+     */
+    public function testPropertyAddresses()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -134,9 +155,30 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "removed"
+     */
+    public function testPropertyRemoved()
+    {
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
     {
     }
 
@@ -165,6 +207,13 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "driver_updated_by"
      */
     public function testPropertyDriverUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by_name"
+     */
+    public function testPropertyUpdatedByName()
     {
     }
 }

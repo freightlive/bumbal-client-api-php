@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverOptionsModelTest
+ * ApplyPlanningDataModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * DriverOptionsModelTest Class Doc Comment
+ * ApplyPlanningDataModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverOptionsModel
+// * @description ApplyPlanningDataModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ApplyPlanningDataModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,30 @@ class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverOptionsModel"
+     * Test "ApplyPlanningDataModel"
      */
-    public function testDriverOptionsModel()
+    public function testApplyPlanningDataModel()
     {
     }
 
     /**
-     * Test attribute "include_driver_record_info"
+     * Test attribute "assigned"
      */
-    public function testPropertyIncludeDriverRecordInfo()
+    public function testPropertyAssigned()
     {
     }
 
     /**
-     * Test attribute "include_driver_meta_data"
+     * Test attribute "unassigned"
      */
-    public function testPropertyIncludeDriverMetaData()
+    public function testPropertyUnassigned()
     {
     }
 
     /**
-     * Test attribute "include_driver_tags"
+     * Test attribute "routes"
      */
-    public function testPropertyIncludeDriverTags()
-    {
-    }
-
-    /**
-     * Test attribute "include_driver_tag_type_names"
-     */
-    public function testPropertyIncludeDriverTagTypeNames()
-    {
-    }
-
-    /**
-     * Test attribute "include_addresses"
-     */
-    public function testPropertyIncludeAddresses()
-    {
-    }
-
-    /**
-     * Test attribute "include_driver_links"
-     */
-    public function testPropertyIncludeDriverLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_driver_notes"
-     */
-    public function testPropertyIncludeDriverNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_driver_note_tags"
-     */
-    public function testPropertyIncludeDriverNoteTags()
+    public function testPropertyRoutes()
     {
     }
 }

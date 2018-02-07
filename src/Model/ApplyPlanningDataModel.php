@@ -1,6 +1,6 @@
 <?php
 /**
- * AutoPlanArguments
+ * ApplyPlanningDataModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AutoPlanArguments Class Doc Comment
+ * ApplyPlanningDataModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AutoPlanArguments implements ArrayAccess
+class ApplyPlanningDataModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,16 @@ class AutoPlanArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AutoPlanArguments';
+    protected static $swaggerModelName = 'ApplyPlanningDataModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\BumbalClient\Model\AutoPlanDataModel',
-        'options' => '\BumbalClient\Model\AutoPlanOptionsModel',
-        'filters' => '\BumbalClient\Model\AutoPlanFiltersModel'
+        'assigned' => 'object',
+        'unassigned' => 'object',
+        'routes' => 'object'
     ];
 
     /**
@@ -64,9 +64,9 @@ class AutoPlanArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'data' => null,
-        'options' => null,
-        'filters' => null
+        'assigned' => null,
+        'unassigned' => null,
+        'routes' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +84,9 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'options' => 'options',
-        'filters' => 'filters'
+        'assigned' => 'assigned',
+        'unassigned' => 'unassigned',
+        'routes' => 'routes'
     ];
 
 
@@ -95,9 +95,9 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'options' => 'setOptions',
-        'filters' => 'setFilters'
+        'assigned' => 'setAssigned',
+        'unassigned' => 'setUnassigned',
+        'routes' => 'setRoutes'
     ];
 
 
@@ -106,9 +106,9 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'options' => 'getOptions',
-        'filters' => 'getFilters'
+        'assigned' => 'getAssigned',
+        'unassigned' => 'getUnassigned',
+        'routes' => 'getRoutes'
     ];
 
     public static function attributeMap()
@@ -142,9 +142,9 @@ class AutoPlanArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['assigned'] = isset($data['assigned']) ? $data['assigned'] : null;
+        $this->container['unassigned'] = isset($data['unassigned']) ? $data['unassigned'] : null;
+        $this->container['routes'] = isset($data['routes']) ? $data['routes'] : null;
     }
 
     /**
@@ -173,64 +173,64 @@ class AutoPlanArguments implements ArrayAccess
 
 
     /**
-     * Gets data
-     * @return \BumbalClient\Model\AutoPlanDataModel
+     * Gets assigned
+     * @return object
      */
-    public function getData()
+    public function getAssigned()
     {
-        return $this->container['data'];
+        return $this->container['assigned'];
     }
 
     /**
-     * Sets data
-     * @param \BumbalClient\Model\AutoPlanDataModel $data
+     * Sets assigned
+     * @param object $assigned
      * @return $this
      */
-    public function setData($data)
+    public function setAssigned($assigned)
     {
-        $this->container['data'] = $data;
+        $this->container['assigned'] = $assigned;
 
         return $this;
     }
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\AutoPlanOptionsModel
+     * Gets unassigned
+     * @return object
      */
-    public function getOptions()
+    public function getUnassigned()
     {
-        return $this->container['options'];
+        return $this->container['unassigned'];
     }
 
     /**
-     * Sets options
-     * @param \BumbalClient\Model\AutoPlanOptionsModel $options
+     * Sets unassigned
+     * @param object $unassigned
      * @return $this
      */
-    public function setOptions($options)
+    public function setUnassigned($unassigned)
     {
-        $this->container['options'] = $options;
+        $this->container['unassigned'] = $unassigned;
 
         return $this;
     }
 
     /**
-     * Gets filters
-     * @return \BumbalClient\Model\AutoPlanFiltersModel
+     * Gets routes
+     * @return object
      */
-    public function getFilters()
+    public function getRoutes()
     {
-        return $this->container['filters'];
+        return $this->container['routes'];
     }
 
     /**
-     * Sets filters
-     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters
+     * Sets routes
+     * @param object $routes
      * @return $this
      */
-    public function setFilters($filters)
+    public function setRoutes($routes)
     {
-        $this->container['filters'] = $filters;
+        $this->container['routes'] = $routes;
 
         return $this;
     }

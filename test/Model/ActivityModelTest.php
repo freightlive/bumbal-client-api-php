@@ -155,6 +155,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+    }
+
+    /**
      * Test attribute "top_priority"
      */
     public function testPropertyTopPriority()

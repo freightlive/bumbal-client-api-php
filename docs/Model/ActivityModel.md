@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **instructions** | [**\BumbalClient\Model\InstructionModel[]**](InstructionModel.md) |  | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
 **locked** | **bool** | Activity locked on a Route | [optional] 
+**priority** | **int** | Priority level. 1 for highest priority, 3 for lowest priority. Default &#x3D; 2 | [optional] 
 **top_priority** | **bool** | Activity has top priority | [optional] 
 **sequence_nr** | **int** | Sequence number on Route | [optional] 
 **planned_driving_time** | **int** | Driving time from the activity before this one | [optional] 

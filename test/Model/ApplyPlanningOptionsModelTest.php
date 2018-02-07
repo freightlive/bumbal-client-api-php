@@ -1,6 +1,6 @@
 <?php
 /**
- * AutoPlanOptionsModelTest
+ * ApplyPlanningOptionsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * AutoPlanOptionsModelTest Class Doc Comment
+ * ApplyPlanningOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description AutoPlanOptionsModel
+// * @description ApplyPlanningOptionsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ApplyPlanningOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,23 +71,9 @@ class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AutoPlanOptionsModel"
+     * Test "ApplyPlanningOptionsModel"
      */
-    public function testAutoPlanOptionsModel()
-    {
-    }
-
-    /**
-     * Test attribute "synchronous"
-     */
-    public function testPropertySynchronous()
-    {
-    }
-
-    /**
-     * Test attribute "respond_after_apply_planning"
-     */
-    public function testPropertyRespondAfterApplyPlanning()
+    public function testApplyPlanningOptionsModel()
     {
     }
 }

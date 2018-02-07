@@ -161,6 +161,79 @@ class PlannerApi
     }
 
     /**
+     * Operation plannerApplyPlanning
+     *
+     * Apply a planning schema
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function plannerApplyPlanning()
+    {
+        list($response) = $this->plannerApplyPlanningWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation plannerApplyPlanningWithHttpInfo
+     *
+     * Apply a planning schema
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function plannerApplyPlanningWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/planner/apply-planning-route";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/planner/apply-planning-route'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation plannerAutoPlan
      *
      * Plan a certain activity in any fitting route
@@ -218,6 +291,79 @@ class PlannerApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/planner/auto-plan'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation plannerAutoPlanResult
+     *
+     * Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function plannerAutoPlanResult()
+    {
+        list($response) = $this->plannerAutoPlanResultWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation plannerAutoPlanResultWithHttpInfo
+     *
+     * Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function plannerAutoPlanResultWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/planner/auto-plan-result";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/planner/auto-plan-result'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
@@ -667,6 +813,90 @@ class PlannerApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/planner/remove-activities-from-route'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation plannerStartAutoPlan
+     *
+     * start auto plan for a known uuid
+     *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function plannerStartAutoPlan($arguments)
+    {
+        list($response) = $this->plannerStartAutoPlanWithHttpInfo($arguments);
+        return $response;
+    }
+
+    /**
+     * Operation plannerStartAutoPlanWithHttpInfo
+     *
+     * start auto plan for a known uuid
+     *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function plannerStartAutoPlanWithHttpInfo($arguments)
+    {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling plannerStartAutoPlan');
+        }
+        // parse inputs
+        $resourcePath = "/planner/start-auto-plan";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/planner/start-auto-plan'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

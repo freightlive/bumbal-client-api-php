@@ -65,6 +65,7 @@ class ActivityModel implements ArrayAccess
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
         'locked' => 'bool',
+        'priority' => 'int',
         'top_priority' => 'bool',
         'sequence_nr' => 'int',
         'planned_driving_time' => 'int',
@@ -133,6 +134,7 @@ class ActivityModel implements ArrayAccess
         'instructions' => null,
         'remarks' => null,
         'locked' => null,
+        'priority' => null,
         'top_priority' => null,
         'sequence_nr' => 'int64',
         'planned_driving_time' => 'int64',
@@ -211,6 +213,7 @@ class ActivityModel implements ArrayAccess
         'instructions' => 'instructions',
         'remarks' => 'remarks',
         'locked' => 'locked',
+        'priority' => 'priority',
         'top_priority' => 'top_priority',
         'sequence_nr' => 'sequence_nr',
         'planned_driving_time' => 'planned_driving_time',
@@ -280,6 +283,7 @@ class ActivityModel implements ArrayAccess
         'instructions' => 'setInstructions',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
+        'priority' => 'setPriority',
         'top_priority' => 'setTopPriority',
         'sequence_nr' => 'setSequenceNr',
         'planned_driving_time' => 'setPlannedDrivingTime',
@@ -349,6 +353,7 @@ class ActivityModel implements ArrayAccess
         'instructions' => 'getInstructions',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
+        'priority' => 'getPriority',
         'top_priority' => 'getTopPriority',
         'sequence_nr' => 'getSequenceNr',
         'planned_driving_time' => 'getPlannedDrivingTime',
@@ -491,6 +496,7 @@ class ActivityModel implements ArrayAccess
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
         $this->container['planned_driving_time'] = isset($data['planned_driving_time']) ? $data['planned_driving_time'] : null;
@@ -843,6 +849,27 @@ class ActivityModel implements ArrayAccess
     public function setLocked($locked)
     {
         $this->container['locked'] = $locked;
+
+        return $this;
+    }
+
+    /**
+     * Gets priority
+     * @return int
+     */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+     * Sets priority
+     * @param int $priority Priority level. 1 for highest priority, 3 for lowest priority. Default = 2
+     * @return $this
+     */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
 
         return $this;
     }

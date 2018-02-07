@@ -144,6 +144,9 @@ class AutoPlanDataModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['token'] === null) {
+            $invalid_properties[] = "'token' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -156,6 +159,9 @@ class AutoPlanDataModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['token'] === null) {
+            return false;
+        }
         return true;
     }
 

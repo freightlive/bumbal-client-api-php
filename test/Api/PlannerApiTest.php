@@ -83,12 +83,32 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for plannerApplyPlanning
+     *
+     * Apply a planning schema.
+     *
+     */
+    public function testPlannerApplyPlanning()
+    {
+    }
+
+    /**
      * Test case for plannerAutoPlan
      *
      * Plan a certain activity in any fitting route.
      *
      */
     public function testPlannerAutoPlan()
+    {
+    }
+
+    /**
+     * Test case for plannerAutoPlanResult
+     *
+     * Fetch current result for a auto plan Request. This could be done, in progress or cancelled..
+     *
+     */
+    public function testPlannerAutoPlanResult()
     {
     }
 
@@ -149,6 +169,16 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testPlannerRemoveActivitiesFromRoute()
+    {
+    }
+
+    /**
+     * Test case for plannerStartAutoPlan
+     *
+     * start auto plan for a known uuid.
+     *
+     */
+    public function testPlannerStartAutoPlan()
     {
     }
 

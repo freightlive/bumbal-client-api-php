@@ -54,10 +54,14 @@ class DriverOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_driver_tags' => 'bool',
-        'include_driver_links' => 'bool',
+        'include_driver_record_info' => 'bool',
         'include_driver_meta_data' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'include_driver_tags' => 'bool',
+        'include_driver_tag_type_names' => 'bool',
+        'include_addresses' => 'bool',
+        'include_driver_links' => 'bool',
+        'include_driver_notes' => 'bool',
+        'include_driver_note_tags' => 'bool'
     ];
 
     /**
@@ -65,10 +69,14 @@ class DriverOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_driver_tags' => null,
-        'include_driver_links' => null,
+        'include_driver_record_info' => null,
         'include_driver_meta_data' => null,
-        'include_updated_by_name' => null
+        'include_driver_tags' => null,
+        'include_driver_tag_type_names' => null,
+        'include_addresses' => null,
+        'include_driver_links' => null,
+        'include_driver_notes' => null,
+        'include_driver_note_tags' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +94,14 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_driver_tags' => 'include_driver_tags',
-        'include_driver_links' => 'include_driver_links',
+        'include_driver_record_info' => 'include_driver_record_info',
         'include_driver_meta_data' => 'include_driver_meta_data',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'include_driver_tags' => 'include_driver_tags',
+        'include_driver_tag_type_names' => 'include_driver_tag_type_names',
+        'include_addresses' => 'include_addresses',
+        'include_driver_links' => 'include_driver_links',
+        'include_driver_notes' => 'include_driver_notes',
+        'include_driver_note_tags' => 'include_driver_note_tags'
     ];
 
 
@@ -98,10 +110,14 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_driver_tags' => 'setIncludeDriverTags',
-        'include_driver_links' => 'setIncludeDriverLinks',
+        'include_driver_record_info' => 'setIncludeDriverRecordInfo',
         'include_driver_meta_data' => 'setIncludeDriverMetaData',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'include_driver_tags' => 'setIncludeDriverTags',
+        'include_driver_tag_type_names' => 'setIncludeDriverTagTypeNames',
+        'include_addresses' => 'setIncludeAddresses',
+        'include_driver_links' => 'setIncludeDriverLinks',
+        'include_driver_notes' => 'setIncludeDriverNotes',
+        'include_driver_note_tags' => 'setIncludeDriverNoteTags'
     ];
 
 
@@ -110,10 +126,14 @@ class DriverOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_driver_tags' => 'getIncludeDriverTags',
-        'include_driver_links' => 'getIncludeDriverLinks',
+        'include_driver_record_info' => 'getIncludeDriverRecordInfo',
         'include_driver_meta_data' => 'getIncludeDriverMetaData',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'include_driver_tags' => 'getIncludeDriverTags',
+        'include_driver_tag_type_names' => 'getIncludeDriverTagTypeNames',
+        'include_addresses' => 'getIncludeAddresses',
+        'include_driver_links' => 'getIncludeDriverLinks',
+        'include_driver_notes' => 'getIncludeDriverNotes',
+        'include_driver_note_tags' => 'getIncludeDriverNoteTags'
     ];
 
     public static function attributeMap()
@@ -147,10 +167,14 @@ class DriverOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_driver_tags'] = isset($data['include_driver_tags']) ? $data['include_driver_tags'] : null;
-        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_driver_record_info'] = isset($data['include_driver_record_info']) ? $data['include_driver_record_info'] : null;
         $this->container['include_driver_meta_data'] = isset($data['include_driver_meta_data']) ? $data['include_driver_meta_data'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['include_driver_tags'] = isset($data['include_driver_tags']) ? $data['include_driver_tags'] : null;
+        $this->container['include_driver_tag_type_names'] = isset($data['include_driver_tag_type_names']) ? $data['include_driver_tag_type_names'] : null;
+        $this->container['include_addresses'] = isset($data['include_addresses']) ? $data['include_addresses'] : null;
+        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_driver_notes'] = isset($data['include_driver_notes']) ? $data['include_driver_notes'] : null;
+        $this->container['include_driver_note_tags'] = isset($data['include_driver_note_tags']) ? $data['include_driver_note_tags'] : null;
     }
 
     /**
@@ -179,43 +203,22 @@ class DriverOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_driver_tags
+     * Gets include_driver_record_info
      * @return bool
      */
-    public function getIncludeDriverTags()
+    public function getIncludeDriverRecordInfo()
     {
-        return $this->container['include_driver_tags'];
+        return $this->container['include_driver_record_info'];
     }
 
     /**
-     * Sets include_driver_tags
-     * @param bool $include_driver_tags
+     * Sets include_driver_record_info
+     * @param bool $include_driver_record_info
      * @return $this
      */
-    public function setIncludeDriverTags($include_driver_tags)
+    public function setIncludeDriverRecordInfo($include_driver_record_info)
     {
-        $this->container['include_driver_tags'] = $include_driver_tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_driver_links
-     * @return bool
-     */
-    public function getIncludeDriverLinks()
-    {
-        return $this->container['include_driver_links'];
-    }
-
-    /**
-     * Sets include_driver_links
-     * @param bool $include_driver_links
-     * @return $this
-     */
-    public function setIncludeDriverLinks($include_driver_links)
-    {
-        $this->container['include_driver_links'] = $include_driver_links;
+        $this->container['include_driver_record_info'] = $include_driver_record_info;
 
         return $this;
     }
@@ -242,22 +245,127 @@ class DriverOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_updated_by_name
+     * Gets include_driver_tags
      * @return bool
      */
-    public function getIncludeUpdatedByName()
+    public function getIncludeDriverTags()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['include_driver_tags'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name
+     * Sets include_driver_tags
+     * @param bool $include_driver_tags
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setIncludeDriverTags($include_driver_tags)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['include_driver_tags'] = $include_driver_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_tag_type_names
+     * @return bool
+     */
+    public function getIncludeDriverTagTypeNames()
+    {
+        return $this->container['include_driver_tag_type_names'];
+    }
+
+    /**
+     * Sets include_driver_tag_type_names
+     * @param bool $include_driver_tag_type_names
+     * @return $this
+     */
+    public function setIncludeDriverTagTypeNames($include_driver_tag_type_names)
+    {
+        $this->container['include_driver_tag_type_names'] = $include_driver_tag_type_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_addresses
+     * @return bool
+     */
+    public function getIncludeAddresses()
+    {
+        return $this->container['include_addresses'];
+    }
+
+    /**
+     * Sets include_addresses
+     * @param bool $include_addresses
+     * @return $this
+     */
+    public function setIncludeAddresses($include_addresses)
+    {
+        $this->container['include_addresses'] = $include_addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_links
+     * @return bool
+     */
+    public function getIncludeDriverLinks()
+    {
+        return $this->container['include_driver_links'];
+    }
+
+    /**
+     * Sets include_driver_links
+     * @param bool $include_driver_links
+     * @return $this
+     */
+    public function setIncludeDriverLinks($include_driver_links)
+    {
+        $this->container['include_driver_links'] = $include_driver_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_notes
+     * @return bool
+     */
+    public function getIncludeDriverNotes()
+    {
+        return $this->container['include_driver_notes'];
+    }
+
+    /**
+     * Sets include_driver_notes
+     * @param bool $include_driver_notes
+     * @return $this
+     */
+    public function setIncludeDriverNotes($include_driver_notes)
+    {
+        $this->container['include_driver_notes'] = $include_driver_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_note_tags
+     * @return bool
+     */
+    public function getIncludeDriverNoteTags()
+    {
+        return $this->container['include_driver_note_tags'];
+    }
+
+    /**
+     * Sets include_driver_note_tags
+     * @param bool $include_driver_note_tags
+     * @return $this
+     */
+    public function setIncludeDriverNoteTags($include_driver_note_tags)
+    {
+        $this->container['include_driver_note_tags'] = $include_driver_note_tags;
 
         return $this;
     }

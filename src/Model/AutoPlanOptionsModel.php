@@ -54,7 +54,8 @@ class AutoPlanOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'synchronous' => 'bool'
+        'synchronous' => 'bool',
+        'respond_after_apply_planning' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class AutoPlanOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'synchronous' => null
+        'synchronous' => null,
+        'respond_after_apply_planning' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'synchronous' => 'synchronous'
+        'synchronous' => 'synchronous',
+        'respond_after_apply_planning' => 'respond_after_apply_planning'
     ];
 
 
@@ -89,7 +92,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'synchronous' => 'setSynchronous'
+        'synchronous' => 'setSynchronous',
+        'respond_after_apply_planning' => 'setRespondAfterApplyPlanning'
     ];
 
 
@@ -98,7 +102,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'synchronous' => 'getSynchronous'
+        'synchronous' => 'getSynchronous',
+        'respond_after_apply_planning' => 'getRespondAfterApplyPlanning'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class AutoPlanOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
+        $this->container['respond_after_apply_planning'] = isset($data['respond_after_apply_planning']) ? $data['respond_after_apply_planning'] : null;
     }
 
     /**
@@ -171,12 +177,33 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous 
+     * @param bool $synchronous
      * @return $this
      */
     public function setSynchronous($synchronous)
     {
         $this->container['synchronous'] = $synchronous;
+
+        return $this;
+    }
+
+    /**
+     * Gets respond_after_apply_planning
+     * @return bool
+     */
+    public function getRespondAfterApplyPlanning()
+    {
+        return $this->container['respond_after_apply_planning'];
+    }
+
+    /**
+     * Sets respond_after_apply_planning
+     * @param bool $respond_after_apply_planning
+     * @return $this
+     */
+    public function setRespondAfterApplyPlanning($respond_after_apply_planning)
+    {
+        $this->container['respond_after_apply_planning'] = $respond_after_apply_planning;
 
         return $this;
     }

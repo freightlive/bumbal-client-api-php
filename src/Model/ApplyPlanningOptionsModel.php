@@ -1,6 +1,6 @@
 <?php
 /**
- * AutoPlanArguments
+ * ApplyPlanningOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * AutoPlanArguments Class Doc Comment
+ * ApplyPlanningOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AutoPlanArguments implements ArrayAccess
+class ApplyPlanningOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,14 @@ class AutoPlanArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'AutoPlanArguments';
+    protected static $swaggerModelName = 'ApplyPlanningOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\BumbalClient\Model\AutoPlanDataModel',
-        'options' => '\BumbalClient\Model\AutoPlanOptionsModel',
-        'filters' => '\BumbalClient\Model\AutoPlanFiltersModel'
+        
     ];
 
     /**
@@ -64,9 +62,7 @@ class AutoPlanArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'data' => null,
-        'options' => null,
-        'filters' => null
+        
     ];
 
     public static function swaggerTypes()
@@ -84,9 +80,7 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'options' => 'options',
-        'filters' => 'filters'
+        
     ];
 
 
@@ -95,9 +89,7 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'options' => 'setOptions',
-        'filters' => 'setFilters'
+        
     ];
 
 
@@ -106,9 +98,7 @@ class AutoPlanArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'options' => 'getOptions',
-        'filters' => 'getFilters'
+        
     ];
 
     public static function attributeMap()
@@ -142,9 +132,6 @@ class AutoPlanArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
     }
 
     /**
@@ -171,69 +158,6 @@ class AutoPlanArguments implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets data
-     * @return \BumbalClient\Model\AutoPlanDataModel
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \BumbalClient\Model\AutoPlanDataModel $data
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     * @return \BumbalClient\Model\AutoPlanOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\AutoPlanOptionsModel $options
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     * @return \BumbalClient\Model\AutoPlanFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
