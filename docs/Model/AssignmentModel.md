@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID of this Assignment | 
 **party_id** | **int** | Party ID | [optional] 
+**booking_account** | [**\BumbalClient\Model\PartyModel**](PartyModel.md) |  | [optional] 
 **status_id** | **int** | Status ID of this Assignment | 
 **nr** | **string** | Non-Unique number of this Assignment | [optional] 
 **party_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 

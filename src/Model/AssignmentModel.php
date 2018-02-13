@@ -56,6 +56,7 @@ class AssignmentModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'party_id' => 'int',
+        'booking_account' => '\BumbalClient\Model\PartyModel',
         'status_id' => 'int',
         'nr' => 'string',
         'party_link' => '\BumbalClient\Model\LinkModel[]',
@@ -80,6 +81,7 @@ class AssignmentModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'party_id' => 'int64',
+        'booking_account' => null,
         'status_id' => 'int64',
         'nr' => null,
         'party_link' => null,
@@ -114,6 +116,7 @@ class AssignmentModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'party_id' => 'party_id',
+        'booking_account' => 'booking_account',
         'status_id' => 'status_id',
         'nr' => 'nr',
         'party_link' => 'party_link',
@@ -139,6 +142,7 @@ class AssignmentModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'party_id' => 'setPartyId',
+        'booking_account' => 'setBookingAccount',
         'status_id' => 'setStatusId',
         'nr' => 'setNr',
         'party_link' => 'setPartyLink',
@@ -164,6 +168,7 @@ class AssignmentModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'party_id' => 'getPartyId',
+        'booking_account' => 'getBookingAccount',
         'status_id' => 'getStatusId',
         'nr' => 'getNr',
         'party_link' => 'getPartyLink',
@@ -234,6 +239,7 @@ class AssignmentModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['booking_account'] = isset($data['booking_account']) ? $data['booking_account'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['party_link'] = isset($data['party_link']) ? $data['party_link'] : null;
@@ -343,6 +349,27 @@ class AssignmentModel implements ArrayAccess
     }
 
     /**
+     * Gets booking_account
+     * @return \BumbalClient\Model\PartyModel
+     */
+    public function getBookingAccount()
+    {
+        return $this->container['booking_account'];
+    }
+
+    /**
+     * Sets booking_account
+     * @param \BumbalClient\Model\PartyModel $booking_account 
+     * @return $this
+     */
+    public function setBookingAccount($booking_account)
+    {
+        $this->container['booking_account'] = $booking_account;
+
+        return $this;
+    }
+
+    /**
      * Gets status_id
      * @return int
      */
@@ -404,7 +431,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets party_link
-     * @param \BumbalClient\Model\LinkModel[] $party_link
+     * @param \BumbalClient\Model\LinkModel[] $party_link 
      * @return $this
      */
     public function setPartyLink($party_link)
@@ -551,7 +578,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -572,7 +599,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -593,7 +620,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -614,7 +641,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)

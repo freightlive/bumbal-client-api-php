@@ -177,7 +177,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityFiltersModel[] $activity
+     * @param \BumbalClient\Model\ActivityFiltersModel[] $activity 
      * @return $this
      */
     public function setActivity($activity)
@@ -198,7 +198,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\RouteFiltersModel[] $route
+     * @param \BumbalClient\Model\RouteFiltersModel[] $route 
      * @return $this
      */
     public function setRoute($route)

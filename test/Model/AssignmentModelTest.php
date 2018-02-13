@@ -92,6 +92,13 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "booking_account"
+     */
+    public function testPropertyBookingAccount()
+    {
+    }
+
+    /**
      * Test attribute "status_id"
      */
     public function testPropertyStatusId()

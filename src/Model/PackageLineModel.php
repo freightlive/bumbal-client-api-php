@@ -59,7 +59,6 @@ class PackageLineModel implements ArrayAccess
         'nr' => 'string',
         'status_id' => 'int',
         'status_name' => 'string',
-        'nr_of_packages' => 'int',
         'package_type_name' => 'string',
         'package_type_id' => 'int',
         'barcode' => 'string',
@@ -92,7 +91,6 @@ class PackageLineModel implements ArrayAccess
         'nr' => null,
         'status_id' => null,
         'status_name' => null,
-        'nr_of_packages' => 'int64',
         'package_type_name' => null,
         'package_type_id' => null,
         'barcode' => null,
@@ -135,7 +133,6 @@ class PackageLineModel implements ArrayAccess
         'nr' => 'nr',
         'status_id' => 'status_id',
         'status_name' => 'status_name',
-        'nr_of_packages' => 'nr_of_packages',
         'package_type_name' => 'package_type_name',
         'package_type_id' => 'package_type_id',
         'barcode' => 'barcode',
@@ -169,7 +166,6 @@ class PackageLineModel implements ArrayAccess
         'nr' => 'setNr',
         'status_id' => 'setStatusId',
         'status_name' => 'setStatusName',
-        'nr_of_packages' => 'setNrOfPackages',
         'package_type_name' => 'setPackageTypeName',
         'package_type_id' => 'setPackageTypeId',
         'barcode' => 'setBarcode',
@@ -203,7 +199,6 @@ class PackageLineModel implements ArrayAccess
         'nr' => 'getNr',
         'status_id' => 'getStatusId',
         'status_name' => 'getStatusName',
-        'nr_of_packages' => 'getNrOfPackages',
         'package_type_name' => 'getPackageTypeName',
         'package_type_id' => 'getPackageTypeId',
         'barcode' => 'getBarcode',
@@ -288,7 +283,6 @@ class PackageLineModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
-        $this->container['nr_of_packages'] = isset($data['nr_of_packages']) ? $data['nr_of_packages'] : null;
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
         $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
@@ -464,27 +458,6 @@ class PackageLineModel implements ArrayAccess
             );
         }
         $this->container['status_name'] = $status_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets nr_of_packages
-     * @return int
-     */
-    public function getNrOfPackages()
-    {
-        return $this->container['nr_of_packages'];
-    }
-
-    /**
-     * Sets nr_of_packages
-     * @param int $nr_of_packages Number of packages in package line
-     * @return $this
-     */
-    public function setNrOfPackages($nr_of_packages)
-    {
-        $this->container['nr_of_packages'] = $nr_of_packages;
 
         return $this;
     }
@@ -731,7 +704,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -752,7 +725,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -794,7 +767,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -815,7 +788,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -836,7 +809,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -857,7 +830,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)
