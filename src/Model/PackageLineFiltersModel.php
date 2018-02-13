@@ -60,7 +60,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'nr' => 'string[]',
         'status_id' => 'int[]',
         'status_name' => 'string[]',
-        'nr_of_packages' => 'int',
+        'nr_of_packages' => 'float',
         'package_type_name' => 'string[]',
         'package_type_id' => 'int[]',
         'applied_capacities' => 'object',
@@ -90,7 +90,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'nr' => null,
         'status_id' => null,
         'status_name' => null,
-        'nr_of_packages' => 'int64',
+        'nr_of_packages' => 'float',
         'package_type_name' => null,
         'package_type_id' => null,
         'applied_capacities' => null,
@@ -420,7 +420,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Gets nr_of_packages
-     * @return int
+     * @return float
      */
     public function getNrOfPackages()
     {
@@ -429,7 +429,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets nr_of_packages
-     * @param int $nr_of_packages Number of packages in package line
+     * @param float $nr_of_packages Number of packages in package line
      * @return $this
      */
     public function setNrOfPackages($nr_of_packages)
