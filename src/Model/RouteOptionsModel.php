@@ -68,7 +68,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment_info_car' => 'bool',
         'include_gps_locations' => 'bool',
         'include_activity_ids' => 'bool',
-        'include_latest_position' => 'bool'
+        'include_latest_position' => 'bool',
+        'include_zones' => 'bool'
     ];
 
     /**
@@ -90,7 +91,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment_info_car' => null,
         'include_gps_locations' => null,
         'include_activity_ids' => null,
-        'include_latest_position' => null
+        'include_latest_position' => null,
+        'include_zones' => null
     ];
 
     public static function swaggerTypes()
@@ -122,7 +124,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment_info_car' => 'include_equipment_info_car',
         'include_gps_locations' => 'include_gps_locations',
         'include_activity_ids' => 'include_activity_ids',
-        'include_latest_position' => 'include_latest_position'
+        'include_latest_position' => 'include_latest_position',
+        'include_zones' => 'include_zones'
     ];
 
 
@@ -145,7 +148,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment_info_car' => 'setIncludeEquipmentInfoCar',
         'include_gps_locations' => 'setIncludeGpsLocations',
         'include_activity_ids' => 'setIncludeActivityIds',
-        'include_latest_position' => 'setIncludeLatestPosition'
+        'include_latest_position' => 'setIncludeLatestPosition',
+        'include_zones' => 'setIncludeZones'
     ];
 
 
@@ -168,7 +172,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_equipment_info_car' => 'getIncludeEquipmentInfoCar',
         'include_gps_locations' => 'getIncludeGpsLocations',
         'include_activity_ids' => 'getIncludeActivityIds',
-        'include_latest_position' => 'getIncludeLatestPosition'
+        'include_latest_position' => 'getIncludeLatestPosition',
+        'include_zones' => 'getIncludeZones'
     ];
 
     public static function attributeMap()
@@ -217,6 +222,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_gps_locations'] = isset($data['include_gps_locations']) ? $data['include_gps_locations'] : null;
         $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
         $this->container['include_latest_position'] = isset($data['include_latest_position']) ? $data['include_latest_position'] : null;
+        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
     }
 
     /**
@@ -555,6 +561,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeLatestPosition($include_latest_position)
     {
         $this->container['include_latest_position'] = $include_latest_position;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zones
+     * @return bool
+     */
+    public function getIncludeZones()
+    {
+        return $this->container['include_zones'];
+    }
+
+    /**
+     * Sets include_zones
+     * @param bool $include_zones 
+     * @return $this
+     */
+    public function setIncludeZones($include_zones)
+    {
+        $this->container['include_zones'] = $include_zones;
 
         return $this;
     }

@@ -94,7 +94,10 @@ class RouteModel implements ArrayAccess
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'tags' => '\BumbalClient\Model\TagModel[]'
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'tag_names' => 'object',
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
+        'zone_names' => 'object'
     ];
 
     /**
@@ -142,7 +145,10 @@ class RouteModel implements ArrayAccess
         'files' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
-        'tags' => null
+        'tags' => null,
+        'tag_names' => null,
+        'zones' => null,
+        'zone_names' => null
     ];
 
     public static function swaggerTypes()
@@ -200,7 +206,10 @@ class RouteModel implements ArrayAccess
         'files' => 'files',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'tag_names' => 'tag_names',
+        'zones' => 'zones',
+        'zone_names' => 'zone_names'
     ];
 
 
@@ -249,7 +258,10 @@ class RouteModel implements ArrayAccess
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'tag_names' => 'setTagNames',
+        'zones' => 'setZones',
+        'zone_names' => 'setZoneNames'
     ];
 
 
@@ -298,7 +310,10 @@ class RouteModel implements ArrayAccess
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'tag_names' => 'getTagNames',
+        'zones' => 'getZones',
+        'zone_names' => 'getZoneNames'
     ];
 
     public static function attributeMap()
@@ -409,6 +424,9 @@ class RouteModel implements ArrayAccess
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
     }
 
     /**
@@ -1341,6 +1359,69 @@ class RouteModel implements ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return object
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param object $tag_names 
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zones
+     * @return \BumbalClient\Model\ZoneModel[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return object
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param object $zone_names 
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
 
         return $this;
     }

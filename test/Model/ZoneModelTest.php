@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModelTest
+ * ZoneModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * UsersOptionsModelTest Class Doc Comment
+ * ZoneModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description UsersOptionsModel
+// * @description ZoneModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ZoneModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,23 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UsersOptionsModel"
+     * Test "ZoneModel"
      */
-    public function testUsersOptionsModel()
+    public function testZoneModel()
     {
     }
 
     /**
-     * Test attribute "include_addresses"
+     * Test attribute "id"
      */
-    public function testPropertyIncludeAddresses()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "include_user_meta_data"
+     * Test attribute "name"
      */
-    public function testPropertyIncludeUserMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_user_tags"
-     */
-    public function testPropertyIncludeUserTags()
-    {
-    }
-
-    /**
-     * Test attribute "include_party_name"
-     */
-    public function testPropertyIncludePartyName()
-    {
-    }
-
-    /**
-     * Test attribute "include_zones"
-     */
-    public function testPropertyIncludeZones()
+    public function testPropertyName()
     {
     }
 }

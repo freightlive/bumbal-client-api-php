@@ -181,4 +181,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeLatestPosition()
     {
     }
+
+    /**
+     * Test attribute "include_zones"
+     */
+    public function testPropertyIncludeZones()
+    {
+    }
 }

@@ -190,6 +190,13 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+    }
+
+    /**
      * Test attribute "tag_names"
      */
     public function testPropertyTagNames()
@@ -197,16 +204,23 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "zones"
      */
-    public function testPropertyLinks()
+    public function testPropertyZones()
     {
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "zone_names"
      */
-    public function testPropertyTags()
+    public function testPropertyZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
     {
     }
 }

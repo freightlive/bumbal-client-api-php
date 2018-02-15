@@ -79,7 +79,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
         'include_depot_address_object' => 'bool',
-        'include_capacity_object' => 'bool'
+        'include_capacity_object' => 'bool',
+        'include_zones' => 'bool'
     ];
 
     /**
@@ -112,7 +113,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => null,
         'include_activity_note_tags' => null,
         'include_depot_address_object' => null,
-        'include_capacity_object' => null
+        'include_capacity_object' => null,
+        'include_zones' => null
     ];
 
     public static function swaggerTypes()
@@ -155,7 +157,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
         'include_depot_address_object' => 'include_depot_address_object',
-        'include_capacity_object' => 'include_capacity_object'
+        'include_capacity_object' => 'include_capacity_object',
+        'include_zones' => 'include_zones'
     ];
 
 
@@ -189,7 +192,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
         'include_depot_address_object' => 'setIncludeDepotAddressObject',
-        'include_capacity_object' => 'setIncludeCapacityObject'
+        'include_capacity_object' => 'setIncludeCapacityObject',
+        'include_zones' => 'setIncludeZones'
     ];
 
 
@@ -223,7 +227,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
         'include_depot_address_object' => 'getIncludeDepotAddressObject',
-        'include_capacity_object' => 'getIncludeCapacityObject'
+        'include_capacity_object' => 'getIncludeCapacityObject',
+        'include_zones' => 'getIncludeZones'
     ];
 
     public static function attributeMap()
@@ -283,6 +288,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
         $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
         $this->container['include_capacity_object'] = isset($data['include_capacity_object']) ? $data['include_capacity_object'] : null;
+        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
     }
 
     /**
@@ -852,6 +858,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeCapacityObject($include_capacity_object)
     {
         $this->container['include_capacity_object'] = $include_capacity_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zones
+     * @return bool
+     */
+    public function getIncludeZones()
+    {
+        return $this->container['include_zones'];
+    }
+
+    /**
+     * Sets include_zones
+     * @param bool $include_zones 
+     * @return $this
+     */
+    public function setIncludeZones($include_zones)
+    {
+        $this->container['include_zones'] = $include_zones;
 
         return $this;
     }

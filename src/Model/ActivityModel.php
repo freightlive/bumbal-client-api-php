@@ -108,6 +108,8 @@ class ActivityModel implements ArrayAccess
         'route' => '\BumbalClient\Model\RouteModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'object',
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
+        'zone_names' => 'object',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
@@ -177,6 +179,8 @@ class ActivityModel implements ArrayAccess
         'route' => null,
         'tags' => null,
         'tag_names' => null,
+        'zones' => null,
+        'zone_names' => null,
         'links' => null,
         'meta_data' => null,
         'notes' => null,
@@ -256,6 +260,8 @@ class ActivityModel implements ArrayAccess
         'route' => 'route',
         'tags' => 'tags',
         'tag_names' => 'tag_names',
+        'zones' => 'zones',
+        'zone_names' => 'zone_names',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
@@ -326,6 +332,8 @@ class ActivityModel implements ArrayAccess
         'route' => 'setRoute',
         'tags' => 'setTags',
         'tag_names' => 'setTagNames',
+        'zones' => 'setZones',
+        'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
@@ -396,6 +404,8 @@ class ActivityModel implements ArrayAccess
         'route' => 'getRoute',
         'tags' => 'getTags',
         'tag_names' => 'getTagNames',
+        'zones' => 'getZones',
+        'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
@@ -539,6 +549,8 @@ class ActivityModel implements ArrayAccess
         $this->container['route'] = isset($data['route']) ? $data['route'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
@@ -1752,6 +1764,48 @@ class ActivityModel implements ArrayAccess
     public function setTagNames($tag_names)
     {
         $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zones
+     * @return \BumbalClient\Model\ZoneModel[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return object
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param object $zone_names 
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
 
         return $this;
     }

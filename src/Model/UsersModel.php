@@ -70,9 +70,11 @@ class UsersModel implements ArrayAccess
         'addresses' => '\BumbalClient\Model\AddressModel[]',
         'removed' => 'bool',
         'active' => 'bool',
+        'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'object',
-        'links' => '\BumbalClient\Model\LinkModel[]',
-        'tags' => '\BumbalClient\Model\TagModel[]'
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
+        'zone_names' => 'object',
+        'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
     /**
@@ -96,9 +98,11 @@ class UsersModel implements ArrayAccess
         'addresses' => null,
         'removed' => null,
         'active' => null,
+        'tags' => null,
         'tag_names' => null,
-        'links' => null,
-        'tags' => null
+        'zones' => null,
+        'zone_names' => null,
+        'links' => null
     ];
 
     public static function swaggerTypes()
@@ -132,9 +136,11 @@ class UsersModel implements ArrayAccess
         'addresses' => 'addresses',
         'removed' => 'removed',
         'active' => 'active',
+        'tags' => 'tags',
         'tag_names' => 'tag_names',
-        'links' => 'links',
-        'tags' => 'tags'
+        'zones' => 'zones',
+        'zone_names' => 'zone_names',
+        'links' => 'links'
     ];
 
 
@@ -159,9 +165,11 @@ class UsersModel implements ArrayAccess
         'addresses' => 'setAddresses',
         'removed' => 'setRemoved',
         'active' => 'setActive',
+        'tags' => 'setTags',
         'tag_names' => 'setTagNames',
-        'links' => 'setLinks',
-        'tags' => 'setTags'
+        'zones' => 'setZones',
+        'zone_names' => 'setZoneNames',
+        'links' => 'setLinks'
     ];
 
 
@@ -186,9 +194,11 @@ class UsersModel implements ArrayAccess
         'addresses' => 'getAddresses',
         'removed' => 'getRemoved',
         'active' => 'getActive',
+        'tags' => 'getTags',
         'tag_names' => 'getTagNames',
-        'links' => 'getLinks',
-        'tags' => 'getTags'
+        'zones' => 'getZones',
+        'zone_names' => 'getZoneNames',
+        'links' => 'getLinks'
     ];
 
     public static function attributeMap()
@@ -258,9 +268,11 @@ class UsersModel implements ArrayAccess
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -652,6 +664,27 @@ class UsersModel implements ArrayAccess
     }
 
     /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
      * Gets tag_names
      * @return object
      */
@@ -673,6 +706,48 @@ class UsersModel implements ArrayAccess
     }
 
     /**
+     * Gets zones
+     * @return \BumbalClient\Model\ZoneModel[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return object
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param object $zone_names 
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
      * Gets links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -689,27 +764,6 @@ class UsersModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
-
-        return $this;
-    }
-
-    /**
-     * Gets tags
-     * @return \BumbalClient\Model\TagModel[]
-     */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-     * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
-     * @return $this
-     */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
 
         return $this;
     }

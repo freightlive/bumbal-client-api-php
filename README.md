@@ -195,6 +195,17 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
 *WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
+*ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
+*ZoneApi* | [**deleteZone**](docs/Api/ZoneApi.md#deletezone) | **DELETE** /zone/{zoneId} | Delete a Zone
+*ZoneApi* | [**retrieveListZone**](docs/Api/ZoneApi.md#retrievelistzone) | **PUT** /zone | Retrieve List of Zone
+*ZoneApi* | [**retrieveZone**](docs/Api/ZoneApi.md#retrievezone) | **GET** /zone/{zoneId} | Retrieve a Zone
+*ZoneApi* | [**updateZone**](docs/Api/ZoneApi.md#updatezone) | **PUT** /zone/{zoneId} | Update a Zone
+*ZonetypeApi* | [**createZoneType**](docs/Api/ZonetypeApi.md#createzonetype) | **POST** /zone-type | Add a new Zone type
+*ZonetypeApi* | [**deleteZoneType**](docs/Api/ZonetypeApi.md#deletezonetype) | **DELETE** /zone-type/{zoneTypeId} | Delete a Zone type
+*ZonetypeApi* | [**retrieveListZoneType**](docs/Api/ZonetypeApi.md#retrievelistzonetype) | **PUT** /zone-type | Retrieve List of Zone types
+*ZonetypeApi* | [**retrieveZoneType**](docs/Api/ZonetypeApi.md#retrievezonetype) | **GET** /zone-type/{zoneTypeId} | Retrieve a Zone type
+*ZonetypeApi* | [**setZoneType**](docs/Api/ZonetypeApi.md#setzonetype) | **POST** /zone-type/set | Set (create or update) Zone type
+*ZonetypeApi* | [**updateZoneType**](docs/Api/ZonetypeApi.md#updatezonetype) | **PUT** /zone-type/{zoneTypeId} | Update a Zone type
 
 
 ## Documentation For Models
@@ -300,6 +311,14 @@ Class | Method | HTTP request | Description
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)
  - [VariablesModel](docs/Model/VariablesModel.md)
+ - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
+ - [ZoneModel](docs/Model/ZoneModel.md)
+ - [ZoneOptionsModel](docs/Model/ZoneOptionsModel.md)
+ - [ZoneRangeFiltersModel](docs/Model/ZoneRangeFiltersModel.md)
+ - [ZoneRangeModel](docs/Model/ZoneRangeModel.md)
+ - [ZoneRangeOptionsModel](docs/Model/ZoneRangeOptionsModel.md)
+ - [ZoneRangeRetrieveListArguments](docs/Model/ZoneRangeRetrieveListArguments.md)
+ - [ZoneRetrieveListArguments](docs/Model/ZoneRetrieveListArguments.md)
 
 
 ## Documentation For Authorization

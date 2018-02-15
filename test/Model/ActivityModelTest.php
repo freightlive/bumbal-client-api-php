@@ -456,6 +456,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "zones"
+     */
+    public function testPropertyZones()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

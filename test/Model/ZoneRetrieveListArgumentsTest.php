@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModelTest
+ * ZoneRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * UsersOptionsModelTest Class Doc Comment
+ * ZoneRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description UsersOptionsModel
+// * @description ZoneRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ZoneRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,44 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UsersOptionsModel"
+     * Test "ZoneRetrieveListArguments"
      */
-    public function testUsersOptionsModel()
+    public function testZoneRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "include_addresses"
+     * Test attribute "options"
      */
-    public function testPropertyIncludeAddresses()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "include_user_meta_data"
+     * Test attribute "filters"
      */
-    public function testPropertyIncludeUserMetaData()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "include_user_tags"
+     * Test attribute "limit"
      */
-    public function testPropertyIncludeUserTags()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "include_party_name"
+     * Test attribute "offset"
      */
-    public function testPropertyIncludePartyName()
+    public function testPropertyOffset()
     {
     }
 
     /**
-     * Test attribute "include_zones"
+     * Test attribute "search_text"
      */
-    public function testPropertyIncludeZones()
+    public function testPropertySearchText()
     {
     }
 }

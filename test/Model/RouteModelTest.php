@@ -363,4 +363,25 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTags()
     {
     }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "zones"
+     */
+    public function testPropertyZones()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
+    {
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModel
+ * ZoneModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * UsersOptionsModel Class Doc Comment
+ * ZoneModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModel implements ArrayAccess
+class ZoneModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,15 @@ class UsersOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UsersOptionsModel';
+    protected static $swaggerModelName = 'ZoneModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_addresses' => 'bool',
-        'include_user_meta_data' => 'bool',
-        'include_user_tags' => 'bool',
-        'include_party_name' => 'bool',
-        'include_zones' => 'bool'
+        'id' => 'int',
+        'name' => 'string'
     ];
 
     /**
@@ -66,11 +63,8 @@ class UsersOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_addresses' => null,
-        'include_user_meta_data' => null,
-        'include_user_tags' => null,
-        'include_party_name' => null,
-        'include_zones' => null
+        'id' => 'int64',
+        'name' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +82,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_addresses' => 'include_addresses',
-        'include_user_meta_data' => 'include_user_meta_data',
-        'include_user_tags' => 'include_user_tags',
-        'include_party_name' => 'include_party_name',
-        'include_zones' => 'include_zones'
+        'id' => 'id',
+        'name' => 'name'
     ];
 
 
@@ -101,11 +92,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_addresses' => 'setIncludeAddresses',
-        'include_user_meta_data' => 'setIncludeUserMetaData',
-        'include_user_tags' => 'setIncludeUserTags',
-        'include_party_name' => 'setIncludePartyName',
-        'include_zones' => 'setIncludeZones'
+        'id' => 'setId',
+        'name' => 'setName'
     ];
 
 
@@ -114,11 +102,8 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_addresses' => 'getIncludeAddresses',
-        'include_user_meta_data' => 'getIncludeUserMetaData',
-        'include_user_tags' => 'getIncludeUserTags',
-        'include_party_name' => 'getIncludePartyName',
-        'include_zones' => 'getIncludeZones'
+        'id' => 'getId',
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -152,11 +137,8 @@ class UsersOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_addresses'] = isset($data['include_addresses']) ? $data['include_addresses'] : null;
-        $this->container['include_user_meta_data'] = isset($data['include_user_meta_data']) ? $data['include_user_meta_data'] : null;
-        $this->container['include_user_tags'] = isset($data['include_user_tags']) ? $data['include_user_tags'] : null;
-        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
-        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -168,6 +150,9 @@ class UsersOptionsModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -180,111 +165,51 @@ class UsersOptionsModel implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['id'] === null) {
+            return false;
+        }
         return true;
     }
 
 
     /**
-     * Gets include_addresses
-     * @return bool
+     * Gets id
+     * @return int
      */
-    public function getIncludeAddresses()
+    public function getId()
     {
-        return $this->container['include_addresses'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets include_addresses
-     * @param bool $include_addresses 
+     * Sets id
+     * @param int $id Unique ID
      * @return $this
      */
-    public function setIncludeAddresses($include_addresses)
+    public function setId($id)
     {
-        $this->container['include_addresses'] = $include_addresses;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets include_user_meta_data
-     * @return bool
+     * Gets name
+     * @return string
      */
-    public function getIncludeUserMetaData()
+    public function getName()
     {
-        return $this->container['include_user_meta_data'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets include_user_meta_data
-     * @param bool $include_user_meta_data 
+     * Sets name
+     * @param string $name Zone Name
      * @return $this
      */
-    public function setIncludeUserMetaData($include_user_meta_data)
+    public function setName($name)
     {
-        $this->container['include_user_meta_data'] = $include_user_meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_user_tags
-     * @return bool
-     */
-    public function getIncludeUserTags()
-    {
-        return $this->container['include_user_tags'];
-    }
-
-    /**
-     * Sets include_user_tags
-     * @param bool $include_user_tags 
-     * @return $this
-     */
-    public function setIncludeUserTags($include_user_tags)
-    {
-        $this->container['include_user_tags'] = $include_user_tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_party_name
-     * @return bool
-     */
-    public function getIncludePartyName()
-    {
-        return $this->container['include_party_name'];
-    }
-
-    /**
-     * Sets include_party_name
-     * @param bool $include_party_name 
-     * @return $this
-     */
-    public function setIncludePartyName($include_party_name)
-    {
-        $this->container['include_party_name'] = $include_party_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_zones
-     * @return bool
-     */
-    public function getIncludeZones()
-    {
-        return $this->container['include_zones'];
-    }
-
-    /**
-     * Sets include_zones
-     * @param bool $include_zones 
-     * @return $this
-     */
-    public function setIncludeZones($include_zones)
-    {
-        $this->container['include_zones'] = $include_zones;
+        $this->container['name'] = $name;
 
         return $this;
     }

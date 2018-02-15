@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersOptionsModel
+ * ZoneRangeRetrieveListArguments
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * UsersOptionsModel Class Doc Comment
+ * ZoneRangeRetrieveListArguments Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UsersOptionsModel implements ArrayAccess
+class ZoneRangeRetrieveListArguments implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,18 @@ class UsersOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'UsersOptionsModel';
+    protected static $swaggerModelName = 'ZoneRangeRetrieveListArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_addresses' => 'bool',
-        'include_user_meta_data' => 'bool',
-        'include_user_tags' => 'bool',
-        'include_party_name' => 'bool',
-        'include_zones' => 'bool'
+        'options' => '\BumbalClient\Model\ZoneRangeOptionsModel',
+        'filters' => '\BumbalClient\Model\ZoneRangeFiltersModel',
+        'limit' => 'int',
+        'offset' => 'int',
+        'search_text' => 'string'
     ];
 
     /**
@@ -66,11 +66,11 @@ class UsersOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_addresses' => null,
-        'include_user_meta_data' => null,
-        'include_user_tags' => null,
-        'include_party_name' => null,
-        'include_zones' => null
+        'options' => null,
+        'filters' => null,
+        'limit' => 'int64',
+        'offset' => 'int64',
+        'search_text' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +88,11 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_addresses' => 'include_addresses',
-        'include_user_meta_data' => 'include_user_meta_data',
-        'include_user_tags' => 'include_user_tags',
-        'include_party_name' => 'include_party_name',
-        'include_zones' => 'include_zones'
+        'options' => 'options',
+        'filters' => 'filters',
+        'limit' => 'limit',
+        'offset' => 'offset',
+        'search_text' => 'search_text'
     ];
 
 
@@ -101,11 +101,11 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_addresses' => 'setIncludeAddresses',
-        'include_user_meta_data' => 'setIncludeUserMetaData',
-        'include_user_tags' => 'setIncludeUserTags',
-        'include_party_name' => 'setIncludePartyName',
-        'include_zones' => 'setIncludeZones'
+        'options' => 'setOptions',
+        'filters' => 'setFilters',
+        'limit' => 'setLimit',
+        'offset' => 'setOffset',
+        'search_text' => 'setSearchText'
     ];
 
 
@@ -114,11 +114,11 @@ class UsersOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_addresses' => 'getIncludeAddresses',
-        'include_user_meta_data' => 'getIncludeUserMetaData',
-        'include_user_tags' => 'getIncludeUserTags',
-        'include_party_name' => 'getIncludePartyName',
-        'include_zones' => 'getIncludeZones'
+        'options' => 'getOptions',
+        'filters' => 'getFilters',
+        'limit' => 'getLimit',
+        'offset' => 'getOffset',
+        'search_text' => 'getSearchText'
     ];
 
     public static function attributeMap()
@@ -152,11 +152,11 @@ class UsersOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_addresses'] = isset($data['include_addresses']) ? $data['include_addresses'] : null;
-        $this->container['include_user_meta_data'] = isset($data['include_user_meta_data']) ? $data['include_user_meta_data'] : null;
-        $this->container['include_user_tags'] = isset($data['include_user_tags']) ? $data['include_user_tags'] : null;
-        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
-        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
     }
 
     /**
@@ -185,106 +185,106 @@ class UsersOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_addresses
-     * @return bool
+     * Gets options
+     * @return \BumbalClient\Model\ZoneRangeOptionsModel
      */
-    public function getIncludeAddresses()
+    public function getOptions()
     {
-        return $this->container['include_addresses'];
+        return $this->container['options'];
     }
 
     /**
-     * Sets include_addresses
-     * @param bool $include_addresses 
+     * Sets options
+     * @param \BumbalClient\Model\ZoneRangeOptionsModel $options 
      * @return $this
      */
-    public function setIncludeAddresses($include_addresses)
+    public function setOptions($options)
     {
-        $this->container['include_addresses'] = $include_addresses;
+        $this->container['options'] = $options;
 
         return $this;
     }
 
     /**
-     * Gets include_user_meta_data
-     * @return bool
+     * Gets filters
+     * @return \BumbalClient\Model\ZoneRangeFiltersModel
      */
-    public function getIncludeUserMetaData()
+    public function getFilters()
     {
-        return $this->container['include_user_meta_data'];
+        return $this->container['filters'];
     }
 
     /**
-     * Sets include_user_meta_data
-     * @param bool $include_user_meta_data 
+     * Sets filters
+     * @param \BumbalClient\Model\ZoneRangeFiltersModel $filters 
      * @return $this
      */
-    public function setIncludeUserMetaData($include_user_meta_data)
+    public function setFilters($filters)
     {
-        $this->container['include_user_meta_data'] = $include_user_meta_data;
+        $this->container['filters'] = $filters;
 
         return $this;
     }
 
     /**
-     * Gets include_user_tags
-     * @return bool
+     * Gets limit
+     * @return int
      */
-    public function getIncludeUserTags()
+    public function getLimit()
     {
-        return $this->container['include_user_tags'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets include_user_tags
-     * @param bool $include_user_tags 
+     * Sets limit
+     * @param int $limit 
      * @return $this
      */
-    public function setIncludeUserTags($include_user_tags)
+    public function setLimit($limit)
     {
-        $this->container['include_user_tags'] = $include_user_tags;
+        $this->container['limit'] = $limit;
 
         return $this;
     }
 
     /**
-     * Gets include_party_name
-     * @return bool
+     * Gets offset
+     * @return int
      */
-    public function getIncludePartyName()
+    public function getOffset()
     {
-        return $this->container['include_party_name'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets include_party_name
-     * @param bool $include_party_name 
+     * Sets offset
+     * @param int $offset 
      * @return $this
      */
-    public function setIncludePartyName($include_party_name)
+    public function setOffset($offset)
     {
-        $this->container['include_party_name'] = $include_party_name;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets include_zones
-     * @return bool
+     * Gets search_text
+     * @return string
      */
-    public function getIncludeZones()
+    public function getSearchText()
     {
-        return $this->container['include_zones'];
+        return $this->container['search_text'];
     }
 
     /**
-     * Sets include_zones
-     * @param bool $include_zones 
+     * Sets search_text
+     * @param string $search_text 
      * @return $this
      */
-    public function setIncludeZones($include_zones)
+    public function setSearchText($search_text)
     {
-        $this->container['include_zones'] = $include_zones;
+        $this->container['search_text'] = $search_text;
 
         return $this;
     }

@@ -19,9 +19,11 @@ Name | Type | Description | Notes
 **addresses** | [**\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **active** | **bool** | Whether user is still active or not | [optional] 
-**tag_names** | **object** |  | [optional] 
-**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**tag_names** | **object** |  | [optional] 
+**zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
+**zone_names** | **object** |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

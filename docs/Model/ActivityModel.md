@@ -57,6 +57,8 @@ Name | Type | Description | Notes
 **route** | [**\BumbalClient\Model\RouteModel[]**](RouteModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **tag_names** | **object** |  | [optional] 
+**zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
+**zone_names** | **object** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
