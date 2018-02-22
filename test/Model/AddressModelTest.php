@@ -190,6 +190,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "country_name"
+     */
+    public function testPropertyCountryName()
+    {
+    }
+
+    /**
      * Test attribute "time_from"
      */
     public function testPropertyTimeFrom()

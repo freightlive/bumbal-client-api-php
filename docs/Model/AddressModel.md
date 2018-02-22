@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **city** | **string** |  | [optional] 
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
+**country_name** | **string** |  | [optional] 
 **time_from** | **string** |  | [optional] 
 **time_to** | **string** |  | [optional] 
 **duration** | **int** | Default duration for activities on this address in minutes | [optional] 

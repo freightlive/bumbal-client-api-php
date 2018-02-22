@@ -183,6 +183,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "planned_driving_duration"
+     */
+    public function testPropertyPlannedDrivingDuration()
+    {
+    }
+
+    /**
      * Test attribute "planned_driving_distance"
      */
     public function testPropertyPlannedDrivingDistance()

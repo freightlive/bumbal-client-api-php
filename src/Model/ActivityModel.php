@@ -69,6 +69,7 @@ class ActivityModel implements ArrayAccess
         'top_priority' => 'bool',
         'sequence_nr' => 'int',
         'planned_driving_time' => 'int',
+        'planned_driving_duration' => 'int',
         'planned_driving_distance' => 'int',
         'reference' => 'string',
         'description' => 'string',
@@ -140,6 +141,7 @@ class ActivityModel implements ArrayAccess
         'top_priority' => null,
         'sequence_nr' => 'int64',
         'planned_driving_time' => 'int64',
+        'planned_driving_duration' => 'int64',
         'planned_driving_distance' => 'int64',
         'reference' => null,
         'description' => null,
@@ -221,6 +223,7 @@ class ActivityModel implements ArrayAccess
         'top_priority' => 'top_priority',
         'sequence_nr' => 'sequence_nr',
         'planned_driving_time' => 'planned_driving_time',
+        'planned_driving_duration' => 'planned_driving_duration',
         'planned_driving_distance' => 'planned_driving_distance',
         'reference' => 'reference',
         'description' => 'description',
@@ -293,6 +296,7 @@ class ActivityModel implements ArrayAccess
         'top_priority' => 'setTopPriority',
         'sequence_nr' => 'setSequenceNr',
         'planned_driving_time' => 'setPlannedDrivingTime',
+        'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'reference' => 'setReference',
         'description' => 'setDescription',
@@ -365,6 +369,7 @@ class ActivityModel implements ArrayAccess
         'top_priority' => 'getTopPriority',
         'sequence_nr' => 'getSequenceNr',
         'planned_driving_time' => 'getPlannedDrivingTime',
+        'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'reference' => 'getReference',
         'description' => 'getDescription',
@@ -510,6 +515,7 @@ class ActivityModel implements ArrayAccess
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
         $this->container['sequence_nr'] = isset($data['sequence_nr']) ? $data['sequence_nr'] : null;
         $this->container['planned_driving_time'] = isset($data['planned_driving_time']) ? $data['planned_driving_time'] : null;
+        $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -939,12 +945,33 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets planned_driving_time
-     * @param int $planned_driving_time Driving time from the activity before this one
+     * @param int $planned_driving_time Deprecated! Driving time from the activity before this one
      * @return $this
      */
     public function setPlannedDrivingTime($planned_driving_time)
     {
         $this->container['planned_driving_time'] = $planned_driving_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_driving_duration
+     * @return int
+     */
+    public function getPlannedDrivingDuration()
+    {
+        return $this->container['planned_driving_duration'];
+    }
+
+    /**
+     * Sets planned_driving_duration
+     * @param int $planned_driving_duration Driving time from the activity before this one
+     * @return $this
+     */
+    public function setPlannedDrivingDuration($planned_driving_duration)
+    {
+        $this->container['planned_driving_duration'] = $planned_driving_duration;
 
         return $this;
     }

@@ -165,12 +165,13 @@ class PlannerApi
      *
      * Apply a planning schema
      *
+     * @param \BumbalClient\Model\ApplyPlanningArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function plannerApplyPlanning()
+    public function plannerApplyPlanning($arguments)
     {
-        list($response) = $this->plannerApplyPlanningWithHttpInfo();
+        list($response) = $this->plannerApplyPlanningWithHttpInfo($arguments);
         return $response;
     }
 
@@ -179,11 +180,16 @@ class PlannerApi
      *
      * Apply a planning schema
      *
+     * @param \BumbalClient\Model\ApplyPlanningArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function plannerApplyPlanningWithHttpInfo()
+    public function plannerApplyPlanningWithHttpInfo($arguments)
     {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling plannerApplyPlanning');
+        }
         // parse inputs
         $resourcePath = "/planner/apply-planning-route";
         $httpBody = '';
@@ -196,6 +202,11 @@ class PlannerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -238,12 +249,13 @@ class PlannerApi
      *
      * Plan a certain activity in any fitting route
      *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function plannerAutoPlan()
+    public function plannerAutoPlan($arguments)
     {
-        list($response) = $this->plannerAutoPlanWithHttpInfo();
+        list($response) = $this->plannerAutoPlanWithHttpInfo($arguments);
         return $response;
     }
 
@@ -252,11 +264,16 @@ class PlannerApi
      *
      * Plan a certain activity in any fitting route
      *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function plannerAutoPlanWithHttpInfo()
+    public function plannerAutoPlanWithHttpInfo($arguments)
     {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling plannerAutoPlan');
+        }
         // parse inputs
         $resourcePath = "/planner/auto-plan";
         $httpBody = '';
@@ -269,6 +286,11 @@ class PlannerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -311,12 +333,13 @@ class PlannerApi
      *
      * Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
      *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function plannerAutoPlanResult()
+    public function plannerAutoPlanResult($arguments)
     {
-        list($response) = $this->plannerAutoPlanResultWithHttpInfo();
+        list($response) = $this->plannerAutoPlanResultWithHttpInfo($arguments);
         return $response;
     }
 
@@ -325,11 +348,16 @@ class PlannerApi
      *
      * Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
      *
+     * @param \BumbalClient\Model\AutoPlanArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function plannerAutoPlanResultWithHttpInfo()
+    public function plannerAutoPlanResultWithHttpInfo($arguments)
     {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling plannerAutoPlanResult');
+        }
         // parse inputs
         $resourcePath = "/planner/auto-plan-result";
         $httpBody = '';
@@ -342,6 +370,11 @@ class PlannerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
 
         // for model (json/xml)
         if (isset($_tempBody)) {

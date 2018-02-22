@@ -65,7 +65,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerApplyPlanning**
-> \BumbalClient\Model\ApiResponse plannerApplyPlanning()
+> \BumbalClient\Model\ApiResponse plannerApplyPlanning($arguments)
 
 Apply a planning schema
 
@@ -82,9 +82,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\ApplyPlanningArguments(); // \BumbalClient\Model\ApplyPlanningArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerApplyPlanning();
+    $result = $api_instance->plannerApplyPlanning($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->plannerApplyPlanning: ', $e->getMessage(), PHP_EOL;
@@ -93,7 +94,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\ApplyPlanningArguments**](../Model/ApplyPlanningArguments.md)| Request Arguments |
 
 ### Return type
 
@@ -111,7 +115,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerAutoPlan**
-> \BumbalClient\Model\ApiResponse plannerAutoPlan()
+> \BumbalClient\Model\ApiResponse plannerAutoPlan($arguments)
 
 Plan a certain activity in any fitting route
 
@@ -128,9 +132,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerAutoPlan();
+    $result = $api_instance->plannerAutoPlan($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->plannerAutoPlan: ', $e->getMessage(), PHP_EOL;
@@ -139,7 +144,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
@@ -157,7 +165,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **plannerAutoPlanResult**
-> \BumbalClient\Model\ApiResponse plannerAutoPlanResult()
+> \BumbalClient\Model\ApiResponse plannerAutoPlanResult($arguments)
 
 Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 
@@ -174,9 +182,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerAutoPlanResult();
+    $result = $api_instance->plannerAutoPlanResult($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->plannerAutoPlanResult: ', $e->getMessage(), PHP_EOL;
@@ -185,7 +194,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 

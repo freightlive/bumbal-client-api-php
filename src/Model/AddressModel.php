@@ -70,6 +70,7 @@ class AddressModel implements ArrayAccess
         'city' => 'string',
         'state' => 'string',
         'iso_country' => 'string',
+        'country_name' => 'string',
         'time_from' => 'string',
         'time_to' => 'string',
         'duration' => 'int',
@@ -108,6 +109,7 @@ class AddressModel implements ArrayAccess
         'city' => null,
         'state' => null,
         'iso_country' => null,
+        'country_name' => null,
         'time_from' => null,
         'time_to' => null,
         'duration' => null,
@@ -156,6 +158,7 @@ class AddressModel implements ArrayAccess
         'city' => 'city',
         'state' => 'state',
         'iso_country' => 'iso_country',
+        'country_name' => 'country_name',
         'time_from' => 'time_from',
         'time_to' => 'time_to',
         'duration' => 'duration',
@@ -195,6 +198,7 @@ class AddressModel implements ArrayAccess
         'city' => 'setCity',
         'state' => 'setState',
         'iso_country' => 'setIsoCountry',
+        'country_name' => 'setCountryName',
         'time_from' => 'setTimeFrom',
         'time_to' => 'setTimeTo',
         'duration' => 'setDuration',
@@ -234,6 +238,7 @@ class AddressModel implements ArrayAccess
         'city' => 'getCity',
         'state' => 'getState',
         'iso_country' => 'getIsoCountry',
+        'country_name' => 'getCountryName',
         'time_from' => 'getTimeFrom',
         'time_to' => 'getTimeTo',
         'duration' => 'getDuration',
@@ -298,6 +303,7 @@ class AddressModel implements ArrayAccess
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['iso_country'] = isset($data['iso_country']) ? $data['iso_country'] : null;
+        $this->container['country_name'] = isset($data['country_name']) ? $data['country_name'] : null;
         $this->container['time_from'] = isset($data['time_from']) ? $data['time_from'] : null;
         $this->container['time_to'] = isset($data['time_to']) ? $data['time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
@@ -678,6 +684,27 @@ class AddressModel implements ArrayAccess
     public function setIsoCountry($iso_country)
     {
         $this->container['iso_country'] = $iso_country;
+
+        return $this;
+    }
+
+    /**
+     * Gets country_name
+     * @return string
+     */
+    public function getCountryName()
+    {
+        return $this->container['country_name'];
+    }
+
+    /**
+     * Sets country_name
+     * @param string $country_name 
+     * @return $this
+     */
+    public function setCountryName($country_name)
+    {
+        $this->container['country_name'] = $country_name;
 
         return $this;
     }
