@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique ID | 
+**id** | **int** | Unique ID | [optional] 
 **link_id** | **string** | The external Link ID | [optional] 
 **object_type** | **int** | The object type id which this link is connected to | [optional] 
 **object_id** | **int** | The object ID which this link is connected to | [optional] 

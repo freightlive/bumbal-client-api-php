@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
+**id** | **int** |  | [optional] 
 **party_id** | **int** |  | [optional] 
 **summary** | **string** |  | [optional] 
 **full_name** | **string** |  | [optional] 
@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **city** | **string** |  | [optional] 
 **state** | **string** |  | [optional] 
 **iso_country** | **string** |  | [optional] 
-**emails** | [**\BumbalClient\Model\EmailModel[]**](EmailModel.md) |  | [optional] 
-**phone_nrs** | [**\BumbalClient\Model\PhoneNrModel[]**](PhoneNrModel.md) |  | [optional] 
+**emails** | [**\BumbalClient\BumbalClient\Model\EmailModel[]**](EmailModel.md) |  | [optional] 
+**phone_nrs** | [**\BumbalClient\BumbalClient\Model\PhoneNrModel[]**](PhoneNrModel.md) |  | [optional] 
 **contact_person** | **string** |  | [optional] 
 **latitude** | **string** |  | [optional] 
 **longitude** | **string** |  | [optional] 

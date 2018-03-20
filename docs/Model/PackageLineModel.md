@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique Identifier | 
+**id** | **int** | Unique Identifier | [optional] 
 **activity_id** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
 **nr** | **string** | Number of this PackageLine | [optional] 
 **status_id** | **int** | StatusId of this PackageLine, 31: package_line_cancelled, 23: package_line_incomplete, 24: package_line_new, 42: package_line_awaiting, 25: package_line_accepted, 10: package_line_planned, 11: package_line_in_progress, 12: package_line_executed | [optional] 
@@ -21,12 +21,12 @@ Name | Type | Description | Notes
 **hs_code** | **string** | Harmonized System code for packages in this package line | [optional] 
 **description** | **string** | description of this package_line | [optional] 
 **applied_capacities** | **object** |  | [optional] 
-**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
-**activity_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) | links to activities connected to this package_line | [optional] 
-**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
-**notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
-**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
+**capacities** | [**\BumbalClient\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
+**activity_links** | [**\BumbalClient\BumbalClient\Model\LinkModel[]**](LinkModel.md) | links to activities connected to this package_line | [optional] 
+**links** | [**\BumbalClient\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**notes** | [**\BumbalClient\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
+**files** | [**\BumbalClient\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 

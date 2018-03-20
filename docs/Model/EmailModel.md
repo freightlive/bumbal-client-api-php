@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique ID | 
+**id** | **int** | Unique ID | [optional] 
 **address_id** | **int** | Address ID asociated with this email address | [optional] 
 **email** | **string** | Email address | [optional] 
 **description** | **string** | Email address description | [optional] 

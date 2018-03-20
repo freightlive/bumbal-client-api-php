@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**plannerAddActivitiesToRoute**](PlannerApi.md#plannerAddActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities To Route
-[**plannerApplyPlanning**](PlannerApi.md#plannerApplyPlanning) | **POST** /planner/apply-planning-route | Apply a planning schema
-[**plannerAutoPlan**](PlannerApi.md#plannerAutoPlan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
-[**plannerAutoPlanResult**](PlannerApi.md#plannerAutoPlanResult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
-[**plannerCalculateDriveTime**](PlannerApi.md#plannerCalculateDriveTime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
-[**plannerChangeActivitySequence**](PlannerApi.md#plannerChangeActivitySequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
-[**plannerCheckAvailability**](PlannerApi.md#plannerCheckAvailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
-[**plannerCheckAvailabilityResult**](PlannerApi.md#plannerCheckAvailabilityResult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
-[**plannerLockActivities**](PlannerApi.md#plannerLockActivities) | **POST** /planner/lock-activities | Lock Activities on Route
-[**plannerRemoveActivitiesFromRoute**](PlannerApi.md#plannerRemoveActivitiesFromRoute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
-[**plannerStartAutoPlan**](PlannerApi.md#plannerStartAutoPlan) | **POST** /planner/start-auto-plan | start auto plan for a known uuid
-[**plannerStartCheckAvailability**](PlannerApi.md#plannerStartCheckAvailability) | **POST** /planner/start-check-availability | start check availability for a known uuid
+[**addActivitiesToRoute**](PlannerApi.md#addActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities To Route
+[**applyPlanning**](PlannerApi.md#applyPlanning) | **POST** /planner/apply-planning-route | Apply a planning schema
+[**autoPlan**](PlannerApi.md#autoPlan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
+[**autoPlanResult**](PlannerApi.md#autoPlanResult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
+[**calculateDriveTime**](PlannerApi.md#calculateDriveTime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
+[**changeActivitySequence**](PlannerApi.md#changeActivitySequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
+[**checkAvailability**](PlannerApi.md#checkAvailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
+[**checkAvailabilityResult**](PlannerApi.md#checkAvailabilityResult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
+[**lockActivities**](PlannerApi.md#lockActivities) | **POST** /planner/lock-activities | Lock Activities on Route
+[**removeActivitiesFromRoute**](PlannerApi.md#removeActivitiesFromRoute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+[**startAutoPlan**](PlannerApi.md#startAutoPlan) | **POST** /planner/start-auto-plan | start auto plan for a known uuid
+[**startCheckAvailability**](PlannerApi.md#startCheckAvailability) | **POST** /planner/start-check-availability | start check availability for a known uuid
 
 
-# **plannerAddActivitiesToRoute**
-> \BumbalClient\Model\ApiResponse plannerAddActivitiesToRoute()
+# **addActivitiesToRoute**
+> \BumbalClient\BumbalClient\Model\ApiResponse addActivitiesToRoute()
 
 Add Activities To Route
 
@@ -31,17 +31,22 @@ Add Activities To Route
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerAddActivitiesToRoute();
+    $result = $apiInstance->addActivitiesToRoute();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerAddActivitiesToRoute: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->addActivitiesToRoute: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -51,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -64,8 +69,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerApplyPlanning**
-> \BumbalClient\Model\ApiResponse plannerApplyPlanning($arguments)
+# **applyPlanning**
+> \BumbalClient\BumbalClient\Model\ApiResponse applyPlanning($arguments)
 
 Apply a planning schema
 
@@ -77,18 +82,23 @@ Apply a planning schema
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\ApplyPlanningArguments(); // \BumbalClient\Model\ApplyPlanningArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\ApplyPlanningArguments(); // \BumbalClient\BumbalClient\Model\ApplyPlanningArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerApplyPlanning($arguments);
+    $result = $apiInstance->applyPlanning($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerApplyPlanning: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->applyPlanning: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -97,11 +107,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\ApplyPlanningArguments**](../Model/ApplyPlanningArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\ApplyPlanningArguments**](../Model/ApplyPlanningArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -114,8 +124,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerAutoPlan**
-> \BumbalClient\Model\ApiResponse plannerAutoPlan($arguments)
+# **autoPlan**
+> \BumbalClient\BumbalClient\Model\ApiResponse autoPlan($arguments)
 
 Plan a certain activity in any fitting route
 
@@ -127,18 +137,23 @@ Plan a certain activity in any fitting route
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerAutoPlan($arguments);
+    $result = $apiInstance->autoPlan($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerAutoPlan: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->autoPlan: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -147,11 +162,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -164,8 +179,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerAutoPlanResult**
-> \BumbalClient\Model\ApiResponse plannerAutoPlanResult($arguments)
+# **autoPlanResult**
+> \BumbalClient\BumbalClient\Model\ApiResponse autoPlanResult($arguments)
 
 Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 
@@ -177,18 +192,23 @@ Fetch current result for a auto plan Request. This could be done, in progress or
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerAutoPlanResult($arguments);
+    $result = $apiInstance->autoPlanResult($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerAutoPlanResult: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->autoPlanResult: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -197,11 +217,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -214,8 +234,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerCalculateDriveTime**
-> \BumbalClient\Model\ApiResponse plannerCalculateDriveTime()
+# **calculateDriveTime**
+> \BumbalClient\BumbalClient\Model\ApiResponse calculateDriveTime()
 
 Calculate Drive Time
 
@@ -227,17 +247,22 @@ Calculate Drive Time
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerCalculateDriveTime();
+    $result = $apiInstance->calculateDriveTime();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerCalculateDriveTime: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->calculateDriveTime: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -247,7 +272,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -260,8 +285,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerChangeActivitySequence**
-> \BumbalClient\Model\ApiResponse plannerChangeActivitySequence()
+# **changeActivitySequence**
+> \BumbalClient\BumbalClient\Model\ApiResponse changeActivitySequence()
 
 Change Activity Sequence
 
@@ -273,17 +298,22 @@ Change Activity Sequence
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerChangeActivitySequence();
+    $result = $apiInstance->changeActivitySequence();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerChangeActivitySequence: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->changeActivitySequence: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -293,7 +323,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -306,8 +336,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerCheckAvailability**
-> \BumbalClient\Model\ApiResponse plannerCheckAvailability($arguments)
+# **checkAvailability**
+> \BumbalClient\BumbalClient\Model\ApiResponse checkAvailability($arguments)
 
 check availability in planning for a certain set of activity properties
 
@@ -319,18 +349,23 @@ check availability in planning for a certain set of activity properties
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerCheckAvailability($arguments);
+    $result = $apiInstance->checkAvailability($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerCheckAvailability: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->checkAvailability: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -339,11 +374,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -356,8 +391,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerCheckAvailabilityResult**
-> \BumbalClient\Model\ApiResponse plannerCheckAvailabilityResult()
+# **checkAvailabilityResult**
+> \BumbalClient\BumbalClient\Model\ApiResponse checkAvailabilityResult()
 
 Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 
@@ -369,17 +404,22 @@ Fetch current result for a checkAvailability Request. This could be done, in pro
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerCheckAvailabilityResult();
+    $result = $apiInstance->checkAvailabilityResult();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerCheckAvailabilityResult: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->checkAvailabilityResult: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -389,7 +429,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -402,8 +442,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerLockActivities**
-> \BumbalClient\Model\ApiResponse plannerLockActivities()
+# **lockActivities**
+> \BumbalClient\BumbalClient\Model\ApiResponse lockActivities()
 
 Lock Activities on Route
 
@@ -415,17 +455,22 @@ Lock Activities on Route
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerLockActivities();
+    $result = $apiInstance->lockActivities();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerLockActivities: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->lockActivities: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -435,7 +480,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -448,8 +493,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerRemoveActivitiesFromRoute**
-> \BumbalClient\Model\ApiResponse plannerRemoveActivitiesFromRoute()
+# **removeActivitiesFromRoute**
+> \BumbalClient\BumbalClient\Model\ApiResponse removeActivitiesFromRoute()
 
 Remove Activities From Route
 
@@ -461,17 +506,22 @@ Remove Activities From Route
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->plannerRemoveActivitiesFromRoute();
+    $result = $apiInstance->removeActivitiesFromRoute();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerRemoveActivitiesFromRoute: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->removeActivitiesFromRoute: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -481,7 +531,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -494,8 +544,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerStartAutoPlan**
-> \BumbalClient\Model\ApiResponse plannerStartAutoPlan($arguments)
+# **startAutoPlan**
+> \BumbalClient\BumbalClient\Model\ApiResponse startAutoPlan($arguments)
 
 start auto plan for a known uuid
 
@@ -507,18 +557,23 @@ start auto plan action for a set of activity and route filters
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerStartAutoPlan($arguments);
+    $result = $apiInstance->startAutoPlan($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerStartAutoPlan: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->startAutoPlan: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -527,11 +582,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -544,8 +599,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **plannerStartCheckAvailability**
-> \BumbalClient\Model\ApiResponse plannerStartCheckAvailability($arguments)
+# **startCheckAvailability**
+> \BumbalClient\BumbalClient\Model\ApiResponse startCheckAvailability($arguments)
 
 start check availability for a known uuid
 
@@ -557,18 +612,23 @@ check availability in planning for a certain set of activity properties
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\PlannerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
-    $result = $api_instance->plannerStartCheckAvailability($arguments);
+    $result = $apiInstance->startCheckAvailability($arguments);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->plannerStartCheckAvailability: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PlannerApi->startCheckAvailability: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -577,11 +637,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

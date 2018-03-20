@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | SayWhen Visit ID | 
+**id** | **string** | SayWhen Visit ID | [optional] 
 **current_state** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **offered_by_owner** | **string** | offered_by_owner | [optional] 

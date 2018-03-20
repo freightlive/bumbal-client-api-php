@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique Identifier | 
+**id** | **int** | Unique Identifier | [optional] 
 **name** | **string** | Recurrence name | [optional] 
 **type_id** | **int** | recurrence type_id, 11:activity, 24:route | [optional] 
 **recurrence_type_name** | **string** | recurrence typename, activity or route | [optional] 
@@ -18,8 +18,8 @@ Name | Type | Description | Notes
 **summary** | **string** | summary of recurrence | [optional] 
 **next_run** | [**\DateTime**](\DateTime.md) | Next date on which a new recurrence will be added | [optional] 
 **last_run** | [**\DateTime**](\DateTime.md) | Last date on which a new recurrence was added | [optional] 
-**tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**tags** | [**\BumbalClient\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**meta_data** | [**\BumbalClient\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **updated_by_name** | **string** | Recurrence updated by user full name | [optional] 

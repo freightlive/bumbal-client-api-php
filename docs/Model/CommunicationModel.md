@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | 
+**id** | **int** |  | [optional] 
 **saywhen** | **bool** | Whether or not activity should be synced with Saywhen | [optional] 
 **bumbal** | **bool** | Whether or not activity is handled by Bumbal Communication Server | [optional] 
 **send_invite** | **bool** | Send invite | [optional] 
