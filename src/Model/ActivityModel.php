@@ -100,7 +100,7 @@ class ActivityModel implements ArrayAccess
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
         'allowed_drivers' => 'object',
-        'allowed_drivers_links' => '\BumbalClient\Model\LinkModel',
+        'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
@@ -1614,7 +1614,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets allowed_drivers_links
-     * @return \BumbalClient\Model\LinkModel
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getAllowedDriversLinks()
     {
@@ -1623,7 +1623,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers_links
-     * @param \BumbalClient\Model\LinkModel $allowed_drivers_links 
+     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links 
      * @return $this
      */
     public function setAllowedDriversLinks($allowed_drivers_links)
