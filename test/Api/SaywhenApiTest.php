@@ -73,6 +73,16 @@ class SaywhenApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for retrieveListActivity
+     *
+     * Retrieve SayWhen Portal URLs.
+     *
+     */
+    public function testRetrieveListActivity()
+    {
+    }
+
+    /**
      * Test case for saywhenRetrievePortalURL
      *
      * Retrieve SayWhen Portal URL.

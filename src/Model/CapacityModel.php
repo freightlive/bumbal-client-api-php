@@ -56,6 +56,7 @@ class CapacityModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'capacity_type_id' => 'int',
+        'capacity_type_name' => 'string',
         'capacity_type' => '\BumbalClient\Model\CapacityTypeModel',
         'capacity_value' => 'string',
         'unit_values' => 'object',
@@ -70,6 +71,7 @@ class CapacityModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'capacity_type_id' => null,
+        'capacity_type_name' => null,
         'capacity_type' => null,
         'capacity_value' => null,
         'unit_values' => null,
@@ -94,6 +96,7 @@ class CapacityModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'capacity_type_id' => 'capacity_type_id',
+        'capacity_type_name' => 'capacity_type_name',
         'capacity_type' => 'capacity_type',
         'capacity_value' => 'capacity_value',
         'unit_values' => 'unit_values',
@@ -109,6 +112,7 @@ class CapacityModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'capacity_type_id' => 'setCapacityTypeId',
+        'capacity_type_name' => 'setCapacityTypeName',
         'capacity_type' => 'setCapacityType',
         'capacity_value' => 'setCapacityValue',
         'unit_values' => 'setUnitValues',
@@ -124,6 +128,7 @@ class CapacityModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'capacity_type_id' => 'getCapacityTypeId',
+        'capacity_type_name' => 'getCapacityTypeName',
         'capacity_type' => 'getCapacityType',
         'capacity_value' => 'getCapacityValue',
         'unit_values' => 'getUnitValues',
@@ -164,6 +169,7 @@ class CapacityModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['capacity_type_id'] = isset($data['capacity_type_id']) ? $data['capacity_type_id'] : null;
+        $this->container['capacity_type_name'] = isset($data['capacity_type_name']) ? $data['capacity_type_name'] : null;
         $this->container['capacity_type'] = isset($data['capacity_type']) ? $data['capacity_type'] : null;
         $this->container['capacity_value'] = isset($data['capacity_value']) ? $data['capacity_value'] : null;
         $this->container['unit_values'] = isset($data['unit_values']) ? $data['unit_values'] : null;
@@ -234,6 +240,27 @@ class CapacityModel implements ArrayAccess
     public function setCapacityTypeId($capacity_type_id)
     {
         $this->container['capacity_type_id'] = $capacity_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets capacity_type_name
+     * @return string
+     */
+    public function getCapacityTypeName()
+    {
+        return $this->container['capacity_type_name'];
+    }
+
+    /**
+     * Sets capacity_type_name
+     * @param string $capacity_type_name name of capacity type
+     * @return $this
+     */
+    public function setCapacityTypeName($capacity_type_name)
+    {
+        $this->container['capacity_type_name'] = $capacity_type_name;
 
         return $this;
     }

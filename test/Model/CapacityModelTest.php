@@ -92,6 +92,13 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "capacity_type_name"
+     */
+    public function testPropertyCapacityTypeName()
+    {
+    }
+
+    /**
      * Test attribute "capacity_type"
      */
     public function testPropertyCapacityType()

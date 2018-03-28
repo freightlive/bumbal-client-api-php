@@ -164,6 +164,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
 *RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
+*SaywhenApi* | [**retrieveListActivity**](docs/Api/SaywhenApi.md#retrievelistactivity) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
 *SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settingss
