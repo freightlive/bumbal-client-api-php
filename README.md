@@ -306,6 +306,7 @@ Class | Method | HTTP request | Description
  - [TrailerModel](docs/Model/TrailerModel.md)
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
+ - [UnitValueModel](docs/Model/UnitValueModel.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersListResponse](docs/Model/UsersListResponse.md)
  - [UsersModel](docs/Model/UsersModel.md)

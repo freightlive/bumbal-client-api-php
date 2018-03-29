@@ -59,7 +59,7 @@ class CapacityModel implements ArrayAccess
         'capacity_type_name' => 'string',
         'capacity_type' => '\BumbalClient\Model\CapacityTypeModel',
         'capacity_value' => 'string',
-        'unit_values' => 'object',
+        'unit_values' => '\BumbalClient\Model\UnitValueModel[]',
         'total_values' => 'object',
         'value' => 'string'
     ];
@@ -309,7 +309,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Gets unit_values
-     * @return object
+     * @return \BumbalClient\Model\UnitValueModel[]
      */
     public function getUnitValues()
     {
@@ -318,7 +318,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets unit_values
-     * @param object $unit_values 
+     * @param \BumbalClient\Model\UnitValueModel[] $unit_values 
      * @return $this
      */
     public function setUnitValues($unit_values)

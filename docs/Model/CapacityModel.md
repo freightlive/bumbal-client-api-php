@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **capacity_type_name** | **string** | name of capacity type | [optional] 
 **capacity_type** | [**\BumbalClient\Model\CapacityTypeModel**](CapacityTypeModel.md) |  | [optional] 
 **capacity_value** | **string** | Capacity value | [optional] 
-**unit_values** | **object** |  | [optional] 
+**unit_values** | [**\BumbalClient\Model\UnitValueModel[]**](UnitValueModel.md) |  | [optional] 
 **total_values** | **object** |  | [optional] 
 **value** | **string** | Value | [optional] 
 

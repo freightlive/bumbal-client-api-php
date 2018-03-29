@@ -99,8 +99,6 @@ class ActivityModel implements ArrayAccess
         'address' => '\BumbalClient\Model\AddressModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
-        'allowed_drivers' => 'object',
-        'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
@@ -173,8 +171,6 @@ class ActivityModel implements ArrayAccess
         'address' => null,
         'depot_address' => null,
         'depot_address_id' => null,
-        'allowed_drivers' => null,
-        'allowed_drivers_links' => null,
         'applied_capacities' => null,
         'capacities' => null,
         'package_lines' => null,
@@ -257,8 +253,6 @@ class ActivityModel implements ArrayAccess
         'address' => 'address',
         'depot_address' => 'depot_address',
         'depot_address_id' => 'depot_address_id',
-        'allowed_drivers' => 'allowed_drivers',
-        'allowed_drivers_links' => 'allowed_drivers_links',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'package_lines' => 'package_lines',
@@ -332,8 +326,6 @@ class ActivityModel implements ArrayAccess
         'address' => 'setAddress',
         'depot_address' => 'setDepotAddress',
         'depot_address_id' => 'setDepotAddressId',
-        'allowed_drivers' => 'setAllowedDrivers',
-        'allowed_drivers_links' => 'setAllowedDriversLinks',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'package_lines' => 'setPackageLines',
@@ -407,8 +399,6 @@ class ActivityModel implements ArrayAccess
         'address' => 'getAddress',
         'depot_address' => 'getDepotAddress',
         'depot_address_id' => 'getDepotAddressId',
-        'allowed_drivers' => 'getAllowedDrivers',
-        'allowed_drivers_links' => 'getAllowedDriversLinks',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'package_lines' => 'getPackageLines',
@@ -555,8 +545,6 @@ class ActivityModel implements ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
-        $this->container['allowed_drivers'] = isset($data['allowed_drivers']) ? $data['allowed_drivers'] : null;
-        $this->container['allowed_drivers_links'] = isset($data['allowed_drivers_links']) ? $data['allowed_drivers_links'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
@@ -1587,48 +1575,6 @@ class ActivityModel implements ArrayAccess
     public function setDepotAddressId($depot_address_id)
     {
         $this->container['depot_address_id'] = $depot_address_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets allowed_drivers
-     * @return object
-     */
-    public function getAllowedDrivers()
-    {
-        return $this->container['allowed_drivers'];
-    }
-
-    /**
-     * Sets allowed_drivers
-     * @param object $allowed_drivers 
-     * @return $this
-     */
-    public function setAllowedDrivers($allowed_drivers)
-    {
-        $this->container['allowed_drivers'] = $allowed_drivers;
-
-        return $this;
-    }
-
-    /**
-     * Gets allowed_drivers_links
-     * @return \BumbalClient\Model\LinkModel[]
-     */
-    public function getAllowedDriversLinks()
-    {
-        return $this->container['allowed_drivers_links'];
-    }
-
-    /**
-     * Sets allowed_drivers_links
-     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links 
-     * @return $this
-     */
-    public function setAllowedDriversLinks($allowed_drivers_links)
-    {
-        $this->container['allowed_drivers_links'] = $allowed_drivers_links;
 
         return $this;
     }

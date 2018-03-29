@@ -48,8 +48,6 @@ Name | Type | Description | Notes
 **address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **depot_address_id** | **int** | Depot Address ID | [optional] 
-**allowed_drivers** | **object** |  | [optional] 
-**allowed_drivers_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
