@@ -127,9 +127,23 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "capacity_value_uom_name"
      */
-    public function testPropertyValue()
+    public function testPropertyCapacityValueUomName()
+    {
+    }
+
+    /**
+     * Test attribute "unit_values_uom_name"
+     */
+    public function testPropertyUnitValuesUomName()
+    {
+    }
+
+    /**
+     * Test attribute "total_values_uom_name"
+     */
+    public function testPropertyTotalValuesUomName()
     {
     }
 }

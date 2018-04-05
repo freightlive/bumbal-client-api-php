@@ -60,8 +60,10 @@ class CapacityModel implements ArrayAccess
         'capacity_type' => '\BumbalClient\Model\CapacityTypeModel',
         'capacity_value' => 'string',
         'unit_values' => '\BumbalClient\Model\UnitValueModel[]',
-        'total_values' => 'object',
-        'value' => 'string'
+        'total_values' => '\BumbalClient\Model\TotalValueModel[]',
+        'capacity_value_uom_name' => 'string',
+        'unit_values_uom_name' => 'string',
+        'total_values_uom_name' => 'string'
     ];
 
     /**
@@ -76,7 +78,9 @@ class CapacityModel implements ArrayAccess
         'capacity_value' => null,
         'unit_values' => null,
         'total_values' => null,
-        'value' => null
+        'capacity_value_uom_name' => null,
+        'unit_values_uom_name' => null,
+        'total_values_uom_name' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +105,9 @@ class CapacityModel implements ArrayAccess
         'capacity_value' => 'capacity_value',
         'unit_values' => 'unit_values',
         'total_values' => 'total_values',
-        'value' => 'value'
+        'capacity_value_uom_name' => 'capacity_value_uom_name',
+        'unit_values_uom_name' => 'unit_values_uom_name',
+        'total_values_uom_name' => 'total_values_uom_name'
     ];
 
 
@@ -117,7 +123,9 @@ class CapacityModel implements ArrayAccess
         'capacity_value' => 'setCapacityValue',
         'unit_values' => 'setUnitValues',
         'total_values' => 'setTotalValues',
-        'value' => 'setValue'
+        'capacity_value_uom_name' => 'setCapacityValueUomName',
+        'unit_values_uom_name' => 'setUnitValuesUomName',
+        'total_values_uom_name' => 'setTotalValuesUomName'
     ];
 
 
@@ -133,7 +141,9 @@ class CapacityModel implements ArrayAccess
         'capacity_value' => 'getCapacityValue',
         'unit_values' => 'getUnitValues',
         'total_values' => 'getTotalValues',
-        'value' => 'getValue'
+        'capacity_value_uom_name' => 'getCapacityValueUomName',
+        'unit_values_uom_name' => 'getUnitValuesUomName',
+        'total_values_uom_name' => 'getTotalValuesUomName'
     ];
 
     public static function attributeMap()
@@ -151,8 +161,140 @@ class CapacityModel implements ArrayAccess
         return self::$getters;
     }
 
+    const CAPACITY_VALUE_UOM_NAME_CM = 'CM';
+    const CAPACITY_VALUE_UOM_NAME_M = 'M';
+    const CAPACITY_VALUE_UOM_NAME_MI = 'MI';
+    const CAPACITY_VALUE_UOM_NAME_CM3 = 'CM3';
+    const CAPACITY_VALUE_UOM_NAME_M3 = 'M3';
+    const CAPACITY_VALUE_UOM_NAME_LI = 'LI';
+    const CAPACITY_VALUE_UOM_NAME_KG = 'KG';
+    const CAPACITY_VALUE_UOM_NAME_PD = 'PD';
+    const CAPACITY_VALUE_UOM_NAME_AMOUNT = 'amount';
+    const CAPACITY_VALUE_UOM_NAME_MM = 'MM';
+    const CAPACITY_VALUE_UOM_NAME_MM3 = 'MM3';
+    const CAPACITY_VALUE_UOM_NAME_DM = 'DM';
+    const CAPACITY_VALUE_UOM_NAME_DM3 = 'DM3';
+    const CAPACITY_VALUE_UOM_NAME_G = 'G';
+    const CAPACITY_VALUE_UOM_NAME_MG = 'MG';
+    const CAPACITY_VALUE_UOM_NAME_CG = 'CG';
+    const CAPACITY_VALUE_UOM_NAME_DG = 'DG';
+    const UNIT_VALUES_UOM_NAME_CM = 'CM';
+    const UNIT_VALUES_UOM_NAME_M = 'M';
+    const UNIT_VALUES_UOM_NAME_MI = 'MI';
+    const UNIT_VALUES_UOM_NAME_CM3 = 'CM3';
+    const UNIT_VALUES_UOM_NAME_M3 = 'M3';
+    const UNIT_VALUES_UOM_NAME_LI = 'LI';
+    const UNIT_VALUES_UOM_NAME_KG = 'KG';
+    const UNIT_VALUES_UOM_NAME_PD = 'PD';
+    const UNIT_VALUES_UOM_NAME_AMOUNT = 'amount';
+    const UNIT_VALUES_UOM_NAME_MM = 'MM';
+    const UNIT_VALUES_UOM_NAME_MM3 = 'MM3';
+    const UNIT_VALUES_UOM_NAME_DM = 'DM';
+    const UNIT_VALUES_UOM_NAME_DM3 = 'DM3';
+    const UNIT_VALUES_UOM_NAME_G = 'G';
+    const UNIT_VALUES_UOM_NAME_MG = 'MG';
+    const UNIT_VALUES_UOM_NAME_CG = 'CG';
+    const UNIT_VALUES_UOM_NAME_DG = 'DG';
+    const TOTAL_VALUES_UOM_NAME_CM = 'CM';
+    const TOTAL_VALUES_UOM_NAME_M = 'M';
+    const TOTAL_VALUES_UOM_NAME_MI = 'MI';
+    const TOTAL_VALUES_UOM_NAME_CM3 = 'CM3';
+    const TOTAL_VALUES_UOM_NAME_M3 = 'M3';
+    const TOTAL_VALUES_UOM_NAME_LI = 'LI';
+    const TOTAL_VALUES_UOM_NAME_KG = 'KG';
+    const TOTAL_VALUES_UOM_NAME_PD = 'PD';
+    const TOTAL_VALUES_UOM_NAME_AMOUNT = 'amount';
+    const TOTAL_VALUES_UOM_NAME_MM = 'MM';
+    const TOTAL_VALUES_UOM_NAME_MM3 = 'MM3';
+    const TOTAL_VALUES_UOM_NAME_DM = 'DM';
+    const TOTAL_VALUES_UOM_NAME_DM3 = 'DM3';
+    const TOTAL_VALUES_UOM_NAME_G = 'G';
+    const TOTAL_VALUES_UOM_NAME_MG = 'MG';
+    const TOTAL_VALUES_UOM_NAME_CG = 'CG';
+    const TOTAL_VALUES_UOM_NAME_DG = 'DG';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getCapacityValueUomNameAllowableValues()
+    {
+        return [
+            self::CAPACITY_VALUE_UOM_NAME_CM,
+            self::CAPACITY_VALUE_UOM_NAME_M,
+            self::CAPACITY_VALUE_UOM_NAME_MI,
+            self::CAPACITY_VALUE_UOM_NAME_CM3,
+            self::CAPACITY_VALUE_UOM_NAME_M3,
+            self::CAPACITY_VALUE_UOM_NAME_LI,
+            self::CAPACITY_VALUE_UOM_NAME_KG,
+            self::CAPACITY_VALUE_UOM_NAME_PD,
+            self::CAPACITY_VALUE_UOM_NAME_AMOUNT,
+            self::CAPACITY_VALUE_UOM_NAME_MM,
+            self::CAPACITY_VALUE_UOM_NAME_MM3,
+            self::CAPACITY_VALUE_UOM_NAME_DM,
+            self::CAPACITY_VALUE_UOM_NAME_DM3,
+            self::CAPACITY_VALUE_UOM_NAME_G,
+            self::CAPACITY_VALUE_UOM_NAME_MG,
+            self::CAPACITY_VALUE_UOM_NAME_CG,
+            self::CAPACITY_VALUE_UOM_NAME_DG,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getUnitValuesUomNameAllowableValues()
+    {
+        return [
+            self::UNIT_VALUES_UOM_NAME_CM,
+            self::UNIT_VALUES_UOM_NAME_M,
+            self::UNIT_VALUES_UOM_NAME_MI,
+            self::UNIT_VALUES_UOM_NAME_CM3,
+            self::UNIT_VALUES_UOM_NAME_M3,
+            self::UNIT_VALUES_UOM_NAME_LI,
+            self::UNIT_VALUES_UOM_NAME_KG,
+            self::UNIT_VALUES_UOM_NAME_PD,
+            self::UNIT_VALUES_UOM_NAME_AMOUNT,
+            self::UNIT_VALUES_UOM_NAME_MM,
+            self::UNIT_VALUES_UOM_NAME_MM3,
+            self::UNIT_VALUES_UOM_NAME_DM,
+            self::UNIT_VALUES_UOM_NAME_DM3,
+            self::UNIT_VALUES_UOM_NAME_G,
+            self::UNIT_VALUES_UOM_NAME_MG,
+            self::UNIT_VALUES_UOM_NAME_CG,
+            self::UNIT_VALUES_UOM_NAME_DG,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTotalValuesUomNameAllowableValues()
+    {
+        return [
+            self::TOTAL_VALUES_UOM_NAME_CM,
+            self::TOTAL_VALUES_UOM_NAME_M,
+            self::TOTAL_VALUES_UOM_NAME_MI,
+            self::TOTAL_VALUES_UOM_NAME_CM3,
+            self::TOTAL_VALUES_UOM_NAME_M3,
+            self::TOTAL_VALUES_UOM_NAME_LI,
+            self::TOTAL_VALUES_UOM_NAME_KG,
+            self::TOTAL_VALUES_UOM_NAME_PD,
+            self::TOTAL_VALUES_UOM_NAME_AMOUNT,
+            self::TOTAL_VALUES_UOM_NAME_MM,
+            self::TOTAL_VALUES_UOM_NAME_MM3,
+            self::TOTAL_VALUES_UOM_NAME_DM,
+            self::TOTAL_VALUES_UOM_NAME_DM3,
+            self::TOTAL_VALUES_UOM_NAME_G,
+            self::TOTAL_VALUES_UOM_NAME_MG,
+            self::TOTAL_VALUES_UOM_NAME_CG,
+            self::TOTAL_VALUES_UOM_NAME_DG,
+        ];
+    }
     
 
     /**
@@ -174,7 +316,9 @@ class CapacityModel implements ArrayAccess
         $this->container['capacity_value'] = isset($data['capacity_value']) ? $data['capacity_value'] : null;
         $this->container['unit_values'] = isset($data['unit_values']) ? $data['unit_values'] : null;
         $this->container['total_values'] = isset($data['total_values']) ? $data['total_values'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['capacity_value_uom_name'] = isset($data['capacity_value_uom_name']) ? $data['capacity_value_uom_name'] : null;
+        $this->container['unit_values_uom_name'] = isset($data['unit_values_uom_name']) ? $data['unit_values_uom_name'] : null;
+        $this->container['total_values_uom_name'] = isset($data['total_values_uom_name']) ? $data['total_values_uom_name'] : null;
     }
 
     /**
@@ -185,6 +329,30 @@ class CapacityModel implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = $this->getCapacityValueUomNameAllowableValues();
+        if (!in_array($this->container['capacity_value_uom_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'capacity_value_uom_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getUnitValuesUomNameAllowableValues();
+        if (!in_array($this->container['unit_values_uom_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'unit_values_uom_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getTotalValuesUomNameAllowableValues();
+        if (!in_array($this->container['total_values_uom_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'total_values_uom_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
 
         return $invalid_properties;
     }
@@ -198,6 +366,18 @@ class CapacityModel implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getCapacityValueUomNameAllowableValues();
+        if (!in_array($this->container['capacity_value_uom_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getUnitValuesUomNameAllowableValues();
+        if (!in_array($this->container['unit_values_uom_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getTotalValuesUomNameAllowableValues();
+        if (!in_array($this->container['total_values_uom_name'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -330,7 +510,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Gets total_values
-     * @return object
+     * @return \BumbalClient\Model\TotalValueModel[]
      */
     public function getTotalValues()
     {
@@ -339,7 +519,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets total_values
-     * @param object $total_values 
+     * @param \BumbalClient\Model\TotalValueModel[] $total_values 
      * @return $this
      */
     public function setTotalValues($total_values)
@@ -350,22 +530,91 @@ class CapacityModel implements ArrayAccess
     }
 
     /**
-     * Gets value
+     * Gets capacity_value_uom_name
      * @return string
      */
-    public function getValue()
+    public function getCapacityValueUomName()
     {
-        return $this->container['value'];
+        return $this->container['capacity_value_uom_name'];
     }
 
     /**
-     * Sets value
-     * @param string $value Value
+     * Sets capacity_value_uom_name
+     * @param string $capacity_value_uom_name Name of used unit of measurement for values provided in capacity_value
      * @return $this
      */
-    public function setValue($value)
+    public function setCapacityValueUomName($capacity_value_uom_name)
     {
-        $this->container['value'] = $value;
+        $allowed_values = $this->getCapacityValueUomNameAllowableValues();
+        if (!is_null($capacity_value_uom_name) && !in_array($capacity_value_uom_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'capacity_value_uom_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['capacity_value_uom_name'] = $capacity_value_uom_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets unit_values_uom_name
+     * @return string
+     */
+    public function getUnitValuesUomName()
+    {
+        return $this->container['unit_values_uom_name'];
+    }
+
+    /**
+     * Sets unit_values_uom_name
+     * @param string $unit_values_uom_name Name of used unit of measurement for values provided in unit_values
+     * @return $this
+     */
+    public function setUnitValuesUomName($unit_values_uom_name)
+    {
+        $allowed_values = $this->getUnitValuesUomNameAllowableValues();
+        if (!is_null($unit_values_uom_name) && !in_array($unit_values_uom_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'unit_values_uom_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['unit_values_uom_name'] = $unit_values_uom_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_values_uom_name
+     * @return string
+     */
+    public function getTotalValuesUomName()
+    {
+        return $this->container['total_values_uom_name'];
+    }
+
+    /**
+     * Sets total_values_uom_name
+     * @param string $total_values_uom_name Name of used unit of measurement for values provided in total_values
+     * @return $this
+     */
+    public function setTotalValuesUomName($total_values_uom_name)
+    {
+        $allowed_values = $this->getTotalValuesUomNameAllowableValues();
+        if (!is_null($total_values_uom_name) && !in_array($total_values_uom_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'total_values_uom_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['total_values_uom_name'] = $total_values_uom_name;
 
         return $this;
     }

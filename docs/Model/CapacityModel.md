@@ -9,8 +9,10 @@ Name | Type | Description | Notes
 **capacity_type** | [**\BumbalClient\Model\CapacityTypeModel**](CapacityTypeModel.md) |  | [optional] 
 **capacity_value** | **string** | Capacity value | [optional] 
 **unit_values** | [**\BumbalClient\Model\UnitValueModel[]**](UnitValueModel.md) |  | [optional] 
-**total_values** | **object** |  | [optional] 
-**value** | **string** | Value | [optional] 
+**total_values** | [**\BumbalClient\Model\TotalValueModel[]**](TotalValueModel.md) |  | [optional] 
+**capacity_value_uom_name** | **string** | Name of used unit of measurement for values provided in capacity_value | [optional] 
+**unit_values_uom_name** | **string** | Name of used unit of measurement for values provided in unit_values | [optional] 
+**total_values_uom_name** | **string** | Name of used unit of measurement for values provided in total_values | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

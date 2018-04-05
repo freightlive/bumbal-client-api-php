@@ -302,6 +302,7 @@ Class | Method | HTTP request | Description
  - [TagsOptionsModel](docs/Model/TagsOptionsModel.md)
  - [TagsRetrieveListArguments](docs/Model/TagsRetrieveListArguments.md)
  - [TimeSlotModel](docs/Model/TimeSlotModel.md)
+ - [TotalValueModel](docs/Model/TotalValueModel.md)
  - [TrailerFiltersModel](docs/Model/TrailerFiltersModel.md)
  - [TrailerModel](docs/Model/TrailerModel.md)
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
