@@ -647,12 +647,13 @@ class PlannerApi
      *
      * Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
      *
+     * @param \BumbalClient\Model\CheckAvailabilityArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function checkAvailabilityResult()
+    public function checkAvailabilityResult($arguments)
     {
-        list($response) = $this->checkAvailabilityResultWithHttpInfo();
+        list($response) = $this->checkAvailabilityResultWithHttpInfo($arguments);
         return $response;
     }
 
@@ -661,11 +662,16 @@ class PlannerApi
      *
      * Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
      *
+     * @param \BumbalClient\Model\CheckAvailabilityArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function checkAvailabilityResultWithHttpInfo()
+    public function checkAvailabilityResultWithHttpInfo($arguments)
     {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling checkAvailabilityResult');
+        }
         // parse inputs
         $resourcePath = "/planner/check-availability-result";
         $httpBody = '';
@@ -678,6 +684,11 @@ class PlannerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
 
         // for model (json/xml)
         if (isset($_tempBody)) {

@@ -288,6 +288,7 @@ Class | Method | HTTP request | Description
  - [RouteModel](docs/Model/RouteModel.md)
  - [RouteOptionsModel](docs/Model/RouteOptionsModel.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
+ - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)
  - [SettingsModel](docs/Model/SettingsModel.md)

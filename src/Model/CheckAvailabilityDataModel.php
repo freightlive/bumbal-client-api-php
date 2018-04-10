@@ -56,7 +56,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
     protected static $swaggerTypes = [
         'activity' => '\BumbalClient\Model\ActivityModel[]',
         'route_filters' => 'object',
-        'token' => 'int'
+        'token' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
     protected static $swaggerFormats = [
         'activity' => null,
         'route_filters' => null,
-        'token' => 'int64'
+        'token' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -189,7 +189,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityModel[] $activity 
+     * @param \BumbalClient\Model\ActivityModel[] $activity
      * @return $this
      */
     public function setActivity($activity)
@@ -210,7 +210,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets route_filters
-     * @param object $route_filters 
+     * @param object $route_filters
      * @return $this
      */
     public function setRouteFilters($route_filters)
@@ -222,7 +222,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Gets token
-     * @return int
+     * @return string
      */
     public function getToken()
     {
@@ -231,7 +231,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets token
-     * @param int $token unique per api request
+     * @param string $token unique per api request
      * @return $this
      */
     public function setToken($token)

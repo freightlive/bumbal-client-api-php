@@ -177,7 +177,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous 
+     * @param bool $synchronous
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -198,7 +198,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets respond_after_apply_planning
-     * @param bool $respond_after_apply_planning 
+     * @param bool $respond_after_apply_planning
      * @return $this
      */
     public function setRespondAfterApplyPlanning($respond_after_apply_planning)

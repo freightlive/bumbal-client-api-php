@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityRetrieveListArguments
+ * SayWhenRetrievePortalURLsArguments
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ActivityRetrieveListArguments Class Doc Comment
+ * SayWhenRetrievePortalURLsArguments Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityRetrieveListArguments implements ArrayAccess
+class SayWhenRetrievePortalURLsArguments implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,21 +47,19 @@ class ActivityRetrieveListArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ActivityRetrieveListArguments';
+    protected static $swaggerModelName = 'SayWhenRetrievePortalURLsArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ActivityOptionsModel',
         'filters' => '\BumbalClient\Model\ActivityFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
-        'search_text' => 'string',
-        'as_list' => 'bool'
+        'search_text' => 'string'
     ];
 
     /**
@@ -69,14 +67,12 @@ class ActivityRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
         'sorting_column' => null,
         'sorting_direction' => null,
-        'search_text' => null,
-        'as_list' => null
+        'search_text' => null
     ];
 
     public static function swaggerTypes()
@@ -94,14 +90,12 @@ class ActivityRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
-        'search_text' => 'search_text',
-        'as_list' => 'as_list'
+        'search_text' => 'search_text'
     ];
 
 
@@ -110,14 +104,12 @@ class ActivityRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
-        'search_text' => 'setSearchText',
-        'as_list' => 'setAsList'
+        'search_text' => 'setSearchText'
     ];
 
 
@@ -126,14 +118,12 @@ class ActivityRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
-        'search_text' => 'getSearchText',
-        'as_list' => 'getAsList'
+        'search_text' => 'getSearchText'
     ];
 
     public static function attributeMap()
@@ -151,13 +141,10 @@ class ActivityRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
-    const SORTING_COLUMN_ACTIVITYSTATUS_ID = 'activity.status_id';
-    const SORTING_COLUMN_ACTIVITYNR = 'activity.nr';
-    const SORTING_COLUMN_ACTIVITY_TYPE_ID = 'activity_type_id';
-    const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
-    const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
-    const SORTING_DIRECTION_ASC = 'asc';
-    const SORTING_DIRECTION_DESC = 'desc';
+    const SORTING_COLUMN_ID = 'id';
+    const SORTING_COLUMN_NR = 'nr';
+    const SORTING_DIRECTION_ASC = 'ASC';
+    const SORTING_DIRECTION_DESC = 'DESC';
     
 
     
@@ -168,11 +155,8 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function getSortingColumnAllowableValues()
     {
         return [
-            self::SORTING_COLUMN_ACTIVITYSTATUS_ID,
-            self::SORTING_COLUMN_ACTIVITYNR,
-            self::SORTING_COLUMN_ACTIVITY_TYPE_ID,
-            self::SORTING_COLUMN_SEARCH_ZIP,
-            self::SORTING_COLUMN_DATE_TIME_FROM,
+            self::SORTING_COLUMN_ID,
+            self::SORTING_COLUMN_NR,
         ];
     }
     
@@ -201,14 +185,12 @@ class ActivityRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
-        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
 
     /**
@@ -259,27 +241,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets options
-     * @return \BumbalClient\Model\ActivityOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\ActivityOptionsModel $options
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
 
     /**
      * Gets filters
@@ -421,27 +382,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
-
-        return $this;
-    }
-
-    /**
-     * Gets as_list
-     * @return bool
-     */
-    public function getAsList()
-    {
-        return $this->container['as_list'];
-    }
-
-    /**
-     * Sets as_list
-     * @param bool $as_list
-     * @return $this
-     */
-    public function setAsList($as_list)
-    {
-        $this->container['as_list'] = $as_list;
 
         return $this;
     }

@@ -279,7 +279,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -300,7 +300,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets party_id
-     * @param int $party_id 
+     * @param int $party_id
      * @return $this
      */
     public function setPartyId($party_id)
@@ -321,7 +321,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets summary
-     * @param string $summary 
+     * @param string $summary
      * @return $this
      */
     public function setSummary($summary)
@@ -342,7 +342,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets full_name
-     * @param string $full_name 
+     * @param string $full_name
      * @return $this
      */
     public function setFullName($full_name)
@@ -363,7 +363,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets name_1
-     * @param string $name_1 
+     * @param string $name_1
      * @return $this
      */
     public function setName1($name_1)
@@ -384,7 +384,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets name_2
-     * @param string $name_2 
+     * @param string $name_2
      * @return $this
      */
     public function setName2($name_2)
@@ -405,7 +405,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets street_1
-     * @param string $street_1 
+     * @param string $street_1
      * @return $this
      */
     public function setStreet1($street_1)
@@ -426,7 +426,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets street_2
-     * @param string $street_2 
+     * @param string $street_2
      * @return $this
      */
     public function setStreet2($street_2)
@@ -447,7 +447,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets house_nr
-     * @param string $house_nr 
+     * @param string $house_nr
      * @return $this
      */
     public function setHouseNr($house_nr)
@@ -468,7 +468,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets house_nr_addendum
-     * @param string $house_nr_addendum 
+     * @param string $house_nr_addendum
      * @return $this
      */
     public function setHouseNrAddendum($house_nr_addendum)
@@ -489,7 +489,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets zipcode
-     * @param string $zipcode 
+     * @param string $zipcode
      * @return $this
      */
     public function setZipcode($zipcode)
@@ -510,7 +510,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets city
-     * @param string $city 
+     * @param string $city
      * @return $this
      */
     public function setCity($city)
@@ -531,7 +531,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets state
-     * @param string $state 
+     * @param string $state
      * @return $this
      */
     public function setState($state)
@@ -552,7 +552,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets iso_country
-     * @param string $iso_country 
+     * @param string $iso_country
      * @return $this
      */
     public function setIsoCountry($iso_country)
@@ -573,7 +573,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets emails
-     * @param \BumbalClient\Model\EmailModel[] $emails 
+     * @param \BumbalClient\Model\EmailModel[] $emails
      * @return $this
      */
     public function setEmails($emails)
@@ -594,7 +594,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets phone_nrs
-     * @param \BumbalClient\Model\PhoneNrModel[] $phone_nrs 
+     * @param \BumbalClient\Model\PhoneNrModel[] $phone_nrs
      * @return $this
      */
     public function setPhoneNrs($phone_nrs)
@@ -615,7 +615,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets contact_person
-     * @param string $contact_person 
+     * @param string $contact_person
      * @return $this
      */
     public function setContactPerson($contact_person)
@@ -636,7 +636,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets latitude
-     * @param string $latitude 
+     * @param string $latitude
      * @return $this
      */
     public function setLatitude($latitude)
@@ -657,7 +657,7 @@ class AddressAppliedModel implements ArrayAccess
 
     /**
      * Sets longitude
-     * @param string $longitude 
+     * @param string $longitude
      * @return $this
      */
     public function setLongitude($longitude)

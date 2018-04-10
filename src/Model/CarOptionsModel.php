@@ -189,7 +189,7 @@ class CarOptionsModel implements ArrayAccess
 
     /**
      * Sets include_car_tags
-     * @param bool $include_car_tags 
+     * @param bool $include_car_tags
      * @return $this
      */
     public function setIncludeCarTags($include_car_tags)
@@ -210,7 +210,7 @@ class CarOptionsModel implements ArrayAccess
 
     /**
      * Sets include_car_meta_data
-     * @param bool $include_car_meta_data 
+     * @param bool $include_car_meta_data
      * @return $this
      */
     public function setIncludeCarMetaData($include_car_meta_data)
@@ -231,7 +231,7 @@ class CarOptionsModel implements ArrayAccess
 
     /**
      * Sets include_car_links
-     * @param bool $include_car_links 
+     * @param bool $include_car_links
      * @return $this
      */
     public function setIncludeCarLinks($include_car_links)
@@ -252,7 +252,7 @@ class CarOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by_name
-     * @param bool $include_updated_by_name 
+     * @param bool $include_updated_by_name
      * @return $this
      */
     public function setIncludeUpdatedByName($include_updated_by_name)

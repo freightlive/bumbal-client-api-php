@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkAvailabilityResult**
-> \BumbalClient\Model\ApiResponse checkAvailabilityResult()
+> \BumbalClient\Model\ApiResponse checkAvailabilityResult($arguments)
 
 Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 
@@ -374,9 +374,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
-    $result = $api_instance->checkAvailabilityResult();
+    $result = $api_instance->checkAvailabilityResult($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->checkAvailabilityResult: ', $e->getMessage(), PHP_EOL;
@@ -385,7 +386,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
