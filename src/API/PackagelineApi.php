@@ -90,7 +90,7 @@ class PackagelineApi
     /**
      * Operation createPackageLine
      *
-     * Create or update an PackageLine
+     * Create or update an Package Line
      *
      * @param \BumbalClient\Model\PackageLineModel $body PackageLine object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class PackagelineApi
     /**
      * Operation createPackageLineWithHttpInfo
      *
-     * Create or update an PackageLine
+     * Create or update an Package Line
      *
      * @param \BumbalClient\Model\PackageLineModel $body PackageLine object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response

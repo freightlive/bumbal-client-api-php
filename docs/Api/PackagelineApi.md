@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPackageLine**](PackagelineApi.md#createPackageLine) | **POST** /package-line | Create or update an PackageLine
+[**createPackageLine**](PackagelineApi.md#createPackageLine) | **POST** /package-line | Create or update an Package Line
 [**deletePackageLine**](PackagelineApi.md#deletePackageLine) | **DELETE** /package-line/{packageLineId} | Delete an package-line
 [**retrieveListPackageLine**](PackagelineApi.md#retrieveListPackageLine) | **PUT** /package-line | Retrieve List of PackageLines
 [**retrievePackageLine**](PackagelineApi.md#retrievePackageLine) | **GET** /package-line/{packageLineId} | Find package-line by ID
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 # **createPackageLine**
 > \BumbalClient\Model\ApiResponse createPackageLine($body)
 
-Create or update an PackageLine
+Create or update an Package Line
 
 Create or update an PackageLine. If id or links are set in the data, and a corresponding package-line   *     is found in Bumbal, an update will be performed.
 

@@ -130,7 +130,7 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
 *NoteApi* | [**updateNote**](docs/Api/NoteApi.md#updatenote) | **PUT** /note/{noteId} | Update a note
-*PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an PackageLine
+*PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an Package Line
 *PackagelineApi* | [**deletePackageLine**](docs/Api/PackagelineApi.md#deletepackageline) | **DELETE** /package-line/{packageLineId} | Delete an package-line
 *PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines
 *PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
