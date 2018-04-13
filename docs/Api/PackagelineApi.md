@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
-$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine object
+$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine model
 
 try {
     $result = $api_instance->createPackageLine($body);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object | [optional]
+ **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine model | [optional]
 
 ### Return type
 
