@@ -560,7 +560,7 @@ class PackagelineApi
      *
      * Set (create or update) an PackageLine
      *
-     * @param \BumbalClient\Model\PackageLineModel $body PackageLine object (optional)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
@@ -575,7 +575,7 @@ class PackagelineApi
      *
      * Set (create or update) an PackageLine
      *
-     * @param \BumbalClient\Model\PackageLineModel $body PackageLine object (optional)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
