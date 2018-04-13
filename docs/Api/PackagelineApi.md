@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPackageLine**
-> \BumbalClient\Model\PackageLineModel[] retrieveListPackageLine($arguments)
+> \BumbalClient\Model\PackageLineListResponse retrieveListPackageLine($arguments)
 
 Retrieve List of PackageLines
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PackageLineModel[]**](../Model/PackageLineModel.md)
+[**\BumbalClient\Model\PackageLineListResponse**](../Model/PackageLineListResponse.md)
 
 ### Authorization
 

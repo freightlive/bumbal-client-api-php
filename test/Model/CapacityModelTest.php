@@ -120,13 +120,6 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "total_values"
-     */
-    public function testPropertyTotalValues()
-    {
-    }
-
-    /**
      * Test attribute "capacity_value_uom_name"
      */
     public function testPropertyCapacityValueUomName()
@@ -137,13 +130,6 @@ class CapacityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "unit_values_uom_name"
      */
     public function testPropertyUnitValuesUomName()
-    {
-    }
-
-    /**
-     * Test attribute "total_values_uom_name"
-     */
-    public function testPropertyTotalValuesUomName()
     {
     }
 }

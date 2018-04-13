@@ -261,7 +261,7 @@ class PackagelineApi
      *
      * @param \BumbalClient\Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\PackageLineModel[]
+     * @return \BumbalClient\Model\PackageLineListResponse
      */
     public function retrieveListPackageLine($arguments)
     {
@@ -276,7 +276,7 @@ class PackagelineApi
      *
      * @param \BumbalClient\Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\PackageLineModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\PackageLineListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListPackageLineWithHttpInfo($arguments)
     {
@@ -321,15 +321,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\PackageLineModel[]',
+                '\BumbalClient\Model\PackageLineListResponse',
                 '/package-line'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PackageLineModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PackageLineListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PackageLineModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PackageLineListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
