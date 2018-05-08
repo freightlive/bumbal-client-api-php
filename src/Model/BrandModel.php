@@ -55,7 +55,7 @@ class BrandModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'name' => 'object',
+        'name' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -219,7 +219,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Gets name
-     * @return object
+     * @return string
      */
     public function getName()
     {
@@ -228,7 +228,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param object $name Name of brand
+     * @param string $name Name of brand
      * @return $this
      */
     public function setName($name)
