@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **checkCredentialsUser**
-> \BumbalClient\Model\UsersModel checkCredentialsUser($email, $password)
+> \BumbalClient\BumbalClient\Model\UsersModel checkCredentialsUser($email, $password)
 
 Checks the credentials of a User
 
@@ -24,16 +24,21 @@ Checks the credentials of a User
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\UsersApi();
+$apiInstance = new BumbalClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $email = "email_example"; // string | User Email
 $password = "password_example"; // string | User Password
 
 try {
-    $result = $api_instance->checkCredentialsUser($email, $password);
+    $result = $apiInstance->checkCredentialsUser($email, $password);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->checkCredentialsUser: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -64,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListUsers**
-> \BumbalClient\Model\UsersListResponse retrieveListUsers($arguments)
+> \BumbalClient\BumbalClient\Model\UsersListResponse retrieveListUsers($arguments)
 
 Retrieve List of Users
 
@@ -76,15 +81,20 @@ Retrieve List of Users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\UsersApi();
-$arguments = new \BumbalClient\Model\UsersRetrieveListArguments(); // \BumbalClient\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\UsersRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListUsers($arguments);
+    $result = $apiInstance->retrieveListUsers($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->retrieveListUsers: ', $e->getMessage(), PHP_EOL;
@@ -96,11 +106,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\UsersRetrieveListArguments**](../Model/UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\UsersListResponse**](../Model/UsersListResponse.md)
+[**\BumbalClient\BumbalClient\Model\UsersListResponse**](../Model/UsersListResponse.md)
 
 ### Authorization
 
@@ -114,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \BumbalClient\Model\UsersModel retrieveUsers($users_id)
+> \BumbalClient\BumbalClient\Model\UsersModel retrieveUsers($users_id)
 
 Retrieve a Users
 
@@ -126,15 +136,20 @@ Retrieve a Users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\UsersApi();
+$apiInstance = new BumbalClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $users_id = 789; // int | ID of users to retrieve
 
 try {
-    $result = $api_instance->retrieveUsers($users_id);
+    $result = $apiInstance->retrieveUsers($users_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->retrieveUsers: ', $e->getMessage(), PHP_EOL;
@@ -150,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -164,7 +179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setUser**
-> \BumbalClient\Model\ApiResponse setUser($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setUser($body)
 
 Set (create or update) a User
 
@@ -176,15 +191,20 @@ Set (create or update) a User. If id or links are set in the data, and a corresp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\UsersApi();
-$body = new \BumbalClient\Model\UsersModel(); // \BumbalClient\Model\UsersModel | User object
+$apiInstance = new BumbalClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\UsersModel(); // \BumbalClient\BumbalClient\Model\UsersModel | User object
 
 try {
-    $result = $api_instance->setUser($body);
+    $result = $apiInstance->setUser($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->setUser: ', $e->getMessage(), PHP_EOL;
@@ -196,11 +216,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)| User object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)| User object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -214,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUsers**
-> \BumbalClient\Model\ApiResponse updateUsers($users_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateUsers($users_id)
 
 Update a Users
 
@@ -226,15 +246,20 @@ Update a Setting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\UsersApi();
+$apiInstance = new BumbalClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $users_id = 789; // int | ID of users to update
 
 try {
-    $result = $api_instance->updateUsers($users_id);
+    $result = $apiInstance->updateUsers($users_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->updateUsers: ', $e->getMessage(), PHP_EOL;
@@ -250,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

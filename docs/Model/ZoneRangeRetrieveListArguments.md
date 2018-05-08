@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\ZoneRangeOptionsModel**](ZoneRangeOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\ZoneRangeFiltersModel**](ZoneRangeFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\BumbalClient\Model\ZoneRangeOptionsModel**](ZoneRangeOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\BumbalClient\Model\ZoneRangeFiltersModel**](ZoneRangeFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

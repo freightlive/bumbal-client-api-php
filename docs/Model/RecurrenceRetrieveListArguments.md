@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\RecurrenceOptionsModel**](RecurrenceOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\RecurrenceFiltersModel**](RecurrenceFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\BumbalClient\Model\RecurrenceOptionsModel**](RecurrenceOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\BumbalClient\Model\RecurrenceFiltersModel**](RecurrenceFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

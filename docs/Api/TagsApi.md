@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **addTagToObject**
-> \BumbalClient\Model\ApiResponse addTagToObject()
+> \BumbalClient\BumbalClient\Model\ApiResponse addTagToObject()
 
 adds a tag to an object
 
@@ -25,14 +25,19 @@ adds a tag to an object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->addTagToObject();
+    $result = $apiInstance->addTagToObject();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->addTagToObject: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -59,7 +64,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createTag**
-> \BumbalClient\Model\ApiResponse createTag($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createTag($body)
 
 Add a new Tag
 
@@ -71,15 +76,20 @@ Add a new Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
-$body = new \BumbalClient\Model\TagModel(); // \BumbalClient\Model\TagModel | Tag object that needs to be created
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\TagModel(); // \BumbalClient\BumbalClient\Model\TagModel | Tag object that needs to be created
 
 try {
-    $result = $api_instance->createTag($body);
+    $result = $apiInstance->createTag($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->createTag: ', $e->getMessage(), PHP_EOL;
@@ -91,11 +101,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagModel**](../Model/TagModel.md)| Tag object that needs to be created | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\TagModel**](../Model/TagModel.md)| Tag object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -109,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTag**
-> \BumbalClient\Model\ApiResponse deleteTag($tag_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteTag($tag_id)
 
 Delete a Tag
 
@@ -121,15 +131,20 @@ Delete a Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $tag_id = 789; // int | ID of tag to delete
 
 try {
-    $result = $api_instance->deleteTag($tag_id);
+    $result = $apiInstance->deleteTag($tag_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->deleteTag: ', $e->getMessage(), PHP_EOL;
@@ -145,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -159,7 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTags**
-> \BumbalClient\Model\TagModel[] retrieveListTags($arguments)
+> \BumbalClient\BumbalClient\Model\TagModel[] retrieveListTags($arguments)
 
 Retrieve List of Tags
 
@@ -171,15 +186,20 @@ Retrieve List of Tags
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
-$arguments = new \BumbalClient\Model\TagsRetrieveListArguments(); // \BumbalClient\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\TagsRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\TagsRetrieveListArguments | Tags RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListTags($arguments);
+    $result = $apiInstance->retrieveListTags($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->retrieveListTags: ', $e->getMessage(), PHP_EOL;
@@ -191,11 +211,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TagsRetrieveListArguments**](../Model/TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\TagsRetrieveListArguments**](../Model/TagsRetrieveListArguments.md)| Tags RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel[]**](../Model/TagModel.md)
+[**\BumbalClient\BumbalClient\Model\TagModel[]**](../Model/TagModel.md)
 
 ### Authorization
 
@@ -209,7 +229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTag**
-> \BumbalClient\Model\TagModel retrieveTag($tag_id)
+> \BumbalClient\BumbalClient\Model\TagModel retrieveTag($tag_id)
 
 Retrieve a Tag
 
@@ -221,15 +241,20 @@ Retrieve an Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $tag_id = 789; // int | ID of tag to retrieve
 
 try {
-    $result = $api_instance->retrieveTag($tag_id);
+    $result = $apiInstance->retrieveTag($tag_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->retrieveTag: ', $e->getMessage(), PHP_EOL;
@@ -245,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel**](../Model/TagModel.md)
+[**\BumbalClient\BumbalClient\Model\TagModel**](../Model/TagModel.md)
 
 ### Authorization
 
@@ -259,7 +284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTag**
-> \BumbalClient\Model\ApiResponse updateTag($tag_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateTag($tag_id)
 
 Update a Tag
 
@@ -271,15 +296,20 @@ Update an Tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TagsApi();
+$apiInstance = new BumbalClient\Api\TagsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $tag_id = 789; // int | ID of tag to update
 
 try {
-    $result = $api_instance->updateTag($tag_id);
+    $result = $apiInstance->updateTag($tag_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TagsApi->updateTag: ', $e->getMessage(), PHP_EOL;
@@ -295,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

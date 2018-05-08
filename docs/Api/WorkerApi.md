@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **addActionToWorkerStack**
-> \BumbalClient\Model\ApiResponse addActionToWorkerStack()
+> \BumbalClient\BumbalClient\Model\ApiResponse addActionToWorkerStack()
 
 Add Action To Worker Stack
 
@@ -20,14 +20,19 @@ Add Action To Worker Stack
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\WorkerApi();
+$apiInstance = new BumbalClient\Api\WorkerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 
 try {
-    $result = $api_instance->addActionToWorkerStack();
+    $result = $apiInstance->addActionToWorkerStack();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WorkerApi->addActionToWorkerStack: ', $e->getMessage(), PHP_EOL;
@@ -40,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
