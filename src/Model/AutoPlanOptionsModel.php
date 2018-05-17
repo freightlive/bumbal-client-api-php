@@ -55,7 +55,8 @@ class AutoPlanOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'synchronous' => 'bool',
-        'respond_after_apply_planning' => 'bool'
+        'respond_after_apply_planning' => 'bool',
+        'allow_unplanned_activities' => 'bool'
     ];
 
     /**
@@ -64,7 +65,8 @@ class AutoPlanOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'synchronous' => null,
-        'respond_after_apply_planning' => null
+        'respond_after_apply_planning' => null,
+        'allow_unplanned_activities' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'synchronous' => 'synchronous',
-        'respond_after_apply_planning' => 'respond_after_apply_planning'
+        'respond_after_apply_planning' => 'respond_after_apply_planning',
+        'allow_unplanned_activities' => 'allow_unplanned_activities'
     ];
 
 
@@ -93,7 +96,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'synchronous' => 'setSynchronous',
-        'respond_after_apply_planning' => 'setRespondAfterApplyPlanning'
+        'respond_after_apply_planning' => 'setRespondAfterApplyPlanning',
+        'allow_unplanned_activities' => 'setAllowUnplannedActivities'
     ];
 
 
@@ -103,7 +107,8 @@ class AutoPlanOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'synchronous' => 'getSynchronous',
-        'respond_after_apply_planning' => 'getRespondAfterApplyPlanning'
+        'respond_after_apply_planning' => 'getRespondAfterApplyPlanning',
+        'allow_unplanned_activities' => 'getAllowUnplannedActivities'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class AutoPlanOptionsModel implements ArrayAccess
     {
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
         $this->container['respond_after_apply_planning'] = isset($data['respond_after_apply_planning']) ? $data['respond_after_apply_planning'] : null;
+        $this->container['allow_unplanned_activities'] = isset($data['allow_unplanned_activities']) ? $data['allow_unplanned_activities'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class AutoPlanOptionsModel implements ArrayAccess
     public function setRespondAfterApplyPlanning($respond_after_apply_planning)
     {
         $this->container['respond_after_apply_planning'] = $respond_after_apply_planning;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_unplanned_activities
+     * @return bool
+     */
+    public function getAllowUnplannedActivities()
+    {
+        return $this->container['allow_unplanned_activities'];
+    }
+
+    /**
+     * Sets allow_unplanned_activities
+     * @param bool $allow_unplanned_activities 
+     * @return $this
+     */
+    public function setAllowUnplannedActivities($allow_unplanned_activities)
+    {
+        $this->container['allow_unplanned_activities'] = $allow_unplanned_activities;
 
         return $this;
     }

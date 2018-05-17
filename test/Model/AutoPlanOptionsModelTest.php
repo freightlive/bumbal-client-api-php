@@ -90,4 +90,11 @@ class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRespondAfterApplyPlanning()
     {
     }
+
+    /**
+     * Test attribute "allow_unplanned_activities"
+     */
+    public function testPropertyAllowUnplannedActivities()
+    {
+    }
 }
