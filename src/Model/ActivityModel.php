@@ -64,7 +64,7 @@ class ActivityModel implements ArrayAccess
         'assignment_nr' => 'string',
         'instructions' => '\BumbalClient\Model\InstructionModel[]',
         'remarks' => 'string',
-        'locked' => 'bool',
+        'locked' => 'int',
         'priority' => 'int',
         'top_priority' => 'bool',
         'sequence_nr' => 'int',
@@ -870,7 +870,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets locked
-     * @return bool
+     * @return int
      */
     public function getLocked()
     {
@@ -879,7 +879,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets locked
-     * @param bool $locked Activity locked on a Route
+     * @param int $locked Activity locked status. 0= not locked. 1= locked on a Route and time. 2= locke don route only.
      * @return $this
      */
     public function setLocked($locked)
