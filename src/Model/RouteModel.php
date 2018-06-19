@@ -72,6 +72,8 @@ class RouteModel implements ArrayAccess
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
+        'planned_date_time_from' => '\DateTime',
+        'planned_date_time_to' => '\DateTime',
         'planned_driving_duration' => 'int',
         'planned_waiting_duration' => 'int',
         'planned_activity_duration' => 'int',
@@ -123,6 +125,8 @@ class RouteModel implements ArrayAccess
         'trailer' => null,
         'earliest_date_time' => 'date-time',
         'latest_date_time' => 'date-time',
+        'planned_date_time_from' => 'date-time',
+        'planned_date_time_to' => 'date-time',
         'planned_driving_duration' => null,
         'planned_waiting_duration' => null,
         'planned_activity_duration' => null,
@@ -184,6 +188,8 @@ class RouteModel implements ArrayAccess
         'trailer' => 'trailer',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
+        'planned_date_time_from' => 'planned_date_time_from',
+        'planned_date_time_to' => 'planned_date_time_to',
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_waiting_duration' => 'planned_waiting_duration',
         'planned_activity_duration' => 'planned_activity_duration',
@@ -236,6 +242,8 @@ class RouteModel implements ArrayAccess
         'trailer' => 'setTrailer',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
+        'planned_date_time_from' => 'setPlannedDateTimeFrom',
+        'planned_date_time_to' => 'setPlannedDateTimeTo',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_waiting_duration' => 'setPlannedWaitingDuration',
         'planned_activity_duration' => 'setPlannedActivityDuration',
@@ -288,6 +296,8 @@ class RouteModel implements ArrayAccess
         'trailer' => 'getTrailer',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
+        'planned_date_time_from' => 'getPlannedDateTimeFrom',
+        'planned_date_time_to' => 'getPlannedDateTimeTo',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_waiting_duration' => 'getPlannedWaitingDuration',
         'planned_activity_duration' => 'getPlannedActivityDuration',
@@ -401,6 +411,8 @@ class RouteModel implements ArrayAccess
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
+        $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
+        $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_waiting_duration'] = isset($data['planned_waiting_duration']) ? $data['planned_waiting_duration'] : null;
         $this->container['planned_activity_duration'] = isset($data['planned_activity_duration']) ? $data['planned_activity_duration'] : null;
@@ -870,6 +882,48 @@ class RouteModel implements ArrayAccess
     public function setLatestDateTime($latest_date_time)
     {
         $this->container['latest_date_time'] = $latest_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_from
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeFrom()
+    {
+        return $this->container['planned_date_time_from'];
+    }
+
+    /**
+     * Sets planned_date_time_from
+     * @param \DateTime $planned_date_time_from planned date-time from
+     * @return $this
+     */
+    public function setPlannedDateTimeFrom($planned_date_time_from)
+    {
+        $this->container['planned_date_time_from'] = $planned_date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_to
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeTo()
+    {
+        return $this->container['planned_date_time_to'];
+    }
+
+    /**
+     * Sets planned_date_time_to
+     * @param \DateTime $planned_date_time_to planned date-time to
+     * @return $this
+     */
+    public function setPlannedDateTimeTo($planned_date_time_to)
+    {
+        $this->container['planned_date_time_to'] = $planned_date_time_to;
 
         return $this;
     }

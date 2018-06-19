@@ -204,6 +204,20 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "planned_date_time_from"
+     */
+    public function testPropertyPlannedDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_to"
+     */
+    public function testPropertyPlannedDateTimeTo()
+    {
+    }
+
+    /**
      * Test attribute "planned_driving_duration"
      */
     public function testPropertyPlannedDrivingDuration()

@@ -75,6 +75,8 @@ class ActivityModel implements ArrayAccess
         'description' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
+        'planned_date_time_from' => '\DateTime',
+        'planned_date_time_to' => '\DateTime',
         'duration' => 'int',
         'active' => 'bool',
         'route_id' => 'string',
@@ -151,6 +153,8 @@ class ActivityModel implements ArrayAccess
         'description' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
+        'planned_date_time_from' => 'date-time',
+        'planned_date_time_to' => 'date-time',
         'duration' => null,
         'active' => null,
         'route_id' => null,
@@ -237,6 +241,8 @@ class ActivityModel implements ArrayAccess
         'description' => 'description',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
+        'planned_date_time_from' => 'planned_date_time_from',
+        'planned_date_time_to' => 'planned_date_time_to',
         'duration' => 'duration',
         'active' => 'active',
         'route_id' => 'route_id',
@@ -314,6 +320,8 @@ class ActivityModel implements ArrayAccess
         'description' => 'setDescription',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
+        'planned_date_time_from' => 'setPlannedDateTimeFrom',
+        'planned_date_time_to' => 'setPlannedDateTimeTo',
         'duration' => 'setDuration',
         'active' => 'setActive',
         'route_id' => 'setRouteId',
@@ -391,6 +399,8 @@ class ActivityModel implements ArrayAccess
         'description' => 'getDescription',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
+        'planned_date_time_from' => 'getPlannedDateTimeFrom',
+        'planned_date_time_to' => 'getPlannedDateTimeTo',
         'duration' => 'getDuration',
         'active' => 'getActive',
         'route_id' => 'getRouteId',
@@ -541,6 +551,8 @@ class ActivityModel implements ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
+        $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
@@ -1095,6 +1107,48 @@ class ActivityModel implements ArrayAccess
     public function setDateTimeTo($date_time_to)
     {
         $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_from
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeFrom()
+    {
+        return $this->container['planned_date_time_from'];
+    }
+
+    /**
+     * Sets planned_date_time_from
+     * @param \DateTime $planned_date_time_from planned date-time from (only filled for planned activities)
+     * @return $this
+     */
+    public function setPlannedDateTimeFrom($planned_date_time_from)
+    {
+        $this->container['planned_date_time_from'] = $planned_date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_to
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeTo()
+    {
+        return $this->container['planned_date_time_to'];
+    }
+
+    /**
+     * Sets planned_date_time_to
+     * @param \DateTime $planned_date_time_to planned date-time to (only filled for planned activities)
+     * @return $this
+     */
+    public function setPlannedDateTimeTo($planned_date_time_to)
+    {
+        $this->container['planned_date_time_to'] = $planned_date_time_to;
 
         return $this;
     }

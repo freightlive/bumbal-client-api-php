@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **description** | **string** | description of this activity | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | Earliest date-time | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | latest date-time | [optional] 
+**planned_date_time_from** | [**\DateTime**](\DateTime.md) | planned date-time from (only filled for planned activities) | [optional] 
+**planned_date_time_to** | [**\DateTime**](\DateTime.md) | planned date-time to (only filled for planned activities) | [optional] 
 **duration** | **int** | Duration of this activity in minutes | [optional] 
 **active** | **bool** | if active&#x3D;0: activity has been removed and is no longer visible in any bumbal interface | [optional] 
 **route_id** | **string** | Route ID (unique) | [optional] 

@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **trailer** | [**\BumbalClient\Model\TrailerModel**](TrailerModel.md) |  | [optional] 
 **earliest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **latest_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**planned_date_time_from** | [**\DateTime**](\DateTime.md) | planned date-time from | [optional] 
+**planned_date_time_to** | [**\DateTime**](\DateTime.md) | planned date-time to | [optional] 
 **planned_driving_duration** | **int** | Planned driving duration of this route in minutes | [optional] 
 **planned_waiting_duration** | **int** | Planned waiting duration of this route in minutes | [optional] 
 **planned_activity_duration** | **int** | Planned duration for all activities in this route in minutes | [optional] 
