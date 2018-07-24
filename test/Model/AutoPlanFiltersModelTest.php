@@ -92,16 +92,9 @@ class AutoPlanFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "date_from"
+     * Test attribute "route_general"
      */
-    public function testPropertyDateFrom()
-    {
-    }
-
-    /**
-     * Test attribute "date_to"
-     */
-    public function testPropertyDateTo()
+    public function testPropertyRouteGeneral()
     {
     }
 }

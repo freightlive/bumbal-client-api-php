@@ -59,7 +59,9 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_to' => '\DateTime',
         'updated_at' => '\DateTime',
         'status' => 'int',
-        'driver_id' => 'int'
+        'driver_id' => 'int',
+        'optimized' => 'bool[]',
+        'blocked' => 'bool[]'
     ];
 
     /**
@@ -72,7 +74,9 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_to' => 'date-time',
         'updated_at' => 'date-time',
         'status' => 'int64',
-        'driver_id' => 'int64'
+        'driver_id' => 'int64',
+        'optimized' => null,
+        'blocked' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +99,9 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_to' => 'date_time_to',
         'updated_at' => 'updated_at',
         'status' => 'status',
-        'driver_id' => 'driver_id'
+        'driver_id' => 'driver_id',
+        'optimized' => 'optimized',
+        'blocked' => 'blocked'
     ];
 
 
@@ -109,7 +115,9 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_to' => 'setDateTimeTo',
         'updated_at' => 'setUpdatedAt',
         'status' => 'setStatus',
-        'driver_id' => 'setDriverId'
+        'driver_id' => 'setDriverId',
+        'optimized' => 'setOptimized',
+        'blocked' => 'setBlocked'
     ];
 
 
@@ -123,7 +131,9 @@ class RouteFiltersModel implements ArrayAccess
         'date_time_to' => 'getDateTimeTo',
         'updated_at' => 'getUpdatedAt',
         'status' => 'getStatus',
-        'driver_id' => 'getDriverId'
+        'driver_id' => 'getDriverId',
+        'optimized' => 'getOptimized',
+        'blocked' => 'getBlocked'
     ];
 
     public static function attributeMap()
@@ -163,6 +173,8 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
+        $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
+        $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
     }
 
     /**
@@ -312,6 +324,48 @@ class RouteFiltersModel implements ArrayAccess
     public function setDriverId($driver_id)
     {
         $this->container['driver_id'] = $driver_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets optimized
+     * @return bool[]
+     */
+    public function getOptimized()
+    {
+        return $this->container['optimized'];
+    }
+
+    /**
+     * Sets optimized
+     * @param bool[] $optimized Optimized status of Route.
+     * @return $this
+     */
+    public function setOptimized($optimized)
+    {
+        $this->container['optimized'] = $optimized;
+
+        return $this;
+    }
+
+    /**
+     * Gets blocked
+     * @return bool[]
+     */
+    public function getBlocked()
+    {
+        return $this->container['blocked'];
+    }
+
+    /**
+     * Sets blocked
+     * @param bool[] $blocked Blocked status of Route
+     * @return $this
+     */
+    public function setBlocked($blocked)
+    {
+        $this->container['blocked'] = $blocked;
 
         return $this;
     }

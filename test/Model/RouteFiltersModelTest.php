@@ -118,4 +118,18 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDriverId()
     {
     }
+
+    /**
+     * Test attribute "optimized"
+     */
+    public function testPropertyOptimized()
+    {
+    }
+
+    /**
+     * Test attribute "blocked"
+     */
+    public function testPropertyBlocked()
+    {
+    }
 }

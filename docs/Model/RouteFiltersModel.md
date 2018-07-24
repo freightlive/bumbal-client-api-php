@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **status** | **int** |  | [optional] 
 **driver_id** | **int** |  | [optional] 
+**optimized** | **bool[]** | Optimized status of Route. | [optional] 
+**blocked** | **bool[]** | Blocked status of Route | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

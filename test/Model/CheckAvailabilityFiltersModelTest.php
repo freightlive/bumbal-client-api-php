@@ -83,4 +83,18 @@ class CheckAvailabilityFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRouteId()
     {
     }
+
+    /**
+     * Test attribute "date_from"
+     */
+    public function testPropertyDateFrom()
+    {
+    }
+
+    /**
+     * Test attribute "date_to"
+     */
+    public function testPropertyDateTo()
+    {
+    }
 }

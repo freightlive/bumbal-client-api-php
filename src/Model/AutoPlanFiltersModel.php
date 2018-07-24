@@ -56,8 +56,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'activity' => '\BumbalClient\Model\ActivityFiltersModel[]',
         'route' => '\BumbalClient\Model\RouteFiltersModel[]',
-        'date_from' => '\DateTime',
-        'date_to' => '\DateTime'
+        'route_general' => '\BumbalClient\Model\RouteFiltersModel[]'
     ];
 
     /**
@@ -67,8 +66,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     protected static $swaggerFormats = [
         'activity' => null,
         'route' => null,
-        'date_from' => 'date',
-        'date_to' => 'date'
+        'route_general' => null
     ];
 
     public static function swaggerTypes()
@@ -88,8 +86,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'activity' => 'activity',
         'route' => 'route',
-        'date_from' => 'date_from',
-        'date_to' => 'date_to'
+        'route_general' => 'route_general'
     ];
 
 
@@ -100,8 +97,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     protected static $setters = [
         'activity' => 'setActivity',
         'route' => 'setRoute',
-        'date_from' => 'setDateFrom',
-        'date_to' => 'setDateTo'
+        'route_general' => 'setRouteGeneral'
     ];
 
 
@@ -112,8 +108,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     protected static $getters = [
         'activity' => 'getActivity',
         'route' => 'getRoute',
-        'date_from' => 'getDateFrom',
-        'date_to' => 'getDateTo'
+        'route_general' => 'getRouteGeneral'
     ];
 
     public static function attributeMap()
@@ -149,8 +144,7 @@ class AutoPlanFiltersModel implements ArrayAccess
     {
         $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
         $this->container['route'] = isset($data['route']) ? $data['route'] : null;
-        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
-        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['route_general'] = isset($data['route_general']) ? $data['route_general'] : null;
     }
 
     /**
@@ -221,43 +215,22 @@ class AutoPlanFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets date_from
-     * @return \DateTime
+     * Gets route_general
+     * @return \BumbalClient\Model\RouteFiltersModel[]
      */
-    public function getDateFrom()
+    public function getRouteGeneral()
     {
-        return $this->container['date_from'];
+        return $this->container['route_general'];
     }
 
     /**
-     * Sets date_from
-     * @param \DateTime $date_from 
+     * Sets route_general
+     * @param \BumbalClient\Model\RouteFiltersModel[] $route_general 
      * @return $this
      */
-    public function setDateFrom($date_from)
+    public function setRouteGeneral($route_general)
     {
-        $this->container['date_from'] = $date_from;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_to
-     * @return \DateTime
-     */
-    public function getDateTo()
-    {
-        return $this->container['date_to'];
-    }
-
-    /**
-     * Sets date_to
-     * @param \DateTime $date_to 
-     * @return $this
-     */
-    public function setDateTo($date_to)
-    {
-        $this->container['date_to'] = $date_to;
+        $this->container['route_general'] = $route_general;
 
         return $this;
     }

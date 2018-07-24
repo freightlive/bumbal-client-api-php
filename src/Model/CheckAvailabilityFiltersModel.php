@@ -54,7 +54,9 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'route_id' => 'int[]'
+        'route_id' => 'int[]',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime'
     ];
 
     /**
@@ -62,7 +64,9 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'route_id' => null
+        'route_id' => null,
+        'date_from' => 'date',
+        'date_to' => 'date'
     ];
 
     public static function swaggerTypes()
@@ -80,7 +84,9 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'route_id' => 'route_id'
+        'route_id' => 'route_id',
+        'date_from' => 'date_from',
+        'date_to' => 'date_to'
     ];
 
 
@@ -89,7 +95,9 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'route_id' => 'setRouteId'
+        'route_id' => 'setRouteId',
+        'date_from' => 'setDateFrom',
+        'date_to' => 'setDateTo'
     ];
 
 
@@ -98,7 +106,9 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'route_id' => 'getRouteId'
+        'route_id' => 'getRouteId',
+        'date_from' => 'getDateFrom',
+        'date_to' => 'getDateTo'
     ];
 
     public static function attributeMap()
@@ -133,6 +143,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
+        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
+        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
     }
 
     /**
@@ -177,6 +189,48 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     public function setRouteId($route_id)
     {
         $this->container['route_id'] = $route_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_from
+     * @return \DateTime
+     */
+    public function getDateFrom()
+    {
+        return $this->container['date_from'];
+    }
+
+    /**
+     * Sets date_from
+     * @param \DateTime $date_from 
+     * @return $this
+     */
+    public function setDateFrom($date_from)
+    {
+        $this->container['date_from'] = $date_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_to
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->container['date_to'];
+    }
+
+    /**
+     * Sets date_to
+     * @param \DateTime $date_to 
+     * @return $this
+     */
+    public function setDateTo($date_to)
+    {
+        $this->container['date_to'] = $date_to;
 
         return $this;
     }
