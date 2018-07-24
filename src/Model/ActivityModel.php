@@ -124,7 +124,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => '\DateTime',
         'activity_updated_at' => '\DateTime',
         'activity_created_by' => 'int',
-        'activity_updated_by' => 'int'
+        'activity_updated_by' => 'int',
+        'activity_created_by_user' => 'null[]',
+        'activity_updated_by_user' => 'null[]'
     ];
 
     /**
@@ -202,7 +204,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'date-time',
         'activity_updated_at' => 'date-time',
         'activity_created_by' => null,
-        'activity_updated_by' => null
+        'activity_updated_by' => null,
+        'activity_created_by_user' => null,
+        'activity_updated_by_user' => null
     ];
 
     public static function swaggerTypes()
@@ -290,7 +294,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'activity_created_at',
         'activity_updated_at' => 'activity_updated_at',
         'activity_created_by' => 'activity_created_by',
-        'activity_updated_by' => 'activity_updated_by'
+        'activity_updated_by' => 'activity_updated_by',
+        'activity_created_by_user' => 'activity_created_by_user',
+        'activity_updated_by_user' => 'activity_updated_by_user'
     ];
 
 
@@ -369,7 +375,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'setActivityCreatedAt',
         'activity_updated_at' => 'setActivityUpdatedAt',
         'activity_created_by' => 'setActivityCreatedBy',
-        'activity_updated_by' => 'setActivityUpdatedBy'
+        'activity_updated_by' => 'setActivityUpdatedBy',
+        'activity_created_by_user' => 'setActivityCreatedByUser',
+        'activity_updated_by_user' => 'setActivityUpdatedByUser'
     ];
 
 
@@ -448,7 +456,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_at' => 'getActivityCreatedAt',
         'activity_updated_at' => 'getActivityUpdatedAt',
         'activity_created_by' => 'getActivityCreatedBy',
-        'activity_updated_by' => 'getActivityUpdatedBy'
+        'activity_updated_by' => 'getActivityUpdatedBy',
+        'activity_created_by_user' => 'getActivityCreatedByUser',
+        'activity_updated_by_user' => 'getActivityUpdatedByUser'
     ];
 
     public static function attributeMap()
@@ -601,6 +611,8 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_updated_at'] = isset($data['activity_updated_at']) ? $data['activity_updated_at'] : null;
         $this->container['activity_created_by'] = isset($data['activity_created_by']) ? $data['activity_created_by'] : null;
         $this->container['activity_updated_by'] = isset($data['activity_updated_by']) ? $data['activity_updated_by'] : null;
+        $this->container['activity_created_by_user'] = isset($data['activity_created_by_user']) ? $data['activity_created_by_user'] : null;
+        $this->container['activity_updated_by_user'] = isset($data['activity_updated_by_user']) ? $data['activity_updated_by_user'] : null;
     }
 
     /**
@@ -2151,12 +2163,54 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_by
-     * @param int $activity_updated_by created_by user id
+     * @param int $activity_updated_by updated_by user id
      * @return $this
      */
     public function setActivityUpdatedBy($activity_updated_by)
     {
         $this->container['activity_updated_by'] = $activity_updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_created_by_user
+     * @return null[]
+     */
+    public function getActivityCreatedByUser()
+    {
+        return $this->container['activity_created_by_user'];
+    }
+
+    /**
+     * Sets activity_created_by_user
+     * @param null[] $activity_created_by_user created_by user object
+     * @return $this
+     */
+    public function setActivityCreatedByUser($activity_created_by_user)
+    {
+        $this->container['activity_created_by_user'] = $activity_created_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_updated_by_user
+     * @return null[]
+     */
+    public function getActivityUpdatedByUser()
+    {
+        return $this->container['activity_updated_by_user'];
+    }
+
+    /**
+     * Sets activity_updated_by_user
+     * @param null[] $activity_updated_by_user updated_by user object
+     * @return $this
+     */
+    public function setActivityUpdatedByUser($activity_updated_by_user)
+    {
+        $this->container['activity_updated_by_user'] = $activity_updated_by_user;
 
         return $this;
     }
