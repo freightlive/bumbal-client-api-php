@@ -90,11 +90,4 @@ class CheckAvailabilityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertySynchronous()
     {
     }
-
-    /**
-     * Test attribute "include_capacities"
-     */
-    public function testPropertyIncludeCapacities()
-    {
-    }
 }

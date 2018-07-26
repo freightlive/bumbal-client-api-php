@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **include_package_lines** | **bool** |  | [optional] 
 **include_package_lines_info** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 
+**include_car_info** | **bool** |  | [optional] 
 **include_communication** | **bool** |  | [optional] 
 **include_communication_object** | **bool** |  | [optional] 
 **include_activity_links** | **bool** |  | [optional] 

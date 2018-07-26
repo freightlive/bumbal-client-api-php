@@ -66,6 +66,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_driver_info' => 'bool',
+        'include_car_info' => 'bool',
         'include_communication' => 'bool',
         'include_communication_object' => 'bool',
         'include_activity_links' => 'bool',
@@ -104,6 +105,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => null,
         'include_package_lines_info' => null,
         'include_driver_info' => null,
+        'include_car_info' => null,
         'include_communication' => null,
         'include_communication_object' => null,
         'include_activity_links' => null,
@@ -152,6 +154,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'include_package_lines',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_driver_info' => 'include_driver_info',
+        'include_car_info' => 'include_car_info',
         'include_communication' => 'include_communication',
         'include_communication_object' => 'include_communication_object',
         'include_activity_links' => 'include_activity_links',
@@ -191,6 +194,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'setIncludePackageLines',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_driver_info' => 'setIncludeDriverInfo',
+        'include_car_info' => 'setIncludeCarInfo',
         'include_communication' => 'setIncludeCommunication',
         'include_communication_object' => 'setIncludeCommunicationObject',
         'include_activity_links' => 'setIncludeActivityLinks',
@@ -230,6 +234,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'getIncludePackageLines',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_driver_info' => 'getIncludeDriverInfo',
+        'include_car_info' => 'getIncludeCarInfo',
         'include_communication' => 'getIncludeCommunication',
         'include_communication_object' => 'getIncludeCommunicationObject',
         'include_activity_links' => 'getIncludeActivityLinks',
@@ -294,6 +299,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
+        $this->container['include_car_info'] = isset($data['include_car_info']) ? $data['include_car_info'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
@@ -588,6 +594,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeDriverInfo($include_driver_info)
     {
         $this->container['include_driver_info'] = $include_driver_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_car_info
+     * @return bool
+     */
+    public function getIncludeCarInfo()
+    {
+        return $this->container['include_car_info'];
+    }
+
+    /**
+     * Sets include_car_info
+     * @param bool $include_car_info 
+     * @return $this
+     */
+    public function setIncludeCarInfo($include_car_info)
+    {
+        $this->container['include_car_info'] = $include_car_info;
 
         return $this;
     }

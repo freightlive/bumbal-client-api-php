@@ -162,6 +162,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_car_info"
+     */
+    public function testPropertyIncludeCarInfo()
+    {
+    }
+
+    /**
      * Test attribute "include_communication"
      */
     public function testPropertyIncludeCommunication()
