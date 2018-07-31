@@ -491,6 +491,27 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "driver"
+     */
+    public function testPropertyDriver()
+    {
+    }
+
+    /**
+     * Test attribute "car"
+     */
+    public function testPropertyCar()
+    {
+    }
+
+    /**
+     * Test attribute "trailer"
+     */
+    public function testPropertyTrailer()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()

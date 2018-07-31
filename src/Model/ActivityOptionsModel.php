@@ -66,7 +66,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_driver_info' => 'bool',
-        'include_car_info' => 'bool',
+        'include_driver' => 'bool',
+        'include_car' => 'bool',
+        'include_trailer' => 'bool',
         'include_communication' => 'bool',
         'include_communication_object' => 'bool',
         'include_activity_links' => 'bool',
@@ -105,7 +107,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => null,
         'include_package_lines_info' => null,
         'include_driver_info' => null,
-        'include_car_info' => null,
+        'include_driver' => null,
+        'include_car' => null,
+        'include_trailer' => null,
         'include_communication' => null,
         'include_communication_object' => null,
         'include_activity_links' => null,
@@ -154,7 +158,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'include_package_lines',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_driver_info' => 'include_driver_info',
-        'include_car_info' => 'include_car_info',
+        'include_driver' => 'include_driver',
+        'include_car' => 'include_car',
+        'include_trailer' => 'include_trailer',
         'include_communication' => 'include_communication',
         'include_communication_object' => 'include_communication_object',
         'include_activity_links' => 'include_activity_links',
@@ -194,7 +200,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'setIncludePackageLines',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_driver_info' => 'setIncludeDriverInfo',
-        'include_car_info' => 'setIncludeCarInfo',
+        'include_driver' => 'setIncludeDriver',
+        'include_car' => 'setIncludeCar',
+        'include_trailer' => 'setIncludeTrailer',
         'include_communication' => 'setIncludeCommunication',
         'include_communication_object' => 'setIncludeCommunicationObject',
         'include_activity_links' => 'setIncludeActivityLinks',
@@ -234,7 +242,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_package_lines' => 'getIncludePackageLines',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_driver_info' => 'getIncludeDriverInfo',
-        'include_car_info' => 'getIncludeCarInfo',
+        'include_driver' => 'getIncludeDriver',
+        'include_car' => 'getIncludeCar',
+        'include_trailer' => 'getIncludeTrailer',
         'include_communication' => 'getIncludeCommunication',
         'include_communication_object' => 'getIncludeCommunicationObject',
         'include_activity_links' => 'getIncludeActivityLinks',
@@ -299,7 +309,9 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
-        $this->container['include_car_info'] = isset($data['include_car_info']) ? $data['include_car_info'] : null;
+        $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
+        $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
+        $this->container['include_trailer'] = isset($data['include_trailer']) ? $data['include_trailer'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
@@ -599,22 +611,64 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_car_info
+     * Gets include_driver
      * @return bool
      */
-    public function getIncludeCarInfo()
+    public function getIncludeDriver()
     {
-        return $this->container['include_car_info'];
+        return $this->container['include_driver'];
     }
 
     /**
-     * Sets include_car_info
-     * @param bool $include_car_info 
+     * Sets include_driver
+     * @param bool $include_driver 
      * @return $this
      */
-    public function setIncludeCarInfo($include_car_info)
+    public function setIncludeDriver($include_driver)
     {
-        $this->container['include_car_info'] = $include_car_info;
+        $this->container['include_driver'] = $include_driver;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_car
+     * @return bool
+     */
+    public function getIncludeCar()
+    {
+        return $this->container['include_car'];
+    }
+
+    /**
+     * Sets include_car
+     * @param bool $include_car 
+     * @return $this
+     */
+    public function setIncludeCar($include_car)
+    {
+        $this->container['include_car'] = $include_car;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_trailer
+     * @return bool
+     */
+    public function getIncludeTrailer()
+    {
+        return $this->container['include_trailer'];
+    }
+
+    /**
+     * Sets include_trailer
+     * @param bool $include_trailer 
+     * @return $this
+     */
+    public function setIncludeTrailer($include_trailer)
+    {
+        $this->container['include_trailer'] = $include_trailer;
 
         return $this;
     }

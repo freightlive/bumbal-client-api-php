@@ -113,6 +113,9 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => '\BumbalClient\Model\LinkModel',
         'route_link' => '\BumbalClient\Model\LinkModel',
         'route' => '\BumbalClient\Model\RouteModel[]',
+        'driver' => '\BumbalClient\Model\DriverModel[]',
+        'car' => '\BumbalClient\Model\CarModel[]',
+        'trailer' => '\BumbalClient\Model\TrailerModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'object',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
@@ -193,6 +196,9 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => null,
         'route_link' => null,
         'route' => null,
+        'driver' => null,
+        'car' => null,
+        'trailer' => null,
         'tags' => null,
         'tag_names' => null,
         'zones' => null,
@@ -283,6 +289,9 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'assignment_link',
         'route_link' => 'route_link',
         'route' => 'route',
+        'driver' => 'driver',
+        'car' => 'car',
+        'trailer' => 'trailer',
         'tags' => 'tags',
         'tag_names' => 'tag_names',
         'zones' => 'zones',
@@ -364,6 +373,9 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'setAssignmentLink',
         'route_link' => 'setRouteLink',
         'route' => 'setRoute',
+        'driver' => 'setDriver',
+        'car' => 'setCar',
+        'trailer' => 'setTrailer',
         'tags' => 'setTags',
         'tag_names' => 'setTagNames',
         'zones' => 'setZones',
@@ -445,6 +457,9 @@ class ActivityModel implements ArrayAccess
         'assignment_link' => 'getAssignmentLink',
         'route_link' => 'getRouteLink',
         'route' => 'getRoute',
+        'driver' => 'getDriver',
+        'car' => 'getCar',
+        'trailer' => 'getTrailer',
         'tags' => 'getTags',
         'tag_names' => 'getTagNames',
         'zones' => 'getZones',
@@ -599,6 +614,9 @@ class ActivityModel implements ArrayAccess
         $this->container['assignment_link'] = isset($data['assignment_link']) ? $data['assignment_link'] : null;
         $this->container['route_link'] = isset($data['route_link']) ? $data['route_link'] : null;
         $this->container['route'] = isset($data['route']) ? $data['route'] : null;
+        $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
+        $this->container['car'] = isset($data['car']) ? $data['car'] : null;
+        $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
@@ -1917,6 +1935,69 @@ class ActivityModel implements ArrayAccess
     public function setRoute($route)
     {
         $this->container['route'] = $route;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver
+     * @return \BumbalClient\Model\DriverModel[]
+     */
+    public function getDriver()
+    {
+        return $this->container['driver'];
+    }
+
+    /**
+     * Sets driver
+     * @param \BumbalClient\Model\DriverModel[] $driver 
+     * @return $this
+     */
+    public function setDriver($driver)
+    {
+        $this->container['driver'] = $driver;
+
+        return $this;
+    }
+
+    /**
+     * Gets car
+     * @return \BumbalClient\Model\CarModel[]
+     */
+    public function getCar()
+    {
+        return $this->container['car'];
+    }
+
+    /**
+     * Sets car
+     * @param \BumbalClient\Model\CarModel[] $car 
+     * @return $this
+     */
+    public function setCar($car)
+    {
+        $this->container['car'] = $car;
+
+        return $this;
+    }
+
+    /**
+     * Gets trailer
+     * @return \BumbalClient\Model\TrailerModel[]
+     */
+    public function getTrailer()
+    {
+        return $this->container['trailer'];
+    }
+
+    /**
+     * Sets trailer
+     * @param \BumbalClient\Model\TrailerModel[] $trailer 
+     * @return $this
+     */
+    public function setTrailer($trailer)
+    {
+        $this->container['trailer'] = $trailer;
 
         return $this;
     }

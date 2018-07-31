@@ -55,7 +55,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_impact' => 'bool',
-        'synchronous' => 'bool'
+        'synchronous' => 'bool',
+        'include_capacities' => 'bool'
     ];
 
     /**
@@ -64,7 +65,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_impact' => null,
-        'synchronous' => null
+        'synchronous' => null,
+        'include_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_impact' => 'include_impact',
-        'synchronous' => 'synchronous'
+        'synchronous' => 'synchronous',
+        'include_capacities' => 'include_capacities'
     ];
 
 
@@ -93,7 +96,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_impact' => 'setIncludeImpact',
-        'synchronous' => 'setSynchronous'
+        'synchronous' => 'setSynchronous',
+        'include_capacities' => 'setIncludeCapacities'
     ];
 
 
@@ -103,7 +107,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_impact' => 'getIncludeImpact',
-        'synchronous' => 'getSynchronous'
+        'synchronous' => 'getSynchronous',
+        'include_capacities' => 'getIncludeCapacities'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     {
         $this->container['include_impact'] = isset($data['include_impact']) ? $data['include_impact'] : null;
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     public function setSynchronous($synchronous)
     {
         $this->container['synchronous'] = $synchronous;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
 
         return $this;
     }
