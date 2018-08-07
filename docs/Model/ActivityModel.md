@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **planned_driving_distance** | **int** | Driving distance from the activity before this one | [optional] 
 **reference** | **string** | Reference of this activity | [optional] 
 **description** | **string** | description of this activity | [optional] 
+**latest_delivery_date** | [**\DateTime**](Date.md) |  | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | Earliest date-time | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | latest date-time | [optional] 
 **planned_date_time_from** | [**\DateTime**](\DateTime.md) | planned date-time from (only filled for planned activities) | [optional] 

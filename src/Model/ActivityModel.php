@@ -73,6 +73,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int',
         'reference' => 'string',
         'description' => 'string',
+        'latest_delivery_date' => '\DateTime',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'planned_date_time_from' => '\DateTime',
@@ -156,6 +157,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int64',
         'reference' => null,
         'description' => null,
+        'latest_delivery_date' => 'date',
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'planned_date_time_from' => 'date-time',
@@ -249,6 +251,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'planned_driving_distance',
         'reference' => 'reference',
         'description' => 'description',
+        'latest_delivery_date' => 'latest_delivery_date',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'planned_date_time_from' => 'planned_date_time_from',
@@ -333,6 +336,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'reference' => 'setReference',
         'description' => 'setDescription',
+        'latest_delivery_date' => 'setLatestDeliveryDate',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'planned_date_time_from' => 'setPlannedDateTimeFrom',
@@ -417,6 +421,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'reference' => 'getReference',
         'description' => 'getDescription',
+        'latest_delivery_date' => 'getLatestDeliveryDate',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'planned_date_time_from' => 'getPlannedDateTimeFrom',
@@ -574,6 +579,7 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['latest_delivery_date'] = isset($data['latest_delivery_date']) ? $data['latest_delivery_date'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
@@ -1095,6 +1101,27 @@ class ActivityModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets latest_delivery_date
+     * @return \DateTime
+     */
+    public function getLatestDeliveryDate()
+    {
+        return $this->container['latest_delivery_date'];
+    }
+
+    /**
+     * Sets latest_delivery_date
+     * @param \DateTime $latest_delivery_date 
+     * @return $this
+     */
+    public function setLatestDeliveryDate($latest_delivery_date)
+    {
+        $this->container['latest_delivery_date'] = $latest_delivery_date;
 
         return $this;
     }
