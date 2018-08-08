@@ -62,7 +62,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_record_info' => 'bool',
         'include_activity_ids' => 'bool',
         'include_package_line_meta_data' => 'bool',
-        'include_package_line_links' => 'bool',
+        'include_links' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_package_line_files' => 'bool',
         'include_package_line_files_meta_data' => 'bool'
@@ -81,7 +81,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_record_info' => null,
         'include_activity_ids' => null,
         'include_package_line_meta_data' => null,
-        'include_package_line_links' => null,
+        'include_links' => null,
         'include_package_lines_info' => null,
         'include_package_line_files' => null,
         'include_package_line_files_meta_data' => null
@@ -110,7 +110,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_record_info' => 'include_package_line_record_info',
         'include_activity_ids' => 'include_activity_ids',
         'include_package_line_meta_data' => 'include_package_line_meta_data',
-        'include_package_line_links' => 'include_package_line_links',
+        'include_links' => 'include_links',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_package_line_files' => 'include_package_line_files',
         'include_package_line_files_meta_data' => 'include_package_line_files_meta_data'
@@ -130,7 +130,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_record_info' => 'setIncludePackageLineRecordInfo',
         'include_activity_ids' => 'setIncludeActivityIds',
         'include_package_line_meta_data' => 'setIncludePackageLineMetaData',
-        'include_package_line_links' => 'setIncludePackageLineLinks',
+        'include_links' => 'setIncludeLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_package_line_files' => 'setIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'setIncludePackageLineFilesMetaData'
@@ -150,7 +150,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_record_info' => 'getIncludePackageLineRecordInfo',
         'include_activity_ids' => 'getIncludeActivityIds',
         'include_package_line_meta_data' => 'getIncludePackageLineMetaData',
-        'include_package_line_links' => 'getIncludePackageLineLinks',
+        'include_links' => 'getIncludeLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_package_line_files' => 'getIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'getIncludePackageLineFilesMetaData'
@@ -195,7 +195,7 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_package_line_record_info'] = isset($data['include_package_line_record_info']) ? $data['include_package_line_record_info'] : null;
         $this->container['include_activity_ids'] = isset($data['include_activity_ids']) ? $data['include_activity_ids'] : null;
         $this->container['include_package_line_meta_data'] = isset($data['include_package_line_meta_data']) ? $data['include_package_line_meta_data'] : null;
-        $this->container['include_package_line_links'] = isset($data['include_package_line_links']) ? $data['include_package_line_links'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_package_line_files'] = isset($data['include_package_line_files']) ? $data['include_package_line_files'] : null;
         $this->container['include_package_line_files_meta_data'] = isset($data['include_package_line_files_meta_data']) ? $data['include_package_line_files_meta_data'] : null;
@@ -395,22 +395,22 @@ class PackageLineOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_package_line_links
+     * Gets include_links
      * @return bool
      */
-    public function getIncludePackageLineLinks()
+    public function getIncludeLinks()
     {
-        return $this->container['include_package_line_links'];
+        return $this->container['include_links'];
     }
 
     /**
-     * Sets include_package_line_links
-     * @param bool $include_package_line_links 
+     * Sets include_links
+     * @param bool $include_links 
      * @return $this
      */
-    public function setIncludePackageLineLinks($include_package_line_links)
+    public function setIncludeLinks($include_links)
     {
-        $this->container['include_package_line_links'] = $include_package_line_links;
+        $this->container['include_links'] = $include_links;
 
         return $this;
     }

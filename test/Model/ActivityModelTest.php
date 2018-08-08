@@ -246,6 +246,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "executed_date_time_from"
+     */
+    public function testPropertyExecutedDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "executed_date_time_to"
+     */
+    public function testPropertyExecutedDateTimeTo()
+    {
+    }
+
+    /**
      * Test attribute "duration"
      */
     public function testPropertyDuration()

@@ -134,9 +134,9 @@ class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_package_line_links"
+     * Test attribute "include_links"
      */
-    public function testPropertyIncludePackageLineLinks()
+    public function testPropertyIncludeLinks()
     {
     }
 

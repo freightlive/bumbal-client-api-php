@@ -148,6 +148,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_package_line_links"
+     */
+    public function testPropertyIncludePackageLineLinks()
+    {
+    }
+
+    /**
      * Test attribute "include_package_lines_info"
      */
     public function testPropertyIncludePackageLinesInfo()

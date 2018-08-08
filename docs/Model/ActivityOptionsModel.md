@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **include_route_info** | **bool** |  | [optional] 
 **include_route** | **bool** |  | [optional] 
 **include_package_lines** | **bool** |  | [optional] 
+**include_package_line_links** | **bool** |  | [optional] 
 **include_package_lines_info** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 

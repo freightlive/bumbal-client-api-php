@@ -64,6 +64,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'bool',
         'include_route' => 'bool',
         'include_package_lines' => 'bool',
+        'include_package_line_links' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_driver_info' => 'bool',
         'include_driver' => 'bool',
@@ -105,6 +106,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => null,
         'include_route' => null,
         'include_package_lines' => null,
+        'include_package_line_links' => null,
         'include_package_lines_info' => null,
         'include_driver_info' => null,
         'include_driver' => null,
@@ -156,6 +158,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'include_route_info',
         'include_route' => 'include_route',
         'include_package_lines' => 'include_package_lines',
+        'include_package_line_links' => 'include_package_line_links',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_driver_info' => 'include_driver_info',
         'include_driver' => 'include_driver',
@@ -198,6 +201,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'setIncludeRouteInfo',
         'include_route' => 'setIncludeRoute',
         'include_package_lines' => 'setIncludePackageLines',
+        'include_package_line_links' => 'setIncludePackageLineLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_driver_info' => 'setIncludeDriverInfo',
         'include_driver' => 'setIncludeDriver',
@@ -240,6 +244,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_route_info' => 'getIncludeRouteInfo',
         'include_route' => 'getIncludeRoute',
         'include_package_lines' => 'getIncludePackageLines',
+        'include_package_line_links' => 'getIncludePackageLineLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_driver_info' => 'getIncludeDriverInfo',
         'include_driver' => 'getIncludeDriver',
@@ -307,6 +312,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
         $this->container['include_route'] = isset($data['include_route']) ? $data['include_route'] : null;
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
+        $this->container['include_package_line_links'] = isset($data['include_package_line_links']) ? $data['include_package_line_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
@@ -564,6 +570,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludePackageLines($include_package_lines)
     {
         $this->container['include_package_lines'] = $include_package_lines;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_package_line_links
+     * @return bool
+     */
+    public function getIncludePackageLineLinks()
+    {
+        return $this->container['include_package_line_links'];
+    }
+
+    /**
+     * Sets include_package_line_links
+     * @param bool $include_package_line_links 
+     * @return $this
+     */
+    public function setIncludePackageLineLinks($include_package_line_links)
+    {
+        $this->container['include_package_line_links'] = $include_package_line_links;
 
         return $this;
     }
