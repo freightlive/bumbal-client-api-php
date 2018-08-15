@@ -156,6 +156,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
     const SORTING_COLUMN_ACTIVITY_TYPE_ID = 'activity_type_id';
     const SORTING_COLUMN_SEARCH_ZIP = 'search_zip';
     const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
+    const SORTING_COLUMN_SEQUENCE_NR = 'sequence_nr';
     const SORTING_DIRECTION_ASC = 'asc';
     const SORTING_DIRECTION_DESC = 'desc';
     
@@ -173,6 +174,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
             self::SORTING_COLUMN_ACTIVITY_TYPE_ID,
             self::SORTING_COLUMN_SEARCH_ZIP,
             self::SORTING_COLUMN_DATE_TIME_FROM,
+            self::SORTING_COLUMN_SEQUENCE_NR,
         ];
     }
     
