@@ -106,9 +106,9 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "status_id"
      */
-    public function testPropertyStatus()
+    public function testPropertyStatusId()
     {
     }
 
