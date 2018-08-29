@@ -54,7 +54,7 @@ class ActivityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
+        'id' => 'int[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'updated_at_since' => '\DateTime',
@@ -75,7 +75,7 @@ class ActivityFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
+        'id' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'updated_at_since' => 'date-time',
@@ -240,7 +240,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return int[]
      */
     public function getId()
     {
@@ -249,7 +249,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Unique Identifier
+     * @param int[] $id Unique Identifier(s)
      * @return $this
      */
     public function setId($id)

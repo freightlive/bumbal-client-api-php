@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique Identifier | [optional] 
+**id** | **int[]** | Unique Identifier(s) | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | DateTime From | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | DateTime To | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
