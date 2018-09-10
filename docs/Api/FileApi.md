@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createFile**](FileApi.md#createFile) | **POST** /file | Add a new File
 [**deleteFile**](FileApi.md#deleteFile) | **DELETE** /file/{fileId} | Delete an File
+[**fileCopy**](FileApi.md#fileCopy) | **POST** /file/copy | Copy File
 [**retrieveFile**](FileApi.md#retrieveFile) | **GET** /file/{fileId} | Retrieve a File
 [**retrieveListFile**](FileApi.md#retrieveListFile) | **PUT** /file | Retrieve List of Files
 [**updateFile**](FileApi.md#updateFile) | **PUT** /file/{fileId} | Update a File
@@ -95,6 +96,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **file_id** | **int**| ID of file to update |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **fileCopy**
+> \BumbalClient\Model\ApiResponse fileCopy($arguments)
+
+Copy File
+
+Copy file from one object to another
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\FileApi();
+$arguments = new \BumbalClient\Model\FileCopyArguments(); // \BumbalClient\Model\FileCopyArguments | Request Arguments
+
+try {
+    $result = $api_instance->fileCopy($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FileApi->fileCopy: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\FileCopyArguments**](../Model/FileCopyArguments.md)| Request Arguments |
 
 ### Return type
 

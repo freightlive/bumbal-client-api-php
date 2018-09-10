@@ -93,6 +93,16 @@ class FileApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for fileCopy
+     *
+     * Copy File.
+     *
+     */
+    public function testFileCopy()
+    {
+    }
+
+    /**
      * Test case for retrieveFile
      *
      * Retrieve a File.

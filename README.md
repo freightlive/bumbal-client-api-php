@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *EquipmentApi* | [**updateEquipment**](docs/Api/EquipmentApi.md#updateequipment) | **PUT** /equipment/{equipmentId} | Update a Equipment
 *FileApi* | [**createFile**](docs/Api/FileApi.md#createfile) | **POST** /file | Add a new File
 *FileApi* | [**deleteFile**](docs/Api/FileApi.md#deletefile) | **DELETE** /file/{fileId} | Delete an File
+*FileApi* | [**fileCopy**](docs/Api/FileApi.md#filecopy) | **POST** /file/copy | Copy File
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
 *FileApi* | [**retrieveListFile**](docs/Api/FileApi.md#retrievelistfile) | **PUT** /file | Retrieve List of Files
 *FileApi* | [**updateFile**](docs/Api/FileApi.md#updatefile) | **PUT** /file/{fileId} | Update a File
@@ -265,6 +266,7 @@ Class | Method | HTTP request | Description
  - [EquipmentModel](docs/Model/EquipmentModel.md)
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
+ - [FileCopyArguments](docs/Model/FileCopyArguments.md)
  - [FileFiltersModel](docs/Model/FileFiltersModel.md)
  - [FileModel](docs/Model/FileModel.md)
  - [FileOptionsModel](docs/Model/FileOptionsModel.md)
