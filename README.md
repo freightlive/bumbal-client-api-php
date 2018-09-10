@@ -152,8 +152,6 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**lockActivities**](docs/Api/PlannerApi.md#lockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
-*PlannerApi* | [**startAutoPlan**](docs/Api/PlannerApi.md#startautoplan) | **POST** /planner/start-auto-plan | start auto plan for a known uuid
-*PlannerApi* | [**startCheckAvailability**](docs/Api/PlannerApi.md#startcheckavailability) | **POST** /planner/start-check-availability | start check availability for a known uuid
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -171,6 +169,7 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
+*SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
 *TagsApi* | [**addTagToObject**](docs/Api/TagsApi.md#addtagtoobject) | **POST** /tags/add-tag-to-object | adds a tag to an object
 *TagsApi* | [**createTag**](docs/Api/TagsApi.md#createtag) | **POST** /tags | Add a new Tag
@@ -297,6 +296,7 @@ Class | Method | HTTP request | Description
  - [RouteModel](docs/Model/RouteModel.md)
  - [RouteOptionsModel](docs/Model/RouteOptionsModel.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
+ - [SayWhenConfigModel](docs/Model/SayWhenConfigModel.md)
  - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)

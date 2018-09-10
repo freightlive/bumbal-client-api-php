@@ -99,6 +99,13 @@ class RecurrenceModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "type_name"
+     */
+    public function testPropertyTypeName()
+    {
+    }
+
+    /**
      * Test attribute "recurrence_type_name"
      */
     public function testPropertyRecurrenceTypeName()

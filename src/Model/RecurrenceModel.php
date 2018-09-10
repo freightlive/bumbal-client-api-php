@@ -57,6 +57,7 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'type_id' => 'int',
+        'type_name' => 'int',
         'recurrence_type_name' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
@@ -84,6 +85,7 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'int64',
         'name' => null,
         'type_id' => null,
+        'type_name' => null,
         'recurrence_type_name' => null,
         'start_date' => 'date-time',
         'end_date' => 'date-time',
@@ -121,6 +123,7 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'id',
         'name' => 'name',
         'type_id' => 'type_id',
+        'type_name' => 'type_name',
         'recurrence_type_name' => 'recurrence_type_name',
         'start_date' => 'start_date',
         'end_date' => 'end_date',
@@ -149,6 +152,7 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'setId',
         'name' => 'setName',
         'type_id' => 'setTypeId',
+        'type_name' => 'setTypeName',
         'recurrence_type_name' => 'setRecurrenceTypeName',
         'start_date' => 'setStartDate',
         'end_date' => 'setEndDate',
@@ -177,6 +181,7 @@ class RecurrenceModel implements ArrayAccess
         'id' => 'getId',
         'name' => 'getName',
         'type_id' => 'getTypeId',
+        'type_name' => 'getTypeName',
         'recurrence_type_name' => 'getRecurrenceTypeName',
         'start_date' => 'getStartDate',
         'end_date' => 'getEndDate',
@@ -260,6 +265,7 @@ class RecurrenceModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type_id'] = isset($data['type_id']) ? $data['type_id'] : null;
+        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
         $this->container['recurrence_type_name'] = isset($data['recurrence_type_name']) ? $data['recurrence_type_name'] : null;
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['end_date'] = isset($data['end_date']) ? $data['end_date'] : null;
@@ -387,6 +393,27 @@ class RecurrenceModel implements ArrayAccess
     public function setTypeId($type_id)
     {
         $this->container['type_id'] = $type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type_name
+     * @return int
+     */
+    public function getTypeName()
+    {
+        return $this->container['type_name'];
+    }
+
+    /**
+     * Sets type_name
+     * @param int $type_name recurrence type_name, activity, route
+     * @return $this
+     */
+    public function setTypeName($type_name)
+    {
+        $this->container['type_name'] = $type_name;
 
         return $this;
     }
@@ -672,7 +699,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -693,7 +720,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

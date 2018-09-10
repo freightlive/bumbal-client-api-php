@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckAvailabilityDataModel
+ * SayWhenConfigModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CheckAvailabilityDataModel Class Doc Comment
+ * SayWhenConfigModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckAvailabilityDataModel implements ArrayAccess
+class SayWhenConfigModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class CheckAvailabilityDataModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CheckAvailabilityDataModel';
+    protected static $swaggerModelName = 'SayWhenConfigModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'activity' => '\BumbalClient\Model\ActivityModel[]',
-        'route_filters' => 'object',
-        'token' => 'string'
+        'planner_reference_mapping' => 'string',
+        'meta_data' => 'string',
+        'key_ring' => 'string',
+        'visit_type_map' => 'string'
     ];
 
     /**
@@ -64,9 +65,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'activity' => null,
-        'route_filters' => null,
-        'token' => 'string'
+        'planner_reference_mapping' => 'field for planner reference',
+        'meta_data' => 'JSON formatted string with metadata',
+        'key_ring' => 'JSON formatted string with the keyRing',
+        'visit_type_map' => 'JSON formatted string with the visit type mapping'
     ];
 
     public static function swaggerTypes()
@@ -84,9 +86,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'activity' => 'activity',
-        'route_filters' => 'route_filters',
-        'token' => 'token'
+        'planner_reference_mapping' => 'plannerReferenceMapping',
+        'meta_data' => 'metaData',
+        'key_ring' => 'keyRing',
+        'visit_type_map' => 'visitTypeMap'
     ];
 
 
@@ -95,9 +98,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'activity' => 'setActivity',
-        'route_filters' => 'setRouteFilters',
-        'token' => 'setToken'
+        'planner_reference_mapping' => 'setPlannerReferenceMapping',
+        'meta_data' => 'setMetaData',
+        'key_ring' => 'setKeyRing',
+        'visit_type_map' => 'setVisitTypeMap'
     ];
 
 
@@ -106,9 +110,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'activity' => 'getActivity',
-        'route_filters' => 'getRouteFilters',
-        'token' => 'getToken'
+        'planner_reference_mapping' => 'getPlannerReferenceMapping',
+        'meta_data' => 'getMetaData',
+        'key_ring' => 'getKeyRing',
+        'visit_type_map' => 'getVisitTypeMap'
     ];
 
     public static function attributeMap()
@@ -142,9 +147,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
-        $this->container['route_filters'] = isset($data['route_filters']) ? $data['route_filters'] : null;
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['planner_reference_mapping'] = isset($data['planner_reference_mapping']) ? $data['planner_reference_mapping'] : null;
+        $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['key_ring'] = isset($data['key_ring']) ? $data['key_ring'] : null;
+        $this->container['visit_type_map'] = isset($data['visit_type_map']) ? $data['visit_type_map'] : null;
     }
 
     /**
@@ -156,9 +162,6 @@ class CheckAvailabilityDataModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['activity'] === null) {
-            $invalid_properties[] = "'activity' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -171,72 +174,90 @@ class CheckAvailabilityDataModel implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['activity'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets activity
-     * @return \BumbalClient\Model\ActivityModel[]
-     */
-    public function getActivity()
-    {
-        return $this->container['activity'];
-    }
-
-    /**
-     * Sets activity
-     * @param \BumbalClient\Model\ActivityModel[] $activity
-     * @return $this
-     */
-    public function setActivity($activity)
-    {
-        $this->container['activity'] = $activity;
-
-        return $this;
-    }
-
-    /**
-     * Gets route_filters
-     * @return object
-     */
-    public function getRouteFilters()
-    {
-        return $this->container['route_filters'];
-    }
-
-    /**
-     * Sets route_filters
-     * @param object $route_filters
-     * @return $this
-     */
-    public function setRouteFilters($route_filters)
-    {
-        $this->container['route_filters'] = $route_filters;
-
-        return $this;
-    }
-
-    /**
-     * Gets token
+     * Gets planner_reference_mapping
      * @return string
      */
-    public function getToken()
+    public function getPlannerReferenceMapping()
     {
-        return $this->container['token'];
+        return $this->container['planner_reference_mapping'];
     }
 
     /**
-     * Sets token
-     * @param string $token unique per api request
+     * Sets planner_reference_mapping
+     * @param string $planner_reference_mapping
      * @return $this
      */
-    public function setToken($token)
+    public function setPlannerReferenceMapping($planner_reference_mapping)
     {
-        $this->container['token'] = $token;
+        $this->container['planner_reference_mapping'] = $planner_reference_mapping;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     * @return string
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     * @param string $meta_data
+     * @return $this
+     */
+    public function setMetaData($meta_data)
+    {
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets key_ring
+     * @return string
+     */
+    public function getKeyRing()
+    {
+        return $this->container['key_ring'];
+    }
+
+    /**
+     * Sets key_ring
+     * @param string $key_ring
+     * @return $this
+     */
+    public function setKeyRing($key_ring)
+    {
+        $this->container['key_ring'] = $key_ring;
+
+        return $this;
+    }
+
+    /**
+     * Gets visit_type_map
+     * @return string
+     */
+    public function getVisitTypeMap()
+    {
+        return $this->container['visit_type_map'];
+    }
+
+    /**
+     * Sets visit_type_map
+     * @param string $visit_type_map
+     * @return $this
+     */
+    public function setVisitTypeMap($visit_type_map)
+    {
+        $this->container['visit_type_map'] = $visit_type_map;
 
         return $this;
     }

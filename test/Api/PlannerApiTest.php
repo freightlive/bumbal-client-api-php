@@ -171,24 +171,4 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     public function testRemoveActivitiesFromRoute()
     {
     }
-
-    /**
-     * Test case for startAutoPlan
-     *
-     * start auto plan for a known uuid.
-     *
-     */
-    public function testStartAutoPlan()
-    {
-    }
-
-    /**
-     * Test case for startCheckAvailability
-     *
-     * start check availability for a known uuid.
-     *
-     */
-    public function testStartCheckAvailability()
-    {
-    }
 }

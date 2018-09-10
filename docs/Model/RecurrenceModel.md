@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | Unique Identifier | [optional] 
 **name** | **string** | Recurrence name | [optional] 
 **type_id** | **int** | recurrence type_id, 11:activity, 24:route | [optional] 
+**type_name** | **int** | recurrence type_name, activity, route | [optional] 
 **recurrence_type_name** | **string** | recurrence typename, activity or route | [optional] 
 **start_date** | [**\DateTime**](\DateTime.md) | Start date | [optional] 
 **end_date** | [**\DateTime**](\DateTime.md) | End date | [optional] 

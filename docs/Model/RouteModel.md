@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **driver_id** | **int** |  | [optional] 
 **driver_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **driver** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
+**recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **user_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **car_id** | **int** |  | [optional] 
 **car_link** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
