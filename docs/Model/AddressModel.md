@@ -31,10 +31,10 @@ Name | Type | Description | Notes
 **contact_person** | **string** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
+**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **tag_names** | **object** |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**object_type** | **int** |  | [optional] 
-**object_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

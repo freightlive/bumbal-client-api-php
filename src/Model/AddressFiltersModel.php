@@ -54,12 +54,11 @@ class AddressFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int[]',
         'address_type_id' => 'int[]',
         'address_tags' => 'string[]',
         'party_id' => 'int',
-        'object_type' => 'int',
-        'code' => 'string',
-        'object_id' => 'int'
+        'code' => 'string'
     ];
 
     /**
@@ -67,12 +66,11 @@ class AddressFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'id' => null,
         'address_type_id' => null,
         'address_tags' => null,
         'party_id' => null,
-        'object_type' => null,
-        'code' => null,
-        'object_id' => null
+        'code' => null
     ];
 
     public static function swaggerTypes()
@@ -90,12 +88,11 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'address_type_id' => 'address_type_id',
         'address_tags' => 'address_tags',
         'party_id' => 'party_id',
-        'object_type' => 'object_type',
-        'code' => 'code',
-        'object_id' => 'object_id'
+        'code' => 'code'
     ];
 
 
@@ -104,12 +101,11 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'address_type_id' => 'setAddressTypeId',
         'address_tags' => 'setAddressTags',
         'party_id' => 'setPartyId',
-        'object_type' => 'setObjectType',
-        'code' => 'setCode',
-        'object_id' => 'setObjectId'
+        'code' => 'setCode'
     ];
 
 
@@ -118,12 +114,11 @@ class AddressFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'address_type_id' => 'getAddressTypeId',
         'address_tags' => 'getAddressTags',
         'party_id' => 'getPartyId',
-        'object_type' => 'getObjectType',
-        'code' => 'getCode',
-        'object_id' => 'getObjectId'
+        'code' => 'getCode'
     ];
 
     public static function attributeMap()
@@ -157,12 +152,11 @@ class AddressFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['address_type_id'] = isset($data['address_type_id']) ? $data['address_type_id'] : null;
         $this->container['address_tags'] = isset($data['address_tags']) ? $data['address_tags'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -189,6 +183,27 @@ class AddressFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int[]
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int[] $id Unique Identifier(s)
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets address_type_id
@@ -254,27 +269,6 @@ class AddressFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets object_type
-     * @return int
-     */
-    public function getObjectType()
-    {
-        return $this->container['object_type'];
-    }
-
-    /**
-     * Sets object_type
-     * @param int $object_type
-     * @return $this
-     */
-    public function setObjectType($object_type)
-    {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
      * Gets code
      * @return string
      */
@@ -291,27 +285,6 @@ class AddressFiltersModel implements ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_id
-     * @return int
-     */
-    public function getObjectId()
-    {
-        return $this->container['object_id'];
-    }
-
-    /**
-     * Sets object_id
-     * @param int $object_id
-     * @return $this
-     */
-    public function setObjectId($object_id)
-    {
-        $this->container['object_id'] = $object_id;
 
         return $this;
     }

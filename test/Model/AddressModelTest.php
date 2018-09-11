@@ -274,6 +274,20 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+    }
+
+    /**
      * Test attribute "tag_names"
      */
     public function testPropertyTagNames()
@@ -284,20 +298,6 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "tags"
      */
     public function testPropertyTags()
-    {
-    }
-
-    /**
-     * Test attribute "object_type"
-     */
-    public function testPropertyObjectType()
-    {
-    }
-
-    /**
-     * Test attribute "object_id"
-     */
-    public function testPropertyObjectId()
     {
     }
 }

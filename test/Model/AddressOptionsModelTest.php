@@ -111,4 +111,25 @@ class AddressOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeAddressTypeIds()
     {
     }
+
+    /**
+     * Test attribute "include_address_meta_data"
+     */
+    public function testPropertyIncludeAddressMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_address_files"
+     */
+    public function testPropertyIncludeAddressFiles()
+    {
+    }
+
+    /**
+     * Test attribute "include_address_notes"
+     */
+    public function testPropertyIncludeAddressNotes()
+    {
+    }
 }

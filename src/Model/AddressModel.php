@@ -82,10 +82,10 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'tag_names' => 'object',
-        'tags' => '\BumbalClient\Model\TagModel[]',
-        'object_type' => 'int',
-        'object_id' => 'int'
+        'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
     /**
@@ -121,10 +121,10 @@ class AddressModel implements ArrayAccess
         'contact_person' => null,
         'links' => null,
         'meta_data' => null,
+        'notes' => null,
+        'files' => null,
         'tag_names' => null,
-        'tags' => null,
-        'object_type' => null,
-        'object_id' => null
+        'tags' => null
     ];
 
     public static function swaggerTypes()
@@ -170,10 +170,10 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'contact_person',
         'links' => 'links',
         'meta_data' => 'meta_data',
+        'notes' => 'notes',
+        'files' => 'files',
         'tag_names' => 'tag_names',
-        'tags' => 'tags',
-        'object_type' => 'object_type',
-        'object_id' => 'object_id'
+        'tags' => 'tags'
     ];
 
 
@@ -210,10 +210,10 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'setContactPerson',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
+        'notes' => 'setNotes',
+        'files' => 'setFiles',
         'tag_names' => 'setTagNames',
-        'tags' => 'setTags',
-        'object_type' => 'setObjectType',
-        'object_id' => 'setObjectId'
+        'tags' => 'setTags'
     ];
 
 
@@ -250,10 +250,10 @@ class AddressModel implements ArrayAccess
         'contact_person' => 'getContactPerson',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
+        'notes' => 'getNotes',
+        'files' => 'getFiles',
         'tag_names' => 'getTagNames',
-        'tags' => 'getTags',
-        'object_type' => 'getObjectType',
-        'object_id' => 'getObjectId'
+        'tags' => 'getTags'
     ];
 
     public static function attributeMap()
@@ -315,10 +315,10 @@ class AddressModel implements ArrayAccess
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -935,6 +935,48 @@ class AddressModel implements ArrayAccess
     }
 
     /**
+     * Gets notes
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
      * Gets tag_names
      * @return object
      */
@@ -972,48 +1014,6 @@ class AddressModel implements ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_type
-     * @return int
-     */
-    public function getObjectType()
-    {
-        return $this->container['object_type'];
-    }
-
-    /**
-     * Sets object_type
-     * @param int $object_type
-     * @return $this
-     */
-    public function setObjectType($object_type)
-    {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_id
-     * @return int
-     */
-    public function getObjectId()
-    {
-        return $this->container['object_id'];
-    }
-
-    /**
-     * Sets object_id
-     * @param int $object_id
-     * @return $this
-     */
-    public function setObjectId($object_id)
-    {
-        $this->container['object_id'] = $object_id;
 
         return $this;
     }

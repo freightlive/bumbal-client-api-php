@@ -58,7 +58,10 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'bool',
         'include_address_tags' => 'bool',
         'include_party_info' => 'bool',
-        'include_address_type_ids' => 'bool'
+        'include_address_type_ids' => 'bool',
+        'include_address_meta_data' => 'bool',
+        'include_address_files' => 'bool',
+        'include_address_notes' => 'bool'
     ];
 
     /**
@@ -70,7 +73,10 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => null,
         'include_address_tags' => null,
         'include_party_info' => null,
-        'include_address_type_ids' => null
+        'include_address_type_ids' => null,
+        'include_address_meta_data' => null,
+        'include_address_files' => null,
+        'include_address_notes' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +98,10 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'include_emails',
         'include_address_tags' => 'include_address_tags',
         'include_party_info' => 'include_party_info',
-        'include_address_type_ids' => 'include_address_type_ids'
+        'include_address_type_ids' => 'include_address_type_ids',
+        'include_address_meta_data' => 'include_address_meta_data',
+        'include_address_files' => 'include_address_files',
+        'include_address_notes' => 'include_address_notes'
     ];
 
 
@@ -105,7 +114,10 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'setIncludeEmails',
         'include_address_tags' => 'setIncludeAddressTags',
         'include_party_info' => 'setIncludePartyInfo',
-        'include_address_type_ids' => 'setIncludeAddressTypeIds'
+        'include_address_type_ids' => 'setIncludeAddressTypeIds',
+        'include_address_meta_data' => 'setIncludeAddressMetaData',
+        'include_address_files' => 'setIncludeAddressFiles',
+        'include_address_notes' => 'setIncludeAddressNotes'
     ];
 
 
@@ -118,7 +130,10 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'getIncludeEmails',
         'include_address_tags' => 'getIncludeAddressTags',
         'include_party_info' => 'getIncludePartyInfo',
-        'include_address_type_ids' => 'getIncludeAddressTypeIds'
+        'include_address_type_ids' => 'getIncludeAddressTypeIds',
+        'include_address_meta_data' => 'getIncludeAddressMetaData',
+        'include_address_files' => 'getIncludeAddressFiles',
+        'include_address_notes' => 'getIncludeAddressNotes'
     ];
 
     public static function attributeMap()
@@ -157,6 +172,9 @@ class AddressOptionsModel implements ArrayAccess
         $this->container['include_address_tags'] = isset($data['include_address_tags']) ? $data['include_address_tags'] : null;
         $this->container['include_party_info'] = isset($data['include_party_info']) ? $data['include_party_info'] : null;
         $this->container['include_address_type_ids'] = isset($data['include_address_type_ids']) ? $data['include_address_type_ids'] : null;
+        $this->container['include_address_meta_data'] = isset($data['include_address_meta_data']) ? $data['include_address_meta_data'] : null;
+        $this->container['include_address_files'] = isset($data['include_address_files']) ? $data['include_address_files'] : null;
+        $this->container['include_address_notes'] = isset($data['include_address_notes']) ? $data['include_address_notes'] : null;
     }
 
     /**
@@ -285,6 +303,69 @@ class AddressOptionsModel implements ArrayAccess
     public function setIncludeAddressTypeIds($include_address_type_ids)
     {
         $this->container['include_address_type_ids'] = $include_address_type_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_address_meta_data
+     * @return bool
+     */
+    public function getIncludeAddressMetaData()
+    {
+        return $this->container['include_address_meta_data'];
+    }
+
+    /**
+     * Sets include_address_meta_data
+     * @param bool $include_address_meta_data
+     * @return $this
+     */
+    public function setIncludeAddressMetaData($include_address_meta_data)
+    {
+        $this->container['include_address_meta_data'] = $include_address_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_address_files
+     * @return bool
+     */
+    public function getIncludeAddressFiles()
+    {
+        return $this->container['include_address_files'];
+    }
+
+    /**
+     * Sets include_address_files
+     * @param bool $include_address_files
+     * @return $this
+     */
+    public function setIncludeAddressFiles($include_address_files)
+    {
+        $this->container['include_address_files'] = $include_address_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_address_notes
+     * @return bool
+     */
+    public function getIncludeAddressNotes()
+    {
+        return $this->container['include_address_notes'];
+    }
+
+    /**
+     * Sets include_address_notes
+     * @param bool $include_address_notes
+     * @return $this
+     */
+    public function setIncludeAddressNotes($include_address_notes)
+    {
+        $this->container['include_address_notes'] = $include_address_notes;
 
         return $this;
     }
