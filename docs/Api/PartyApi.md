@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **createParty**
-> \BumbalClient\Model\ApiResponse createParty($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createParty($body)
 
 Create or update an Party
 
-Create or update an Party. If id or links are set in the data, and a corresponding party   *     is found in Bumbal, an update will be performed.
+Create or update an Party. If id or links are set in the data, and a corresponding party    *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -25,15 +25,20 @@ Create or update an Party. If id or links are set in the data, and a correspondi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\PartyModel(); // \BumbalClient\BumbalClient\Model\PartyModel | Party object
 
 try {
-    $result = $api_instance->createParty($body);
+    $result = $apiInstance->createParty($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->createParty: ', $e->getMessage(), PHP_EOL;
@@ -45,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteParty**
-> \BumbalClient\Model\ApiResponse deleteParty($party_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteParty($party_id)
 
 Delete an party
 
@@ -75,15 +80,20 @@ Delete an party
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $party_id = 789; // int | ID of the party to delete
 
 try {
-    $result = $api_instance->deleteParty($party_id);
+    $result = $apiInstance->deleteParty($party_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->deleteParty: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListParty**
-> \BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
+> \BumbalClient\BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
 
 Retrieve List of Partys
 
@@ -125,15 +135,20 @@ Retrieve List of Partys
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
-$arguments = new \BumbalClient\Model\PartyRetrieveListArguments(); // \BumbalClient\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\PartyRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListParty($arguments);
+    $result = $apiInstance->retrieveListParty($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->retrieveListParty: ', $e->getMessage(), PHP_EOL;
@@ -145,11 +160,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\PartyRetrieveListArguments**](../Model/PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
+[**\BumbalClient\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -163,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveParty**
-> \BumbalClient\Model\PartyModel retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
+> \BumbalClient\BumbalClient\Model\PartyModel retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
 
 Find party by ID
 
@@ -175,18 +190,23 @@ Returns a single party
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $party_id = 789; // int | ID of party to return
 $include_party_links = true; // bool | Include Link Data
 $include_party_files = true; // bool | Include files
 $include_party_files_meta_data = true; // bool | Include files meta data
 
 try {
-    $result = $api_instance->retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data);
+    $result = $apiInstance->retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->retrieveParty: ', $e->getMessage(), PHP_EOL;
@@ -205,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)
+[**\BumbalClient\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -219,7 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setParty**
-> \BumbalClient\Model\ApiResponse setParty($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setParty($body)
 
 Set (create or update) an Party
 
@@ -231,15 +251,20 @@ Set (create or update) an Party. If id or links are set in the data, and a corre
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\PartyModel(); // \BumbalClient\BumbalClient\Model\PartyModel | Party object
 
 try {
-    $result = $api_instance->setParty($body);
+    $result = $apiInstance->setParty($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->setParty: ', $e->getMessage(), PHP_EOL;
@@ -251,11 +276,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -269,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateParty**
-> \BumbalClient\Model\ApiResponse updateParty($party_id, $body)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateParty($party_id, $body)
 
 Update a party
 
@@ -281,16 +306,21 @@ Update a party
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\PartyApi();
+$apiInstance = new BumbalClient\Api\PartyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $party_id = 789; // int | ID of party to update
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object that needs to be updated
+$body = new \BumbalClient\BumbalClient\Model\PartyModel(); // \BumbalClient\BumbalClient\Model\PartyModel | Party object that needs to be updated
 
 try {
-    $result = $api_instance->updateParty($party_id, $body);
+    $result = $apiInstance->updateParty($party_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->updateParty: ', $e->getMessage(), PHP_EOL;
@@ -303,11 +333,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **party_id** | **int**| ID of party to update |
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

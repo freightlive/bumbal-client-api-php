@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **include_activity_status** | **bool** |  | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
 **include_activity_meta_data** | **bool** |  | [optional] 
+**include_address_applied** | **bool** |  | [optional] 
 **include_address** | **bool** |  | [optional] 
 **include_address_object** | **bool** |  | [optional] 
 **include_time_slots** | **bool** |  | [optional] 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **saywhenRetrievePortalURL**
-> \BumbalClient\Model\ApiResponse saywhenRetrievePortalURL($activity_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse saywhenRetrievePortalURL($activity_id)
 
 Retrieve SayWhen Portal URL
 
@@ -22,15 +22,20 @@ Retrieve SayWhen Portal URL
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\SaywhenApi();
+$apiInstance = new BumbalClient\Api\SaywhenApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $activity_id = 789; // int | ID of the activity to retrieve portal url for
 
 try {
-    $result = $api_instance->saywhenRetrievePortalURL($activity_id);
+    $result = $apiInstance->saywhenRetrievePortalURL($activity_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SaywhenApi->saywhenRetrievePortalURL: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -60,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saywhenRetrievePortalURLs**
-> \BumbalClient\Model\ApiResponse saywhenRetrievePortalURLs($arguments)
+> \BumbalClient\BumbalClient\Model\ApiResponse saywhenRetrievePortalURLs($arguments)
 
 Retrieve SayWhen Portal URLs
 
@@ -72,15 +77,20 @@ Retrieve SayWhen Portal URLs
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\SaywhenApi();
-$arguments = new \BumbalClient\Model\SayWhenRetrievePortalURLsArguments(); // \BumbalClient\Model\SayWhenRetrievePortalURLsArguments | portal urls Arguments
+$apiInstance = new BumbalClient\Api\SaywhenApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\SayWhenRetrievePortalURLsArguments(); // \BumbalClient\BumbalClient\Model\SayWhenRetrievePortalURLsArguments | portal urls Arguments
 
 try {
-    $result = $api_instance->saywhenRetrievePortalURLs($arguments);
+    $result = $apiInstance->saywhenRetrievePortalURLs($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SaywhenApi->saywhenRetrievePortalURLs: ', $e->getMessage(), PHP_EOL;
@@ -92,11 +102,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\SayWhenRetrievePortalURLsArguments**](../Model/SayWhenRetrievePortalURLsArguments.md)| portal urls Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\SayWhenRetrievePortalURLsArguments**](../Model/SayWhenRetrievePortalURLsArguments.md)| portal urls Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -110,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saywhenRetrieveStatus**
-> \BumbalClient\Model\SayWhenVisitModel saywhenRetrieveStatus($activity_id)
+> \BumbalClient\BumbalClient\Model\SayWhenVisitModel saywhenRetrieveStatus($activity_id)
 
 Retrieve SayWhen Status
 
@@ -122,15 +132,20 @@ Retrieve SayWhen Status
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\SaywhenApi();
+$apiInstance = new BumbalClient\Api\SaywhenApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $activity_id = 789; // int | ID of the activity to retrieve status for
 
 try {
-    $result = $api_instance->saywhenRetrieveStatus($activity_id);
+    $result = $apiInstance->saywhenRetrieveStatus($activity_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SaywhenApi->saywhenRetrieveStatus: ', $e->getMessage(), PHP_EOL;
@@ -146,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\SayWhenVisitModel**](../Model/SayWhenVisitModel.md)
+[**\BumbalClient\BumbalClient\Model\SayWhenVisitModel**](../Model/SayWhenVisitModel.md)
 
 ### Authorization
 

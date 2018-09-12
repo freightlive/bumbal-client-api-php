@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTrailer**
-> \BumbalClient\Model\ApiResponse createTrailer($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createTrailer($body)
 
 Add a trailer
 
@@ -25,15 +25,20 @@ Add a trailer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
-$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be created
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\TrailerModel(); // \BumbalClient\BumbalClient\Model\TrailerModel | Trailer object that needs to be created
 
 try {
-    $result = $api_instance->createTrailer($body);
+    $result = $apiInstance->createTrailer($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->createTrailer: ', $e->getMessage(), PHP_EOL;
@@ -45,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be created | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTrailer**
-> \BumbalClient\Model\ApiResponse deleteTrailer($trailer_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteTrailer($trailer_id)
 
 Delete an trailer
 
@@ -75,15 +80,20 @@ Delete an trailer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $trailer_id = 789; // int | ID of the trailer to delete
 
 try {
-    $result = $api_instance->deleteTrailer($trailer_id);
+    $result = $apiInstance->deleteTrailer($trailer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->deleteTrailer: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTrailer**
-> \BumbalClient\Model\TrailerModel[] retrieveListTrailer($arguments)
+> \BumbalClient\BumbalClient\Model\TrailerModel[] retrieveListTrailer($arguments)
 
 Retrieve List of Trailers
 
@@ -125,15 +135,20 @@ Retrieve List of Trailers
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
-$arguments = new \BumbalClient\Model\TrailerRetrieveListArguments(); // \BumbalClient\Model\TrailerRetrieveListArguments | Trailer RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\TrailerRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\TrailerRetrieveListArguments | Trailer RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListTrailer($arguments);
+    $result = $apiInstance->retrieveListTrailer($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->retrieveListTrailer: ', $e->getMessage(), PHP_EOL;
@@ -145,11 +160,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TrailerModel[]**](../Model/TrailerModel.md)
+[**\BumbalClient\BumbalClient\Model\TrailerModel[]**](../Model/TrailerModel.md)
 
 ### Authorization
 
@@ -163,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTrailer**
-> \BumbalClient\Model\TrailerModel retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
+> \BumbalClient\BumbalClient\Model\TrailerModel retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
 
 Find trailer by ID
 
@@ -175,17 +190,22 @@ Returns a single trailer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $trailer_id = 789; // int | ID of trailer to return
 $include_trailer_tags = true; // bool | a list of tags bound to trailer
 $include_updated_by = true; // bool | include updated_by_name
 
 try {
-    $result = $api_instance->retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by);
+    $result = $apiInstance->retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->retrieveTrailer: ', $e->getMessage(), PHP_EOL;
@@ -203,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)
+[**\BumbalClient\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)
 
 ### Authorization
 
@@ -217,7 +237,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setTrailer**
-> \BumbalClient\Model\ApiResponse setTrailer($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setTrailer($body)
 
 Set (create or update) a trailer
 
@@ -229,15 +249,20 @@ Set (create or update) a trailer. If id or links are set in the data, and a corr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
-$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\TrailerModel(); // \BumbalClient\BumbalClient\Model\TrailerModel | Trailer object
 
 try {
-    $result = $api_instance->setTrailer($body);
+    $result = $apiInstance->setTrailer($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->setTrailer: ', $e->getMessage(), PHP_EOL;
@@ -249,11 +274,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -267,7 +292,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTrailer**
-> \BumbalClient\Model\ApiResponse updateTrailer($trailer_id, $body)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateTrailer($trailer_id, $body)
 
 Update a trailer
 
@@ -279,16 +304,21 @@ Update a trailer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\TrailerApi();
+$apiInstance = new BumbalClient\Api\TrailerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $trailer_id = 789; // int | ID of trailer to update
-$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be updated
+$body = new \BumbalClient\BumbalClient\Model\TrailerModel(); // \BumbalClient\BumbalClient\Model\TrailerModel | Trailer object that needs to be updated
 
 try {
-    $result = $api_instance->updateTrailer($trailer_id, $body);
+    $result = $apiInstance->updateTrailer($trailer_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TrailerApi->updateTrailer: ', $e->getMessage(), PHP_EOL;
@@ -301,11 +331,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trailer_id** | **int**| ID of trailer to update |
- **body** | [**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)| Trailer object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
