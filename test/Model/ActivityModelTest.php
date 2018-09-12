@@ -526,6 +526,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "driver_links"
+     */
+    public function testPropertyDriverLinks()
+    {
+    }
+
+    /**
      * Test attribute "car"
      */
     public function testPropertyCar()

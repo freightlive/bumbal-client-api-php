@@ -61,7 +61,8 @@ class RouteModel implements ArrayAccess
         'status_id' => 'int',
         'nr_of_stops' => 'int',
         'driver_id' => 'int',
-        'driver_link' => '\BumbalClient\Model\LinkModel[]',
+        'driver_link' => '\BumbalClient\Model\LinkModel',
+        'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'driver' => '\BumbalClient\Model\UsersModel',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
@@ -116,6 +117,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => null,
         'driver_id' => null,
         'driver_link' => null,
+        'driver_links' => null,
         'driver' => null,
         'recurrence' => null,
         'user_link' => null,
@@ -180,6 +182,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'nr_of_stops',
         'driver_id' => 'driver_id',
         'driver_link' => 'driver_link',
+        'driver_links' => 'driver_links',
         'driver' => 'driver',
         'recurrence' => 'recurrence',
         'user_link' => 'user_link',
@@ -235,6 +238,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'setNrOfStops',
         'driver_id' => 'setDriverId',
         'driver_link' => 'setDriverLink',
+        'driver_links' => 'setDriverLinks',
         'driver' => 'setDriver',
         'recurrence' => 'setRecurrence',
         'user_link' => 'setUserLink',
@@ -290,6 +294,7 @@ class RouteModel implements ArrayAccess
         'nr_of_stops' => 'getNrOfStops',
         'driver_id' => 'getDriverId',
         'driver_link' => 'getDriverLink',
+        'driver_links' => 'getDriverLinks',
         'driver' => 'getDriver',
         'recurrence' => 'getRecurrence',
         'user_link' => 'getUserLink',
@@ -406,6 +411,7 @@ class RouteModel implements ArrayAccess
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
+        $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
@@ -663,7 +669,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets driver_link
-     * @return \BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel
      */
     public function getDriverLink()
     {
@@ -672,12 +678,33 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_link
-     * @param \BumbalClient\Model\LinkModel[] $driver_link 
+     * @param \BumbalClient\Model\LinkModel $driver_link 
      * @return $this
      */
     public function setDriverLink($driver_link)
     {
         $this->container['driver_link'] = $driver_link;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver_links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getDriverLinks()
+    {
+        return $this->container['driver_links'];
+    }
+
+    /**
+     * Sets driver_links
+     * @param \BumbalClient\Model\LinkModel[] $driver_links 
+     * @return $this
+     */
+    public function setDriverLinks($driver_links)
+    {
+        $this->container['driver_links'] = $driver_links;
 
         return $this;
     }

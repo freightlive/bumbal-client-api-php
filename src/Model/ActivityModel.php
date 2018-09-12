@@ -118,6 +118,7 @@ class ActivityModel implements ArrayAccess
         'route_link' => '\BumbalClient\Model\LinkModel',
         'route' => '\BumbalClient\Model\RouteModel',
         'driver' => '\BumbalClient\Model\DriverModel',
+        'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'car' => '\BumbalClient\Model\CarModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -205,6 +206,7 @@ class ActivityModel implements ArrayAccess
         'route_link' => null,
         'route' => null,
         'driver' => null,
+        'driver_links' => null,
         'car' => null,
         'trailer' => null,
         'tags' => null,
@@ -302,6 +304,7 @@ class ActivityModel implements ArrayAccess
         'route_link' => 'route_link',
         'route' => 'route',
         'driver' => 'driver',
+        'driver_links' => 'driver_links',
         'car' => 'car',
         'trailer' => 'trailer',
         'tags' => 'tags',
@@ -390,6 +393,7 @@ class ActivityModel implements ArrayAccess
         'route_link' => 'setRouteLink',
         'route' => 'setRoute',
         'driver' => 'setDriver',
+        'driver_links' => 'setDriverLinks',
         'car' => 'setCar',
         'trailer' => 'setTrailer',
         'tags' => 'setTags',
@@ -478,6 +482,7 @@ class ActivityModel implements ArrayAccess
         'route_link' => 'getRouteLink',
         'route' => 'getRoute',
         'driver' => 'getDriver',
+        'driver_links' => 'getDriverLinks',
         'car' => 'getCar',
         'trailer' => 'getTrailer',
         'tags' => 'getTags',
@@ -639,6 +644,7 @@ class ActivityModel implements ArrayAccess
         $this->container['route_link'] = isset($data['route_link']) ? $data['route_link'] : null;
         $this->container['route'] = isset($data['route']) ? $data['route'] : null;
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
+        $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -2064,6 +2070,27 @@ class ActivityModel implements ArrayAccess
     public function setDriver($driver)
     {
         $this->container['driver'] = $driver;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver_links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getDriverLinks()
+    {
+        return $this->container['driver_links'];
+    }
+
+    /**
+     * Sets driver_links
+     * @param \BumbalClient\Model\LinkModel[] $driver_links 
+     * @return $this
+     */
+    public function setDriverLinks($driver_links)
+    {
+        $this->container['driver_links'] = $driver_links;
 
         return $this;
     }
