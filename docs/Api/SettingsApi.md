@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListSettings**
-> \BumbalClient\BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
+> \BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
 
 Retrieve List of Settingss
 
@@ -22,20 +22,15 @@ Retrieve List of Settingss
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SettingsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$arguments = new \BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
+$api_instance = new BumbalClient\Api\SettingsApi();
+$arguments = new \BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
-    $result = $apiInstance->retrieveListSettings($arguments);
+    $result = $api_instance->retrieveListSettings($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->retrieveListSettings: ', $e->getMessage(), PHP_EOL;
@@ -47,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -65,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveSettings**
-> \BumbalClient\BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
+> \BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
 
 Retrieve a Settings
 
@@ -77,20 +72,15 @@ Retrieve an Settings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SettingsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to retrieve
 
 try {
-    $result = $apiInstance->retrieveSettings($settings_id);
+    $result = $api_instance->retrieveSettings($settings_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->retrieveSettings: ', $e->getMessage(), PHP_EOL;
@@ -106,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
+[**\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -120,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSettings**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateSettings($settings_id)
+> \BumbalClient\Model\ApiResponse updateSettings($settings_id)
 
 Update a Settings
 
@@ -132,20 +122,15 @@ Update a Setting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SettingsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\SettingsApi();
 $settings_id = 789; // int | ID of settings to update
 
 try {
-    $result = $apiInstance->updateSettings($settings_id);
+    $result = $api_instance->updateSettings($settings_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->updateSettings: ', $e->getMessage(), PHP_EOL;
@@ -161,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

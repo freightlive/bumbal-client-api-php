@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteAddress**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteAddress($address_id)
+> \BumbalClient\Model\ApiResponse deleteAddress($address_id)
 
 Delete an Address
 
@@ -23,20 +23,15 @@ Delete an Address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AddressApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\AddressApi();
 $address_id = 789; // int | ID of address to update
 
 try {
-    $result = $apiInstance->deleteAddress($address_id);
+    $result = $api_instance->deleteAddress($address_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->deleteAddress: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAddress**
-> \BumbalClient\BumbalClient\Model\AddressModel retrieveAddress($address_id)
+> \BumbalClient\Model\AddressModel retrieveAddress($address_id)
 
 Retrieve a Address
 
@@ -78,20 +73,15 @@ Retrieve an Address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AddressApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\AddressApi();
 $address_id = 789; // int | ID of address to retrieve
 
 try {
-    $result = $apiInstance->retrieveAddress($address_id);
+    $result = $api_instance->retrieveAddress($address_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->retrieveAddress: ', $e->getMessage(), PHP_EOL;
@@ -107,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)
+[**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -121,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAddress**
-> \BumbalClient\BumbalClient\Model\AddressListResponse retrieveListAddress($arguments)
+> \BumbalClient\Model\AddressListResponse retrieveListAddress($arguments)
 
 Retrieve List of Addresses
 
@@ -133,20 +123,15 @@ Retrieve List of Addresses
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AddressApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$arguments = new \BumbalClient\BumbalClient\Model\AddressRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
+$api_instance = new BumbalClient\Api\AddressApi();
+$arguments = new \BumbalClient\Model\AddressRetrieveListArguments(); // \BumbalClient\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
 
 try {
-    $result = $apiInstance->retrieveListAddress($arguments);
+    $result = $api_instance->retrieveListAddress($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->retrieveListAddress: ', $e->getMessage(), PHP_EOL;
@@ -158,11 +143,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\AddressRetrieveListArguments**](../Model/AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\AddressListResponse**](../Model/AddressListResponse.md)
+[**\BumbalClient\Model\AddressListResponse**](../Model/AddressListResponse.md)
 
 ### Authorization
 
@@ -176,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setAddress**
-> \BumbalClient\BumbalClient\Model\ApiResponse setAddress($body)
+> \BumbalClient\Model\ApiResponse setAddress($body)
 
 Add a new Address
 
@@ -188,20 +173,15 @@ Add a new Address
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\AddressApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \BumbalClient\BumbalClient\Model\AddressModel(); // \BumbalClient\BumbalClient\Model\AddressModel | Address object that needs to be created
+$api_instance = new BumbalClient\Api\AddressApi();
+$body = new \BumbalClient\Model\AddressModel(); // \BumbalClient\Model\AddressModel | Address object that needs to be created
 
 try {
-    $result = $apiInstance->setAddress($body);
+    $result = $api_instance->setAddress($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AddressApi->setAddress: ', $e->getMessage(), PHP_EOL;
@@ -213,11 +193,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)| Address object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)| Address object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
