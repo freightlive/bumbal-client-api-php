@@ -279,7 +279,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Sets code
-     * @param string $code 
+     * @param string $code
      * @return $this
      */
     public function setCode($code)

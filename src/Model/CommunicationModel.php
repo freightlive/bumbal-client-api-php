@@ -58,6 +58,7 @@ class CommunicationModel implements ArrayAccess
         'saywhen' => 'bool',
         'bumbal' => 'bool',
         'send_invite' => 'bool',
+        'send_pref_confirmation' => 'bool',
         'send_planned' => 'bool',
         'send_eta' => 'bool',
         'send_executed' => 'bool',
@@ -77,6 +78,7 @@ class CommunicationModel implements ArrayAccess
         'saywhen' => null,
         'bumbal' => null,
         'send_invite' => null,
+        'send_pref_confirmation' => null,
         'send_planned' => null,
         'send_eta' => null,
         'send_executed' => null,
@@ -106,6 +108,7 @@ class CommunicationModel implements ArrayAccess
         'saywhen' => 'saywhen',
         'bumbal' => 'bumbal',
         'send_invite' => 'send_invite',
+        'send_pref_confirmation' => 'send_pref_confirmation',
         'send_planned' => 'send_planned',
         'send_eta' => 'send_eta',
         'send_executed' => 'send_executed',
@@ -126,6 +129,7 @@ class CommunicationModel implements ArrayAccess
         'saywhen' => 'setSaywhen',
         'bumbal' => 'setBumbal',
         'send_invite' => 'setSendInvite',
+        'send_pref_confirmation' => 'setSendPrefConfirmation',
         'send_planned' => 'setSendPlanned',
         'send_eta' => 'setSendEta',
         'send_executed' => 'setSendExecuted',
@@ -146,6 +150,7 @@ class CommunicationModel implements ArrayAccess
         'saywhen' => 'getSaywhen',
         'bumbal' => 'getBumbal',
         'send_invite' => 'getSendInvite',
+        'send_pref_confirmation' => 'getSendPrefConfirmation',
         'send_planned' => 'getSendPlanned',
         'send_eta' => 'getSendEta',
         'send_executed' => 'getSendExecuted',
@@ -219,6 +224,7 @@ class CommunicationModel implements ArrayAccess
         $this->container['saywhen'] = isset($data['saywhen']) ? $data['saywhen'] : null;
         $this->container['bumbal'] = isset($data['bumbal']) ? $data['bumbal'] : null;
         $this->container['send_invite'] = isset($data['send_invite']) ? $data['send_invite'] : null;
+        $this->container['send_pref_confirmation'] = isset($data['send_pref_confirmation']) ? $data['send_pref_confirmation'] : null;
         $this->container['send_planned'] = isset($data['send_planned']) ? $data['send_planned'] : null;
         $this->container['send_eta'] = isset($data['send_eta']) ? $data['send_eta'] : null;
         $this->container['send_executed'] = isset($data['send_executed']) ? $data['send_executed'] : null;
@@ -277,7 +283,7 @@ class CommunicationModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -346,6 +352,27 @@ class CommunicationModel implements ArrayAccess
     public function setSendInvite($send_invite)
     {
         $this->container['send_invite'] = $send_invite;
+
+        return $this;
+    }
+
+    /**
+     * Gets send_pref_confirmation
+     * @return bool
+     */
+    public function getSendPrefConfirmation()
+    {
+        return $this->container['send_pref_confirmation'];
+    }
+
+    /**
+     * Sets send_pref_confirmation
+     * @param bool $send_pref_confirmation Send confirmation on preferences received
+     * @return $this
+     */
+    public function setSendPrefConfirmation($send_pref_confirmation)
+    {
+        $this->container['send_pref_confirmation'] = $send_pref_confirmation;
 
         return $this;
     }

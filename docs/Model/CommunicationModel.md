@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **saywhen** | **bool** | Whether or not activity should be synced with Saywhen | [optional] 
 **bumbal** | **bool** | Whether or not activity is handled by Bumbal Communication Server | [optional] 
 **send_invite** | **bool** | Send invite | [optional] 
+**send_pref_confirmation** | **bool** | Send confirmation on preferences received | [optional] 
 **send_planned** | **bool** | Send planned notice | [optional] 
 **send_eta** | **bool** | Send eta notice | [optional] 
 **send_executed** | **bool** | Send executed notice | [optional] 
