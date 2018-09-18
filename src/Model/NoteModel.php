@@ -60,6 +60,7 @@ class NoteModel implements ArrayAccess
         'object_id' => 'int',
         'note_category_id' => 'int',
         'note_category_name' => 'string',
+        'visible_for_driver' => 'bool',
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
@@ -78,6 +79,7 @@ class NoteModel implements ArrayAccess
         'object_id' => null,
         'note_category_id' => null,
         'note_category_name' => null,
+        'visible_for_driver' => null,
         'title' => null,
         'updated_by_name' => null,
         'content' => null,
@@ -106,6 +108,7 @@ class NoteModel implements ArrayAccess
         'object_id' => 'object_id',
         'note_category_id' => 'note_category_id',
         'note_category_name' => 'note_category_name',
+        'visible_for_driver' => 'visible_for_driver',
         'title' => 'title',
         'updated_by_name' => 'updated_by_name',
         'content' => 'content',
@@ -125,6 +128,7 @@ class NoteModel implements ArrayAccess
         'object_id' => 'setObjectId',
         'note_category_id' => 'setNoteCategoryId',
         'note_category_name' => 'setNoteCategoryName',
+        'visible_for_driver' => 'setVisibleForDriver',
         'title' => 'setTitle',
         'updated_by_name' => 'setUpdatedByName',
         'content' => 'setContent',
@@ -144,6 +148,7 @@ class NoteModel implements ArrayAccess
         'object_id' => 'getObjectId',
         'note_category_id' => 'getNoteCategoryId',
         'note_category_name' => 'getNoteCategoryName',
+        'visible_for_driver' => 'getVisibleForDriver',
         'title' => 'getTitle',
         'updated_by_name' => 'getUpdatedByName',
         'content' => 'getContent',
@@ -188,6 +193,7 @@ class NoteModel implements ArrayAccess
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['note_category_id'] = isset($data['note_category_id']) ? $data['note_category_id'] : null;
         $this->container['note_category_name'] = isset($data['note_category_name']) ? $data['note_category_name'] : null;
+        $this->container['visible_for_driver'] = isset($data['visible_for_driver']) ? $data['visible_for_driver'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
@@ -342,6 +348,27 @@ class NoteModel implements ArrayAccess
     public function setNoteCategoryName($note_category_name)
     {
         $this->container['note_category_name'] = $note_category_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets visible_for_driver
+     * @return bool
+     */
+    public function getVisibleForDriver()
+    {
+        return $this->container['visible_for_driver'];
+    }
+
+    /**
+     * Sets visible_for_driver
+     * @param bool $visible_for_driver Notition is visible in driver App
+     * @return $this
+     */
+    public function setVisibleForDriver($visible_for_driver)
+    {
+        $this->container['visible_for_driver'] = $visible_for_driver;
 
         return $this;
     }

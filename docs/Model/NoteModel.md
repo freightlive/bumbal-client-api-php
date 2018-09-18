@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **object_id** | **int** | Object ID | [optional] 
 **note_category_id** | **int** | Note category id | [optional] 
 **note_category_name** | **string** | Note category name | [optional] 
+**visible_for_driver** | **bool** | Notition is visible in driver App | [optional] 
 **title** | **string** | Note title | [optional] 
 **updated_by_name** | **string** | Note updated by user full name | [optional] 
 **content** | **string** | Note content | [optional] 

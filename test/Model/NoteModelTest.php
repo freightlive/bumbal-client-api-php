@@ -120,6 +120,13 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "visible_for_driver"
+     */
+    public function testPropertyVisibleForDriver()
+    {
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()
