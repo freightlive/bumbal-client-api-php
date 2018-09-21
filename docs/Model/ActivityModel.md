@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **status_name** | **string** | Activity Status | [optional] 
 **assignment_id** | **int** | Assignment ID | [optional] 
 **assignment_nr** | **string** | Assignment NR | [optional] 
-**instructions** | [**\BumbalClient\Model\InstructionModel[]**](InstructionModel.md) |  | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
 **locked** | **int** | Activity locked status. 0&#x3D; not locked. 1&#x3D; locked on a Route and time. 2&#x3D; locke don route only. | [optional] 
 **priority** | **int** | Priority level. 1 for highest priority, 3 for lowest priority. Default &#x3D; 2 | [optional] 

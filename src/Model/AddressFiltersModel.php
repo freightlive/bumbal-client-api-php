@@ -58,7 +58,9 @@ class AddressFiltersModel implements ArrayAccess
         'address_type_id' => 'int[]',
         'address_tags' => 'string[]',
         'party_id' => 'int',
-        'code' => 'string'
+        'code' => 'string',
+        'object_type' => 'int',
+        'object_id' => 'int'
     ];
 
     /**
@@ -70,7 +72,9 @@ class AddressFiltersModel implements ArrayAccess
         'address_type_id' => null,
         'address_tags' => null,
         'party_id' => null,
-        'code' => null
+        'code' => null,
+        'object_type' => null,
+        'object_id' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +96,9 @@ class AddressFiltersModel implements ArrayAccess
         'address_type_id' => 'address_type_id',
         'address_tags' => 'address_tags',
         'party_id' => 'party_id',
-        'code' => 'code'
+        'code' => 'code',
+        'object_type' => 'object_type',
+        'object_id' => 'object_id'
     ];
 
 
@@ -105,7 +111,9 @@ class AddressFiltersModel implements ArrayAccess
         'address_type_id' => 'setAddressTypeId',
         'address_tags' => 'setAddressTags',
         'party_id' => 'setPartyId',
-        'code' => 'setCode'
+        'code' => 'setCode',
+        'object_type' => 'setObjectType',
+        'object_id' => 'setObjectId'
     ];
 
 
@@ -118,7 +126,9 @@ class AddressFiltersModel implements ArrayAccess
         'address_type_id' => 'getAddressTypeId',
         'address_tags' => 'getAddressTags',
         'party_id' => 'getPartyId',
-        'code' => 'getCode'
+        'code' => 'getCode',
+        'object_type' => 'getObjectType',
+        'object_id' => 'getObjectId'
     ];
 
     public static function attributeMap()
@@ -157,6 +167,8 @@ class AddressFiltersModel implements ArrayAccess
         $this->container['address_tags'] = isset($data['address_tags']) ? $data['address_tags'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
     }
 
     /**
@@ -285,6 +297,48 @@ class AddressFiltersModel implements ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type
+     * @return int
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param int $object_type
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_id
+     * @return int
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int $object_id
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }

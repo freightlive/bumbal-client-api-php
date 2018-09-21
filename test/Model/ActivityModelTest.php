@@ -134,13 +134,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "instructions"
-     */
-    public function testPropertyInstructions()
-    {
-    }
-
-    /**
      * Test attribute "remarks"
      */
     public function testPropertyRemarks()
