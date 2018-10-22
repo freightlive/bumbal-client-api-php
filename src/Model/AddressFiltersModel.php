@@ -58,12 +58,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
-        'address_type_id' => 'int[]',
+        'address_type_names' => 'string[]',
         'address_tags' => 'string[]',
         'party_id' => 'int',
         'code' => 'string',
-        'object_type' => 'int',
-        'object_id' => 'int'
+        'user_id' => 'int'
     ];
 
     /**
@@ -73,12 +72,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'address_type_id' => null,
+        'address_type_names' => null,
         'address_tags' => null,
         'party_id' => null,
         'code' => null,
-        'object_type' => null,
-        'object_id' => null
+        'user_id' => null
     ];
 
     /**
@@ -109,12 +107,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'address_type_id' => 'address_type_id',
+        'address_type_names' => 'address_type_names',
         'address_tags' => 'address_tags',
         'party_id' => 'party_id',
         'code' => 'code',
-        'object_type' => 'object_type',
-        'object_id' => 'object_id'
+        'user_id' => 'user_id'
     ];
 
     /**
@@ -124,12 +121,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'address_type_id' => 'setAddressTypeId',
+        'address_type_names' => 'setAddressTypeNames',
         'address_tags' => 'setAddressTags',
         'party_id' => 'setPartyId',
         'code' => 'setCode',
-        'object_type' => 'setObjectType',
-        'object_id' => 'setObjectId'
+        'user_id' => 'setUserId'
     ];
 
     /**
@@ -139,12 +135,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'address_type_id' => 'getAddressTypeId',
+        'address_type_names' => 'getAddressTypeNames',
         'address_tags' => 'getAddressTags',
         'party_id' => 'getPartyId',
         'code' => 'getCode',
-        'object_type' => 'getObjectType',
-        'object_id' => 'getObjectId'
+        'user_id' => 'getUserId'
     ];
 
     /**
@@ -208,12 +203,11 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['address_type_id'] = isset($data['address_type_id']) ? $data['address_type_id'] : null;
+        $this->container['address_type_names'] = isset($data['address_type_names']) ? $data['address_type_names'] : null;
         $this->container['address_tags'] = isset($data['address_tags']) ? $data['address_tags'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
     }
 
     /**
@@ -266,25 +260,25 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets address_type_id
+     * Gets address_type_names
      *
-     * @return int[]
+     * @return string[]
      */
-    public function getAddressTypeId()
+    public function getAddressTypeNames()
     {
-        return $this->container['address_type_id'];
+        return $this->container['address_type_names'];
     }
 
     /**
-     * Sets address_type_id
+     * Sets address_type_names
      *
-     * @param int[] $address_type_id Address Types
+     * @param string[] $address_type_names Address Type names
      *
      * @return $this
      */
-    public function setAddressTypeId($address_type_id)
+    public function setAddressTypeNames($address_type_names)
     {
-        $this->container['address_type_id'] = $address_type_id;
+        $this->container['address_type_names'] = $address_type_names;
 
         return $this;
     }
@@ -362,49 +356,25 @@ class AddressFiltersModel implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets object_type
+     * Gets user_id
      *
      * @return int
      */
-    public function getObjectType()
+    public function getUserId()
     {
-        return $this->container['object_type'];
+        return $this->container['user_id'];
     }
 
     /**
-     * Sets object_type
+     * Sets user_id
      *
-     * @param int $object_type 
+     * @param int $user_id 
      *
      * @return $this
      */
-    public function setObjectType($object_type)
+    public function setUserId($user_id)
     {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_id
-     *
-     * @return int
-     */
-    public function getObjectId()
-    {
-        return $this->container['object_id'];
-    }
-
-    /**
-     * Sets object_id
-     *
-     * @param int $object_id 
-     *
-     * @return $this
-     */
-    public function setObjectId($object_id)
-    {
-        $this->container['object_id'] = $object_id;
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

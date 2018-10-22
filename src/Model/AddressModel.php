@@ -77,12 +77,13 @@ class AddressModel implements ModelInterface, ArrayAccess
         'time_from' => 'string',
         'time_to' => 'string',
         'duration' => 'int',
-        'address_type_names' => 'object',
+        'address_type_names' => 'string[]',
         'emails' => '\BumbalClient\BumbalClient\Model\EmailModel[]',
         'phone_nrs' => '\BumbalClient\BumbalClient\Model\PhoneNrModel[]',
         'latitude' => 'string',
         'longitude' => 'string',
         'contact_person' => 'string',
+        'user_id' => 'int',
         'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\BumbalClient\Model\NoteModel[]',
@@ -123,6 +124,7 @@ class AddressModel implements ModelInterface, ArrayAccess
         'latitude' => null,
         'longitude' => null,
         'contact_person' => null,
+        'user_id' => null,
         'links' => null,
         'meta_data' => null,
         'notes' => null,
@@ -184,6 +186,7 @@ class AddressModel implements ModelInterface, ArrayAccess
         'latitude' => 'latitude',
         'longitude' => 'longitude',
         'contact_person' => 'contact_person',
+        'user_id' => 'user_id',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
@@ -224,6 +227,7 @@ class AddressModel implements ModelInterface, ArrayAccess
         'latitude' => 'setLatitude',
         'longitude' => 'setLongitude',
         'contact_person' => 'setContactPerson',
+        'user_id' => 'setUserId',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
@@ -264,6 +268,7 @@ class AddressModel implements ModelInterface, ArrayAccess
         'latitude' => 'getLatitude',
         'longitude' => 'getLongitude',
         'contact_person' => 'getContactPerson',
+        'user_id' => 'getUserId',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
@@ -358,6 +363,7 @@ class AddressModel implements ModelInterface, ArrayAccess
         $this->container['latitude'] = isset($data['latitude']) ? $data['latitude'] : null;
         $this->container['longitude'] = isset($data['longitude']) ? $data['longitude'] : null;
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
+        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
@@ -874,7 +880,7 @@ class AddressModel implements ModelInterface, ArrayAccess
     /**
      * Gets address_type_names
      *
-     * @return object
+     * @return string[]
      */
     public function getAddressTypeNames()
     {
@@ -884,7 +890,7 @@ class AddressModel implements ModelInterface, ArrayAccess
     /**
      * Sets address_type_names
      *
-     * @param object $address_type_names 
+     * @param string[] $address_type_names Address Type names
      *
      * @return $this
      */
@@ -1011,6 +1017,30 @@ class AddressModel implements ModelInterface, ArrayAccess
     public function setContactPerson($contact_person)
     {
         $this->container['contact_person'] = $contact_person;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     *
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     *
+     * @param int $user_id 
+     *
+     * @return $this
+     */
+    public function setUserId($user_id)
+    {
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

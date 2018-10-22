@@ -85,9 +85,9 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "address_type_id"
+     * Test attribute "address_type_names"
      */
-    public function testPropertyAddressTypeId()
+    public function testPropertyAddressTypeNames()
     {
     }
 
@@ -113,16 +113,9 @@ class AddressFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "object_type"
+     * Test attribute "user_id"
      */
-    public function testPropertyObjectType()
-    {
-    }
-
-    /**
-     * Test attribute "object_id"
-     */
-    public function testPropertyObjectId()
+    public function testPropertyUserId()
     {
     }
 }

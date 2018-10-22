@@ -260,6 +260,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user_id"
+     */
+    public function testPropertyUserId()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()
