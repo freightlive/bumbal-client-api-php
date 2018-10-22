@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createFile**
-> \BumbalClient\Model\ApiResponse createFile($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createFile($body)
 
 Add a new File
 
@@ -25,15 +25,20 @@ Add a new File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
-$body = new \BumbalClient\Model\FileModel(); // \BumbalClient\Model\FileModel | File object that needs to be created
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\FileModel(); // \BumbalClient\BumbalClient\Model\FileModel | File object that needs to be created
 
 try {
-    $result = $api_instance->createFile($body);
+    $result = $apiInstance->createFile($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->createFile: ', $e->getMessage(), PHP_EOL;
@@ -45,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be created | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteFile**
-> \BumbalClient\Model\ApiResponse deleteFile($file_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteFile($file_id)
 
 Delete an File
 
@@ -75,15 +80,20 @@ Delete an File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $file_id = 789; // int | ID of file to update
 
 try {
-    $result = $api_instance->deleteFile($file_id);
+    $result = $apiInstance->deleteFile($file_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->deleteFile: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileCopy**
-> \BumbalClient\Model\ApiResponse fileCopy($arguments)
+> \BumbalClient\BumbalClient\Model\ApiResponse fileCopy($arguments)
 
 Copy File
 
@@ -125,15 +135,20 @@ Copy file from one object to another
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
-$arguments = new \BumbalClient\Model\FileCopyArguments(); // \BumbalClient\Model\FileCopyArguments | Request Arguments
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\FileCopyArguments(); // \BumbalClient\BumbalClient\Model\FileCopyArguments | Request Arguments
 
 try {
-    $result = $api_instance->fileCopy($arguments);
+    $result = $apiInstance->fileCopy($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->fileCopy: ', $e->getMessage(), PHP_EOL;
@@ -145,11 +160,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\FileCopyArguments**](../Model/FileCopyArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\FileCopyArguments**](../Model/FileCopyArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -163,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveFile**
-> \BumbalClient\Model\FileModel retrieveFile($file_id)
+> \BumbalClient\BumbalClient\Model\FileModel retrieveFile($file_id)
 
 Retrieve a File
 
@@ -175,15 +190,20 @@ Retrieve an File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $file_id = 789; // int | ID of file to retrieve
 
 try {
-    $result = $api_instance->retrieveFile($file_id);
+    $result = $apiInstance->retrieveFile($file_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->retrieveFile: ', $e->getMessage(), PHP_EOL;
@@ -199,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\FileModel**](../Model/FileModel.md)
+[**\BumbalClient\BumbalClient\Model\FileModel**](../Model/FileModel.md)
 
 ### Authorization
 
@@ -213,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListFile**
-> \BumbalClient\Model\FileModel[] retrieveListFile($arguments)
+> \BumbalClient\BumbalClient\Model\FileModel[] retrieveListFile($arguments)
 
 Retrieve List of Files
 
@@ -225,15 +245,20 @@ Retrieve List of Files
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
-$arguments = new \BumbalClient\Model\FileRetrieveListArguments(); // \BumbalClient\Model\FileRetrieveListArguments | File RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\FileRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\FileRetrieveListArguments | File RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListFile($arguments);
+    $result = $apiInstance->retrieveListFile($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->retrieveListFile: ', $e->getMessage(), PHP_EOL;
@@ -245,11 +270,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\FileRetrieveListArguments**](../Model/FileRetrieveListArguments.md)| File RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\FileRetrieveListArguments**](../Model/FileRetrieveListArguments.md)| File RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\FileModel[]**](../Model/FileModel.md)
+[**\BumbalClient\BumbalClient\Model\FileModel[]**](../Model/FileModel.md)
 
 ### Authorization
 
@@ -263,7 +288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateFile**
-> \BumbalClient\Model\ApiResponse updateFile($file_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateFile($file_id)
 
 Update a File
 
@@ -275,15 +300,20 @@ Update an File
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\FileApi();
+$apiInstance = new BumbalClient\Api\FileApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $file_id = 789; // int | ID of file to update
 
 try {
-    $result = $api_instance->updateFile($file_id);
+    $result = $apiInstance->updateFile($file_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->updateFile: ', $e->getMessage(), PHP_EOL;
@@ -299,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

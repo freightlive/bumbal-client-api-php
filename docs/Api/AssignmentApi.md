@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteAssignment**
-> \BumbalClient\Model\ApiResponse deleteAssignment($assignment_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteAssignment($assignment_id)
 
 Delete an assignment
 
@@ -24,15 +24,20 @@ Delete an assignment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\AssignmentApi();
+$apiInstance = new BumbalClient\Api\AssignmentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $assignment_id = 789; // int | ID of the assignment to delete
 
 try {
-    $result = $api_instance->deleteAssignment($assignment_id);
+    $result = $apiInstance->deleteAssignment($assignment_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->deleteAssignment: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAssignment**
-> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
+> \BumbalClient\BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
 
 Find assignment by ID
 
@@ -74,18 +79,23 @@ Returns a single assignment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\AssignmentApi();
+$apiInstance = new BumbalClient\Api\AssignmentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $assignment_id = 789; // int | ID of assignment to return
 $include_assignment_links = true; // bool | Include Link Data
 $include_assignment_files = true; // bool | Include files
 $include_assignment_files_meta_data = true; // bool | Include files meta data
 
 try {
-    $result = $api_instance->retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data);
+    $result = $apiInstance->retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->retrieveAssignment: ', $e->getMessage(), PHP_EOL;
@@ -104,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)
+[**\BumbalClient\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)
 
 ### Authorization
 
@@ -118,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAssignment**
-> \BumbalClient\Model\AssignmentListResponse retrieveListAssignment($arguments)
+> \BumbalClient\BumbalClient\Model\AssignmentListResponse retrieveListAssignment($arguments)
 
 Retrieve List of Assignments
 
@@ -130,15 +140,20 @@ Retrieve List of Assignments
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\AssignmentApi();
-$arguments = new \BumbalClient\Model\AssignmentRetrieveListArguments(); // \BumbalClient\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
+$apiInstance = new BumbalClient\Api\AssignmentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$arguments = new \BumbalClient\BumbalClient\Model\AssignmentRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\AssignmentRetrieveListArguments | Assignment RetrieveList Arguments
 
 try {
-    $result = $api_instance->retrieveListAssignment($arguments);
+    $result = $apiInstance->retrieveListAssignment($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->retrieveListAssignment: ', $e->getMessage(), PHP_EOL;
@@ -150,11 +165,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\AssignmentRetrieveListArguments**](../Model/AssignmentRetrieveListArguments.md)| Assignment RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\AssignmentListResponse**](../Model/AssignmentListResponse.md)
+[**\BumbalClient\BumbalClient\Model\AssignmentListResponse**](../Model/AssignmentListResponse.md)
 
 ### Authorization
 
@@ -168,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setAssignment**
-> \BumbalClient\Model\ApiResponse setAssignment($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setAssignment($body)
 
 Set (create or update) an Assignment
 
@@ -180,15 +195,20 @@ Set (create or update) an Assignment. If id or links are set in the data, and a 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\AssignmentApi();
-$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object
+$apiInstance = new BumbalClient\Api\AssignmentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \BumbalClient\BumbalClient\Model\AssignmentModel(); // \BumbalClient\BumbalClient\Model\AssignmentModel | Assignment object
 
 try {
-    $result = $api_instance->setAssignment($body);
+    $result = $apiInstance->setAssignment($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->setAssignment: ', $e->getMessage(), PHP_EOL;
@@ -200,11 +220,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -218,7 +238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAssignment**
-> \BumbalClient\Model\ApiResponse updateAssignment($assignment_id, $body)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateAssignment($assignment_id, $body)
 
 Update a assignment
 
@@ -230,16 +250,21 @@ Update a assignment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$api_instance = new BumbalClient\Api\AssignmentApi();
+$apiInstance = new BumbalClient\Api\AssignmentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $assignment_id = 789; // int | ID of assignment to update
-$body = new \BumbalClient\Model\AssignmentModel(); // \BumbalClient\Model\AssignmentModel | Assignment object that needs to be updated
+$body = new \BumbalClient\BumbalClient\Model\AssignmentModel(); // \BumbalClient\BumbalClient\Model\AssignmentModel | Assignment object that needs to be updated
 
 try {
-    $result = $api_instance->updateAssignment($assignment_id, $body);
+    $result = $apiInstance->updateAssignment($assignment_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->updateAssignment: ', $e->getMessage(), PHP_EOL;
@@ -252,11 +277,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to update |
- **body** | [**\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\AssignmentModel**](../Model/AssignmentModel.md)| Assignment object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
