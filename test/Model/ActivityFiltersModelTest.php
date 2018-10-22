@@ -120,6 +120,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "status_name"
+     */
+    public function testPropertyStatusName()
+    {
+    }
+
+    /**
      * Test attribute "active"
      */
     public function testPropertyActive()

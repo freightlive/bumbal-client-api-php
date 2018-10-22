@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
+**status_name** | **string[]** | Activity Status name | [optional] 
 **active** | **int[]** | Active status of Activity, 0 values represent deleted activities | [optional] 
 **status_id** | **int[]** | Activity Status id | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 

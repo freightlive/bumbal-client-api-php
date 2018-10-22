@@ -291,7 +291,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Sets code
-     * @param string $code
+     * @param string $code 
      * @return $this
      */
     public function setCode($code)
@@ -312,7 +312,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param int $object_type
+     * @param int $object_type 
      * @return $this
      */
     public function setObjectType($object_type)
@@ -333,7 +333,7 @@ class AddressFiltersModel implements ArrayAccess
 
     /**
      * Sets object_id
-     * @param int $object_id
+     * @param int $object_id 
      * @return $this
      */
     public function setObjectId($object_id)
