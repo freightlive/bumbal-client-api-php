@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **systemGetConfig**
-> \BumbalClient\BumbalClient\Model\ConfigModel systemGetConfig()
+> \BumbalClient\Model\ConfigModel systemGetConfig()
 
 Retrieve System Configuration
 
@@ -22,19 +22,14 @@ Retrieve System Configuration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SystemApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\SystemApi();
 
 try {
-    $result = $apiInstance->systemGetConfig();
+    $result = $api_instance->systemGetConfig();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemApi->systemGetConfig: ', $e->getMessage(), PHP_EOL;
@@ -47,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ConfigModel**](../Model/ConfigModel.md)
+[**\BumbalClient\Model\ConfigModel**](../Model/ConfigModel.md)
 
 ### Authorization
 
@@ -61,7 +56,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **systemGetSayWhenConfig**
-> \BumbalClient\BumbalClient\Model\SayWhenConfigModel systemGetSayWhenConfig()
+> \BumbalClient\Model\SayWhenConfigModel systemGetSayWhenConfig()
 
 Retrieve SayWhen System Configuration
 
@@ -73,19 +68,14 @@ Retrieve SayWhen System Configuration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SystemApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\SystemApi();
 
 try {
-    $result = $apiInstance->systemGetSayWhenConfig();
+    $result = $api_instance->systemGetSayWhenConfig();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemApi->systemGetSayWhenConfig: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +88,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\SayWhenConfigModel**](../Model/SayWhenConfigModel.md)
+[**\BumbalClient\Model\SayWhenConfigModel**](../Model/SayWhenConfigModel.md)
 
 ### Authorization
 
@@ -112,7 +102,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **systemGetVariables**
-> \BumbalClient\BumbalClient\Model\VariablesModel systemGetVariables()
+> \BumbalClient\Model\VariablesModel systemGetVariables()
 
 Retrieve System Variables
 
@@ -124,19 +114,14 @@ Retrieve System Variables
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\SystemApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\SystemApi();
 
 try {
-    $result = $apiInstance->systemGetVariables();
+    $result = $api_instance->systemGetVariables();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemApi->systemGetVariables: ', $e->getMessage(), PHP_EOL;
@@ -149,7 +134,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\VariablesModel**](../Model/VariablesModel.md)
+[**\BumbalClient\Model\VariablesModel**](../Model/VariablesModel.md)
 
 ### Authorization
 
