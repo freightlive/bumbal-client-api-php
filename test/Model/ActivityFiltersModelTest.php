@@ -148,6 +148,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "activity_type_name"
+     */
+    public function testPropertyActivityTypeName()
+    {
+    }
+
+    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()

@@ -64,6 +64,7 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'int[]',
         'status_id' => 'int[]',
         'activity_type_id' => 'int[]',
+        'activity_type_name' => 'string[]',
         'route_id' => 'int[]',
         'user_id' => 'int',
         'party_id' => 'int',
@@ -86,6 +87,7 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => null,
         'status_id' => null,
         'activity_type_id' => null,
+        'activity_type_name' => null,
         'route_id' => null,
         'user_id' => null,
         'party_id' => null,
@@ -118,6 +120,7 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'active',
         'status_id' => 'status_id',
         'activity_type_id' => 'activity_type_id',
+        'activity_type_name' => 'activity_type_name',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
         'party_id' => 'party_id',
@@ -141,6 +144,7 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'setActive',
         'status_id' => 'setStatusId',
         'activity_type_id' => 'setActivityTypeId',
+        'activity_type_name' => 'setActivityTypeName',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
@@ -164,6 +168,7 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'getActive',
         'status_id' => 'getStatusId',
         'activity_type_id' => 'getActivityTypeId',
+        'activity_type_name' => 'getActivityTypeName',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
@@ -212,6 +217,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
+        $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
@@ -450,6 +456,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setActivityTypeId($activity_type_id)
     {
         $this->container['activity_type_id'] = $activity_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_type_name
+     * @return string[]
+     */
+    public function getActivityTypeName()
+    {
+        return $this->container['activity_type_name'];
+    }
+
+    /**
+     * Sets activity_type_name
+     * @param string[] $activity_type_name Activity type name
+     * @return $this
+     */
+    public function setActivityTypeName($activity_type_name)
+    {
+        $this->container['activity_type_name'] = $activity_type_name;
 
         return $this;
     }

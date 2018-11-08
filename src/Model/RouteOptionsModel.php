@@ -261,7 +261,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address
-     * @param bool $include_address 
+     * @param bool $include_address
      * @return $this
      */
     public function setIncludeAddress($include_address)
@@ -282,7 +282,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_object
-     * @param bool $include_address_object 
+     * @param bool $include_address_object
      * @return $this
      */
     public function setIncludeAddressObject($include_address_object)
@@ -303,7 +303,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_status
-     * @param bool $include_route_status 
+     * @param bool $include_route_status
      * @return $this
      */
     public function setIncludeRouteStatus($include_route_status)
@@ -324,7 +324,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_tags
-     * @param bool $include_route_tags 
+     * @param bool $include_route_tags
      * @return $this
      */
     public function setIncludeRouteTags($include_route_tags)
@@ -345,7 +345,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver
-     * @param bool $include_driver 
+     * @param bool $include_driver
      * @return $this
      */
     public function setIncludeDriver($include_driver)
@@ -366,7 +366,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_links
-     * @param bool $include_driver_links 
+     * @param bool $include_driver_links
      * @return $this
      */
     public function setIncludeDriverLinks($include_driver_links)
@@ -387,7 +387,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_car
-     * @param bool $include_car 
+     * @param bool $include_car
      * @return $this
      */
     public function setIncludeCar($include_car)
@@ -408,7 +408,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_car_links
-     * @param bool $include_car_links 
+     * @param bool $include_car_links
      * @return $this
      */
     public function setIncludeCarLinks($include_car_links)
@@ -429,7 +429,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer
-     * @param bool $include_trailer 
+     * @param bool $include_trailer
      * @return $this
      */
     public function setIncludeTrailer($include_trailer)
@@ -450,7 +450,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_links
-     * @param bool $include_trailer_links 
+     * @param bool $include_trailer_links
      * @return $this
      */
     public function setIncludeTrailerLinks($include_trailer_links)
@@ -471,7 +471,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_info
-     * @param bool $include_driver_info 
+     * @param bool $include_driver_info
      * @return $this
      */
     public function setIncludeDriverInfo($include_driver_info)
@@ -492,7 +492,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_equipment_info_car
-     * @param bool $include_equipment_info_car 
+     * @param bool $include_equipment_info_car
      * @return $this
      */
     public function setIncludeEquipmentInfoCar($include_equipment_info_car)
@@ -513,7 +513,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_gps_locations
-     * @param bool $include_gps_locations 
+     * @param bool $include_gps_locations
      * @return $this
      */
     public function setIncludeGpsLocations($include_gps_locations)
@@ -534,7 +534,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_ids
-     * @param bool $include_activity_ids 
+     * @param bool $include_activity_ids
      * @return $this
      */
     public function setIncludeActivityIds($include_activity_ids)
@@ -555,7 +555,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_latest_position
-     * @param bool $include_latest_position 
+     * @param bool $include_latest_position
      * @return $this
      */
     public function setIncludeLatestPosition($include_latest_position)
@@ -576,7 +576,7 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones 
+     * @param bool $include_zones
      * @return $this
      */
     public function setIncludeZones($include_zones)

@@ -96,15 +96,13 @@ Class | Method | HTTP request | Description
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
 *AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
 *AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
-*AutoplanApi* | [**autoPlanCheckProgress**](docs/Api/AutoplanApi.md#autoplancheckprogress) | **GET** /auto-plan/check-progress/{processUUID} | Check Progress on a Auto Plan Process
-*AutoplanApi* | [**autoPlanFinish**](docs/Api/AutoplanApi.md#autoplanfinish) | **POST** /auto-plan/finish | Finish a Auto Plan Process
-*AutoplanApi* | [**autoPlanStart**](docs/Api/AutoplanApi.md#autoplanstart) | **POST** /auto-plan/start | Start a Auto Plan Process
 *CarApi* | [**createCar**](docs/Api/CarApi.md#createcar) | **POST** /car | Add a car
 *CarApi* | [**deleteCar**](docs/Api/CarApi.md#deletecar) | **DELETE** /car/{carId} | Delete an car
 *CarApi* | [**retrieveCar**](docs/Api/CarApi.md#retrievecar) | **GET** /car/{carId} | Find car by ID
 *CarApi* | [**retrieveListCar**](docs/Api/CarApi.md#retrievelistcar) | **PUT** /car | Retrieve List of Cars
 *CarApi* | [**setCar**](docs/Api/CarApi.md#setcar) | **POST** /car/set | Set (create or update) a car
 *CarApi* | [**updateCar**](docs/Api/CarApi.md#updatecar) | **PUT** /car/{carId} | Update a car
+*CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
@@ -147,7 +145,6 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning-route | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
-*PlannerApi* | [**calculateDriveTime**](docs/Api/PlannerApi.md#calculatedrivetime) | **POST** /planner/calculate-drive-time | Calculate Drive Time
 *PlannerApi* | [**changeActivitySequence**](docs/Api/PlannerApi.md#changeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.

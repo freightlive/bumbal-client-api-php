@@ -113,16 +113,6 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for calculateDriveTime
-     *
-     * Calculate Drive Time.
-     *
-     */
-    public function testCalculateDriveTime()
-    {
-    }
-
-    /**
      * Test case for changeActivitySequence
      *
      * Change Activity Sequence.

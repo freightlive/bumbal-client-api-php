@@ -183,6 +183,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_driver_links"
+     */
+    public function testPropertyIncludeDriverLinks()
+    {
+    }
+
+    /**
      * Test attribute "include_car"
      */
     public function testPropertyIncludeCar()
@@ -207,6 +214,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_communication_object"
      */
     public function testPropertyIncludeCommunicationObject()
+    {
+    }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
     {
     }
 

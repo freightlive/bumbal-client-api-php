@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **active** | **int[]** | Active status of Activity, 0 values represent deleted activities | [optional] 
 **status_id** | **int[]** | Activity Status id | [optional] 
 **activity_type_id** | **int[]** | Activity type id | [optional] 
+**activity_type_name** | **string[]** | Activity type name | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **party_id** | **int** | Party ID | [optional] 
