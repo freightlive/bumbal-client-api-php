@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **triggerMessageCommunication**
-> \BumbalClient\Model\ApiResponse triggerMessageCommunication($activity_id, $message_type)
+> \BumbalClient\Model\ApiResponse triggerMessageCommunication($activity_id, $message_type, $check_preference)
 
 Trigger Message to Communication
 
@@ -27,9 +27,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 $api_instance = new BumbalClient\Api\CommunicationApi();
 $activity_id = 56; // int | ActivityId
 $message_type = "message_type_example"; // string | MessageType
+$check_preference = true; // bool | checkPreference
 
 try {
-    $result = $api_instance->triggerMessageCommunication($activity_id, $message_type);
+    $result = $api_instance->triggerMessageCommunication($activity_id, $message_type, $check_preference);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommunicationApi->triggerMessageCommunication: ', $e->getMessage(), PHP_EOL;
@@ -43,6 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ActivityId |
  **message_type** | **string**| MessageType |
+ **check_preference** | **bool**| checkPreference |
 
 ### Return type
 

@@ -94,12 +94,13 @@ class CommunicationApi
      *
      * @param int $activity_id ActivityId (required)
      * @param string $message_type MessageType (required)
+     * @param bool $check_preference checkPreference (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function triggerMessageCommunication($activity_id, $message_type)
+    public function triggerMessageCommunication($activity_id, $message_type, $check_preference)
     {
-        list($response) = $this->triggerMessageCommunicationWithHttpInfo($activity_id, $message_type);
+        list($response) = $this->triggerMessageCommunicationWithHttpInfo($activity_id, $message_type, $check_preference);
         return $response;
     }
 
@@ -110,10 +111,11 @@ class CommunicationApi
      *
      * @param int $activity_id ActivityId (required)
      * @param string $message_type MessageType (required)
+     * @param bool $check_preference checkPreference (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function triggerMessageCommunicationWithHttpInfo($activity_id, $message_type)
+    public function triggerMessageCommunicationWithHttpInfo($activity_id, $message_type, $check_preference)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -122,6 +124,10 @@ class CommunicationApi
         // verify the required parameter 'message_type' is set
         if ($message_type === null) {
             throw new \InvalidArgumentException('Missing the required parameter $message_type when calling triggerMessageCommunication');
+        }
+        // verify the required parameter 'check_preference' is set
+        if ($check_preference === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $check_preference when calling triggerMessageCommunication');
         }
         // parse inputs
         $resourcePath = "/communication/trigger-message";
@@ -142,6 +148,10 @@ class CommunicationApi
         // form params
         if ($message_type !== null) {
             $formParams['messageType'] = $this->apiClient->getSerializer()->toFormValue($message_type);
+        }
+        // form params
+        if ($check_preference !== null) {
+            $formParams['checkPreference'] = $this->apiClient->getSerializer()->toFormValue($check_preference);
         }
 
         // for model (json/xml)
