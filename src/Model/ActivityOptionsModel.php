@@ -708,7 +708,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_links
-     * @param bool $include_driver_links
+     * @param bool $include_driver_links 
      * @return $this
      */
     public function setIncludeDriverLinks($include_driver_links)
@@ -813,7 +813,7 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links
+     * @param bool $include_links 
      * @return $this
      */
     public function setIncludeLinks($include_links)

@@ -547,6 +547,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence"
+     */
+    public function testPropertyRecurrence()
+    {
+    }
+
+    /**
      * Test attribute "tag_names"
      */
     public function testPropertyTagNames()

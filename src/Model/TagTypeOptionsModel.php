@@ -54,7 +54,7 @@ class TagTypeOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_object_types' => 'bool'
+        
     ];
 
     /**
@@ -62,7 +62,7 @@ class TagTypeOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_object_types' => null
+        
     ];
 
     public static function swaggerTypes()
@@ -80,7 +80,7 @@ class TagTypeOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_object_types' => 'include_object_types'
+        
     ];
 
 
@@ -89,7 +89,7 @@ class TagTypeOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_object_types' => 'setIncludeObjectTypes'
+        
     ];
 
 
@@ -98,7 +98,7 @@ class TagTypeOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_object_types' => 'getIncludeObjectTypes'
+        
     ];
 
     public static function attributeMap()
@@ -132,7 +132,6 @@ class TagTypeOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_object_types'] = isset($data['include_object_types']) ? $data['include_object_types'] : null;
     }
 
     /**
@@ -159,27 +158,6 @@ class TagTypeOptionsModel implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets include_object_types
-     * @return bool
-     */
-    public function getIncludeObjectTypes()
-    {
-        return $this->container['include_object_types'];
-    }
-
-    /**
-     * Sets include_object_types
-     * @param bool $include_object_types
-     * @return $this
-     */
-    public function setIncludeObjectTypes($include_object_types)
-    {
-        $this->container['include_object_types'] = $include_object_types;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

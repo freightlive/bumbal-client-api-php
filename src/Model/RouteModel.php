@@ -64,7 +64,6 @@ class RouteModel implements ArrayAccess
         'driver_link' => '\BumbalClient\Model\LinkModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'driver' => '\BumbalClient\Model\UsersModel',
-        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
         'car_link' => '\BumbalClient\Model\LinkModel[]',
@@ -84,6 +83,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => '\BumbalClient\Model\GPSLocationModel',
         'recurrence_id' => 'int',
         'recurrence_nr' => 'int',
+        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'overdue' => 'bool',
         'blocked' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
@@ -119,7 +119,6 @@ class RouteModel implements ArrayAccess
         'driver_link' => null,
         'driver_links' => null,
         'driver' => null,
-        'recurrence' => null,
         'user_link' => null,
         'car_id' => null,
         'car_link' => null,
@@ -139,6 +138,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => null,
         'recurrence_id' => null,
         'recurrence_nr' => null,
+        'recurrence' => null,
         'overdue' => null,
         'blocked' => null,
         'start_address' => null,
@@ -184,7 +184,6 @@ class RouteModel implements ArrayAccess
         'driver_link' => 'driver_link',
         'driver_links' => 'driver_links',
         'driver' => 'driver',
-        'recurrence' => 'recurrence',
         'user_link' => 'user_link',
         'car_id' => 'car_id',
         'car_link' => 'car_link',
@@ -204,6 +203,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => 'latest_known_position',
         'recurrence_id' => 'recurrence_id',
         'recurrence_nr' => 'recurrence_nr',
+        'recurrence' => 'recurrence',
         'overdue' => 'overdue',
         'blocked' => 'blocked',
         'start_address' => 'start_address',
@@ -240,7 +240,6 @@ class RouteModel implements ArrayAccess
         'driver_link' => 'setDriverLink',
         'driver_links' => 'setDriverLinks',
         'driver' => 'setDriver',
-        'recurrence' => 'setRecurrence',
         'user_link' => 'setUserLink',
         'car_id' => 'setCarId',
         'car_link' => 'setCarLink',
@@ -260,6 +259,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => 'setLatestKnownPosition',
         'recurrence_id' => 'setRecurrenceId',
         'recurrence_nr' => 'setRecurrenceNr',
+        'recurrence' => 'setRecurrence',
         'overdue' => 'setOverdue',
         'blocked' => 'setBlocked',
         'start_address' => 'setStartAddress',
@@ -296,7 +296,6 @@ class RouteModel implements ArrayAccess
         'driver_link' => 'getDriverLink',
         'driver_links' => 'getDriverLinks',
         'driver' => 'getDriver',
-        'recurrence' => 'getRecurrence',
         'user_link' => 'getUserLink',
         'car_id' => 'getCarId',
         'car_link' => 'getCarLink',
@@ -316,6 +315,7 @@ class RouteModel implements ArrayAccess
         'latest_known_position' => 'getLatestKnownPosition',
         'recurrence_id' => 'getRecurrenceId',
         'recurrence_nr' => 'getRecurrenceNr',
+        'recurrence' => 'getRecurrence',
         'overdue' => 'getOverdue',
         'blocked' => 'getBlocked',
         'start_address' => 'getStartAddress',
@@ -413,7 +413,6 @@ class RouteModel implements ArrayAccess
         $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
         $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
-        $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
         $this->container['car_link'] = isset($data['car_link']) ? $data['car_link'] : null;
@@ -433,6 +432,7 @@ class RouteModel implements ArrayAccess
         $this->container['latest_known_position'] = isset($data['latest_known_position']) ? $data['latest_known_position'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
         $this->container['recurrence_nr'] = isset($data['recurrence_nr']) ? $data['recurrence_nr'] : null;
+        $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['overdue'] = isset($data['overdue']) ? $data['overdue'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
@@ -726,27 +726,6 @@ class RouteModel implements ArrayAccess
     public function setDriver($driver)
     {
         $this->container['driver'] = $driver;
-
-        return $this;
-    }
-
-    /**
-     * Gets recurrence
-     * @return \BumbalClient\Model\RecurrenceModel
-     */
-    public function getRecurrence()
-    {
-        return $this->container['recurrence'];
-    }
-
-    /**
-     * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
-     * @return $this
-     */
-    public function setRecurrence($recurrence)
-    {
-        $this->container['recurrence'] = $recurrence;
 
         return $this;
     }
@@ -1146,6 +1125,27 @@ class RouteModel implements ArrayAccess
     public function setRecurrenceNr($recurrence_nr)
     {
         $this->container['recurrence_nr'] = $recurrence_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence
+     * @return \BumbalClient\Model\RecurrenceModel
+     */
+    public function getRecurrence()
+    {
+        return $this->container['recurrence'];
+    }
+
+    /**
+     * Sets recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
+     * @return $this
+     */
+    public function setRecurrence($recurrence)
+    {
+        $this->container['recurrence'] = $recurrence;
 
         return $this;
     }

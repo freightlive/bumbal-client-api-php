@@ -76,11 +76,4 @@ class TagTypeOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testTagTypeOptionsModel()
     {
     }
-
-    /**
-     * Test attribute "include_object_types"
-     */
-    public function testPropertyIncludeObjectTypes()
-    {
-    }
 }

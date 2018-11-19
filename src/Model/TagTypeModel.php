@@ -54,10 +54,8 @@ class TagTypeModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tag_type_id' => 'int',
-        'name' => 'string',
-        'object_type' => 'object',
-        'object_type_name' => 'object'
+        'id' => 'int',
+        'name' => 'string'
     ];
 
     /**
@@ -65,10 +63,8 @@ class TagTypeModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'tag_type_id' => 'int64',
-        'name' => null,
-        'object_type' => null,
-        'object_type_name' => null
+        'id' => 'int64',
+        'name' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +82,8 @@ class TagTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tag_type_id' => 'tagTypeId',
-        'name' => 'name',
-        'object_type' => 'object_type',
-        'object_type_name' => 'object_type_name'
+        'id' => 'id',
+        'name' => 'name'
     ];
 
 
@@ -98,10 +92,8 @@ class TagTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tag_type_id' => 'setTagTypeId',
-        'name' => 'setName',
-        'object_type' => 'setObjectType',
-        'object_type_name' => 'setObjectTypeName'
+        'id' => 'setId',
+        'name' => 'setName'
     ];
 
 
@@ -110,10 +102,8 @@ class TagTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tag_type_id' => 'getTagTypeId',
-        'name' => 'getName',
-        'object_type' => 'getObjectType',
-        'object_type_name' => 'getObjectTypeName'
+        'id' => 'getId',
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -147,10 +137,8 @@ class TagTypeModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
     }
 
     /**
@@ -179,22 +167,22 @@ class TagTypeModel implements ArrayAccess
 
 
     /**
-     * Gets tag_type_id
+     * Gets id
      * @return int
      */
-    public function getTagTypeId()
+    public function getId()
     {
-        return $this->container['tag_type_id'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets tag_type_id
-     * @param int $tag_type_id Unique Tag type ID
+     * Sets id
+     * @param int $id Unique Tag type ID
      * @return $this
      */
-    public function setTagTypeId($tag_type_id)
+    public function setId($id)
     {
-        $this->container['tag_type_id'] = $tag_type_id;
+        $this->container['id'] = $id;
 
         return $this;
     }
@@ -216,48 +204,6 @@ class TagTypeModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_type
-     * @return object
-     */
-    public function getObjectType()
-    {
-        return $this->container['object_type'];
-    }
-
-    /**
-     * Sets object_type
-     * @param object $object_type Object type IDs available for this tag type
-     * @return $this
-     */
-    public function setObjectType($object_type)
-    {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets object_type_name
-     * @return object
-     */
-    public function getObjectTypeName()
-    {
-        return $this->container['object_type_name'];
-    }
-
-    /**
-     * Sets object_type_name
-     * @param object $object_type_name Object type names available for this tag type
-     * @return $this
-     */
-    public function setObjectTypeName($object_type_name)
-    {
-        $this->container['object_type_name'] = $object_type_name;
 
         return $this;
     }

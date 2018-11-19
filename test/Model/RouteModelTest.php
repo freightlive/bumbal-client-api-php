@@ -148,13 +148,6 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "recurrence"
-     */
-    public function testPropertyRecurrence()
-    {
-    }
-
-    /**
      * Test attribute "user_link"
      */
     public function testPropertyUserLink()
@@ -284,6 +277,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "recurrence_nr"
      */
     public function testPropertyRecurrenceNr()
+    {
+    }
+
+    /**
+     * Test attribute "recurrence"
+     */
+    public function testPropertyRecurrence()
     {
     }
 

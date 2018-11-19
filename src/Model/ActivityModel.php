@@ -121,6 +121,7 @@ class ActivityModel implements ArrayAccess
         'car' => '\BumbalClient\Model\CarModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
+        'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'tag_names' => 'object',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'object',
@@ -208,6 +209,7 @@ class ActivityModel implements ArrayAccess
         'car' => null,
         'trailer' => null,
         'tags' => null,
+        'recurrence' => null,
         'tag_names' => null,
         'zones' => null,
         'zone_names' => null,
@@ -305,6 +307,7 @@ class ActivityModel implements ArrayAccess
         'car' => 'car',
         'trailer' => 'trailer',
         'tags' => 'tags',
+        'recurrence' => 'recurrence',
         'tag_names' => 'tag_names',
         'zones' => 'zones',
         'zone_names' => 'zone_names',
@@ -393,6 +396,7 @@ class ActivityModel implements ArrayAccess
         'car' => 'setCar',
         'trailer' => 'setTrailer',
         'tags' => 'setTags',
+        'recurrence' => 'setRecurrence',
         'tag_names' => 'setTagNames',
         'zones' => 'setZones',
         'zone_names' => 'setZoneNames',
@@ -481,6 +485,7 @@ class ActivityModel implements ArrayAccess
         'car' => 'getCar',
         'trailer' => 'getTrailer',
         'tags' => 'getTags',
+        'recurrence' => 'getRecurrence',
         'tag_names' => 'getTagNames',
         'zones' => 'getZones',
         'zone_names' => 'getZoneNames',
@@ -642,6 +647,7 @@ class ActivityModel implements ArrayAccess
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
@@ -2127,6 +2133,27 @@ class ActivityModel implements ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence
+     * @return \BumbalClient\Model\RecurrenceModel
+     */
+    public function getRecurrence()
+    {
+        return $this->container['recurrence'];
+    }
+
+    /**
+     * Sets recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
+     * @return $this
+     */
+    public function setRecurrence($recurrence)
+    {
+        $this->container['recurrence'] = $recurrence;
 
         return $this;
     }

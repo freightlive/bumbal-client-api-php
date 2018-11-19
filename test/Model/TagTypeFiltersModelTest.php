@@ -76,4 +76,18 @@ class TagTypeFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testTagTypeFiltersModel()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
 }

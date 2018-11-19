@@ -70,6 +70,7 @@ Name | Type | Description | Notes
 **car** | [**\BumbalClient\Model\CarModel**](CarModel.md) |  | [optional] 
 **trailer** | [**\BumbalClient\Model\TrailerModel**](TrailerModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
+**recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **tag_names** | **object** |  | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
 **zone_names** | **object** |  | [optional] 
