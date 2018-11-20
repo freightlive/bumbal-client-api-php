@@ -699,7 +699,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -720,7 +720,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)

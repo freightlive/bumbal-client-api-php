@@ -75,6 +75,8 @@ class RouteModel implements ArrayAccess
         'latest_date_time' => '\DateTime',
         'planned_date_time_from' => '\DateTime',
         'planned_date_time_to' => '\DateTime',
+        'executed_date_time_from' => '\DateTime',
+        'executed_date_time_to' => '\DateTime',
         'planned_driving_duration' => 'int',
         'planned_waiting_duration' => 'int',
         'planned_activity_duration' => 'int',
@@ -85,6 +87,7 @@ class RouteModel implements ArrayAccess
         'recurrence_nr' => 'int',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'overdue' => 'bool',
+        'optimized' => 'bool',
         'blocked' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
@@ -130,6 +133,8 @@ class RouteModel implements ArrayAccess
         'latest_date_time' => 'date-time',
         'planned_date_time_from' => 'date-time',
         'planned_date_time_to' => 'date-time',
+        'executed_date_time_from' => 'date-time',
+        'executed_date_time_to' => 'date-time',
         'planned_driving_duration' => null,
         'planned_waiting_duration' => null,
         'planned_activity_duration' => null,
@@ -140,6 +145,7 @@ class RouteModel implements ArrayAccess
         'recurrence_nr' => null,
         'recurrence' => null,
         'overdue' => null,
+        'optimized' => null,
         'blocked' => null,
         'start_address' => null,
         'end_address' => null,
@@ -195,6 +201,8 @@ class RouteModel implements ArrayAccess
         'latest_date_time' => 'latest_date_time',
         'planned_date_time_from' => 'planned_date_time_from',
         'planned_date_time_to' => 'planned_date_time_to',
+        'executed_date_time_from' => 'executed_date_time_from',
+        'executed_date_time_to' => 'executed_date_time_to',
         'planned_driving_duration' => 'planned_driving_duration',
         'planned_waiting_duration' => 'planned_waiting_duration',
         'planned_activity_duration' => 'planned_activity_duration',
@@ -205,6 +213,7 @@ class RouteModel implements ArrayAccess
         'recurrence_nr' => 'recurrence_nr',
         'recurrence' => 'recurrence',
         'overdue' => 'overdue',
+        'optimized' => 'optimized',
         'blocked' => 'blocked',
         'start_address' => 'start_address',
         'end_address' => 'end_address',
@@ -251,6 +260,8 @@ class RouteModel implements ArrayAccess
         'latest_date_time' => 'setLatestDateTime',
         'planned_date_time_from' => 'setPlannedDateTimeFrom',
         'planned_date_time_to' => 'setPlannedDateTimeTo',
+        'executed_date_time_from' => 'setExecutedDateTimeFrom',
+        'executed_date_time_to' => 'setExecutedDateTimeTo',
         'planned_driving_duration' => 'setPlannedDrivingDuration',
         'planned_waiting_duration' => 'setPlannedWaitingDuration',
         'planned_activity_duration' => 'setPlannedActivityDuration',
@@ -261,6 +272,7 @@ class RouteModel implements ArrayAccess
         'recurrence_nr' => 'setRecurrenceNr',
         'recurrence' => 'setRecurrence',
         'overdue' => 'setOverdue',
+        'optimized' => 'setOptimized',
         'blocked' => 'setBlocked',
         'start_address' => 'setStartAddress',
         'end_address' => 'setEndAddress',
@@ -307,6 +319,8 @@ class RouteModel implements ArrayAccess
         'latest_date_time' => 'getLatestDateTime',
         'planned_date_time_from' => 'getPlannedDateTimeFrom',
         'planned_date_time_to' => 'getPlannedDateTimeTo',
+        'executed_date_time_from' => 'getExecutedDateTimeFrom',
+        'executed_date_time_to' => 'getExecutedDateTimeTo',
         'planned_driving_duration' => 'getPlannedDrivingDuration',
         'planned_waiting_duration' => 'getPlannedWaitingDuration',
         'planned_activity_duration' => 'getPlannedActivityDuration',
@@ -317,6 +331,7 @@ class RouteModel implements ArrayAccess
         'recurrence_nr' => 'getRecurrenceNr',
         'recurrence' => 'getRecurrence',
         'overdue' => 'getOverdue',
+        'optimized' => 'getOptimized',
         'blocked' => 'getBlocked',
         'start_address' => 'getStartAddress',
         'end_address' => 'getEndAddress',
@@ -424,6 +439,8 @@ class RouteModel implements ArrayAccess
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
         $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
+        $this->container['executed_date_time_from'] = isset($data['executed_date_time_from']) ? $data['executed_date_time_from'] : null;
+        $this->container['executed_date_time_to'] = isset($data['executed_date_time_to']) ? $data['executed_date_time_to'] : null;
         $this->container['planned_driving_duration'] = isset($data['planned_driving_duration']) ? $data['planned_driving_duration'] : null;
         $this->container['planned_waiting_duration'] = isset($data['planned_waiting_duration']) ? $data['planned_waiting_duration'] : null;
         $this->container['planned_activity_duration'] = isset($data['planned_activity_duration']) ? $data['planned_activity_duration'] : null;
@@ -434,6 +451,7 @@ class RouteModel implements ArrayAccess
         $this->container['recurrence_nr'] = isset($data['recurrence_nr']) ? $data['recurrence_nr'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['overdue'] = isset($data['overdue']) ? $data['overdue'] : null;
+        $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
         $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
@@ -657,7 +675,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int $driver_id
+     * @param int $driver_id 
      * @return $this
      */
     public function setDriverId($driver_id)
@@ -678,7 +696,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_link
-     * @param \BumbalClient\Model\LinkModel $driver_link
+     * @param \BumbalClient\Model\LinkModel $driver_link 
      * @return $this
      */
     public function setDriverLink($driver_link)
@@ -699,7 +717,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_links
-     * @param \BumbalClient\Model\LinkModel[] $driver_links
+     * @param \BumbalClient\Model\LinkModel[] $driver_links 
      * @return $this
      */
     public function setDriverLinks($driver_links)
@@ -720,7 +738,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\UsersModel $driver
+     * @param \BumbalClient\Model\UsersModel $driver 
      * @return $this
      */
     public function setDriver($driver)
@@ -741,7 +759,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets user_link
-     * @param \BumbalClient\Model\LinkModel[] $user_link
+     * @param \BumbalClient\Model\LinkModel[] $user_link 
      * @return $this
      */
     public function setUserLink($user_link)
@@ -762,7 +780,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car_id
-     * @param int $car_id
+     * @param int $car_id 
      * @return $this
      */
     public function setCarId($car_id)
@@ -783,7 +801,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car_link
-     * @param \BumbalClient\Model\LinkModel[] $car_link
+     * @param \BumbalClient\Model\LinkModel[] $car_link 
      * @return $this
      */
     public function setCarLink($car_link)
@@ -804,7 +822,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\CarModel $car
+     * @param \BumbalClient\Model\CarModel $car 
      * @return $this
      */
     public function setCar($car)
@@ -825,7 +843,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer_id
-     * @param int $trailer_id
+     * @param int $trailer_id 
      * @return $this
      */
     public function setTrailerId($trailer_id)
@@ -846,7 +864,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer_link
-     * @param \BumbalClient\Model\LinkModel[] $trailer_link
+     * @param \BumbalClient\Model\LinkModel[] $trailer_link 
      * @return $this
      */
     public function setTrailerLink($trailer_link)
@@ -867,7 +885,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer 
      * @return $this
      */
     public function setTrailer($trailer)
@@ -888,7 +906,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time
-     * @param \DateTime $earliest_date_time
+     * @param \DateTime $earliest_date_time 
      * @return $this
      */
     public function setEarliestDateTime($earliest_date_time)
@@ -909,7 +927,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_date_time
-     * @param \DateTime $latest_date_time
+     * @param \DateTime $latest_date_time 
      * @return $this
      */
     public function setLatestDateTime($latest_date_time)
@@ -957,6 +975,48 @@ class RouteModel implements ArrayAccess
     public function setPlannedDateTimeTo($planned_date_time_to)
     {
         $this->container['planned_date_time_to'] = $planned_date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_date_time_from
+     * @return \DateTime
+     */
+    public function getExecutedDateTimeFrom()
+    {
+        return $this->container['executed_date_time_from'];
+    }
+
+    /**
+     * Sets executed_date_time_from
+     * @param \DateTime $executed_date_time_from executed date-time from
+     * @return $this
+     */
+    public function setExecutedDateTimeFrom($executed_date_time_from)
+    {
+        $this->container['executed_date_time_from'] = $executed_date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets executed_date_time_to
+     * @return \DateTime
+     */
+    public function getExecutedDateTimeTo()
+    {
+        return $this->container['executed_date_time_to'];
+    }
+
+    /**
+     * Sets executed_date_time_to
+     * @param \DateTime $executed_date_time_to executed date-time to
+     * @return $this
+     */
+    public function setExecutedDateTimeTo($executed_date_time_to)
+    {
+        $this->container['executed_date_time_to'] = $executed_date_time_to;
 
         return $this;
     }
@@ -1056,7 +1116,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets gps_locations
-     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations
+     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations 
      * @return $this
      */
     public function setGpsLocations($gps_locations)
@@ -1077,7 +1137,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_known_position
-     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position 
      * @return $this
      */
     public function setLatestKnownPosition($latest_known_position)
@@ -1172,6 +1232,27 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets optimized
+     * @return bool
+     */
+    public function getOptimized()
+    {
+        return $this->container['optimized'];
+    }
+
+    /**
+     * Sets optimized
+     * @param bool $optimized Activity optimized status within route.
+     * @return $this
+     */
+    public function setOptimized($optimized)
+    {
+        $this->container['optimized'] = $optimized;
+
+        return $this;
+    }
+
+    /**
      * Gets blocked
      * @return bool
      */
@@ -1203,7 +1284,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets start_address
-     * @param \BumbalClient\Model\AddressModel $start_address
+     * @param \BumbalClient\Model\AddressModel $start_address 
      * @return $this
      */
     public function setStartAddress($start_address)
@@ -1224,7 +1305,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets end_address
-     * @param \BumbalClient\Model\AddressModel $end_address
+     * @param \BumbalClient\Model\AddressModel $end_address 
      * @return $this
      */
     public function setEndAddress($end_address)
@@ -1245,7 +1326,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param object $planned_capacities
+     * @param object $planned_capacities 
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)
@@ -1266,7 +1347,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -1287,7 +1368,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -1308,7 +1389,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets activity_ids
-     * @param object $activity_ids
+     * @param object $activity_ids 
      * @return $this
      */
     public function setActivityIds($activity_ids)
@@ -1329,7 +1410,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -1350,7 +1431,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1371,7 +1452,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -1392,7 +1473,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)
@@ -1455,7 +1536,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -1476,7 +1557,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param object $tag_names
+     * @param object $tag_names 
      * @return $this
      */
     public function setTagNames($tag_names)
@@ -1497,7 +1578,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
      * @return $this
      */
     public function setZones($zones)
@@ -1518,7 +1599,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets zone_names
-     * @param object $zone_names
+     * @param object $zone_names 
      * @return $this
      */
     public function setZoneNames($zone_names)

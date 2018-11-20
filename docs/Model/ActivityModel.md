@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **assignment_nr** | **string** | Assignment NR | [optional] 
 **remarks** | **string** | Remarks about this activity | [optional] 
 **locked** | **int** | Activity locked status. 0&#x3D; not locked. 1&#x3D; locked on a Route and time. 2&#x3D; locke don route only. | [optional] 
+**optimized** | **bool** | Activity optimized status within route. | [optional] 
 **priority** | **int** | Priority level. 1 for highest priority, 3 for lowest priority. Default &#x3D; 2 | [optional] 
 **top_priority** | **bool** | Activity has top priority | [optional] 
 **sequence_nr** | **int** | Sequence number on Route | [optional] 

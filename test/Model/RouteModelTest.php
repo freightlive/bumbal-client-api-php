@@ -225,6 +225,20 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "executed_date_time_from"
+     */
+    public function testPropertyExecutedDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "executed_date_time_to"
+     */
+    public function testPropertyExecutedDateTimeTo()
+    {
+    }
+
+    /**
      * Test attribute "planned_driving_duration"
      */
     public function testPropertyPlannedDrivingDuration()
@@ -291,6 +305,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "overdue"
      */
     public function testPropertyOverdue()
+    {
+    }
+
+    /**
+     * Test attribute "optimized"
+     */
+    public function testPropertyOptimized()
     {
     }
 

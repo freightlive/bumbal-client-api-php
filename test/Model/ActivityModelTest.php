@@ -148,6 +148,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "optimized"
+     */
+    public function testPropertyOptimized()
+    {
+    }
+
+    /**
      * Test attribute "priority"
      */
     public function testPropertyPriority()
