@@ -636,18 +636,4 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyActivityUpdatedBy()
     {
     }
-
-    /**
-     * Test attribute "activity_created_by_user"
-     */
-    public function testPropertyActivityCreatedByUser()
-    {
-    }
-
-    /**
-     * Test attribute "activity_updated_by_user"
-     */
-    public function testPropertyActivityUpdatedByUser()
-    {
-    }
 }
