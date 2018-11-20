@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**uuid** | **int** | unique per user | [optional] 
+**uuid** | **string** | unique per user | [optional] 
 **role_id** | **int** | id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin | [optional] 
 **role_name** | **string** | Role name | [optional] 
 **party_id** | **int** | Associated Party ID | [optional] 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
-**uuid** | **int** | unique per user | [optional] 
+**uuid** | **string** | unique per user | [optional] 
 **addresses** | [**\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **tag_names** | **object** |  | [optional] 
 **first_name** | **string** | First Name | [optional] 

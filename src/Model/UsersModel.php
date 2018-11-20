@@ -55,7 +55,7 @@ class UsersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'uuid' => 'int',
+        'uuid' => 'string',
         'role_id' => 'int',
         'role_name' => 'string',
         'party_id' => 'int',
@@ -83,7 +83,7 @@ class UsersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'uuid' => 'int64',
+        'uuid' => null,
         'role_id' => 'int64',
         'role_name' => null,
         'party_id' => 'int64',
@@ -335,7 +335,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets uuid
-     * @return int
+     * @return string
      */
     public function getUuid()
     {
@@ -344,7 +344,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param int $uuid unique per user
+     * @param string $uuid unique per user
      * @return $this
      */
     public function setUuid($uuid)

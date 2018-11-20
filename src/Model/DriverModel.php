@@ -55,7 +55,7 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'uuid' => 'int',
+        'uuid' => 'string',
         'addresses' => '\BumbalClient\Model\AddressModel[]',
         'tag_names' => 'object',
         'first_name' => 'string',
@@ -82,7 +82,7 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'uuid' => 'int64',
+        'uuid' => null,
         'addresses' => null,
         'tag_names' => null,
         'first_name' => null,
@@ -297,7 +297,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets uuid
-     * @return int
+     * @return string
      */
     public function getUuid()
     {
@@ -306,7 +306,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param int $uuid unique per user
+     * @param string $uuid unique per user
      * @return $this
      */
     public function setUuid($uuid)
