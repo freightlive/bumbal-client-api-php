@@ -189,7 +189,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_tags
-     * @param bool $include_trailer_tags
+     * @param bool $include_trailer_tags 
      * @return $this
      */
     public function setIncludeTrailerTags($include_trailer_tags)
@@ -210,7 +210,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_meta_data
-     * @param bool $include_trailer_meta_data
+     * @param bool $include_trailer_meta_data 
      * @return $this
      */
     public function setIncludeTrailerMetaData($include_trailer_meta_data)
@@ -231,7 +231,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_trailer_links
-     * @param bool $include_trailer_links
+     * @param bool $include_trailer_links 
      * @return $this
      */
     public function setIncludeTrailerLinks($include_trailer_links)
@@ -252,7 +252,7 @@ class TrailerOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by_name
-     * @param bool $include_updated_by_name
+     * @param bool $include_updated_by_name 
      * @return $this
      */
     public function setIncludeUpdatedByName($include_updated_by_name)

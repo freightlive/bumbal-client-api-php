@@ -273,7 +273,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets filter_tag_names
-     * @param object $filter_tag_names
+     * @param object $filter_tag_names 
      * @return $this
      */
     public function setFilterTagNames($filter_tag_names)
@@ -294,7 +294,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets filter_tags
-     * @param object $filter_tags
+     * @param object $filter_tags 
      * @return $this
      */
     public function setFilterTags($filter_tags)
@@ -315,7 +315,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -336,7 +336,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -357,7 +357,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_ranges
-     * @param \BumbalClient\Model\ZoneRangeModel[] $zone_ranges
+     * @param \BumbalClient\Model\ZoneRangeModel[] $zone_ranges 
      * @return $this
      */
     public function setZoneRanges($zone_ranges)

@@ -99,6 +99,34 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "date_time_from_since"
+     */
+    public function testPropertyDateTimeFromSince()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_from_till"
+     */
+    public function testPropertyDateTimeFromTill()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to_since"
+     */
+    public function testPropertyDateTimeToSince()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to_till"
+     */
+    public function testPropertyDateTimeToTill()
+    {
+    }
+
+    /**
      * Test attribute "updated_at_since"
      */
     public function testPropertyUpdatedAtSince()
