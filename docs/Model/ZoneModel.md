@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID | [optional] 
 **name** | **string** | Zone Name | [optional] 
-**filter_tag_names** | **object** |  | [optional] 
+**filter_tag_names** | **string[]** | Tag names | [optional] 
 **filter_tags** | **object** |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 

@@ -123,9 +123,9 @@ class ActivityModel implements ArrayAccess
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
-        'tag_names' => 'object',
+        'tag_names' => 'string[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
-        'zone_names' => 'object',
+        'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
@@ -2187,7 +2187,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets tag_names
-     * @return object
+     * @return string[]
      */
     public function getTagNames()
     {
@@ -2196,7 +2196,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param object $tag_names 
+     * @param string[] $tag_names Tag names
      * @return $this
      */
     public function setTagNames($tag_names)
@@ -2229,7 +2229,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets zone_names
-     * @return object
+     * @return string[]
      */
     public function getZoneNames()
     {
@@ -2238,7 +2238,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets zone_names
-     * @param object $zone_names 
+     * @param string[] $zone_names Zone names
      * @return $this
      */
     public function setZoneNames($zone_names)

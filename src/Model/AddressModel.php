@@ -85,7 +85,7 @@ class AddressModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
-        'tag_names' => 'object',
+        'tag_names' => 'string[]',
         'tags' => '\BumbalClient\Model\TagModel[]'
     ];
 
@@ -1005,7 +1005,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Gets tag_names
-     * @return object
+     * @return string[]
      */
     public function getTagNames()
     {
@@ -1014,7 +1014,7 @@ class AddressModel implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param object $tag_names 
+     * @param string[] $tag_names Tag names
      * @return $this
      */
     public function setTagNames($tag_names)

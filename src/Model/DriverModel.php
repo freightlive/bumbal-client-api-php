@@ -57,7 +57,7 @@ class DriverModel implements ArrayAccess
         'id' => 'int',
         'uuid' => 'string',
         'addresses' => '\BumbalClient\Model\AddressModel[]',
-        'tag_names' => 'object',
+        'tag_names' => 'string[]',
         'first_name' => 'string',
         'last_name' => 'string',
         'prefix' => 'string',
@@ -339,7 +339,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets tag_names
-     * @return object
+     * @return string[]
      */
     public function getTagNames()
     {
@@ -348,7 +348,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets tag_names
-     * @param object $tag_names 
+     * @param string[] $tag_names Tag names
      * @return $this
      */
     public function setTagNames($tag_names)

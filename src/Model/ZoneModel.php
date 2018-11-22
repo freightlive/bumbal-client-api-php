@@ -56,7 +56,7 @@ class ZoneModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
-        'filter_tag_names' => 'object',
+        'filter_tag_names' => 'string[]',
         'filter_tags' => 'object',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -264,7 +264,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets filter_tag_names
-     * @return object
+     * @return string[]
      */
     public function getFilterTagNames()
     {
@@ -273,7 +273,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets filter_tag_names
-     * @param object $filter_tag_names 
+     * @param string[] $filter_tag_names Tag names
      * @return $this
      */
     public function setFilterTagNames($filter_tag_names)

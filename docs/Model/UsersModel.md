@@ -20,9 +20,9 @@ Name | Type | Description | Notes
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
-**tag_names** | **object** |  | [optional] 
+**tag_names** | **string[]** | Tag names | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
-**zone_names** | **object** |  | [optional] 
+**zone_names** | **string[]** | Zone names | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
