@@ -312,7 +312,7 @@ class CarRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\CarOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\CarOptionsModel $options options
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class CarRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\CarFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\CarFiltersModel $filters filters
      *
      * @return $this
      */

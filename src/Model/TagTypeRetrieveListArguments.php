@@ -242,7 +242,7 @@ class TagTypeRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\TagTypeOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\TagTypeOptionsModel $options options
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class TagTypeRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\TagTypeFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\TagTypeFiltersModel $filters filters
      *
      * @return $this
      */

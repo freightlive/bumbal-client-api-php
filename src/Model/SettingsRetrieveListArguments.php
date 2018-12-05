@@ -242,7 +242,7 @@ class SettingsRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\SettingsOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\SettingsOptionsModel $options options
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class SettingsRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\SettingsFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\SettingsFiltersModel $filters filters
      *
      * @return $this
      */

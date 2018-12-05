@@ -401,7 +401,7 @@ class AssignmentModel implements ModelInterface, ArrayAccess
     /**
      * Sets booking_account
      *
-     * @param \BumbalClient\BumbalClient\Model\PartyModel $booking_account 
+     * @param \BumbalClient\BumbalClient\Model\PartyModel $booking_account booking_account
      *
      * @return $this
      */

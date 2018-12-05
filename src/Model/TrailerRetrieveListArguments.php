@@ -312,7 +312,7 @@ class TrailerRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\TrailerOptionsModel $options options
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class TrailerRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\TrailerFiltersModel $filters filters
      *
      * @return $this
      */

@@ -1924,7 +1924,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $address 
+     * @param \BumbalClient\BumbalClient\Model\AddressModel $address address
      *
      * @return $this
      */
@@ -1948,7 +1948,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets address_applied
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressAppliedModel $address_applied 
+     * @param \BumbalClient\BumbalClient\Model\AddressAppliedModel $address_applied address_applied
      *
      * @return $this
      */
@@ -1972,7 +1972,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets depot_address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $depot_address 
+     * @param \BumbalClient\BumbalClient\Model\AddressModel $depot_address depot_address
      *
      * @return $this
      */
@@ -2188,7 +2188,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets brand
      *
-     * @param \BumbalClient\BumbalClient\Model\BrandModel $brand 
+     * @param \BumbalClient\BumbalClient\Model\BrandModel $brand brand
      *
      * @return $this
      */
@@ -2212,7 +2212,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets communication
      *
-     * @param \BumbalClient\BumbalClient\Model\CommunicationModel $communication 
+     * @param \BumbalClient\BumbalClient\Model\CommunicationModel $communication communication
      *
      * @return $this
      */
@@ -2236,7 +2236,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets assignment_link
      *
-     * @param \BumbalClient\BumbalClient\Model\LinkModel $assignment_link 
+     * @param \BumbalClient\BumbalClient\Model\LinkModel $assignment_link assignment_link
      *
      * @return $this
      */
@@ -2260,7 +2260,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets route_link
      *
-     * @param \BumbalClient\BumbalClient\Model\LinkModel $route_link 
+     * @param \BumbalClient\BumbalClient\Model\LinkModel $route_link route_link
      *
      * @return $this
      */
@@ -2284,7 +2284,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets route
      *
-     * @param \BumbalClient\BumbalClient\Model\RouteModel $route 
+     * @param \BumbalClient\BumbalClient\Model\RouteModel $route route
      *
      * @return $this
      */
@@ -2308,7 +2308,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets driver
      *
-     * @param \BumbalClient\BumbalClient\Model\DriverModel $driver 
+     * @param \BumbalClient\BumbalClient\Model\DriverModel $driver driver
      *
      * @return $this
      */
@@ -2356,7 +2356,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets car
      *
-     * @param \BumbalClient\BumbalClient\Model\CarModel $car 
+     * @param \BumbalClient\BumbalClient\Model\CarModel $car car
      *
      * @return $this
      */
@@ -2380,7 +2380,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $trailer 
+     * @param \BumbalClient\BumbalClient\Model\TrailerModel $trailer trailer
      *
      * @return $this
      */
@@ -2428,7 +2428,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \BumbalClient\BumbalClient\Model\RecurrenceModel $recurrence 
+     * @param \BumbalClient\BumbalClient\Model\RecurrenceModel $recurrence recurrence
      *
      * @return $this
      */
@@ -2716,7 +2716,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets activity_created_by_user
      *
-     * @param \BumbalClient\BumbalClient\Model\UsersModel $activity_created_by_user created_by user object
+     * @param \BumbalClient\BumbalClient\Model\UsersModel $activity_created_by_user activity_created_by_user
      *
      * @return $this
      */
@@ -2740,7 +2740,7 @@ class ActivityModel implements ModelInterface, ArrayAccess
     /**
      * Sets activity_updated_by_user
      *
-     * @param \BumbalClient\BumbalClient\Model\UsersModel $activity_updated_by_user updated_by user object
+     * @param \BumbalClient\BumbalClient\Model\UsersModel $activity_updated_by_user activity_updated_by_user
      *
      * @return $this
      */

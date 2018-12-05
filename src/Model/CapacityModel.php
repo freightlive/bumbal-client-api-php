@@ -446,7 +446,7 @@ class CapacityModel implements ModelInterface, ArrayAccess
     /**
      * Sets capacity_type
      *
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeModel $capacity_type 
+     * @param \BumbalClient\BumbalClient\Model\CapacityTypeModel $capacity_type capacity_type
      *
      * @return $this
      */

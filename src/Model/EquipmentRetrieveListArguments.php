@@ -242,7 +242,7 @@ class EquipmentRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\ActivityOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\ActivityOptionsModel $options options
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class EquipmentRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\ActivityFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\ActivityFiltersModel $filters filters
      *
      * @return $this
      */

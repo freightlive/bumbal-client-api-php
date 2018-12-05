@@ -312,7 +312,7 @@ class BrandColourRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\BrandColourOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\BrandColourOptionsModel $options options
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class BrandColourRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\BrandColourFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\BrandColourFiltersModel $filters filters
      *
      * @return $this
      */

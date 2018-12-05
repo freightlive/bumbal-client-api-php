@@ -230,7 +230,7 @@ class ApplyPlanningArguments implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningDataModel $data 
+     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningDataModel $data data
      *
      * @return $this
      */
@@ -254,7 +254,7 @@ class ApplyPlanningArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningOptionsModel $options options
      *
      * @return $this
      */
@@ -278,7 +278,7 @@ class ApplyPlanningArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\ApplyPlanningFiltersModel $filters filters
      *
      * @return $this
      */

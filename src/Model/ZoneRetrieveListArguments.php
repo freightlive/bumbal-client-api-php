@@ -242,7 +242,7 @@ class ZoneRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\ZoneOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\ZoneOptionsModel $options options
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class ZoneRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\ZoneFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\ZoneFiltersModel $filters filters
      *
      * @return $this
      */

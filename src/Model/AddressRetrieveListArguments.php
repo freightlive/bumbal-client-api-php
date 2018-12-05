@@ -248,7 +248,7 @@ class AddressRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\AddressOptionsModel $options options
      *
      * @return $this
      */
@@ -272,7 +272,7 @@ class AddressRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\AddressFiltersModel $filters filters
      *
      * @return $this
      */

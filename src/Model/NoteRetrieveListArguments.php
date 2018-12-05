@@ -312,7 +312,7 @@ class NoteRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\NoteOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\NoteOptionsModel $options options
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class NoteRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\NoteFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\NoteFiltersModel $filters filters
      *
      * @return $this
      */

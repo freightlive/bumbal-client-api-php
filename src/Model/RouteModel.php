@@ -766,7 +766,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets driver_link
      *
-     * @param \BumbalClient\BumbalClient\Model\LinkModel $driver_link 
+     * @param \BumbalClient\BumbalClient\Model\LinkModel $driver_link driver_link
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets driver
      *
-     * @param \BumbalClient\BumbalClient\Model\UsersModel $driver 
+     * @param \BumbalClient\BumbalClient\Model\UsersModel $driver driver
      *
      * @return $this
      */
@@ -910,7 +910,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets car
      *
-     * @param \BumbalClient\BumbalClient\Model\CarModel $car 
+     * @param \BumbalClient\BumbalClient\Model\CarModel $car car
      *
      * @return $this
      */
@@ -982,7 +982,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $trailer 
+     * @param \BumbalClient\BumbalClient\Model\TrailerModel $trailer trailer
      *
      * @return $this
      */
@@ -1270,7 +1270,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets latest_known_position
      *
-     * @param \BumbalClient\BumbalClient\Model\GPSLocationModel $latest_known_position 
+     * @param \BumbalClient\BumbalClient\Model\GPSLocationModel $latest_known_position latest_known_position
      *
      * @return $this
      */
@@ -1342,7 +1342,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \BumbalClient\BumbalClient\Model\RecurrenceModel $recurrence 
+     * @param \BumbalClient\BumbalClient\Model\RecurrenceModel $recurrence recurrence
      *
      * @return $this
      */
@@ -1438,7 +1438,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets start_address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $start_address 
+     * @param \BumbalClient\BumbalClient\Model\AddressModel $start_address start_address
      *
      * @return $this
      */
@@ -1462,7 +1462,7 @@ class RouteModel implements ModelInterface, ArrayAccess
     /**
      * Sets end_address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $end_address 
+     * @param \BumbalClient\BumbalClient\Model\AddressModel $end_address end_address
      *
      * @return $this
      */

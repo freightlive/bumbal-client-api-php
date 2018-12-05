@@ -302,7 +302,7 @@ class SayWhenRetrievePortalURLsArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\ActivityFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\ActivityFiltersModel $filters filters
      *
      * @return $this
      */

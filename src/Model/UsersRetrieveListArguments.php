@@ -314,7 +314,7 @@ class UsersRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\UsersOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\UsersOptionsModel $options options
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class UsersRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\UsersFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\UsersFiltersModel $filters filters
      *
      * @return $this
      */

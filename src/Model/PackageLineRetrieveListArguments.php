@@ -318,7 +318,7 @@ class PackageLineRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\PackageLineOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\PackageLineOptionsModel $options options
      *
      * @return $this
      */
@@ -342,7 +342,7 @@ class PackageLineRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\PackageLineFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\PackageLineFiltersModel $filters filters
      *
      * @return $this
      */

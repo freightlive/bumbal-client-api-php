@@ -312,7 +312,7 @@ class RecurrenceRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\RecurrenceOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\RecurrenceOptionsModel $options options
      *
      * @return $this
      */
@@ -336,7 +336,7 @@ class RecurrenceRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\RecurrenceFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\RecurrenceFiltersModel $filters filters
      *
      * @return $this
      */

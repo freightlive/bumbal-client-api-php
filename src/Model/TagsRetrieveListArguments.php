@@ -242,7 +242,7 @@ class TagsRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\TagsOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\TagsOptionsModel $options options
      *
      * @return $this
      */
@@ -266,7 +266,7 @@ class TagsRetrieveListArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\TagsFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\TagsFiltersModel $filters filters
      *
      * @return $this
      */

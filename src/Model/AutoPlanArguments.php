@@ -230,7 +230,7 @@ class AutoPlanArguments implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanDataModel $data 
+     * @param \BumbalClient\BumbalClient\Model\AutoPlanDataModel $data data
      *
      * @return $this
      */
@@ -254,7 +254,7 @@ class AutoPlanArguments implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanOptionsModel $options 
+     * @param \BumbalClient\BumbalClient\Model\AutoPlanOptionsModel $options options
      *
      * @return $this
      */
@@ -278,7 +278,7 @@ class AutoPlanArguments implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanFiltersModel $filters 
+     * @param \BumbalClient\BumbalClient\Model\AutoPlanFiltersModel $filters filters
      *
      * @return $this
      */

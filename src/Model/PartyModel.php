@@ -422,7 +422,7 @@ class PartyModel implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $address 
+     * @param \BumbalClient\BumbalClient\Model\AddressModel $address address
      *
      * @return $this
      */
