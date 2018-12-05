@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createEquipment**
-> \BumbalClient\BumbalClient\Model\ApiResponse createEquipment($body)
+> \BumbalClient\Model\ApiResponse createEquipment($body)
 
 Add a new Equipment
 
@@ -24,20 +24,15 @@ Add a new Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\EquipmentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \BumbalClient\BumbalClient\Model\EquipmentModel(); // \BumbalClient\BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
+$api_instance = new BumbalClient\Api\EquipmentApi();
+$body = new \BumbalClient\Model\EquipmentModel(); // \BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
 
 try {
-    $result = $apiInstance->createEquipment($body);
+    $result = $api_instance->createEquipment($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EquipmentApi->createEquipment: ', $e->getMessage(), PHP_EOL;
@@ -49,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)| Equipment object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)| Equipment object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -67,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteEquipment**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteEquipment($equipment_id)
+> \BumbalClient\Model\ApiResponse deleteEquipment($equipment_id)
 
 Delete an Equipment
 
@@ -79,20 +74,15 @@ Delete an Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\EquipmentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
 
 try {
-    $result = $apiInstance->deleteEquipment($equipment_id);
+    $result = $api_instance->deleteEquipment($equipment_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EquipmentApi->deleteEquipment: ', $e->getMessage(), PHP_EOL;
@@ -108,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -122,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveEquipment**
-> \BumbalClient\BumbalClient\Model\EquipmentModel retrieveEquipment($equipment_id)
+> \BumbalClient\Model\EquipmentModel retrieveEquipment($equipment_id)
 
 Retrieve a Equipment
 
@@ -134,20 +124,15 @@ Retrieve an Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\EquipmentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to retrieve
 
 try {
-    $result = $apiInstance->retrieveEquipment($equipment_id);
+    $result = $api_instance->retrieveEquipment($equipment_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EquipmentApi->retrieveEquipment: ', $e->getMessage(), PHP_EOL;
@@ -163,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)
+[**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)
 
 ### Authorization
 
@@ -177,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListEquipment**
-> \BumbalClient\BumbalClient\Model\EquipmentModel[] retrieveListEquipment($arguments)
+> \BumbalClient\Model\EquipmentModel[] retrieveListEquipment($arguments)
 
 Retrieve List of Equipment
 
@@ -189,20 +174,15 @@ Retrieve List of Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\EquipmentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$arguments = new \BumbalClient\BumbalClient\Model\EquipmentRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
+$api_instance = new BumbalClient\Api\EquipmentApi();
+$arguments = new \BumbalClient\Model\EquipmentRetrieveListArguments(); // \BumbalClient\Model\EquipmentRetrieveListArguments | Equipment RetrieveList Arguments
 
 try {
-    $result = $apiInstance->retrieveListEquipment($arguments);
+    $result = $api_instance->retrieveListEquipment($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EquipmentApi->retrieveListEquipment: ', $e->getMessage(), PHP_EOL;
@@ -214,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\EquipmentRetrieveListArguments**](../Model/EquipmentRetrieveListArguments.md)| Equipment RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
+[**\BumbalClient\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
 
 ### Authorization
 
@@ -232,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateEquipment**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateEquipment($equipment_id)
+> \BumbalClient\Model\ApiResponse updateEquipment($equipment_id)
 
 Update a Equipment
 
@@ -244,20 +224,15 @@ Update an Equipment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\EquipmentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\EquipmentApi();
 $equipment_id = 789; // int | ID of equipment to update
 
 try {
-    $result = $apiInstance->updateEquipment($equipment_id);
+    $result = $api_instance->updateEquipment($equipment_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EquipmentApi->updateEquipment: ', $e->getMessage(), PHP_EOL;
@@ -273,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

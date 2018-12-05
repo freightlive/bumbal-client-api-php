@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\BumbalClient\Model\BrandColourOptionsModel**](BrandColourOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\BumbalClient\Model\BrandColourFiltersModel**](BrandColourFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\BrandColourOptionsModel**](BrandColourOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\BrandColourFiltersModel**](BrandColourFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

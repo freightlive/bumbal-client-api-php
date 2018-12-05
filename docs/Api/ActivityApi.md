@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteActivity**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteActivity($activity_id)
+> \BumbalClient\Model\ApiResponse deleteActivity($activity_id)
 
 Delete an activity
 
@@ -24,20 +24,15 @@ Delete an activity
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\ActivityApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of the activity to delete
 
 try {
-    $result = $apiInstance->deleteActivity($activity_id);
+    $result = $api_instance->deleteActivity($activity_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->deleteActivity: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -67,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
 
 Find activity by ID
 
@@ -79,16 +74,11 @@ Returns a single activity
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\ActivityApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to return
 $include_activity_status = true; // bool | Show the text value of the status
 $include_activity_type_name = true; // bool | Show the text value of the activity type
@@ -121,7 +111,7 @@ $include_brand_colours = true; // bool | Include brand colours
 $include_brand_files = true; // bool | Include brand files
 
 try {
-    $result = $apiInstance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -166,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)
+[**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)
 
 ### Authorization
 
@@ -180,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListActivity**
-> \BumbalClient\BumbalClient\Model\ActivityListResponse retrieveListActivity($arguments)
+> \BumbalClient\Model\ActivityListResponse retrieveListActivity($arguments)
 
 Retrieve List of Activities
 
@@ -192,20 +182,15 @@ Retrieve List of Activities
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\ActivityApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$arguments = new \BumbalClient\BumbalClient\Model\ActivityRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
+$api_instance = new BumbalClient\Api\ActivityApi();
+$arguments = new \BumbalClient\Model\ActivityRetrieveListArguments(); // \BumbalClient\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
 
 try {
-    $result = $apiInstance->retrieveListActivity($arguments);
+    $result = $api_instance->retrieveListActivity($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveListActivity: ', $e->getMessage(), PHP_EOL;
@@ -217,11 +202,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ActivityListResponse**](../Model/ActivityListResponse.md)
+[**\BumbalClient\Model\ActivityListResponse**](../Model/ActivityListResponse.md)
 
 ### Authorization
 
@@ -235,7 +220,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setActivity**
-> \BumbalClient\BumbalClient\Model\ApiResponse setActivity($body)
+> \BumbalClient\Model\ApiResponse setActivity($body)
 
 Set (create or update) an Activity
 
@@ -247,20 +232,15 @@ Set (create or update) an Activity. If id or links are set in the data, and a co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\ActivityApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \BumbalClient\BumbalClient\Model\ActivityModel(); // \BumbalClient\BumbalClient\Model\ActivityModel | Activity object
+$api_instance = new BumbalClient\Api\ActivityApi();
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
 
 try {
-    $result = $apiInstance->setActivity($body);
+    $result = $api_instance->setActivity($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->setActivity: ', $e->getMessage(), PHP_EOL;
@@ -272,11 +252,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -290,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateActivity**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateActivity($activity_id, $body)
+> \BumbalClient\Model\ApiResponse updateActivity($activity_id, $body)
 
 Update a activity
 
@@ -302,21 +282,16 @@ Update a activity
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\ActivityApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to update
-$body = new \BumbalClient\BumbalClient\Model\ActivityModel(); // \BumbalClient\BumbalClient\Model\ActivityModel | Activity object that needs to be updated
+$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object that needs to be updated
 
 try {
-    $result = $apiInstance->updateActivity($activity_id, $body);
+    $result = $api_instance->updateActivity($activity_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->updateActivity: ', $e->getMessage(), PHP_EOL;
@@ -329,11 +304,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of activity to update |
- **body** | [**\BumbalClient\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

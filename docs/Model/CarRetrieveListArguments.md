@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\BumbalClient\Model\CarOptionsModel**](CarOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\BumbalClient\Model\CarFiltersModel**](CarFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\CarOptionsModel**](CarOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\CarFiltersModel**](CarFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

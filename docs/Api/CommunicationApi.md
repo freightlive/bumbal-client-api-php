@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **triggerMessageCommunication**
-> \BumbalClient\BumbalClient\Model\ApiResponse triggerMessageCommunication($activity_id, $message_type, $check_preference)
+> \BumbalClient\Model\ApiResponse triggerMessageCommunication($activity_id, $message_type, $check_preference)
 
 Trigger Message to Communication
 
@@ -20,22 +20,17 @@ Trigger Message to Communication
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
-$apiInstance = new BumbalClient\Api\CommunicationApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
+$api_instance = new BumbalClient\Api\CommunicationApi();
 $activity_id = 56; // int | ActivityId
 $message_type = "message_type_example"; // string | MessageType
 $check_preference = true; // bool | checkPreference
 
 try {
-    $result = $apiInstance->triggerMessageCommunication($activity_id, $message_type, $check_preference);
+    $result = $api_instance->triggerMessageCommunication($activity_id, $message_type, $check_preference);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CommunicationApi->triggerMessageCommunication: ', $e->getMessage(), PHP_EOL;
@@ -53,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
