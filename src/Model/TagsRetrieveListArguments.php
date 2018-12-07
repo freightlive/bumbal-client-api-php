@@ -195,7 +195,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\TagsOptionsModel $options
+     * @param \BumbalClient\Model\TagsOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class TagsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\TagsFiltersModel $filters
+     * @param \BumbalClient\Model\TagsFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

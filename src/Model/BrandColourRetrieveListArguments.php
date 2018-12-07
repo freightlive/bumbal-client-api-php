@@ -263,7 +263,7 @@ class BrandColourRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\BrandColourOptionsModel $options
+     * @param \BumbalClient\Model\BrandColourOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -284,7 +284,7 @@ class BrandColourRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\BrandColourFiltersModel $filters
+     * @param \BumbalClient\Model\BrandColourFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

@@ -265,7 +265,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\UsersOptionsModel $options
+     * @param \BumbalClient\Model\UsersOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -286,7 +286,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\UsersFiltersModel $filters
+     * @param \BumbalClient\Model\UsersFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

@@ -696,7 +696,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_link
-     * @param \BumbalClient\Model\LinkModel $driver_link
+     * @param \BumbalClient\Model\LinkModel $driver_link 
      * @return $this
      */
     public function setDriverLink($driver_link)
@@ -738,7 +738,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\UsersModel $driver
+     * @param \BumbalClient\Model\UsersModel $driver 
      * @return $this
      */
     public function setDriver($driver)
@@ -822,7 +822,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\CarModel $car
+     * @param \BumbalClient\Model\CarModel $car 
      * @return $this
      */
     public function setCar($car)
@@ -885,7 +885,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer 
      * @return $this
      */
     public function setTrailer($trailer)
@@ -1137,7 +1137,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_known_position
-     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position 
      * @return $this
      */
     public function setLatestKnownPosition($latest_known_position)
@@ -1200,7 +1200,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -1284,7 +1284,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets start_address
-     * @param \BumbalClient\Model\AddressModel $start_address
+     * @param \BumbalClient\Model\AddressModel $start_address 
      * @return $this
      */
     public function setStartAddress($start_address)
@@ -1305,7 +1305,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets end_address
-     * @param \BumbalClient\Model\AddressModel $end_address
+     * @param \BumbalClient\Model\AddressModel $end_address 
      * @return $this
      */
     public function setEndAddress($end_address)

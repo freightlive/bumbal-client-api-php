@@ -347,7 +347,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets booking_account
-     * @param \BumbalClient\Model\PartyModel $booking_account
+     * @param \BumbalClient\Model\PartyModel $booking_account 
      * @return $this
      */
     public function setBookingAccount($booking_account)

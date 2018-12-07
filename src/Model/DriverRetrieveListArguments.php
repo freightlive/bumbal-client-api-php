@@ -273,7 +273,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\DriverOptionsModel $options
+     * @param \BumbalClient\Model\DriverOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -294,7 +294,7 @@ class DriverRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\DriverFiltersModel $filters
+     * @param \BumbalClient\Model\DriverFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

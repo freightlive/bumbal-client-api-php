@@ -195,7 +195,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\PartyOptionsModel $options
+     * @param \BumbalClient\Model\PartyOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class PartyRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\PartyFiltersModel $filters
+     * @param \BumbalClient\Model\PartyFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

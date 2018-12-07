@@ -60,6 +60,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address_applied' => 'bool',
         'include_address' => 'bool',
         'include_address_object' => 'bool',
+        'include_allowed_driver_ids' => 'bool',
         'include_time_slots' => 'bool',
         'include_time_slot_tags' => 'bool',
         'include_route_info' => 'bool',
@@ -105,6 +106,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address_applied' => null,
         'include_address' => null,
         'include_address_object' => null,
+        'include_allowed_driver_ids' => null,
         'include_time_slots' => null,
         'include_time_slot_tags' => null,
         'include_route_info' => null,
@@ -160,6 +162,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address_applied' => 'include_address_applied',
         'include_address' => 'include_address',
         'include_address_object' => 'include_address_object',
+        'include_allowed_driver_ids' => 'include_allowed_driver_ids',
         'include_time_slots' => 'include_time_slots',
         'include_time_slot_tags' => 'include_time_slot_tags',
         'include_route_info' => 'include_route_info',
@@ -206,6 +209,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address_applied' => 'setIncludeAddressApplied',
         'include_address' => 'setIncludeAddress',
         'include_address_object' => 'setIncludeAddressObject',
+        'include_allowed_driver_ids' => 'setIncludeAllowedDriverIds',
         'include_time_slots' => 'setIncludeTimeSlots',
         'include_time_slot_tags' => 'setIncludeTimeSlotTags',
         'include_route_info' => 'setIncludeRouteInfo',
@@ -252,6 +256,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address_applied' => 'getIncludeAddressApplied',
         'include_address' => 'getIncludeAddress',
         'include_address_object' => 'getIncludeAddressObject',
+        'include_allowed_driver_ids' => 'getIncludeAllowedDriverIds',
         'include_time_slots' => 'getIncludeTimeSlots',
         'include_time_slot_tags' => 'getIncludeTimeSlotTags',
         'include_route_info' => 'getIncludeRouteInfo',
@@ -323,6 +328,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_address_applied'] = isset($data['include_address_applied']) ? $data['include_address_applied'] : null;
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
+        $this->container['include_allowed_driver_ids'] = isset($data['include_allowed_driver_ids']) ? $data['include_allowed_driver_ids'] : null;
         $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
         $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
@@ -504,6 +510,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeAddressObject($include_address_object)
     {
         $this->container['include_address_object'] = $include_address_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_allowed_driver_ids
+     * @return bool
+     */
+    public function getIncludeAllowedDriverIds()
+    {
+        return $this->container['include_allowed_driver_ids'];
+    }
+
+    /**
+     * Sets include_allowed_driver_ids
+     * @param bool $include_allowed_driver_ids 
+     * @return $this
+     */
+    public function setIncludeAllowedDriverIds($include_allowed_driver_ids)
+    {
+        $this->container['include_allowed_driver_ids'] = $include_allowed_driver_ids;
 
         return $this;
     }

@@ -365,7 +365,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address 
      * @return $this
      */
     public function setAddress($address)

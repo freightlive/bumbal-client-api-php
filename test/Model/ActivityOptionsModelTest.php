@@ -120,6 +120,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_allowed_driver_ids"
+     */
+    public function testPropertyIncludeAllowedDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "include_time_slots"
      */
     public function testPropertyIncludeTimeSlots()

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **include_address_applied** | **bool** |  | [optional] 
 **include_address** | **bool** |  | [optional] 
 **include_address_object** | **bool** |  | [optional] 
+**include_allowed_driver_ids** | **bool** |  | [optional] 
 **include_time_slots** | **bool** |  | [optional] 
 **include_time_slot_tags** | **bool** |  | [optional] 
 **include_route_info** | **bool** |  | [optional] 

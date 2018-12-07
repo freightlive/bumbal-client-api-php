@@ -195,7 +195,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\ZoneRangeOptionsModel $options
+     * @param \BumbalClient\Model\ZoneRangeOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ZoneRangeFiltersModel $filters
+     * @param \BumbalClient\Model\ZoneRangeFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

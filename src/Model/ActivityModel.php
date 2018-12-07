@@ -1734,7 +1734,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address 
      * @return $this
      */
     public function setAddress($address)
@@ -1755,7 +1755,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address_applied
-     * @param \BumbalClient\Model\AddressAppliedModel $address_applied
+     * @param \BumbalClient\Model\AddressAppliedModel $address_applied 
      * @return $this
      */
     public function setAddressApplied($address_applied)
@@ -1776,7 +1776,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \BumbalClient\Model\AddressModel $depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address 
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -1965,7 +1965,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets brand
-     * @param \BumbalClient\Model\BrandModel $brand
+     * @param \BumbalClient\Model\BrandModel $brand 
      * @return $this
      */
     public function setBrand($brand)
@@ -1986,7 +1986,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \BumbalClient\Model\CommunicationModel $communication
+     * @param \BumbalClient\Model\CommunicationModel $communication 
      * @return $this
      */
     public function setCommunication($communication)
@@ -2007,7 +2007,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment_link
-     * @param \BumbalClient\Model\LinkModel $assignment_link
+     * @param \BumbalClient\Model\LinkModel $assignment_link 
      * @return $this
      */
     public function setAssignmentLink($assignment_link)
@@ -2028,7 +2028,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_link
-     * @param \BumbalClient\Model\LinkModel $route_link
+     * @param \BumbalClient\Model\LinkModel $route_link 
      * @return $this
      */
     public function setRouteLink($route_link)
@@ -2049,7 +2049,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\RouteModel $route
+     * @param \BumbalClient\Model\RouteModel $route 
      * @return $this
      */
     public function setRoute($route)
@@ -2070,7 +2070,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\DriverModel $driver
+     * @param \BumbalClient\Model\DriverModel $driver 
      * @return $this
      */
     public function setDriver($driver)
@@ -2112,7 +2112,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\CarModel $car
+     * @param \BumbalClient\Model\CarModel $car 
      * @return $this
      */
     public function setCar($car)
@@ -2133,7 +2133,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer 
      * @return $this
      */
     public function setTrailer($trailer)
@@ -2175,7 +2175,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -2427,7 +2427,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_created_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_created_by_user
+     * @param \BumbalClient\Model\UsersModel $activity_created_by_user 
      * @return $this
      */
     public function setActivityCreatedByUser($activity_created_by_user)
@@ -2448,7 +2448,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user 
      * @return $this
      */
     public function setActivityUpdatedByUser($activity_updated_by_user)

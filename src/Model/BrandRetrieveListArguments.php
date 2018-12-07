@@ -263,7 +263,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\BrandOptionsModel $options
+     * @param \BumbalClient\Model\BrandOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -284,7 +284,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\BrandFiltersModel $filters
+     * @param \BumbalClient\Model\BrandFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

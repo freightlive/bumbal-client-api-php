@@ -269,7 +269,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\PackageLineOptionsModel $options
+     * @param \BumbalClient\Model\PackageLineOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -290,7 +290,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\PackageLineFiltersModel $filters
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

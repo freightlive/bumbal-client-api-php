@@ -201,7 +201,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AddressOptionsModel $options
+     * @param \BumbalClient\Model\AddressOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -222,7 +222,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AddressFiltersModel $filters
+     * @param \BumbalClient\Model\AddressFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

@@ -195,7 +195,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\FileOptionsModel $options
+     * @param \BumbalClient\Model\FileOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\FileFiltersModel $filters
+     * @param \BumbalClient\Model\FileFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

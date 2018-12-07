@@ -275,7 +275,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\RouteOptionsModel $options
+     * @param \BumbalClient\Model\RouteOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -296,7 +296,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\RouteFiltersModel $filters
+     * @param \BumbalClient\Model\RouteFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

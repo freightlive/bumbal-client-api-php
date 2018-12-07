@@ -265,7 +265,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AssignmentOptionsModel $options
+     * @param \BumbalClient\Model\AssignmentOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -286,7 +286,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AssignmentFiltersModel $filters
+     * @param \BumbalClient\Model\AssignmentFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
