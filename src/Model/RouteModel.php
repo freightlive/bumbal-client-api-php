@@ -66,11 +66,8 @@ class RouteModel implements ArrayAccess
         'driver' => '\BumbalClient\Model\UsersModel',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
         'car_id' => 'int',
-        'vehicle_id' => 'int',
-        'vehicle_link' => '\BumbalClient\Model\LinkModel[]',
-        'vehicle' => '\BumbalClient\Model\VehicleModel',
         'car_link' => '\BumbalClient\Model\LinkModel[]',
-        'car' => '\BumbalClient\Model\VehicleModel',
+        'car' => '\BumbalClient\Model\CarModel',
         'trailer_id' => 'int',
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'trailer' => '\BumbalClient\Model\TrailerModel',
@@ -127,9 +124,6 @@ class RouteModel implements ArrayAccess
         'driver' => null,
         'user_link' => null,
         'car_id' => null,
-        'vehicle_id' => null,
-        'vehicle_link' => null,
-        'vehicle' => null,
         'car_link' => null,
         'car' => null,
         'trailer_id' => null,
@@ -198,9 +192,6 @@ class RouteModel implements ArrayAccess
         'driver' => 'driver',
         'user_link' => 'user_link',
         'car_id' => 'car_id',
-        'vehicle_id' => 'vehicle_id',
-        'vehicle_link' => 'vehicle_link',
-        'vehicle' => 'vehicle',
         'car_link' => 'car_link',
         'car' => 'car',
         'trailer_id' => 'trailer_id',
@@ -260,9 +251,6 @@ class RouteModel implements ArrayAccess
         'driver' => 'setDriver',
         'user_link' => 'setUserLink',
         'car_id' => 'setCarId',
-        'vehicle_id' => 'setVehicleId',
-        'vehicle_link' => 'setVehicleLink',
-        'vehicle' => 'setVehicle',
         'car_link' => 'setCarLink',
         'car' => 'setCar',
         'trailer_id' => 'setTrailerId',
@@ -322,9 +310,6 @@ class RouteModel implements ArrayAccess
         'driver' => 'getDriver',
         'user_link' => 'getUserLink',
         'car_id' => 'getCarId',
-        'vehicle_id' => 'getVehicleId',
-        'vehicle_link' => 'getVehicleLink',
-        'vehicle' => 'getVehicle',
         'car_link' => 'getCarLink',
         'car' => 'getCar',
         'trailer_id' => 'getTrailerId',
@@ -445,9 +430,6 @@ class RouteModel implements ArrayAccess
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
-        $this->container['vehicle_id'] = isset($data['vehicle_id']) ? $data['vehicle_id'] : null;
-        $this->container['vehicle_link'] = isset($data['vehicle_link']) ? $data['vehicle_link'] : null;
-        $this->container['vehicle'] = isset($data['vehicle']) ? $data['vehicle'] : null;
         $this->container['car_link'] = isset($data['car_link']) ? $data['car_link'] : null;
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['trailer_id'] = isset($data['trailer_id']) ? $data['trailer_id'] : null;
@@ -809,69 +791,6 @@ class RouteModel implements ArrayAccess
     }
 
     /**
-     * Gets vehicle_id
-     * @return int
-     */
-    public function getVehicleId()
-    {
-        return $this->container['vehicle_id'];
-    }
-
-    /**
-     * Sets vehicle_id
-     * @param int $vehicle_id Bumbal internal id for vehicle associated with this route
-     * @return $this
-     */
-    public function setVehicleId($vehicle_id)
-    {
-        $this->container['vehicle_id'] = $vehicle_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets vehicle_link
-     * @return \BumbalClient\Model\LinkModel[]
-     */
-    public function getVehicleLink()
-    {
-        return $this->container['vehicle_link'];
-    }
-
-    /**
-     * Sets vehicle_link
-     * @param \BumbalClient\Model\LinkModel[] $vehicle_link link object to identify a vehicle uniquely by an external id and provider name
-     * @return $this
-     */
-    public function setVehicleLink($vehicle_link)
-    {
-        $this->container['vehicle_link'] = $vehicle_link;
-
-        return $this;
-    }
-
-    /**
-     * Gets vehicle
-     * @return \BumbalClient\Model\VehicleModel
-     */
-    public function getVehicle()
-    {
-        return $this->container['vehicle'];
-    }
-
-    /**
-     * Sets vehicle
-     * @param \BumbalClient\Model\VehicleModel $vehicle Vehicle object with the vehicle properties assigned to this route
-     * @return $this
-     */
-    public function setVehicle($vehicle)
-    {
-        $this->container['vehicle'] = $vehicle;
-
-        return $this;
-    }
-
-    /**
      * Gets car_link
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -894,7 +813,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets car
-     * @return \BumbalClient\Model\VehicleModel
+     * @return \BumbalClient\Model\CarModel
      */
     public function getCar()
     {
@@ -903,7 +822,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\VehicleModel $car 
+     * @param \BumbalClient\Model\CarModel $car 
      * @return $this
      */
     public function setCar($car)

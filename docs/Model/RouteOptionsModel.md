@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **include_driver_links** | **bool** |  | [optional] 
 **include_car** | **bool** |  | [optional] 
 **include_car_links** | **bool** |  | [optional] 
-**include_vehicle** | **bool** |  | [optional] 
-**include_vehicle_links** | **bool** |  | [optional] 
 **include_trailer** | **bool** |  | [optional] 
 **include_trailer_links** | **bool** |  | [optional] 
 **include_driver_info** | **bool** |  | [optional] 

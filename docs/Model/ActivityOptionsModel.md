@@ -23,7 +23,6 @@ Name | Type | Description | Notes
 **include_driver** | **bool** |  | [optional] 
 **include_driver_links** | **bool** |  | [optional] 
 **include_car** | **bool** |  | [optional] 
-**include_vehicle** | **bool** |  | [optional] 
 **include_trailer** | **bool** |  | [optional] 
 **include_communication** | **bool** |  | [optional] 
 **include_communication_object** | **bool** |  | [optional] 

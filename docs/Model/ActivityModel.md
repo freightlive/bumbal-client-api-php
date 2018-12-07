@@ -69,7 +69,7 @@ Name | Type | Description | Notes
 **route** | [**\BumbalClient\Model\RouteModel**](RouteModel.md) |  | [optional] 
 **driver** | [**\BumbalClient\Model\DriverModel**](DriverModel.md) |  | [optional] 
 **driver_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**car** | [**\BumbalClient\Model\VehicleModel**](VehicleModel.md) |  | [optional] 
+**car** | [**\BumbalClient\Model\CarModel**](CarModel.md) |  | [optional] 
 **trailer** | [**\BumbalClient\Model\TrailerModel**](TrailerModel.md) |  | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 

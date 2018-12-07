@@ -120,7 +120,7 @@ class ActivityModel implements ArrayAccess
         'route' => '\BumbalClient\Model\RouteModel',
         'driver' => '\BumbalClient\Model\DriverModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
-        'car' => '\BumbalClient\Model\VehicleModel',
+        'car' => '\BumbalClient\Model\CarModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
@@ -2130,7 +2130,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets car
-     * @return \BumbalClient\Model\VehicleModel
+     * @return \BumbalClient\Model\CarModel
      */
     public function getCar()
     {
@@ -2139,7 +2139,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\VehicleModel $car 
+     * @param \BumbalClient\Model\CarModel $car 
      * @return $this
      */
     public function setCar($car)

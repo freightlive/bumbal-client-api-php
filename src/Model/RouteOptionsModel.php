@@ -62,8 +62,6 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_links' => 'bool',
         'include_car' => 'bool',
         'include_car_links' => 'bool',
-        'include_vehicle' => 'bool',
-        'include_vehicle_links' => 'bool',
         'include_trailer' => 'bool',
         'include_trailer_links' => 'bool',
         'include_driver_info' => 'bool',
@@ -87,8 +85,6 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_links' => null,
         'include_car' => null,
         'include_car_links' => null,
-        'include_vehicle' => null,
-        'include_vehicle_links' => null,
         'include_trailer' => null,
         'include_trailer_links' => null,
         'include_driver_info' => null,
@@ -122,8 +118,6 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_links' => 'include_driver_links',
         'include_car' => 'include_car',
         'include_car_links' => 'include_car_links',
-        'include_vehicle' => 'include_vehicle',
-        'include_vehicle_links' => 'include_vehicle_links',
         'include_trailer' => 'include_trailer',
         'include_trailer_links' => 'include_trailer_links',
         'include_driver_info' => 'include_driver_info',
@@ -148,8 +142,6 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_links' => 'setIncludeDriverLinks',
         'include_car' => 'setIncludeCar',
         'include_car_links' => 'setIncludeCarLinks',
-        'include_vehicle' => 'setIncludeVehicle',
-        'include_vehicle_links' => 'setIncludeVehicleLinks',
         'include_trailer' => 'setIncludeTrailer',
         'include_trailer_links' => 'setIncludeTrailerLinks',
         'include_driver_info' => 'setIncludeDriverInfo',
@@ -174,8 +166,6 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver_links' => 'getIncludeDriverLinks',
         'include_car' => 'getIncludeCar',
         'include_car_links' => 'getIncludeCarLinks',
-        'include_vehicle' => 'getIncludeVehicle',
-        'include_vehicle_links' => 'getIncludeVehicleLinks',
         'include_trailer' => 'getIncludeTrailer',
         'include_trailer_links' => 'getIncludeTrailerLinks',
         'include_driver_info' => 'getIncludeDriverInfo',
@@ -225,8 +215,6 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
         $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
         $this->container['include_car_links'] = isset($data['include_car_links']) ? $data['include_car_links'] : null;
-        $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
-        $this->container['include_vehicle_links'] = isset($data['include_vehicle_links']) ? $data['include_vehicle_links'] : null;
         $this->container['include_trailer'] = isset($data['include_trailer']) ? $data['include_trailer'] : null;
         $this->container['include_trailer_links'] = isset($data['include_trailer_links']) ? $data['include_trailer_links'] : null;
         $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
@@ -426,48 +414,6 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeCarLinks($include_car_links)
     {
         $this->container['include_car_links'] = $include_car_links;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_vehicle
-     * @return bool
-     */
-    public function getIncludeVehicle()
-    {
-        return $this->container['include_vehicle'];
-    }
-
-    /**
-     * Sets include_vehicle
-     * @param bool $include_vehicle 
-     * @return $this
-     */
-    public function setIncludeVehicle($include_vehicle)
-    {
-        $this->container['include_vehicle'] = $include_vehicle;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_vehicle_links
-     * @return bool
-     */
-    public function getIncludeVehicleLinks()
-    {
-        return $this->container['include_vehicle_links'];
-    }
-
-    /**
-     * Sets include_vehicle_links
-     * @param bool $include_vehicle_links 
-     * @return $this
-     */
-    public function setIncludeVehicleLinks($include_vehicle_links)
-    {
-        $this->container['include_vehicle_links'] = $include_vehicle_links;
 
         return $this;
     }
