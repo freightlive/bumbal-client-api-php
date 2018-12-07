@@ -61,6 +61,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address' => 'bool',
         'include_address_object' => 'bool',
         'include_allowed_driver_ids' => 'bool',
+        'include_allowed_drivers' => 'bool',
+        'include_allowed_drivers_links' => 'bool',
         'include_time_slots' => 'bool',
         'include_time_slot_tags' => 'bool',
         'include_route_info' => 'bool',
@@ -72,6 +74,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver' => 'bool',
         'include_driver_links' => 'bool',
         'include_car' => 'bool',
+        'include_vehicle' => 'bool',
         'include_trailer' => 'bool',
         'include_communication' => 'bool',
         'include_communication_object' => 'bool',
@@ -107,6 +110,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address' => null,
         'include_address_object' => null,
         'include_allowed_driver_ids' => null,
+        'include_allowed_drivers' => null,
+        'include_allowed_drivers_links' => null,
         'include_time_slots' => null,
         'include_time_slot_tags' => null,
         'include_route_info' => null,
@@ -118,6 +123,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver' => null,
         'include_driver_links' => null,
         'include_car' => null,
+        'include_vehicle' => null,
         'include_trailer' => null,
         'include_communication' => null,
         'include_communication_object' => null,
@@ -163,6 +169,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address' => 'include_address',
         'include_address_object' => 'include_address_object',
         'include_allowed_driver_ids' => 'include_allowed_driver_ids',
+        'include_allowed_drivers' => 'include_allowed_drivers',
+        'include_allowed_drivers_links' => 'include_allowed_drivers_links',
         'include_time_slots' => 'include_time_slots',
         'include_time_slot_tags' => 'include_time_slot_tags',
         'include_route_info' => 'include_route_info',
@@ -174,6 +182,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver' => 'include_driver',
         'include_driver_links' => 'include_driver_links',
         'include_car' => 'include_car',
+        'include_vehicle' => 'include_vehicle',
         'include_trailer' => 'include_trailer',
         'include_communication' => 'include_communication',
         'include_communication_object' => 'include_communication_object',
@@ -210,6 +219,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address' => 'setIncludeAddress',
         'include_address_object' => 'setIncludeAddressObject',
         'include_allowed_driver_ids' => 'setIncludeAllowedDriverIds',
+        'include_allowed_drivers' => 'setIncludeAllowedDrivers',
+        'include_allowed_drivers_links' => 'setIncludeAllowedDriversLinks',
         'include_time_slots' => 'setIncludeTimeSlots',
         'include_time_slot_tags' => 'setIncludeTimeSlotTags',
         'include_route_info' => 'setIncludeRouteInfo',
@@ -221,6 +232,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver' => 'setIncludeDriver',
         'include_driver_links' => 'setIncludeDriverLinks',
         'include_car' => 'setIncludeCar',
+        'include_vehicle' => 'setIncludeVehicle',
         'include_trailer' => 'setIncludeTrailer',
         'include_communication' => 'setIncludeCommunication',
         'include_communication_object' => 'setIncludeCommunicationObject',
@@ -257,6 +269,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_address' => 'getIncludeAddress',
         'include_address_object' => 'getIncludeAddressObject',
         'include_allowed_driver_ids' => 'getIncludeAllowedDriverIds',
+        'include_allowed_drivers' => 'getIncludeAllowedDrivers',
+        'include_allowed_drivers_links' => 'getIncludeAllowedDriversLinks',
         'include_time_slots' => 'getIncludeTimeSlots',
         'include_time_slot_tags' => 'getIncludeTimeSlotTags',
         'include_route_info' => 'getIncludeRouteInfo',
@@ -268,6 +282,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_driver' => 'getIncludeDriver',
         'include_driver_links' => 'getIncludeDriverLinks',
         'include_car' => 'getIncludeCar',
+        'include_vehicle' => 'getIncludeVehicle',
         'include_trailer' => 'getIncludeTrailer',
         'include_communication' => 'getIncludeCommunication',
         'include_communication_object' => 'getIncludeCommunicationObject',
@@ -329,6 +344,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_allowed_driver_ids'] = isset($data['include_allowed_driver_ids']) ? $data['include_allowed_driver_ids'] : null;
+        $this->container['include_allowed_drivers'] = isset($data['include_allowed_drivers']) ? $data['include_allowed_drivers'] : null;
+        $this->container['include_allowed_drivers_links'] = isset($data['include_allowed_drivers_links']) ? $data['include_allowed_drivers_links'] : null;
         $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
         $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
         $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
@@ -340,6 +357,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
         $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
         $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
+        $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
         $this->container['include_trailer'] = isset($data['include_trailer']) ? $data['include_trailer'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
@@ -531,6 +549,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeAllowedDriverIds($include_allowed_driver_ids)
     {
         $this->container['include_allowed_driver_ids'] = $include_allowed_driver_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_allowed_drivers
+     * @return bool
+     */
+    public function getIncludeAllowedDrivers()
+    {
+        return $this->container['include_allowed_drivers'];
+    }
+
+    /**
+     * Sets include_allowed_drivers
+     * @param bool $include_allowed_drivers 
+     * @return $this
+     */
+    public function setIncludeAllowedDrivers($include_allowed_drivers)
+    {
+        $this->container['include_allowed_drivers'] = $include_allowed_drivers;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_allowed_drivers_links
+     * @return bool
+     */
+    public function getIncludeAllowedDriversLinks()
+    {
+        return $this->container['include_allowed_drivers_links'];
+    }
+
+    /**
+     * Sets include_allowed_drivers_links
+     * @param bool $include_allowed_drivers_links 
+     * @return $this
+     */
+    public function setIncludeAllowedDriversLinks($include_allowed_drivers_links)
+    {
+        $this->container['include_allowed_drivers_links'] = $include_allowed_drivers_links;
 
         return $this;
     }
@@ -762,6 +822,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeCar($include_car)
     {
         $this->container['include_car'] = $include_car;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_vehicle
+     * @return bool
+     */
+    public function getIncludeVehicle()
+    {
+        return $this->container['include_vehicle'];
+    }
+
+    /**
+     * Sets include_vehicle
+     * @param bool $include_vehicle 
+     * @return $this
+     */
+    public function setIncludeVehicle($include_vehicle)
+    {
+        $this->container['include_vehicle'] = $include_vehicle;
 
         return $this;
     }

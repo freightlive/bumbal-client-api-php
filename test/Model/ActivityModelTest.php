@@ -435,6 +435,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "allowed_driver_ids"
+     */
+    public function testPropertyAllowedDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "allowed_drivers"
      */
     public function testPropertyAllowedDrivers()

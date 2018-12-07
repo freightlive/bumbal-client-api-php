@@ -105,6 +105,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => '\BumbalClient\Model\AddressAppliedModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
+        'allowed_driver_ids' => 'int[]',
         'allowed_drivers' => 'object',
         'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
         'applied_capacities' => 'object',
@@ -119,7 +120,7 @@ class ActivityModel implements ArrayAccess
         'route' => '\BumbalClient\Model\RouteModel',
         'driver' => '\BumbalClient\Model\DriverModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
-        'car' => '\BumbalClient\Model\CarModel',
+        'car' => '\BumbalClient\Model\VehicleModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
@@ -194,6 +195,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => null,
         'depot_address' => null,
         'depot_address_id' => null,
+        'allowed_driver_ids' => null,
         'allowed_drivers' => null,
         'allowed_drivers_links' => null,
         'applied_capacities' => null,
@@ -293,6 +295,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'address_applied',
         'depot_address' => 'depot_address',
         'depot_address_id' => 'depot_address_id',
+        'allowed_driver_ids' => 'allowed_driver_ids',
         'allowed_drivers' => 'allowed_drivers',
         'allowed_drivers_links' => 'allowed_drivers_links',
         'applied_capacities' => 'applied_capacities',
@@ -383,6 +386,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'setAddressApplied',
         'depot_address' => 'setDepotAddress',
         'depot_address_id' => 'setDepotAddressId',
+        'allowed_driver_ids' => 'setAllowedDriverIds',
         'allowed_drivers' => 'setAllowedDrivers',
         'allowed_drivers_links' => 'setAllowedDriversLinks',
         'applied_capacities' => 'setAppliedCapacities',
@@ -473,6 +477,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'getAddressApplied',
         'depot_address' => 'getDepotAddress',
         'depot_address_id' => 'getDepotAddressId',
+        'allowed_driver_ids' => 'getAllowedDriverIds',
         'allowed_drivers' => 'getAllowedDrivers',
         'allowed_drivers_links' => 'getAllowedDriversLinks',
         'applied_capacities' => 'getAppliedCapacities',
@@ -636,6 +641,7 @@ class ActivityModel implements ArrayAccess
         $this->container['address_applied'] = isset($data['address_applied']) ? $data['address_applied'] : null;
         $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
+        $this->container['allowed_driver_ids'] = isset($data['allowed_driver_ids']) ? $data['allowed_driver_ids'] : null;
         $this->container['allowed_drivers'] = isset($data['allowed_drivers']) ? $data['allowed_drivers'] : null;
         $this->container['allowed_drivers_links'] = isset($data['allowed_drivers_links']) ? $data['allowed_drivers_links'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
@@ -1808,6 +1814,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets allowed_driver_ids
+     * @return int[]
+     */
+    public function getAllowedDriverIds()
+    {
+        return $this->container['allowed_driver_ids'];
+    }
+
+    /**
+     * Sets allowed_driver_ids
+     * @param int[] $allowed_driver_ids Unique Identifier(s) for allowed drivers in activity
+     * @return $this
+     */
+    public function setAllowedDriverIds($allowed_driver_ids)
+    {
+        $this->container['allowed_driver_ids'] = $allowed_driver_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets allowed_drivers
      * @return object
      */
@@ -2103,7 +2130,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets car
-     * @return \BumbalClient\Model\CarModel
+     * @return \BumbalClient\Model\VehicleModel
      */
     public function getCar()
     {
@@ -2112,7 +2139,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\CarModel $car 
+     * @param \BumbalClient\Model\VehicleModel $car 
      * @return $this
      */
     public function setCar($car)

@@ -127,6 +127,20 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_allowed_drivers"
+     */
+    public function testPropertyIncludeAllowedDrivers()
+    {
+    }
+
+    /**
+     * Test attribute "include_allowed_drivers_links"
+     */
+    public function testPropertyIncludeAllowedDriversLinks()
+    {
+    }
+
+    /**
      * Test attribute "include_time_slots"
      */
     public function testPropertyIncludeTimeSlots()
@@ -200,6 +214,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_car"
      */
     public function testPropertyIncludeCar()
+    {
+    }
+
+    /**
+     * Test attribute "include_vehicle"
+     */
+    public function testPropertyIncludeVehicle()
     {
     }
 
