@@ -54,9 +54,9 @@ class AutoPlanFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'activity' => '\BumbalClient\Model\ActivityFiltersModel[]',
-        'route' => '\BumbalClient\Model\RouteFiltersModel[]',
-        'route_general' => '\BumbalClient\Model\RouteFiltersModel[]'
+        'activity' => '\BumbalClient\Model\ActivityFiltersModel',
+        'route' => '\BumbalClient\Model\RouteFiltersModel',
+        'route_general' => '\BumbalClient\Model\RouteFiltersModel'
     ];
 
     /**
@@ -174,7 +174,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets activity
-     * @return \BumbalClient\Model\ActivityFiltersModel[]
+     * @return \BumbalClient\Model\ActivityFiltersModel
      */
     public function getActivity()
     {
@@ -183,7 +183,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityFiltersModel[] $activity 
+     * @param \BumbalClient\Model\ActivityFiltersModel $activity 
      * @return $this
      */
     public function setActivity($activity)
@@ -195,7 +195,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets route
-     * @return \BumbalClient\Model\RouteFiltersModel[]
+     * @return \BumbalClient\Model\RouteFiltersModel
      */
     public function getRoute()
     {
@@ -204,7 +204,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\RouteFiltersModel[] $route 
+     * @param \BumbalClient\Model\RouteFiltersModel $route 
      * @return $this
      */
     public function setRoute($route)
@@ -216,7 +216,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets route_general
-     * @return \BumbalClient\Model\RouteFiltersModel[]
+     * @return \BumbalClient\Model\RouteFiltersModel
      */
     public function getRouteGeneral()
     {
@@ -225,7 +225,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route_general
-     * @param \BumbalClient\Model\RouteFiltersModel[] $route_general 
+     * @param \BumbalClient\Model\RouteFiltersModel $route_general 
      * @return $this
      */
     public function setRouteGeneral($route_general)

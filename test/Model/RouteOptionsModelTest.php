@@ -134,6 +134,20 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_vehicle"
+     */
+    public function testPropertyIncludeVehicle()
+    {
+    }
+
+    /**
+     * Test attribute "include_vehicle_links"
+     */
+    public function testPropertyIncludeVehicleLinks()
+    {
+    }
+
+    /**
      * Test attribute "include_trailer"
      */
     public function testPropertyIncludeTrailer()

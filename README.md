@@ -96,12 +96,6 @@ Class | Method | HTTP request | Description
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
 *AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
 *AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
-*CarApi* | [**createCar**](docs/Api/CarApi.md#createcar) | **POST** /car | Add a car
-*CarApi* | [**deleteCar**](docs/Api/CarApi.md#deletecar) | **DELETE** /car/{carId} | Delete an car
-*CarApi* | [**retrieveCar**](docs/Api/CarApi.md#retrievecar) | **GET** /car/{carId} | Find car by ID
-*CarApi* | [**retrieveListCar**](docs/Api/CarApi.md#retrievelistcar) | **PUT** /car | Retrieve List of Cars
-*CarApi* | [**setCar**](docs/Api/CarApi.md#setcar) | **POST** /car/set | Set (create or update) a car
-*CarApi* | [**updateCar**](docs/Api/CarApi.md#updatecar) | **PUT** /car/{carId} | Update a car
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
@@ -193,6 +187,12 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
+*VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a vehicle
+*VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle
+*VehicleApi* | [**retrieveListVehicle**](docs/Api/VehicleApi.md#retrievelistvehicle) | **PUT** /vehicle | Retrieve List of Vehicles
+*VehicleApi* | [**retrieveVehicle**](docs/Api/VehicleApi.md#retrievevehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
+*VehicleApi* | [**setVehicle**](docs/Api/VehicleApi.md#setvehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
+*VehicleApi* | [**updateVehicle**](docs/Api/VehicleApi.md#updatevehicle) | **PUT** /vehicle/{vehicleId} | Update a vehicle
 *WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
 *ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
 *ZoneApi* | [**deleteZone**](docs/Api/ZoneApi.md#deletezone) | **DELETE** /zone/{zoneId} | Delete a Zone
@@ -243,10 +243,6 @@ Class | Method | HTTP request | Description
  - [BrandRetrieveListArguments](docs/Model/BrandRetrieveListArguments.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
  - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
- - [CarFiltersModel](docs/Model/CarFiltersModel.md)
- - [CarModel](docs/Model/CarModel.md)
- - [CarOptionsModel](docs/Model/CarOptionsModel.md)
- - [CarRetrieveListArguments](docs/Model/CarRetrieveListArguments.md)
  - [CheckAvailabilityArguments](docs/Model/CheckAvailabilityArguments.md)
  - [CheckAvailabilityDataModel](docs/Model/CheckAvailabilityDataModel.md)
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
@@ -322,6 +318,10 @@ Class | Method | HTTP request | Description
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)
  - [VariablesModel](docs/Model/VariablesModel.md)
+ - [VehicleFiltersModel](docs/Model/VehicleFiltersModel.md)
+ - [VehicleModel](docs/Model/VehicleModel.md)
+ - [VehicleOptionsModel](docs/Model/VehicleOptionsModel.md)
+ - [VehicleRetrieveListArguments](docs/Model/VehicleRetrieveListArguments.md)
  - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
  - [ZoneModel](docs/Model/ZoneModel.md)
  - [ZoneOptionsModel](docs/Model/ZoneOptionsModel.md)

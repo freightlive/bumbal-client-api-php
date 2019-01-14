@@ -211,6 +211,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "earliest_delivery_date"
+     */
+    public function testPropertyEarliestDeliveryDate()
+    {
+    }
+
+    /**
      * Test attribute "latest_delivery_date"
      */
     public function testPropertyLatestDeliveryDate()

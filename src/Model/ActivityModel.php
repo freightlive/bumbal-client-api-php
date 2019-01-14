@@ -73,6 +73,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int',
         'reference' => 'string',
         'description' => 'string',
+        'earliest_delivery_date' => '\DateTime',
         'latest_delivery_date' => '\DateTime',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
@@ -120,7 +121,7 @@ class ActivityModel implements ArrayAccess
         'route' => '\BumbalClient\Model\RouteModel',
         'driver' => '\BumbalClient\Model\DriverModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
-        'car' => '\BumbalClient\Model\CarModel',
+        'car' => '\BumbalClient\Model\VehicleModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
@@ -163,6 +164,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int64',
         'reference' => null,
         'description' => null,
+        'earliest_delivery_date' => 'date',
         'latest_delivery_date' => 'date',
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
@@ -263,6 +265,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'planned_driving_distance',
         'reference' => 'reference',
         'description' => 'description',
+        'earliest_delivery_date' => 'earliest_delivery_date',
         'latest_delivery_date' => 'latest_delivery_date',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
@@ -354,6 +357,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'reference' => 'setReference',
         'description' => 'setDescription',
+        'earliest_delivery_date' => 'setEarliestDeliveryDate',
         'latest_delivery_date' => 'setLatestDeliveryDate',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
@@ -445,6 +449,7 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'reference' => 'getReference',
         'description' => 'getDescription',
+        'earliest_delivery_date' => 'getEarliestDeliveryDate',
         'latest_delivery_date' => 'getLatestDeliveryDate',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
@@ -609,6 +614,7 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['earliest_delivery_date'] = isset($data['earliest_delivery_date']) ? $data['earliest_delivery_date'] : null;
         $this->container['latest_delivery_date'] = isset($data['latest_delivery_date']) ? $data['latest_delivery_date'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
@@ -1137,6 +1143,27 @@ class ActivityModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets earliest_delivery_date
+     * @return \DateTime
+     */
+    public function getEarliestDeliveryDate()
+    {
+        return $this->container['earliest_delivery_date'];
+    }
+
+    /**
+     * Sets earliest_delivery_date
+     * @param \DateTime $earliest_delivery_date 
+     * @return $this
+     */
+    public function setEarliestDeliveryDate($earliest_delivery_date)
+    {
+        $this->container['earliest_delivery_date'] = $earliest_delivery_date;
 
         return $this;
     }
@@ -2130,7 +2157,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Gets car
-     * @return \BumbalClient\Model\CarModel
+     * @return \BumbalClient\Model\VehicleModel
      */
     public function getCar()
     {
@@ -2139,7 +2166,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\CarModel $car 
+     * @param \BumbalClient\Model\VehicleModel $car 
      * @return $this
      */
     public function setCar($car)
