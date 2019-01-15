@@ -261,7 +261,7 @@ class PortalsettingApi
      *
      * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\PortalSettingModel[]
+     * @return \BumbalClient\Model\PortalSettingListResponse
      */
     public function retrieveListPortalSetting($arguments)
     {
@@ -276,7 +276,7 @@ class PortalsettingApi
      *
      * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\PortalSettingModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\PortalSettingListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListPortalSettingWithHttpInfo($arguments)
     {
@@ -321,15 +321,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\PortalSettingModel[]',
+                '\BumbalClient\Model\PortalSettingListResponse',
                 '/portal-setting'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PortalSettingModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PortalSettingListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PortalSettingModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PortalSettingListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

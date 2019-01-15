@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPortal**
-> \BumbalClient\Model\PortalModel[] retrieveListPortal($arguments)
+> \BumbalClient\Model\PortalListResponse retrieveListPortal($arguments)
 
 Retrieve List of Portals
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PortalModel[]**](../Model/PortalModel.md)
+[**\BumbalClient\Model\PortalListResponse**](../Model/PortalListResponse.md)
 
 ### Authorization
 
