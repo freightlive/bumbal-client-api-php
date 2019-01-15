@@ -97,4 +97,11 @@ class CheckAvailabilityFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyDateTo()
     {
     }
+
+    /**
+     * Test attribute "max_nr_of_days_with_availability"
+     */
+    public function testPropertyMaxNrOfDaysWithAvailability()
+    {
+    }
 }

@@ -144,6 +144,18 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**lockActivities**](docs/Api/PlannerApi.md#lockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
+*PortalApi* | [**createPortal**](docs/Api/PortalApi.md#createportal) | **POST** /portal | Add a new Portal
+*PortalApi* | [**deletePortal**](docs/Api/PortalApi.md#deleteportal) | **DELETE** /portal/{portalId} | Delete a Portal
+*PortalApi* | [**retrieveListPortal**](docs/Api/PortalApi.md#retrievelistportal) | **PUT** /portal | Retrieve List of Portal
+*PortalApi* | [**retrievePortal**](docs/Api/PortalApi.md#retrieveportal) | **GET** /portal/{portalId} | Retrieve a Portal
+*PortalApi* | [**setPortal**](docs/Api/PortalApi.md#setportal) | **POST** /portal/set | Set (create or update) a Portal
+*PortalApi* | [**updatePortal**](docs/Api/PortalApi.md#updateportal) | **PUT** /portal/{portalId} | Update a Portal
+*PortalsettingApi* | [**createPortalSetting**](docs/Api/PortalsettingApi.md#createportalsetting) | **POST** /portal-setting | Add a new PortalSetting
+*PortalsettingApi* | [**deletePortalSetting**](docs/Api/PortalsettingApi.md#deleteportalsetting) | **DELETE** /portal-setting/{portal-settingId} | Delete a PortalSetting
+*PortalsettingApi* | [**retrieveListPortalSetting**](docs/Api/PortalsettingApi.md#retrievelistportalsetting) | **PUT** /portal-setting | Retrieve List of PortalSetting
+*PortalsettingApi* | [**retrievePortalSetting**](docs/Api/PortalsettingApi.md#retrieveportalsetting) | **GET** /portal-setting/{portal-settingId} | Retrieve a PortalSetting
+*PortalsettingApi* | [**setPortalSetting**](docs/Api/PortalsettingApi.md#setportalsetting) | **POST** /portal-setting/set | Set (create or update) a PortalSetting
+*PortalsettingApi* | [**updatePortalSetting**](docs/Api/PortalsettingApi.md#updateportalsetting) | **PUT** /portal-setting/{portal-settingId} | Update a PortalSetting
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -282,6 +294,14 @@ Class | Method | HTTP request | Description
  - [PartyOptionsModel](docs/Model/PartyOptionsModel.md)
  - [PartyRetrieveListArguments](docs/Model/PartyRetrieveListArguments.md)
  - [PhoneNrModel](docs/Model/PhoneNrModel.md)
+ - [PortalFiltersModel](docs/Model/PortalFiltersModel.md)
+ - [PortalModel](docs/Model/PortalModel.md)
+ - [PortalOptionsModel](docs/Model/PortalOptionsModel.md)
+ - [PortalRetrieveListArguments](docs/Model/PortalRetrieveListArguments.md)
+ - [PortalSettingFiltersModel](docs/Model/PortalSettingFiltersModel.md)
+ - [PortalSettingModel](docs/Model/PortalSettingModel.md)
+ - [PortalSettingOptionsModel](docs/Model/PortalSettingOptionsModel.md)
+ - [PortalSettingRetrieveListArguments](docs/Model/PortalSettingRetrieveListArguments.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
  - [RecurrenceModel](docs/Model/RecurrenceModel.md)
  - [RecurrenceOptionsModel](docs/Model/RecurrenceOptionsModel.md)

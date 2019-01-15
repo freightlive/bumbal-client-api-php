@@ -207,7 +207,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tags
-     * @param bool $include_tags
+     * @param bool $include_tags 
      * @return $this
      */
     public function setIncludeTags($include_tags)
@@ -228,7 +228,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_brand_colours
-     * @param bool $include_brand_colours
+     * @param bool $include_brand_colours 
      * @return $this
      */
     public function setIncludeBrandColours($include_brand_colours)
@@ -249,7 +249,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links
+     * @param bool $include_links 
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -270,7 +270,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info
+     * @param bool $include_record_info 
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -291,7 +291,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_files
-     * @param bool $include_files
+     * @param bool $include_files 
      * @return $this
      */
     public function setIncludeFiles($include_files)
@@ -312,7 +312,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data
+     * @param bool $include_meta_data 
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -333,7 +333,7 @@ class BrandOptionsModel implements ArrayAccess
 
     /**
      * Sets include_notes
-     * @param bool $include_notes
+     * @param bool $include_notes 
      * @return $this
      */
     public function setIncludeNotes($include_notes)

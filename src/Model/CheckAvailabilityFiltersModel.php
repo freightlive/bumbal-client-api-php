@@ -56,7 +56,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'route_id' => 'int[]',
         'date_from' => '\DateTime',
-        'date_to' => '\DateTime'
+        'date_to' => '\DateTime',
+        'max_nr_of_days_with_availability' => 'int'
     ];
 
     /**
@@ -66,7 +67,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     protected static $swaggerFormats = [
         'route_id' => null,
         'date_from' => 'date',
-        'date_to' => 'date'
+        'date_to' => 'date',
+        'max_nr_of_days_with_availability' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'route_id' => 'route_id',
         'date_from' => 'date_from',
-        'date_to' => 'date_to'
+        'date_to' => 'date_to',
+        'max_nr_of_days_with_availability' => 'max_nr_of_days_with_availability'
     ];
 
 
@@ -97,7 +100,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     protected static $setters = [
         'route_id' => 'setRouteId',
         'date_from' => 'setDateFrom',
-        'date_to' => 'setDateTo'
+        'date_to' => 'setDateTo',
+        'max_nr_of_days_with_availability' => 'setMaxNrOfDaysWithAvailability'
     ];
 
 
@@ -108,7 +112,8 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
     protected static $getters = [
         'route_id' => 'getRouteId',
         'date_from' => 'getDateFrom',
-        'date_to' => 'getDateTo'
+        'date_to' => 'getDateTo',
+        'max_nr_of_days_with_availability' => 'getMaxNrOfDaysWithAvailability'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
         $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['max_nr_of_days_with_availability'] = isset($data['max_nr_of_days_with_availability']) ? $data['max_nr_of_days_with_availability'] : null;
     }
 
     /**
@@ -204,7 +210,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_from
-     * @param \DateTime $date_from
+     * @param \DateTime $date_from 
      * @return $this
      */
     public function setDateFrom($date_from)
@@ -225,12 +231,33 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_to
-     * @param \DateTime $date_to
+     * @param \DateTime $date_to 
      * @return $this
      */
     public function setDateTo($date_to)
     {
         $this->container['date_to'] = $date_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_nr_of_days_with_availability
+     * @return int
+     */
+    public function getMaxNrOfDaysWithAvailability()
+    {
+        return $this->container['max_nr_of_days_with_availability'];
+    }
+
+    /**
+     * Sets max_nr_of_days_with_availability
+     * @param int $max_nr_of_days_with_availability Availability check will continue to analyse days untill there is no availability in the system anymore or the number of days with available time slots has reached the max_nr_of_days_with_availability
+     * @return $this
+     */
+    public function setMaxNrOfDaysWithAvailability($max_nr_of_days_with_availability)
+    {
+        $this->container['max_nr_of_days_with_availability'] = $max_nr_of_days_with_availability;
 
         return $this;
     }
