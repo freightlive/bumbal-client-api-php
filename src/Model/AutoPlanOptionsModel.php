@@ -195,7 +195,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous 
+     * @param bool $synchronous
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -216,7 +216,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets respond_after_apply_planning
-     * @param bool $respond_after_apply_planning 
+     * @param bool $respond_after_apply_planning
      * @return $this
      */
     public function setRespondAfterApplyPlanning($respond_after_apply_planning)
@@ -237,7 +237,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets allow_unplanned_activities
-     * @param bool $allow_unplanned_activities 
+     * @param bool $allow_unplanned_activities
      * @return $this
      */
     public function setAllowUnplannedActivities($allow_unplanned_activities)
@@ -258,7 +258,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets consider_historic_traffic_info
-     * @param bool $consider_historic_traffic_info 
+     * @param bool $consider_historic_traffic_info
      * @return $this
      */
     public function setConsiderHistoricTrafficInfo($consider_historic_traffic_info)
@@ -279,7 +279,7 @@ class AutoPlanOptionsModel implements ArrayAccess
 
     /**
      * Sets in_sequence
-     * @param bool $in_sequence 
+     * @param bool $in_sequence
      * @return $this
      */
     public function setInSequence($in_sequence)
