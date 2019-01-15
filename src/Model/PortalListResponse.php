@@ -1,6 +1,6 @@
 <?php
 /**
- * PortalSettingModel
+ * PortalListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * PortalSettingModel Class Doc Comment
+ * PortalListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PortalSettingModel implements ArrayAccess
+class PortalListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,17 @@ class PortalSettingModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PortalSettingModel';
+    protected static $swaggerModelName = 'PortalListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'value' => 'string',
-        'portal_setting_group_name' => 'string',
-        'portal_name' => 'string'
+        'items' => '\BumbalClient\Model\PortalModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -66,11 +65,10 @@ class PortalSettingModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'name' => null,
-        'value' => null,
-        'portal_setting_group_name' => null,
-        'portal_name' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +86,10 @@ class PortalSettingModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'value' => 'value',
-        'portal_setting_group_name' => 'portal_setting_group_name',
-        'portal_name' => 'portal_name'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -101,11 +98,10 @@ class PortalSettingModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'value' => 'setValue',
-        'portal_setting_group_name' => 'setPortalSettingGroupName',
-        'portal_name' => 'setPortalName'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -114,11 +110,10 @@ class PortalSettingModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'value' => 'getValue',
-        'portal_setting_group_name' => 'getPortalSettingGroupName',
-        'portal_name' => 'getPortalName'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -152,11 +147,10 @@ class PortalSettingModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['portal_setting_group_name'] = isset($data['portal_setting_group_name']) ? $data['portal_setting_group_name'] : null;
-        $this->container['portal_name'] = isset($data['portal_name']) ? $data['portal_name'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -185,106 +179,85 @@ class PortalSettingModel implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets items
+     * @return \BumbalClient\Model\PortalModel[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     * @param \BumbalClient\Model\PortalModel[] $items 
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_filtered
      * @return int
      */
-    public function getId()
+    public function getCountFiltered()
     {
-        return $this->container['id'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique Identifier
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setId($id)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['id'] = $id;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getName()
+    public function getCountUnfiltered()
     {
-        return $this->container['name'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets name
-     * @param string $name Name of portal setting
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setName($name)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['name'] = $name;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets value
-     * @return string
+     * Gets count_limited
+     * @return int
      */
-    public function getValue()
+    public function getCountLimited()
     {
-        return $this->container['value'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets value
-     * @param string $value Value of portal setting
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setValue($value)
+    public function setCountLimited($count_limited)
     {
-        $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets portal_setting_group_name
-     * @return string
-     */
-    public function getPortalSettingGroupName()
-    {
-        return $this->container['portal_setting_group_name'];
-    }
-
-    /**
-     * Sets portal_setting_group_name
-     * @param string $portal_setting_group_name Name of portal settings group
-     * @return $this
-     */
-    public function setPortalSettingGroupName($portal_setting_group_name)
-    {
-        $this->container['portal_setting_group_name'] = $portal_setting_group_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets portal_name
-     * @return string
-     */
-    public function getPortalName()
-    {
-        return $this->container['portal_name'];
-    }
-
-    /**
-     * Sets portal_name
-     * @param string $portal_name Name of portal
-     * @return $this
-     */
-    public function setPortalName($portal_name)
-    {
-        $this->container['portal_name'] = $portal_name;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

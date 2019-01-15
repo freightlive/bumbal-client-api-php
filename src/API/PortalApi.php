@@ -257,7 +257,7 @@ class PortalApi
     /**
      * Operation retrieveListPortal
      *
-     * Retrieve List of Portal
+     * Retrieve List of Portals
      *
      * @param \BumbalClient\Model\PortalRetrieveListArguments $arguments Portal RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -272,7 +272,7 @@ class PortalApi
     /**
      * Operation retrieveListPortalWithHttpInfo
      *
-     * Retrieve List of Portal
+     * Retrieve List of Portals
      *
      * @param \BumbalClient\Model\PortalRetrieveListArguments $arguments Portal RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response

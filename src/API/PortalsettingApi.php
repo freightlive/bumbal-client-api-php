@@ -257,7 +257,7 @@ class PortalsettingApi
     /**
      * Operation retrieveListPortalSetting
      *
-     * Retrieve List of PortalSetting
+     * Retrieve List of Portal Settings
      *
      * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -272,7 +272,7 @@ class PortalsettingApi
     /**
      * Operation retrieveListPortalSettingWithHttpInfo
      *
-     * Retrieve List of PortalSetting
+     * Retrieve List of Portal Settings
      *
      * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response

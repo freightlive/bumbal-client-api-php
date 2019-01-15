@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createPortal**](PortalApi.md#createPortal) | **POST** /portal | Add a new Portal
 [**deletePortal**](PortalApi.md#deletePortal) | **DELETE** /portal/{portalId} | Delete a Portal
-[**retrieveListPortal**](PortalApi.md#retrieveListPortal) | **PUT** /portal | Retrieve List of Portal
+[**retrieveListPortal**](PortalApi.md#retrieveListPortal) | **PUT** /portal | Retrieve List of Portals
 [**retrievePortal**](PortalApi.md#retrievePortal) | **GET** /portal/{portalId} | Retrieve a Portal
 [**setPortal**](PortalApi.md#setPortal) | **POST** /portal/set | Set (create or update) a Portal
 [**updatePortal**](PortalApi.md#updatePortal) | **PUT** /portal/{portalId} | Update a Portal
@@ -115,9 +115,9 @@ Name | Type | Description  | Notes
 # **retrieveListPortal**
 > \BumbalClient\Model\PortalModel[] retrieveListPortal($arguments)
 
-Retrieve List of Portal
+Retrieve List of Portals
 
-Retrieve List of Portal
+Retrieve List of Portals
 
 ### Example
 ```php

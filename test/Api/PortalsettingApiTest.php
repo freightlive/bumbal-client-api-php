@@ -95,7 +95,7 @@ class PortalsettingApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveListPortalSetting
      *
-     * Retrieve List of PortalSetting.
+     * Retrieve List of Portal Settings.
      *
      */
     public function testRetrieveListPortalSetting()

@@ -99,16 +99,16 @@ class PortalSettingModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "potal_settings_group_name"
+     * Test attribute "portal_setting_group_name"
      */
-    public function testPropertyPotalSettingsGroupName()
+    public function testPropertyPortalSettingGroupName()
     {
     }
 
     /**
-     * Test attribute "potal_name"
+     * Test attribute "portal_name"
      */
-    public function testPropertyPotalName()
+    public function testPropertyPortalName()
     {
     }
 }

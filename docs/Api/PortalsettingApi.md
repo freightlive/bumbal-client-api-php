@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createPortalSetting**](PortalsettingApi.md#createPortalSetting) | **POST** /portal-setting | Add a new PortalSetting
 [**deletePortalSetting**](PortalsettingApi.md#deletePortalSetting) | **DELETE** /portal-setting/{portal-settingId} | Delete a PortalSetting
-[**retrieveListPortalSetting**](PortalsettingApi.md#retrieveListPortalSetting) | **PUT** /portal-setting | Retrieve List of PortalSetting
+[**retrieveListPortalSetting**](PortalsettingApi.md#retrieveListPortalSetting) | **PUT** /portal-setting | Retrieve List of Portal Settings
 [**retrievePortalSetting**](PortalsettingApi.md#retrievePortalSetting) | **GET** /portal-setting/{portal-settingId} | Retrieve a PortalSetting
 [**setPortalSetting**](PortalsettingApi.md#setPortalSetting) | **POST** /portal-setting/set | Set (create or update) a PortalSetting
 [**updatePortalSetting**](PortalsettingApi.md#updatePortalSetting) | **PUT** /portal-setting/{portal-settingId} | Update a PortalSetting
@@ -115,9 +115,9 @@ Name | Type | Description  | Notes
 # **retrieveListPortalSetting**
 > \BumbalClient\Model\PortalSettingModel[] retrieveListPortalSetting($arguments)
 
-Retrieve List of PortalSetting
+Retrieve List of Portal Settings
 
-Retrieve List of PortalSetting
+Retrieve List of Portal Settings
 
 ### Example
 ```php
