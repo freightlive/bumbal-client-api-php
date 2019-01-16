@@ -492,7 +492,7 @@ class PlannerApi
      *
      * @param \BumbalClient\Model\CheckAvailabilityArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\CheckAvailabilityResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function checkAvailability($arguments)
     {
@@ -507,7 +507,7 @@ class PlannerApi
      *
      * @param \BumbalClient\Model\CheckAvailabilityArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\CheckAvailabilityResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkAvailabilityWithHttpInfo($arguments)
     {
@@ -552,15 +552,15 @@ class PlannerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\CheckAvailabilityResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/planner/check-availability'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CheckAvailabilityResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CheckAvailabilityResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
