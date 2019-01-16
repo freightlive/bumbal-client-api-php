@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandFiltersModelTest
+ * BrandListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * BrandFiltersModelTest Class Doc Comment
+ * BrandListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description BrandFiltersModel
+// * @description BrandListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandFiltersModelTest extends \PHPUnit_Framework_TestCase
+class BrandListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,37 @@ class BrandFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandFiltersModel"
+     * Test "BrandListResponse"
      */
-    public function testBrandFiltersModel()
+    public function testBrandListResponse()
     {
     }
 
     /**
-     * Test attribute "updated_at_since"
+     * Test attribute "items"
      */
-    public function testPropertyUpdatedAtSince()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "updated_at_till"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyUpdatedAtTill()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyName()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "portal_name"
+     * Test attribute "count_limited"
      */
-    public function testPropertyPortalName()
+    public function testPropertyCountLimited()
     {
     }
 }

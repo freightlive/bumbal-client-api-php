@@ -60,7 +60,8 @@ class BrandModel implements ArrayAccess
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'brand_colours' => '\BumbalClient\Model\BrandColourModel[]',
-        'files' => '\BumbalClient\Model\FileModel[]'
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'portal_settings' => '\BumbalClient\Model\PortalSettingModel[]'
     ];
 
     /**
@@ -74,7 +75,8 @@ class BrandModel implements ArrayAccess
         'links' => null,
         'meta_data' => null,
         'brand_colours' => null,
-        'files' => null
+        'files' => null,
+        'portal_settings' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class BrandModel implements ArrayAccess
         'links' => 'links',
         'meta_data' => 'meta_data',
         'brand_colours' => 'brand_colours',
-        'files' => 'files'
+        'files' => 'files',
+        'portal_settings' => 'portal_settings'
     ];
 
 
@@ -113,7 +116,8 @@ class BrandModel implements ArrayAccess
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'brand_colours' => 'setBrandColours',
-        'files' => 'setFiles'
+        'files' => 'setFiles',
+        'portal_settings' => 'setPortalSettings'
     ];
 
 
@@ -128,7 +132,8 @@ class BrandModel implements ArrayAccess
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'brand_colours' => 'getBrandColours',
-        'files' => 'getFiles'
+        'files' => 'getFiles',
+        'portal_settings' => 'getPortalSettings'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class BrandModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['brand_colours'] = isset($data['brand_colours']) ? $data['brand_colours'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['portal_settings'] = isset($data['portal_settings']) ? $data['portal_settings'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class BrandModel implements ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets portal_settings
+     * @return \BumbalClient\Model\PortalSettingModel[]
+     */
+    public function getPortalSettings()
+    {
+        return $this->container['portal_settings'];
+    }
+
+    /**
+     * Sets portal_settings
+     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings 
+     * @return $this
+     */
+    public function setPortalSettings($portal_settings)
+    {
+        $this->container['portal_settings'] = $portal_settings;
 
         return $this;
     }

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **include_files** | **bool** |  | [optional] 
 **include_meta_data** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
+**include_portal_settings** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

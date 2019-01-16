@@ -125,4 +125,11 @@ class BrandModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFiles()
     {
     }
+
+    /**
+     * Test attribute "portal_settings"
+     */
+    public function testPropertyPortalSettings()
+    {
+    }
 }

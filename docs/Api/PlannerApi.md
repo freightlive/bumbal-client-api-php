@@ -258,7 +258,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkAvailability**
-> \BumbalClient\Model\ApiResponse checkAvailability($arguments)
+> \BumbalClient\Model\CheckAvailabilityResponse checkAvailability($arguments)
 
 check availability in planning for a certain set of activity properties
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\CheckAvailabilityResponse**](../Model/CheckAvailabilityResponse.md)
 
 ### Authorization
 

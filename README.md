@@ -96,6 +96,12 @@ Class | Method | HTTP request | Description
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
 *AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
 *AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
+*BrandApi* | [**createBrand**](docs/Api/BrandApi.md#createbrand) | **POST** /brand | Add a new Brand
+*BrandApi* | [**deleteBrand**](docs/Api/BrandApi.md#deletebrand) | **DELETE** /brand/{brandId} | Delete a Brand
+*BrandApi* | [**retrieveBrand**](docs/Api/BrandApi.md#retrievebrand) | **GET** /brand/{brandId} | Retrieve a Brand
+*BrandApi* | [**retrieveListBrand**](docs/Api/BrandApi.md#retrievelistbrand) | **PUT** /brand | Retrieve List of Brands
+*BrandApi* | [**setBrand**](docs/Api/BrandApi.md#setbrand) | **POST** /brand/set | Set (create or update) a Brand
+*BrandApi* | [**updateBrand**](docs/Api/BrandApi.md#updatebrand) | **PUT** /brand/{brandId} | Update a Brand
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
@@ -250,6 +256,7 @@ Class | Method | HTTP request | Description
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)
  - [BrandColourRetrieveListArguments](docs/Model/BrandColourRetrieveListArguments.md)
  - [BrandFiltersModel](docs/Model/BrandFiltersModel.md)
+ - [BrandListResponse](docs/Model/BrandListResponse.md)
  - [BrandModel](docs/Model/BrandModel.md)
  - [BrandOptionsModel](docs/Model/BrandOptionsModel.md)
  - [BrandRetrieveListArguments](docs/Model/BrandRetrieveListArguments.md)
@@ -259,6 +266,7 @@ Class | Method | HTTP request | Description
  - [CheckAvailabilityDataModel](docs/Model/CheckAvailabilityDataModel.md)
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
  - [CheckAvailabilityOptionsModel](docs/Model/CheckAvailabilityOptionsModel.md)
+ - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
  - [ConfigModel](docs/Model/ConfigModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)

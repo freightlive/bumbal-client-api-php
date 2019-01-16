@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandFiltersModelTest
+ * CheckAvailabilityResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * BrandFiltersModelTest Class Doc Comment
+ * CheckAvailabilityResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description BrandFiltersModel
+// * @description CheckAvailabilityResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandFiltersModelTest extends \PHPUnit_Framework_TestCase
+class CheckAvailabilityResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,44 @@ class BrandFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandFiltersModel"
+     * Test "CheckAvailabilityResponse"
      */
-    public function testBrandFiltersModel()
+    public function testCheckAvailabilityResponse()
     {
     }
 
     /**
-     * Test attribute "updated_at_since"
+     * Test attribute "token"
      */
-    public function testPropertyUpdatedAtSince()
+    public function testPropertyToken()
     {
     }
 
     /**
-     * Test attribute "updated_at_till"
+     * Test attribute "status"
      */
-    public function testPropertyUpdatedAtTill()
+    public function testPropertyStatus()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "available_timewindows"
      */
-    public function testPropertyName()
+    public function testPropertyAvailableTimewindows()
     {
     }
 
     /**
-     * Test attribute "portal_name"
+     * Test attribute "unavailable_timewindows"
      */
-    public function testPropertyPortalName()
+    public function testPropertyUnavailableTimewindows()
+    {
+    }
+
+    /**
+     * Test attribute "latest_analyzed_date"
+     */
+    public function testPropertyLatestAnalyzedDate()
     {
     }
 }

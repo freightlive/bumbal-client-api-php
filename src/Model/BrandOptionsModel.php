@@ -60,7 +60,8 @@ class BrandOptionsModel implements ArrayAccess
         'include_record_info' => 'bool',
         'include_files' => 'bool',
         'include_meta_data' => 'bool',
-        'include_notes' => 'bool'
+        'include_notes' => 'bool',
+        'include_portal_settings' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class BrandOptionsModel implements ArrayAccess
         'include_record_info' => null,
         'include_files' => null,
         'include_meta_data' => null,
-        'include_notes' => null
+        'include_notes' => null,
+        'include_portal_settings' => null
     ];
 
     public static function swaggerTypes()
@@ -98,7 +100,8 @@ class BrandOptionsModel implements ArrayAccess
         'include_record_info' => 'include_record_info',
         'include_files' => 'include_files',
         'include_meta_data' => 'include_meta_data',
-        'include_notes' => 'include_notes'
+        'include_notes' => 'include_notes',
+        'include_portal_settings' => 'include_portal_settings'
     ];
 
 
@@ -113,7 +116,8 @@ class BrandOptionsModel implements ArrayAccess
         'include_record_info' => 'setIncludeRecordInfo',
         'include_files' => 'setIncludeFiles',
         'include_meta_data' => 'setIncludeMetaData',
-        'include_notes' => 'setIncludeNotes'
+        'include_notes' => 'setIncludeNotes',
+        'include_portal_settings' => 'setIncludePortalSettings'
     ];
 
 
@@ -128,7 +132,8 @@ class BrandOptionsModel implements ArrayAccess
         'include_record_info' => 'getIncludeRecordInfo',
         'include_files' => 'getIncludeFiles',
         'include_meta_data' => 'getIncludeMetaData',
-        'include_notes' => 'getIncludeNotes'
+        'include_notes' => 'getIncludeNotes',
+        'include_portal_settings' => 'getIncludePortalSettings'
     ];
 
     public static function attributeMap()
@@ -169,6 +174,7 @@ class BrandOptionsModel implements ArrayAccess
         $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_portal_settings'] = isset($data['include_portal_settings']) ? $data['include_portal_settings'] : null;
     }
 
     /**
@@ -339,6 +345,27 @@ class BrandOptionsModel implements ArrayAccess
     public function setIncludeNotes($include_notes)
     {
         $this->container['include_notes'] = $include_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_portal_settings
+     * @return bool
+     */
+    public function getIncludePortalSettings()
+    {
+        return $this->container['include_portal_settings'];
+    }
+
+    /**
+     * Sets include_portal_settings
+     * @param bool $include_portal_settings 
+     * @return $this
+     */
+    public function setIncludePortalSettings($include_portal_settings)
+    {
+        $this->container['include_portal_settings'] = $include_portal_settings;
 
         return $this;
     }

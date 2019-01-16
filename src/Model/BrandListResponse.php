@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandFiltersModel
+ * BrandListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * BrandFiltersModel Class Doc Comment
+ * BrandListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandFiltersModel implements ArrayAccess
+class BrandListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,17 @@ class BrandFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BrandFiltersModel';
+    protected static $swaggerModelName = 'BrandListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'updated_at_since' => '\DateTime',
-        'updated_at_till' => '\DateTime',
-        'name' => 'string[]',
-        'portal_name' => 'string[]'
+        'items' => '\BumbalClient\Model\BrandModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -65,10 +65,10 @@ class BrandFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'updated_at_since' => 'date-time',
-        'updated_at_till' => 'date-time',
-        'name' => null,
-        'portal_name' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +86,10 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'updated_at_since' => 'updated_at_since',
-        'updated_at_till' => 'updated_at_till',
-        'name' => 'name',
-        'portal_name' => 'portal_name'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -98,10 +98,10 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'updated_at_since' => 'setUpdatedAtSince',
-        'updated_at_till' => 'setUpdatedAtTill',
-        'name' => 'setName',
-        'portal_name' => 'setPortalName'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -110,10 +110,10 @@ class BrandFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'updated_at_since' => 'getUpdatedAtSince',
-        'updated_at_till' => 'getUpdatedAtTill',
-        'name' => 'getName',
-        'portal_name' => 'getPortalName'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -147,10 +147,10 @@ class BrandFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
-        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['portal_name'] = isset($data['portal_name']) ? $data['portal_name'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -179,85 +179,85 @@ class BrandFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets updated_at_since
-     * @return \DateTime
+     * Gets items
+     * @return \BumbalClient\Model\BrandModel[]
      */
-    public function getUpdatedAtSince()
+    public function getItems()
     {
-        return $this->container['updated_at_since'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets updated_at_since
-     * @param \DateTime $updated_at_since Show updated since
+     * Sets items
+     * @param \BumbalClient\Model\BrandModel[] $items 
      * @return $this
      */
-    public function setUpdatedAtSince($updated_at_since)
+    public function setItems($items)
     {
-        $this->container['updated_at_since'] = $updated_at_since;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets updated_at_till
-     * @return \DateTime
+     * Gets count_filtered
+     * @return int
      */
-    public function getUpdatedAtTill()
+    public function getCountFiltered()
     {
-        return $this->container['updated_at_till'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets updated_at_till
-     * @param \DateTime $updated_at_till Show updated till
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setUpdatedAtTill($updated_at_till)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['updated_at_till'] = $updated_at_till;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string[]
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getName()
+    public function getCountUnfiltered()
     {
-        return $this->container['name'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets name
-     * @param string[] $name Brand name
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setName($name)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['name'] = $name;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets portal_name
-     * @return string[]
+     * Gets count_limited
+     * @return int
      */
-    public function getPortalName()
+    public function getCountLimited()
     {
-        return $this->container['portal_name'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets portal_name
-     * @param string[] $portal_name When getting the portal settings for a brand: the portal name
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setPortalName($portal_name)
+    public function setCountLimited($count_limited)
     {
-        $this->container['portal_name'] = $portal_name;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

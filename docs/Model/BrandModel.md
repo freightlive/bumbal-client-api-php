@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **brand_colours** | [**\BumbalClient\Model\BrandColourModel[]**](BrandColourModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
+**portal_settings** | [**\BumbalClient\Model\PortalSettingModel[]**](PortalSettingModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

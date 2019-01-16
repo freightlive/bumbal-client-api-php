@@ -125,4 +125,11 @@ class BrandOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeNotes()
     {
     }
+
+    /**
+     * Test attribute "include_portal_settings"
+     */
+    public function testPropertyIncludePortalSettings()
+    {
+    }
 }
