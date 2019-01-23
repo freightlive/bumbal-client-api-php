@@ -344,6 +344,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_capacities"
+     */
+    public function testPropertyIncludeCapacities()
+    {
+    }
+
+    /**
      * Test attribute "include_zones"
      */
     public function testPropertyIncludeZones()

@@ -92,6 +92,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_note_tags' => 'bool',
         'include_depot_address_object' => 'bool',
         'include_capacity_object' => 'bool',
+        'include_capacities' => 'bool',
         'include_zones' => 'bool',
         'include_brand' => 'bool',
         'include_brand_colours' => 'bool',
@@ -141,6 +142,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_note_tags' => null,
         'include_depot_address_object' => null,
         'include_capacity_object' => null,
+        'include_capacities' => null,
         'include_zones' => null,
         'include_brand' => null,
         'include_brand_colours' => null,
@@ -200,6 +202,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_note_tags' => 'include_activity_note_tags',
         'include_depot_address_object' => 'include_depot_address_object',
         'include_capacity_object' => 'include_capacity_object',
+        'include_capacities' => 'include_capacities',
         'include_zones' => 'include_zones',
         'include_brand' => 'include_brand',
         'include_brand_colours' => 'include_brand_colours',
@@ -250,6 +253,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
         'include_depot_address_object' => 'setIncludeDepotAddressObject',
         'include_capacity_object' => 'setIncludeCapacityObject',
+        'include_capacities' => 'setIncludeCapacities',
         'include_zones' => 'setIncludeZones',
         'include_brand' => 'setIncludeBrand',
         'include_brand_colours' => 'setIncludeBrandColours',
@@ -300,6 +304,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
         'include_depot_address_object' => 'getIncludeDepotAddressObject',
         'include_capacity_object' => 'getIncludeCapacityObject',
+        'include_capacities' => 'getIncludeCapacities',
         'include_zones' => 'getIncludeZones',
         'include_brand' => 'getIncludeBrand',
         'include_brand_colours' => 'getIncludeBrandColours',
@@ -375,6 +380,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
         $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
         $this->container['include_capacity_object'] = isset($data['include_capacity_object']) ? $data['include_capacity_object'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
@@ -1200,6 +1206,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeCapacityObject($include_capacity_object)
     {
         $this->container['include_capacity_object'] = $include_capacity_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
 
         return $this;
     }

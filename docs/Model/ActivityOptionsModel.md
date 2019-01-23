@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **include_activity_note_tags** | **bool** |  | [optional] 
 **include_depot_address_object** | **bool** |  | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
+**include_capacities** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brand** | **bool** |  | [optional] 
 **include_brand_colours** | **bool** |  | [optional] 
