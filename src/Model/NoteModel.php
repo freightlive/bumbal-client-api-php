@@ -58,6 +58,7 @@ class NoteModel implements ArrayAccess
         'object_type' => 'object',
         'object_type_name' => 'object',
         'object_id' => 'int',
+        'object_link' => '\BumbalClient\Model\LinkModel',
         'note_category_id' => 'int',
         'note_category_name' => 'string',
         'visible_for_driver' => 'bool',
@@ -77,6 +78,7 @@ class NoteModel implements ArrayAccess
         'object_type' => null,
         'object_type_name' => null,
         'object_id' => null,
+        'object_link' => null,
         'note_category_id' => null,
         'note_category_name' => null,
         'visible_for_driver' => null,
@@ -106,6 +108,7 @@ class NoteModel implements ArrayAccess
         'object_type' => 'object_type',
         'object_type_name' => 'object_type_name',
         'object_id' => 'object_id',
+        'object_link' => 'object_link',
         'note_category_id' => 'note_category_id',
         'note_category_name' => 'note_category_name',
         'visible_for_driver' => 'visible_for_driver',
@@ -126,6 +129,7 @@ class NoteModel implements ArrayAccess
         'object_type' => 'setObjectType',
         'object_type_name' => 'setObjectTypeName',
         'object_id' => 'setObjectId',
+        'object_link' => 'setObjectLink',
         'note_category_id' => 'setNoteCategoryId',
         'note_category_name' => 'setNoteCategoryName',
         'visible_for_driver' => 'setVisibleForDriver',
@@ -146,6 +150,7 @@ class NoteModel implements ArrayAccess
         'object_type' => 'getObjectType',
         'object_type_name' => 'getObjectTypeName',
         'object_id' => 'getObjectId',
+        'object_link' => 'getObjectLink',
         'note_category_id' => 'getNoteCategoryId',
         'note_category_name' => 'getNoteCategoryName',
         'visible_for_driver' => 'getVisibleForDriver',
@@ -191,6 +196,7 @@ class NoteModel implements ArrayAccess
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['object_link'] = isset($data['object_link']) ? $data['object_link'] : null;
         $this->container['note_category_id'] = isset($data['note_category_id']) ? $data['note_category_id'] : null;
         $this->container['note_category_name'] = isset($data['note_category_name']) ? $data['note_category_name'] : null;
         $this->container['visible_for_driver'] = isset($data['visible_for_driver']) ? $data['visible_for_driver'] : null;
@@ -306,6 +312,27 @@ class NoteModel implements ArrayAccess
     public function setObjectId($object_id)
     {
         $this->container['object_id'] = $object_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_link
+     * @return \BumbalClient\Model\LinkModel
+     */
+    public function getObjectLink()
+    {
+        return $this->container['object_link'];
+    }
+
+    /**
+     * Sets object_link
+     * @param \BumbalClient\Model\LinkModel $object_link 
+     * @return $this
+     */
+    public function setObjectLink($object_link)
+    {
+        $this->container['object_link'] = $object_link;
 
         return $this;
     }

@@ -106,6 +106,13 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "object_link"
+     */
+    public function testPropertyObjectLink()
+    {
+    }
+
+    /**
      * Test attribute "note_category_id"
      */
     public function testPropertyNoteCategoryId()
