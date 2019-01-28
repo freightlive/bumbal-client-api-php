@@ -167,4 +167,11 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyMetaData()
     {
     }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
 }

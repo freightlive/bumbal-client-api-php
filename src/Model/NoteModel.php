@@ -66,7 +66,8 @@ class NoteModel implements ArrayAccess
         'updated_by_name' => 'string',
         'content' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'active' => 'bool'
     ];
 
     /**
@@ -86,7 +87,8 @@ class NoteModel implements ArrayAccess
         'updated_by_name' => null,
         'content' => null,
         'links' => null,
-        'meta_data' => null
+        'meta_data' => null,
+        'active' => null
     ];
 
     public static function swaggerTypes()
@@ -116,7 +118,8 @@ class NoteModel implements ArrayAccess
         'updated_by_name' => 'updated_by_name',
         'content' => 'content',
         'links' => 'links',
-        'meta_data' => 'meta_data'
+        'meta_data' => 'meta_data',
+        'active' => 'active'
     ];
 
 
@@ -137,7 +140,8 @@ class NoteModel implements ArrayAccess
         'updated_by_name' => 'setUpdatedByName',
         'content' => 'setContent',
         'links' => 'setLinks',
-        'meta_data' => 'setMetaData'
+        'meta_data' => 'setMetaData',
+        'active' => 'setActive'
     ];
 
 
@@ -158,7 +162,8 @@ class NoteModel implements ArrayAccess
         'updated_by_name' => 'getUpdatedByName',
         'content' => 'getContent',
         'links' => 'getLinks',
-        'meta_data' => 'getMetaData'
+        'meta_data' => 'getMetaData',
+        'active' => 'getActive'
     ];
 
     public static function attributeMap()
@@ -205,6 +210,7 @@ class NoteModel implements ArrayAccess
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -501,6 +507,27 @@ class NoteModel implements ArrayAccess
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: note has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }
