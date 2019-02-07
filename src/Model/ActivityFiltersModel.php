@@ -55,12 +55,19 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'shipment_activity_id' => 'int[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'date_time_from_since' => '\DateTime',
         'date_time_from_till' => '\DateTime',
         'date_time_to_since' => '\DateTime',
         'date_time_to_till' => '\DateTime',
+        'planned_date_time_from' => '\DateTime',
+        'planned_date_time_to' => '\DateTime',
+        'planned_date_time_from_since' => '\DateTime',
+        'planned_date_time_from_till' => '\DateTime',
+        'planned_date_time_to_since' => '\DateTime',
+        'planned_date_time_to_till' => '\DateTime',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
         'status' => 'string[]',
@@ -82,12 +89,19 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'shipment_activity_id' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'date_time_from_since' => 'date-time',
         'date_time_from_till' => 'date-time',
         'date_time_to_since' => 'date-time',
         'date_time_to_till' => 'date-time',
+        'planned_date_time_from' => 'date-time',
+        'planned_date_time_to' => 'date-time',
+        'planned_date_time_from_since' => 'date-time',
+        'planned_date_time_from_till' => 'date-time',
+        'planned_date_time_to_since' => 'date-time',
+        'planned_date_time_to_till' => 'date-time',
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
         'status' => null,
@@ -119,12 +133,19 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'shipment_activity_id' => 'shipment_activity_id',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'date_time_from_since' => 'date_time_from_since',
         'date_time_from_till' => 'date_time_from_till',
         'date_time_to_since' => 'date_time_to_since',
         'date_time_to_till' => 'date_time_to_till',
+        'planned_date_time_from' => 'planned_date_time_from',
+        'planned_date_time_to' => 'planned_date_time_to',
+        'planned_date_time_from_since' => 'planned_date_time_from_since',
+        'planned_date_time_from_till' => 'planned_date_time_from_till',
+        'planned_date_time_to_since' => 'planned_date_time_to_since',
+        'planned_date_time_to_till' => 'planned_date_time_to_till',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
         'status' => 'status',
@@ -147,12 +168,19 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'shipment_activity_id' => 'setShipmentActivityId',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'date_time_from_since' => 'setDateTimeFromSince',
         'date_time_from_till' => 'setDateTimeFromTill',
         'date_time_to_since' => 'setDateTimeToSince',
         'date_time_to_till' => 'setDateTimeToTill',
+        'planned_date_time_from' => 'setPlannedDateTimeFrom',
+        'planned_date_time_to' => 'setPlannedDateTimeTo',
+        'planned_date_time_from_since' => 'setPlannedDateTimeFromSince',
+        'planned_date_time_from_till' => 'setPlannedDateTimeFromTill',
+        'planned_date_time_to_since' => 'setPlannedDateTimeToSince',
+        'planned_date_time_to_till' => 'setPlannedDateTimeToTill',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
         'status' => 'setStatus',
@@ -175,12 +203,19 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'shipment_activity_id' => 'getShipmentActivityId',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'date_time_from_since' => 'getDateTimeFromSince',
         'date_time_from_till' => 'getDateTimeFromTill',
         'date_time_to_since' => 'getDateTimeToSince',
         'date_time_to_till' => 'getDateTimeToTill',
+        'planned_date_time_from' => 'getPlannedDateTimeFrom',
+        'planned_date_time_to' => 'getPlannedDateTimeTo',
+        'planned_date_time_from_since' => 'getPlannedDateTimeFromSince',
+        'planned_date_time_from_till' => 'getPlannedDateTimeFromTill',
+        'planned_date_time_to_since' => 'getPlannedDateTimeToSince',
+        'planned_date_time_to_till' => 'getPlannedDateTimeToTill',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
         'status' => 'getStatus',
@@ -228,12 +263,19 @@ class ActivityFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['date_time_from_since'] = isset($data['date_time_from_since']) ? $data['date_time_from_since'] : null;
         $this->container['date_time_from_till'] = isset($data['date_time_from_till']) ? $data['date_time_from_till'] : null;
         $this->container['date_time_to_since'] = isset($data['date_time_to_since']) ? $data['date_time_to_since'] : null;
         $this->container['date_time_to_till'] = isset($data['date_time_to_till']) ? $data['date_time_to_till'] : null;
+        $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
+        $this->container['planned_date_time_to'] = isset($data['planned_date_time_to']) ? $data['planned_date_time_to'] : null;
+        $this->container['planned_date_time_from_since'] = isset($data['planned_date_time_from_since']) ? $data['planned_date_time_from_since'] : null;
+        $this->container['planned_date_time_from_till'] = isset($data['planned_date_time_from_till']) ? $data['planned_date_time_from_till'] : null;
+        $this->container['planned_date_time_to_since'] = isset($data['planned_date_time_to_since']) ? $data['planned_date_time_to_since'] : null;
+        $this->container['planned_date_time_to_till'] = isset($data['planned_date_time_to_till']) ? $data['planned_date_time_to_till'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -291,6 +333,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipment_activity_id
+     * @return int[]
+     */
+    public function getShipmentActivityId()
+    {
+        return $this->container['shipment_activity_id'];
+    }
+
+    /**
+     * Sets shipment_activity_id
+     * @param int[] $shipment_activity_id Unique Identifier(s) partner shipment activity
+     * @return $this
+     */
+    public function setShipmentActivityId($shipment_activity_id)
+    {
+        $this->container['shipment_activity_id'] = $shipment_activity_id;
 
         return $this;
     }
@@ -417,6 +480,132 @@ class ActivityFiltersModel implements ArrayAccess
     public function setDateTimeToTill($date_time_to_till)
     {
         $this->container['date_time_to_till'] = $date_time_to_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_from
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeFrom()
+    {
+        return $this->container['planned_date_time_from'];
+    }
+
+    /**
+     * Sets planned_date_time_from
+     * @param \DateTime $planned_date_time_from Planned DateTime From
+     * @return $this
+     */
+    public function setPlannedDateTimeFrom($planned_date_time_from)
+    {
+        $this->container['planned_date_time_from'] = $planned_date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_to
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeTo()
+    {
+        return $this->container['planned_date_time_to'];
+    }
+
+    /**
+     * Sets planned_date_time_to
+     * @param \DateTime $planned_date_time_to Planned DateTime To
+     * @return $this
+     */
+    public function setPlannedDateTimeTo($planned_date_time_to)
+    {
+        $this->container['planned_date_time_to'] = $planned_date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_from_since
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeFromSince()
+    {
+        return $this->container['planned_date_time_from_since'];
+    }
+
+    /**
+     * Sets planned_date_time_from_since
+     * @param \DateTime $planned_date_time_from_since filter activities with a planned DateTime From since this input
+     * @return $this
+     */
+    public function setPlannedDateTimeFromSince($planned_date_time_from_since)
+    {
+        $this->container['planned_date_time_from_since'] = $planned_date_time_from_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_from_till
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeFromTill()
+    {
+        return $this->container['planned_date_time_from_till'];
+    }
+
+    /**
+     * Sets planned_date_time_from_till
+     * @param \DateTime $planned_date_time_from_till filter activities with a planned DateTime From till this input
+     * @return $this
+     */
+    public function setPlannedDateTimeFromTill($planned_date_time_from_till)
+    {
+        $this->container['planned_date_time_from_till'] = $planned_date_time_from_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_to_since
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeToSince()
+    {
+        return $this->container['planned_date_time_to_since'];
+    }
+
+    /**
+     * Sets planned_date_time_to_since
+     * @param \DateTime $planned_date_time_to_since filter activities with a planned DateTime To since this input
+     * @return $this
+     */
+    public function setPlannedDateTimeToSince($planned_date_time_to_since)
+    {
+        $this->container['planned_date_time_to_since'] = $planned_date_time_to_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_date_time_to_till
+     * @return \DateTime
+     */
+    public function getPlannedDateTimeToTill()
+    {
+        return $this->container['planned_date_time_to_till'];
+    }
+
+    /**
+     * Sets planned_date_time_to_till
+     * @param \DateTime $planned_date_time_to_till filter activities with a planned DateTime To till this input
+     * @return $this
+     */
+    public function setPlannedDateTimeToTill($planned_date_time_to_till)
+    {
+        $this->container['planned_date_time_to_till'] = $planned_date_time_to_till;
 
         return $this;
     }

@@ -55,6 +55,7 @@ class ActivityModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'shipment_activity_id' => 'int',
         'nr' => 'string',
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
@@ -146,6 +147,7 @@ class ActivityModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'shipment_activity_id' => 'int64',
         'nr' => null,
         'activity_type_name' => null,
         'activity_type_id' => null,
@@ -247,6 +249,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'shipment_activity_id' => 'shipment_activity_id',
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
@@ -339,6 +342,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'shipment_activity_id' => 'setShipmentActivityId',
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
@@ -431,6 +435,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'shipment_activity_id' => 'getShipmentActivityId',
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
@@ -596,6 +601,7 @@ class ActivityModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
@@ -747,6 +753,27 @@ class ActivityModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipment_activity_id
+     * @return int
+     */
+    public function getShipmentActivityId()
+    {
+        return $this->container['shipment_activity_id'];
+    }
+
+    /**
+     * Sets shipment_activity_id
+     * @param int $shipment_activity_id Unique Identifier for partner shipment activity
+     * @return $this
+     */
+    public function setShipmentActivityId($shipment_activity_id)
+    {
+        $this->container['shipment_activity_id'] = $shipment_activity_id;
 
         return $this;
     }

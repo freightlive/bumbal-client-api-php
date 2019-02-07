@@ -85,6 +85,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "shipment_activity_id"
+     */
+    public function testPropertyShipmentActivityId()
+    {
+    }
+
+    /**
      * Test attribute "date_time_from"
      */
     public function testPropertyDateTimeFrom()
@@ -123,6 +130,48 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "date_time_to_till"
      */
     public function testPropertyDateTimeToTill()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_from"
+     */
+    public function testPropertyPlannedDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_to"
+     */
+    public function testPropertyPlannedDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_from_since"
+     */
+    public function testPropertyPlannedDateTimeFromSince()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_from_till"
+     */
+    public function testPropertyPlannedDateTimeFromTill()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_to_since"
+     */
+    public function testPropertyPlannedDateTimeToSince()
+    {
+    }
+
+    /**
+     * Test attribute "planned_date_time_to_till"
+     */
+    public function testPropertyPlannedDateTimeToTill()
     {
     }
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
+**shipment_activity_id** | **int** | Unique Identifier for partner shipment activity | [optional] 
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Type of this Activity | [optional] 
 **activity_type_id** | **int** | TypeID of this Activity | [optional] 
