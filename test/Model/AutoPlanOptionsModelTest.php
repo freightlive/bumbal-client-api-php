@@ -111,4 +111,11 @@ class AutoPlanOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyInSequence()
     {
     }
+
+    /**
+     * Test attribute "do_not_apply_planning"
+     */
+    public function testPropertyDoNotApplyPlanning()
+    {
+    }
 }

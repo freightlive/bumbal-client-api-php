@@ -58,7 +58,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'respond_after_apply_planning' => 'bool',
         'allow_unplanned_activities' => 'bool',
         'consider_historic_traffic_info' => 'bool',
-        'in_sequence' => 'bool'
+        'in_sequence' => 'bool',
+        'do_not_apply_planning' => 'bool'
     ];
 
     /**
@@ -70,7 +71,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'respond_after_apply_planning' => null,
         'allow_unplanned_activities' => null,
         'consider_historic_traffic_info' => null,
-        'in_sequence' => null
+        'in_sequence' => null,
+        'do_not_apply_planning' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'respond_after_apply_planning' => 'respond_after_apply_planning',
         'allow_unplanned_activities' => 'allow_unplanned_activities',
         'consider_historic_traffic_info' => 'consider_historic_traffic_info',
-        'in_sequence' => 'in_sequence'
+        'in_sequence' => 'in_sequence',
+        'do_not_apply_planning' => 'do_not_apply_planning'
     ];
 
 
@@ -105,7 +108,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'respond_after_apply_planning' => 'setRespondAfterApplyPlanning',
         'allow_unplanned_activities' => 'setAllowUnplannedActivities',
         'consider_historic_traffic_info' => 'setConsiderHistoricTrafficInfo',
-        'in_sequence' => 'setInSequence'
+        'in_sequence' => 'setInSequence',
+        'do_not_apply_planning' => 'setDoNotApplyPlanning'
     ];
 
 
@@ -118,7 +122,8 @@ class AutoPlanOptionsModel implements ArrayAccess
         'respond_after_apply_planning' => 'getRespondAfterApplyPlanning',
         'allow_unplanned_activities' => 'getAllowUnplannedActivities',
         'consider_historic_traffic_info' => 'getConsiderHistoricTrafficInfo',
-        'in_sequence' => 'getInSequence'
+        'in_sequence' => 'getInSequence',
+        'do_not_apply_planning' => 'getDoNotApplyPlanning'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class AutoPlanOptionsModel implements ArrayAccess
         $this->container['allow_unplanned_activities'] = isset($data['allow_unplanned_activities']) ? $data['allow_unplanned_activities'] : null;
         $this->container['consider_historic_traffic_info'] = isset($data['consider_historic_traffic_info']) ? $data['consider_historic_traffic_info'] : null;
         $this->container['in_sequence'] = isset($data['in_sequence']) ? $data['in_sequence'] : null;
+        $this->container['do_not_apply_planning'] = isset($data['do_not_apply_planning']) ? $data['do_not_apply_planning'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class AutoPlanOptionsModel implements ArrayAccess
     public function setInSequence($in_sequence)
     {
         $this->container['in_sequence'] = $in_sequence;
+
+        return $this;
+    }
+
+    /**
+     * Gets do_not_apply_planning
+     * @return bool
+     */
+    public function getDoNotApplyPlanning()
+    {
+        return $this->container['do_not_apply_planning'];
+    }
+
+    /**
+     * Sets do_not_apply_planning
+     * @param bool $do_not_apply_planning 
+     * @return $this
+     */
+    public function setDoNotApplyPlanning($do_not_apply_planning)
+    {
+        $this->container['do_not_apply_planning'] = $do_not_apply_planning;
 
         return $this;
     }
