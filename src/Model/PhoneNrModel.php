@@ -57,6 +57,7 @@ class PhoneNrModel implements ArrayAccess
         'id' => 'int',
         'address_id' => 'int',
         'country_code' => 'string',
+        'phone_nr_type_name' => 'string',
         'nr' => 'string',
         'description' => 'string',
         'primary' => 'bool'
@@ -70,6 +71,7 @@ class PhoneNrModel implements ArrayAccess
         'id' => 'int64',
         'address_id' => 'int64',
         'country_code' => null,
+        'phone_nr_type_name' => null,
         'nr' => null,
         'description' => null,
         'primary' => null
@@ -93,6 +95,7 @@ class PhoneNrModel implements ArrayAccess
         'id' => 'id',
         'address_id' => 'address_id',
         'country_code' => 'country_code',
+        'phone_nr_type_name' => 'phone_nr_type_name',
         'nr' => 'nr',
         'description' => 'description',
         'primary' => 'primary'
@@ -107,6 +110,7 @@ class PhoneNrModel implements ArrayAccess
         'id' => 'setId',
         'address_id' => 'setAddressId',
         'country_code' => 'setCountryCode',
+        'phone_nr_type_name' => 'setPhoneNrTypeName',
         'nr' => 'setNr',
         'description' => 'setDescription',
         'primary' => 'setPrimary'
@@ -121,6 +125,7 @@ class PhoneNrModel implements ArrayAccess
         'id' => 'getId',
         'address_id' => 'getAddressId',
         'country_code' => 'getCountryCode',
+        'phone_nr_type_name' => 'getPhoneNrTypeName',
         'nr' => 'getNr',
         'description' => 'getDescription',
         'primary' => 'getPrimary'
@@ -141,8 +146,24 @@ class PhoneNrModel implements ArrayAccess
         return self::$getters;
     }
 
+    const PHONE_NR_TYPE_NAME_MOBILE = 'mobile';
+    const PHONE_NR_TYPE_NAME_LANDLINE = 'landline';
+    const PHONE_NR_TYPE_NAME_FAX = 'fax';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPhoneNrTypeNameAllowableValues()
+    {
+        return [
+            self::PHONE_NR_TYPE_NAME_MOBILE,
+            self::PHONE_NR_TYPE_NAME_LANDLINE,
+            self::PHONE_NR_TYPE_NAME_FAX,
+        ];
+    }
     
 
     /**
@@ -160,6 +181,7 @@ class PhoneNrModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
+        $this->container['phone_nr_type_name'] = isset($data['phone_nr_type_name']) ? $data['phone_nr_type_name'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
@@ -174,6 +196,14 @@ class PhoneNrModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        $allowed_values = $this->getPhoneNrTypeNameAllowableValues();
+        if (!in_array($this->container['phone_nr_type_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'phone_nr_type_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         return $invalid_properties;
     }
 
@@ -186,6 +216,10 @@ class PhoneNrModel implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getPhoneNrTypeNameAllowableValues();
+        if (!in_array($this->container['phone_nr_type_name'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -254,6 +288,36 @@ class PhoneNrModel implements ArrayAccess
     }
 
     /**
+     * Gets phone_nr_type_name
+     * @return string
+     */
+    public function getPhoneNrTypeName()
+    {
+        return $this->container['phone_nr_type_name'];
+    }
+
+    /**
+     * Sets phone_nr_type_name
+     * @param string $phone_nr_type_name Phone number type name
+     * @return $this
+     */
+    public function setPhoneNrTypeName($phone_nr_type_name)
+    {
+        $allowed_values = $this->getPhoneNrTypeNameAllowableValues();
+        if (!is_null($phone_nr_type_name) && !in_array($phone_nr_type_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'phone_nr_type_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['phone_nr_type_name'] = $phone_nr_type_name;
+
+        return $this;
+    }
+
+    /**
      * Gets nr
      * @return string
      */
@@ -285,7 +349,7 @@ class PhoneNrModel implements ArrayAccess
 
     /**
      * Sets description
-     * @param string $description Email address description
+     * @param string $description Phone number description
      * @return $this
      */
     public function setDescription($description)
@@ -306,7 +370,7 @@ class PhoneNrModel implements ArrayAccess
 
     /**
      * Sets primary
-     * @param bool $primary primary Email address
+     * @param bool $primary primary phone number
      * @return $this
      */
     public function setPrimary($primary)

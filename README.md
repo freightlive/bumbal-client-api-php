@@ -96,6 +96,8 @@ Class | Method | HTTP request | Description
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
 *AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
 *AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
+*AuthenticateApi* | [**authenticateSignIn**](docs/Api/AuthenticateApi.md#authenticatesignin) | **POST** /authenticate/sign-in | Sign In with your user credentials
+*AuthenticateApi* | [**authenticateSignOut**](docs/Api/AuthenticateApi.md#authenticatesignout) | **GET** /authenticate/sign-out | Sign out
 *BrandApi* | [**createBrand**](docs/Api/BrandApi.md#createbrand) | **POST** /brand | Add a new Brand
 *BrandApi* | [**deleteBrand**](docs/Api/BrandApi.md#deletebrand) | **DELETE** /brand/{brandId} | Delete a Brand
 *BrandApi* | [**retrieveBrand**](docs/Api/BrandApi.md#retrievebrand) | **GET** /brand/{brandId} | Retrieve a Brand
@@ -247,6 +249,7 @@ Class | Method | HTTP request | Description
  - [AssignmentModel](docs/Model/AssignmentModel.md)
  - [AssignmentOptionsModel](docs/Model/AssignmentOptionsModel.md)
  - [AssignmentRetrieveListArguments](docs/Model/AssignmentRetrieveListArguments.md)
+ - [AuthenticateModel](docs/Model/AuthenticateModel.md)
  - [AutoPlanArguments](docs/Model/AutoPlanArguments.md)
  - [AutoPlanDataModel](docs/Model/AutoPlanDataModel.md)
  - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
@@ -269,6 +272,7 @@ Class | Method | HTTP request | Description
  - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
  - [ConfigModel](docs/Model/ConfigModel.md)
+ - [CredentialsModel](docs/Model/CredentialsModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
  - [DriverListResponse](docs/Model/DriverListResponse.md)
  - [DriverModel](docs/Model/DriverModel.md)

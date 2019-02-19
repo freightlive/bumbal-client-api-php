@@ -1,6 +1,6 @@
 <?php
 /**
- * PhoneNrModelTest
+ * CredentialsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * PhoneNrModelTest Class Doc Comment
+ * CredentialsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PhoneNrModel
+// * @description CredentialsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhoneNrModelTest extends \PHPUnit_Framework_TestCase
+class CredentialsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,58 +71,23 @@ class PhoneNrModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PhoneNrModel"
+     * Test "CredentialsModel"
      */
-    public function testPhoneNrModel()
+    public function testCredentialsModel()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "email"
      */
-    public function testPropertyId()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "address_id"
+     * Test attribute "password"
      */
-    public function testPropertyAddressId()
-    {
-    }
-
-    /**
-     * Test attribute "country_code"
-     */
-    public function testPropertyCountryCode()
-    {
-    }
-
-    /**
-     * Test attribute "phone_nr_type_name"
-     */
-    public function testPropertyPhoneNrTypeName()
-    {
-    }
-
-    /**
-     * Test attribute "nr"
-     */
-    public function testPropertyNr()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "primary"
-     */
-    public function testPropertyPrimary()
+    public function testPropertyPassword()
     {
     }
 }
