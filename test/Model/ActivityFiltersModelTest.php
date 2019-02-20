@@ -225,6 +225,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "locked"
+     */
+    public function testPropertyLocked()
+    {
+    }
+
+    /**
      * Test attribute "activity_type_name"
      */
     public function testPropertyActivityTypeName()
@@ -249,6 +256,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "party_id"
      */
     public function testPropertyPartyId()
+    {
+    }
+
+    /**
+     * Test attribute "depot_address_links"
+     */
+    public function testPropertyDepotAddressLinks()
     {
     }
 

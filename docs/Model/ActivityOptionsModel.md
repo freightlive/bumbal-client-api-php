@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **include_activity_record_object** | **bool** |  | [optional] 
 **include_activity_notes** | **bool** |  | [optional] 
 **include_activity_note_tags** | **bool** |  | [optional] 
+**include_depot_address** | **bool** |  | [optional] 
 **include_depot_address_object** | **bool** |  | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
 **include_capacities** | **bool** |  | [optional] 

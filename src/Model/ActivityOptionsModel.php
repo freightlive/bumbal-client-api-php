@@ -90,6 +90,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_object' => 'bool',
         'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
+        'include_depot_address' => 'bool',
         'include_depot_address_object' => 'bool',
         'include_capacity_object' => 'bool',
         'include_capacities' => 'bool',
@@ -140,6 +141,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_object' => null,
         'include_activity_notes' => null,
         'include_activity_note_tags' => null,
+        'include_depot_address' => null,
         'include_depot_address_object' => null,
         'include_capacity_object' => null,
         'include_capacities' => null,
@@ -200,6 +202,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_object' => 'include_activity_record_object',
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
+        'include_depot_address' => 'include_depot_address',
         'include_depot_address_object' => 'include_depot_address_object',
         'include_capacity_object' => 'include_capacity_object',
         'include_capacities' => 'include_capacities',
@@ -251,6 +254,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_object' => 'setIncludeActivityRecordObject',
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
+        'include_depot_address' => 'setIncludeDepotAddress',
         'include_depot_address_object' => 'setIncludeDepotAddressObject',
         'include_capacity_object' => 'setIncludeCapacityObject',
         'include_capacities' => 'setIncludeCapacities',
@@ -302,6 +306,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_object' => 'getIncludeActivityRecordObject',
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
+        'include_depot_address' => 'getIncludeDepotAddress',
         'include_depot_address_object' => 'getIncludeDepotAddressObject',
         'include_capacity_object' => 'getIncludeCapacityObject',
         'include_capacities' => 'getIncludeCapacities',
@@ -378,6 +383,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
+        $this->container['include_depot_address'] = isset($data['include_depot_address']) ? $data['include_depot_address'] : null;
         $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
         $this->container['include_capacity_object'] = isset($data['include_capacity_object']) ? $data['include_capacity_object'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
@@ -1164,6 +1170,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityNoteTags($include_activity_note_tags)
     {
         $this->container['include_activity_note_tags'] = $include_activity_note_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_depot_address
+     * @return bool
+     */
+    public function getIncludeDepotAddress()
+    {
+        return $this->container['include_depot_address'];
+    }
+
+    /**
+     * Sets include_depot_address
+     * @param bool $include_depot_address 
+     * @return $this
+     */
+    public function setIncludeDepotAddress($include_depot_address)
+    {
+        $this->container['include_depot_address'] = $include_depot_address;
 
         return $this;
     }

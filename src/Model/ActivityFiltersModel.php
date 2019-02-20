@@ -75,10 +75,12 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'int[]',
         'status_id' => 'int[]',
         'activity_type_id' => 'int[]',
+        'locked' => 'int[]',
         'activity_type_name' => 'string[]',
         'route_id' => 'int[]',
         'user_id' => 'int',
         'party_id' => 'int',
+        'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
         'link' => 'object[]',
         'links' => 'object[]'
     ];
@@ -109,10 +111,12 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => null,
         'status_id' => null,
         'activity_type_id' => null,
+        'locked' => null,
         'activity_type_name' => null,
         'route_id' => null,
         'user_id' => null,
         'party_id' => null,
+        'depot_address_links' => null,
         'link' => null,
         'links' => null
     ];
@@ -153,10 +157,12 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'active',
         'status_id' => 'status_id',
         'activity_type_id' => 'activity_type_id',
+        'locked' => 'locked',
         'activity_type_name' => 'activity_type_name',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
         'party_id' => 'party_id',
+        'depot_address_links' => 'depot_address_links',
         'link' => 'link',
         'links' => 'links'
     ];
@@ -188,10 +194,12 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'setActive',
         'status_id' => 'setStatusId',
         'activity_type_id' => 'setActivityTypeId',
+        'locked' => 'setLocked',
         'activity_type_name' => 'setActivityTypeName',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
+        'depot_address_links' => 'setDepotAddressLinks',
         'link' => 'setLink',
         'links' => 'setLinks'
     ];
@@ -223,10 +231,12 @@ class ActivityFiltersModel implements ArrayAccess
         'active' => 'getActive',
         'status_id' => 'getStatusId',
         'activity_type_id' => 'getActivityTypeId',
+        'locked' => 'getLocked',
         'activity_type_name' => 'getActivityTypeName',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
+        'depot_address_links' => 'getDepotAddressLinks',
         'link' => 'getLink',
         'links' => 'getLinks'
     ];
@@ -283,10 +293,12 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
+        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['depot_address_links'] = isset($data['depot_address_links']) ? $data['depot_address_links'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
@@ -758,6 +770,27 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets locked
+     * @return int[]
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     * @param int[] $locked Activity locked status. 0: not locked, 1: locked on route and time, 2: only locked on route
+     * @return $this
+     */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
+
+        return $this;
+    }
+
+    /**
      * Gets activity_type_name
      * @return string[]
      */
@@ -837,6 +870,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setPartyId($party_id)
     {
         $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets depot_address_links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getDepotAddressLinks()
+    {
+        return $this->container['depot_address_links'];
+    }
+
+    /**
+     * Sets depot_address_links
+     * @param \BumbalClient\Model\LinkModel[] $depot_address_links 
+     * @return $this
+     */
+    public function setDepotAddressLinks($depot_address_links)
+    {
+        $this->container['depot_address_links'] = $depot_address_links;
 
         return $this;
     }
