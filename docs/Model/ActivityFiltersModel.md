@@ -26,10 +26,13 @@ Name | Type | Description | Notes
 **activity_type_id** | **int[]** | Activity type id | [optional] 
 **locked** | **int[]** | Activity locked status. 0: not locked, 1: locked on route and time, 2: only locked on route | [optional] 
 **activity_type_name** | **string[]** | Activity type name | [optional] 
+**description** | **string[]** | Activity description (not visible in Bumbal interface) | [optional] 
+**reference** | **string[]** | Activity reference | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **party_id** | **int** | Party ID | [optional] 
 **depot_address_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**zone_names** | **string[]** | Zone names | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
 **links** | **object[]** | Activity Link ids | [optional] 
 

@@ -239,6 +239,20 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "reference"
+     */
+    public function testPropertyReference()
+    {
+    }
+
+    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()
@@ -263,6 +277,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "depot_address_links"
      */
     public function testPropertyDepotAddressLinks()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
     {
     }
 

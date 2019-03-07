@@ -77,10 +77,13 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'int[]',
         'locked' => 'int[]',
         'activity_type_name' => 'string[]',
+        'description' => 'string[]',
+        'reference' => 'string[]',
         'route_id' => 'int[]',
         'user_id' => 'int',
         'party_id' => 'int',
         'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
+        'zone_names' => 'string[]',
         'link' => 'object[]',
         'links' => 'object[]'
     ];
@@ -113,10 +116,13 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => null,
         'locked' => null,
         'activity_type_name' => null,
+        'description' => null,
+        'reference' => null,
         'route_id' => null,
         'user_id' => null,
         'party_id' => null,
         'depot_address_links' => null,
+        'zone_names' => null,
         'link' => null,
         'links' => null
     ];
@@ -159,10 +165,13 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'activity_type_id',
         'locked' => 'locked',
         'activity_type_name' => 'activity_type_name',
+        'description' => 'description',
+        'reference' => 'reference',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
         'party_id' => 'party_id',
         'depot_address_links' => 'depot_address_links',
+        'zone_names' => 'zone_names',
         'link' => 'link',
         'links' => 'links'
     ];
@@ -196,10 +205,13 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'setActivityTypeId',
         'locked' => 'setLocked',
         'activity_type_name' => 'setActivityTypeName',
+        'description' => 'setDescription',
+        'reference' => 'setReference',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
         'depot_address_links' => 'setDepotAddressLinks',
+        'zone_names' => 'setZoneNames',
         'link' => 'setLink',
         'links' => 'setLinks'
     ];
@@ -233,10 +245,13 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'getActivityTypeId',
         'locked' => 'getLocked',
         'activity_type_name' => 'getActivityTypeName',
+        'description' => 'getDescription',
+        'reference' => 'getReference',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
         'depot_address_links' => 'getDepotAddressLinks',
+        'zone_names' => 'getZoneNames',
         'link' => 'getLink',
         'links' => 'getLinks'
     ];
@@ -295,10 +310,13 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['depot_address_links'] = isset($data['depot_address_links']) ? $data['depot_address_links'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
@@ -812,6 +830,48 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets description
+     * @return string[]
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string[] $description Activity description (not visible in Bumbal interface)
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets reference
+     * @return string[]
+     */
+    public function getReference()
+    {
+        return $this->container['reference'];
+    }
+
+    /**
+     * Sets reference
+     * @param string[] $reference Activity reference
+     * @return $this
+     */
+    public function setReference($reference)
+    {
+        $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
      * Gets route_id
      * @return int[]
      */
@@ -891,6 +951,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setDepotAddressLinks($depot_address_links)
     {
         $this->container['depot_address_links'] = $depot_address_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return string[]
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param string[] $zone_names Zone names
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
 
         return $this;
     }
