@@ -97,7 +97,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_zones' => 'bool',
         'include_brand' => 'bool',
         'include_brand_colours' => 'bool',
-        'include_brand_files' => 'bool'
+        'include_brand_files' => 'bool',
+        'apply_address_bundling' => 'bool'
     ];
 
     /**
@@ -148,7 +149,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_zones' => null,
         'include_brand' => null,
         'include_brand_colours' => null,
-        'include_brand_files' => null
+        'include_brand_files' => null,
+        'apply_address_bundling' => null
     ];
 
     public static function swaggerTypes()
@@ -209,7 +211,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_zones' => 'include_zones',
         'include_brand' => 'include_brand',
         'include_brand_colours' => 'include_brand_colours',
-        'include_brand_files' => 'include_brand_files'
+        'include_brand_files' => 'include_brand_files',
+        'apply_address_bundling' => 'apply_address_bundling'
     ];
 
 
@@ -261,7 +264,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_zones' => 'setIncludeZones',
         'include_brand' => 'setIncludeBrand',
         'include_brand_colours' => 'setIncludeBrandColours',
-        'include_brand_files' => 'setIncludeBrandFiles'
+        'include_brand_files' => 'setIncludeBrandFiles',
+        'apply_address_bundling' => 'setApplyAddressBundling'
     ];
 
 
@@ -313,7 +317,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_zones' => 'getIncludeZones',
         'include_brand' => 'getIncludeBrand',
         'include_brand_colours' => 'getIncludeBrandColours',
-        'include_brand_files' => 'getIncludeBrandFiles'
+        'include_brand_files' => 'getIncludeBrandFiles',
+        'apply_address_bundling' => 'getApplyAddressBundling'
     ];
 
     public static function attributeMap()
@@ -391,6 +396,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
         $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
+        $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
     }
 
     /**
@@ -1338,6 +1344,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeBrandFiles($include_brand_files)
     {
         $this->container['include_brand_files'] = $include_brand_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets apply_address_bundling
+     * @return bool
+     */
+    public function getApplyAddressBundling()
+    {
+        return $this->container['apply_address_bundling'];
+    }
+
+    /**
+     * Sets apply_address_bundling
+     * @param bool $apply_address_bundling 
+     * @return $this
+     */
+    public function setApplyAddressBundling($apply_address_bundling)
+    {
+        $this->container['apply_address_bundling'] = $apply_address_bundling;
 
         return $this;
     }

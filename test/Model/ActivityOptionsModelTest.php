@@ -384,4 +384,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeBrandFiles()
     {
     }
+
+    /**
+     * Test attribute "apply_address_bundling"
+     */
+    public function testPropertyApplyAddressBundling()
+    {
+    }
 }

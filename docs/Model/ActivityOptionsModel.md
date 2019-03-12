@@ -47,6 +47,7 @@ Name | Type | Description | Notes
 **include_brand** | **bool** |  | [optional] 
 **include_brand_colours** | **bool** |  | [optional] 
 **include_brand_files** | **bool** |  | [optional] 
+**apply_address_bundling** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
