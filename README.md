@@ -320,6 +320,7 @@ Class | Method | HTTP request | Description
  - [RecurrenceModel](docs/Model/RecurrenceModel.md)
  - [RecurrenceOptionsModel](docs/Model/RecurrenceOptionsModel.md)
  - [RecurrenceRetrieveListArguments](docs/Model/RecurrenceRetrieveListArguments.md)
+ - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
  - [RouteFiltersModel](docs/Model/RouteFiltersModel.md)
  - [RouteListResponse](docs/Model/RouteListResponse.md)
  - [RouteModel](docs/Model/RouteModel.md)

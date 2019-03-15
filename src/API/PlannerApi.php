@@ -731,12 +731,13 @@ class PlannerApi
      *
      * Remove Activities From Route
      *
+     * @param \BumbalClient\Model\RemoveActivitiesFromRouteArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function removeActivitiesFromRoute()
+    public function removeActivitiesFromRoute($arguments)
     {
-        list($response) = $this->removeActivitiesFromRouteWithHttpInfo();
+        list($response) = $this->removeActivitiesFromRouteWithHttpInfo($arguments);
         return $response;
     }
 
@@ -745,11 +746,16 @@ class PlannerApi
      *
      * Remove Activities From Route
      *
+     * @param \BumbalClient\Model\RemoveActivitiesFromRouteArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function removeActivitiesFromRouteWithHttpInfo()
+    public function removeActivitiesFromRouteWithHttpInfo($arguments)
     {
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling removeActivitiesFromRoute');
+        }
         // parse inputs
         $resourcePath = "/planner/remove-activities-from-route";
         $httpBody = '';
@@ -762,6 +768,11 @@ class PlannerApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // body params
+        $_tempBody = null;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
+        }
 
         // for model (json/xml)
         if (isset($_tempBody)) {

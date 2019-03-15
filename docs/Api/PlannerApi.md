@@ -404,7 +404,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeActivitiesFromRoute**
-> \BumbalClient\Model\ApiResponse removeActivitiesFromRoute()
+> \BumbalClient\Model\ApiResponse removeActivitiesFromRoute($arguments)
 
 Remove Activities From Route
 
@@ -421,9 +421,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\RemoveActivitiesFromRouteArguments(); // \BumbalClient\Model\RemoveActivitiesFromRouteArguments | Request Arguments
 
 try {
-    $result = $api_instance->removeActivitiesFromRoute();
+    $result = $api_instance->removeActivitiesFromRoute($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlannerApi->removeActivitiesFromRoute: ', $e->getMessage(), PHP_EOL;
@@ -432,7 +433,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\RemoveActivitiesFromRouteArguments**](../Model/RemoveActivitiesFromRouteArguments.md)| Request Arguments |
 
 ### Return type
 
