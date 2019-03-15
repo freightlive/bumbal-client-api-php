@@ -92,6 +92,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "assignment_id"
+     */
+    public function testPropertyAssignmentId()
+    {
+    }
+
+    /**
      * Test attribute "date_time_from"
      */
     public function testPropertyDateTimeFrom()

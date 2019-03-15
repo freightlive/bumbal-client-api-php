@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier(s) | [optional] 
 **shipment_activity_id** | **int[]** | Unique Identifier(s) partner shipment activity | [optional] 
+**assignment_id** | **int[]** | Identifier(s) assignment(s) for activities | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | DateTime From | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | DateTime To | [optional] 
 **date_time_from_since** | [**\DateTime**](\DateTime.md) | filter activities with a DateTime From since this input | [optional] 

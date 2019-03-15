@@ -56,6 +56,7 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int[]',
         'shipment_activity_id' => 'int[]',
+        'assignment_id' => 'int[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'date_time_from_since' => '\DateTime',
@@ -95,6 +96,7 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
         'shipment_activity_id' => null,
+        'assignment_id' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'date_time_from_since' => 'date-time',
@@ -144,6 +146,7 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'shipment_activity_id' => 'shipment_activity_id',
+        'assignment_id' => 'assignment_id',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'date_time_from_since' => 'date_time_from_since',
@@ -184,6 +187,7 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'shipment_activity_id' => 'setShipmentActivityId',
+        'assignment_id' => 'setAssignmentId',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'date_time_from_since' => 'setDateTimeFromSince',
@@ -224,6 +228,7 @@ class ActivityFiltersModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'shipment_activity_id' => 'getShipmentActivityId',
+        'assignment_id' => 'getAssignmentId',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'date_time_from_since' => 'getDateTimeFromSince',
@@ -289,6 +294,7 @@ class ActivityFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
+        $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['date_time_from_since'] = isset($data['date_time_from_since']) ? $data['date_time_from_since'] : null;
@@ -384,6 +390,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setShipmentActivityId($shipment_activity_id)
     {
         $this->container['shipment_activity_id'] = $shipment_activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_id
+     * @return int[]
+     */
+    public function getAssignmentId()
+    {
+        return $this->container['assignment_id'];
+    }
+
+    /**
+     * Sets assignment_id
+     * @param int[] $assignment_id Identifier(s) assignment(s) for activities
+     * @return $this
+     */
+    public function setAssignmentId($assignment_id)
+    {
+        $this->container['assignment_id'] = $assignment_id;
 
         return $this;
     }
