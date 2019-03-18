@@ -78,9 +78,23 @@ class SettingsOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_phone_nrs"
+     * Test attribute "include_settings_group_name"
      */
-    public function testPropertyIncludePhoneNrs()
+    public function testPropertyIncludeSettingsGroupName()
+    {
+    }
+
+    /**
+     * Test attribute "include_record_info"
+     */
+    public function testPropertyIncludeRecordInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_record_object"
+     */
+    public function testPropertyIncludeRecordObject()
     {
     }
 }

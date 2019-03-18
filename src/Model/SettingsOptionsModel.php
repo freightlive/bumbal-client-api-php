@@ -54,7 +54,9 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_settings_group_name' => 'bool',
+        'include_record_info' => 'bool',
+        'include_record_object' => 'bool'
     ];
 
     /**
@@ -62,7 +64,9 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_phone_nrs' => null
+        'include_settings_group_name' => null,
+        'include_record_info' => null,
+        'include_record_object' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +84,9 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_settings_group_name' => 'include_settings_group_name',
+        'include_record_info' => 'include_record_info',
+        'include_record_object' => 'include_record_object'
     ];
 
 
@@ -89,7 +95,9 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_settings_group_name' => 'setIncludeSettingsGroupName',
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_record_object' => 'setIncludeRecordObject'
     ];
 
 
@@ -98,7 +106,9 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_settings_group_name' => 'getIncludeSettingsGroupName',
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_record_object' => 'getIncludeRecordObject'
     ];
 
     public static function attributeMap()
@@ -132,7 +142,9 @@ class SettingsOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
+        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
     }
 
     /**
@@ -161,22 +173,64 @@ class SettingsOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_phone_nrs
+     * Gets include_settings_group_name
      * @return bool
      */
-    public function getIncludePhoneNrs()
+    public function getIncludeSettingsGroupName()
     {
-        return $this->container['include_phone_nrs'];
+        return $this->container['include_settings_group_name'];
     }
 
     /**
-     * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * Sets include_settings_group_name
+     * @param bool $include_settings_group_name 
      * @return $this
      */
-    public function setIncludePhoneNrs($include_phone_nrs)
+    public function setIncludeSettingsGroupName($include_settings_group_name)
     {
-        $this->container['include_phone_nrs'] = $include_phone_nrs;
+        $this->container['include_settings_group_name'] = $include_settings_group_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_record_info
+     * @return bool
+     */
+    public function getIncludeRecordInfo()
+    {
+        return $this->container['include_record_info'];
+    }
+
+    /**
+     * Sets include_record_info
+     * @param bool $include_record_info 
+     * @return $this
+     */
+    public function setIncludeRecordInfo($include_record_info)
+    {
+        $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_record_object
+     * @return bool
+     */
+    public function getIncludeRecordObject()
+    {
+        return $this->container['include_record_object'];
+    }
+
+    /**
+     * Sets include_record_object
+     * @param bool $include_record_object 
+     * @return $this
+     */
+    public function setIncludeRecordObject($include_record_object)
+    {
+        $this->container['include_record_object'] = $include_record_object;
 
         return $this;
     }

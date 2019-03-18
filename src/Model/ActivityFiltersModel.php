@@ -80,6 +80,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_name' => 'string[]',
         'description' => 'string[]',
         'reference' => 'string[]',
+        'search_text' => 'string',
         'route_id' => 'int[]',
         'user_id' => 'int',
         'party_id' => 'int',
@@ -120,6 +121,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_name' => null,
         'description' => null,
         'reference' => null,
+        'search_text' => null,
         'route_id' => null,
         'user_id' => null,
         'party_id' => null,
@@ -170,6 +172,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_name' => 'activity_type_name',
         'description' => 'description',
         'reference' => 'reference',
+        'search_text' => 'search_text',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
         'party_id' => 'party_id',
@@ -211,6 +214,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_name' => 'setActivityTypeName',
         'description' => 'setDescription',
         'reference' => 'setReference',
+        'search_text' => 'setSearchText',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
@@ -252,6 +256,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_name' => 'getActivityTypeName',
         'description' => 'getDescription',
         'reference' => 'getReference',
+        'search_text' => 'getSearchText',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
@@ -318,6 +323,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
@@ -894,6 +900,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_text
+     * @return string
+     */
+    public function getSearchText()
+    {
+        return $this->container['search_text'];
+    }
+
+    /**
+     * Sets search_text
+     * @param string $search_text free search through text and numeric type columns
+     * @return $this
+     */
+    public function setSearchText($search_text)
+    {
+        $this->container['search_text'] = $search_text;
 
         return $this;
     }

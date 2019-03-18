@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **activity_type_name** | **string[]** | Activity type name | [optional] 
 **description** | **string[]** | Activity description (not visible in Bumbal interface) | [optional] 
 **reference** | **string[]** | Activity reference | [optional] 
+**search_text** | **string** | free search through text and numeric type columns | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **party_id** | **int** | Party ID | [optional] 

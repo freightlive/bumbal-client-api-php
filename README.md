@@ -177,8 +177,9 @@ Class | Method | HTTP request | Description
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
 *SaywhenApi* | [**saywhenRetrievePortalURLs**](docs/Api/SaywhenApi.md#saywhenretrieveportalurls) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
 *SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
-*SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settingss
+*SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settings
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
+*SettingsApi* | [**setSetting**](docs/Api/SettingsApi.md#setsetting) | **POST** /settings/set | Set (update) Setting value
 *SettingsApi* | [**updateSettings**](docs/Api/SettingsApi.md#updatesettings) | **PUT** /settings/{settingsId} | Update a Settings
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
 *SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
@@ -254,6 +255,7 @@ Class | Method | HTTP request | Description
  - [AutoPlanDataModel](docs/Model/AutoPlanDataModel.md)
  - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
  - [AutoPlanOptionsModel](docs/Model/AutoPlanOptionsModel.md)
+ - [AutoPlanResponse](docs/Model/AutoPlanResponse.md)
  - [BrandColourFiltersModel](docs/Model/BrandColourFiltersModel.md)
  - [BrandColourModel](docs/Model/BrandColourModel.md)
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)

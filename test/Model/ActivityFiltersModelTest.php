@@ -260,6 +260,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
+
+    /**
      * Test attribute "route_id"
      */
     public function testPropertyRouteId()

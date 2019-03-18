@@ -76,4 +76,53 @@ class SettingsFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testSettingsFiltersModel()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "settings_group_id"
+     */
+    public function testPropertySettingsGroupId()
+    {
+    }
+
+    /**
+     * Test attribute "settings_group_name"
+     */
+    public function testPropertySettingsGroupName()
+    {
+    }
+
+    /**
+     * Test attribute "key"
+     */
+    public function testPropertyKey()
+    {
+    }
+
+    /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
+    {
+    }
 }
