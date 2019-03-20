@@ -63,6 +63,8 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'string',
         'package_type_id' => 'int',
         'barcode' => 'string',
+        'action_type_name' => 'string',
+        'checked_by_driver' => 'bool',
         'adr' => 'bool',
         'adr_class' => 'int',
         'adr_un_nr' => 'int',
@@ -96,6 +98,8 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => null,
         'package_type_id' => null,
         'barcode' => null,
+        'action_type_name' => null,
+        'checked_by_driver' => null,
         'adr' => null,
         'adr_class' => 'int64',
         'adr_un_nr' => 'int64',
@@ -139,6 +143,8 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'package_type_name',
         'package_type_id' => 'package_type_id',
         'barcode' => 'barcode',
+        'action_type_name' => 'action_type_name',
+        'checked_by_driver' => 'checked_by_driver',
         'adr' => 'ADR',
         'adr_class' => 'ADR_class',
         'adr_un_nr' => 'ADR_UN_nr',
@@ -173,6 +179,8 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'setPackageTypeName',
         'package_type_id' => 'setPackageTypeId',
         'barcode' => 'setBarcode',
+        'action_type_name' => 'setActionTypeName',
+        'checked_by_driver' => 'setCheckedByDriver',
         'adr' => 'setAdr',
         'adr_class' => 'setAdrClass',
         'adr_un_nr' => 'setAdrUnNr',
@@ -207,6 +215,8 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'getPackageTypeName',
         'package_type_id' => 'getPackageTypeId',
         'barcode' => 'getBarcode',
+        'action_type_name' => 'getActionTypeName',
+        'checked_by_driver' => 'getCheckedByDriver',
         'adr' => 'getAdr',
         'adr_class' => 'getAdrClass',
         'adr_un_nr' => 'getAdrUnNr',
@@ -249,6 +259,9 @@ class PackageLineModel implements ArrayAccess
     const STATUS_NAME_PLANNED = 'package_line_planned';
     const STATUS_NAME_IN_PROGRESS = 'package_line_in_progress';
     const STATUS_NAME_EXECUTED = 'package_line_executed';
+    const ACTION_TYPE_NAME_INBOUND = 'inbound';
+    const ACTION_TYPE_NAME_OUTBOUND = 'outbound';
+    const ACTION_TYPE_NAME_ASSESS = 'assess';
     
 
     
@@ -267,6 +280,19 @@ class PackageLineModel implements ArrayAccess
             self::STATUS_NAME_PLANNED,
             self::STATUS_NAME_IN_PROGRESS,
             self::STATUS_NAME_EXECUTED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionTypeNameAllowableValues()
+    {
+        return [
+            self::ACTION_TYPE_NAME_INBOUND,
+            self::ACTION_TYPE_NAME_OUTBOUND,
+            self::ACTION_TYPE_NAME_ASSESS,
         ];
     }
     
@@ -292,6 +318,8 @@ class PackageLineModel implements ArrayAccess
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
         $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
+        $this->container['action_type_name'] = isset($data['action_type_name']) ? $data['action_type_name'] : null;
+        $this->container['checked_by_driver'] = isset($data['checked_by_driver']) ? $data['checked_by_driver'] : null;
         $this->container['adr'] = isset($data['adr']) ? $data['adr'] : null;
         $this->container['adr_class'] = isset($data['adr_class']) ? $data['adr_class'] : null;
         $this->container['adr_un_nr'] = isset($data['adr_un_nr']) ? $data['adr_un_nr'] : null;
@@ -328,6 +356,14 @@ class PackageLineModel implements ArrayAccess
             );
         }
 
+        $allowed_values = $this->getActionTypeNameAllowableValues();
+        if (!in_array($this->container['action_type_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'action_type_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         return $invalid_properties;
     }
 
@@ -342,6 +378,10 @@ class PackageLineModel implements ArrayAccess
 
         $allowed_values = $this->getStatusNameAllowableValues();
         if (!in_array($this->container['status_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getActionTypeNameAllowableValues();
+        if (!in_array($this->container['action_type_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -542,6 +582,57 @@ class PackageLineModel implements ArrayAccess
     public function setBarcode($barcode)
     {
         $this->container['barcode'] = $barcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets action_type_name
+     * @return string
+     */
+    public function getActionTypeName()
+    {
+        return $this->container['action_type_name'];
+    }
+
+    /**
+     * Sets action_type_name
+     * @param string $action_type_name Action type name
+     * @return $this
+     */
+    public function setActionTypeName($action_type_name)
+    {
+        $allowed_values = $this->getActionTypeNameAllowableValues();
+        if (!is_null($action_type_name) && !in_array($action_type_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'action_type_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['action_type_name'] = $action_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets checked_by_driver
+     * @return bool
+     */
+    public function getCheckedByDriver()
+    {
+        return $this->container['checked_by_driver'];
+    }
+
+    /**
+     * Sets checked_by_driver
+     * @param bool $checked_by_driver boolean for whether or not the packages have been checked by the driver
+     * @return $this
+     */
+    public function setCheckedByDriver($checked_by_driver)
+    {
+        $this->container['checked_by_driver'] = $checked_by_driver;
 
         return $this;
     }

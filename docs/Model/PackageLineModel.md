@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **package_type_name** | **string** | Type of the Packages in the package line | [optional] 
 **package_type_id** | **int** | ID of the package type for the packages in this PackageLine | [optional] 
 **barcode** | **string** | barcode for packages in this package line | [optional] 
+**action_type_name** | **string** | Action type name | [optional] 
+**checked_by_driver** | **bool** | boolean for whether or not the packages have been checked by the driver | [optional] 
 **adr** | **bool** | boolean for whether or not the packages in this package line should be considered as ADR | [optional] 
 **adr_class** | **int** | ADR class of packages in package line | [optional] 
 **adr_un_nr** | **int** | ADR UN Nr of packages in package line | [optional] 

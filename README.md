@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *AssignmentApi* | [**retrieveListAssignment**](docs/Api/AssignmentApi.md#retrievelistassignment) | **PUT** /assignment | Retrieve List of Assignments
 *AssignmentApi* | [**setAssignment**](docs/Api/AssignmentApi.md#setassignment) | **POST** /assignment/set | Set (create or update) an Assignment
 *AssignmentApi* | [**updateAssignment**](docs/Api/AssignmentApi.md#updateassignment) | **PUT** /assignment/{assignmentId} | Update a assignment
+*AuthenticateApi* | [**authenticateCheckToken**](docs/Api/AuthenticateApi.md#authenticatechecktoken) | **GET** /authenticate/check-token | Check a token for validity
 *AuthenticateApi* | [**authenticateSignIn**](docs/Api/AuthenticateApi.md#authenticatesignin) | **POST** /authenticate/sign-in | Sign In with your user credentials
 *AuthenticateApi* | [**authenticateSignOut**](docs/Api/AuthenticateApi.md#authenticatesignout) | **GET** /authenticate/sign-out | Sign out
 *BrandApi* | [**createBrand**](docs/Api/BrandApi.md#createbrand) | **POST** /brand | Add a new Brand

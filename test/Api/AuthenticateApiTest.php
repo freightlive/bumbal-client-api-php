@@ -73,6 +73,16 @@ class AuthenticateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for authenticateCheckToken
+     *
+     * Check a token for validity.
+     *
+     */
+    public function testAuthenticateCheckToken()
+    {
+    }
+
+    /**
      * Test case for authenticateSignIn
      *
      * Sign In with your user credentials.

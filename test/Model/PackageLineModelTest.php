@@ -141,6 +141,20 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "action_type_name"
+     */
+    public function testPropertyActionTypeName()
+    {
+    }
+
+    /**
+     * Test attribute "checked_by_driver"
+     */
+    public function testPropertyCheckedByDriver()
+    {
+    }
+
+    /**
      * Test attribute "adr"
      */
     public function testPropertyAdr()
