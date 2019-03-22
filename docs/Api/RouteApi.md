@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteRoute**](RouteApi.md#deleteRoute) | **DELETE** /route/{routeId} | Delete an Route
 [**retrieveListRoute**](RouteApi.md#retrieveListRoute) | **PUT** /route | Retrieve List of Routes
 [**retrieveRoute**](RouteApi.md#retrieveRoute) | **GET** /route/{routeId} | Retrieve a Route
+[**routeStoreGeoLocations**](RouteApi.md#routeStoreGeoLocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
 [**setRoute**](RouteApi.md#setRoute) | **POST** /route/set | Set (create or update) an Route
 [**updateRoute**](RouteApi.md#updateRoute) | **PUT** /route/{routeId} | Update a Route
 
@@ -218,6 +219,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\RouteModel**](../Model/RouteModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **routeStoreGeoLocations**
+> \BumbalClient\Model\ApiResponse routeStoreGeoLocations($arguments)
+
+Store tracked Geo Locations in bulk
+
+Store tracked Geo Locations in bulk
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RouteApi();
+$arguments = new \BumbalClient\Model\RouteStoreGeoLocations(); // \BumbalClient\Model\RouteStoreGeoLocations | Request Arguments
+
+try {
+    $result = $api_instance->routeStoreGeoLocations($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RouteApi->routeStoreGeoLocations: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\RouteStoreGeoLocations**](../Model/RouteStoreGeoLocations.md)| Request Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

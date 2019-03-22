@@ -173,6 +173,7 @@ Class | Method | HTTP request | Description
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
+*RouteApi* | [**routeStoreGeoLocations**](docs/Api/RouteApi.md#routestoregeolocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
 *RouteApi* | [**setRoute**](docs/Api/RouteApi.md#setroute) | **POST** /route/set | Set (create or update) an Route
 *RouteApi* | [**updateRoute**](docs/Api/RouteApi.md#updateroute) | **PUT** /route/{routeId} | Update a Route
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
@@ -329,6 +330,7 @@ Class | Method | HTTP request | Description
  - [RouteModel](docs/Model/RouteModel.md)
  - [RouteOptionsModel](docs/Model/RouteOptionsModel.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
+ - [RouteStoreGeoLocations](docs/Model/RouteStoreGeoLocations.md)
  - [SayWhenConfigModel](docs/Model/SayWhenConfigModel.md)
  - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)

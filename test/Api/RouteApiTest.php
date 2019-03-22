@@ -113,6 +113,16 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for routeStoreGeoLocations
+     *
+     * Store tracked Geo Locations in bulk.
+     *
+     */
+    public function testRouteStoreGeoLocations()
+    {
+    }
+
+    /**
      * Test case for setRoute
      *
      * Set (create or update) an Route.
