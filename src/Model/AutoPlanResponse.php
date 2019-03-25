@@ -274,7 +274,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Sets affected_activities
-     * @param \BumbalClient\Model\ActivityModel[] $affected_activities 
+     * @param \BumbalClient\Model\ActivityModel[] $affected_activities
      * @return $this
      */
     public function setAffectedActivities($affected_activities)
@@ -295,7 +295,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \BumbalClient\Model\TimeSlotModel[] $unavailable_timewindows 
+     * @param \BumbalClient\Model\TimeSlotModel[] $unavailable_timewindows
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)
@@ -316,7 +316,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime $latest_analyzed_date 
+     * @param \DateTime $latest_analyzed_date
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)

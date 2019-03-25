@@ -999,7 +999,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets depot_address_links
-     * @param \BumbalClient\Model\LinkModel[] $depot_address_links 
+     * @param \BumbalClient\Model\LinkModel[] $depot_address_links
      * @return $this
      */
     public function setDepotAddressLinks($depot_address_links)

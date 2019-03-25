@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 *BrandApi* | [**retrieveListBrand**](docs/Api/BrandApi.md#retrievelistbrand) | **PUT** /brand | Retrieve List of Brands
 *BrandApi* | [**setBrand**](docs/Api/BrandApi.md#setbrand) | **POST** /brand/set | Set (create or update) a Brand
 *BrandApi* | [**updateBrand**](docs/Api/BrandApi.md#updatebrand) | **PUT** /brand/{brandId} | Update a Brand
+*CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
