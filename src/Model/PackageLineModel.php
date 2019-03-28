@@ -63,6 +63,7 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'string',
         'package_type_id' => 'int',
         'barcode' => 'string',
+        'action_type_id' => 'string',
         'action_type_name' => 'string',
         'checked_by_driver' => 'bool',
         'adr' => 'bool',
@@ -98,6 +99,7 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => null,
         'package_type_id' => null,
         'barcode' => null,
+        'action_type_id' => null,
         'action_type_name' => null,
         'checked_by_driver' => null,
         'adr' => null,
@@ -143,6 +145,7 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'package_type_name',
         'package_type_id' => 'package_type_id',
         'barcode' => 'barcode',
+        'action_type_id' => 'action_type_id',
         'action_type_name' => 'action_type_name',
         'checked_by_driver' => 'checked_by_driver',
         'adr' => 'ADR',
@@ -179,6 +182,7 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'setPackageTypeName',
         'package_type_id' => 'setPackageTypeId',
         'barcode' => 'setBarcode',
+        'action_type_id' => 'setActionTypeId',
         'action_type_name' => 'setActionTypeName',
         'checked_by_driver' => 'setCheckedByDriver',
         'adr' => 'setAdr',
@@ -215,6 +219,7 @@ class PackageLineModel implements ArrayAccess
         'package_type_name' => 'getPackageTypeName',
         'package_type_id' => 'getPackageTypeId',
         'barcode' => 'getBarcode',
+        'action_type_id' => 'getActionTypeId',
         'action_type_name' => 'getActionTypeName',
         'checked_by_driver' => 'getCheckedByDriver',
         'adr' => 'getAdr',
@@ -259,6 +264,9 @@ class PackageLineModel implements ArrayAccess
     const STATUS_NAME_PLANNED = 'package_line_planned';
     const STATUS_NAME_IN_PROGRESS = 'package_line_in_progress';
     const STATUS_NAME_EXECUTED = 'package_line_executed';
+    const ACTION_TYPE_ID__1 = '1';
+    const ACTION_TYPE_ID__2 = '2';
+    const ACTION_TYPE_ID__3 = '3';
     const ACTION_TYPE_NAME_INBOUND = 'inbound';
     const ACTION_TYPE_NAME_OUTBOUND = 'outbound';
     const ACTION_TYPE_NAME_ASSESS = 'assess';
@@ -280,6 +288,19 @@ class PackageLineModel implements ArrayAccess
             self::STATUS_NAME_PLANNED,
             self::STATUS_NAME_IN_PROGRESS,
             self::STATUS_NAME_EXECUTED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActionTypeIdAllowableValues()
+    {
+        return [
+            self::ACTION_TYPE_ID__1,
+            self::ACTION_TYPE_ID__2,
+            self::ACTION_TYPE_ID__3,
         ];
     }
     
@@ -318,6 +339,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
         $this->container['package_type_id'] = isset($data['package_type_id']) ? $data['package_type_id'] : null;
         $this->container['barcode'] = isset($data['barcode']) ? $data['barcode'] : null;
+        $this->container['action_type_id'] = isset($data['action_type_id']) ? $data['action_type_id'] : null;
         $this->container['action_type_name'] = isset($data['action_type_name']) ? $data['action_type_name'] : null;
         $this->container['checked_by_driver'] = isset($data['checked_by_driver']) ? $data['checked_by_driver'] : null;
         $this->container['adr'] = isset($data['adr']) ? $data['adr'] : null;
@@ -356,6 +378,14 @@ class PackageLineModel implements ArrayAccess
             );
         }
 
+        $allowed_values = $this->getActionTypeIdAllowableValues();
+        if (!in_array($this->container['action_type_id'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'action_type_id', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         $allowed_values = $this->getActionTypeNameAllowableValues();
         if (!in_array($this->container['action_type_name'], $allowed_values)) {
             $invalid_properties[] = sprintf(
@@ -378,6 +408,10 @@ class PackageLineModel implements ArrayAccess
 
         $allowed_values = $this->getStatusNameAllowableValues();
         if (!in_array($this->container['status_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getActionTypeIdAllowableValues();
+        if (!in_array($this->container['action_type_id'], $allowed_values)) {
             return false;
         }
         $allowed_values = $this->getActionTypeNameAllowableValues();
@@ -582,6 +616,36 @@ class PackageLineModel implements ArrayAccess
     public function setBarcode($barcode)
     {
         $this->container['barcode'] = $barcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets action_type_id
+     * @return string
+     */
+    public function getActionTypeId()
+    {
+        return $this->container['action_type_id'];
+    }
+
+    /**
+     * Sets action_type_id
+     * @param string $action_type_id Action type name, 1:inbound, 2:outbound, 3:assess
+     * @return $this
+     */
+    public function setActionTypeId($action_type_id)
+    {
+        $allowed_values = $this->getActionTypeIdAllowableValues();
+        if (!is_null($action_type_id) && !in_array($action_type_id, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'action_type_id', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['action_type_id'] = $action_type_id;
 
         return $this;
     }
@@ -816,7 +880,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -837,7 +901,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -879,7 +943,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -900,7 +964,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -921,7 +985,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -942,7 +1006,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)

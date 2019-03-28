@@ -141,6 +141,13 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "action_type_id"
+     */
+    public function testPropertyActionTypeId()
+    {
+    }
+
+    /**
      * Test attribute "action_type_name"
      */
     public function testPropertyActionTypeName()

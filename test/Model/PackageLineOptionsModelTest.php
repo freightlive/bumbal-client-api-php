@@ -160,4 +160,11 @@ class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludePackageLineFilesMetaData()
     {
     }
+
+    /**
+     * Test attribute "include_action_type_name"
+     */
+    public function testPropertyIncludeActionTypeName()
+    {
+    }
 }

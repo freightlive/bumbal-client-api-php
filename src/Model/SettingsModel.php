@@ -251,7 +251,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -407,7 +407,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user 
      * @return $this
      */
     public function setSettingUpdatedByUser($setting_updated_by_user)

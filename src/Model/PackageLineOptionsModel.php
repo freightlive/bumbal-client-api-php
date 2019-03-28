@@ -65,7 +65,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_package_line_files' => 'bool',
-        'include_package_line_files_meta_data' => 'bool'
+        'include_package_line_files_meta_data' => 'bool',
+        'include_action_type_name' => 'bool'
     ];
 
     /**
@@ -84,7 +85,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => null,
         'include_package_lines_info' => null,
         'include_package_line_files' => null,
-        'include_package_line_files_meta_data' => null
+        'include_package_line_files_meta_data' => null,
+        'include_action_type_name' => null
     ];
 
     public static function swaggerTypes()
@@ -113,7 +115,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'include_links',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_package_line_files' => 'include_package_line_files',
-        'include_package_line_files_meta_data' => 'include_package_line_files_meta_data'
+        'include_package_line_files_meta_data' => 'include_package_line_files_meta_data',
+        'include_action_type_name' => 'include_action_type_name'
     ];
 
 
@@ -133,7 +136,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'setIncludeLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_package_line_files' => 'setIncludePackageLineFiles',
-        'include_package_line_files_meta_data' => 'setIncludePackageLineFilesMetaData'
+        'include_package_line_files_meta_data' => 'setIncludePackageLineFilesMetaData',
+        'include_action_type_name' => 'setIncludeActionTypeName'
     ];
 
 
@@ -153,7 +157,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'getIncludeLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_package_line_files' => 'getIncludePackageLineFiles',
-        'include_package_line_files_meta_data' => 'getIncludePackageLineFilesMetaData'
+        'include_package_line_files_meta_data' => 'getIncludePackageLineFilesMetaData',
+        'include_action_type_name' => 'getIncludeActionTypeName'
     ];
 
     public static function attributeMap()
@@ -199,6 +204,7 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_package_line_files'] = isset($data['include_package_line_files']) ? $data['include_package_line_files'] : null;
         $this->container['include_package_line_files_meta_data'] = isset($data['include_package_line_files_meta_data']) ? $data['include_package_line_files_meta_data'] : null;
+        $this->container['include_action_type_name'] = isset($data['include_action_type_name']) ? $data['include_action_type_name'] : null;
     }
 
     /**
@@ -237,7 +243,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_notes
-     * @param bool $include_package_line_notes
+     * @param bool $include_package_line_notes 
      * @return $this
      */
     public function setIncludePackageLineNotes($include_package_line_notes)
@@ -258,7 +264,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_tags
-     * @param bool $include_package_line_tags
+     * @param bool $include_package_line_tags 
      * @return $this
      */
     public function setIncludePackageLineTags($include_package_line_tags)
@@ -279,7 +285,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_type_name
-     * @param bool $include_package_type_name
+     * @param bool $include_package_type_name 
      * @return $this
      */
     public function setIncludePackageTypeName($include_package_type_name)
@@ -300,7 +306,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_references
-     * @param bool $include_package_line_references
+     * @param bool $include_package_line_references 
      * @return $this
      */
     public function setIncludePackageLineReferences($include_package_line_references)
@@ -321,7 +327,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files_record_info
-     * @param bool $include_package_line_files_record_info
+     * @param bool $include_package_line_files_record_info 
      * @return $this
      */
     public function setIncludePackageLineFilesRecordInfo($include_package_line_files_record_info)
@@ -342,7 +348,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_record_info
-     * @param bool $include_package_line_record_info
+     * @param bool $include_package_line_record_info 
      * @return $this
      */
     public function setIncludePackageLineRecordInfo($include_package_line_record_info)
@@ -363,7 +369,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_ids
-     * @param bool $include_activity_ids
+     * @param bool $include_activity_ids 
      * @return $this
      */
     public function setIncludeActivityIds($include_activity_ids)
@@ -384,7 +390,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_meta_data
-     * @param bool $include_package_line_meta_data
+     * @param bool $include_package_line_meta_data 
      * @return $this
      */
     public function setIncludePackageLineMetaData($include_package_line_meta_data)
@@ -405,7 +411,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links
+     * @param bool $include_links 
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -426,7 +432,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_lines_info
-     * @param bool $include_package_lines_info
+     * @param bool $include_package_lines_info 
      * @return $this
      */
     public function setIncludePackageLinesInfo($include_package_lines_info)
@@ -447,7 +453,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files
-     * @param bool $include_package_line_files
+     * @param bool $include_package_line_files 
      * @return $this
      */
     public function setIncludePackageLineFiles($include_package_line_files)
@@ -468,12 +474,33 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_files_meta_data
-     * @param bool $include_package_line_files_meta_data
+     * @param bool $include_package_line_files_meta_data 
      * @return $this
      */
     public function setIncludePackageLineFilesMetaData($include_package_line_files_meta_data)
     {
         $this->container['include_package_line_files_meta_data'] = $include_package_line_files_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_action_type_name
+     * @return bool
+     */
+    public function getIncludeActionTypeName()
+    {
+        return $this->container['include_action_type_name'];
+    }
+
+    /**
+     * Sets include_action_type_name
+     * @param bool $include_action_type_name 
+     * @return $this
+     */
+    public function setIncludeActionTypeName($include_action_type_name)
+    {
+        $this->container['include_action_type_name'] = $include_action_type_name;
 
         return $this;
     }
