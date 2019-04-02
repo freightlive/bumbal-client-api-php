@@ -85,16 +85,16 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "shipment_activity_id"
+     * Test attribute "assignment_id"
      */
-    public function testPropertyShipmentActivityId()
+    public function testPropertyAssignmentId()
     {
     }
 
     /**
-     * Test attribute "assignment_id"
+     * Test attribute "shipment_activity_id"
      */
-    public function testPropertyAssignmentId()
+    public function testPropertyShipmentActivityId()
     {
     }
 
@@ -284,6 +284,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "party_id"
      */
     public function testPropertyPartyId()
+    {
+    }
+
+    /**
+     * Test attribute "recurrence_id"
+     */
+    public function testPropertyRecurrenceId()
     {
     }
 

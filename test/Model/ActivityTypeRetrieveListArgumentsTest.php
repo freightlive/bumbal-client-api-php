@@ -1,6 +1,6 @@
 <?php
 /**
- * PartyOptionsModelTest
+ * ActivityTypeRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * PartyOptionsModelTest Class Doc Comment
+ * ActivityTypeRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartyOptionsModel
+// * @description ActivityTypeRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartyOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ActivityTypeRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,44 @@ class PartyOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartyOptionsModel"
+     * Test "ActivityTypeRetrieveListArguments"
      */
-    public function testPartyOptionsModel()
+    public function testActivityTypeRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "include_tags"
+     * Test attribute "options"
      */
-    public function testPropertyIncludeTags()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "include_tag_ids"
+     * Test attribute "filters"
      */
-    public function testPropertyIncludeTagIds()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "include_tag_names"
+     * Test attribute "limit"
      */
-    public function testPropertyIncludeTagNames()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "include_links"
+     * Test attribute "offset"
      */
-    public function testPropertyIncludeLinks()
+    public function testPropertyOffset()
     {
     }
 
     /**
-     * Test attribute "include_meta_data"
+     * Test attribute "search_text"
      */
-    public function testPropertyIncludeMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_notes"
-     */
-    public function testPropertyIncludeNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_record_info"
-     */
-    public function testPropertyIncludeRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_party_type_name"
-     */
-    public function testPropertyIncludePartyTypeName()
+    public function testPropertySearchText()
     {
     }
 }

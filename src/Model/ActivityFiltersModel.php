@@ -55,8 +55,8 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
-        'shipment_activity_id' => 'int[]',
         'assignment_id' => 'int[]',
+        'shipment_activity_id' => 'int[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'date_time_from_since' => '\DateTime',
@@ -84,6 +84,7 @@ class ActivityFiltersModel implements ArrayAccess
         'route_id' => 'int[]',
         'user_id' => 'int',
         'party_id' => 'int',
+        'recurrence_id' => 'int',
         'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
         'zone_names' => 'string[]',
         'link' => 'object[]',
@@ -96,8 +97,8 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'shipment_activity_id' => null,
         'assignment_id' => null,
+        'shipment_activity_id' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'date_time_from_since' => 'date-time',
@@ -125,6 +126,7 @@ class ActivityFiltersModel implements ArrayAccess
         'route_id' => null,
         'user_id' => null,
         'party_id' => null,
+        'recurrence_id' => null,
         'depot_address_links' => null,
         'zone_names' => null,
         'link' => null,
@@ -147,8 +149,8 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'shipment_activity_id' => 'shipment_activity_id',
         'assignment_id' => 'assignment_id',
+        'shipment_activity_id' => 'shipment_activity_id',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'date_time_from_since' => 'date_time_from_since',
@@ -176,6 +178,7 @@ class ActivityFiltersModel implements ArrayAccess
         'route_id' => 'route_id',
         'user_id' => 'user_id',
         'party_id' => 'party_id',
+        'recurrence_id' => 'recurrence_id',
         'depot_address_links' => 'depot_address_links',
         'zone_names' => 'zone_names',
         'link' => 'link',
@@ -189,8 +192,8 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'shipment_activity_id' => 'setShipmentActivityId',
         'assignment_id' => 'setAssignmentId',
+        'shipment_activity_id' => 'setShipmentActivityId',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'date_time_from_since' => 'setDateTimeFromSince',
@@ -218,6 +221,7 @@ class ActivityFiltersModel implements ArrayAccess
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
         'party_id' => 'setPartyId',
+        'recurrence_id' => 'setRecurrenceId',
         'depot_address_links' => 'setDepotAddressLinks',
         'zone_names' => 'setZoneNames',
         'link' => 'setLink',
@@ -231,8 +235,8 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'shipment_activity_id' => 'getShipmentActivityId',
         'assignment_id' => 'getAssignmentId',
+        'shipment_activity_id' => 'getShipmentActivityId',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'date_time_from_since' => 'getDateTimeFromSince',
@@ -260,6 +264,7 @@ class ActivityFiltersModel implements ArrayAccess
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
         'party_id' => 'getPartyId',
+        'recurrence_id' => 'getRecurrenceId',
         'depot_address_links' => 'getDepotAddressLinks',
         'zone_names' => 'getZoneNames',
         'link' => 'getLink',
@@ -298,8 +303,8 @@ class ActivityFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
+        $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['date_time_from_since'] = isset($data['date_time_from_since']) ? $data['date_time_from_since'] : null;
@@ -327,6 +332,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
         $this->container['depot_address_links'] = isset($data['depot_address_links']) ? $data['depot_address_links'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
@@ -380,27 +386,6 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets shipment_activity_id
-     * @return int[]
-     */
-    public function getShipmentActivityId()
-    {
-        return $this->container['shipment_activity_id'];
-    }
-
-    /**
-     * Sets shipment_activity_id
-     * @param int[] $shipment_activity_id Unique Identifier(s) partner shipment activity
-     * @return $this
-     */
-    public function setShipmentActivityId($shipment_activity_id)
-    {
-        $this->container['shipment_activity_id'] = $shipment_activity_id;
-
-        return $this;
-    }
-
-    /**
      * Gets assignment_id
      * @return int[]
      */
@@ -417,6 +402,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setAssignmentId($assignment_id)
     {
         $this->container['assignment_id'] = $assignment_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipment_activity_id
+     * @return int[]
+     */
+    public function getShipmentActivityId()
+    {
+        return $this->container['shipment_activity_id'];
+    }
+
+    /**
+     * Sets shipment_activity_id
+     * @param int[] $shipment_activity_id Unique Identifier(s) partner shipment activity
+     * @return $this
+     */
+    public function setShipmentActivityId($shipment_activity_id)
+    {
+        $this->container['shipment_activity_id'] = $shipment_activity_id;
 
         return $this;
     }
@@ -984,6 +990,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setPartyId($party_id)
     {
         $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_id
+     * @return int
+     */
+    public function getRecurrenceId()
+    {
+        return $this->container['recurrence_id'];
+    }
+
+    /**
+     * Sets recurrence_id
+     * @param int $recurrence_id Recurrence ID
+     * @return $this
+     */
+    public function setRecurrenceId($recurrence_id)
+    {
+        $this->container['recurrence_id'] = $recurrence_id;
 
         return $this;
     }

@@ -54,7 +54,14 @@ class PartyOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_tags' => 'bool',
+        'include_tag_ids' => 'bool',
+        'include_tag_names' => 'bool',
+        'include_links' => 'bool',
+        'include_meta_data' => 'bool',
+        'include_notes' => 'bool',
+        'include_record_info' => 'bool',
+        'include_party_type_name' => 'bool'
     ];
 
     /**
@@ -62,7 +69,14 @@ class PartyOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_phone_nrs' => null
+        'include_tags' => null,
+        'include_tag_ids' => null,
+        'include_tag_names' => null,
+        'include_links' => null,
+        'include_meta_data' => null,
+        'include_notes' => null,
+        'include_record_info' => null,
+        'include_party_type_name' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +94,14 @@ class PartyOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_tags' => 'include_tags',
+        'include_tag_ids' => 'include_tag_ids',
+        'include_tag_names' => 'include_tag_names',
+        'include_links' => 'include_links',
+        'include_meta_data' => 'include_meta_data',
+        'include_notes' => 'include_notes',
+        'include_record_info' => 'include_record_info',
+        'include_party_type_name' => 'include_party_type_name'
     ];
 
 
@@ -89,7 +110,14 @@ class PartyOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_tags' => 'setIncludeTags',
+        'include_tag_ids' => 'setIncludeTagIds',
+        'include_tag_names' => 'setIncludeTagNames',
+        'include_links' => 'setIncludeLinks',
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_notes' => 'setIncludeNotes',
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_party_type_name' => 'setIncludePartyTypeName'
     ];
 
 
@@ -98,7 +126,14 @@ class PartyOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_tags' => 'getIncludeTags',
+        'include_tag_ids' => 'getIncludeTagIds',
+        'include_tag_names' => 'getIncludeTagNames',
+        'include_links' => 'getIncludeLinks',
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_notes' => 'getIncludeNotes',
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_party_type_name' => 'getIncludePartyTypeName'
     ];
 
     public static function attributeMap()
@@ -132,7 +167,14 @@ class PartyOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
+        $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_party_type_name'] = isset($data['include_party_type_name']) ? $data['include_party_type_name'] : null;
     }
 
     /**
@@ -161,22 +203,169 @@ class PartyOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_phone_nrs
+     * Gets include_tags
      * @return bool
      */
-    public function getIncludePhoneNrs()
+    public function getIncludeTags()
     {
-        return $this->container['include_phone_nrs'];
+        return $this->container['include_tags'];
     }
 
     /**
-     * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * Sets include_tags
+     * @param bool $include_tags 
      * @return $this
      */
-    public function setIncludePhoneNrs($include_phone_nrs)
+    public function setIncludeTags($include_tags)
     {
-        $this->container['include_phone_nrs'] = $include_phone_nrs;
+        $this->container['include_tags'] = $include_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_ids
+     * @return bool
+     */
+    public function getIncludeTagIds()
+    {
+        return $this->container['include_tag_ids'];
+    }
+
+    /**
+     * Sets include_tag_ids
+     * @param bool $include_tag_ids 
+     * @return $this
+     */
+    public function setIncludeTagIds($include_tag_ids)
+    {
+        $this->container['include_tag_ids'] = $include_tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_names
+     * @return bool
+     */
+    public function getIncludeTagNames()
+    {
+        return $this->container['include_tag_names'];
+    }
+
+    /**
+     * Sets include_tag_names
+     * @param bool $include_tag_names 
+     * @return $this
+     */
+    public function setIncludeTagNames($include_tag_names)
+    {
+        $this->container['include_tag_names'] = $include_tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_notes
+     * @return bool
+     */
+    public function getIncludeNotes()
+    {
+        return $this->container['include_notes'];
+    }
+
+    /**
+     * Sets include_notes
+     * @param bool $include_notes 
+     * @return $this
+     */
+    public function setIncludeNotes($include_notes)
+    {
+        $this->container['include_notes'] = $include_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_record_info
+     * @return bool
+     */
+    public function getIncludeRecordInfo()
+    {
+        return $this->container['include_record_info'];
+    }
+
+    /**
+     * Sets include_record_info
+     * @param bool $include_record_info 
+     * @return $this
+     */
+    public function setIncludeRecordInfo($include_record_info)
+    {
+        $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_party_type_name
+     * @return bool
+     */
+    public function getIncludePartyTypeName()
+    {
+        return $this->container['include_party_type_name'];
+    }
+
+    /**
+     * Sets include_party_type_name
+     * @param bool $include_party_type_name 
+     * @return $this
+     */
+    public function setIncludePartyTypeName($include_party_type_name)
+    {
+        $this->container['include_party_type_name'] = $include_party_type_name;
 
         return $this;
     }

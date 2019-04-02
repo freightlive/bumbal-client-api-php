@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **id** | **int[]** | Unique Identifier | [optional] 
 **party_type_name** | **string[]** | Type of this party | [optional] 
 **party_type_id** | **int[]** | PartyTypeID of this party. 2 &#x3D; contractor, 3 &#x3D; booking | [optional] 
-**address_id** | **int[]** | Address ID (unique) | [optional] 
 **name_1** | **string[]** | Name 1 for party | [optional] 
 **name_2** | **string[]** | Name 2 for party | [optional] 
 **nr** | **string[]** | Number of this party | [optional] 

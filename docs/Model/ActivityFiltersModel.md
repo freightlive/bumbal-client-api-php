@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier(s) | [optional] 
-**shipment_activity_id** | **int[]** | Unique Identifier(s) partner shipment activity | [optional] 
 **assignment_id** | **int[]** | Identifier(s) assignment(s) for activities | [optional] 
+**shipment_activity_id** | **int[]** | Unique Identifier(s) partner shipment activity | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | DateTime From | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | DateTime To | [optional] 
 **date_time_from_since** | [**\DateTime**](\DateTime.md) | filter activities with a DateTime From since this input | [optional] 
@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **route_id** | **int[]** | Route id | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **party_id** | **int** | Party ID | [optional] 
+**recurrence_id** | **int** | Recurrence ID | [optional] 
 **depot_address_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 

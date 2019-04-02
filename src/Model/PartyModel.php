@@ -57,20 +57,22 @@ class PartyModel implements ArrayAccess
         'id' => 'int',
         'party_type_name' => 'string',
         'party_type_id' => 'int',
-        'address' => '\BumbalClient\Model\AddressModel',
-        'address_id' => 'int',
         'name_1' => 'string',
         'name_2' => 'string',
         'nr' => 'string',
         'contact_person' => 'string',
         'url' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
+        'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'updated_at' => '\DateTime',
+        'party_created_by_user' => '\BumbalClient\Model\UsersModel',
+        'party_updated_by_user' => '\BumbalClient\Model\UsersModel'
     ];
 
     /**
@@ -81,20 +83,22 @@ class PartyModel implements ArrayAccess
         'id' => 'int64',
         'party_type_name' => null,
         'party_type_id' => null,
-        'address' => null,
-        'address_id' => null,
         'name_1' => null,
         'name_2' => null,
         'nr' => null,
         'contact_person' => null,
         'url' => null,
         'tags' => null,
+        'tag_names' => null,
+        'tag_ids' => null,
         'links' => null,
         'meta_data' => null,
         'notes' => null,
         'files' => null,
         'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'updated_at' => 'date-time',
+        'party_created_by_user' => null,
+        'party_updated_by_user' => null
     ];
 
     public static function swaggerTypes()
@@ -115,20 +119,22 @@ class PartyModel implements ArrayAccess
         'id' => 'id',
         'party_type_name' => 'party_type_name',
         'party_type_id' => 'party_type_id',
-        'address' => 'address',
-        'address_id' => 'address_id',
         'name_1' => 'name_1',
         'name_2' => 'name_2',
         'nr' => 'nr',
         'contact_person' => 'contact_person',
         'url' => 'url',
         'tags' => 'tags',
+        'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
         'files' => 'files',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'updated_at' => 'updated_at',
+        'party_created_by_user' => 'party_created_by_user',
+        'party_updated_by_user' => 'party_updated_by_user'
     ];
 
 
@@ -140,20 +146,22 @@ class PartyModel implements ArrayAccess
         'id' => 'setId',
         'party_type_name' => 'setPartyTypeName',
         'party_type_id' => 'setPartyTypeId',
-        'address' => 'setAddress',
-        'address_id' => 'setAddressId',
         'name_1' => 'setName1',
         'name_2' => 'setName2',
         'nr' => 'setNr',
         'contact_person' => 'setContactPerson',
         'url' => 'setUrl',
         'tags' => 'setTags',
+        'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'updated_at' => 'setUpdatedAt',
+        'party_created_by_user' => 'setPartyCreatedByUser',
+        'party_updated_by_user' => 'setPartyUpdatedByUser'
     ];
 
 
@@ -165,20 +173,22 @@ class PartyModel implements ArrayAccess
         'id' => 'getId',
         'party_type_name' => 'getPartyTypeName',
         'party_type_id' => 'getPartyTypeId',
-        'address' => 'getAddress',
-        'address_id' => 'getAddressId',
         'name_1' => 'getName1',
         'name_2' => 'getName2',
         'nr' => 'getNr',
         'contact_person' => 'getContactPerson',
         'url' => 'getUrl',
         'tags' => 'getTags',
+        'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'updated_at' => 'getUpdatedAt',
+        'party_created_by_user' => 'getPartyCreatedByUser',
+        'party_updated_by_user' => 'getPartyUpdatedByUser'
     ];
 
     public static function attributeMap()
@@ -229,20 +239,22 @@ class PartyModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_type_name'] = isset($data['party_type_name']) ? $data['party_type_name'] : null;
         $this->container['party_type_id'] = isset($data['party_type_id']) ? $data['party_type_id'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
         $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['contact_person'] = isset($data['contact_person']) ? $data['contact_person'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['party_created_by_user'] = isset($data['party_created_by_user']) ? $data['party_created_by_user'] : null;
+        $this->container['party_updated_by_user'] = isset($data['party_updated_by_user']) ? $data['party_updated_by_user'] : null;
     }
 
     /**
@@ -350,48 +362,6 @@ class PartyModel implements ArrayAccess
     public function setPartyTypeId($party_type_id)
     {
         $this->container['party_type_id'] = $party_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     * @return \BumbalClient\Model\AddressModel
-     */
-    public function getAddress()
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     * @param \BumbalClient\Model\AddressModel $address 
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_id
-     * @return int
-     */
-    public function getAddressId()
-    {
-        return $this->container['address_id'];
-    }
-
-    /**
-     * Sets address_id
-     * @param int $address_id Address ID (unique)
-     * @return $this
-     */
-    public function setAddressId($address_id)
-    {
-        $this->container['address_id'] = $address_id;
 
         return $this;
     }
@@ -523,6 +493,48 @@ class PartyModel implements ArrayAccess
     }
 
     /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names Tag names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag ids
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -644,6 +656,48 @@ class PartyModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_created_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getPartyCreatedByUser()
+    {
+        return $this->container['party_created_by_user'];
+    }
+
+    /**
+     * Sets party_created_by_user
+     * @param \BumbalClient\Model\UsersModel $party_created_by_user 
+     * @return $this
+     */
+    public function setPartyCreatedByUser($party_created_by_user)
+    {
+        $this->container['party_created_by_user'] = $party_created_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_updated_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getPartyUpdatedByUser()
+    {
+        return $this->container['party_updated_by_user'];
+    }
+
+    /**
+     * Sets party_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $party_updated_by_user 
+     * @return $this
+     */
+    public function setPartyUpdatedByUser($party_updated_by_user)
+    {
+        $this->container['party_updated_by_user'] = $party_updated_by_user;
 
         return $this;
     }

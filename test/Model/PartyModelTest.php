@@ -99,20 +99,6 @@ class PartyModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "address"
-     */
-    public function testPropertyAddress()
-    {
-    }
-
-    /**
-     * Test attribute "address_id"
-     */
-    public function testPropertyAddressId()
-    {
-    }
-
-    /**
      * Test attribute "name_1"
      */
     public function testPropertyName1()
@@ -155,6 +141,20 @@ class PartyModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()
@@ -193,6 +193,20 @@ class PartyModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "updated_at"
      */
     public function testPropertyUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "party_created_by_user"
+     */
+    public function testPropertyPartyCreatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "party_updated_by_user"
+     */
+    public function testPropertyPartyUpdatedByUser()
     {
     }
 }

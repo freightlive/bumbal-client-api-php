@@ -1,6 +1,6 @@
 <?php
 /**
- * PartyOptionsModelTest
+ * ActivityTypeModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * PartyOptionsModelTest Class Doc Comment
+ * ActivityTypeModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PartyOptionsModel
+// * @description ActivityTypeModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PartyOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ActivityTypeModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,23 @@ class PartyOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PartyOptionsModel"
+     * Test "ActivityTypeModel"
      */
-    public function testPartyOptionsModel()
+    public function testActivityTypeModel()
     {
     }
 
     /**
-     * Test attribute "include_tags"
+     * Test attribute "id"
      */
-    public function testPropertyIncludeTags()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "include_tag_ids"
+     * Test attribute "name"
      */
-    public function testPropertyIncludeTagIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_tag_names"
-     */
-    public function testPropertyIncludeTagNames()
-    {
-    }
-
-    /**
-     * Test attribute "include_links"
-     */
-    public function testPropertyIncludeLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_meta_data"
-     */
-    public function testPropertyIncludeMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_notes"
-     */
-    public function testPropertyIncludeNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_record_info"
-     */
-    public function testPropertyIncludeRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_party_type_name"
-     */
-    public function testPropertyIncludePartyTypeName()
+    public function testPropertyName()
     {
     }
 }

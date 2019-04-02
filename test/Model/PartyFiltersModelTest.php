@@ -99,13 +99,6 @@ class PartyFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "address_id"
-     */
-    public function testPropertyAddressId()
-    {
-    }
-
-    /**
      * Test attribute "name_1"
      */
     public function testPropertyName1()

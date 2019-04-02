@@ -57,7 +57,6 @@ class PartyFiltersModel implements ArrayAccess
         'id' => 'int[]',
         'party_type_name' => 'string[]',
         'party_type_id' => 'int[]',
-        'address_id' => 'int[]',
         'name_1' => 'string[]',
         'name_2' => 'string[]',
         'nr' => 'string[]',
@@ -76,7 +75,6 @@ class PartyFiltersModel implements ArrayAccess
         'id' => null,
         'party_type_name' => null,
         'party_type_id' => null,
-        'address_id' => null,
         'name_1' => null,
         'name_2' => null,
         'nr' => null,
@@ -105,7 +103,6 @@ class PartyFiltersModel implements ArrayAccess
         'id' => 'id',
         'party_type_name' => 'party_type_name',
         'party_type_id' => 'party_type_id',
-        'address_id' => 'address_id',
         'name_1' => 'name_1',
         'name_2' => 'name_2',
         'nr' => 'nr',
@@ -125,7 +122,6 @@ class PartyFiltersModel implements ArrayAccess
         'id' => 'setId',
         'party_type_name' => 'setPartyTypeName',
         'party_type_id' => 'setPartyTypeId',
-        'address_id' => 'setAddressId',
         'name_1' => 'setName1',
         'name_2' => 'setName2',
         'nr' => 'setNr',
@@ -145,7 +141,6 @@ class PartyFiltersModel implements ArrayAccess
         'id' => 'getId',
         'party_type_name' => 'getPartyTypeName',
         'party_type_id' => 'getPartyTypeId',
-        'address_id' => 'getAddressId',
         'name_1' => 'getName1',
         'name_2' => 'getName2',
         'nr' => 'getNr',
@@ -190,7 +185,6 @@ class PartyFiltersModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_type_name'] = isset($data['party_type_name']) ? $data['party_type_name'] : null;
         $this->container['party_type_id'] = isset($data['party_type_id']) ? $data['party_type_id'] : null;
-        $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
         $this->container['name_2'] = isset($data['name_2']) ? $data['name_2'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
@@ -285,27 +279,6 @@ class PartyFiltersModel implements ArrayAccess
     public function setPartyTypeId($party_type_id)
     {
         $this->container['party_type_id'] = $party_type_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets address_id
-     * @return int[]
-     */
-    public function getAddressId()
-    {
-        return $this->container['address_id'];
-    }
-
-    /**
-     * Sets address_id
-     * @param int[] $address_id Address ID (unique)
-     * @return $this
-     */
-    public function setAddressId($address_id)
-    {
-        $this->container['address_id'] = $address_id;
 
         return $this;
     }
