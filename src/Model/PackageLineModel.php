@@ -74,6 +74,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'float',
         'hs_code' => 'string',
         'description' => 'string',
+        'active' => 'bool',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'activity_links' => '\BumbalClient\Model\LinkModel[]',
@@ -110,6 +111,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'float',
         'hs_code' => null,
         'description' => null,
+        'active' => null,
         'applied_capacities' => null,
         'capacities' => null,
         'activity_links' => null,
@@ -156,6 +158,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'temp_max',
         'hs_code' => 'hs_code',
         'description' => 'description',
+        'active' => 'active',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'activity_links' => 'activity_links',
@@ -193,6 +196,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'setTempMax',
         'hs_code' => 'setHsCode',
         'description' => 'setDescription',
+        'active' => 'setActive',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'activity_links' => 'setActivityLinks',
@@ -230,6 +234,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'getTempMax',
         'hs_code' => 'getHsCode',
         'description' => 'getDescription',
+        'active' => 'getActive',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'activity_links' => 'getActivityLinks',
@@ -350,6 +355,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['temp_max'] = isset($data['temp_max']) ? $data['temp_max'] : null;
         $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['activity_links'] = isset($data['activity_links']) ? $data['activity_links'] : null;
@@ -865,6 +871,27 @@ class PackageLineModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: package line has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

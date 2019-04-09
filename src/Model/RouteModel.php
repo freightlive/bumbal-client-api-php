@@ -92,6 +92,7 @@ class RouteModel implements ArrayAccess
         'overdue' => 'bool',
         'optimized' => 'bool',
         'blocked' => 'bool',
+        'active' => 'bool',
         'start_address' => '\BumbalClient\Model\AddressModel',
         'end_address' => '\BumbalClient\Model\AddressModel',
         'planned_capacities' => 'object',
@@ -153,6 +154,7 @@ class RouteModel implements ArrayAccess
         'overdue' => null,
         'optimized' => null,
         'blocked' => null,
+        'active' => null,
         'start_address' => null,
         'end_address' => null,
         'planned_capacities' => null,
@@ -224,6 +226,7 @@ class RouteModel implements ArrayAccess
         'overdue' => 'overdue',
         'optimized' => 'optimized',
         'blocked' => 'blocked',
+        'active' => 'active',
         'start_address' => 'start_address',
         'end_address' => 'end_address',
         'planned_capacities' => 'planned_capacities',
@@ -286,6 +289,7 @@ class RouteModel implements ArrayAccess
         'overdue' => 'setOverdue',
         'optimized' => 'setOptimized',
         'blocked' => 'setBlocked',
+        'active' => 'setActive',
         'start_address' => 'setStartAddress',
         'end_address' => 'setEndAddress',
         'planned_capacities' => 'setPlannedCapacities',
@@ -348,6 +352,7 @@ class RouteModel implements ArrayAccess
         'overdue' => 'getOverdue',
         'optimized' => 'getOptimized',
         'blocked' => 'getBlocked',
+        'active' => 'getActive',
         'start_address' => 'getStartAddress',
         'end_address' => 'getEndAddress',
         'planned_capacities' => 'getPlannedCapacities',
@@ -471,6 +476,7 @@ class RouteModel implements ArrayAccess
         $this->container['overdue'] = isset($data['overdue']) ? $data['overdue'] : null;
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['start_address'] = isset($data['start_address']) ? $data['start_address'] : null;
         $this->container['end_address'] = isset($data['end_address']) ? $data['end_address'] : null;
         $this->container['planned_capacities'] = isset($data['planned_capacities']) ? $data['planned_capacities'] : null;
@@ -1350,6 +1356,27 @@ class RouteModel implements ArrayAccess
     public function setBlocked($blocked)
     {
         $this->container['blocked'] = $blocked;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: route has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

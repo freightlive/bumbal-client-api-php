@@ -344,6 +344,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
      * Test attribute "start_address"
      */
     public function testPropertyStartAddress()

@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **overdue** | **bool** | whether any activity on route is overdue | [optional] 
 **optimized** | **bool** | Activity optimized status within route. | [optional] 
 **blocked** | **bool** | a blocked route can not be auto-filled by customer calendars | [optional] 
+**active** | **bool** | if active&#x3D;0: route has been removed and is no longer visible in any bumbal interface | [optional] 
 **start_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **end_address** | [**\BumbalClient\Model\AddressModel**](AddressModel.md) |  | [optional] 
 **planned_capacities** | **object** |  | [optional] 

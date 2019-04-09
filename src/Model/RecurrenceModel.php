@@ -70,6 +70,7 @@ class RecurrenceModel implements ArrayAccess
         'summary' => 'string',
         'next_run' => '\DateTime',
         'last_run' => '\DateTime',
+        'active' => 'bool',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_at' => '\DateTime',
@@ -98,6 +99,7 @@ class RecurrenceModel implements ArrayAccess
         'summary' => null,
         'next_run' => 'date-time',
         'last_run' => 'date-time',
+        'active' => null,
         'tags' => null,
         'meta_data' => null,
         'created_at' => 'date-time',
@@ -136,6 +138,7 @@ class RecurrenceModel implements ArrayAccess
         'summary' => 'summary',
         'next_run' => 'next_run',
         'last_run' => 'last_run',
+        'active' => 'active',
         'tags' => 'tags',
         'meta_data' => 'meta_data',
         'created_at' => 'created_at',
@@ -165,6 +168,7 @@ class RecurrenceModel implements ArrayAccess
         'summary' => 'setSummary',
         'next_run' => 'setNextRun',
         'last_run' => 'setLastRun',
+        'active' => 'setActive',
         'tags' => 'setTags',
         'meta_data' => 'setMetaData',
         'created_at' => 'setCreatedAt',
@@ -194,6 +198,7 @@ class RecurrenceModel implements ArrayAccess
         'summary' => 'getSummary',
         'next_run' => 'getNextRun',
         'last_run' => 'getLastRun',
+        'active' => 'getActive',
         'tags' => 'getTags',
         'meta_data' => 'getMetaData',
         'created_at' => 'getCreatedAt',
@@ -278,6 +283,7 @@ class RecurrenceModel implements ArrayAccess
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['next_run'] = isset($data['next_run']) ? $data['next_run'] : null;
         $this->container['last_run'] = isset($data['last_run']) ? $data['last_run'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
@@ -684,6 +690,27 @@ class RecurrenceModel implements ArrayAccess
     public function setLastRun($last_run)
     {
         $this->container['last_run'] = $last_run;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param bool $active if active=0: recurrence has been removed and is no longer visible in any bumbal interface
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

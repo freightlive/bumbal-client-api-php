@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **temp_max** | **float** | maximum temperature for packages in package line | [optional] 
 **hs_code** | **string** | Harmonized System code for packages in this package line | [optional] 
 **description** | **string** | description of this package_line | [optional] 
+**active** | **bool** | if active&#x3D;0: package line has been removed and is no longer visible in any bumbal interface | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **activity_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) | links to activities connected to this package_line | [optional] 
