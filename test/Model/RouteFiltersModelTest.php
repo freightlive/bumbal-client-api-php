@@ -148,6 +148,13 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "recurrence_id"
+     */
+    public function testPropertyRecurrenceId()
+    {
+    }
+
+    /**
      * Test attribute "optimized"
      */
     public function testPropertyOptimized()

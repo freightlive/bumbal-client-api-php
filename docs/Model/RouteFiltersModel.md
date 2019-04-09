@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **status_id** | **int[]** |  | [optional] 
 **driver_id** | **int[]** |  | [optional] 
+**recurrence_id** | **int** | Recurrence ID | [optional] 
 **optimized** | **bool[]** | Optimized status of Route. | [optional] 
 **blocked** | **bool[]** | Blocked status of Route | [optional] 
 

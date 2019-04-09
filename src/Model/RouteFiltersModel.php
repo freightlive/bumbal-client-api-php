@@ -64,6 +64,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => '\DateTime',
         'status_id' => 'int[]',
         'driver_id' => 'int[]',
+        'recurrence_id' => 'int',
         'optimized' => 'bool[]',
         'blocked' => 'bool[]'
     ];
@@ -83,6 +84,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'date-time',
         'status_id' => null,
         'driver_id' => null,
+        'recurrence_id' => null,
         'optimized' => null,
         'blocked' => null
     ];
@@ -112,6 +114,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'updated_at',
         'status_id' => 'status_id',
         'driver_id' => 'driver_id',
+        'recurrence_id' => 'recurrence_id',
         'optimized' => 'optimized',
         'blocked' => 'blocked'
     ];
@@ -132,6 +135,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'setUpdatedAt',
         'status_id' => 'setStatusId',
         'driver_id' => 'setDriverId',
+        'recurrence_id' => 'setRecurrenceId',
         'optimized' => 'setOptimized',
         'blocked' => 'setBlocked'
     ];
@@ -152,6 +156,7 @@ class RouteFiltersModel implements ArrayAccess
         'updated_at' => 'getUpdatedAt',
         'status_id' => 'getStatusId',
         'driver_id' => 'getDriverId',
+        'recurrence_id' => 'getRecurrenceId',
         'optimized' => 'getOptimized',
         'blocked' => 'getBlocked'
     ];
@@ -197,6 +202,7 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
+        $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
         $this->container['blocked'] = isset($data['blocked']) ? $data['blocked'] : null;
     }
@@ -432,6 +438,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setDriverId($driver_id)
     {
         $this->container['driver_id'] = $driver_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets recurrence_id
+     * @return int
+     */
+    public function getRecurrenceId()
+    {
+        return $this->container['recurrence_id'];
+    }
+
+    /**
+     * Sets recurrence_id
+     * @param int $recurrence_id Recurrence ID
+     * @return $this
+     */
+    public function setRecurrenceId($recurrence_id)
+    {
+        $this->container['recurrence_id'] = $recurrence_id;
 
         return $this;
     }
