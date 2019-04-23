@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **object_type** | **int** |  | [optional] 
 **reference** | **string** |  | [optional] 
 **location** | **string** |  | [optional] 
+**base64** | **string** |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **created_by** | **int** |  | [optional] 
 **updated_by** | **int** |  | [optional] 

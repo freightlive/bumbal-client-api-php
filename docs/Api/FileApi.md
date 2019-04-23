@@ -4,63 +4,12 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createFile**](FileApi.md#createFile) | **POST** /file | Add a new File
 [**deleteFile**](FileApi.md#deleteFile) | **DELETE** /file/{fileId} | Delete an File
 [**fileCopy**](FileApi.md#fileCopy) | **POST** /file/copy | Copy File
 [**retrieveFile**](FileApi.md#retrieveFile) | **GET** /file/{fileId} | Retrieve a File
 [**retrieveListFile**](FileApi.md#retrieveListFile) | **PUT** /file | Retrieve List of Files
-[**updateFile**](FileApi.md#updateFile) | **PUT** /file/{fileId} | Update a File
+[**setFile**](FileApi.md#setFile) | **POST** /file/set | Create or Update a File Object
 
-
-# **createFile**
-> \BumbalClient\Model\ApiResponse createFile($body)
-
-Add a new File
-
-Add a new File
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-
-$api_instance = new BumbalClient\Api\FileApi();
-$body = new \BumbalClient\Model\FileModel(); // \BumbalClient\Model\FileModel | File object that needs to be created
-
-try {
-    $result = $api_instance->createFile($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling FileApi->createFile: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be created | [optional]
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteFile**
 > \BumbalClient\Model\ApiResponse deleteFile($file_id)
@@ -262,12 +211,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateFile**
-> \BumbalClient\Model\ApiResponse updateFile($file_id)
+# **setFile**
+> \BumbalClient\Model\ApiResponse setFile($body)
 
-Update a File
+Create or Update a File Object
 
-Update an File
+Create or Update a File Object
 
 ### Example
 ```php
@@ -280,13 +229,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
-$file_id = 789; // int | ID of file to update
+$body = new \BumbalClient\Model\FileModel(); // \BumbalClient\Model\FileModel | File object that needs to be set
 
 try {
-    $result = $api_instance->updateFile($file_id);
+    $result = $api_instance->setFile($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FileApi->updateFile: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FileApi->setFile: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -295,7 +244,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file_id** | **int**| ID of file to update |
+ **body** | [**\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be set | [optional]
 
 ### Return type
 

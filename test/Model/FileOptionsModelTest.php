@@ -104,4 +104,11 @@ class FileOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeFileRecordInfo()
     {
     }
+
+    /**
+     * Test attribute "include_file_base64"
+     */
+    public function testPropertyIncludeFileBase64()
+    {
+    }
 }

@@ -134,6 +134,13 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "base64"
+     */
+    public function testPropertyBase64()
+    {
+    }
+
+    /**
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()

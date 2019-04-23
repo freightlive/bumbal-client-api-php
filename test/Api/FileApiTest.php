@@ -73,16 +73,6 @@ class FileApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createFile
-     *
-     * Add a new File.
-     *
-     */
-    public function testCreateFile()
-    {
-    }
-
-    /**
      * Test case for deleteFile
      *
      * Delete an File.
@@ -123,12 +113,12 @@ class FileApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for updateFile
+     * Test case for setFile
      *
-     * Update a File.
+     * Create or Update a File Object.
      *
      */
-    public function testUpdateFile()
+    public function testSetFile()
     {
     }
 }

@@ -57,7 +57,8 @@ class FileOptionsModel implements ArrayAccess
         'include_file_meta_data' => 'bool',
         'include_tag_type_name' => 'bool',
         'include_file_tags' => 'bool',
-        'include_file_record_info' => 'bool'
+        'include_file_record_info' => 'bool',
+        'include_file_base64' => 'bool'
     ];
 
     /**
@@ -68,7 +69,8 @@ class FileOptionsModel implements ArrayAccess
         'include_file_meta_data' => null,
         'include_tag_type_name' => null,
         'include_file_tags' => null,
-        'include_file_record_info' => null
+        'include_file_record_info' => null,
+        'include_file_base64' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +91,8 @@ class FileOptionsModel implements ArrayAccess
         'include_file_meta_data' => 'include_file_meta_data',
         'include_tag_type_name' => 'include_tag_type_name',
         'include_file_tags' => 'include_file_tags',
-        'include_file_record_info' => 'include_file_record_info'
+        'include_file_record_info' => 'include_file_record_info',
+        'include_file_base64' => 'include_file_base64'
     ];
 
 
@@ -101,7 +104,8 @@ class FileOptionsModel implements ArrayAccess
         'include_file_meta_data' => 'setIncludeFileMetaData',
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_file_tags' => 'setIncludeFileTags',
-        'include_file_record_info' => 'setIncludeFileRecordInfo'
+        'include_file_record_info' => 'setIncludeFileRecordInfo',
+        'include_file_base64' => 'setIncludeFileBase64'
     ];
 
 
@@ -113,7 +117,8 @@ class FileOptionsModel implements ArrayAccess
         'include_file_meta_data' => 'getIncludeFileMetaData',
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_file_tags' => 'getIncludeFileTags',
-        'include_file_record_info' => 'getIncludeFileRecordInfo'
+        'include_file_record_info' => 'getIncludeFileRecordInfo',
+        'include_file_base64' => 'getIncludeFileBase64'
     ];
 
     public static function attributeMap()
@@ -151,6 +156,7 @@ class FileOptionsModel implements ArrayAccess
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_file_tags'] = isset($data['include_file_tags']) ? $data['include_file_tags'] : null;
         $this->container['include_file_record_info'] = isset($data['include_file_record_info']) ? $data['include_file_record_info'] : null;
+        $this->container['include_file_base64'] = isset($data['include_file_base64']) ? $data['include_file_base64'] : null;
     }
 
     /**
@@ -189,7 +195,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_meta_data
-     * @param bool $include_file_meta_data 
+     * @param bool $include_file_meta_data
      * @return $this
      */
     public function setIncludeFileMetaData($include_file_meta_data)
@@ -210,7 +216,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
+     * @param bool $include_tag_type_name
      * @return $this
      */
     public function setIncludeTagTypeName($include_tag_type_name)
@@ -231,7 +237,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_tags
-     * @param bool $include_file_tags 
+     * @param bool $include_file_tags
      * @return $this
      */
     public function setIncludeFileTags($include_file_tags)
@@ -252,12 +258,33 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_record_info
-     * @param bool $include_file_record_info 
+     * @param bool $include_file_record_info
      * @return $this
      */
     public function setIncludeFileRecordInfo($include_file_record_info)
     {
         $this->container['include_file_record_info'] = $include_file_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_file_base64
+     * @return bool
+     */
+    public function getIncludeFileBase64()
+    {
+        return $this->container['include_file_base64'];
+    }
+
+    /**
+     * Sets include_file_base64
+     * @param bool $include_file_base64
+     * @return $this
+     */
+    public function setIncludeFileBase64($include_file_base64)
+    {
+        $this->container['include_file_base64'] = $include_file_base64;
 
         return $this;
     }

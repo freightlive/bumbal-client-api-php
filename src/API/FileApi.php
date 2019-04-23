@@ -88,86 +88,6 @@ class FileApi
     }
 
     /**
-     * Operation createFile
-     *
-     * Add a new File
-     *
-     * @param \BumbalClient\Model\FileModel $body File object that needs to be created (optional)
-     * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
-     */
-    public function createFile($body = null)
-    {
-        list($response) = $this->createFileWithHttpInfo($body);
-        return $response;
-    }
-
-    /**
-     * Operation createFileWithHttpInfo
-     *
-     * Add a new File
-     *
-     * @param \BumbalClient\Model\FileModel $body File object that needs to be created (optional)
-     * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createFileWithHttpInfo($body = null)
-    {
-        // parse inputs
-        $resourcePath = "/file";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['ApiKey'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\BumbalClient\Model\ApiResponse',
-                '/file'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation deleteFile
      *
      * Delete an File
@@ -510,37 +430,33 @@ class FileApi
     }
 
     /**
-     * Operation updateFile
+     * Operation setFile
      *
-     * Update a File
+     * Create or Update a File Object
      *
-     * @param int $file_id ID of file to update (required)
+     * @param \BumbalClient\Model\FileModel $body File object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updateFile($file_id)
+    public function setFile($body = null)
     {
-        list($response) = $this->updateFileWithHttpInfo($file_id);
+        list($response) = $this->setFileWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation updateFileWithHttpInfo
+     * Operation setFileWithHttpInfo
      *
-     * Update a File
+     * Create or Update a File Object
      *
-     * @param int $file_id ID of file to update (required)
+     * @param \BumbalClient\Model\FileModel $body File object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateFileWithHttpInfo($file_id)
+    public function setFileWithHttpInfo($body = null)
     {
-        // verify the required parameter 'file_id' is set
-        if ($file_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $file_id when calling updateFile');
-        }
         // parse inputs
-        $resourcePath = "/file/{fileId}";
+        $resourcePath = "/file/set";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -551,13 +467,10 @@ class FileApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // path params
-        if ($file_id !== null) {
-            $resourcePath = str_replace(
-                "{" . "fileId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($file_id),
-                $resourcePath
-            );
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
         }
 
         // for model (json/xml)
@@ -575,12 +488,12 @@ class FileApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'POST',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/file/{fileId}'
+                '/file/set'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

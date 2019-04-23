@@ -62,6 +62,7 @@ class FileModel implements ArrayAccess
         'object_type' => 'int',
         'reference' => 'string',
         'location' => 'string',
+        'base64' => 'string',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_by' => 'int',
         'updated_by' => 'int',
@@ -82,6 +83,7 @@ class FileModel implements ArrayAccess
         'object_type' => 'int64',
         'reference' => null,
         'location' => null,
+        'base64' => null,
         'meta_data' => null,
         'created_by' => 'int64',
         'updated_by' => 'int64',
@@ -112,6 +114,7 @@ class FileModel implements ArrayAccess
         'object_type' => 'object_type',
         'reference' => 'reference',
         'location' => 'location',
+        'base64' => 'base64',
         'meta_data' => 'meta_data',
         'created_by' => 'created_by',
         'updated_by' => 'updated_by',
@@ -133,6 +136,7 @@ class FileModel implements ArrayAccess
         'object_type' => 'setObjectType',
         'reference' => 'setReference',
         'location' => 'setLocation',
+        'base64' => 'setBase64',
         'meta_data' => 'setMetaData',
         'created_by' => 'setCreatedBy',
         'updated_by' => 'setUpdatedBy',
@@ -154,6 +158,7 @@ class FileModel implements ArrayAccess
         'object_type' => 'getObjectType',
         'reference' => 'getReference',
         'location' => 'getLocation',
+        'base64' => 'getBase64',
         'meta_data' => 'getMetaData',
         'created_by' => 'getCreatedBy',
         'updated_by' => 'getUpdatedBy',
@@ -200,6 +205,7 @@ class FileModel implements ArrayAccess
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
+        $this->container['base64'] = isset($data['base64']) ? $data['base64'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['created_by'] = isset($data['created_by']) ? $data['created_by'] : null;
         $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
@@ -243,7 +249,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -264,7 +270,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param string $uuid 
+     * @param string $uuid
      * @return $this
      */
     public function setUuid($uuid)
@@ -285,7 +291,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_id
-     * @param int $file_type_id 
+     * @param int $file_type_id
      * @return $this
      */
     public function setFileTypeId($file_type_id)
@@ -306,7 +312,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_name
-     * @param string $file_type_name 
+     * @param string $file_type_name
      * @return $this
      */
     public function setFileTypeName($file_type_name)
@@ -327,7 +333,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_id
-     * @param int $object_id 
+     * @param int $object_id
      * @return $this
      */
     public function setObjectId($object_id)
@@ -348,7 +354,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param int $object_type 
+     * @param int $object_type
      * @return $this
      */
     public function setObjectType($object_type)
@@ -369,7 +375,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets reference
-     * @param string $reference 
+     * @param string $reference
      * @return $this
      */
     public function setReference($reference)
@@ -390,12 +396,33 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets location
-     * @param string $location 
+     * @param string $location
      * @return $this
      */
     public function setLocation($location)
     {
         $this->container['location'] = $location;
+
+        return $this;
+    }
+
+    /**
+     * Gets base64
+     * @return string
+     */
+    public function getBase64()
+    {
+        return $this->container['base64'];
+    }
+
+    /**
+     * Sets base64
+     * @param string $base64
+     * @return $this
+     */
+    public function setBase64($base64)
+    {
+        $this->container['base64'] = $base64;
 
         return $this;
     }
@@ -411,7 +438,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -432,7 +459,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets created_by
-     * @param int $created_by 
+     * @param int $created_by
      * @return $this
      */
     public function setCreatedBy($created_by)
@@ -453,7 +480,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets updated_by
-     * @param int $updated_by 
+     * @param int $updated_by
      * @return $this
      */
     public function setUpdatedBy($updated_by)
