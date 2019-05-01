@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneRetrieveListArguments
+ * AvailabilityTimeSlotModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneRetrieveListArguments Class Doc Comment
+ * AvailabilityTimeSlotModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneRetrieveListArguments implements ArrayAccess
+class AvailabilityTimeSlotModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,19 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneRetrieveListArguments';
+    protected static $swaggerModelName = 'AvailabilityTimeSlotModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ZoneOptionsModel',
-        'filters' => '\BumbalClient\Model\ZoneFiltersModel',
-        'limit' => 'int',
-        'offset' => 'int',
-        'search_text' => 'string'
+        'id' => 'int',
+        'date_time_from' => '\DateTime',
+        'date_time_to' => '\DateTime',
+        'proposed_plan_date_time_from' => '\DateTime',
+        'proposed_plan_date_time_to' => '\DateTime',
+        'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]'
     ];
 
     /**
@@ -66,11 +67,12 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
-        'filters' => null,
-        'limit' => 'int64',
-        'offset' => 'int64',
-        'search_text' => null
+        'id' => 'int64',
+        'date_time_from' => 'date-time',
+        'date_time_to' => 'date-time',
+        'proposed_plan_date_time_from' => 'date-time',
+        'proposed_plan_date_time_to' => 'date-time',
+        'impact' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +90,12 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
-        'filters' => 'filters',
-        'limit' => 'limit',
-        'offset' => 'offset',
-        'search_text' => 'search_text'
+        'id' => 'id',
+        'date_time_from' => 'date_time_from',
+        'date_time_to' => 'date_time_to',
+        'proposed_plan_date_time_from' => 'proposed_plan_date_time_from',
+        'proposed_plan_date_time_to' => 'proposed_plan_date_time_to',
+        'impact' => 'impact'
     ];
 
 
@@ -101,11 +104,12 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
-        'filters' => 'setFilters',
-        'limit' => 'setLimit',
-        'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'id' => 'setId',
+        'date_time_from' => 'setDateTimeFrom',
+        'date_time_to' => 'setDateTimeTo',
+        'proposed_plan_date_time_from' => 'setProposedPlanDateTimeFrom',
+        'proposed_plan_date_time_to' => 'setProposedPlanDateTimeTo',
+        'impact' => 'setImpact'
     ];
 
 
@@ -114,11 +118,12 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
-        'filters' => 'getFilters',
-        'limit' => 'getLimit',
-        'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'id' => 'getId',
+        'date_time_from' => 'getDateTimeFrom',
+        'date_time_to' => 'getDateTimeTo',
+        'proposed_plan_date_time_from' => 'getProposedPlanDateTimeFrom',
+        'proposed_plan_date_time_to' => 'getProposedPlanDateTimeTo',
+        'impact' => 'getImpact'
     ];
 
     public static function attributeMap()
@@ -152,11 +157,12 @@ class ZoneRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
+        $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['proposed_plan_date_time_from'] = isset($data['proposed_plan_date_time_from']) ? $data['proposed_plan_date_time_from'] : null;
+        $this->container['proposed_plan_date_time_to'] = isset($data['proposed_plan_date_time_to']) ? $data['proposed_plan_date_time_to'] : null;
+        $this->container['impact'] = isset($data['impact']) ? $data['impact'] : null;
     }
 
     /**
@@ -185,106 +191,127 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\ZoneOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\ZoneOptionsModel $options 
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     * @return \BumbalClient\Model\ZoneFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\ZoneFiltersModel $filters 
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
+     * Gets id
      * @return int
      */
-    public function getLimit()
+    public function getId()
     {
-        return $this->container['limit'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets limit
-     * @param int $limit 
+     * Sets id
+     * @param int $id 
      * @return $this
      */
-    public function setLimit($limit)
+    public function setId($id)
     {
-        $this->container['limit'] = $limit;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets offset
-     * @return int
+     * Gets date_time_from
+     * @return \DateTime
      */
-    public function getOffset()
+    public function getDateTimeFrom()
     {
-        return $this->container['offset'];
+        return $this->container['date_time_from'];
     }
 
     /**
-     * Sets offset
-     * @param int $offset 
+     * Sets date_time_from
+     * @param \DateTime $date_time_from 
      * @return $this
      */
-    public function setOffset($offset)
+    public function setDateTimeFrom($date_time_from)
     {
-        $this->container['offset'] = $offset;
+        $this->container['date_time_from'] = $date_time_from;
 
         return $this;
     }
 
     /**
-     * Gets search_text
-     * @return string
+     * Gets date_time_to
+     * @return \DateTime
      */
-    public function getSearchText()
+    public function getDateTimeTo()
     {
-        return $this->container['search_text'];
+        return $this->container['date_time_to'];
     }
 
     /**
-     * Sets search_text
-     * @param string $search_text 
+     * Sets date_time_to
+     * @param \DateTime $date_time_to 
      * @return $this
      */
-    public function setSearchText($search_text)
+    public function setDateTimeTo($date_time_to)
     {
-        $this->container['search_text'] = $search_text;
+        $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets proposed_plan_date_time_from
+     * @return \DateTime
+     */
+    public function getProposedPlanDateTimeFrom()
+    {
+        return $this->container['proposed_plan_date_time_from'];
+    }
+
+    /**
+     * Sets proposed_plan_date_time_from
+     * @param \DateTime $proposed_plan_date_time_from 
+     * @return $this
+     */
+    public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
+    {
+        $this->container['proposed_plan_date_time_from'] = $proposed_plan_date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets proposed_plan_date_time_to
+     * @return \DateTime
+     */
+    public function getProposedPlanDateTimeTo()
+    {
+        return $this->container['proposed_plan_date_time_to'];
+    }
+
+    /**
+     * Sets proposed_plan_date_time_to
+     * @param \DateTime $proposed_plan_date_time_to 
+     * @return $this
+     */
+    public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
+    {
+        $this->container['proposed_plan_date_time_to'] = $proposed_plan_date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets impact
+     * @return \BumbalClient\Model\AvailabilityTimeSlotImpactModel[]
+     */
+    public function getImpact()
+    {
+        return $this->container['impact'];
+    }
+
+    /**
+     * Sets impact
+     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact 
+     * @return $this
+     */
+    public function setImpact($impact)
+    {
+        $this->container['impact'] = $impact;
 
         return $this;
     }

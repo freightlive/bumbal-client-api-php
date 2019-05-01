@@ -1,6 +1,6 @@
 <?php
 /**
- * AutoPlanDataModelTest
+ * AvailabilityTimeSlotImpactModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * AutoPlanDataModelTest Class Doc Comment
+ * AvailabilityTimeSlotImpactModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description AutoPlanDataModel
+// * @description AvailabilityTimeSlotImpactModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AutoPlanDataModelTest extends \PHPUnit_Framework_TestCase
+class AvailabilityTimeSlotImpactModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,23 +71,23 @@ class AutoPlanDataModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AutoPlanDataModel"
+     * Test "AvailabilityTimeSlotImpactModel"
      */
-    public function testAutoPlanDataModel()
+    public function testAvailabilityTimeSlotImpactModel()
     {
     }
 
     /**
-     * Test attribute "token"
+     * Test attribute "type"
      */
-    public function testPropertyToken()
+    public function testPropertyType()
     {
     }
 
     /**
-     * Test attribute "activity"
+     * Test attribute "value"
      */
-    public function testPropertyActivity()
+    public function testPropertyValue()
     {
     }
 }

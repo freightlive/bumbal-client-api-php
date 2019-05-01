@@ -56,8 +56,8 @@ class CheckAvailabilityResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'token' => 'string',
         'status' => 'string',
-        'available_timewindows' => '\BumbalClient\Model\TimeSlotModel[]',
-        'unavailable_timewindows' => '\BumbalClient\Model\TimeSlotModel[]',
+        'available_timewindows' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]',
+        'unavailable_timewindows' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]',
         'latest_analyzed_date' => '\DateTime'
     ];
 
@@ -265,7 +265,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets available_timewindows
-     * @return \BumbalClient\Model\TimeSlotModel[]
+     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
      */
     public function getAvailableTimewindows()
     {
@@ -274,7 +274,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets available_timewindows
-     * @param \BumbalClient\Model\TimeSlotModel[] $available_timewindows
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $available_timewindows 
      * @return $this
      */
     public function setAvailableTimewindows($available_timewindows)
@@ -286,7 +286,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets unavailable_timewindows
-     * @return \BumbalClient\Model\TimeSlotModel[]
+     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
      */
     public function getUnavailableTimewindows()
     {
@@ -295,7 +295,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \BumbalClient\Model\TimeSlotModel[] $unavailable_timewindows
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $unavailable_timewindows 
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)
@@ -316,7 +316,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime $latest_analyzed_date
+     * @param \DateTime $latest_analyzed_date 
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)

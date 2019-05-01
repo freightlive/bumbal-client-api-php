@@ -213,7 +213,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_record_info
-     * @param bool $include_driver_record_info
+     * @param bool $include_driver_record_info 
      * @return $this
      */
     public function setIncludeDriverRecordInfo($include_driver_record_info)
@@ -234,7 +234,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_meta_data
-     * @param bool $include_driver_meta_data
+     * @param bool $include_driver_meta_data 
      * @return $this
      */
     public function setIncludeDriverMetaData($include_driver_meta_data)
@@ -255,7 +255,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_tags
-     * @param bool $include_driver_tags
+     * @param bool $include_driver_tags 
      * @return $this
      */
     public function setIncludeDriverTags($include_driver_tags)
@@ -276,7 +276,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_tag_type_names
-     * @param bool $include_driver_tag_type_names
+     * @param bool $include_driver_tag_type_names 
      * @return $this
      */
     public function setIncludeDriverTagTypeNames($include_driver_tag_type_names)
@@ -297,7 +297,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_addresses
-     * @param bool $include_addresses
+     * @param bool $include_addresses 
      * @return $this
      */
     public function setIncludeAddresses($include_addresses)
@@ -318,7 +318,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_links
-     * @param bool $include_driver_links
+     * @param bool $include_driver_links 
      * @return $this
      */
     public function setIncludeDriverLinks($include_driver_links)
@@ -339,7 +339,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_notes
-     * @param bool $include_driver_notes
+     * @param bool $include_driver_notes 
      * @return $this
      */
     public function setIncludeDriverNotes($include_driver_notes)
@@ -360,7 +360,7 @@ class DriverOptionsModel implements ArrayAccess
 
     /**
      * Sets include_driver_note_tags
-     * @param bool $include_driver_note_tags
+     * @param bool $include_driver_note_tags 
      * @return $this
      */
     public function setIncludeDriverNoteTags($include_driver_note_tags)

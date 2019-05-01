@@ -56,7 +56,8 @@ class ApplyPlanningDataModel implements ArrayAccess
     protected static $swaggerTypes = [
         'assigned' => 'object',
         'unassigned' => 'object',
-        'routes' => 'object'
+        'routes' => 'object',
+        'after_updates' => 'object'
     ];
 
     /**
@@ -66,7 +67,8 @@ class ApplyPlanningDataModel implements ArrayAccess
     protected static $swaggerFormats = [
         'assigned' => null,
         'unassigned' => null,
-        'routes' => null
+        'routes' => null,
+        'after_updates' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class ApplyPlanningDataModel implements ArrayAccess
     protected static $attributeMap = [
         'assigned' => 'assigned',
         'unassigned' => 'unassigned',
-        'routes' => 'routes'
+        'routes' => 'routes',
+        'after_updates' => 'after_updates'
     ];
 
 
@@ -97,7 +100,8 @@ class ApplyPlanningDataModel implements ArrayAccess
     protected static $setters = [
         'assigned' => 'setAssigned',
         'unassigned' => 'setUnassigned',
-        'routes' => 'setRoutes'
+        'routes' => 'setRoutes',
+        'after_updates' => 'setAfterUpdates'
     ];
 
 
@@ -108,7 +112,8 @@ class ApplyPlanningDataModel implements ArrayAccess
     protected static $getters = [
         'assigned' => 'getAssigned',
         'unassigned' => 'getUnassigned',
-        'routes' => 'getRoutes'
+        'routes' => 'getRoutes',
+        'after_updates' => 'getAfterUpdates'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class ApplyPlanningDataModel implements ArrayAccess
         $this->container['assigned'] = isset($data['assigned']) ? $data['assigned'] : null;
         $this->container['unassigned'] = isset($data['unassigned']) ? $data['unassigned'] : null;
         $this->container['routes'] = isset($data['routes']) ? $data['routes'] : null;
+        $this->container['after_updates'] = isset($data['after_updates']) ? $data['after_updates'] : null;
     }
 
     /**
@@ -183,7 +189,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets assigned
-     * @param object $assigned
+     * @param object $assigned 
      * @return $this
      */
     public function setAssigned($assigned)
@@ -204,7 +210,7 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets unassigned
-     * @param object $unassigned
+     * @param object $unassigned 
      * @return $this
      */
     public function setUnassigned($unassigned)
@@ -225,12 +231,33 @@ class ApplyPlanningDataModel implements ArrayAccess
 
     /**
      * Sets routes
-     * @param object $routes
+     * @param object $routes 
      * @return $this
      */
     public function setRoutes($routes)
     {
         $this->container['routes'] = $routes;
+
+        return $this;
+    }
+
+    /**
+     * Gets after_updates
+     * @return object
+     */
+    public function getAfterUpdates()
+    {
+        return $this->container['after_updates'];
+    }
+
+    /**
+     * Sets after_updates
+     * @param object $after_updates 
+     * @return $this
+     */
+    public function setAfterUpdates($after_updates)
+    {
+        $this->container['after_updates'] = $after_updates;
 
         return $this;
     }

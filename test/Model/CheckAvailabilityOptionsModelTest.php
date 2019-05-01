@@ -97,4 +97,11 @@ class CheckAvailabilityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeCapacities()
     {
     }
+
+    /**
+     * Test attribute "include_proposed_plan_times"
+     */
+    public function testPropertyIncludeProposedPlanTimes()
+    {
+    }
 }

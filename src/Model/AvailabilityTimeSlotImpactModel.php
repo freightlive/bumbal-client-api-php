@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneRetrieveListArguments
+ * AvailabilityTimeSlotImpactModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneRetrieveListArguments Class Doc Comment
+ * AvailabilityTimeSlotImpactModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneRetrieveListArguments implements ArrayAccess
+class AvailabilityTimeSlotImpactModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,15 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneRetrieveListArguments';
+    protected static $swaggerModelName = 'AvailabilityTimeSlotImpactModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ZoneOptionsModel',
-        'filters' => '\BumbalClient\Model\ZoneFiltersModel',
-        'limit' => 'int',
-        'offset' => 'int',
-        'search_text' => 'string'
+        'type' => 'string',
+        'value' => 'int'
     ];
 
     /**
@@ -66,11 +63,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
-        'filters' => null,
-        'limit' => 'int64',
-        'offset' => 'int64',
-        'search_text' => null
+        'type' => null,
+        'value' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +82,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
-        'filters' => 'filters',
-        'limit' => 'limit',
-        'offset' => 'offset',
-        'search_text' => 'search_text'
+        'type' => 'type',
+        'value' => 'value'
     ];
 
 
@@ -101,11 +92,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
-        'filters' => 'setFilters',
-        'limit' => 'setLimit',
-        'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'type' => 'setType',
+        'value' => 'setValue'
     ];
 
 
@@ -114,11 +102,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
-        'filters' => 'getFilters',
-        'limit' => 'getLimit',
-        'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'type' => 'getType',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -152,11 +137,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -185,106 +167,43 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\ZoneOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\ZoneOptionsModel $options 
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     * @return \BumbalClient\Model\ZoneFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\ZoneFiltersModel $filters 
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
-     * @return int
-     */
-    public function getLimit()
-    {
-        return $this->container['limit'];
-    }
-
-    /**
-     * Sets limit
-     * @param int $limit 
-     * @return $this
-     */
-    public function setLimit($limit)
-    {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets offset
-     * @return int
-     */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-     * Sets offset
-     * @param int $offset 
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_text
+     * Gets type
      * @return string
      */
-    public function getSearchText()
+    public function getType()
     {
-        return $this->container['search_text'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets search_text
-     * @param string $search_text 
+     * Sets type
+     * @param string $type 
      * @return $this
      */
-    public function setSearchText($search_text)
+    public function setType($type)
     {
-        $this->container['search_text'] = $search_text;
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     * @param int $value 
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
 
         return $this;
     }

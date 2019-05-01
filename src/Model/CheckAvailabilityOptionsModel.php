@@ -56,7 +56,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     protected static $swaggerTypes = [
         'include_impact' => 'bool',
         'synchronous' => 'bool',
-        'include_capacities' => 'bool'
+        'include_capacities' => 'bool',
+        'include_proposed_plan_times' => 'bool'
     ];
 
     /**
@@ -66,7 +67,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     protected static $swaggerFormats = [
         'include_impact' => null,
         'synchronous' => null,
-        'include_capacities' => null
+        'include_capacities' => null,
+        'include_proposed_plan_times' => null
     ];
 
     public static function swaggerTypes()
@@ -86,7 +88,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     protected static $attributeMap = [
         'include_impact' => 'include_impact',
         'synchronous' => 'synchronous',
-        'include_capacities' => 'include_capacities'
+        'include_capacities' => 'include_capacities',
+        'include_proposed_plan_times' => 'include_proposed_plan_times'
     ];
 
 
@@ -97,7 +100,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     protected static $setters = [
         'include_impact' => 'setIncludeImpact',
         'synchronous' => 'setSynchronous',
-        'include_capacities' => 'setIncludeCapacities'
+        'include_capacities' => 'setIncludeCapacities',
+        'include_proposed_plan_times' => 'setIncludeProposedPlanTimes'
     ];
 
 
@@ -108,7 +112,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     protected static $getters = [
         'include_impact' => 'getIncludeImpact',
         'synchronous' => 'getSynchronous',
-        'include_capacities' => 'getIncludeCapacities'
+        'include_capacities' => 'getIncludeCapacities',
+        'include_proposed_plan_times' => 'getIncludeProposedPlanTimes'
     ];
 
     public static function attributeMap()
@@ -145,6 +150,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         $this->container['include_impact'] = isset($data['include_impact']) ? $data['include_impact'] : null;
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_proposed_plan_times'] = isset($data['include_proposed_plan_times']) ? $data['include_proposed_plan_times'] : null;
     }
 
     /**
@@ -183,7 +189,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_impact
-     * @param bool $include_impact
+     * @param bool $include_impact 
      * @return $this
      */
     public function setIncludeImpact($include_impact)
@@ -204,7 +210,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous
+     * @param bool $synchronous 
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -225,12 +231,33 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities
+     * @param bool $include_capacities 
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
     {
         $this->container['include_capacities'] = $include_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_proposed_plan_times
+     * @return bool
+     */
+    public function getIncludeProposedPlanTimes()
+    {
+        return $this->container['include_proposed_plan_times'];
+    }
+
+    /**
+     * Sets include_proposed_plan_times
+     * @param bool $include_proposed_plan_times 
+     * @return $this
+     */
+    public function setIncludeProposedPlanTimes($include_proposed_plan_times)
+    {
+        $this->container['include_proposed_plan_times'] = $include_proposed_plan_times;
 
         return $this;
     }

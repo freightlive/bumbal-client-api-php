@@ -262,6 +262,8 @@ Class | Method | HTTP request | Description
  - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
  - [AutoPlanOptionsModel](docs/Model/AutoPlanOptionsModel.md)
  - [AutoPlanResponse](docs/Model/AutoPlanResponse.md)
+ - [AvailabilityTimeSlotImpactModel](docs/Model/AvailabilityTimeSlotImpactModel.md)
+ - [AvailabilityTimeSlotModel](docs/Model/AvailabilityTimeSlotModel.md)
  - [BrandColourFiltersModel](docs/Model/BrandColourFiltersModel.md)
  - [BrandColourModel](docs/Model/BrandColourModel.md)
  - [BrandColourOptionsModel](docs/Model/BrandColourOptionsModel.md)

@@ -54,7 +54,8 @@ class AutoPlanDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'token' => 'int'
+        'token' => 'int',
+        'activity' => '\BumbalClient\Model\ActivityModel[]'
     ];
 
     /**
@@ -62,7 +63,8 @@ class AutoPlanDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'token' => 'int64'
+        'token' => 'int64',
+        'activity' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class AutoPlanDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token'
+        'token' => 'token',
+        'activity' => 'activity'
     ];
 
 
@@ -89,7 +92,8 @@ class AutoPlanDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken'
+        'token' => 'setToken',
+        'activity' => 'setActivity'
     ];
 
 
@@ -98,7 +102,8 @@ class AutoPlanDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken'
+        'token' => 'getToken',
+        'activity' => 'getActivity'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class AutoPlanDataModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class AutoPlanDataModel implements ArrayAccess
     public function setToken($token)
     {
         $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity
+     * @return \BumbalClient\Model\ActivityModel[]
+     */
+    public function getActivity()
+    {
+        return $this->container['activity'];
+    }
+
+    /**
+     * Sets activity
+     * @param \BumbalClient\Model\ActivityModel[] $activity 
+     * @return $this
+     */
+    public function setActivity($activity)
+    {
+        $this->container['activity'] = $activity;
 
         return $this;
     }

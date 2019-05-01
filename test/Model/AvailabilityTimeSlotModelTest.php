@@ -1,6 +1,6 @@
 <?php
 /**
- * AutoPlanDataModelTest
+ * AvailabilityTimeSlotModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * AutoPlanDataModelTest Class Doc Comment
+ * AvailabilityTimeSlotModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description AutoPlanDataModel
+// * @description AvailabilityTimeSlotModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AutoPlanDataModelTest extends \PHPUnit_Framework_TestCase
+class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,23 +71,51 @@ class AutoPlanDataModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AutoPlanDataModel"
+     * Test "AvailabilityTimeSlotModel"
      */
-    public function testAutoPlanDataModel()
+    public function testAvailabilityTimeSlotModel()
     {
     }
 
     /**
-     * Test attribute "token"
+     * Test attribute "id"
      */
-    public function testPropertyToken()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "activity"
+     * Test attribute "date_time_from"
      */
-    public function testPropertyActivity()
+    public function testPropertyDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to"
+     */
+    public function testPropertyDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "proposed_plan_date_time_from"
+     */
+    public function testPropertyProposedPlanDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "proposed_plan_date_time_to"
+     */
+    public function testPropertyProposedPlanDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "impact"
+     */
+    public function testPropertyImpact()
     {
     }
 }
