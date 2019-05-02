@@ -57,6 +57,7 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_tags' => 'bool',
         'include_note_tag_type_link_ids' => 'bool',
         'include_note_object_link_ids' => 'bool',
+        'include_note_files' => 'bool',
         'include_updated_by' => 'bool'
     ];
 
@@ -68,6 +69,7 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_tags' => null,
         'include_note_tag_type_link_ids' => null,
         'include_note_object_link_ids' => null,
+        'include_note_files' => null,
         'include_updated_by' => null
     ];
 
@@ -89,6 +91,7 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_tags' => 'include_note_tags',
         'include_note_tag_type_link_ids' => 'include_note_tag_type_link_ids',
         'include_note_object_link_ids' => 'include_note_object_link_ids',
+        'include_note_files' => 'include_note_files',
         'include_updated_by' => 'include_updated_by'
     ];
 
@@ -101,6 +104,7 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_tags' => 'setIncludeNoteTags',
         'include_note_tag_type_link_ids' => 'setIncludeNoteTagTypeLinkIds',
         'include_note_object_link_ids' => 'setIncludeNoteObjectLinkIds',
+        'include_note_files' => 'setIncludeNoteFiles',
         'include_updated_by' => 'setIncludeUpdatedBy'
     ];
 
@@ -113,6 +117,7 @@ class NoteOptionsModel implements ArrayAccess
         'include_note_tags' => 'getIncludeNoteTags',
         'include_note_tag_type_link_ids' => 'getIncludeNoteTagTypeLinkIds',
         'include_note_object_link_ids' => 'getIncludeNoteObjectLinkIds',
+        'include_note_files' => 'getIncludeNoteFiles',
         'include_updated_by' => 'getIncludeUpdatedBy'
     ];
 
@@ -150,6 +155,7 @@ class NoteOptionsModel implements ArrayAccess
         $this->container['include_note_tags'] = isset($data['include_note_tags']) ? $data['include_note_tags'] : null;
         $this->container['include_note_tag_type_link_ids'] = isset($data['include_note_tag_type_link_ids']) ? $data['include_note_tag_type_link_ids'] : null;
         $this->container['include_note_object_link_ids'] = isset($data['include_note_object_link_ids']) ? $data['include_note_object_link_ids'] : null;
+        $this->container['include_note_files'] = isset($data['include_note_files']) ? $data['include_note_files'] : null;
         $this->container['include_updated_by'] = isset($data['include_updated_by']) ? $data['include_updated_by'] : null;
     }
 
@@ -189,7 +195,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_tags
-     * @param bool $include_note_tags 
+     * @param bool $include_note_tags
      * @return $this
      */
     public function setIncludeNoteTags($include_note_tags)
@@ -210,7 +216,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_tag_type_link_ids
-     * @param bool $include_note_tag_type_link_ids 
+     * @param bool $include_note_tag_type_link_ids
      * @return $this
      */
     public function setIncludeNoteTagTypeLinkIds($include_note_tag_type_link_ids)
@@ -231,12 +237,33 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_note_object_link_ids
-     * @param bool $include_note_object_link_ids 
+     * @param bool $include_note_object_link_ids
      * @return $this
      */
     public function setIncludeNoteObjectLinkIds($include_note_object_link_ids)
     {
         $this->container['include_note_object_link_ids'] = $include_note_object_link_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_note_files
+     * @return bool
+     */
+    public function getIncludeNoteFiles()
+    {
+        return $this->container['include_note_files'];
+    }
+
+    /**
+     * Sets include_note_files
+     * @param bool $include_note_files
+     * @return $this
+     */
+    public function setIncludeNoteFiles($include_note_files)
+    {
+        $this->container['include_note_files'] = $include_note_files;
 
         return $this;
     }
@@ -252,7 +279,7 @@ class NoteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by
-     * @param bool $include_updated_by 
+     * @param bool $include_updated_by
      * @return $this
      */
     public function setIncludeUpdatedBy($include_updated_by)

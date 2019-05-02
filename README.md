@@ -126,12 +126,10 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
-*NoteApi* | [**createNote**](docs/Api/NoteApi.md#createnote) | **POST** /note | Add a note
 *NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
-*NoteApi* | [**updateNote**](docs/Api/NoteApi.md#updatenote) | **PUT** /note/{noteId} | Update a note
 *PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an Package Line
 *PackagelineApi* | [**deletePackageLine**](docs/Api/PackagelineApi.md#deletepackageline) | **DELETE** /package-line/{packageLineId} | Delete an package-line
 *PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines

@@ -155,6 +155,13 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

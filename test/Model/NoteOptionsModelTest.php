@@ -99,6 +99,13 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_note_files"
+     */
+    public function testPropertyIncludeNoteFiles()
+    {
+    }
+
+    /**
      * Test attribute "include_updated_by"
      */
     public function testPropertyIncludeUpdatedBy()
