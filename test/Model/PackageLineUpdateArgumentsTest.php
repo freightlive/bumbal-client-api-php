@@ -1,6 +1,6 @@
 <?php
 /**
- * NoteOptionsModelTest
+ * PackageLineUpdateArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * NoteOptionsModelTest Class Doc Comment
+ * PackageLineUpdateArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description NoteOptionsModel
+// * @description PackageLineUpdateArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
+class PackageLineUpdateArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,23 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NoteOptionsModel"
+     * Test "PackageLineUpdateArguments"
      */
-    public function testNoteOptionsModel()
+    public function testPackageLineUpdateArguments()
     {
     }
 
     /**
-     * Test attribute "include_note_tags"
+     * Test attribute "filters"
      */
-    public function testPropertyIncludeNoteTags()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "include_note_tag_type_link_ids"
+     * Test attribute "data"
      */
-    public function testPropertyIncludeNoteTagTypeLinkIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_note_object_link_ids"
-     */
-    public function testPropertyIncludeNoteObjectLinkIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_updated_by"
-     */
-    public function testPropertyIncludeUpdatedBy()
+    public function testPropertyData()
     {
     }
 }

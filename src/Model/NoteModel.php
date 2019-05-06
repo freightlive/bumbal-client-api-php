@@ -65,7 +65,6 @@ class NoteModel implements ArrayAccess
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
-        'files' => '\BumbalClient\Model\FileModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'active' => 'bool'
@@ -87,7 +86,6 @@ class NoteModel implements ArrayAccess
         'title' => null,
         'updated_by_name' => null,
         'content' => null,
-        'files' => null,
         'links' => null,
         'meta_data' => null,
         'active' => null
@@ -119,7 +117,6 @@ class NoteModel implements ArrayAccess
         'title' => 'title',
         'updated_by_name' => 'updated_by_name',
         'content' => 'content',
-        'files' => 'files',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'active' => 'active'
@@ -142,7 +139,6 @@ class NoteModel implements ArrayAccess
         'title' => 'setTitle',
         'updated_by_name' => 'setUpdatedByName',
         'content' => 'setContent',
-        'files' => 'setFiles',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'active' => 'setActive'
@@ -165,7 +161,6 @@ class NoteModel implements ArrayAccess
         'title' => 'getTitle',
         'updated_by_name' => 'getUpdatedByName',
         'content' => 'getContent',
-        'files' => 'getFiles',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'active' => 'getActive'
@@ -213,7 +208,6 @@ class NoteModel implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
-        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -339,7 +333,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets object_link
-     * @param \BumbalClient\Model\LinkModel $object_link
+     * @param \BumbalClient\Model\LinkModel $object_link 
      * @return $this
      */
     public function setObjectLink($object_link)
@@ -476,27 +470,6 @@ class NoteModel implements ArrayAccess
     }
 
     /**
-     * Gets files
-     * @return \BumbalClient\Model\FileModel[]
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
-     * @return $this
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
-
-        return $this;
-    }
-
-    /**
      * Gets links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -507,7 +480,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -528,7 +501,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)

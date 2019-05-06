@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **title** | **string** | Note title | [optional] 
 **updated_by_name** | **string** | Note updated by user full name | [optional] 
 **content** | **string** | Note content | [optional] 
-**files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **active** | **bool** | if active&#x3D;0: note has been removed and is no longer visible in any bumbal interface | [optional] 

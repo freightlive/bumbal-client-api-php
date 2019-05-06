@@ -699,7 +699,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int $driver_id
+     * @param int $driver_id 
      * @return $this
      */
     public function setDriverId($driver_id)
@@ -720,7 +720,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_link
-     * @param \BumbalClient\Model\LinkModel $driver_link
+     * @param \BumbalClient\Model\LinkModel $driver_link 
      * @return $this
      */
     public function setDriverLink($driver_link)
@@ -741,7 +741,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_links
-     * @param \BumbalClient\Model\LinkModel[] $driver_links
+     * @param \BumbalClient\Model\LinkModel[] $driver_links 
      * @return $this
      */
     public function setDriverLinks($driver_links)
@@ -762,7 +762,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\UsersModel $driver
+     * @param \BumbalClient\Model\UsersModel $driver 
      * @return $this
      */
     public function setDriver($driver)
@@ -783,7 +783,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets user_link
-     * @param \BumbalClient\Model\LinkModel[] $user_link
+     * @param \BumbalClient\Model\LinkModel[] $user_link 
      * @return $this
      */
     public function setUserLink($user_link)
@@ -804,7 +804,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car_id
-     * @param int $car_id
+     * @param int $car_id 
      * @return $this
      */
     public function setCarId($car_id)
@@ -888,7 +888,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car_link
-     * @param \BumbalClient\Model\LinkModel[] $car_link
+     * @param \BumbalClient\Model\LinkModel[] $car_link 
      * @return $this
      */
     public function setCarLink($car_link)
@@ -909,7 +909,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\VehicleModel $car
+     * @param \BumbalClient\Model\VehicleModel $car 
      * @return $this
      */
     public function setCar($car)
@@ -930,7 +930,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer_id
-     * @param int $trailer_id
+     * @param int $trailer_id 
      * @return $this
      */
     public function setTrailerId($trailer_id)
@@ -951,7 +951,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer_link
-     * @param \BumbalClient\Model\LinkModel[] $trailer_link
+     * @param \BumbalClient\Model\LinkModel[] $trailer_link 
      * @return $this
      */
     public function setTrailerLink($trailer_link)
@@ -972,7 +972,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer 
      * @return $this
      */
     public function setTrailer($trailer)
@@ -993,7 +993,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets earliest_date_time
-     * @param \DateTime $earliest_date_time
+     * @param \DateTime $earliest_date_time 
      * @return $this
      */
     public function setEarliestDateTime($earliest_date_time)
@@ -1014,7 +1014,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_date_time
-     * @param \DateTime $latest_date_time
+     * @param \DateTime $latest_date_time 
      * @return $this
      */
     public function setLatestDateTime($latest_date_time)
@@ -1203,7 +1203,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets gps_locations
-     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations
+     * @param \BumbalClient\Model\GPSLocationModel[] $gps_locations 
      * @return $this
      */
     public function setGpsLocations($gps_locations)
@@ -1224,7 +1224,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets latest_known_position
-     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position
+     * @param \BumbalClient\Model\GPSLocationModel $latest_known_position 
      * @return $this
      */
     public function setLatestKnownPosition($latest_known_position)
@@ -1287,7 +1287,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -1392,7 +1392,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets start_address
-     * @param \BumbalClient\Model\AddressModel $start_address
+     * @param \BumbalClient\Model\AddressModel $start_address 
      * @return $this
      */
     public function setStartAddress($start_address)
@@ -1413,7 +1413,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets end_address
-     * @param \BumbalClient\Model\AddressModel $end_address
+     * @param \BumbalClient\Model\AddressModel $end_address 
      * @return $this
      */
     public function setEndAddress($end_address)
@@ -1434,7 +1434,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets planned_capacities
-     * @param object $planned_capacities
+     * @param object $planned_capacities 
      * @return $this
      */
     public function setPlannedCapacities($planned_capacities)
@@ -1455,7 +1455,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -1476,7 +1476,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -1497,7 +1497,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets activity_ids
-     * @param object $activity_ids
+     * @param object $activity_ids 
      * @return $this
      */
     public function setActivityIds($activity_ids)
@@ -1518,7 +1518,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -1539,7 +1539,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1560,7 +1560,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -1581,7 +1581,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)
@@ -1644,7 +1644,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -1686,7 +1686,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
      * @return $this
      */
     public function setZones($zones)

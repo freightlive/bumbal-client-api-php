@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneRetrieveListArguments
+ * PackageLineUpdateArguments
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneRetrieveListArguments Class Doc Comment
+ * PackageLineUpdateArguments Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneRetrieveListArguments implements ArrayAccess
+class PackageLineUpdateArguments implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,15 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneRetrieveListArguments';
+    protected static $swaggerModelName = 'PackageLineUpdateArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ZoneOptionsModel',
-        'filters' => '\BumbalClient\Model\ZoneFiltersModel',
-        'limit' => 'int',
-        'offset' => 'int',
-        'search_text' => 'string'
+        'filters' => '\BumbalClient\Model\PackageLineFiltersModel',
+        'data' => '\BumbalClient\Model\PackageLineModel'
     ];
 
     /**
@@ -66,11 +63,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
         'filters' => null,
-        'limit' => 'int64',
-        'offset' => 'int64',
-        'search_text' => null
+        'data' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +82,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
         'filters' => 'filters',
-        'limit' => 'limit',
-        'offset' => 'offset',
-        'search_text' => 'search_text'
+        'data' => 'data'
     ];
 
 
@@ -101,11 +92,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
         'filters' => 'setFilters',
-        'limit' => 'setLimit',
-        'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'data' => 'setData'
     ];
 
 
@@ -114,11 +102,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
         'filters' => 'getFilters',
-        'limit' => 'getLimit',
-        'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -152,11 +137,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -185,29 +167,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\ZoneOptionsModel
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \BumbalClient\Model\ZoneOptionsModel $options 
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
      * Gets filters
-     * @return \BumbalClient\Model\ZoneFiltersModel
+     * @return \BumbalClient\Model\PackageLineFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +177,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ZoneFiltersModel $filters 
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
@@ -227,64 +188,22 @@ class ZoneRetrieveListArguments implements ArrayAccess
     }
 
     /**
-     * Gets limit
-     * @return int
+     * Gets data
+     * @return \BumbalClient\Model\PackageLineModel
      */
-    public function getLimit()
+    public function getData()
     {
-        return $this->container['limit'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets limit
-     * @param int $limit 
+     * Sets data
+     * @param \BumbalClient\Model\PackageLineModel $data 
      * @return $this
      */
-    public function setLimit($limit)
+    public function setData($data)
     {
-        $this->container['limit'] = $limit;
-
-        return $this;
-    }
-
-    /**
-     * Gets offset
-     * @return int
-     */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-     * Sets offset
-     * @param int $offset 
-     * @return $this
-     */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
-     * Gets search_text
-     * @return string
-     */
-    public function getSearchText()
-    {
-        return $this->container['search_text'];
-    }
-
-    /**
-     * Sets search_text
-     * @param string $search_text 
-     * @return $this
-     */
-    public function setSearchText($search_text)
-    {
-        $this->container['search_text'] = $search_text;
+        $this->container['data'] = $data;
 
         return $this;
     }

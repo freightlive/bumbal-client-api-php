@@ -73,6 +73,16 @@ class NoteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createNote
+     *
+     * Add a note.
+     *
+     */
+    public function testCreateNote()
+    {
+    }
+
+    /**
      * Test case for deleteNote
      *
      * Delete an note.
@@ -109,6 +119,16 @@ class NoteApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetNote()
+    {
+    }
+
+    /**
+     * Test case for updateNote
+     *
+     * Update a note.
+     *
+     */
+    public function testUpdateNote()
     {
     }
 }
