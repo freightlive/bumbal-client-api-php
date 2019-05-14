@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **include_communication_object** | **bool** |  | [optional] 
 **include_links** | **bool** |  | [optional] 
 **include_activity_links** | **bool** |  | [optional] 
-**include_activity_files** | **bool** |  | [optional] 
+**include_files** | **bool** |  | [optional] 
 **include_activity_files_meta_data** | **bool** |  | [optional] 
 **include_assignment_nr** | **bool** |  | [optional] 
 **include_assignment** | **bool** |  | [optional] 
@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **include_brand_colours** | **bool** |  | [optional] 
 **include_brand_files** | **bool** |  | [optional] 
 **apply_address_bundling** | **bool** |  | [optional] 
+**include_activity_files** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

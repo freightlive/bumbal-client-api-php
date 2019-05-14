@@ -260,9 +260,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_activity_files"
+     * Test attribute "include_files"
      */
-    public function testPropertyIncludeActivityFiles()
+    public function testPropertyIncludeFiles()
     {
     }
 
@@ -389,6 +389,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "apply_address_bundling"
      */
     public function testPropertyApplyAddressBundling()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_files"
+     */
+    public function testPropertyIncludeActivityFiles()
     {
     }
 }

@@ -80,7 +80,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_communication_object' => 'bool',
         'include_links' => 'bool',
         'include_activity_links' => 'bool',
-        'include_activity_files' => 'bool',
+        'include_files' => 'bool',
         'include_activity_files_meta_data' => 'bool',
         'include_assignment_nr' => 'bool',
         'include_assignment' => 'bool',
@@ -98,7 +98,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand' => 'bool',
         'include_brand_colours' => 'bool',
         'include_brand_files' => 'bool',
-        'apply_address_bundling' => 'bool'
+        'apply_address_bundling' => 'bool',
+        'include_activity_files' => 'bool'
     ];
 
     /**
@@ -132,7 +133,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_communication_object' => null,
         'include_links' => null,
         'include_activity_links' => null,
-        'include_activity_files' => null,
+        'include_files' => null,
         'include_activity_files_meta_data' => null,
         'include_assignment_nr' => null,
         'include_assignment' => null,
@@ -150,7 +151,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand' => null,
         'include_brand_colours' => null,
         'include_brand_files' => null,
-        'apply_address_bundling' => null
+        'apply_address_bundling' => null,
+        'include_activity_files' => null
     ];
 
     public static function swaggerTypes()
@@ -194,7 +196,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_communication_object' => 'include_communication_object',
         'include_links' => 'include_links',
         'include_activity_links' => 'include_activity_links',
-        'include_activity_files' => 'include_activity_files',
+        'include_files' => 'include_files',
         'include_activity_files_meta_data' => 'include_activity_files_meta_data',
         'include_assignment_nr' => 'include_assignment_nr',
         'include_assignment' => 'include_assignment',
@@ -212,7 +214,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand' => 'include_brand',
         'include_brand_colours' => 'include_brand_colours',
         'include_brand_files' => 'include_brand_files',
-        'apply_address_bundling' => 'apply_address_bundling'
+        'apply_address_bundling' => 'apply_address_bundling',
+        'include_activity_files' => 'include_activity_files'
     ];
 
 
@@ -247,7 +250,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_communication_object' => 'setIncludeCommunicationObject',
         'include_links' => 'setIncludeLinks',
         'include_activity_links' => 'setIncludeActivityLinks',
-        'include_activity_files' => 'setIncludeActivityFiles',
+        'include_files' => 'setIncludeFiles',
         'include_activity_files_meta_data' => 'setIncludeActivityFilesMetaData',
         'include_assignment_nr' => 'setIncludeAssignmentNr',
         'include_assignment' => 'setIncludeAssignment',
@@ -265,7 +268,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand' => 'setIncludeBrand',
         'include_brand_colours' => 'setIncludeBrandColours',
         'include_brand_files' => 'setIncludeBrandFiles',
-        'apply_address_bundling' => 'setApplyAddressBundling'
+        'apply_address_bundling' => 'setApplyAddressBundling',
+        'include_activity_files' => 'setIncludeActivityFiles'
     ];
 
 
@@ -300,7 +304,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_communication_object' => 'getIncludeCommunicationObject',
         'include_links' => 'getIncludeLinks',
         'include_activity_links' => 'getIncludeActivityLinks',
-        'include_activity_files' => 'getIncludeActivityFiles',
+        'include_files' => 'getIncludeFiles',
         'include_activity_files_meta_data' => 'getIncludeActivityFilesMetaData',
         'include_assignment_nr' => 'getIncludeAssignmentNr',
         'include_assignment' => 'getIncludeAssignment',
@@ -318,7 +322,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand' => 'getIncludeBrand',
         'include_brand_colours' => 'getIncludeBrandColours',
         'include_brand_files' => 'getIncludeBrandFiles',
-        'apply_address_bundling' => 'getApplyAddressBundling'
+        'apply_address_bundling' => 'getApplyAddressBundling',
+        'include_activity_files' => 'getIncludeActivityFiles'
     ];
 
     public static function attributeMap()
@@ -378,7 +383,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
         $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
-        $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
+        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
         $this->container['include_activity_files_meta_data'] = isset($data['include_activity_files_meta_data']) ? $data['include_activity_files_meta_data'] : null;
         $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
         $this->container['include_assignment'] = isset($data['include_assignment']) ? $data['include_assignment'] : null;
@@ -397,6 +402,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
         $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
         $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
+        $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
     }
 
     /**
@@ -971,22 +977,22 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_activity_files
+     * Gets include_files
      * @return bool
      */
-    public function getIncludeActivityFiles()
+    public function getIncludeFiles()
     {
-        return $this->container['include_activity_files'];
+        return $this->container['include_files'];
     }
 
     /**
-     * Sets include_activity_files
-     * @param bool $include_activity_files 
+     * Sets include_files
+     * @param bool $include_files 
      * @return $this
      */
-    public function setIncludeActivityFiles($include_activity_files)
+    public function setIncludeFiles($include_files)
     {
-        $this->container['include_activity_files'] = $include_activity_files;
+        $this->container['include_files'] = $include_files;
 
         return $this;
     }
@@ -1365,6 +1371,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setApplyAddressBundling($apply_address_bundling)
     {
         $this->container['apply_address_bundling'] = $apply_address_bundling;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_files
+     * @return bool
+     */
+    public function getIncludeActivityFiles()
+    {
+        return $this->container['include_activity_files'];
+    }
+
+    /**
+     * Sets include_activity_files
+     * @param bool $include_activity_files 
+     * @return $this
+     */
+    public function setIncludeActivityFiles($include_activity_files)
+    {
+        $this->container['include_activity_files'] = $include_activity_files;
 
         return $this;
     }
