@@ -1,6 +1,6 @@
 <?php
 /**
- * PackagelineApiTest
+ * PackagetypeApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * PackagelineApiTest Class Doc Comment
+ * PackagetypeApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PackagelineApiTest extends \PHPUnit_Framework_TestCase
+class PackagetypeApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,62 +73,62 @@ class PackagelineApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createPackageLine
+     * Test case for createPackageType
      *
      * Create or update an Package Line.
      *
      */
-    public function testCreatePackageLine()
+    public function testCreatePackageType()
     {
     }
 
     /**
-     * Test case for deletePackageLine
+     * Test case for deletePackageType
      *
-     * Delete an package-line.
+     * Delete an package-type.
      *
      */
-    public function testDeletePackageLine()
+    public function testDeletePackageType()
     {
     }
 
     /**
-     * Test case for retrieveListPackageLine
+     * Test case for retrieveListPackageType
      *
-     * Retrieve List of PackageLines.
+     * Retrieve List of PackageTypes.
      *
      */
-    public function testRetrieveListPackageLine()
+    public function testRetrieveListPackageType()
     {
     }
 
     /**
-     * Test case for retrievePackageLine
+     * Test case for retrievePackageType
      *
-     * Find package-line by ID.
+     * Find package-type by ID.
      *
      */
-    public function testRetrievePackageLine()
+    public function testRetrievePackageType()
     {
     }
 
     /**
-     * Test case for setPackageLine
+     * Test case for setPackageType
      *
-     * Set (create or update) an PackageLine.
+     * Set (create or update) an PackageType.
      *
      */
-    public function testSetPackageLine()
+    public function testSetPackageType()
     {
     }
 
     /**
-     * Test case for updatePackageLine
+     * Test case for updatePackageType
      *
-     * Update a package-line.
+     * Update a package-type.
      *
      */
-    public function testUpdatePackageLine()
+    public function testUpdatePackageType()
     {
     }
 }

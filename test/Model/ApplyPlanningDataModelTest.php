@@ -97,4 +97,11 @@ class ApplyPlanningDataModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRoutes()
     {
     }
+
+    /**
+     * Test attribute "after_updates"
+     */
+    public function testPropertyAfterUpdates()
+    {
+    }
 }

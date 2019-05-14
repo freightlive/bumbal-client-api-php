@@ -1,6 +1,6 @@
 <?php
 /**
- * NoteOptionsModelTest
+ * PackageTypeListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * NoteOptionsModelTest Class Doc Comment
+ * PackageTypeListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description NoteOptionsModel
+// * @description PackageTypeListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
+class PackageTypeListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,37 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NoteOptionsModel"
+     * Test "PackageTypeListResponse"
      */
-    public function testNoteOptionsModel()
+    public function testPackageTypeListResponse()
     {
     }
 
     /**
-     * Test attribute "include_note_tags"
+     * Test attribute "items"
      */
-    public function testPropertyIncludeNoteTags()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "include_note_tag_type_link_ids"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyIncludeNoteTagTypeLinkIds()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "include_note_object_link_ids"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyIncludeNoteObjectLinkIds()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "include_note_files"
+     * Test attribute "count_limited"
      */
-    public function testPropertyIncludeNoteFiles()
-    {
-    }
-
-    /**
-     * Test attribute "include_updated_by"
-     */
-    public function testPropertyIncludeUpdatedBy()
+    public function testPropertyCountLimited()
     {
     }
 }

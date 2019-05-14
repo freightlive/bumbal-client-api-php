@@ -1,6 +1,6 @@
 <?php
 /**
- * NoteOptionsModelTest
+ * PackageTypeRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * NoteOptionsModelTest Class Doc Comment
+ * PackageTypeRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description NoteOptionsModel
+// * @description PackageTypeRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
+class PackageTypeRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,65 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NoteOptionsModel"
+     * Test "PackageTypeRetrieveListArguments"
      */
-    public function testNoteOptionsModel()
+    public function testPackageTypeRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "include_note_tags"
+     * Test attribute "options"
      */
-    public function testPropertyIncludeNoteTags()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "include_note_tag_type_link_ids"
+     * Test attribute "filters"
      */
-    public function testPropertyIncludeNoteTagTypeLinkIds()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "include_note_object_link_ids"
+     * Test attribute "limit"
      */
-    public function testPropertyIncludeNoteObjectLinkIds()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "include_note_files"
+     * Test attribute "offset"
      */
-    public function testPropertyIncludeNoteFiles()
+    public function testPropertyOffset()
     {
     }
 
     /**
-     * Test attribute "include_updated_by"
+     * Test attribute "sorting_column"
      */
-    public function testPropertyIncludeUpdatedBy()
+    public function testPropertySortingColumn()
+    {
+    }
+
+    /**
+     * Test attribute "sorting_direction"
+     */
+    public function testPropertySortingDirection()
+    {
+    }
+
+    /**
+     * Test attribute "search_text"
+     */
+    public function testPropertySearchText()
+    {
+    }
+
+    /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
     {
     }
 }

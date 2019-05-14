@@ -1,6 +1,6 @@
 <?php
 /**
- * PackageLineModelTest
+ * PackageTypeFiltersModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * PackageLineModelTest Class Doc Comment
+ * PackageTypeFiltersModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PackageLineModel
+// * @description PackageTypeFiltersModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PackageLineModelTest extends \PHPUnit_Framework_TestCase
+class PackageTypeFiltersModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,23 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PackageLineModel"
+     * Test "PackageTypeFiltersModel"
      */
-    public function testPackageLineModel()
+    public function testPackageTypeFiltersModel()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
     {
     }
 
@@ -81,20 +95,6 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-    }
-
-    /**
-     * Test attribute "activity_id"
-     */
-    public function testPropertyActivityId()
-    {
-    }
-
-    /**
-     * Test attribute "activity_ids"
-     */
-    public function testPropertyActivityIds()
     {
     }
 
@@ -141,30 +141,23 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "applied_capacities"
+     */
+    public function testPropertyAppliedCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "capacities"
+     */
+    public function testPropertyCapacities()
+    {
+    }
+
+    /**
      * Test attribute "barcode"
      */
     public function testPropertyBarcode()
-    {
-    }
-
-    /**
-     * Test attribute "action_type_id"
-     */
-    public function testPropertyActionTypeId()
-    {
-    }
-
-    /**
-     * Test attribute "action_type_name"
-     */
-    public function testPropertyActionTypeName()
-    {
-    }
-
-    /**
-     * Test attribute "checked_by_driver"
-     */
-    public function testPropertyCheckedByDriver()
     {
     }
 
@@ -225,23 +218,9 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "active"
+     * Test attribute "links"
      */
-    public function testPropertyActive()
-    {
-    }
-
-    /**
-     * Test attribute "applied_capacities"
-     */
-    public function testPropertyAppliedCapacities()
-    {
-    }
-
-    /**
-     * Test attribute "capacities"
-     */
-    public function testPropertyCapacities()
+    public function testPropertyLinks()
     {
     }
 
@@ -253,72 +232,9 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "activity_id"
      */
-    public function testPropertyLinks()
-    {
-    }
-
-    /**
-     * Test attribute "meta_data"
-     */
-    public function testPropertyMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
-    {
-    }
-
-    /**
-     * Test attribute "files"
-     */
-    public function testPropertyFiles()
-    {
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "package_line_created_at"
-     */
-    public function testPropertyPackageLineCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "package_line_updated_at"
-     */
-    public function testPropertyPackageLineUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "package_line_created_by"
-     */
-    public function testPropertyPackageLineCreatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "package_line_updated_by"
-     */
-    public function testPropertyPackageLineUpdatedBy()
+    public function testPropertyActivityId()
     {
     }
 }

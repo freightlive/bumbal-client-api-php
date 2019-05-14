@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
-**activity_id** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
+**activity_id** | **int** | Unique Identifier for activity where this packageline is related to | [optional] 
+**activity_ids** | **int[]** | Unique Identifier for activities where this packageline is related to | [optional] 
 **nr** | **string** | Number of this PackageLine | [optional] 
 **status_id** | **int** | StatusId of this PackageLine, 31: package_line_cancelled, 23: package_line_incomplete, 24: package_line_new, 42: package_line_awaiting, 25: package_line_accepted, 10: package_line_planned, 11: package_line_in_progress, 12: package_line_executed | [optional] 
 **status_name** | **string** | PackageLine Status | [optional] 
@@ -33,6 +34,10 @@ Name | Type | Description | Notes
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
+**package_line_created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
+**package_line_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
+**package_line_created_by** | **int** | created_by user id | [optional] 
+**package_line_updated_by** | **int** | updated_by user id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

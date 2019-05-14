@@ -1,6 +1,6 @@
 <?php
 /**
- * PackageLineOptionsModelTest
+ * PackageTypeOptionsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * PackageLineOptionsModelTest Class Doc Comment
+ * PackageTypeOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description PackageLineOptionsModel
+// * @description PackageTypeOptionsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
+class PackageTypeOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PackageLineOptionsModel"
+     * Test "PackageTypeOptionsModel"
      */
-    public function testPackageLineOptionsModel()
+    public function testPackageTypeOptionsModel()
     {
     }
 

@@ -185,7 +185,6 @@ class ActivityApi
      * @param bool $include_activity_meta_data Include meta data connected to this Activity (required)
      * @param bool $include_address_object Include address data (required)
      * @param bool $include_time_slots Include TimeSlots (required)
-     * @param bool $include_time_slot_tags Include tags from TimeSlots (required)
      * @param bool $include_route_info Include route data (required)
      * @param bool $include_route Include Route (required)
      * @param bool $include_package_lines Include package lines (required)
@@ -212,9 +211,9 @@ class ActivityApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ActivityModel
      */
-    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
     {
-        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
+        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
         return $response;
     }
 
@@ -229,7 +228,6 @@ class ActivityApi
      * @param bool $include_activity_meta_data Include meta data connected to this Activity (required)
      * @param bool $include_address_object Include address data (required)
      * @param bool $include_time_slots Include TimeSlots (required)
-     * @param bool $include_time_slot_tags Include tags from TimeSlots (required)
      * @param bool $include_route_info Include route data (required)
      * @param bool $include_route Include Route (required)
      * @param bool $include_package_lines Include package lines (required)
@@ -256,7 +254,7 @@ class ActivityApi
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -281,10 +279,6 @@ class ActivityApi
         // verify the required parameter 'include_time_slots' is set
         if ($include_time_slots === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_time_slots when calling retrieveActivity');
-        }
-        // verify the required parameter 'include_time_slot_tags' is set
-        if ($include_time_slot_tags === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_time_slot_tags when calling retrieveActivity');
         }
         // verify the required parameter 'include_route_info' is set
         if ($include_route_info === null) {
@@ -409,10 +403,6 @@ class ActivityApi
         // query params
         if ($include_time_slots !== null) {
             $queryParams['include_time_slots'] = $this->apiClient->getSerializer()->toQueryValue($include_time_slots);
-        }
-        // query params
-        if ($include_time_slot_tags !== null) {
-            $queryParams['include_time_slot_tags'] = $this->apiClient->getSerializer()->toQueryValue($include_time_slot_tags);
         }
         // query params
         if ($include_route_info !== null) {

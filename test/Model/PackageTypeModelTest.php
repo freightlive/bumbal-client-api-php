@@ -1,6 +1,6 @@
 <?php
 /**
- * NoteOptionsModelTest
+ * PackageTypeModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * NoteOptionsModelTest Class Doc Comment
+ * PackageTypeModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description NoteOptionsModel
+// * @description PackageTypeModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
+class PackageTypeModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,44 +71,72 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "NoteOptionsModel"
+     * Test "PackageTypeModel"
      */
-    public function testNoteOptionsModel()
+    public function testPackageTypeModel()
     {
     }
 
     /**
-     * Test attribute "include_note_tags"
+     * Test attribute "id"
      */
-    public function testPropertyIncludeNoteTags()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "include_note_tag_type_link_ids"
+     * Test attribute "name"
      */
-    public function testPropertyIncludeNoteTagTypeLinkIds()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "include_note_object_link_ids"
+     * Test attribute "active"
      */
-    public function testPropertyIncludeNoteObjectLinkIds()
+    public function testPropertyActive()
     {
     }
 
     /**
-     * Test attribute "include_note_files"
+     * Test attribute "links"
      */
-    public function testPropertyIncludeNoteFiles()
+    public function testPropertyLinks()
     {
     }
 
     /**
-     * Test attribute "include_updated_by"
+     * Test attribute "meta_data"
      */
-    public function testPropertyIncludeUpdatedBy()
+    public function testPropertyMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "created_at"
+     */
+    public function testPropertyCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "updated_at"
+     */
+    public function testPropertyUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "created_by"
+     */
+    public function testPropertyCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "updated_by"
+     */
+    public function testPropertyUpdatedBy()
     {
     }
 }

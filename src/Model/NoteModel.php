@@ -65,9 +65,14 @@ class NoteModel implements ArrayAccess
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
-        'active' => 'bool'
+        'active' => 'bool',
+        'note_created_at' => '\DateTime',
+        'note_updated_at' => '\DateTime',
+        'note_created_by' => 'int',
+        'note_updated_by' => 'int'
     ];
 
     /**
@@ -86,9 +91,14 @@ class NoteModel implements ArrayAccess
         'title' => null,
         'updated_by_name' => null,
         'content' => null,
+        'files' => null,
         'links' => null,
         'meta_data' => null,
-        'active' => null
+        'active' => null,
+        'note_created_at' => 'date-time',
+        'note_updated_at' => 'date-time',
+        'note_created_by' => null,
+        'note_updated_by' => null
     ];
 
     public static function swaggerTypes()
@@ -117,9 +127,14 @@ class NoteModel implements ArrayAccess
         'title' => 'title',
         'updated_by_name' => 'updated_by_name',
         'content' => 'content',
+        'files' => 'files',
         'links' => 'links',
         'meta_data' => 'meta_data',
-        'active' => 'active'
+        'active' => 'active',
+        'note_created_at' => 'note_created_at',
+        'note_updated_at' => 'note_updated_at',
+        'note_created_by' => 'note_created_by',
+        'note_updated_by' => 'note_updated_by'
     ];
 
 
@@ -139,9 +154,14 @@ class NoteModel implements ArrayAccess
         'title' => 'setTitle',
         'updated_by_name' => 'setUpdatedByName',
         'content' => 'setContent',
+        'files' => 'setFiles',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
-        'active' => 'setActive'
+        'active' => 'setActive',
+        'note_created_at' => 'setNoteCreatedAt',
+        'note_updated_at' => 'setNoteUpdatedAt',
+        'note_created_by' => 'setNoteCreatedBy',
+        'note_updated_by' => 'setNoteUpdatedBy'
     ];
 
 
@@ -161,9 +181,14 @@ class NoteModel implements ArrayAccess
         'title' => 'getTitle',
         'updated_by_name' => 'getUpdatedByName',
         'content' => 'getContent',
+        'files' => 'getFiles',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
-        'active' => 'getActive'
+        'active' => 'getActive',
+        'note_created_at' => 'getNoteCreatedAt',
+        'note_updated_at' => 'getNoteUpdatedAt',
+        'note_created_by' => 'getNoteCreatedBy',
+        'note_updated_by' => 'getNoteUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -208,9 +233,14 @@ class NoteModel implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['updated_by_name'] = isset($data['updated_by_name']) ? $data['updated_by_name'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
+        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['note_created_at'] = isset($data['note_created_at']) ? $data['note_created_at'] : null;
+        $this->container['note_updated_at'] = isset($data['note_updated_at']) ? $data['note_updated_at'] : null;
+        $this->container['note_created_by'] = isset($data['note_created_by']) ? $data['note_created_by'] : null;
+        $this->container['note_updated_by'] = isset($data['note_updated_by']) ? $data['note_updated_by'] : null;
     }
 
     /**
@@ -470,6 +500,27 @@ class NoteModel implements ArrayAccess
     }
 
     /**
+     * Gets files
+     * @return \BumbalClient\Model\FileModel[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     * @param \BumbalClient\Model\FileModel[] $files 
+     * @return $this
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
      * Gets links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -528,6 +579,90 @@ class NoteModel implements ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets note_created_at
+     * @return \DateTime
+     */
+    public function getNoteCreatedAt()
+    {
+        return $this->container['note_created_at'];
+    }
+
+    /**
+     * Sets note_created_at
+     * @param \DateTime $note_created_at created_at date time
+     * @return $this
+     */
+    public function setNoteCreatedAt($note_created_at)
+    {
+        $this->container['note_created_at'] = $note_created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets note_updated_at
+     * @return \DateTime
+     */
+    public function getNoteUpdatedAt()
+    {
+        return $this->container['note_updated_at'];
+    }
+
+    /**
+     * Sets note_updated_at
+     * @param \DateTime $note_updated_at updated_at date time
+     * @return $this
+     */
+    public function setNoteUpdatedAt($note_updated_at)
+    {
+        $this->container['note_updated_at'] = $note_updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets note_created_by
+     * @return int
+     */
+    public function getNoteCreatedBy()
+    {
+        return $this->container['note_created_by'];
+    }
+
+    /**
+     * Sets note_created_by
+     * @param int $note_created_by created_by user id
+     * @return $this
+     */
+    public function setNoteCreatedBy($note_created_by)
+    {
+        $this->container['note_created_by'] = $note_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets note_updated_by
+     * @return int
+     */
+    public function getNoteUpdatedBy()
+    {
+        return $this->container['note_updated_by'];
+    }
+
+    /**
+     * Sets note_updated_by
+     * @param int $note_updated_by updated_by user id
+     * @return $this
+     */
+    public function setNoteUpdatedBy($note_updated_by)
+    {
+        $this->container['note_updated_by'] = $note_updated_by;
 
         return $this;
     }

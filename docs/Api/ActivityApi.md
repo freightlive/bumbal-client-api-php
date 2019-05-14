@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
 
 Find activity by ID
 
@@ -85,7 +85,6 @@ $include_activity_type_name = true; // bool | Show the text value of the activit
 $include_activity_meta_data = true; // bool | Include meta data connected to this Activity
 $include_address_object = true; // bool | Include address data
 $include_time_slots = true; // bool | Include TimeSlots
-$include_time_slot_tags = true; // bool | Include tags from TimeSlots
 $include_route_info = true; // bool | Include route data
 $include_route = true; // bool | Include Route
 $include_package_lines = true; // bool | Include package lines
@@ -111,7 +110,7 @@ $include_brand_colours = true; // bool | Include brand colours
 $include_brand_files = true; // bool | Include brand files
 
 try {
-    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
+    $result = $api_instance->retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ActivityApi->retrieveActivity: ', $e->getMessage(), PHP_EOL;
@@ -129,7 +128,6 @@ Name | Type | Description  | Notes
  **include_activity_meta_data** | **bool**| Include meta data connected to this Activity | [default to true]
  **include_address_object** | **bool**| Include address data | [default to true]
  **include_time_slots** | **bool**| Include TimeSlots | [default to true]
- **include_time_slot_tags** | **bool**| Include tags from TimeSlots | [default to true]
  **include_route_info** | **bool**| Include route data | [default to true]
  **include_route** | **bool**| Include Route | [default to true]
  **include_package_lines** | **bool**| Include package lines | [default to true]

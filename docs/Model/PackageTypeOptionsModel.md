@@ -1,4 +1,4 @@
-# PackageLineOptionsModel
+# PackageTypeOptionsModel
 
 ## Properties
 Name | Type | Description | Notes

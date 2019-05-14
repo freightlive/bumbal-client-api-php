@@ -1,6 +1,6 @@
 <?php
 /**
- * CheckAvailabilityDataModel
+ * PackageTypeListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CheckAvailabilityDataModel Class Doc Comment
+ * PackageTypeListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CheckAvailabilityDataModel implements ArrayAccess
+class PackageTypeListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class CheckAvailabilityDataModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CheckAvailabilityDataModel';
+    protected static $swaggerModelName = 'PackageTypeListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'activity' => '\BumbalClient\Model\ActivityModel',
-        'route_filters' => 'object',
-        'token' => 'string'
+        'items' => '\BumbalClient\Model\PackageTypeModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -64,9 +65,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'activity' => null,
-        'route_filters' => null,
-        'token' => 'string'
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +86,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'activity' => 'activity',
-        'route_filters' => 'route_filters',
-        'token' => 'token'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -95,9 +98,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'activity' => 'setActivity',
-        'route_filters' => 'setRouteFilters',
-        'token' => 'setToken'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -106,9 +110,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'activity' => 'getActivity',
-        'route_filters' => 'getRouteFilters',
-        'token' => 'getToken'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -142,9 +147,10 @@ class CheckAvailabilityDataModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
-        $this->container['route_filters'] = isset($data['route_filters']) ? $data['route_filters'] : null;
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -156,9 +162,6 @@ class CheckAvailabilityDataModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['activity'] === null) {
-            $invalid_properties[] = "'activity' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -171,72 +174,90 @@ class CheckAvailabilityDataModel implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['activity'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets activity
-     * @return \BumbalClient\Model\ActivityModel
+     * Gets items
+     * @return \BumbalClient\Model\PackageTypeModel[]
      */
-    public function getActivity()
+    public function getItems()
     {
-        return $this->container['activity'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets activity
-     * @param \BumbalClient\Model\ActivityModel $activity 
+     * Sets items
+     * @param \BumbalClient\Model\PackageTypeModel[] $items 
      * @return $this
      */
-    public function setActivity($activity)
+    public function setItems($items)
     {
-        $this->container['activity'] = $activity;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets route_filters
-     * @return object
+     * Gets count_filtered
+     * @return int
      */
-    public function getRouteFilters()
+    public function getCountFiltered()
     {
-        return $this->container['route_filters'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets route_filters
-     * @param object $route_filters 
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setRouteFilters($route_filters)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['route_filters'] = $route_filters;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets token
-     * @return string
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getToken()
+    public function getCountUnfiltered()
     {
-        return $this->container['token'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets token
-     * @param string $token unique per api request
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setToken($token)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['token'] = $token;
+        $this->container['count_unfiltered'] = $count_unfiltered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_limited
+     * @return int
+     */
+    public function getCountLimited()
+    {
+        return $this->container['count_limited'];
+    }
+
+    /**
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
+     * @return $this
+     */
+    public function setCountLimited($count_limited)
+    {
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

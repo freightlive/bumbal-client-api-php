@@ -1,6 +1,6 @@
 <?php
 /**
- * PackageLineOptionsModel
+ * PackageTypeOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * PackageLineOptionsModel Class Doc Comment
+ * PackageTypeOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PackageLineOptionsModel implements ArrayAccess
+class PackageTypeOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class PackageLineOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'PackageLineOptionsModel';
+    protected static $swaggerModelName = 'PackageTypeOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

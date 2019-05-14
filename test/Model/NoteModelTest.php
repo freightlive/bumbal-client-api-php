@@ -155,6 +155,13 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()
@@ -172,6 +179,34 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "active"
      */
     public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "note_created_at"
+     */
+    public function testPropertyNoteCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "note_updated_at"
+     */
+    public function testPropertyNoteUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "note_created_by"
+     */
+    public function testPropertyNoteCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "note_updated_by"
+     */
+    public function testPropertyNoteUpdatedBy()
     {
     }
 }

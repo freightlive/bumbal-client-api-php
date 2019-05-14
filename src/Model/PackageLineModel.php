@@ -55,7 +55,8 @@ class PackageLineModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'activity_id' => 'int[]',
+        'activity_id' => 'int',
+        'activity_ids' => 'int[]',
         'nr' => 'string',
         'status_id' => 'int',
         'status_name' => 'string',
@@ -83,7 +84,11 @@ class PackageLineModel implements ArrayAccess
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'updated_at' => '\DateTime',
+        'package_line_created_at' => '\DateTime',
+        'package_line_updated_at' => '\DateTime',
+        'package_line_created_by' => 'int',
+        'package_line_updated_by' => 'int'
     ];
 
     /**
@@ -92,7 +97,8 @@ class PackageLineModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'activity_id' => null,
+        'activity_id' => 'int64',
+        'activity_ids' => null,
         'nr' => null,
         'status_id' => null,
         'status_name' => null,
@@ -120,7 +126,11 @@ class PackageLineModel implements ArrayAccess
         'notes' => null,
         'files' => null,
         'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'updated_at' => 'date-time',
+        'package_line_created_at' => 'date-time',
+        'package_line_updated_at' => 'date-time',
+        'package_line_created_by' => null,
+        'package_line_updated_by' => null
     ];
 
     public static function swaggerTypes()
@@ -140,6 +150,7 @@ class PackageLineModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'activity_id' => 'activity_id',
+        'activity_ids' => 'activity_ids',
         'nr' => 'nr',
         'status_id' => 'status_id',
         'status_name' => 'status_name',
@@ -167,7 +178,11 @@ class PackageLineModel implements ArrayAccess
         'notes' => 'notes',
         'files' => 'files',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'updated_at' => 'updated_at',
+        'package_line_created_at' => 'package_line_created_at',
+        'package_line_updated_at' => 'package_line_updated_at',
+        'package_line_created_by' => 'package_line_created_by',
+        'package_line_updated_by' => 'package_line_updated_by'
     ];
 
 
@@ -178,6 +193,7 @@ class PackageLineModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'activity_id' => 'setActivityId',
+        'activity_ids' => 'setActivityIds',
         'nr' => 'setNr',
         'status_id' => 'setStatusId',
         'status_name' => 'setStatusName',
@@ -205,7 +221,11 @@ class PackageLineModel implements ArrayAccess
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'updated_at' => 'setUpdatedAt',
+        'package_line_created_at' => 'setPackageLineCreatedAt',
+        'package_line_updated_at' => 'setPackageLineUpdatedAt',
+        'package_line_created_by' => 'setPackageLineCreatedBy',
+        'package_line_updated_by' => 'setPackageLineUpdatedBy'
     ];
 
 
@@ -216,6 +236,7 @@ class PackageLineModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'activity_id' => 'getActivityId',
+        'activity_ids' => 'getActivityIds',
         'nr' => 'getNr',
         'status_id' => 'getStatusId',
         'status_name' => 'getStatusName',
@@ -243,7 +264,11 @@ class PackageLineModel implements ArrayAccess
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'updated_at' => 'getUpdatedAt',
+        'package_line_created_at' => 'getPackageLineCreatedAt',
+        'package_line_updated_at' => 'getPackageLineUpdatedAt',
+        'package_line_created_by' => 'getPackageLineCreatedBy',
+        'package_line_updated_by' => 'getPackageLineUpdatedBy'
     ];
 
     public static function attributeMap()
@@ -337,6 +362,7 @@ class PackageLineModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['activity_id'] = isset($data['activity_id']) ? $data['activity_id'] : null;
+        $this->container['activity_ids'] = isset($data['activity_ids']) ? $data['activity_ids'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
@@ -365,6 +391,10 @@ class PackageLineModel implements ArrayAccess
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['package_line_created_at'] = isset($data['package_line_created_at']) ? $data['package_line_created_at'] : null;
+        $this->container['package_line_updated_at'] = isset($data['package_line_updated_at']) ? $data['package_line_updated_at'] : null;
+        $this->container['package_line_created_by'] = isset($data['package_line_created_by']) ? $data['package_line_created_by'] : null;
+        $this->container['package_line_updated_by'] = isset($data['package_line_updated_by']) ? $data['package_line_updated_by'] : null;
     }
 
     /**
@@ -451,7 +481,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets activity_id
-     * @return int[]
+     * @return int
      */
     public function getActivityId()
     {
@@ -460,12 +490,33 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets activity_id
-     * @param int[] $activity_id Unique Identifier for activities where this packageline is related to
+     * @param int $activity_id Unique Identifier for activity where this packageline is related to
      * @return $this
      */
     public function setActivityId($activity_id)
     {
         $this->container['activity_id'] = $activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_ids
+     * @return int[]
+     */
+    public function getActivityIds()
+    {
+        return $this->container['activity_ids'];
+    }
+
+    /**
+     * Sets activity_ids
+     * @param int[] $activity_ids Unique Identifier for activities where this packageline is related to
+     * @return $this
+     */
+    public function setActivityIds($activity_ids)
+    {
+        $this->container['activity_ids'] = $activity_ids;
 
         return $this;
     }
@@ -1081,6 +1132,90 @@ class PackageLineModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_line_created_at
+     * @return \DateTime
+     */
+    public function getPackageLineCreatedAt()
+    {
+        return $this->container['package_line_created_at'];
+    }
+
+    /**
+     * Sets package_line_created_at
+     * @param \DateTime $package_line_created_at created_at date time
+     * @return $this
+     */
+    public function setPackageLineCreatedAt($package_line_created_at)
+    {
+        $this->container['package_line_created_at'] = $package_line_created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_line_updated_at
+     * @return \DateTime
+     */
+    public function getPackageLineUpdatedAt()
+    {
+        return $this->container['package_line_updated_at'];
+    }
+
+    /**
+     * Sets package_line_updated_at
+     * @param \DateTime $package_line_updated_at updated_at date time
+     * @return $this
+     */
+    public function setPackageLineUpdatedAt($package_line_updated_at)
+    {
+        $this->container['package_line_updated_at'] = $package_line_updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_line_created_by
+     * @return int
+     */
+    public function getPackageLineCreatedBy()
+    {
+        return $this->container['package_line_created_by'];
+    }
+
+    /**
+     * Sets package_line_created_by
+     * @param int $package_line_created_by created_by user id
+     * @return $this
+     */
+    public function setPackageLineCreatedBy($package_line_created_by)
+    {
+        $this->container['package_line_created_by'] = $package_line_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets package_line_updated_by
+     * @return int
+     */
+    public function getPackageLineUpdatedBy()
+    {
+        return $this->container['package_line_updated_by'];
+    }
+
+    /**
+     * Sets package_line_updated_by
+     * @param int $package_line_updated_by updated_by user id
+     * @return $this
+     */
+    public function setPackageLineUpdatedBy($package_line_updated_by)
+    {
+        $this->container['package_line_updated_by'] = $package_line_updated_by;
 
         return $this;
     }
