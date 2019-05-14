@@ -86,8 +86,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'bool',
         'include_activity_tags' => 'bool',
         'include_tag_type_name' => 'bool',
-        'include_activity_record_info' => 'bool',
-        'include_activity_record_object' => 'bool',
+        'include_record_info' => 'bool',
+        'include_record_object' => 'bool',
         'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
         'include_depot_address' => 'bool',
@@ -99,7 +99,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'bool',
         'include_brand_files' => 'bool',
         'apply_address_bundling' => 'bool',
-        'include_activity_files' => 'bool'
+        'include_activity_files' => 'bool',
+        'include_activity_record_info' => 'bool',
+        'include_activity_record_object' => 'bool'
     ];
 
     /**
@@ -139,8 +141,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => null,
         'include_activity_tags' => null,
         'include_tag_type_name' => null,
-        'include_activity_record_info' => null,
-        'include_activity_record_object' => null,
+        'include_record_info' => null,
+        'include_record_object' => null,
         'include_activity_notes' => null,
         'include_activity_note_tags' => null,
         'include_depot_address' => null,
@@ -152,7 +154,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => null,
         'include_brand_files' => null,
         'apply_address_bundling' => null,
-        'include_activity_files' => null
+        'include_activity_files' => null,
+        'include_activity_record_info' => null,
+        'include_activity_record_object' => null
     ];
 
     public static function swaggerTypes()
@@ -202,8 +206,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'include_assignment',
         'include_activity_tags' => 'include_activity_tags',
         'include_tag_type_name' => 'include_tag_type_name',
-        'include_activity_record_info' => 'include_activity_record_info',
-        'include_activity_record_object' => 'include_activity_record_object',
+        'include_record_info' => 'include_record_info',
+        'include_record_object' => 'include_record_object',
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
         'include_depot_address' => 'include_depot_address',
@@ -215,7 +219,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'include_brand_colours',
         'include_brand_files' => 'include_brand_files',
         'apply_address_bundling' => 'apply_address_bundling',
-        'include_activity_files' => 'include_activity_files'
+        'include_activity_files' => 'include_activity_files',
+        'include_activity_record_info' => 'include_activity_record_info',
+        'include_activity_record_object' => 'include_activity_record_object'
     ];
 
 
@@ -256,8 +262,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'setIncludeAssignment',
         'include_activity_tags' => 'setIncludeActivityTags',
         'include_tag_type_name' => 'setIncludeTagTypeName',
-        'include_activity_record_info' => 'setIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'setIncludeActivityRecordObject',
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_record_object' => 'setIncludeRecordObject',
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
         'include_depot_address' => 'setIncludeDepotAddress',
@@ -269,7 +275,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'setIncludeBrandColours',
         'include_brand_files' => 'setIncludeBrandFiles',
         'apply_address_bundling' => 'setApplyAddressBundling',
-        'include_activity_files' => 'setIncludeActivityFiles'
+        'include_activity_files' => 'setIncludeActivityFiles',
+        'include_activity_record_info' => 'setIncludeActivityRecordInfo',
+        'include_activity_record_object' => 'setIncludeActivityRecordObject'
     ];
 
 
@@ -310,8 +318,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'getIncludeAssignment',
         'include_activity_tags' => 'getIncludeActivityTags',
         'include_tag_type_name' => 'getIncludeTagTypeName',
-        'include_activity_record_info' => 'getIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'getIncludeActivityRecordObject',
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_record_object' => 'getIncludeRecordObject',
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
         'include_depot_address' => 'getIncludeDepotAddress',
@@ -323,7 +331,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'getIncludeBrandColours',
         'include_brand_files' => 'getIncludeBrandFiles',
         'apply_address_bundling' => 'getApplyAddressBundling',
-        'include_activity_files' => 'getIncludeActivityFiles'
+        'include_activity_files' => 'getIncludeActivityFiles',
+        'include_activity_record_info' => 'getIncludeActivityRecordInfo',
+        'include_activity_record_object' => 'getIncludeActivityRecordObject'
     ];
 
     public static function attributeMap()
@@ -389,8 +399,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_assignment'] = isset($data['include_assignment']) ? $data['include_assignment'] : null;
         $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
-        $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
-        $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
+        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
         $this->container['include_depot_address'] = isset($data['include_depot_address']) ? $data['include_depot_address'] : null;
@@ -403,6 +413,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
         $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
         $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
+        $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
+        $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
     }
 
     /**
@@ -1103,43 +1115,43 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_activity_record_info
+     * Gets include_record_info
      * @return bool
      */
-    public function getIncludeActivityRecordInfo()
+    public function getIncludeRecordInfo()
     {
-        return $this->container['include_activity_record_info'];
+        return $this->container['include_record_info'];
     }
 
     /**
-     * Sets include_activity_record_info
-     * @param bool $include_activity_record_info 
+     * Sets include_record_info
+     * @param bool $include_record_info 
      * @return $this
      */
-    public function setIncludeActivityRecordInfo($include_activity_record_info)
+    public function setIncludeRecordInfo($include_record_info)
     {
-        $this->container['include_activity_record_info'] = $include_activity_record_info;
+        $this->container['include_record_info'] = $include_record_info;
 
         return $this;
     }
 
     /**
-     * Gets include_activity_record_object
+     * Gets include_record_object
      * @return bool
      */
-    public function getIncludeActivityRecordObject()
+    public function getIncludeRecordObject()
     {
-        return $this->container['include_activity_record_object'];
+        return $this->container['include_record_object'];
     }
 
     /**
-     * Sets include_activity_record_object
-     * @param bool $include_activity_record_object 
+     * Sets include_record_object
+     * @param bool $include_record_object 
      * @return $this
      */
-    public function setIncludeActivityRecordObject($include_activity_record_object)
+    public function setIncludeRecordObject($include_record_object)
     {
-        $this->container['include_activity_record_object'] = $include_activity_record_object;
+        $this->container['include_record_object'] = $include_record_object;
 
         return $this;
     }
@@ -1392,6 +1404,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityFiles($include_activity_files)
     {
         $this->container['include_activity_files'] = $include_activity_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_record_info
+     * @return bool
+     */
+    public function getIncludeActivityRecordInfo()
+    {
+        return $this->container['include_activity_record_info'];
+    }
+
+    /**
+     * Sets include_activity_record_info
+     * @param bool $include_activity_record_info 
+     * @return $this
+     */
+    public function setIncludeActivityRecordInfo($include_activity_record_info)
+    {
+        $this->container['include_activity_record_info'] = $include_activity_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_record_object
+     * @return bool
+     */
+    public function getIncludeActivityRecordObject()
+    {
+        return $this->container['include_activity_record_object'];
+    }
+
+    /**
+     * Sets include_activity_record_object
+     * @param bool $include_activity_record_object 
+     * @return $this
+     */
+    public function setIncludeActivityRecordObject($include_activity_record_object)
+    {
+        $this->container['include_activity_record_object'] = $include_activity_record_object;
 
         return $this;
     }

@@ -35,8 +35,8 @@ Name | Type | Description | Notes
 **include_assignment** | **bool** |  | [optional] 
 **include_activity_tags** | **bool** |  | [optional] 
 **include_tag_type_name** | **bool** |  | [optional] 
-**include_activity_record_info** | **bool** |  | [optional] 
-**include_activity_record_object** | **bool** |  | [optional] 
+**include_record_info** | **bool** |  | [optional] 
+**include_record_object** | **bool** |  | [optional] 
 **include_activity_notes** | **bool** |  | [optional] 
 **include_activity_note_tags** | **bool** |  | [optional] 
 **include_depot_address** | **bool** |  | [optional] 
@@ -49,6 +49,8 @@ Name | Type | Description | Notes
 **include_brand_files** | **bool** |  | [optional] 
 **apply_address_bundling** | **bool** |  | [optional] 
 **include_activity_files** | **bool** |  | [optional] 
+**include_activity_record_info** | **bool** |  | [optional] 
+**include_activity_record_object** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
