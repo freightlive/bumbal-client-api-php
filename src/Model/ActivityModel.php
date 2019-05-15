@@ -74,6 +74,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int',
         'reference' => 'string',
         'description' => 'string',
+        'earliest_delivery_date_time' => '\DateTime',
+        'latest_delivery_date_time' => '\DateTime',
         'earliest_delivery_date' => '\DateTime',
         'latest_delivery_date' => '\DateTime',
         'date_time_from' => '\DateTime',
@@ -166,6 +168,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'int64',
         'reference' => null,
         'description' => null,
+        'earliest_delivery_date_time' => 'date',
+        'latest_delivery_date_time' => 'date',
         'earliest_delivery_date' => 'date',
         'latest_delivery_date' => 'date',
         'date_time_from' => 'date-time',
@@ -268,6 +272,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'planned_driving_distance',
         'reference' => 'reference',
         'description' => 'description',
+        'earliest_delivery_date_time' => 'earliest_delivery_date_time',
+        'latest_delivery_date_time' => 'latest_delivery_date_time',
         'earliest_delivery_date' => 'earliest_delivery_date',
         'latest_delivery_date' => 'latest_delivery_date',
         'date_time_from' => 'date_time_from',
@@ -361,6 +367,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'setPlannedDrivingDistance',
         'reference' => 'setReference',
         'description' => 'setDescription',
+        'earliest_delivery_date_time' => 'setEarliestDeliveryDateTime',
+        'latest_delivery_date_time' => 'setLatestDeliveryDateTime',
         'earliest_delivery_date' => 'setEarliestDeliveryDate',
         'latest_delivery_date' => 'setLatestDeliveryDate',
         'date_time_from' => 'setDateTimeFrom',
@@ -454,6 +462,8 @@ class ActivityModel implements ArrayAccess
         'planned_driving_distance' => 'getPlannedDrivingDistance',
         'reference' => 'getReference',
         'description' => 'getDescription',
+        'earliest_delivery_date_time' => 'getEarliestDeliveryDateTime',
+        'latest_delivery_date_time' => 'getLatestDeliveryDateTime',
         'earliest_delivery_date' => 'getEarliestDeliveryDate',
         'latest_delivery_date' => 'getLatestDeliveryDate',
         'date_time_from' => 'getDateTimeFrom',
@@ -620,6 +630,8 @@ class ActivityModel implements ArrayAccess
         $this->container['planned_driving_distance'] = isset($data['planned_driving_distance']) ? $data['planned_driving_distance'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['earliest_delivery_date_time'] = isset($data['earliest_delivery_date_time']) ? $data['earliest_delivery_date_time'] : null;
+        $this->container['latest_delivery_date_time'] = isset($data['latest_delivery_date_time']) ? $data['latest_delivery_date_time'] : null;
         $this->container['earliest_delivery_date'] = isset($data['earliest_delivery_date']) ? $data['earliest_delivery_date'] : null;
         $this->container['latest_delivery_date'] = isset($data['latest_delivery_date']) ? $data['latest_delivery_date'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
@@ -1170,6 +1182,48 @@ class ActivityModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets earliest_delivery_date_time
+     * @return \DateTime
+     */
+    public function getEarliestDeliveryDateTime()
+    {
+        return $this->container['earliest_delivery_date_time'];
+    }
+
+    /**
+     * Sets earliest_delivery_date_time
+     * @param \DateTime $earliest_delivery_date_time 
+     * @return $this
+     */
+    public function setEarliestDeliveryDateTime($earliest_delivery_date_time)
+    {
+        $this->container['earliest_delivery_date_time'] = $earliest_delivery_date_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets latest_delivery_date_time
+     * @return \DateTime
+     */
+    public function getLatestDeliveryDateTime()
+    {
+        return $this->container['latest_delivery_date_time'];
+    }
+
+    /**
+     * Sets latest_delivery_date_time
+     * @param \DateTime $latest_delivery_date_time 
+     * @return $this
+     */
+    public function setLatestDeliveryDateTime($latest_delivery_date_time)
+    {
+        $this->container['latest_delivery_date_time'] = $latest_delivery_date_time;
 
         return $this;
     }
