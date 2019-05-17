@@ -638,31 +638,37 @@ class PackagelineApi
     /**
      * Operation updatePackageLine
      *
-     * Update package-lines in bulk
+     * Update a package-line
      *
-     * @param \BumbalClient\Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
+     * @param int $package_line_id ID of package-line to update (required)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function updatePackageLine($body = null)
+    public function updatePackageLine($package_line_id, $body = null)
     {
-        list($response) = $this->updatePackageLineWithHttpInfo($body);
+        list($response) = $this->updatePackageLineWithHttpInfo($package_line_id, $body);
         return $response;
     }
 
     /**
      * Operation updatePackageLineWithHttpInfo
      *
-     * Update package-lines in bulk
+     * Update a package-line
      *
-     * @param \BumbalClient\Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
+     * @param int $package_line_id ID of package-line to update (required)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updatePackageLineWithHttpInfo($body = null)
+    public function updatePackageLineWithHttpInfo($package_line_id, $body = null)
     {
+        // verify the required parameter 'package_line_id' is set
+        if ($package_line_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $package_line_id when calling updatePackageLine');
+        }
         // parse inputs
-        $resourcePath = "/package-line/update";
+        $resourcePath = "/package-line/{packageLineId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -673,6 +679,14 @@ class PackagelineApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // path params
+        if ($package_line_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "packageLineId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($package_line_id),
+                $resourcePath
+            );
+        }
         // body params
         $_tempBody = null;
         if (isset($body)) {
@@ -699,7 +713,7 @@ class PackagelineApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/package-line/update'
+                '/package-line/{packageLineId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

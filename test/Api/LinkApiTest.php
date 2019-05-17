@@ -1,6 +1,6 @@
 <?php
 /**
- * PackagelineApiTest
+ * LinkApiTest
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \BumbalClient\ApiException;
 use \BumbalClient\ObjectSerializer;
 
 /**
- * PackagelineApiTest Class Doc Comment
+ * LinkApiTest Class Doc Comment
  *
  * @category Class
  * @package  BumbalClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PackagelineApiTest extends \PHPUnit_Framework_TestCase
+class LinkApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -73,62 +73,12 @@ class PackagelineApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createPackageLine
+     * Test case for updateLink
      *
-     * Create or update an Package Line.
-     *
-     */
-    public function testCreatePackageLine()
-    {
-    }
-
-    /**
-     * Test case for deletePackageLine
-     *
-     * Delete an package-line.
+     * Update a specific link object.
      *
      */
-    public function testDeletePackageLine()
-    {
-    }
-
-    /**
-     * Test case for retrieveListPackageLine
-     *
-     * Retrieve List of PackageLines.
-     *
-     */
-    public function testRetrieveListPackageLine()
-    {
-    }
-
-    /**
-     * Test case for retrievePackageLine
-     *
-     * Find package-line by ID.
-     *
-     */
-    public function testRetrievePackageLine()
-    {
-    }
-
-    /**
-     * Test case for setPackageLine
-     *
-     * Set (create or update) an PackageLine.
-     *
-     */
-    public function testSetPackageLine()
-    {
-    }
-
-    /**
-     * Test case for updatePackageLine
-     *
-     * Update a package-line.
-     *
-     */
-    public function testUpdatePackageLine()
+    public function testUpdateLink()
     {
     }
 }

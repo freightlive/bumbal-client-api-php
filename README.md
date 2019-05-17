@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
+*LinkApi* | [**updateLink**](docs/Api/LinkApi.md#updatelink) | **PUT** /link/{linkId} | Update a specific link object
 *NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
@@ -135,7 +136,7 @@ Class | Method | HTTP request | Description
 *PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines
 *PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
 *PackagelineApi* | [**setPackageLine**](docs/Api/PackagelineApi.md#setpackageline) | **POST** /package-line/set | Set (create or update) an PackageLine
-*PackagelineApi* | [**updatePackageLine**](docs/Api/PackagelineApi.md#updatepackageline) | **PUT** /package-line/update | Update package-lines in bulk
+*PackagelineApi* | [**updatePackageLine**](docs/Api/PackagelineApi.md#updatepackageline) | **PUT** /package-line/{packageLineId} | Update a package-line
 *PackagetypeApi* | [**createPackageType**](docs/Api/PackagetypeApi.md#createpackagetype) | **POST** /package-type | Create or update an Package Line
 *PackagetypeApi* | [**deletePackageType**](docs/Api/PackagetypeApi.md#deletepackagetype) | **DELETE** /package-type/{packageTypeId} | Delete an package-type
 *PackagetypeApi* | [**retrieveListPackageType**](docs/Api/PackagetypeApi.md#retrievelistpackagetype) | **PUT** /package-type | Retrieve List of PackageTypes
@@ -315,7 +316,6 @@ Class | Method | HTTP request | Description
  - [PackageLineModel](docs/Model/PackageLineModel.md)
  - [PackageLineOptionsModel](docs/Model/PackageLineOptionsModel.md)
  - [PackageLineRetrieveListArguments](docs/Model/PackageLineRetrieveListArguments.md)
- - [PackageLineUpdateArguments](docs/Model/PackageLineUpdateArguments.md)
  - [PackageTypeFiltersModel](docs/Model/PackageTypeFiltersModel.md)
  - [PackageTypeListResponse](docs/Model/PackageTypeListResponse.md)
  - [PackageTypeModel](docs/Model/PackageTypeModel.md)
