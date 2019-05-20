@@ -78,37 +78,9 @@ class PackageTypeOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_notes"
-     */
-    public function testPropertyIncludeNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_tags"
-     */
-    public function testPropertyIncludeTags()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_type_name"
-     */
-    public function testPropertyIncludePackageTypeName()
-    {
-    }
-
-    /**
      * Test attribute "include_record_info"
      */
     public function testPropertyIncludeRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_ids"
-     */
-    public function testPropertyIncludeActivityIds()
     {
     }
 
@@ -123,76 +95,6 @@ class PackageTypeOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_meta_data"
      */
     public function testPropertyIncludeMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_files"
-     */
-    public function testPropertyIncludeFiles()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_lines_info"
-     */
-    public function testPropertyIncludePackageLinesInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_notes"
-     */
-    public function testPropertyIncludePackageLineNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_tags"
-     */
-    public function testPropertyIncludePackageLineTags()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_files_record_info"
-     */
-    public function testPropertyIncludePackageLineFilesRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_record_info"
-     */
-    public function testPropertyIncludePackageLineRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_meta_data"
-     */
-    public function testPropertyIncludePackageLineMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_files"
-     */
-    public function testPropertyIncludePackageLineFiles()
-    {
-    }
-
-    /**
-     * Test attribute "include_package_line_files_meta_data"
-     */
-    public function testPropertyIncludePackageLineFilesMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_action_type_name"
-     */
-    public function testPropertyIncludeActionTypeName()
     {
     }
 }
