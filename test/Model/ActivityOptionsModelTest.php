@@ -260,9 +260,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_files"
+     * Test attribute "include_activity_files"
      */
-    public function testPropertyIncludeFiles()
+    public function testPropertyIncludeActivityFiles()
     {
     }
 
@@ -302,16 +302,16 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_record_info"
+     * Test attribute "include_activity_record_info"
      */
-    public function testPropertyIncludeRecordInfo()
+    public function testPropertyIncludeActivityRecordInfo()
     {
     }
 
     /**
-     * Test attribute "include_record_object"
+     * Test attribute "include_activity_record_object"
      */
-    public function testPropertyIncludeRecordObject()
+    public function testPropertyIncludeActivityRecordObject()
     {
     }
 
@@ -389,27 +389,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "apply_address_bundling"
      */
     public function testPropertyApplyAddressBundling()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_files"
-     */
-    public function testPropertyIncludeActivityFiles()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_record_info"
-     */
-    public function testPropertyIncludeActivityRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_record_object"
-     */
-    public function testPropertyIncludeActivityRecordObject()
     {
     }
 }

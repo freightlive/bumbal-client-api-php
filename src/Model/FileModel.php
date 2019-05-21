@@ -60,6 +60,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => 'string',
         'object_id' => 'int',
         'object_type' => 'int',
+        'object_type_name' => 'object',
         'reference' => 'string',
         'location' => 'string',
         'base64' => 'string',
@@ -67,7 +68,8 @@ class FileModel implements ArrayAccess
         'created_by' => 'int',
         'updated_by' => 'int',
         'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'updated_at' => '\DateTime',
+        'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
     /**
@@ -81,6 +83,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => null,
         'object_id' => 'int64',
         'object_type' => 'int64',
+        'object_type_name' => null,
         'reference' => null,
         'location' => null,
         'base64' => null,
@@ -88,7 +91,8 @@ class FileModel implements ArrayAccess
         'created_by' => 'int64',
         'updated_by' => 'int64',
         'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'updated_at' => 'date-time',
+        'links' => null
     ];
 
     public static function swaggerTypes()
@@ -112,6 +116,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => 'file_type_name',
         'object_id' => 'object_id',
         'object_type' => 'object_type',
+        'object_type_name' => 'object_type_name',
         'reference' => 'reference',
         'location' => 'location',
         'base64' => 'base64',
@@ -119,7 +124,8 @@ class FileModel implements ArrayAccess
         'created_by' => 'created_by',
         'updated_by' => 'updated_by',
         'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'updated_at' => 'updated_at',
+        'links' => 'links'
     ];
 
 
@@ -134,6 +140,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => 'setFileTypeName',
         'object_id' => 'setObjectId',
         'object_type' => 'setObjectType',
+        'object_type_name' => 'setObjectTypeName',
         'reference' => 'setReference',
         'location' => 'setLocation',
         'base64' => 'setBase64',
@@ -141,7 +148,8 @@ class FileModel implements ArrayAccess
         'created_by' => 'setCreatedBy',
         'updated_by' => 'setUpdatedBy',
         'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'updated_at' => 'setUpdatedAt',
+        'links' => 'setLinks'
     ];
 
 
@@ -156,6 +164,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => 'getFileTypeName',
         'object_id' => 'getObjectId',
         'object_type' => 'getObjectType',
+        'object_type_name' => 'getObjectTypeName',
         'reference' => 'getReference',
         'location' => 'getLocation',
         'base64' => 'getBase64',
@@ -163,7 +172,8 @@ class FileModel implements ArrayAccess
         'created_by' => 'getCreatedBy',
         'updated_by' => 'getUpdatedBy',
         'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'updated_at' => 'getUpdatedAt',
+        'links' => 'getLinks'
     ];
 
     public static function attributeMap()
@@ -203,6 +213,7 @@ class FileModel implements ArrayAccess
         $this->container['file_type_name'] = isset($data['file_type_name']) ? $data['file_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['location'] = isset($data['location']) ? $data['location'] : null;
         $this->container['base64'] = isset($data['base64']) ? $data['base64'] : null;
@@ -211,6 +222,7 @@ class FileModel implements ArrayAccess
         $this->container['updated_by'] = isset($data['updated_by']) ? $data['updated_by'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -360,6 +372,27 @@ class FileModel implements ArrayAccess
     public function setObjectType($object_type)
     {
         $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type_name
+     * @return object
+     */
+    public function getObjectTypeName()
+    {
+        return $this->container['object_type_name'];
+    }
+
+    /**
+     * Sets object_type_name
+     * @param object $object_type_name Object type names available for this file
+     * @return $this
+     */
+    public function setObjectTypeName($object_type_name)
+    {
+        $this->container['object_type_name'] = $object_type_name;
 
         return $this;
     }
@@ -528,6 +561,27 @@ class FileModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }

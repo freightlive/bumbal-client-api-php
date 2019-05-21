@@ -120,6 +120,13 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "object_type_name"
+     */
+    public function testPropertyObjectTypeName()
+    {
+    }
+
+    /**
      * Test attribute "reference"
      */
     public function testPropertyReference()
@@ -172,6 +179,13 @@ class FileModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "updated_at"
      */
     public function testPropertyUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
     {
     }
 }

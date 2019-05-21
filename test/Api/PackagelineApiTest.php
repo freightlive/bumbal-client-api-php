@@ -125,7 +125,7 @@ class PackagelineApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for updatePackageLine
      *
-     * Update package-lines in bulk.
+     * Update a package-line.
      *
      */
     public function testUpdatePackageLine()
