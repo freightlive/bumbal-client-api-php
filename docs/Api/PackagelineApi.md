@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**retrieveListPackageLine**](PackagelineApi.md#retrieveListPackageLine) | **PUT** /package-line | Retrieve List of PackageLines
 [**retrievePackageLine**](PackagelineApi.md#retrievePackageLine) | **GET** /package-line/{packageLineId} | Find package-line by ID
 [**setPackageLine**](PackagelineApi.md#setPackageLine) | **POST** /package-line/set | Set (create or update) an PackageLine
-[**updatePackageLine**](PackagelineApi.md#updatePackageLine) | **PUT** /package-line/{packageLineId} | Update a package-line
+[**updatePackageLine**](PackagelineApi.md#updatePackageLine) | **PUT** /package-line/update | Update package-lines in bulk
 
 
 # **createPackageLine**
@@ -289,11 +289,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePackageLine**
-> \BumbalClient\Model\ApiResponse updatePackageLine($package_line_id, $body)
+> \BumbalClient\Model\ApiResponse updatePackageLine($body)
 
-Update a package-line
+Update package-lines in bulk
 
-Update a package-line
+Update package-lines in bulk
 
 ### Example
 ```php
@@ -306,11 +306,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagelineApi();
-$package_line_id = 789; // int | ID of package-line to update
-$body = new \BumbalClient\Model\PackageLineModel(); // \BumbalClient\Model\PackageLineModel | PackageLine object that needs to be updated
+$body = new \BumbalClient\Model\PackageLineUpdateArguments(); // \BumbalClient\Model\PackageLineUpdateArguments | PackageLine Update object that contains all information about this update
 
 try {
-    $result = $api_instance->updatePackageLine($package_line_id, $body);
+    $result = $api_instance->updatePackageLine($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PackagelineApi->updatePackageLine: ', $e->getMessage(), PHP_EOL;
@@ -322,8 +321,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **package_line_id** | **int**| ID of package-line to update |
- **body** | [**\BumbalClient\Model\PackageLineModel**](../Model/PackageLineModel.md)| PackageLine object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\PackageLineUpdateArguments**](../Model/PackageLineUpdateArguments.md)| PackageLine Update object that contains all information about this update | [optional]
 
 ### Return type
 

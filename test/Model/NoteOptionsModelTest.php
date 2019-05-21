@@ -111,4 +111,11 @@ class NoteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeUpdatedBy()
     {
     }
+
+    /**
+     * Test attribute "include_record_info"
+     */
+    public function testPropertyIncludeRecordInfo()
+    {
+    }
 }
