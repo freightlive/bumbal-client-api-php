@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createRoute**](RouteApi.md#createRoute) | **POST** /route | Add a new Route
 [**deleteRoute**](RouteApi.md#deleteRoute) | **DELETE** /route/{routeId} | Delete an Route
+[**getExecutableActivities**](RouteApi.md#getExecutableActivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 [**retrieveListRoute**](RouteApi.md#retrieveListRoute) | **PUT** /route | Retrieve List of Routes
 [**retrieveRoute**](RouteApi.md#retrieveRoute) | **GET** /route/{routeId} | Retrieve a Route
 [**routeStoreGeoLocations**](RouteApi.md#routeStoreGeoLocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
@@ -99,6 +100,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **route_id** | **int**| ID of route to update |
  **cancel_activities** | **bool**| Cancel activities on Route |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getExecutableActivities**
+> \BumbalClient\Model\ApiResponse getExecutableActivities($arguments)
+
+Returns all activities in this route which hav enot been executed yet.
+
+Returns all activities in this route which have not been executed yet. This will be in execution order.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\RouteApi();
+$arguments = new \BumbalClient\Model\GetExecutableActivitiesArguments(); // \BumbalClient\Model\GetExecutableActivitiesArguments | Request Arguments
+
+try {
+    $result = $api_instance->getExecutableActivities($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RouteApi->getExecutableActivities: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\GetExecutableActivitiesArguments**](../Model/GetExecutableActivitiesArguments.md)| Request Arguments |
 
 ### Return type
 

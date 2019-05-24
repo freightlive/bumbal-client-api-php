@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 *RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a Recurrence
 *RouteApi* | [**createRoute**](docs/Api/RouteApi.md#createroute) | **POST** /route | Add a new Route
 *RouteApi* | [**deleteRoute**](docs/Api/RouteApi.md#deleteroute) | **DELETE** /route/{routeId} | Delete an Route
+*RouteApi* | [**getExecutableActivities**](docs/Api/RouteApi.md#getexecutableactivities) | **POST** /route/get-executable-activities | Returns all activities in this route which hav enot been executed yet.
 *RouteApi* | [**retrieveListRoute**](docs/Api/RouteApi.md#retrievelistroute) | **PUT** /route | Retrieve List of Routes
 *RouteApi* | [**retrieveRoute**](docs/Api/RouteApi.md#retrieveroute) | **GET** /route/{routeId} | Retrieve a Route
 *RouteApi* | [**routeStoreGeoLocations**](docs/Api/RouteApi.md#routestoregeolocations) | **POST** /route/store-geo-locations | Store tracked Geo Locations in bulk
@@ -304,6 +305,10 @@ Class | Method | HTTP request | Description
  - [FileOptionsModel](docs/Model/FileOptionsModel.md)
  - [FileRetrieveListArguments](docs/Model/FileRetrieveListArguments.md)
  - [GPSLocationModel](docs/Model/GPSLocationModel.md)
+ - [GetExecutableActivitiesArguments](docs/Model/GetExecutableActivitiesArguments.md)
+ - [GetExecutableActivitiesDataModel](docs/Model/GetExecutableActivitiesDataModel.md)
+ - [GetExecutableActivitiesFiltersModel](docs/Model/GetExecutableActivitiesFiltersModel.md)
+ - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [LinkModel](docs/Model/LinkModel.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)

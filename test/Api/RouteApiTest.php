@@ -93,6 +93,16 @@ class RouteApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getExecutableActivities
+     *
+     * Returns all activities in this route which hav enot been executed yet..
+     *
+     */
+    public function testGetExecutableActivities()
+    {
+    }
+
+    /**
      * Test case for retrieveListRoute
      *
      * Retrieve List of Routes.
