@@ -56,7 +56,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
     protected static $swaggerTypes = [
         'data' => '\BumbalClient\Model\GetExecutableActivitiesDataModel',
         'options' => '\BumbalClient\Model\GetExecutableActivitiesOptionsModel',
-        'filters' => '\BumbalClient\Model\GetExecutableActivitiesiltersModel'
+        'filters' => '\BumbalClient\Model\GetExecutableActivitiesFiltersModel'
     ];
 
     /**
@@ -216,7 +216,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\GetExecutableActivitiesiltersModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesFiltersModel
      */
     public function getFilters()
     {
@@ -225,7 +225,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\GetExecutableActivitiesiltersModel $filters 
+     * @param \BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
