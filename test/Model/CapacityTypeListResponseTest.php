@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityTypeModelTest
+ * CapacityTypeListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * CapacityTypeModelTest Class Doc Comment
+ * CapacityTypeListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description CapacityTypeModel
+// * @description CapacityTypeListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
+class CapacityTypeListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,51 +71,37 @@ class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CapacityTypeModel"
+     * Test "CapacityTypeListResponse"
      */
-    public function testCapacityTypeModel()
+    public function testCapacityTypeListResponse()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "items"
      */
-    public function testPropertyId()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "count_filtered"
      */
-    public function testPropertyName()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "properties"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertyProperties()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "uom_id"
+     * Test attribute "count_limited"
      */
-    public function testPropertyUomId()
-    {
-    }
-
-    /**
-     * Test attribute "uom_name"
-     */
-    public function testPropertyUomName()
-    {
-    }
-
-    /**
-     * Test attribute "uom"
-     */
-    public function testPropertyUom()
+    public function testPropertyCountLimited()
     {
     }
 }

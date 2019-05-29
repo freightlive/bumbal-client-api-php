@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityTypeFiltersModel
+ * CapacityTypeFiltersModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ActivityTypeFiltersModel Class Doc Comment
+ * CapacityTypeFiltersModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityTypeFiltersModel implements ArrayAccess
+class CapacityTypeFiltersModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ActivityTypeFiltersModel';
+    protected static $swaggerModelName = 'CapacityTypeFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -177,7 +177,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id ActivityType Unique Identifier(s)
+     * @param int[] $id Bumbal capacity type id's
      * @return $this
      */
     public function setId($id)
@@ -198,7 +198,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string[] $name ActivityType names
+     * @param string[] $name Bumbal capacity type names
      * @return $this
      */
     public function setName($name)

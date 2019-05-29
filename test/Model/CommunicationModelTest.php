@@ -106,6 +106,13 @@ class CommunicationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "send_reminder"
+     */
+    public function testPropertySendReminder()
+    {
+    }
+
+    /**
      * Test attribute "send_pref_confirmation"
      */
     public function testPropertySendPrefConfirmation()

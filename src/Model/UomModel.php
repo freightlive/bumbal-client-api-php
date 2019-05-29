@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityTypeFiltersModel
+ * UomModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ActivityTypeFiltersModel Class Doc Comment
+ * UomModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityTypeFiltersModel implements ArrayAccess
+class UomModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class ActivityTypeFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ActivityTypeFiltersModel';
+    protected static $swaggerModelName = 'UomModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'name' => 'string[]'
+        'id' => 'int',
+        'name' => 'string'
     ];
 
     /**
@@ -63,7 +63,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
+        'id' => 'int64',
         'name' => null
     ];
 
@@ -168,7 +168,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int[]
+     * @return int
      */
     public function getId()
     {
@@ -177,7 +177,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id ActivityType Unique Identifier(s)
+     * @param int $id Unique ID
      * @return $this
      */
     public function setId($id)
@@ -189,7 +189,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets name
-     * @return string[]
+     * @return string
      */
     public function getName()
     {
@@ -198,7 +198,7 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string[] $name ActivityType names
+     * @param string $name name of unit
      * @return $this
      */
     public function setName($name)

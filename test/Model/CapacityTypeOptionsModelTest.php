@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityTypeModelTest
+ * CapacityTypeOptionsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * CapacityTypeModelTest Class Doc Comment
+ * CapacityTypeOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description CapacityTypeModel
+// * @description CapacityTypeOptionsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
+class CapacityTypeOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,51 +71,30 @@ class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CapacityTypeModel"
+     * Test "CapacityTypeOptionsModel"
      */
-    public function testCapacityTypeModel()
+    public function testCapacityTypeOptionsModel()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "include_uom"
      */
-    public function testPropertyId()
+    public function testPropertyIncludeUom()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "include_uom_group"
      */
-    public function testPropertyName()
+    public function testPropertyIncludeUomGroup()
     {
     }
 
     /**
-     * Test attribute "properties"
+     * Test attribute "include_uom_name"
      */
-    public function testPropertyProperties()
-    {
-    }
-
-    /**
-     * Test attribute "uom_id"
-     */
-    public function testPropertyUomId()
-    {
-    }
-
-    /**
-     * Test attribute "uom_name"
-     */
-    public function testPropertyUomName()
-    {
-    }
-
-    /**
-     * Test attribute "uom"
-     */
-    public function testPropertyUom()
+    public function testPropertyIncludeUomName()
     {
     }
 }

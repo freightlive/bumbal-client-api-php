@@ -85,6 +85,8 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
+*ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
+*ActivitytypeApi* | [**retrieveListActivityType**](docs/Api/ActivitytypeApi.md#retrievelistactivitytype) | **PUT** /activity-type | Retrieve List of ActivityTypes
 *AddressApi* | [**deleteAddress**](docs/Api/AddressApi.md#deleteaddress) | **DELETE** /address/{addressId} | Delete an Address
 *AddressApi* | [**retrieveAddress**](docs/Api/AddressApi.md#retrieveaddress) | **GET** /address/{addressId} | Retrieve a Address
 *AddressApi* | [**retrieveListAddress**](docs/Api/AddressApi.md#retrievelistaddress) | **PUT** /address | Retrieve List of Addresses
@@ -105,6 +107,10 @@ Class | Method | HTTP request | Description
 *BrandApi* | [**retrieveListBrand**](docs/Api/BrandApi.md#retrievelistbrand) | **PUT** /brand | Retrieve List of Brands
 *BrandApi* | [**setBrand**](docs/Api/BrandApi.md#setbrand) | **POST** /brand/set | Set (create or update) a Brand
 *BrandApi* | [**updateBrand**](docs/Api/BrandApi.md#updatebrand) | **PUT** /brand/{brandId} | Update a Brand
+*CapacitytypeApi* | [**deleteCapacityType**](docs/Api/CapacitytypeApi.md#deletecapacitytype) | **DELETE** /capacity-type/{capacityTypeId} | Delete a capacity-type
+*CapacitytypeApi* | [**retrieveCapacityType**](docs/Api/CapacitytypeApi.md#retrievecapacitytype) | **GET** /capacity-type/{capacityTypeId} | Find capacity-type by ID
+*CapacitytypeApi* | [**retrieveListCapacityType**](docs/Api/CapacitytypeApi.md#retrievelistcapacitytype) | **PUT** /capacity-type | Retrieve List of CapacityTypes
+*CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
@@ -239,6 +245,7 @@ Class | Method | HTTP request | Description
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
  - [ActivityRetrieveListArguments](docs/Model/ActivityRetrieveListArguments.md)
  - [ActivityTypeFiltersModel](docs/Model/ActivityTypeFiltersModel.md)
+ - [ActivityTypeListResponse](docs/Model/ActivityTypeListResponse.md)
  - [ActivityTypeModel](docs/Model/ActivityTypeModel.md)
  - [ActivityTypeOptionsModel](docs/Model/ActivityTypeOptionsModel.md)
  - [ActivityTypeRetrieveListArguments](docs/Model/ActivityTypeRetrieveListArguments.md)
@@ -280,7 +287,11 @@ Class | Method | HTTP request | Description
  - [BrandOptionsModel](docs/Model/BrandOptionsModel.md)
  - [BrandRetrieveListArguments](docs/Model/BrandRetrieveListArguments.md)
  - [CapacityModel](docs/Model/CapacityModel.md)
+ - [CapacityTypeFiltersModel](docs/Model/CapacityTypeFiltersModel.md)
+ - [CapacityTypeListResponse](docs/Model/CapacityTypeListResponse.md)
  - [CapacityTypeModel](docs/Model/CapacityTypeModel.md)
+ - [CapacityTypeOptionsModel](docs/Model/CapacityTypeOptionsModel.md)
+ - [CapacityTypeRetrieveListArguments](docs/Model/CapacityTypeRetrieveListArguments.md)
  - [CheckAvailabilityArguments](docs/Model/CheckAvailabilityArguments.md)
  - [CheckAvailabilityDataModel](docs/Model/CheckAvailabilityDataModel.md)
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
@@ -374,6 +385,7 @@ Class | Method | HTTP request | Description
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
  - [UnitValueModel](docs/Model/UnitValueModel.md)
+ - [UomModel](docs/Model/UomModel.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersListResponse](docs/Model/UsersListResponse.md)
  - [UsersModel](docs/Model/UsersModel.md)

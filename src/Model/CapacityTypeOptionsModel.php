@@ -1,6 +1,6 @@
 <?php
 /**
- * ActivityTypeFiltersModel
+ * CapacityTypeOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ActivityTypeFiltersModel Class Doc Comment
+ * CapacityTypeOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ActivityTypeFiltersModel implements ArrayAccess
+class CapacityTypeOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,16 @@ class ActivityTypeFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ActivityTypeFiltersModel';
+    protected static $swaggerModelName = 'CapacityTypeOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'name' => 'string[]'
+        'include_uom' => 'bool',
+        'include_uom_group' => 'bool',
+        'include_uom_name' => 'bool'
     ];
 
     /**
@@ -63,8 +64,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'name' => null
+        'include_uom' => null,
+        'include_uom_group' => null,
+        'include_uom_name' => null
     ];
 
     public static function swaggerTypes()
@@ -82,8 +84,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name'
+        'include_uom' => 'include_uom',
+        'include_uom_group' => 'include_uom_group',
+        'include_uom_name' => 'include_uom_name'
     ];
 
 
@@ -92,8 +95,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName'
+        'include_uom' => 'setIncludeUom',
+        'include_uom_group' => 'setIncludeUomGroup',
+        'include_uom_name' => 'setIncludeUomName'
     ];
 
 
@@ -102,8 +106,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName'
+        'include_uom' => 'getIncludeUom',
+        'include_uom_group' => 'getIncludeUomGroup',
+        'include_uom_name' => 'getIncludeUomName'
     ];
 
     public static function attributeMap()
@@ -137,8 +142,9 @@ class ActivityTypeFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['include_uom'] = isset($data['include_uom']) ? $data['include_uom'] : null;
+        $this->container['include_uom_group'] = isset($data['include_uom_group']) ? $data['include_uom_group'] : null;
+        $this->container['include_uom_name'] = isset($data['include_uom_name']) ? $data['include_uom_name'] : null;
     }
 
     /**
@@ -167,43 +173,64 @@ class ActivityTypeFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int[]
+     * Gets include_uom
+     * @return bool
      */
-    public function getId()
+    public function getIncludeUom()
     {
-        return $this->container['id'];
+        return $this->container['include_uom'];
     }
 
     /**
-     * Sets id
-     * @param int[] $id ActivityType Unique Identifier(s)
+     * Sets include_uom
+     * @param bool $include_uom 
      * @return $this
      */
-    public function setId($id)
+    public function setIncludeUom($include_uom)
     {
-        $this->container['id'] = $id;
+        $this->container['include_uom'] = $include_uom;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string[]
+     * Gets include_uom_group
+     * @return bool
      */
-    public function getName()
+    public function getIncludeUomGroup()
     {
-        return $this->container['name'];
+        return $this->container['include_uom_group'];
     }
 
     /**
-     * Sets name
-     * @param string[] $name ActivityType names
+     * Sets include_uom_group
+     * @param bool $include_uom_group 
      * @return $this
      */
-    public function setName($name)
+    public function setIncludeUomGroup($include_uom_group)
     {
-        $this->container['name'] = $name;
+        $this->container['include_uom_group'] = $include_uom_group;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_uom_name
+     * @return bool
+     */
+    public function getIncludeUomName()
+    {
+        return $this->container['include_uom_name'];
+    }
+
+    /**
+     * Sets include_uom_name
+     * @param bool $include_uom_name 
+     * @return $this
+     */
+    public function setIncludeUomName($include_uom_name)
+    {
+        $this->container['include_uom_name'] = $include_uom_name;
 
         return $this;
     }

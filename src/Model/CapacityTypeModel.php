@@ -58,7 +58,8 @@ class CapacityTypeModel implements ArrayAccess
         'name' => 'string',
         'properties' => 'string[]',
         'uom_id' => 'string',
-        'uom' => 'object'
+        'uom_name' => 'string',
+        'uom' => '\BumbalClient\Model\UomModel'
     ];
 
     /**
@@ -70,6 +71,7 @@ class CapacityTypeModel implements ArrayAccess
         'name' => null,
         'properties' => null,
         'uom_id' => null,
+        'uom_name' => null,
         'uom' => null
     ];
 
@@ -92,6 +94,7 @@ class CapacityTypeModel implements ArrayAccess
         'name' => 'name',
         'properties' => 'properties',
         'uom_id' => 'uom_id',
+        'uom_name' => 'uom_name',
         'uom' => 'uom'
     ];
 
@@ -105,6 +108,7 @@ class CapacityTypeModel implements ArrayAccess
         'name' => 'setName',
         'properties' => 'setProperties',
         'uom_id' => 'setUomId',
+        'uom_name' => 'setUomName',
         'uom' => 'setUom'
     ];
 
@@ -118,6 +122,7 @@ class CapacityTypeModel implements ArrayAccess
         'name' => 'getName',
         'properties' => 'getProperties',
         'uom_id' => 'getUomId',
+        'uom_name' => 'getUomName',
         'uom' => 'getUom'
     ];
 
@@ -156,6 +161,7 @@ class CapacityTypeModel implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
         $this->container['uom_id'] = isset($data['uom_id']) ? $data['uom_id'] : null;
+        $this->container['uom_name'] = isset($data['uom_name']) ? $data['uom_name'] : null;
         $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
     }
 
@@ -216,7 +222,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name name of this capacity type
+     * @param string $name name of capacity type
      * @return $this
      */
     public function setName($name)
@@ -237,7 +243,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets properties
-     * @param string[] $properties extra properties of this capacity type
+     * @param string[] $properties extra properties of capacity type
      * @return $this
      */
     public function setProperties($properties)
@@ -269,8 +275,29 @@ class CapacityTypeModel implements ArrayAccess
     }
 
     /**
+     * Gets uom_name
+     * @return string
+     */
+    public function getUomName()
+    {
+        return $this->container['uom_name'];
+    }
+
+    /**
+     * Sets uom_name
+     * @param string $uom_name Unit of Measurement Name
+     * @return $this
+     */
+    public function setUomName($uom_name)
+    {
+        $this->container['uom_name'] = $uom_name;
+
+        return $this;
+    }
+
+    /**
      * Gets uom
-     * @return object
+     * @return \BumbalClient\Model\UomModel
      */
     public function getUom()
     {
@@ -279,7 +306,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets uom
-     * @param object $uom 
+     * @param \BumbalClient\Model\UomModel $uom 
      * @return $this
      */
     public function setUom($uom)
