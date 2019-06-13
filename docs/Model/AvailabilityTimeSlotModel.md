@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**key** | **string** | unique key per analyzed time slot, uuid type | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **proposed_plan_date_time_from** | [**\DateTime**](\DateTime.md) |  | [optional] 

@@ -55,6 +55,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'key' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'proposed_plan_date_time_from' => '\DateTime',
@@ -68,6 +69,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'key' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'proposed_plan_date_time_from' => 'date-time',
@@ -91,6 +93,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'key' => 'key',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'proposed_plan_date_time_from' => 'proposed_plan_date_time_from',
@@ -105,6 +108,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'key' => 'setKey',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'proposed_plan_date_time_from' => 'setProposedPlanDateTimeFrom',
@@ -119,6 +123,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'key' => 'getKey',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'proposed_plan_date_time_from' => 'getProposedPlanDateTimeFrom',
@@ -158,6 +163,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['proposed_plan_date_time_from'] = isset($data['proposed_plan_date_time_from']) ? $data['proposed_plan_date_time_from'] : null;
@@ -201,12 +207,33 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets key
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+     * Sets key
+     * @param string $key unique key per analyzed time slot, uuid type
+     * @return $this
+     */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
 
         return $this;
     }
@@ -222,7 +249,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from 
+     * @param \DateTime $date_time_from
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -243,7 +270,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to 
+     * @param \DateTime $date_time_to
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -264,7 +291,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime $proposed_plan_date_time_from 
+     * @param \DateTime $proposed_plan_date_time_from
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -285,7 +312,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime $proposed_plan_date_time_to 
+     * @param \DateTime $proposed_plan_date_time_to
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -306,7 +333,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets impact
-     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact 
+     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact
      * @return $this
      */
     public function setImpact($impact)

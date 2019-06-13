@@ -85,6 +85,13 @@ class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "key"
+     */
+    public function testPropertyKey()
+    {
+    }
+
+    /**
      * Test attribute "date_time_from"
      */
     public function testPropertyDateTimeFrom()

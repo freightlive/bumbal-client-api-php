@@ -55,6 +55,7 @@ class AutoPlanDataModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'token' => 'int',
+        'availability_key' => 'string',
         'activity' => '\BumbalClient\Model\ActivityModel[]'
     ];
 
@@ -64,6 +65,7 @@ class AutoPlanDataModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'token' => 'int64',
+        'availability_key' => 'string',
         'activity' => null
     ];
 
@@ -83,6 +85,7 @@ class AutoPlanDataModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'token' => 'token',
+        'availability_key' => 'availability_key',
         'activity' => 'activity'
     ];
 
@@ -93,6 +96,7 @@ class AutoPlanDataModel implements ArrayAccess
      */
     protected static $setters = [
         'token' => 'setToken',
+        'availability_key' => 'setAvailabilityKey',
         'activity' => 'setActivity'
     ];
 
@@ -103,6 +107,7 @@ class AutoPlanDataModel implements ArrayAccess
      */
     protected static $getters = [
         'token' => 'getToken',
+        'availability_key' => 'getAvailabilityKey',
         'activity' => 'getActivity'
     ];
 
@@ -138,6 +143,7 @@ class AutoPlanDataModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['availability_key'] = isset($data['availability_key']) ? $data['availability_key'] : null;
         $this->container['activity'] = isset($data['activity']) ? $data['activity'] : null;
     }
 
@@ -188,6 +194,27 @@ class AutoPlanDataModel implements ArrayAccess
     }
 
     /**
+     * Gets availability_key
+     * @return string
+     */
+    public function getAvailabilityKey()
+    {
+        return $this->container['availability_key'];
+    }
+
+    /**
+     * Sets availability_key
+     * @param string $availability_key unique key from availability result, used to reuse fromer result
+     * @return $this
+     */
+    public function setAvailabilityKey($availability_key)
+    {
+        $this->container['availability_key'] = $availability_key;
+
+        return $this;
+    }
+
+    /**
      * Gets activity
      * @return \BumbalClient\Model\ActivityModel[]
      */
@@ -198,7 +225,7 @@ class AutoPlanDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityModel[] $activity 
+     * @param \BumbalClient\Model\ActivityModel[] $activity
      * @return $this
      */
     public function setActivity($activity)

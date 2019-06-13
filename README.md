@@ -228,6 +228,7 @@ Class | Method | HTTP request | Description
 *VehicleApi* | [**retrieveVehicle**](docs/Api/VehicleApi.md#retrievevehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
 *VehicleApi* | [**setVehicle**](docs/Api/VehicleApi.md#setvehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
 *VehicleApi* | [**updateVehicle**](docs/Api/VehicleApi.md#updatevehicle) | **PUT** /vehicle/{vehicleId} | Update a vehicle
+*WebhookApi* | [**triggerWebHook**](docs/Api/WebhookApi.md#triggerwebhook) | **POST** /web-hook/trigger | Trigger a webhook
 *WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
 *ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
 *ZoneApi* | [**deleteZone**](docs/Api/ZoneApi.md#deletezone) | **DELETE** /zone/{zoneId} | Delete a Zone
