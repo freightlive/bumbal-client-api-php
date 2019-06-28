@@ -189,7 +189,7 @@ class RecurrenceOptionsModel implements ArrayAccess
 
     /**
      * Sets include_recurrence_tags
-     * @param bool $include_recurrence_tags
+     * @param bool $include_recurrence_tags 
      * @return $this
      */
     public function setIncludeRecurrenceTags($include_recurrence_tags)
@@ -210,7 +210,7 @@ class RecurrenceOptionsModel implements ArrayAccess
 
     /**
      * Sets include_recurrence_meta_data
-     * @param bool $include_recurrence_meta_data
+     * @param bool $include_recurrence_meta_data 
      * @return $this
      */
     public function setIncludeRecurrenceMetaData($include_recurrence_meta_data)
@@ -231,7 +231,7 @@ class RecurrenceOptionsModel implements ArrayAccess
 
     /**
      * Sets include_recurrence_links
-     * @param bool $include_recurrence_links
+     * @param bool $include_recurrence_links 
      * @return $this
      */
     public function setIncludeRecurrenceLinks($include_recurrence_links)
@@ -252,7 +252,7 @@ class RecurrenceOptionsModel implements ArrayAccess
 
     /**
      * Sets include_updated_by_name
-     * @param bool $include_updated_by_name
+     * @param bool $include_updated_by_name 
      * @return $this
      */
     public function setIncludeUpdatedByName($include_updated_by_name)
