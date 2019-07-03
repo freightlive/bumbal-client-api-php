@@ -61,8 +61,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
         'search_text' => 'string',
-        'as_list' => 'bool',
-        'count_only' => 'bool'
+        'as_list' => 'bool'
     ];
 
     /**
@@ -77,8 +76,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => null,
         'sorting_direction' => null,
         'search_text' => null,
-        'as_list' => null,
-        'count_only' => null
+        'as_list' => null
     ];
 
     public static function swaggerTypes()
@@ -103,8 +101,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
         'search_text' => 'search_text',
-        'as_list' => 'as_list',
-        'count_only' => 'count_only'
+        'as_list' => 'as_list'
     ];
 
 
@@ -120,8 +117,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
         'search_text' => 'setSearchText',
-        'as_list' => 'setAsList',
-        'count_only' => 'setCountOnly'
+        'as_list' => 'setAsList'
     ];
 
 
@@ -137,8 +133,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
         'search_text' => 'getSearchText',
-        'as_list' => 'getAsList',
-        'count_only' => 'getCountOnly'
+        'as_list' => 'getAsList'
     ];
 
     public static function attributeMap()
@@ -216,7 +211,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
-        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -450,27 +444,6 @@ class ActivityRetrieveListArguments implements ArrayAccess
     public function setAsList($as_list)
     {
         $this->container['as_list'] = $as_list;
-
-        return $this;
-    }
-
-    /**
-     * Gets count_only
-     * @return bool
-     */
-    public function getCountOnly()
-    {
-        return $this->container['count_only'];
-    }
-
-    /**
-     * Sets count_only
-     * @param bool $count_only 
-     * @return $this
-     */
-    public function setCountOnly($count_only)
-    {
-        $this->container['count_only'] = $count_only;
 
         return $this;
     }

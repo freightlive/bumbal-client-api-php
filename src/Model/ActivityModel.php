@@ -551,7 +551,9 @@ class ActivityModel implements ArrayAccess
     const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
     const ACTIVITY_TYPE_NAME_ROUTE_END = 'route_end';
     const ACTIVITY_TYPE_NAME_STOP = 'stop';
+    const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
     const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const ACTIVITY_TYPE_NAME_BUNDLED = 'bundled';
     const STATUS_NAME_INCOMPLETE = 'activity_incomplete';
     const STATUS_NAME__NEW = 'activity_new';
     const STATUS_NAME_ACCEPTED = 'activity_accepted';
@@ -575,7 +577,9 @@ class ActivityModel implements ArrayAccess
             self::ACTIVITY_TYPE_NAME_ROUTE_START,
             self::ACTIVITY_TYPE_NAME_ROUTE_END,
             self::ACTIVITY_TYPE_NAME_STOP,
+            self::ACTIVITY_TYPE_NAME_DEPOT,
             self::ACTIVITY_TYPE_NAME_COMBI,
+            self::ACTIVITY_TYPE_NAME_BUNDLED,
         ];
     }
     
