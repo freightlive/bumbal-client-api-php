@@ -152,7 +152,7 @@ class ActivityModel implements ArrayAccess
         'shipment_activity_id' => 'int64',
         'nr' => null,
         'activity_type_name' => null,
-        'activity_type_id' => null,
+        'activity_type_id' => 'int64',
         'status_id' => null,
         'status_name' => null,
         'assignment_id' => null,
@@ -546,14 +546,56 @@ class ActivityModel implements ArrayAccess
         return self::$getters;
     }
 
-    const ACTIVITY_TYPE_NAME_PICKUP = 'pickup';
-    const ACTIVITY_TYPE_NAME_DROPOFF = 'dropoff';
-    const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
-    const ACTIVITY_TYPE_NAME_ROUTE_END = 'route_end';
-    const ACTIVITY_TYPE_NAME_STOP = 'stop';
-    const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
-    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const ACTIVITY_TYPE_NAME_BREAKDOWN = 'breakdown';
     const ACTIVITY_TYPE_NAME_BUNDLED = 'bundled';
+    const ACTIVITY_TYPE_NAME_CAR_END = 'car_end';
+    const ACTIVITY_TYPE_NAME_CAR_START = 'car_start';
+    const ACTIVITY_TYPE_NAME_CAR_WASH = 'car_wash';
+    const ACTIVITY_TYPE_NAME_COMBI = 'combi';
+    const ACTIVITY_TYPE_NAME_DEPOT = 'depot';
+    const ACTIVITY_TYPE_NAME_DRIVER_END = 'driver_end';
+    const ACTIVITY_TYPE_NAME_DRIVER_START = 'driver_start';
+    const ACTIVITY_TYPE_NAME_DROPOFF = 'dropoff';
+    const ACTIVITY_TYPE_NAME_GAS_REFILL = 'gas_refill';
+    const ACTIVITY_TYPE_NAME_INTERIOR_WASH = 'interior_wash';
+    const ACTIVITY_TYPE_NAME_MAINTENANCE = 'maintenance';
+    const ACTIVITY_TYPE_NAME_MAINTENANCE_PLANNED = 'maintenance_planned';
+    const ACTIVITY_TYPE_NAME_MAINTENANCE_UNPLANNED = 'maintenance_unplanned';
+    const ACTIVITY_TYPE_NAME_OTHER = 'other';
+    const ACTIVITY_TYPE_NAME_PAUSE = 'pause';
+    const ACTIVITY_TYPE_NAME_PICKUP = 'pickup';
+    const ACTIVITY_TYPE_NAME_ROUTE_END = 'route_end';
+    const ACTIVITY_TYPE_NAME_ROUTE_START = 'route_start';
+    const ACTIVITY_TYPE_NAME_SANITARY = 'sanitary';
+    const ACTIVITY_TYPE_NAME_STOP = 'stop';
+    const ACTIVITY_TYPE_NAME_UNPLANNED_STOP = 'unplanned_stop';
+    const ACTIVITY_TYPE_NAME_USER_OTHER = 'user_other';
+    const ACTIVITY_TYPE_NAME_WAIT = 'wait';
+    const ACTIVITY_TYPE_ID_1 = 1;
+    const ACTIVITY_TYPE_ID_2 = 2;
+    const ACTIVITY_TYPE_ID_3 = 3;
+    const ACTIVITY_TYPE_ID_4 = 4;
+    const ACTIVITY_TYPE_ID_5 = 5;
+    const ACTIVITY_TYPE_ID_6 = 6;
+    const ACTIVITY_TYPE_ID_9 = 9;
+    const ACTIVITY_TYPE_ID_10 = 10;
+    const ACTIVITY_TYPE_ID_11 = 11;
+    const ACTIVITY_TYPE_ID_13 = 13;
+    const ACTIVITY_TYPE_ID_14 = 14;
+    const ACTIVITY_TYPE_ID_15 = 15;
+    const ACTIVITY_TYPE_ID_16 = 16;
+    const ACTIVITY_TYPE_ID_17 = 17;
+    const ACTIVITY_TYPE_ID_18 = 18;
+    const ACTIVITY_TYPE_ID_19 = 19;
+    const ACTIVITY_TYPE_ID_20 = 20;
+    const ACTIVITY_TYPE_ID_21 = 21;
+    const ACTIVITY_TYPE_ID_26 = 26;
+    const ACTIVITY_TYPE_ID_27 = 27;
+    const ACTIVITY_TYPE_ID_28 = 28;
+    const ACTIVITY_TYPE_ID_29 = 29;
+    const ACTIVITY_TYPE_ID_30 = 30;
+    const ACTIVITY_TYPE_ID_31 = 31;
+    const ACTIVITY_TYPE_ID_32 = 32;
     const STATUS_NAME_INCOMPLETE = 'activity_incomplete';
     const STATUS_NAME__NEW = 'activity_new';
     const STATUS_NAME_ACCEPTED = 'activity_accepted';
@@ -572,14 +614,66 @@ class ActivityModel implements ArrayAccess
     public function getActivityTypeNameAllowableValues()
     {
         return [
-            self::ACTIVITY_TYPE_NAME_PICKUP,
-            self::ACTIVITY_TYPE_NAME_DROPOFF,
-            self::ACTIVITY_TYPE_NAME_ROUTE_START,
-            self::ACTIVITY_TYPE_NAME_ROUTE_END,
-            self::ACTIVITY_TYPE_NAME_STOP,
-            self::ACTIVITY_TYPE_NAME_DEPOT,
-            self::ACTIVITY_TYPE_NAME_COMBI,
+            self::ACTIVITY_TYPE_NAME_BREAKDOWN,
             self::ACTIVITY_TYPE_NAME_BUNDLED,
+            self::ACTIVITY_TYPE_NAME_CAR_END,
+            self::ACTIVITY_TYPE_NAME_CAR_START,
+            self::ACTIVITY_TYPE_NAME_CAR_WASH,
+            self::ACTIVITY_TYPE_NAME_COMBI,
+            self::ACTIVITY_TYPE_NAME_DEPOT,
+            self::ACTIVITY_TYPE_NAME_DRIVER_END,
+            self::ACTIVITY_TYPE_NAME_DRIVER_START,
+            self::ACTIVITY_TYPE_NAME_DROPOFF,
+            self::ACTIVITY_TYPE_NAME_GAS_REFILL,
+            self::ACTIVITY_TYPE_NAME_INTERIOR_WASH,
+            self::ACTIVITY_TYPE_NAME_MAINTENANCE,
+            self::ACTIVITY_TYPE_NAME_MAINTENANCE_PLANNED,
+            self::ACTIVITY_TYPE_NAME_MAINTENANCE_UNPLANNED,
+            self::ACTIVITY_TYPE_NAME_OTHER,
+            self::ACTIVITY_TYPE_NAME_PAUSE,
+            self::ACTIVITY_TYPE_NAME_PICKUP,
+            self::ACTIVITY_TYPE_NAME_ROUTE_END,
+            self::ACTIVITY_TYPE_NAME_ROUTE_START,
+            self::ACTIVITY_TYPE_NAME_SANITARY,
+            self::ACTIVITY_TYPE_NAME_STOP,
+            self::ACTIVITY_TYPE_NAME_UNPLANNED_STOP,
+            self::ACTIVITY_TYPE_NAME_USER_OTHER,
+            self::ACTIVITY_TYPE_NAME_WAIT,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getActivityTypeIdAllowableValues()
+    {
+        return [
+            self::ACTIVITY_TYPE_ID_1,
+            self::ACTIVITY_TYPE_ID_2,
+            self::ACTIVITY_TYPE_ID_3,
+            self::ACTIVITY_TYPE_ID_4,
+            self::ACTIVITY_TYPE_ID_5,
+            self::ACTIVITY_TYPE_ID_6,
+            self::ACTIVITY_TYPE_ID_9,
+            self::ACTIVITY_TYPE_ID_10,
+            self::ACTIVITY_TYPE_ID_11,
+            self::ACTIVITY_TYPE_ID_13,
+            self::ACTIVITY_TYPE_ID_14,
+            self::ACTIVITY_TYPE_ID_15,
+            self::ACTIVITY_TYPE_ID_16,
+            self::ACTIVITY_TYPE_ID_17,
+            self::ACTIVITY_TYPE_ID_18,
+            self::ACTIVITY_TYPE_ID_19,
+            self::ACTIVITY_TYPE_ID_20,
+            self::ACTIVITY_TYPE_ID_21,
+            self::ACTIVITY_TYPE_ID_26,
+            self::ACTIVITY_TYPE_ID_27,
+            self::ACTIVITY_TYPE_ID_28,
+            self::ACTIVITY_TYPE_ID_29,
+            self::ACTIVITY_TYPE_ID_30,
+            self::ACTIVITY_TYPE_ID_31,
+            self::ACTIVITY_TYPE_ID_32,
         ];
     }
     
@@ -720,6 +814,14 @@ class ActivityModel implements ArrayAccess
             );
         }
 
+        $allowed_values = $this->getActivityTypeIdAllowableValues();
+        if (!in_array($this->container['activity_type_id'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'activity_type_id', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         $allowed_values = $this->getStatusNameAllowableValues();
         if (!in_array($this->container['status_name'], $allowed_values)) {
             $invalid_properties[] = sprintf(
@@ -742,6 +844,10 @@ class ActivityModel implements ArrayAccess
 
         $allowed_values = $this->getActivityTypeNameAllowableValues();
         if (!in_array($this->container['activity_type_name'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getActivityTypeIdAllowableValues();
+        if (!in_array($this->container['activity_type_id'], $allowed_values)) {
             return false;
         }
         $allowed_values = $this->getStatusNameAllowableValues();
@@ -826,7 +932,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_type_name
-     * @param string $activity_type_name Type of this Activity
+     * @param string $activity_type_name Activity Type Name. breakdown (:20), bundled (:32), car_end (:6), car_start (:5), car_wash (:27), combi (:29), depot (:28), driver_end (:10), driver_start (:9), dropoff (:2), gas_refill (:14), interior_wash (:30), maintenance (:26), maintenance_planned (:15), maintenance_unplanned (:16), other (:31), pause (:13), pickup (:1), route_end (:4), route_start (:3), sanitary (:21), stop (:11), unplanned_stop (:18), user_other (:17), wait (:19)
      * @return $this
      */
     public function setActivityTypeName($activity_type_name)
@@ -856,11 +962,20 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_type_id
-     * @param int $activity_type_id TypeID of this Activity
+     * @param int $activity_type_id Unique Activity type ID. 1 (:pickup), 2 (:dropoff), 3 (:route_start), 4 (:route_end), 5 (:car_start), 6 (:car_end), 9 (:driver_start), 10 (:driver_end), 11 (:stop), 13 (:pause), 14 (:gas_refill), 15 (:maintenance_planned), 16 (:maintenance_unplanned), 17 (:user_other), 18 (:unplanned_stop), 19 (:wait), 20 (:breakdown), 21 (:sanitary), 26 (:maintenance), 27 (:car_wash), 28 (:depot), 29 (:combi), 30 (:interior_wash), 31 (:other), 32 (:bundled)
      * @return $this
      */
     public function setActivityTypeId($activity_type_id)
     {
+        $allowed_values = $this->getActivityTypeIdAllowableValues();
+        if (!is_null($activity_type_id) && !in_array($activity_type_id, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'activity_type_id', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
         $this->container['activity_type_id'] = $activity_type_id;
 
         return $this;

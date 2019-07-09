@@ -166,8 +166,40 @@ class TimeSlotModel implements ArrayAccess
         return self::$getters;
     }
 
+    const TIME_SLOT_TYPE_FIRST_ENTRY = 'first-entry';
+    const TIME_SLOT_TYPE_PLANNED = 'planned';
+    const TIME_SLOT_TYPE_ACTUAL = 'actual';
+    const TIME_SLOT_TYPE_ID_1 = 1;
+    const TIME_SLOT_TYPE_ID_2 = 2;
+    const TIME_SLOT_TYPE_ID_3 = 3;
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTimeSlotTypeAllowableValues()
+    {
+        return [
+            self::TIME_SLOT_TYPE_FIRST_ENTRY,
+            self::TIME_SLOT_TYPE_PLANNED,
+            self::TIME_SLOT_TYPE_ACTUAL,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTimeSlotTypeIdAllowableValues()
+    {
+        return [
+            self::TIME_SLOT_TYPE_ID_1,
+            self::TIME_SLOT_TYPE_ID_2,
+            self::TIME_SLOT_TYPE_ID_3,
+        ];
+    }
     
 
     /**
@@ -204,6 +236,22 @@ class TimeSlotModel implements ArrayAccess
     {
         $invalid_properties = [];
 
+        $allowed_values = $this->getTimeSlotTypeAllowableValues();
+        if (!in_array($this->container['time_slot_type'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'time_slot_type', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getTimeSlotTypeIdAllowableValues();
+        if (!in_array($this->container['time_slot_type_id'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'time_slot_type_id', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         return $invalid_properties;
     }
 
@@ -216,6 +264,14 @@ class TimeSlotModel implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getTimeSlotTypeAllowableValues();
+        if (!in_array($this->container['time_slot_type'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getTimeSlotTypeIdAllowableValues();
+        if (!in_array($this->container['time_slot_type_id'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -252,11 +308,20 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets time_slot_type
-     * @param string $time_slot_type Time Slot Type
+     * @param string $time_slot_type Time Slot Type. first-entry (:1), planned (:2), actual (:3)
      * @return $this
      */
     public function setTimeSlotType($time_slot_type)
     {
+        $allowed_values = $this->getTimeSlotTypeAllowableValues();
+        if (!is_null($time_slot_type) && !in_array($time_slot_type, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'time_slot_type', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
         $this->container['time_slot_type'] = $time_slot_type;
 
         return $this;
@@ -273,11 +338,20 @@ class TimeSlotModel implements ArrayAccess
 
     /**
      * Sets time_slot_type_id
-     * @param int $time_slot_type_id Time Slot Type ID
+     * @param int $time_slot_type_id Time Slot Type ID, by default 1 if left out of the request. 1: first-entry, 2: planned, 3: actual
      * @return $this
      */
     public function setTimeSlotTypeId($time_slot_type_id)
     {
+        $allowed_values = $this->getTimeSlotTypeIdAllowableValues();
+        if (!is_null($time_slot_type_id) && !in_array($time_slot_type_id, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'time_slot_type_id', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
         $this->container['time_slot_type_id'] = $time_slot_type_id;
 
         return $this;

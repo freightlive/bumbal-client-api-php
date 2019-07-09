@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**time_slot_type** | **string** | Time Slot Type | [optional] 
-**time_slot_type_id** | **int** | Time Slot Type ID | [optional] 
+**time_slot_type** | **string** | Time Slot Type. first-entry (:1), planned (:2), actual (:3) | [optional] 
+**time_slot_type_id** | **int** | Time Slot Type ID, by default 1 if left out of the request. 1: first-entry, 2: planned, 3: actual | [optional] 
 **activity_id** | **int** | Activity ID to which this TimeSlot belongs | [optional] 
 **date_from** | [**\DateTime**](Date.md) |  | [optional] 
 **time_from** | **string** |  | [optional] 
