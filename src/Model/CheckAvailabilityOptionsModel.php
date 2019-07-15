@@ -57,7 +57,9 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_impact' => 'bool',
         'synchronous' => 'bool',
         'include_capacities' => 'bool',
-        'include_proposed_plan_times' => 'bool'
+        'include_proposed_plan_times' => 'bool',
+        'activity_times_margins_leading' => 'bool',
+        'apply_cut_off_times' => 'bool'
     ];
 
     /**
@@ -68,7 +70,9 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_impact' => null,
         'synchronous' => null,
         'include_capacities' => null,
-        'include_proposed_plan_times' => null
+        'include_proposed_plan_times' => null,
+        'activity_times_margins_leading' => null,
+        'apply_cut_off_times' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +93,9 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_impact' => 'include_impact',
         'synchronous' => 'synchronous',
         'include_capacities' => 'include_capacities',
-        'include_proposed_plan_times' => 'include_proposed_plan_times'
+        'include_proposed_plan_times' => 'include_proposed_plan_times',
+        'activity_times_margins_leading' => 'activity_times_margins_leading',
+        'apply_cut_off_times' => 'apply_cut_off_times'
     ];
 
 
@@ -101,7 +107,9 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_impact' => 'setIncludeImpact',
         'synchronous' => 'setSynchronous',
         'include_capacities' => 'setIncludeCapacities',
-        'include_proposed_plan_times' => 'setIncludeProposedPlanTimes'
+        'include_proposed_plan_times' => 'setIncludeProposedPlanTimes',
+        'activity_times_margins_leading' => 'setActivityTimesMarginsLeading',
+        'apply_cut_off_times' => 'setApplyCutOffTimes'
     ];
 
 
@@ -113,7 +121,9 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_impact' => 'getIncludeImpact',
         'synchronous' => 'getSynchronous',
         'include_capacities' => 'getIncludeCapacities',
-        'include_proposed_plan_times' => 'getIncludeProposedPlanTimes'
+        'include_proposed_plan_times' => 'getIncludeProposedPlanTimes',
+        'activity_times_margins_leading' => 'getActivityTimesMarginsLeading',
+        'apply_cut_off_times' => 'getApplyCutOffTimes'
     ];
 
     public static function attributeMap()
@@ -151,6 +161,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_proposed_plan_times'] = isset($data['include_proposed_plan_times']) ? $data['include_proposed_plan_times'] : null;
+        $this->container['activity_times_margins_leading'] = isset($data['activity_times_margins_leading']) ? $data['activity_times_margins_leading'] : null;
+        $this->container['apply_cut_off_times'] = isset($data['apply_cut_off_times']) ? $data['apply_cut_off_times'] : null;
     }
 
     /**
@@ -258,6 +270,48 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     public function setIncludeProposedPlanTimes($include_proposed_plan_times)
     {
         $this->container['include_proposed_plan_times'] = $include_proposed_plan_times;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_times_margins_leading
+     * @return bool
+     */
+    public function getActivityTimesMarginsLeading()
+    {
+        return $this->container['activity_times_margins_leading'];
+    }
+
+    /**
+     * Sets activity_times_margins_leading
+     * @param bool $activity_times_margins_leading default: true
+     * @return $this
+     */
+    public function setActivityTimesMarginsLeading($activity_times_margins_leading)
+    {
+        $this->container['activity_times_margins_leading'] = $activity_times_margins_leading;
+
+        return $this;
+    }
+
+    /**
+     * Gets apply_cut_off_times
+     * @return bool
+     */
+    public function getApplyCutOffTimes()
+    {
+        return $this->container['apply_cut_off_times'];
+    }
+
+    /**
+     * Sets apply_cut_off_times
+     * @param bool $apply_cut_off_times default: true
+     * @return $this
+     */
+    public function setApplyCutOffTimes($apply_cut_off_times)
+    {
+        $this->container['apply_cut_off_times'] = $apply_cut_off_times;
 
         return $this;
     }

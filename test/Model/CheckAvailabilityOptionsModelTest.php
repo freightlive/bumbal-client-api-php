@@ -104,4 +104,18 @@ class CheckAvailabilityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeProposedPlanTimes()
     {
     }
+
+    /**
+     * Test attribute "activity_times_margins_leading"
+     */
+    public function testPropertyActivityTimesMarginsLeading()
+    {
+    }
+
+    /**
+     * Test attribute "apply_cut_off_times"
+     */
+    public function testPropertyApplyCutOffTimes()
+    {
+    }
 }
