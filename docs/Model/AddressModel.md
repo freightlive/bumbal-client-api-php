@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**address_id** | **int** |  | [optional] 
 **party_id** | **int** |  | [optional] 
 **code** | **string** |  | [optional] 
 **summary** | **string** |  | [optional] 

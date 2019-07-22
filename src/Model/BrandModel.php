@@ -255,7 +255,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -276,7 +276,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -297,7 +297,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -318,7 +318,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets brand_colours
-     * @param \BumbalClient\Model\BrandColourModel[] $brand_colours 
+     * @param \BumbalClient\Model\BrandColourModel[] $brand_colours
      * @return $this
      */
     public function setBrandColours($brand_colours)
@@ -339,7 +339,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -360,7 +360,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets portal_settings
-     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings 
+     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings
      * @return $this
      */
     public function setPortalSettings($portal_settings)

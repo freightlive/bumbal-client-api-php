@@ -201,7 +201,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_impact
-     * @param bool $include_impact 
+     * @param bool $include_impact
      * @return $this
      */
     public function setIncludeImpact($include_impact)
@@ -222,7 +222,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous 
+     * @param bool $synchronous
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -243,7 +243,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities 
+     * @param bool $include_capacities
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
@@ -264,7 +264,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_proposed_plan_times
-     * @param bool $include_proposed_plan_times 
+     * @param bool $include_proposed_plan_times
      * @return $this
      */
     public function setIncludeProposedPlanTimes($include_proposed_plan_times)

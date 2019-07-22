@@ -85,6 +85,13 @@ class AddressModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "address_id"
+     */
+    public function testPropertyAddressId()
+    {
+    }
+
+    /**
      * Test attribute "party_id"
      */
     public function testPropertyPartyId()
