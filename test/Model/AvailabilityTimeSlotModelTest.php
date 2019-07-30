@@ -120,6 +120,13 @@ class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "proposed_driver"
+     */
+    public function testPropertyProposedDriver()
+    {
+    }
+
+    /**
      * Test attribute "impact"
      */
     public function testPropertyImpact()

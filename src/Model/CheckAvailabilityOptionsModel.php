@@ -58,6 +58,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'synchronous' => 'bool',
         'include_capacities' => 'bool',
         'include_proposed_plan_times' => 'bool',
+        'include_proposed_driver' => 'bool',
         'activity_times_margins_leading' => 'bool',
         'apply_cut_off_times' => 'bool'
     ];
@@ -71,6 +72,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'synchronous' => null,
         'include_capacities' => null,
         'include_proposed_plan_times' => null,
+        'include_proposed_driver' => null,
         'activity_times_margins_leading' => null,
         'apply_cut_off_times' => null
     ];
@@ -94,6 +96,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'synchronous' => 'synchronous',
         'include_capacities' => 'include_capacities',
         'include_proposed_plan_times' => 'include_proposed_plan_times',
+        'include_proposed_driver' => 'include_proposed_driver',
         'activity_times_margins_leading' => 'activity_times_margins_leading',
         'apply_cut_off_times' => 'apply_cut_off_times'
     ];
@@ -108,6 +111,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'synchronous' => 'setSynchronous',
         'include_capacities' => 'setIncludeCapacities',
         'include_proposed_plan_times' => 'setIncludeProposedPlanTimes',
+        'include_proposed_driver' => 'setIncludeProposedDriver',
         'activity_times_margins_leading' => 'setActivityTimesMarginsLeading',
         'apply_cut_off_times' => 'setApplyCutOffTimes'
     ];
@@ -122,6 +126,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'synchronous' => 'getSynchronous',
         'include_capacities' => 'getIncludeCapacities',
         'include_proposed_plan_times' => 'getIncludeProposedPlanTimes',
+        'include_proposed_driver' => 'getIncludeProposedDriver',
         'activity_times_margins_leading' => 'getActivityTimesMarginsLeading',
         'apply_cut_off_times' => 'getApplyCutOffTimes'
     ];
@@ -161,6 +166,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         $this->container['synchronous'] = isset($data['synchronous']) ? $data['synchronous'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_proposed_plan_times'] = isset($data['include_proposed_plan_times']) ? $data['include_proposed_plan_times'] : null;
+        $this->container['include_proposed_driver'] = isset($data['include_proposed_driver']) ? $data['include_proposed_driver'] : null;
         $this->container['activity_times_margins_leading'] = isset($data['activity_times_margins_leading']) ? $data['activity_times_margins_leading'] : null;
         $this->container['apply_cut_off_times'] = isset($data['apply_cut_off_times']) ? $data['apply_cut_off_times'] : null;
     }
@@ -201,7 +207,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_impact
-     * @param bool $include_impact
+     * @param bool $include_impact 
      * @return $this
      */
     public function setIncludeImpact($include_impact)
@@ -222,7 +228,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous
+     * @param bool $synchronous 
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -243,7 +249,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities
+     * @param bool $include_capacities 
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
@@ -264,12 +270,33 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_proposed_plan_times
-     * @param bool $include_proposed_plan_times
+     * @param bool $include_proposed_plan_times 
      * @return $this
      */
     public function setIncludeProposedPlanTimes($include_proposed_plan_times)
     {
         $this->container['include_proposed_plan_times'] = $include_proposed_plan_times;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_proposed_driver
+     * @return bool
+     */
+    public function getIncludeProposedDriver()
+    {
+        return $this->container['include_proposed_driver'];
+    }
+
+    /**
+     * Sets include_proposed_driver
+     * @param bool $include_proposed_driver 
+     * @return $this
+     */
+    public function setIncludeProposedDriver($include_proposed_driver)
+    {
+        $this->container['include_proposed_driver'] = $include_proposed_driver;
 
         return $this;
     }

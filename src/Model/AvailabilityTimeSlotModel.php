@@ -60,6 +60,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => '\DateTime',
         'proposed_plan_date_time_from' => '\DateTime',
         'proposed_plan_date_time_to' => '\DateTime',
+        'proposed_driver' => '\BumbalClient\Model\DriverModel',
         'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]'
     ];
 
@@ -74,6 +75,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => 'date-time',
         'proposed_plan_date_time_from' => 'date-time',
         'proposed_plan_date_time_to' => 'date-time',
+        'proposed_driver' => null,
         'impact' => null
     ];
 
@@ -98,6 +100,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => 'date_time_to',
         'proposed_plan_date_time_from' => 'proposed_plan_date_time_from',
         'proposed_plan_date_time_to' => 'proposed_plan_date_time_to',
+        'proposed_driver' => 'proposed_driver',
         'impact' => 'impact'
     ];
 
@@ -113,6 +116,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => 'setDateTimeTo',
         'proposed_plan_date_time_from' => 'setProposedPlanDateTimeFrom',
         'proposed_plan_date_time_to' => 'setProposedPlanDateTimeTo',
+        'proposed_driver' => 'setProposedDriver',
         'impact' => 'setImpact'
     ];
 
@@ -128,6 +132,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => 'getDateTimeTo',
         'proposed_plan_date_time_from' => 'getProposedPlanDateTimeFrom',
         'proposed_plan_date_time_to' => 'getProposedPlanDateTimeTo',
+        'proposed_driver' => 'getProposedDriver',
         'impact' => 'getImpact'
     ];
 
@@ -168,6 +173,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['proposed_plan_date_time_from'] = isset($data['proposed_plan_date_time_from']) ? $data['proposed_plan_date_time_from'] : null;
         $this->container['proposed_plan_date_time_to'] = isset($data['proposed_plan_date_time_to']) ? $data['proposed_plan_date_time_to'] : null;
+        $this->container['proposed_driver'] = isset($data['proposed_driver']) ? $data['proposed_driver'] : null;
         $this->container['impact'] = isset($data['impact']) ? $data['impact'] : null;
     }
 
@@ -207,7 +213,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -249,7 +255,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from
+     * @param \DateTime $date_time_from 
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -270,7 +276,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to
+     * @param \DateTime $date_time_to 
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -291,7 +297,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime $proposed_plan_date_time_from
+     * @param \DateTime $proposed_plan_date_time_from 
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -312,12 +318,33 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime $proposed_plan_date_time_to
+     * @param \DateTime $proposed_plan_date_time_to 
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
     {
         $this->container['proposed_plan_date_time_to'] = $proposed_plan_date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets proposed_driver
+     * @return \BumbalClient\Model\DriverModel
+     */
+    public function getProposedDriver()
+    {
+        return $this->container['proposed_driver'];
+    }
+
+    /**
+     * Sets proposed_driver
+     * @param \BumbalClient\Model\DriverModel $proposed_driver 
+     * @return $this
+     */
+    public function setProposedDriver($proposed_driver)
+    {
+        $this->container['proposed_driver'] = $proposed_driver;
 
         return $this;
     }
@@ -333,7 +360,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets impact
-     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact
+     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact 
      * @return $this
      */
     public function setImpact($impact)

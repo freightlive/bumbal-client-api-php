@@ -106,6 +106,13 @@ class CheckAvailabilityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_proposed_driver"
+     */
+    public function testPropertyIncludeProposedDriver()
+    {
+    }
+
+    /**
      * Test attribute "activity_times_margins_leading"
      */
     public function testPropertyActivityTimesMarginsLeading()
