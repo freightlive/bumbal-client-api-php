@@ -582,6 +582,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bundled_activity_ids"
+     */
+    public function testPropertyBundledActivityIds()
+    {
+    }
+
+    /**
      * Test attribute "tags"
      */
     public function testPropertyTags()

@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **include_brand_colours** | **bool** |  | [optional] 
 **include_brand_files** | **bool** |  | [optional] 
 **apply_address_bundling** | **bool** |  | [optional] 
+**include_bundled_activity_ids** | **bool** |  | [optional] 
 **include_activity_files** | **bool** |  | [optional] 
 **include_activity_record_info** | **bool** |  | [optional] 
 **include_activity_record_object** | **bool** |  | [optional] 

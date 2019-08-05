@@ -99,6 +99,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'bool',
         'include_brand_files' => 'bool',
         'apply_address_bundling' => 'bool',
+        'include_bundled_activity_ids' => 'bool',
         'include_activity_files' => 'bool',
         'include_activity_record_info' => 'bool',
         'include_activity_record_object' => 'bool'
@@ -154,6 +155,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => null,
         'include_brand_files' => null,
         'apply_address_bundling' => null,
+        'include_bundled_activity_ids' => null,
         'include_activity_files' => null,
         'include_activity_record_info' => null,
         'include_activity_record_object' => null
@@ -219,6 +221,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'include_brand_colours',
         'include_brand_files' => 'include_brand_files',
         'apply_address_bundling' => 'apply_address_bundling',
+        'include_bundled_activity_ids' => 'include_bundled_activity_ids',
         'include_activity_files' => 'include_activity_files',
         'include_activity_record_info' => 'include_activity_record_info',
         'include_activity_record_object' => 'include_activity_record_object'
@@ -275,6 +278,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'setIncludeBrandColours',
         'include_brand_files' => 'setIncludeBrandFiles',
         'apply_address_bundling' => 'setApplyAddressBundling',
+        'include_bundled_activity_ids' => 'setIncludeBundledActivityIds',
         'include_activity_files' => 'setIncludeActivityFiles',
         'include_activity_record_info' => 'setIncludeActivityRecordInfo',
         'include_activity_record_object' => 'setIncludeActivityRecordObject'
@@ -331,6 +335,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_brand_colours' => 'getIncludeBrandColours',
         'include_brand_files' => 'getIncludeBrandFiles',
         'apply_address_bundling' => 'getApplyAddressBundling',
+        'include_bundled_activity_ids' => 'getIncludeBundledActivityIds',
         'include_activity_files' => 'getIncludeActivityFiles',
         'include_activity_record_info' => 'getIncludeActivityRecordInfo',
         'include_activity_record_object' => 'getIncludeActivityRecordObject'
@@ -412,6 +417,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
         $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
         $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
+        $this->container['include_bundled_activity_ids'] = isset($data['include_bundled_activity_ids']) ? $data['include_bundled_activity_ids'] : null;
         $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
         $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
         $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
@@ -1383,6 +1389,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setApplyAddressBundling($apply_address_bundling)
     {
         $this->container['apply_address_bundling'] = $apply_address_bundling;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_bundled_activity_ids
+     * @return bool
+     */
+    public function getIncludeBundledActivityIds()
+    {
+        return $this->container['include_bundled_activity_ids'];
+    }
+
+    /**
+     * Sets include_bundled_activity_ids
+     * @param bool $include_bundled_activity_ids 
+     * @return $this
+     */
+    public function setIncludeBundledActivityIds($include_bundled_activity_ids)
+    {
+        $this->container['include_bundled_activity_ids'] = $include_bundled_activity_ids;
 
         return $this;
     }

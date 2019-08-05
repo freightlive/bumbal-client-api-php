@@ -126,6 +126,7 @@ class ActivityModel implements ArrayAccess
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'car' => '\BumbalClient\Model\VehicleModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
+        'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'tag_names' => 'string[]',
@@ -220,6 +221,7 @@ class ActivityModel implements ArrayAccess
         'driver_links' => null,
         'car' => null,
         'trailer' => null,
+        'bundled_activity_ids' => null,
         'tags' => null,
         'recurrence' => null,
         'tag_names' => null,
@@ -324,6 +326,7 @@ class ActivityModel implements ArrayAccess
         'driver_links' => 'driver_links',
         'car' => 'car',
         'trailer' => 'trailer',
+        'bundled_activity_ids' => 'bundled_activity_ids',
         'tags' => 'tags',
         'recurrence' => 'recurrence',
         'tag_names' => 'tag_names',
@@ -419,6 +422,7 @@ class ActivityModel implements ArrayAccess
         'driver_links' => 'setDriverLinks',
         'car' => 'setCar',
         'trailer' => 'setTrailer',
+        'bundled_activity_ids' => 'setBundledActivityIds',
         'tags' => 'setTags',
         'recurrence' => 'setRecurrence',
         'tag_names' => 'setTagNames',
@@ -514,6 +518,7 @@ class ActivityModel implements ArrayAccess
         'driver_links' => 'getDriverLinks',
         'car' => 'getCar',
         'trailer' => 'getTrailer',
+        'bundled_activity_ids' => 'getBundledActivityIds',
         'tags' => 'getTags',
         'recurrence' => 'getRecurrence',
         'tag_names' => 'getTagNames',
@@ -780,6 +785,7 @@ class ActivityModel implements ArrayAccess
         $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
+        $this->container['bundled_activity_ids'] = isset($data['bundled_activity_ids']) ? $data['bundled_activity_ids'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
@@ -2393,6 +2399,27 @@ class ActivityModel implements ArrayAccess
     public function setTrailer($trailer)
     {
         $this->container['trailer'] = $trailer;
+
+        return $this;
+    }
+
+    /**
+     * Gets bundled_activity_ids
+     * @return int[]
+     */
+    public function getBundledActivityIds()
+    {
+        return $this->container['bundled_activity_ids'];
+    }
+
+    /**
+     * Sets bundled_activity_ids
+     * @param int[] $bundled_activity_ids Ids of activityies within bundle activity
+     * @return $this
+     */
+    public function setBundledActivityIds($bundled_activity_ids)
+    {
+        $this->container['bundled_activity_ids'] = $bundled_activity_ids;
 
         return $this;
     }

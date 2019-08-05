@@ -75,6 +75,7 @@ Name | Type | Description | Notes
 **driver_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **car** | [**\BumbalClient\Model\VehicleModel**](VehicleModel.md) |  | [optional] 
 **trailer** | [**\BumbalClient\Model\TrailerModel**](TrailerModel.md) |  | [optional] 
+**bundled_activity_ids** | **int[]** | Ids of activityies within bundle activity | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 

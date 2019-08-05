@@ -393,6 +393,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_bundled_activity_ids"
+     */
+    public function testPropertyIncludeBundledActivityIds()
+    {
+    }
+
+    /**
      * Test attribute "include_activity_files"
      */
     public function testPropertyIncludeActivityFiles()
