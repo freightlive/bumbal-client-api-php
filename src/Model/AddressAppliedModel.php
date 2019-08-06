@@ -57,6 +57,7 @@ class AddressAppliedModel implements ArrayAccess
         'id' => 'int',
         'party_id' => 'int',
         'address_id' => 'int',
+        'address_links' => '\BumbalClient\Model\LinkModel[]',
         'summary' => 'string',
         'full_name' => 'string',
         'name_1' => 'string',
@@ -84,6 +85,7 @@ class AddressAppliedModel implements ArrayAccess
         'id' => 'int64',
         'party_id' => null,
         'address_id' => null,
+        'address_links' => null,
         'summary' => null,
         'full_name' => null,
         'name_1' => null,
@@ -121,6 +123,7 @@ class AddressAppliedModel implements ArrayAccess
         'id' => 'id',
         'party_id' => 'party_id',
         'address_id' => 'address_id',
+        'address_links' => 'address_links',
         'summary' => 'summary',
         'full_name' => 'full_name',
         'name_1' => 'name_1',
@@ -149,6 +152,7 @@ class AddressAppliedModel implements ArrayAccess
         'id' => 'setId',
         'party_id' => 'setPartyId',
         'address_id' => 'setAddressId',
+        'address_links' => 'setAddressLinks',
         'summary' => 'setSummary',
         'full_name' => 'setFullName',
         'name_1' => 'setName1',
@@ -177,6 +181,7 @@ class AddressAppliedModel implements ArrayAccess
         'id' => 'getId',
         'party_id' => 'getPartyId',
         'address_id' => 'getAddressId',
+        'address_links' => 'getAddressLinks',
         'summary' => 'getSummary',
         'full_name' => 'getFullName',
         'name_1' => 'getName1',
@@ -230,6 +235,7 @@ class AddressAppliedModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
+        $this->container['address_links'] = isset($data['address_links']) ? $data['address_links'] : null;
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['name_1'] = isset($data['name_1']) ? $data['name_1'] : null;
@@ -333,6 +339,27 @@ class AddressAppliedModel implements ArrayAccess
     public function setAddressId($address_id)
     {
         $this->container['address_id'] = $address_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets address_links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getAddressLinks()
+    {
+        return $this->container['address_links'];
+    }
+
+    /**
+     * Sets address_links
+     * @param \BumbalClient\Model\LinkModel[] $address_links 
+     * @return $this
+     */
+    public function setAddressLinks($address_links)
+    {
+        $this->container['address_links'] = $address_links;
 
         return $this;
     }

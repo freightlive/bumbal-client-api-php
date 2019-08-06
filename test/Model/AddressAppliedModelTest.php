@@ -99,6 +99,13 @@ class AddressAppliedModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "address_links"
+     */
+    public function testPropertyAddressLinks()
+    {
+    }
+
+    /**
      * Test attribute "summary"
      */
     public function testPropertySummary()

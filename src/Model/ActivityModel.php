@@ -2414,7 +2414,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets bundled_activity_ids
-     * @param int[] $bundled_activity_ids Ids of activityies within bundle activity
+     * @param int[] $bundled_activity_ids Ids of activities within bundle activity
      * @return $this
      */
     public function setBundledActivityIds($bundled_activity_ids)

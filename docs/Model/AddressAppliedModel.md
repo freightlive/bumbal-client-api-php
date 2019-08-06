@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **party_id** | **int** |  | [optional] 
 **address_id** | **int** |  | [optional] 
+**address_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **summary** | **string** |  | [optional] 
 **full_name** | **string** |  | [optional] 
 **name_1** | **string** |  | [optional] 
