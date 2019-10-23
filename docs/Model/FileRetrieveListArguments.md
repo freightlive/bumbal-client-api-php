@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\FileOptionsModel**](FileOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\FileFiltersModel**](FileFiltersModel.md) |  | [optional] 
+**options** | [**\Model\FileOptionsModel**](FileOptionsModel.md) |  | [optional] 
+**filters** | [**\Model\FileFiltersModel**](FileFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

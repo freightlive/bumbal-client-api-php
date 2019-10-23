@@ -4,64 +4,14 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteAddress**](AddressApi.md#deleteAddress) | **DELETE** /address/{addressId} | Delete an Address
 [**retrieveAddress**](AddressApi.md#retrieveAddress) | **GET** /address/{addressId} | Retrieve a Address
 [**retrieveListAddress**](AddressApi.md#retrieveListAddress) | **PUT** /address | Retrieve List of Addresses
+[**reverseGeoCodeAddress**](AddressApi.md#reverseGeoCodeAddress) | **POST** /address/reverse-geo-code | Reverse Geo Code a address
 [**setAddress**](AddressApi.md#setAddress) | **POST** /address/set | Add a new Address
 
 
-# **deleteAddress**
-> \BumbalClient\Model\ApiResponse deleteAddress($address_id)
-
-Delete an Address
-
-Delete an Address
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-
-$api_instance = new BumbalClient\Api\AddressApi();
-$address_id = 789; // int | ID of address to update
-
-try {
-    $result = $api_instance->deleteAddress($address_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AddressApi->deleteAddress: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address_id** | **int**| ID of address to update |
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **retrieveAddress**
-> \BumbalClient\Model\AddressModel retrieveAddress($address_id)
+> \Model\AddressModel retrieveAddress($address_id)
 
 Retrieve a Address
 
@@ -97,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)
+[**\Model\AddressModel**](../Model/AddressModel.md)
 
 ### Authorization
 
@@ -111,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListAddress**
-> \BumbalClient\Model\AddressListResponse retrieveListAddress($arguments)
+> \Model\AddressListResponse retrieveListAddress($arguments)
 
 Retrieve List of Addresses
 
@@ -128,7 +78,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$arguments = new \BumbalClient\Model\AddressRetrieveListArguments(); // \BumbalClient\Model\AddressRetrieveListArguments | Address RetrieveList Arguments
+$arguments = new \Model\AddressRetrieveListArguments(); // \Model\AddressRetrieveListArguments | Address RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListAddress($arguments);
@@ -143,11 +93,61 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\AddressRetrieveListArguments**](../Model/AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
+ **arguments** | [**\Model\AddressRetrieveListArguments**](../Model/\Model\AddressRetrieveListArguments.md)| Address RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\AddressListResponse**](../Model/AddressListResponse.md)
+[**\Model\AddressListResponse**](../Model/AddressListResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **reverseGeoCodeAddress**
+> \Model\AddressReverseGeoCodeResponse reverseGeoCodeAddress($arguments)
+
+Reverse Geo Code a address
+
+Reverse Geo Code a address
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\AddressApi();
+$arguments = new \Model\AddressReverseGeoCodeArguments(); // \Model\AddressReverseGeoCodeArguments | Address Reverse GeoCode Arguments
+
+try {
+    $result = $api_instance->reverseGeoCodeAddress($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AddressApi->reverseGeoCodeAddress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\Model\AddressReverseGeoCodeArguments**](../Model/\Model\AddressReverseGeoCodeArguments.md)| Address Reverse GeoCode Arguments |
+
+### Return type
+
+[**\Model\AddressReverseGeoCodeResponse**](../Model/AddressReverseGeoCodeResponse.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setAddress**
-> \BumbalClient\Model\ApiResponse setAddress($body)
+> \Model\ApiResponse setAddress($body)
 
 Add a new Address
 
@@ -178,7 +178,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\AddressApi();
-$body = new \BumbalClient\Model\AddressModel(); // \BumbalClient\Model\AddressModel | Address object that needs to be created
+$body = new \Model\AddressModel(); // \Model\AddressModel | Address object that needs to be created
 
 try {
     $result = $api_instance->setAddress($body);
@@ -193,11 +193,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\AddressModel**](../Model/AddressModel.md)| Address object that needs to be created | [optional]
+ **body** | [**\Model\AddressModel**](../Model/\Model\AddressModel.md)| Address object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

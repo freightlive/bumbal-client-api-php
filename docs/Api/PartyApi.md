@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createParty**
-> \BumbalClient\Model\ApiResponse createParty($body)
+> \Model\ApiResponse createParty($body)
 
 Create or update an Party
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object
+$body = new \Model\PartyModel(); // \Model\PartyModel | Party object
 
 try {
     $result = $api_instance->createParty($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
+ **body** | [**\Model\PartyModel**](../Model/\Model\PartyModel.md)| Party object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteParty**
-> \BumbalClient\Model\ApiResponse deleteParty($party_id)
+> \Model\ApiResponse deleteParty($party_id)
 
 Delete an party
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListParty**
-> \BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
+> \Model\PartyModel[] retrieveListParty($arguments)
 
 Retrieve List of Partys
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
-$arguments = new \BumbalClient\Model\PartyRetrieveListArguments(); // \BumbalClient\Model\PartyRetrieveListArguments | Party RetrieveList Arguments
+$arguments = new \Model\PartyRetrieveListArguments(); // \Model\PartyRetrieveListArguments | Party RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListParty($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PartyRetrieveListArguments**](../Model/PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
+ **arguments** | [**\Model\PartyRetrieveListArguments**](../Model/\Model\PartyRetrieveListArguments.md)| Party RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
+[**\Model\PartyModel[]**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveParty**
-> \BumbalClient\Model\PartyModel retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
+> \Model\PartyModel retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
 
 Find party by ID
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)
+[**\Model\PartyModel**](../Model/PartyModel.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setParty**
-> \BumbalClient\Model\ApiResponse setParty($body)
+> \Model\ApiResponse setParty($body)
 
 Set (create or update) an Party
 
@@ -236,7 +236,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PartyApi();
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object
+$body = new \Model\PartyModel(); // \Model\PartyModel | Party object
 
 try {
     $result = $api_instance->setParty($body);
@@ -251,11 +251,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object | [optional]
+ **body** | [**\Model\PartyModel**](../Model/\Model\PartyModel.md)| Party object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateParty**
-> \BumbalClient\Model\ApiResponse updateParty($party_id, $body)
+> \Model\ApiResponse updateParty($party_id, $body)
 
 Update a party
 
@@ -287,7 +287,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to update
-$body = new \BumbalClient\Model\PartyModel(); // \BumbalClient\Model\PartyModel | Party object that needs to be updated
+$body = new \Model\PartyModel(); // \Model\PartyModel | Party object that needs to be updated
 
 try {
     $result = $api_instance->updateParty($party_id, $body);
@@ -303,11 +303,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **party_id** | **int**| ID of party to update |
- **body** | [**\BumbalClient\Model\PartyModel**](../Model/PartyModel.md)| Party object that needs to be updated | [optional]
+ **body** | [**\Model\PartyModel**](../Model/\Model\PartyModel.md)| Party object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteActivity**
-> \BumbalClient\Model\ApiResponse deleteActivity($activity_id)
+> \Model\ApiResponse deleteActivity($activity_id)
 
 Delete an activity
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveActivity**
-> \BumbalClient\Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+> \Model\ActivityModel retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
 
 Find activity by ID
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)
+[**\Model\ActivityModel**](../Model/ActivityModel.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListActivity**
-> \BumbalClient\Model\ActivityListResponse retrieveListActivity($arguments)
+> \Model\ActivityListResponse retrieveListActivity($arguments)
 
 Retrieve List of Activities
 
@@ -185,7 +185,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$arguments = new \BumbalClient\Model\ActivityRetrieveListArguments(); // \BumbalClient\Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
+$arguments = new \Model\ActivityRetrieveListArguments(); // \Model\ActivityRetrieveListArguments | Activity RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListActivity($arguments);
@@ -200,11 +200,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\ActivityRetrieveListArguments**](../Model/ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
+ **arguments** | [**\Model\ActivityRetrieveListArguments**](../Model/\Model\ActivityRetrieveListArguments.md)| Activity RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ActivityListResponse**](../Model/ActivityListResponse.md)
+[**\Model\ActivityListResponse**](../Model/ActivityListResponse.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setActivity**
-> \BumbalClient\Model\ApiResponse setActivity($body)
+> \Model\ApiResponse setActivity($body)
 
 Set (create or update) an Activity
 
@@ -235,7 +235,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivityApi();
-$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object
+$body = new \Model\ActivityModel(); // \Model\ActivityModel | Activity object
 
 try {
     $result = $api_instance->setActivity($body);
@@ -250,11 +250,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
+ **body** | [**\Model\ActivityModel**](../Model/\Model\ActivityModel.md)| Activity object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateActivity**
-> \BumbalClient\Model\ApiResponse updateActivity($activity_id, $body)
+> \Model\ApiResponse updateActivity($activity_id, $body)
 
 Update a activity
 
@@ -286,7 +286,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\ActivityApi();
 $activity_id = 789; // int | ID of activity to update
-$body = new \BumbalClient\Model\ActivityModel(); // \BumbalClient\Model\ActivityModel | Activity object that needs to be updated
+$body = new \Model\ActivityModel(); // \Model\ActivityModel | Activity object that needs to be updated
 
 try {
     $result = $api_instance->updateActivity($activity_id, $body);
@@ -302,11 +302,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of activity to update |
- **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object that needs to be updated | [optional]
+ **body** | [**\Model\ActivityModel**](../Model/\Model\ActivityModel.md)| Activity object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

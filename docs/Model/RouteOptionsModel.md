@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **include_address_object** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
 **include_route_tags** | **bool** |  | [optional] 
+**include_tag_names** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 
 **include_driver_links** | **bool** |  | [optional] 
 **include_car** | **bool** |  | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **include_activity_ids** | **bool** |  | [optional] 
 **include_latest_position** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
+**include_zone_names** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

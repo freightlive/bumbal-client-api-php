@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createPortal**
-> \BumbalClient\Model\ApiResponse createPortal($body)
+> \Model\ApiResponse createPortal($body)
 
 Add a new Portal
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalApi();
-$body = new \BumbalClient\Model\PortalModel(); // \BumbalClient\Model\PortalModel | Portal object that needs to be created
+$body = new \Model\PortalModel(); // \Model\PortalModel | Portal object that needs to be created
 
 try {
     $result = $api_instance->createPortal($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PortalModel**](../Model/PortalModel.md)| Portal object that needs to be created | [optional]
+ **body** | [**\Model\PortalModel**](../Model/\Model\PortalModel.md)| Portal object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePortal**
-> \BumbalClient\Model\ApiResponse deletePortal($portal_id)
+> \Model\ApiResponse deletePortal($portal_id)
 
 Delete a Portal
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPortal**
-> \BumbalClient\Model\PortalListResponse retrieveListPortal($arguments)
+> \Model\PortalListResponse retrieveListPortal($arguments)
 
 Retrieve List of Portals
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalApi();
-$arguments = new \BumbalClient\Model\PortalRetrieveListArguments(); // \BumbalClient\Model\PortalRetrieveListArguments | Portal RetrieveList Arguments
+$arguments = new \Model\PortalRetrieveListArguments(); // \Model\PortalRetrieveListArguments | Portal RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListPortal($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PortalRetrieveListArguments**](../Model/PortalRetrieveListArguments.md)| Portal RetrieveList Arguments |
+ **arguments** | [**\Model\PortalRetrieveListArguments**](../Model/\Model\PortalRetrieveListArguments.md)| Portal RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PortalListResponse**](../Model/PortalListResponse.md)
+[**\Model\PortalListResponse**](../Model/PortalListResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrievePortal**
-> \BumbalClient\Model\PortalModel retrievePortal($portal_id)
+> \Model\PortalModel retrievePortal($portal_id)
 
 Retrieve a Portal
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PortalModel**](../Model/PortalModel.md)
+[**\Model\PortalModel**](../Model/PortalModel.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setPortal**
-> \BumbalClient\Model\ApiResponse setPortal($body)
+> \Model\ApiResponse setPortal($body)
 
 Set (create or update) a Portal
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalApi();
-$body = new \BumbalClient\Model\PortalModel(); // \BumbalClient\Model\PortalModel | Portal object
+$body = new \Model\PortalModel(); // \Model\PortalModel | Portal object
 
 try {
     $result = $api_instance->setPortal($body);
@@ -245,11 +245,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PortalModel**](../Model/PortalModel.md)| Portal object | [optional]
+ **body** | [**\Model\PortalModel**](../Model/\Model\PortalModel.md)| Portal object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePortal**
-> \BumbalClient\Model\ApiResponse updatePortal($portal_id)
+> \Model\ApiResponse updatePortal($portal_id)
 
 Update a Portal
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

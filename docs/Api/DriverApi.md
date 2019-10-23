@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createDriver**
-> \BumbalClient\Model\ApiResponse createDriver($body)
+> \Model\ApiResponse createDriver($body)
 
 Add a driver
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverApi();
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object that needs to be created
+$body = new \Model\DriverModel(); // \Model\DriverModel | Driver object that needs to be created
 
 try {
     $result = $api_instance->createDriver($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object that needs to be created | [optional]
+ **body** | [**\Model\DriverModel**](../Model/\Model\DriverModel.md)| Driver object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDriver**
-> \BumbalClient\Model\ApiResponse deleteDriver($driver_id)
+> \Model\ApiResponse deleteDriver($driver_id)
 
 Delete an driver
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveDriver**
-> \BumbalClient\Model\DriverModel retrieveDriver($driver_id, $include_driver_tags, $include_updated_by)
+> \Model\DriverModel retrieveDriver($driver_id, $include_driver_tags, $include_updated_by)
 
 Find driver by ID
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)
+[**\Model\DriverModel**](../Model/DriverModel.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListDriver**
-> \BumbalClient\Model\DriverListResponse retrieveListDriver($arguments)
+> \Model\DriverListResponse retrieveListDriver($arguments)
 
 Retrieve List of Drivers
 
@@ -184,7 +184,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverApi();
-$arguments = new \BumbalClient\Model\DriverRetrieveListArguments(); // \BumbalClient\Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
+$arguments = new \Model\DriverRetrieveListArguments(); // \Model\DriverRetrieveListArguments | Driver RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListDriver($arguments);
@@ -199,11 +199,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\DriverRetrieveListArguments**](../Model/DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
+ **arguments** | [**\Model\DriverRetrieveListArguments**](../Model/\Model\DriverRetrieveListArguments.md)| Driver RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\DriverListResponse**](../Model/DriverListResponse.md)
+[**\Model\DriverListResponse**](../Model/DriverListResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setDriver**
-> \BumbalClient\Model\ApiResponse setDriver($body)
+> \Model\ApiResponse setDriver($body)
 
 Set (create or update) a driver
 
@@ -234,7 +234,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\DriverApi();
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object
+$body = new \Model\DriverModel(); // \Model\DriverModel | Driver object
 
 try {
     $result = $api_instance->setDriver($body);
@@ -249,11 +249,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object | [optional]
+ **body** | [**\Model\DriverModel**](../Model/\Model\DriverModel.md)| Driver object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDriver**
-> \BumbalClient\Model\ApiResponse updateDriver($driver_id, $body)
+> \Model\ApiResponse updateDriver($driver_id, $body)
 
 Update a driver
 
@@ -285,7 +285,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\DriverApi();
 $driver_id = 789; // int | ID of driver to update
-$body = new \BumbalClient\Model\DriverModel(); // \BumbalClient\Model\DriverModel | Driver object that needs to be updated
+$body = new \Model\DriverModel(); // \Model\DriverModel | Driver object that needs to be updated
 
 try {
     $result = $api_instance->updateDriver($driver_id, $body);
@@ -301,11 +301,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **driver_id** | **int**| ID of driver to update |
- **body** | [**\BumbalClient\Model\DriverModel**](../Model/DriverModel.md)| Driver object that needs to be updated | [optional]
+ **body** | [**\Model\DriverModel**](../Model/\Model\DriverModel.md)| Driver object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

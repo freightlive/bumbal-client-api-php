@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTagType**
-> \BumbalClient\Model\ApiResponse createTagType($body)
+> \Model\ApiResponse createTagType($body)
 
 Add a new Tag type
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$body = new \BumbalClient\Model\TagTypeModel(); // \BumbalClient\Model\TagTypeModel | Tag type object that needs to be created
+$body = new \Model\TagTypeModel(); // \Model\TagTypeModel | Tag type object that needs to be created
 
 try {
     $result = $api_instance->createTagType($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/TagTypeModel.md)| Tag type object that needs to be created |
+ **body** | [**\Model\TagTypeModel**](../Model/\Model\TagTypeModel.md)| Tag type object that needs to be created |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTagType**
-> \BumbalClient\Model\ApiResponse deleteTagType($tag_type_id)
+> \Model\ApiResponse deleteTagType($tag_type_id)
 
 Delete a Tag type
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTagType**
-> \BumbalClient\Model\TagTypeModel[] retrieveListTagType($arguments)
+> \Model\TagTypeModel[] retrieveListTagType($arguments)
 
 Retrieve List of Tag types
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$arguments = new \BumbalClient\Model\TagTypeRetrieveListArguments(); // \BumbalClient\Model\TagTypeRetrieveListArguments | Tag types RetrieveList Arguments
+$arguments = new \Model\TagTypeRetrieveListArguments(); // \Model\TagTypeRetrieveListArguments | Tag types RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListTagType($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\TagTypeRetrieveListArguments**](../Model/TagTypeRetrieveListArguments.md)| Tag types RetrieveList Arguments |
+ **arguments** | [**\Model\TagTypeRetrieveListArguments**](../Model/\Model\TagTypeRetrieveListArguments.md)| Tag types RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\TagTypeModel[]**](../Model/TagTypeModel.md)
+[**\Model\TagTypeModel[]**](../Model/TagTypeModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTagType**
-> \BumbalClient\Model\TagTypeModel retrieveTagType($tag_type_id, $include_object_types)
+> \Model\TagTypeModel retrieveTagType($tag_type_id, $include_object_types)
 
 Retrieve a Tag type
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagTypeModel**](../Model/TagTypeModel.md)
+[**\Model\TagTypeModel**](../Model/TagTypeModel.md)
 
 ### Authorization
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setTagType**
-> \BumbalClient\Model\ApiResponse setTagType($body)
+> \Model\ApiResponse setTagType($body)
 
 Set (create or update) Tag type
 
@@ -232,7 +232,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TagtypeApi();
-$body = new \BumbalClient\Model\TagTypeModel(); // \BumbalClient\Model\TagTypeModel | tag type data
+$body = new \Model\TagTypeModel(); // \Model\TagTypeModel | tag type data
 
 try {
     $result = $api_instance->setTagType($body);
@@ -247,11 +247,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\TagTypeModel**](../Model/TagTypeModel.md)| tag type data | [optional]
+ **body** | [**\Model\TagTypeModel**](../Model/\Model\TagTypeModel.md)| tag type data | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTagType**
-> \BumbalClient\Model\ApiResponse updateTagType($tag_type_id)
+> \Model\ApiResponse updateTagType($tag_type_id)
 
 Update a Tag type
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveAddressApplied**
-> \BumbalClient\Model\AddressAppliedModel retrieveAddressApplied($address_id)
+> \Model\AddressAppliedModel retrieveAddressApplied($address_id)
 
 Retrieve an Applied Address
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
+[**\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAddressApplied**
-> \BumbalClient\Model\ApiResponse updateAddressApplied($address_id, $body)
+> \Model\ApiResponse updateAddressApplied($address_id, $body)
 
 Update a AddressApplied
 
@@ -77,7 +77,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AddressappliedApi();
 $address_id = 789; // int | ID of address to update
-$body = new \BumbalClient\Model\AddressAppliedModel(); // \BumbalClient\Model\AddressAppliedModel | AddressApplied object that needs to be updated
+$body = new \Model\AddressAppliedModel(); // \Model\AddressAppliedModel | AddressApplied object that needs to be updated
 
 try {
     $result = $api_instance->updateAddressApplied($address_id, $body);
@@ -93,11 +93,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address_id** | **int**| ID of address to update |
- **body** | [**\BumbalClient\Model\AddressAppliedModel**](../Model/AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
+ **body** | [**\Model\AddressAppliedModel**](../Model/\Model\AddressAppliedModel.md)| AddressApplied object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveActivityCommunication**
-> \BumbalClient\Model\ApiResponse retrieveActivityCommunication($activity_id)
+> \Model\ApiResponse retrieveActivityCommunication($activity_id)
 
 Retrieve Activity
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **triggerMessageCommunication**
-> \BumbalClient\Model\ApiResponse triggerMessageCommunication($activity_id, $message_type, $check_preference)
+> \Model\ApiResponse triggerMessageCommunication($activity_id, $message_type, $check_preference)
 
 Trigger Message to Communication
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
