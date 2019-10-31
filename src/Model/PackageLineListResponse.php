@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class PackageLineListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'items' => '\Model\PackageLineModel[]',
+        'items' => '\BumbalClient\Model\PackageLineModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -172,7 +172,7 @@ class PackageLineListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \Model\PackageLineModel[]
+     * @return \BumbalClient\Model\PackageLineModel[]
      */
     public function getItems()
     {
@@ -181,7 +181,7 @@ class PackageLineListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\PackageLineModel[] $items
+     * @param \BumbalClient\Model\PackageLineModel[] $items
      * @return $this
      */
     public function setItems($items)

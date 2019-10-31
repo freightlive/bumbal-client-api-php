@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,7 +107,7 @@ class WorkerApi
      *
      * Add Action To Worker Stack
      *
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function addActionToWorkerStack()
@@ -121,7 +121,7 @@ class WorkerApi
      *
      * Add Action To Worker Stack
      *
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function addActionToWorkerStackWithHttpInfo()
@@ -161,15 +161,15 @@ class WorkerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/worker/add-action-to-stack'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

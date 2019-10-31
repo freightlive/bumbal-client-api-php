@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -70,16 +70,16 @@ class NoteModel implements ArrayAccess
         'object_type' => 'object',
         'object_type_name' => 'object',
         'object_id' => 'int',
-        'object_link' => '\Model\LinkModel',
+        'object_link' => '\BumbalClient\Model\LinkModel',
         'note_category_id' => 'int',
         'note_category_name' => 'string',
         'visible_for_driver' => 'bool',
         'title' => 'string',
         'updated_by_name' => 'string',
         'content' => 'string',
-        'files' => '\Model\FileModel[]',
-        'links' => '\Model\LinkModel[]',
-        'meta_data' => '\Model\MetaDataModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'active' => 'bool',
         'note_created_at' => '\DateTime',
         'note_updated_at' => '\DateTime',
@@ -331,7 +331,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets object_link
-     * @return \Model\LinkModel
+     * @return \BumbalClient\Model\LinkModel
      */
     public function getObjectLink()
     {
@@ -340,7 +340,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets object_link
-     * @param \Model\LinkModel $object_link
+     * @param \BumbalClient\Model\LinkModel $object_link
      * @return $this
      */
     public function setObjectLink($object_link)
@@ -478,7 +478,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -487,7 +487,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -499,7 +499,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -508,7 +508,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -520,7 +520,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -529,7 +529,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

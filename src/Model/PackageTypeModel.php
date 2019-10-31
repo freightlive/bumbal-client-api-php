@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -69,8 +69,8 @@ class PackageTypeModel implements ArrayAccess
         'id' => 'int',
         'name' => 'string',
         'active' => 'bool',
-        'links' => '\Model\LinkModel[]',
-        'meta_data' => '\Model\MetaDataModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'created_by' => 'int',
@@ -260,7 +260,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -269,7 +269,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -281,7 +281,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -290,7 +290,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Model\AssignmentOptionsModel**](AssignmentOptionsModel.md) |  | [optional] 
-**filters** | [**\Model\AssignmentFiltersModel**](AssignmentFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\AssignmentOptionsModel**](AssignmentOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\AssignmentFiltersModel**](AssignmentFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **search_text** | **string** |  | [optional] 

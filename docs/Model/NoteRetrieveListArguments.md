@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Model\NoteOptionsModel**](NoteOptionsModel.md) |  | [optional] 
-**filters** | [**\Model\NoteFiltersModel**](NoteFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\NoteOptionsModel**](NoteOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\NoteFiltersModel**](NoteFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **addActionToWorkerStack**
-> \Model\ApiResponse addActionToWorkerStack()
+> \BumbalClient\Model\ApiResponse addActionToWorkerStack()
 
 Add Action To Worker Stack
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

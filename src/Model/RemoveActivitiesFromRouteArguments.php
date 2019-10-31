@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class RemoveActivitiesFromRouteArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'filters' => '\Model\ActivityFiltersModel'
+        'filters' => '\BumbalClient\Model\ActivityFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -157,7 +157,7 @@ class RemoveActivitiesFromRouteArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\ActivityFiltersModel
+     * @return \BumbalClient\Model\ActivityFiltersModel
      */
     public function getFilters()
     {
@@ -166,7 +166,7 @@ class RemoveActivitiesFromRouteArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ActivityFiltersModel $filters
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

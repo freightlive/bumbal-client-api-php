@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **package_type_name** | **string[]** | Type of the Packages | [optional] 
 **package_type_id** | **int[]** | ID of the package type for the packages | [optional] 
 **applied_capacities** | **object** |  | [optional] 
-**capacities** | [**\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
+**capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **barcode** | **string[]** | barcode for packages | [optional] 
 **adr** | **bool** | boolean for whether or not the packages in package line should be considered as ADR | [optional] 
 **adr_class** | **int[]** | ADR class of packages in package line | [optional] 
@@ -23,8 +23,8 @@ Name | Type | Description | Notes
 **temp_max** | **float** | maximum temperature for packages in package line | [optional] 
 **hs_code** | **string[]** | Harmonized System code for packages | [optional] 
 **description** | **string** | description of this package_line | [optional] 
-**links** | [**\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
-**activity_links** | [**\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**activity_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **activity_id** | **int[]** | Activity id | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

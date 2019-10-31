@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class SettingsRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\SettingsOptionsModel',
-        'filters' => '\Model\SettingsFiltersModel',
+        'options' => '\BumbalClient\Model\SettingsOptionsModel',
+        'filters' => '\BumbalClient\Model\SettingsFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -177,7 +177,7 @@ class SettingsRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\SettingsOptionsModel
+     * @return \BumbalClient\Model\SettingsOptionsModel
      */
     public function getOptions()
     {
@@ -186,7 +186,7 @@ class SettingsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\SettingsOptionsModel $options
+     * @param \BumbalClient\Model\SettingsOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -198,7 +198,7 @@ class SettingsRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\SettingsFiltersModel
+     * @return \BumbalClient\Model\SettingsFiltersModel
      */
     public function getFilters()
     {
@@ -207,7 +207,7 @@ class SettingsRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\SettingsFiltersModel $filters
+     * @param \BumbalClient\Model\SettingsFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

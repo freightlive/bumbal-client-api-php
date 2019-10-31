@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class PartyApi
      *
      * Create or update an Party
      *
-     * @param \Model\PartyModel $body Party object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createParty($body = null)
@@ -122,8 +122,8 @@ class PartyApi
      *
      * Create or update an Party
      *
-     * @param \Model\PartyModel $body Party object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createPartyWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/party'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class PartyApi
      * Delete an party
      *
      * @param int $party_id ID of the party to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteParty($party_id)
@@ -206,7 +206,7 @@ class PartyApi
      * Delete an party
      *
      * @param int $party_id ID of the party to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deletePartyWithHttpInfo($party_id)
@@ -258,15 +258,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/party/{partyId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -280,8 +280,8 @@ class PartyApi
      *
      * Retrieve List of Partys
      *
-     * @param \Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
-     * @return \Model\PartyModel[]
+     * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\PartyModel[]
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListParty($arguments)
@@ -295,8 +295,8 @@ class PartyApi
      *
      * Retrieve List of Partys
      *
-     * @param \Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
-     * @return Array of \Model\PartyModel[], HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\PartyModel[], HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListPartyWithHttpInfo($arguments)
@@ -345,15 +345,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\PartyModel[]',
+                '\BumbalClient\Model\PartyModel[]',
                 '/party'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\PartyModel[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PartyModel[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\PartyModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PartyModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -371,7 +371,7 @@ class PartyApi
      * @param bool $include_party_links Include Link Data (required)
      * @param bool $include_party_files Include files (required)
      * @param bool $include_party_files_meta_data Include files meta data (required)
-     * @return \Model\PartyModel
+     * @return \BumbalClient\Model\PartyModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
@@ -389,7 +389,7 @@ class PartyApi
      * @param bool $include_party_links Include Link Data (required)
      * @param bool $include_party_files Include files (required)
      * @param bool $include_party_files_meta_data Include files meta data (required)
-     * @return Array of \Model\PartyModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\PartyModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrievePartyWithHttpInfo($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
@@ -465,15 +465,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\PartyModel',
+                '\BumbalClient\Model\PartyModel',
                 '/party/{partyId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\PartyModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PartyModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\PartyModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PartyModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -487,8 +487,8 @@ class PartyApi
      *
      * Set (create or update) an Party
      *
-     * @param \Model\PartyModel $body Party object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setParty($body = null)
@@ -502,8 +502,8 @@ class PartyApi
      *
      * Set (create or update) an Party
      *
-     * @param \Model\PartyModel $body Party object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PartyModel $body Party object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setPartyWithHttpInfo($body = null)
@@ -548,15 +548,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/party/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -571,8 +571,8 @@ class PartyApi
      * Update a party
      *
      * @param int $party_id ID of party to update (required)
-     * @param \Model\PartyModel $body Party object that needs to be updated (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be updated (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateParty($party_id, $body = null)
@@ -587,8 +587,8 @@ class PartyApi
      * Update a party
      *
      * @param int $party_id ID of party to update (required)
-     * @param \Model\PartyModel $body Party object that needs to be updated (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PartyModel $body Party object that needs to be updated (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updatePartyWithHttpInfo($party_id, $body = null)
@@ -645,15 +645,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/party/{partyId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

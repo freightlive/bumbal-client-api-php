@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -68,8 +68,8 @@ class AutoPlanResponse implements ArrayAccess
     protected static $swaggerTypes = array(
         'token' => 'string',
         'status' => 'string',
-        'affected_activities' => '\Model\ActivityModel[]',
-        'unavailable_timewindows' => '\Model\TimeSlotModel[]',
+        'affected_activities' => '\BumbalClient\Model\ActivityModel[]',
+        'unavailable_timewindows' => '\BumbalClient\Model\TimeSlotModel[]',
         'latest_analyzed_date' => '\DateTime'
     );
 
@@ -248,7 +248,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Gets affected_activities
-     * @return \Model\ActivityModel[]
+     * @return \BumbalClient\Model\ActivityModel[]
      */
     public function getAffectedActivities()
     {
@@ -257,7 +257,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Sets affected_activities
-     * @param \Model\ActivityModel[] $affected_activities
+     * @param \BumbalClient\Model\ActivityModel[] $affected_activities
      * @return $this
      */
     public function setAffectedActivities($affected_activities)
@@ -269,7 +269,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Gets unavailable_timewindows
-     * @return \Model\TimeSlotModel[]
+     * @return \BumbalClient\Model\TimeSlotModel[]
      */
     public function getUnavailableTimewindows()
     {
@@ -278,7 +278,7 @@ class AutoPlanResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \Model\TimeSlotModel[] $unavailable_timewindows
+     * @param \BumbalClient\Model\TimeSlotModel[] $unavailable_timewindows
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)

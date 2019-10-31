@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class AddressListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'items' => '\Model\AddressModel[]',
+        'items' => '\BumbalClient\Model\AddressModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -172,7 +172,7 @@ class AddressListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \Model\AddressModel[]
+     * @return \BumbalClient\Model\AddressModel[]
      */
     public function getItems()
     {
@@ -181,7 +181,7 @@ class AddressListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\AddressModel[] $items
+     * @param \BumbalClient\Model\AddressModel[] $items
      * @return $this
      */
     public function setItems($items)

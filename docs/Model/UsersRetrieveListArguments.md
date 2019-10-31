@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Model\UsersOptionsModel**](UsersOptionsModel.md) |  | [optional] 
-**filters** | [**\Model\UsersFiltersModel**](UsersFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\UsersOptionsModel**](UsersOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\UsersFiltersModel**](UsersFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

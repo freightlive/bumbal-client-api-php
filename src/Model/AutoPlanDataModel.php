@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -68,7 +68,7 @@ class AutoPlanDataModel implements ArrayAccess
     protected static $swaggerTypes = array(
         'token' => 'int',
         'availability_key' => 'string',
-        'activity' => '\Model\ActivityModel[]'
+        'activity' => '\BumbalClient\Model\ActivityModel[]'
     );
 
     public static function swaggerTypes()
@@ -209,7 +209,7 @@ class AutoPlanDataModel implements ArrayAccess
 
     /**
      * Gets activity
-     * @return \Model\ActivityModel[]
+     * @return \BumbalClient\Model\ActivityModel[]
      */
     public function getActivity()
     {
@@ -218,7 +218,7 @@ class AutoPlanDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \Model\ActivityModel[] $activity
+     * @param \BumbalClient\Model\ActivityModel[] $activity
      * @return $this
      */
     public function setActivity($activity)

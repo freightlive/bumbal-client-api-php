@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class PackagelineApi
      *
      * Create or update an Package Line
      *
-     * @param \Model\PackageLineModel $body PackageLine model (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createPackageLine($body = null)
@@ -122,8 +122,8 @@ class PackagelineApi
      *
      * Create or update an Package Line
      *
-     * @param \Model\PackageLineModel $body PackageLine model (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createPackageLineWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/package-line'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class PackagelineApi
      * Delete an package-line
      *
      * @param int $package_line_id ID of the package-line to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deletePackageLine($package_line_id)
@@ -206,7 +206,7 @@ class PackagelineApi
      * Delete an package-line
      *
      * @param int $package_line_id ID of the package-line to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deletePackageLineWithHttpInfo($package_line_id)
@@ -258,15 +258,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/package-line/{packageLineId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -280,8 +280,8 @@ class PackagelineApi
      *
      * Retrieve List of PackageLines
      *
-     * @param \Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
-     * @return \Model\PackageLineListResponse
+     * @param \BumbalClient\Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\PackageLineListResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListPackageLine($arguments)
@@ -295,8 +295,8 @@ class PackagelineApi
      *
      * Retrieve List of PackageLines
      *
-     * @param \Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
-     * @return Array of \Model\PackageLineListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PackageLineRetrieveListArguments $arguments PackageLine RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\PackageLineListResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListPackageLineWithHttpInfo($arguments)
@@ -345,15 +345,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\PackageLineListResponse',
+                '\BumbalClient\Model\PackageLineListResponse',
                 '/package-line'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\PackageLineListResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PackageLineListResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\PackageLineListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PackageLineListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -381,7 +381,7 @@ class PackagelineApi
      * @param bool $include_package_lines_info Include PackageLines (required)
      * @param bool $include_package_line_files Include files (required)
      * @param bool $include_package_line_files_meta_data Include files meta data (required)
-     * @return \Model\PackageLineModel
+     * @return \BumbalClient\Model\PackageLineModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrievePackageLine($package_line_id, $include_package_line_status, $include_package_line_type_name, $include_package_line_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_package_line_links, $include_package_lines_info, $include_package_line_files, $include_package_line_files_meta_data)
@@ -409,7 +409,7 @@ class PackagelineApi
      * @param bool $include_package_lines_info Include PackageLines (required)
      * @param bool $include_package_line_files Include files (required)
      * @param bool $include_package_line_files_meta_data Include files meta data (required)
-     * @return Array of \Model\PackageLineModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\PackageLineModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrievePackageLineWithHttpInfo($package_line_id, $include_package_line_status, $include_package_line_type_name, $include_package_line_meta_data, $include_address_object, $include_time_slots, $include_time_slot_tags, $include_route_info, $include_driver_info, $include_communication, $include_package_line_links, $include_package_lines_info, $include_package_line_files, $include_package_line_files_meta_data)
@@ -565,15 +565,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\PackageLineModel',
+                '\BumbalClient\Model\PackageLineModel',
                 '/package-line/{packageLineId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\PackageLineModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PackageLineModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\PackageLineModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PackageLineModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -587,8 +587,8 @@ class PackagelineApi
      *
      * Set (create or update) an PackageLine
      *
-     * @param \Model\PackageLineModel $body PackageLine model (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setPackageLine($body = null)
@@ -602,8 +602,8 @@ class PackagelineApi
      *
      * Set (create or update) an PackageLine
      *
-     * @param \Model\PackageLineModel $body PackageLine model (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PackageLineModel $body PackageLine model (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setPackageLineWithHttpInfo($body = null)
@@ -648,15 +648,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/package-line/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -670,8 +670,8 @@ class PackagelineApi
      *
      * Update package-lines in bulk
      *
-     * @param \Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updatePackageLine($body = null)
@@ -685,8 +685,8 @@ class PackagelineApi
      *
      * Update package-lines in bulk
      *
-     * @param \Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\PackageLineUpdateArguments $body PackageLine Update object that contains all information about this update (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updatePackageLineWithHttpInfo($body = null)
@@ -731,15 +731,15 @@ class PackagelineApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/package-line/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

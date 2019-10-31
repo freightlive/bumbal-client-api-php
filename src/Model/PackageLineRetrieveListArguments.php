@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class PackageLineRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\PackageLineOptionsModel',
-        'filters' => '\Model\PackageLineFiltersModel',
+        'options' => '\BumbalClient\Model\PackageLineOptionsModel',
+        'filters' => '\BumbalClient\Model\PackageLineFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -242,7 +242,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\PackageLineOptionsModel
+     * @return \BumbalClient\Model\PackageLineOptionsModel
      */
     public function getOptions()
     {
@@ -251,7 +251,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\PackageLineOptionsModel $options
+     * @param \BumbalClient\Model\PackageLineOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -263,7 +263,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\PackageLineFiltersModel
+     * @return \BumbalClient\Model\PackageLineFiltersModel
      */
     public function getFilters()
     {
@@ -272,7 +272,7 @@ class PackageLineRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\PackageLineFiltersModel $filters
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -109,7 +109,7 @@ class UsersApi
      *
      * @param string $email User Email (required)
      * @param string $password User Password (required)
-     * @return \Model\UsersModel
+     * @return \BumbalClient\Model\UsersModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function checkCredentialsUser($email, $password)
@@ -125,7 +125,7 @@ class UsersApi
      *
      * @param string $email User Email (required)
      * @param string $password User Password (required)
-     * @return Array of \Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function checkCredentialsUserWithHttpInfo($email, $password)
@@ -181,15 +181,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\UsersModel',
+                '\BumbalClient\Model\UsersModel',
                 '/users/check-credentials'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\UsersModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\UsersModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -203,8 +203,8 @@ class UsersApi
      *
      * Retrieve List of Users
      *
-     * @param \Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
-     * @return \Model\UsersListResponse
+     * @param \BumbalClient\Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\UsersListResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListUsers($arguments)
@@ -218,8 +218,8 @@ class UsersApi
      *
      * Retrieve List of Users
      *
-     * @param \Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
-     * @return Array of \Model\UsersListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\UsersRetrieveListArguments $arguments Users RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\UsersListResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListUsersWithHttpInfo($arguments)
@@ -268,15 +268,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\UsersListResponse',
+                '\BumbalClient\Model\UsersListResponse',
                 '/users'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\UsersListResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersListResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\UsersListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -291,7 +291,7 @@ class UsersApi
      * Retrieve a Users
      *
      * @param int $users_id ID of users to retrieve (required)
-     * @return \Model\UsersModel
+     * @return \BumbalClient\Model\UsersModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveUsers($users_id)
@@ -306,7 +306,7 @@ class UsersApi
      * Retrieve a Users
      *
      * @param int $users_id ID of users to retrieve (required)
-     * @return Array of \Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\UsersModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveUsersWithHttpInfo($users_id)
@@ -358,15 +358,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\UsersModel',
+                '\BumbalClient\Model\UsersModel',
                 '/users/{usersId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\UsersModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\UsersModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\UsersModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\UsersModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -380,8 +380,8 @@ class UsersApi
      *
      * Set (create or update) a User
      *
-     * @param \Model\UsersModel $body User object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\UsersModel $body User object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setUser($body = null)
@@ -395,8 +395,8 @@ class UsersApi
      *
      * Set (create or update) a User
      *
-     * @param \Model\UsersModel $body User object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\UsersModel $body User object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setUserWithHttpInfo($body = null)
@@ -441,15 +441,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/users/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -464,7 +464,7 @@ class UsersApi
      * Update a Users
      *
      * @param int $users_id ID of users to update (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateUsers($users_id)
@@ -479,7 +479,7 @@ class UsersApi
      * Update a Users
      *
      * @param int $users_id ID of users to update (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateUsersWithHttpInfo($users_id)
@@ -531,15 +531,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/users/{usersId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

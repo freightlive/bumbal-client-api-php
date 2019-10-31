@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **systemGetConfig**
-> \Model\ConfigModel systemGetConfig()
+> \BumbalClient\Model\ConfigModel systemGetConfig()
 
 Retrieve System Configuration
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Model\ConfigModel**](../Model/ConfigModel.md)
+[**\BumbalClient\Model\ConfigModel**](../Model/ConfigModel.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **systemGetSayWhenConfig**
-> \Model\SayWhenConfigModel systemGetSayWhenConfig()
+> \BumbalClient\Model\SayWhenConfigModel systemGetSayWhenConfig()
 
 Retrieve SayWhen System Configuration
 
@@ -88,7 +88,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Model\SayWhenConfigModel**](../Model/SayWhenConfigModel.md)
+[**\BumbalClient\Model\SayWhenConfigModel**](../Model/SayWhenConfigModel.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **systemGetVariables**
-> \Model\VariablesModel systemGetVariables()
+> \BumbalClient\Model\VariablesModel systemGetVariables()
 
 Retrieve System Variables
 
@@ -134,7 +134,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Model\VariablesModel**](../Model/VariablesModel.md)
+[**\BumbalClient\Model\VariablesModel**](../Model/VariablesModel.md)
 
 ### Authorization
 

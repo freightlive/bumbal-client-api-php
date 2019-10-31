@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class RouteRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\RouteOptionsModel',
-        'filters' => '\Model\RouteFiltersModel',
+        'options' => '\BumbalClient\Model\RouteOptionsModel',
+        'filters' => '\BumbalClient\Model\RouteFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string',
@@ -248,7 +248,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\RouteOptionsModel
+     * @return \BumbalClient\Model\RouteOptionsModel
      */
     public function getOptions()
     {
@@ -257,7 +257,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\RouteOptionsModel $options
+     * @param \BumbalClient\Model\RouteOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -269,7 +269,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\RouteFiltersModel
+     * @return \BumbalClient\Model\RouteFiltersModel
      */
     public function getFilters()
     {
@@ -278,7 +278,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\RouteFiltersModel $filters
+     * @param \BumbalClient\Model\RouteFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

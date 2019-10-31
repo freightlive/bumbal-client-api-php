@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class VehicleApi
      *
      * Add a vehicle
      *
-     * @param \Model\VehicleModel $body Vehicle object that needs to be created (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object that needs to be created (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createVehicle($body = null)
@@ -122,8 +122,8 @@ class VehicleApi
      *
      * Add a vehicle
      *
-     * @param \Model\VehicleModel $body Vehicle object that needs to be created (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object that needs to be created (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createVehicleWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/vehicle'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class VehicleApi
      * Delete a vehicle
      *
      * @param int $vehicle_id ID of the vehicle to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteVehicle($vehicle_id)
@@ -206,7 +206,7 @@ class VehicleApi
      * Delete a vehicle
      *
      * @param int $vehicle_id ID of the vehicle to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteVehicleWithHttpInfo($vehicle_id)
@@ -258,15 +258,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/vehicle/{vehicleId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -280,8 +280,8 @@ class VehicleApi
      *
      * Retrieve List of Vehicles
      *
-     * @param \Model\VehicleRetrieveListArguments $arguments Vehicle RetrieveList Arguments (required)
-     * @return \Model\VehicleModel[]
+     * @param \BumbalClient\Model\VehicleRetrieveListArguments $arguments Vehicle RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\VehicleModel[]
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListVehicle($arguments)
@@ -295,8 +295,8 @@ class VehicleApi
      *
      * Retrieve List of Vehicles
      *
-     * @param \Model\VehicleRetrieveListArguments $arguments Vehicle RetrieveList Arguments (required)
-     * @return Array of \Model\VehicleModel[], HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\VehicleRetrieveListArguments $arguments Vehicle RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\VehicleModel[], HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListVehicleWithHttpInfo($arguments)
@@ -345,15 +345,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\VehicleModel[]',
+                '\BumbalClient\Model\VehicleModel[]',
                 '/vehicle'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\VehicleModel[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\VehicleModel[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\VehicleModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\VehicleModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -370,7 +370,7 @@ class VehicleApi
      * @param int $vehicle_id ID of vehicle to return (required)
      * @param bool $include_vehicle_tags a list of tags bound to vehicle (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return \Model\VehicleModel
+     * @return \BumbalClient\Model\VehicleModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveVehicle($vehicle_id, $include_vehicle_tags, $include_updated_by)
@@ -387,7 +387,7 @@ class VehicleApi
      * @param int $vehicle_id ID of vehicle to return (required)
      * @param bool $include_vehicle_tags a list of tags bound to vehicle (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return Array of \Model\VehicleModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\VehicleModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveVehicleWithHttpInfo($vehicle_id, $include_vehicle_tags, $include_updated_by)
@@ -455,15 +455,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\VehicleModel',
+                '\BumbalClient\Model\VehicleModel',
                 '/vehicle/{vehicleId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\VehicleModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\VehicleModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\VehicleModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\VehicleModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -477,8 +477,8 @@ class VehicleApi
      *
      * Set (create or update) a vehicle
      *
-     * @param \Model\VehicleModel $body Vehicle object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setVehicle($body = null)
@@ -492,8 +492,8 @@ class VehicleApi
      *
      * Set (create or update) a vehicle
      *
-     * @param \Model\VehicleModel $body Vehicle object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setVehicleWithHttpInfo($body = null)
@@ -538,15 +538,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/vehicle/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -561,8 +561,8 @@ class VehicleApi
      * Update a vehicle
      *
      * @param int $vehicle_id ID of vehicle to update (required)
-     * @param \Model\VehicleModel $body Vehicle object that needs to be updated (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object that needs to be updated (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateVehicle($vehicle_id, $body = null)
@@ -577,8 +577,8 @@ class VehicleApi
      * Update a vehicle
      *
      * @param int $vehicle_id ID of vehicle to update (required)
-     * @param \Model\VehicleModel $body Vehicle object that needs to be updated (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\VehicleModel $body Vehicle object that needs to be updated (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateVehicleWithHttpInfo($vehicle_id, $body = null)
@@ -635,15 +635,15 @@ class VehicleApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/vehicle/{vehicleId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class BrandRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\BrandOptionsModel',
-        'filters' => '\Model\BrandFiltersModel',
+        'options' => '\BumbalClient\Model\BrandOptionsModel',
+        'filters' => '\BumbalClient\Model\BrandFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -242,7 +242,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\BrandOptionsModel
+     * @return \BumbalClient\Model\BrandOptionsModel
      */
     public function getOptions()
     {
@@ -251,7 +251,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\BrandOptionsModel $options
+     * @param \BumbalClient\Model\BrandOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -263,7 +263,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\BrandFiltersModel
+     * @return \BumbalClient\Model\BrandFiltersModel
      */
     public function getFilters()
     {
@@ -272,7 +272,7 @@ class BrandRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\BrandFiltersModel $filters
+     * @param \BumbalClient\Model\BrandFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

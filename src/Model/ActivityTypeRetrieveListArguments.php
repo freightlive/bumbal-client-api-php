@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\ActivityTypeOptionsModel',
-        'filters' => '\Model\ActivityTypeFiltersModel',
+        'options' => '\BumbalClient\Model\ActivityTypeOptionsModel',
+        'filters' => '\BumbalClient\Model\ActivityTypeFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -177,7 +177,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\ActivityTypeOptionsModel
+     * @return \BumbalClient\Model\ActivityTypeOptionsModel
      */
     public function getOptions()
     {
@@ -186,7 +186,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\ActivityTypeOptionsModel $options
+     * @param \BumbalClient\Model\ActivityTypeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -198,7 +198,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\ActivityTypeFiltersModel
+     * @return \BumbalClient\Model\ActivityTypeFiltersModel
      */
     public function getFilters()
     {
@@ -207,7 +207,7 @@ class ActivityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ActivityTypeFiltersModel $filters
+     * @param \BumbalClient\Model\ActivityTypeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

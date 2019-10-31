@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class SettingsApi
      *
      * Retrieve List of Settings
      *
-     * @param \Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
-     * @return \Model\SettingsModel[]
+     * @param \BumbalClient\Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\SettingsModel[]
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListSettings($arguments)
@@ -122,8 +122,8 @@ class SettingsApi
      *
      * Retrieve List of Settings
      *
-     * @param \Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
-     * @return Array of \Model\SettingsModel[], HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\SettingsRetrieveListArguments $arguments Settings RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\SettingsModel[], HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListSettingsWithHttpInfo($arguments)
@@ -172,15 +172,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\SettingsModel[]',
+                '\BumbalClient\Model\SettingsModel[]',
                 '/settings'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\SettingsModel[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsModel[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\SettingsModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -195,7 +195,7 @@ class SettingsApi
      * Retrieve a Settings
      *
      * @param int $settings_id ID of settings to retrieve (required)
-     * @return \Model\SettingsModel
+     * @return \BumbalClient\Model\SettingsModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveSettings($settings_id)
@@ -210,7 +210,7 @@ class SettingsApi
      * Retrieve a Settings
      *
      * @param int $settings_id ID of settings to retrieve (required)
-     * @return Array of \Model\SettingsModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\SettingsModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveSettingsWithHttpInfo($settings_id)
@@ -262,15 +262,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\SettingsModel',
+                '\BumbalClient\Model\SettingsModel',
                 '/settings/{settingsId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\SettingsModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\SettingsModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -284,8 +284,8 @@ class SettingsApi
      *
      * Set (update) Setting value
      *
-     * @param \Model\SettingsModel $body Setting object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\SettingsModel $body Setting object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setSetting($body = null)
@@ -299,8 +299,8 @@ class SettingsApi
      *
      * Set (update) Setting value
      *
-     * @param \Model\SettingsModel $body Setting object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\SettingsModel $body Setting object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setSettingWithHttpInfo($body = null)
@@ -345,15 +345,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/settings/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,7 +368,7 @@ class SettingsApi
      * Update a Settings
      *
      * @param int $settings_id ID of settings to update (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateSettings($settings_id)
@@ -383,7 +383,7 @@ class SettingsApi
      * Update a Settings
      *
      * @param int $settings_id ID of settings to update (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateSettingsWithHttpInfo($settings_id)
@@ -435,15 +435,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/settings/{settingsId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

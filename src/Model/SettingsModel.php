@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -73,7 +73,7 @@ class SettingsModel implements ArrayAccess
         'value' => 'string',
         'setting_updated_at' => '\DateTime',
         'setting_updated_by' => 'int',
-        'setting_updated_by_user' => '\Model\UsersModel'
+        'setting_updated_by_user' => '\BumbalClient\Model\UsersModel'
     );
 
     public static function swaggerTypes()
@@ -378,7 +378,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Gets setting_updated_by_user
-     * @return \Model\UsersModel
+     * @return \BumbalClient\Model\UsersModel
      */
     public function getSettingUpdatedByUser()
     {
@@ -387,7 +387,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_by_user
-     * @param \Model\UsersModel $setting_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user
      * @return $this
      */
     public function setSettingUpdatedByUser($setting_updated_by_user)

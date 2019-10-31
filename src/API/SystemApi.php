@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,7 +107,7 @@ class SystemApi
      *
      * Retrieve System Configuration
      *
-     * @return \Model\ConfigModel
+     * @return \BumbalClient\Model\ConfigModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetConfig()
@@ -121,7 +121,7 @@ class SystemApi
      *
      * Retrieve System Configuration
      *
-     * @return Array of \Model\ConfigModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ConfigModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetConfigWithHttpInfo()
@@ -161,15 +161,15 @@ class SystemApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ConfigModel',
+                '\BumbalClient\Model\ConfigModel',
                 '/system/get-config'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ConfigModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ConfigModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ConfigModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ConfigModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,7 +183,7 @@ class SystemApi
      *
      * Retrieve SayWhen System Configuration
      *
-     * @return \Model\SayWhenConfigModel
+     * @return \BumbalClient\Model\SayWhenConfigModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetSayWhenConfig()
@@ -197,7 +197,7 @@ class SystemApi
      *
      * Retrieve SayWhen System Configuration
      *
-     * @return Array of \Model\SayWhenConfigModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\SayWhenConfigModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetSayWhenConfigWithHttpInfo()
@@ -237,15 +237,15 @@ class SystemApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\SayWhenConfigModel',
+                '\BumbalClient\Model\SayWhenConfigModel',
                 '/system/get-say-when-config'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\SayWhenConfigModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SayWhenConfigModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\SayWhenConfigModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SayWhenConfigModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -259,7 +259,7 @@ class SystemApi
      *
      * Retrieve System Variables
      *
-     * @return \Model\VariablesModel
+     * @return \BumbalClient\Model\VariablesModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetVariables()
@@ -273,7 +273,7 @@ class SystemApi
      *
      * Retrieve System Variables
      *
-     * @return Array of \Model\VariablesModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\VariablesModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function systemGetVariablesWithHttpInfo()
@@ -313,15 +313,15 @@ class SystemApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\VariablesModel',
+                '\BumbalClient\Model\VariablesModel',
                 '/system/get-variables'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\VariablesModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\VariablesModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\VariablesModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\VariablesModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

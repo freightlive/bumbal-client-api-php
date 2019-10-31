@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createPortalSetting**
-> \Model\ApiResponse createPortalSetting($body)
+> \BumbalClient\Model\ApiResponse createPortalSetting($body)
 
 Add a new PortalSetting
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalsettingApi();
-$body = new \Model\PortalSettingModel(); // \Model\PortalSettingModel | PortalSetting object that needs to be created
+$body = new \BumbalClient\Model\PortalSettingModel(); // \BumbalClient\Model\PortalSettingModel | PortalSetting object that needs to be created
 
 try {
     $result = $api_instance->createPortalSetting($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\PortalSettingModel**](../Model/\Model\PortalSettingModel.md)| PortalSetting object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\PortalSettingModel**](../Model/\BumbalClient\Model\PortalSettingModel.md)| PortalSetting object that needs to be created | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePortalSetting**
-> \Model\ApiResponse deletePortalSetting($portal_setting_id)
+> \BumbalClient\Model\ApiResponse deletePortalSetting($portal_setting_id)
 
 Delete a PortalSetting
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPortalSetting**
-> \Model\PortalSettingListResponse retrieveListPortalSetting($arguments)
+> \BumbalClient\Model\PortalSettingListResponse retrieveListPortalSetting($arguments)
 
 Retrieve List of Portal Settings
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalsettingApi();
-$arguments = new \Model\PortalSettingRetrieveListArguments(); // \Model\PortalSettingRetrieveListArguments | PortalSetting RetrieveList Arguments
+$arguments = new \BumbalClient\Model\PortalSettingRetrieveListArguments(); // \BumbalClient\Model\PortalSettingRetrieveListArguments | PortalSetting RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListPortalSetting($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\PortalSettingRetrieveListArguments**](../Model/\Model\PortalSettingRetrieveListArguments.md)| PortalSetting RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\PortalSettingRetrieveListArguments**](../Model/\BumbalClient\Model\PortalSettingRetrieveListArguments.md)| PortalSetting RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\PortalSettingListResponse**](../Model/PortalSettingListResponse.md)
+[**\BumbalClient\Model\PortalSettingListResponse**](../Model/PortalSettingListResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrievePortalSetting**
-> \Model\PortalSettingModel retrievePortalSetting($portal_setting_id)
+> \BumbalClient\Model\PortalSettingModel retrievePortalSetting($portal_setting_id)
 
 Retrieve a PortalSetting
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\PortalSettingModel**](../Model/PortalSettingModel.md)
+[**\BumbalClient\Model\PortalSettingModel**](../Model/PortalSettingModel.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setPortalSetting**
-> \Model\ApiResponse setPortalSetting($body)
+> \BumbalClient\Model\ApiResponse setPortalSetting($body)
 
 Set (create or update) a PortalSetting
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PortalsettingApi();
-$body = new \Model\PortalSettingModel(); // \Model\PortalSettingModel | PortalSetting object
+$body = new \BumbalClient\Model\PortalSettingModel(); // \BumbalClient\Model\PortalSettingModel | PortalSetting object
 
 try {
     $result = $api_instance->setPortalSetting($body);
@@ -245,11 +245,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\PortalSettingModel**](../Model/\Model\PortalSettingModel.md)| PortalSetting object | [optional]
+ **body** | [**\BumbalClient\Model\PortalSettingModel**](../Model/\BumbalClient\Model\PortalSettingModel.md)| PortalSetting object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePortalSetting**
-> \Model\ApiResponse updatePortalSetting($portal_setting_id)
+> \BumbalClient\Model\ApiResponse updatePortalSetting($portal_setting_id)
 
 Update a PortalSetting
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

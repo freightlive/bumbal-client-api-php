@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,9 +66,9 @@ class AddTagToObjectArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'data' => '\Model\AddTagToObjectDataModel',
-        'options' => '\Model\AddTagToObjectOptionsModel',
-        'filters' => '\Model\AddTagToObjectFiltersModel'
+        'data' => '\BumbalClient\Model\AddTagToObjectDataModel',
+        'options' => '\BumbalClient\Model\AddTagToObjectOptionsModel',
+        'filters' => '\BumbalClient\Model\AddTagToObjectFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -167,7 +167,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Model\AddTagToObjectDataModel
+     * @return \BumbalClient\Model\AddTagToObjectDataModel
      */
     public function getData()
     {
@@ -176,7 +176,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\AddTagToObjectDataModel $data
+     * @param \BumbalClient\Model\AddTagToObjectDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -188,7 +188,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\AddTagToObjectOptionsModel
+     * @return \BumbalClient\Model\AddTagToObjectOptionsModel
      */
     public function getOptions()
     {
@@ -197,7 +197,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\AddTagToObjectOptionsModel $options
+     * @param \BumbalClient\Model\AddTagToObjectOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +209,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\AddTagToObjectFiltersModel
+     * @return \BumbalClient\Model\AddTagToObjectFiltersModel
      */
     public function getFilters()
     {
@@ -218,7 +218,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\AddTagToObjectFiltersModel $filters
+     * @param \BumbalClient\Model\AddTagToObjectFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

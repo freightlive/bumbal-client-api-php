@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -70,11 +70,11 @@ class TrailerModel implements ArrayAccess
         'name' => 'string',
         'registration_nr' => 'string',
         'applied_capacities' => 'object',
-        'capacities' => '\Model\CapacityModel[]',
-        'tags' => '\Model\TagModel[]',
-        'links' => '\Model\LinkModel[]',
-        'meta_data' => '\Model\MetaDataModel[]',
-        'files' => '\Model\FileModel[]',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'updated_by_name' => 'string'
@@ -296,7 +296,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets capacities
-     * @return \Model\CapacityModel[]
+     * @return \BumbalClient\Model\CapacityModel[]
      */
     public function getCapacities()
     {
@@ -305,7 +305,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -317,7 +317,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -326,7 +326,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -338,7 +338,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -347,7 +347,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -359,7 +359,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -368,7 +368,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -380,7 +380,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -389,7 +389,7 @@ class TrailerModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

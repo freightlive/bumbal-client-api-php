@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,9 +66,9 @@ class CheckAvailabilityArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'data' => '\Model\CheckAvailabilityDataModel',
-        'options' => '\Model\CheckAvailabilityOptionsModel',
-        'filters' => '\Model\CheckAvailabilityFiltersModel'
+        'data' => '\BumbalClient\Model\CheckAvailabilityDataModel',
+        'options' => '\BumbalClient\Model\CheckAvailabilityOptionsModel',
+        'filters' => '\BumbalClient\Model\CheckAvailabilityFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -167,7 +167,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Model\CheckAvailabilityDataModel
+     * @return \BumbalClient\Model\CheckAvailabilityDataModel
      */
     public function getData()
     {
@@ -176,7 +176,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\CheckAvailabilityDataModel $data
+     * @param \BumbalClient\Model\CheckAvailabilityDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -188,7 +188,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\CheckAvailabilityOptionsModel
+     * @return \BumbalClient\Model\CheckAvailabilityOptionsModel
      */
     public function getOptions()
     {
@@ -197,7 +197,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\CheckAvailabilityOptionsModel $options
+     * @param \BumbalClient\Model\CheckAvailabilityOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +209,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\CheckAvailabilityFiltersModel
+     * @return \BumbalClient\Model\CheckAvailabilityFiltersModel
      */
     public function getFilters()
     {
@@ -218,7 +218,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\CheckAvailabilityFiltersModel $filters
+     * @param \BumbalClient\Model\CheckAvailabilityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

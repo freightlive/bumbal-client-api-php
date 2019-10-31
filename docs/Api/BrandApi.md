@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createBrand**
-> \Model\ApiResponse createBrand($body)
+> \BumbalClient\Model\ApiResponse createBrand($body)
 
 Add a new Brand
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\BrandApi();
-$body = new \Model\BrandModel(); // \Model\BrandModel | Brand object that needs to be created
+$body = new \BumbalClient\Model\BrandModel(); // \BumbalClient\Model\BrandModel | Brand object that needs to be created
 
 try {
     $result = $api_instance->createBrand($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\BrandModel**](../Model/\Model\BrandModel.md)| Brand object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\BrandModel**](../Model/\BumbalClient\Model\BrandModel.md)| Brand object that needs to be created | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteBrand**
-> \Model\ApiResponse deleteBrand($brand_id)
+> \BumbalClient\Model\ApiResponse deleteBrand($brand_id)
 
 Delete a Brand
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveBrand**
-> \Model\BrandModel retrieveBrand($brand_id)
+> \BumbalClient\Model\BrandModel retrieveBrand($brand_id)
 
 Retrieve a Brand
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\BrandModel**](../Model/BrandModel.md)
+[**\BumbalClient\Model\BrandModel**](../Model/BrandModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListBrand**
-> \Model\BrandListResponse retrieveListBrand($arguments)
+> \BumbalClient\Model\BrandListResponse retrieveListBrand($arguments)
 
 Retrieve List of Brands
 
@@ -180,7 +180,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\BrandApi();
-$arguments = new \Model\BrandRetrieveListArguments(); // \Model\BrandRetrieveListArguments | Brand RetrieveList Arguments
+$arguments = new \BumbalClient\Model\BrandRetrieveListArguments(); // \BumbalClient\Model\BrandRetrieveListArguments | Brand RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListBrand($arguments);
@@ -195,11 +195,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\BrandRetrieveListArguments**](../Model/\Model\BrandRetrieveListArguments.md)| Brand RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\BrandRetrieveListArguments**](../Model/\BumbalClient\Model\BrandRetrieveListArguments.md)| Brand RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\BrandListResponse**](../Model/BrandListResponse.md)
+[**\BumbalClient\Model\BrandListResponse**](../Model/BrandListResponse.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setBrand**
-> \Model\ApiResponse setBrand($body)
+> \BumbalClient\Model\ApiResponse setBrand($body)
 
 Set (create or update) a Brand
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\BrandApi();
-$body = new \Model\BrandModel(); // \Model\BrandModel | Brand object
+$body = new \BumbalClient\Model\BrandModel(); // \BumbalClient\Model\BrandModel | Brand object
 
 try {
     $result = $api_instance->setBrand($body);
@@ -245,11 +245,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\BrandModel**](../Model/\Model\BrandModel.md)| Brand object | [optional]
+ **body** | [**\BumbalClient\Model\BrandModel**](../Model/\BumbalClient\Model\BrandModel.md)| Brand object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateBrand**
-> \Model\ApiResponse updateBrand($brand_id)
+> \BumbalClient\Model\ApiResponse updateBrand($brand_id)
 
 Update a Brand
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

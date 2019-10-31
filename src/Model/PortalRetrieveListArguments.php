@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class PortalRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\PortalOptionsModel',
-        'filters' => '\Model\PortalFiltersModel',
+        'options' => '\BumbalClient\Model\PortalOptionsModel',
+        'filters' => '\BumbalClient\Model\PortalFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -242,7 +242,7 @@ class PortalRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\PortalOptionsModel
+     * @return \BumbalClient\Model\PortalOptionsModel
      */
     public function getOptions()
     {
@@ -251,7 +251,7 @@ class PortalRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\PortalOptionsModel $options
+     * @param \BumbalClient\Model\PortalOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -263,7 +263,7 @@ class PortalRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\PortalFiltersModel
+     * @return \BumbalClient\Model\PortalFiltersModel
      */
     public function getFilters()
     {
@@ -272,7 +272,7 @@ class PortalRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\PortalFiltersModel $filters
+     * @param \BumbalClient\Model\PortalFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

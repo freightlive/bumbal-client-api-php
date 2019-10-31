@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -90,12 +90,12 @@ class PackageLineModel implements ArrayAccess
         'description' => 'string',
         'active' => 'bool',
         'applied_capacities' => 'object',
-        'capacities' => '\Model\CapacityModel[]',
-        'activity_links' => '\Model\LinkModel[]',
-        'links' => '\Model\LinkModel[]',
-        'meta_data' => '\Model\MetaDataModel[]',
-        'notes' => '\Model\NoteModel[]',
-        'files' => '\Model\FileModel[]',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
+        'activity_links' => '\BumbalClient\Model\LinkModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'package_line_created_at' => '\DateTime',
@@ -933,7 +933,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets capacities
-     * @return \Model\CapacityModel[]
+     * @return \BumbalClient\Model\CapacityModel[]
      */
     public function getCapacities()
     {
@@ -942,7 +942,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -954,7 +954,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets activity_links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getActivityLinks()
     {
@@ -963,7 +963,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \Model\LinkModel[] $activity_links links to activities connected to this package_line
+     * @param \BumbalClient\Model\LinkModel[] $activity_links links to activities connected to this package_line
      * @return $this
      */
     public function setActivityLinks($activity_links)
@@ -975,7 +975,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -984,7 +984,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -996,7 +996,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -1005,7 +1005,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1017,7 +1017,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets notes
-     * @return \Model\NoteModel[]
+     * @return \BumbalClient\Model\NoteModel[]
      */
     public function getNotes()
     {
@@ -1026,7 +1026,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -1038,7 +1038,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -1047,7 +1047,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

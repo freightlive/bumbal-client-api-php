@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Model\PortalOptionsModel**](PortalOptionsModel.md) |  | [optional] 
-**filters** | [**\Model\PortalFiltersModel**](PortalFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\PortalOptionsModel**](PortalOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\PortalFiltersModel**](PortalFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -108,7 +108,7 @@ class NoteApi
      * Delete an note
      *
      * @param int $note_id ID of the note to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteNote($note_id)
@@ -123,7 +123,7 @@ class NoteApi
      * Delete an note
      *
      * @param int $note_id ID of the note to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteNoteWithHttpInfo($note_id)
@@ -175,15 +175,15 @@ class NoteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/note/{noteId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -197,8 +197,8 @@ class NoteApi
      *
      * Retrieve List of Notes
      *
-     * @param \Model\NoteRetrieveListArguments $arguments Note RetrieveList Arguments (required)
-     * @return \Model\NoteModel[]
+     * @param \BumbalClient\Model\NoteRetrieveListArguments $arguments Note RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\NoteModel[]
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListNote($arguments)
@@ -212,8 +212,8 @@ class NoteApi
      *
      * Retrieve List of Notes
      *
-     * @param \Model\NoteRetrieveListArguments $arguments Note RetrieveList Arguments (required)
-     * @return Array of \Model\NoteModel[], HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\NoteRetrieveListArguments $arguments Note RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\NoteModel[], HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListNoteWithHttpInfo($arguments)
@@ -262,15 +262,15 @@ class NoteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\NoteModel[]',
+                '\BumbalClient\Model\NoteModel[]',
                 '/note'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\NoteModel[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\NoteModel[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\NoteModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\NoteModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -289,7 +289,7 @@ class NoteApi
      * @param bool $include_note_tag_type_link_ids link ids of the tag types (required)
      * @param bool $include_note_object_link_ids Include teh link ids bound to teh object where teh note belongs to (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return \Model\NoteModel
+     * @return \BumbalClient\Model\NoteModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveNote($note_id, $include_note_tags, $include_note_tag_type_link_ids, $include_note_object_link_ids, $include_updated_by)
@@ -308,7 +308,7 @@ class NoteApi
      * @param bool $include_note_tag_type_link_ids link ids of the tag types (required)
      * @param bool $include_note_object_link_ids Include teh link ids bound to teh object where teh note belongs to (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return Array of \Model\NoteModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\NoteModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveNoteWithHttpInfo($note_id, $include_note_tags, $include_note_tag_type_link_ids, $include_note_object_link_ids, $include_updated_by)
@@ -392,15 +392,15 @@ class NoteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\NoteModel',
+                '\BumbalClient\Model\NoteModel',
                 '/note/{noteId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\NoteModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\NoteModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\NoteModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\NoteModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -414,8 +414,8 @@ class NoteApi
      *
      * Set (create or update) a note
      *
-     * @param \Model\NoteModel $body Note object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\NoteModel $body Note object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setNote($body = null)
@@ -429,8 +429,8 @@ class NoteApi
      *
      * Set (create or update) a note
      *
-     * @param \Model\NoteModel $body Note object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\NoteModel $body Note object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setNoteWithHttpInfo($body = null)
@@ -475,15 +475,15 @@ class NoteApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/note/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

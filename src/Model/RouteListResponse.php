@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class RouteListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'items' => '\Model\RouteModel[]',
+        'items' => '\BumbalClient\Model\RouteModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -172,7 +172,7 @@ class RouteListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \Model\RouteModel[]
+     * @return \BumbalClient\Model\RouteModel[]
      */
     public function getItems()
     {
@@ -181,7 +181,7 @@ class RouteListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\RouteModel[] $items
+     * @param \BumbalClient\Model\RouteModel[] $items
      * @return $this
      */
     public function setItems($items)

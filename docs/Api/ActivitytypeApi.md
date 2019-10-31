@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **retrieveActivityType**
-> \Model\ActivityTypeModel retrieveActivityType($activity_type_id)
+> \BumbalClient\Model\ActivityTypeModel retrieveActivityType($activity_type_id)
 
 Find ActivityType by ID
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ActivityTypeModel**](../Model/ActivityTypeModel.md)
+[**\BumbalClient\Model\ActivityTypeModel**](../Model/ActivityTypeModel.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListActivityType**
-> \Model\ActivityTypeListResponse retrieveListActivityType($arguments)
+> \BumbalClient\Model\ActivityTypeListResponse retrieveListActivityType($arguments)
 
 Retrieve List of ActivityTypes
 
@@ -76,7 +76,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ActivitytypeApi();
-$arguments = new \Model\ActivityTypeRetrieveListArguments(); // \Model\ActivityTypeRetrieveListArguments | ActivityType RetrieveList Arguments
+$arguments = new \BumbalClient\Model\ActivityTypeRetrieveListArguments(); // \BumbalClient\Model\ActivityTypeRetrieveListArguments | ActivityType RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListActivityType($arguments);
@@ -91,11 +91,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\ActivityTypeRetrieveListArguments**](../Model/\Model\ActivityTypeRetrieveListArguments.md)| ActivityType RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\ActivityTypeRetrieveListArguments**](../Model/\BumbalClient\Model\ActivityTypeRetrieveListArguments.md)| ActivityType RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\ActivityTypeListResponse**](../Model/ActivityTypeListResponse.md)
+[**\BumbalClient\Model\ActivityTypeListResponse**](../Model/ActivityTypeListResponse.md)
 
 ### Authorization
 

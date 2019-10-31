@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **createRoute**
-> \Model\ApiResponse createRoute($body)
+> \BumbalClient\Model\ApiResponse createRoute($body)
 
 Add a new Route
 
@@ -32,7 +32,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RouteApi();
-$body = new \Model\RouteModel(); // \Model\RouteModel | Route object that needs to be created
+$body = new \BumbalClient\Model\RouteModel(); // \BumbalClient\Model\RouteModel | Route object that needs to be created
 
 try {
     $result = $api_instance->createRoute($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\RouteModel**](../Model/\Model\RouteModel.md)| Route object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\RouteModel**](../Model/\BumbalClient\Model\RouteModel.md)| Route object that needs to be created | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteRoute**
-> \Model\ApiResponse deleteRoute($route_id, $cancel_activities)
+> \BumbalClient\Model\ApiResponse deleteRoute($route_id, $cancel_activities)
 
 Delete an Route
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getExecutableActivities**
-> \Model\ApiResponse getExecutableActivities($arguments)
+> \BumbalClient\Model\ApiResponse getExecutableActivities($arguments)
 
 Returns all activities in this route which hav enot been executed yet.
 
@@ -134,7 +134,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RouteApi();
-$arguments = new \Model\GetExecutableActivitiesArguments(); // \Model\GetExecutableActivitiesArguments | Request Arguments
+$arguments = new \BumbalClient\Model\GetExecutableActivitiesArguments(); // \BumbalClient\Model\GetExecutableActivitiesArguments | Request Arguments
 
 try {
     $result = $api_instance->getExecutableActivities($arguments);
@@ -149,11 +149,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\GetExecutableActivitiesArguments**](../Model/\Model\GetExecutableActivitiesArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\GetExecutableActivitiesArguments**](../Model/\BumbalClient\Model\GetExecutableActivitiesArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListRoute**
-> \Model\RouteListResponse retrieveListRoute($arguments)
+> \BumbalClient\Model\RouteListResponse retrieveListRoute($arguments)
 
 Retrieve List of Routes
 
@@ -184,7 +184,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RouteApi();
-$arguments = new \Model\RouteRetrieveListArguments(); // \Model\RouteRetrieveListArguments | Route RetrieveList Arguments
+$arguments = new \BumbalClient\Model\RouteRetrieveListArguments(); // \BumbalClient\Model\RouteRetrieveListArguments | Route RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListRoute($arguments);
@@ -199,11 +199,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\RouteRetrieveListArguments**](../Model/\Model\RouteRetrieveListArguments.md)| Route RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\RouteRetrieveListArguments**](../Model/\BumbalClient\Model\RouteRetrieveListArguments.md)| Route RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\RouteListResponse**](../Model/RouteListResponse.md)
+[**\BumbalClient\Model\RouteListResponse**](../Model/RouteListResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveRoute**
-> \Model\RouteModel retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
+> \BumbalClient\Model\RouteModel retrieveRoute($route_id, $include_address_object, $include_route_status, $include_route_tags, $include_driver_info, $include_equipment_info_car, $include_gps_locations, $include_activity_ids, $include_latest_position)
 
 Retrieve a Route
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\RouteModel**](../Model/RouteModel.md)
+[**\BumbalClient\Model\RouteModel**](../Model/RouteModel.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **routeStoreGeoLocations**
-> \Model\ApiResponse routeStoreGeoLocations($arguments)
+> \BumbalClient\Model\ApiResponse routeStoreGeoLocations($arguments)
 
 Store tracked Geo Locations in bulk
 
@@ -300,7 +300,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RouteApi();
-$arguments = new \Model\RouteStoreGeoLocations(); // \Model\RouteStoreGeoLocations | Request Arguments
+$arguments = new \BumbalClient\Model\RouteStoreGeoLocations(); // \BumbalClient\Model\RouteStoreGeoLocations | Request Arguments
 
 try {
     $result = $api_instance->routeStoreGeoLocations($arguments);
@@ -315,11 +315,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\RouteStoreGeoLocations**](../Model/\Model\RouteStoreGeoLocations.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\RouteStoreGeoLocations**](../Model/\BumbalClient\Model\RouteStoreGeoLocations.md)| Request Arguments |
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setRoute**
-> \Model\ApiResponse setRoute($body)
+> \BumbalClient\Model\ApiResponse setRoute($body)
 
 Set (create or update) an Route
 
@@ -350,7 +350,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\RouteApi();
-$body = new \Model\RouteModel(); // \Model\RouteModel | Route object
+$body = new \BumbalClient\Model\RouteModel(); // \BumbalClient\Model\RouteModel | Route object
 
 try {
     $result = $api_instance->setRoute($body);
@@ -365,11 +365,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\RouteModel**](../Model/\Model\RouteModel.md)| Route object | [optional]
+ **body** | [**\BumbalClient\Model\RouteModel**](../Model/\BumbalClient\Model\RouteModel.md)| Route object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRoute**
-> \Model\ApiResponse updateRoute($route_id)
+> \BumbalClient\Model\ApiResponse updateRoute($route_id)
 
 Update a Route
 
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,7 +107,7 @@ class AuthenticateApi
      *
      * Check a token for validity
      *
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateCheckToken()
@@ -121,7 +121,7 @@ class AuthenticateApi
      *
      * Check a token for validity
      *
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateCheckTokenWithHttpInfo()
@@ -161,15 +161,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/authenticate/check-token'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -183,8 +183,8 @@ class AuthenticateApi
      *
      * Sign In with your user credentials
      *
-     * @param \Model\CredentialsModel $body Credentials object (optional)
-     * @return \Model\AuthenticateModel
+     * @param \BumbalClient\Model\CredentialsModel $body Credentials object (optional)
+     * @return \BumbalClient\Model\AuthenticateModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateSignIn($body = null)
@@ -198,8 +198,8 @@ class AuthenticateApi
      *
      * Sign In with your user credentials
      *
-     * @param \Model\CredentialsModel $body Credentials object (optional)
-     * @return Array of \Model\AuthenticateModel, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\CredentialsModel $body Credentials object (optional)
+     * @return Array of \BumbalClient\Model\AuthenticateModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateSignInWithHttpInfo($body = null)
@@ -239,15 +239,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\AuthenticateModel',
+                '\BumbalClient\Model\AuthenticateModel',
                 '/authenticate/sign-in'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\AuthenticateModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AuthenticateModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\AuthenticateModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AuthenticateModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -262,7 +262,7 @@ class AuthenticateApi
      * Sign out
      *
      * @param string $token Token (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateSignOut($token)
@@ -277,7 +277,7 @@ class AuthenticateApi
      * Sign out
      *
      * @param string $token Token (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function authenticateSignOutWithHttpInfo($token)
@@ -325,15 +325,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/authenticate/sign-out'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

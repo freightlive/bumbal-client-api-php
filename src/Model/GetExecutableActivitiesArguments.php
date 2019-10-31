@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,9 +66,9 @@ class GetExecutableActivitiesArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'data' => '\Model\GetExecutableActivitiesDataModel',
-        'options' => '\Model\GetExecutableActivitiesOptionsModel',
-        'filters' => '\Model\GetExecutableActivitiesFiltersModel'
+        'data' => '\BumbalClient\Model\GetExecutableActivitiesDataModel',
+        'options' => '\BumbalClient\Model\GetExecutableActivitiesOptionsModel',
+        'filters' => '\BumbalClient\Model\GetExecutableActivitiesFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -167,7 +167,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Model\GetExecutableActivitiesDataModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesDataModel
      */
     public function getData()
     {
@@ -176,7 +176,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\GetExecutableActivitiesDataModel $data
+     * @param \BumbalClient\Model\GetExecutableActivitiesDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -188,7 +188,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\GetExecutableActivitiesOptionsModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesOptionsModel
      */
     public function getOptions()
     {
@@ -197,7 +197,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\GetExecutableActivitiesOptionsModel $options
+     * @param \BumbalClient\Model\GetExecutableActivitiesOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +209,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\GetExecutableActivitiesFiltersModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesFiltersModel
      */
     public function getFilters()
     {
@@ -218,7 +218,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\GetExecutableActivitiesFiltersModel $filters
+     * @param \BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

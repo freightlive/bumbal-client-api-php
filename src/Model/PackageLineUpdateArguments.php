@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class PackageLineUpdateArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'filters' => '\Model\PackageLineFiltersModel',
-        'data' => '\Model\PackageLineModel'
+        'filters' => '\BumbalClient\Model\PackageLineFiltersModel',
+        'data' => '\BumbalClient\Model\PackageLineModel'
     );
 
     public static function swaggerTypes()
@@ -162,7 +162,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\PackageLineFiltersModel
+     * @return \BumbalClient\Model\PackageLineFiltersModel
      */
     public function getFilters()
     {
@@ -171,7 +171,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\PackageLineFiltersModel $filters
+     * @param \BumbalClient\Model\PackageLineFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -183,7 +183,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Model\PackageLineModel
+     * @return \BumbalClient\Model\PackageLineModel
      */
     public function getData()
     {
@@ -192,7 +192,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\PackageLineModel $data
+     * @param \BumbalClient\Model\PackageLineModel $data
      * @return $this
      */
     public function setData($data)

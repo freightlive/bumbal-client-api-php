@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filters** | [**\Model\ActivityFiltersModel**](ActivityFiltersModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\ActivityFiltersModel**](ActivityFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

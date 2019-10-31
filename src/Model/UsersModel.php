@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -79,15 +79,15 @@ class UsersModel implements ArrayAccess
         'password' => 'string',
         'lang_code' => 'string',
         'address_id' => 'int',
-        'addresses' => '\Model\AddressModel[]',
+        'addresses' => '\BumbalClient\Model\AddressModel[]',
         'pause_id' => 'int',
         'removed' => 'bool',
         'active' => 'bool',
-        'tags' => '\Model\TagModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_names' => 'string[]',
-        'zones' => '\Model\ZoneModel[]',
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'string[]',
-        'links' => '\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]'
     );
 
     public static function swaggerTypes()
@@ -568,7 +568,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets addresses
-     * @return \Model\AddressModel[]
+     * @return \BumbalClient\Model\AddressModel[]
      */
     public function getAddresses()
     {
@@ -577,7 +577,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets addresses
-     * @param \Model\AddressModel[] $addresses user address (mostly interesting for drivers)
+     * @param \BumbalClient\Model\AddressModel[] $addresses user address (mostly interesting for drivers)
      * @return $this
      */
     public function setAddresses($addresses)
@@ -652,7 +652,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -661,7 +661,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -694,7 +694,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets zones
-     * @return \Model\ZoneModel[]
+     * @return \BumbalClient\Model\ZoneModel[]
      */
     public function getZones()
     {
@@ -703,7 +703,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)
@@ -736,7 +736,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -745,7 +745,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

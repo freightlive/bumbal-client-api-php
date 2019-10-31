@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **checkCredentialsUser**
-> \Model\UsersModel checkCredentialsUser($email, $password)
+> \BumbalClient\Model\UsersModel checkCredentialsUser($email, $password)
 
 Checks the credentials of a User
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListUsers**
-> \Model\UsersListResponse retrieveListUsers($arguments)
+> \BumbalClient\Model\UsersListResponse retrieveListUsers($arguments)
 
 Retrieve List of Users
 
@@ -81,7 +81,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$arguments = new \Model\UsersRetrieveListArguments(); // \Model\UsersRetrieveListArguments | Users RetrieveList Arguments
+$arguments = new \BumbalClient\Model\UsersRetrieveListArguments(); // \BumbalClient\Model\UsersRetrieveListArguments | Users RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListUsers($arguments);
@@ -96,11 +96,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\UsersRetrieveListArguments**](../Model/\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\UsersRetrieveListArguments**](../Model/\BumbalClient\Model\UsersRetrieveListArguments.md)| Users RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\UsersListResponse**](../Model/UsersListResponse.md)
+[**\BumbalClient\Model\UsersListResponse**](../Model/UsersListResponse.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveUsers**
-> \Model\UsersModel retrieveUsers($users_id)
+> \BumbalClient\Model\UsersModel retrieveUsers($users_id)
 
 Retrieve a Users
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\UsersModel**](../Model/UsersModel.md)
+[**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setUser**
-> \Model\ApiResponse setUser($body)
+> \BumbalClient\Model\ApiResponse setUser($body)
 
 Set (create or update) a User
 
@@ -181,7 +181,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\UsersApi();
-$body = new \Model\UsersModel(); // \Model\UsersModel | User object
+$body = new \BumbalClient\Model\UsersModel(); // \BumbalClient\Model\UsersModel | User object
 
 try {
     $result = $api_instance->setUser($body);
@@ -196,11 +196,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\UsersModel**](../Model/\Model\UsersModel.md)| User object | [optional]
+ **body** | [**\BumbalClient\Model\UsersModel**](../Model/\BumbalClient\Model\UsersModel.md)| User object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUsers**
-> \Model\ApiResponse updateUsers($users_id)
+> \BumbalClient\Model\ApiResponse updateUsers($users_id)
 
 Update a Users
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

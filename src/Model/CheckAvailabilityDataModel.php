@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'activity' => '\Model\ActivityModel',
+        'activity' => '\BumbalClient\Model\ActivityModel',
         'route_filters' => 'object',
         'token' => 'string'
     );
@@ -173,7 +173,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Gets activity
-     * @return \Model\ActivityModel
+     * @return \BumbalClient\Model\ActivityModel
      */
     public function getActivity()
     {
@@ -182,7 +182,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \Model\ActivityModel $activity
+     * @param \BumbalClient\Model\ActivityModel $activity
      * @return $this
      */
     public function setActivity($activity)

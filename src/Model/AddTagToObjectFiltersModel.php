@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -67,7 +67,7 @@ class AddTagToObjectFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'links' => '\Model\LinkModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
         'object_type' => 'int',
         'object_type_name' => 'string'
     );
@@ -193,7 +193,7 @@ class AddTagToObjectFiltersModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -202,7 +202,7 @@ class AddTagToObjectFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links The links to find the object where the tag should be added to
+     * @param \BumbalClient\Model\LinkModel[] $links The links to find the object where the tag should be added to
      * @return $this
      */
     public function setLinks($links)

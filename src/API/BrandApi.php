@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class BrandApi
      *
      * Add a new Brand
      *
-     * @param \Model\BrandModel $body Brand object that needs to be created (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\BrandModel $body Brand object that needs to be created (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createBrand($body = null)
@@ -122,8 +122,8 @@ class BrandApi
      *
      * Add a new Brand
      *
-     * @param \Model\BrandModel $body Brand object that needs to be created (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\BrandModel $body Brand object that needs to be created (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createBrandWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/brand'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class BrandApi
      * Delete a Brand
      *
      * @param int $brand_id ID of brand to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteBrand($brand_id)
@@ -206,7 +206,7 @@ class BrandApi
      * Delete a Brand
      *
      * @param int $brand_id ID of brand to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteBrandWithHttpInfo($brand_id)
@@ -258,15 +258,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/brand/{brandId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,7 +281,7 @@ class BrandApi
      * Retrieve a Brand
      *
      * @param int $brand_id ID of brand to retrieve (required)
-     * @return \Model\BrandModel
+     * @return \BumbalClient\Model\BrandModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveBrand($brand_id)
@@ -296,7 +296,7 @@ class BrandApi
      * Retrieve a Brand
      *
      * @param int $brand_id ID of brand to retrieve (required)
-     * @return Array of \Model\BrandModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\BrandModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveBrandWithHttpInfo($brand_id)
@@ -348,15 +348,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\BrandModel',
+                '\BumbalClient\Model\BrandModel',
                 '/brand/{brandId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\BrandModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\BrandModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\BrandModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\BrandModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -370,8 +370,8 @@ class BrandApi
      *
      * Retrieve List of Brands
      *
-     * @param \Model\BrandRetrieveListArguments $arguments Brand RetrieveList Arguments (required)
-     * @return \Model\BrandListResponse
+     * @param \BumbalClient\Model\BrandRetrieveListArguments $arguments Brand RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\BrandListResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListBrand($arguments)
@@ -385,8 +385,8 @@ class BrandApi
      *
      * Retrieve List of Brands
      *
-     * @param \Model\BrandRetrieveListArguments $arguments Brand RetrieveList Arguments (required)
-     * @return Array of \Model\BrandListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\BrandRetrieveListArguments $arguments Brand RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\BrandListResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListBrandWithHttpInfo($arguments)
@@ -435,15 +435,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\BrandListResponse',
+                '\BumbalClient\Model\BrandListResponse',
                 '/brand'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\BrandListResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\BrandListResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\BrandListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\BrandListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -457,8 +457,8 @@ class BrandApi
      *
      * Set (create or update) a Brand
      *
-     * @param \Model\BrandModel $body Brand object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\BrandModel $body Brand object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setBrand($body = null)
@@ -472,8 +472,8 @@ class BrandApi
      *
      * Set (create or update) a Brand
      *
-     * @param \Model\BrandModel $body Brand object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\BrandModel $body Brand object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setBrandWithHttpInfo($body = null)
@@ -518,15 +518,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/brand/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -541,7 +541,7 @@ class BrandApi
      * Update a Brand
      *
      * @param int $brand_id ID of brand to update (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateBrand($brand_id)
@@ -556,7 +556,7 @@ class BrandApi
      * Update a Brand
      *
      * @param int $brand_id ID of brand to update (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateBrandWithHttpInfo($brand_id)
@@ -608,15 +608,15 @@ class BrandApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/brand/{brandId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

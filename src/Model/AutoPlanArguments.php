@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,9 +66,9 @@ class AutoPlanArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'data' => '\Model\AutoPlanDataModel',
-        'options' => '\Model\AutoPlanOptionsModel',
-        'filters' => '\Model\AutoPlanFiltersModel'
+        'data' => '\BumbalClient\Model\AutoPlanDataModel',
+        'options' => '\BumbalClient\Model\AutoPlanOptionsModel',
+        'filters' => '\BumbalClient\Model\AutoPlanFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -167,7 +167,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Model\AutoPlanDataModel
+     * @return \BumbalClient\Model\AutoPlanDataModel
      */
     public function getData()
     {
@@ -176,7 +176,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\AutoPlanDataModel $data
+     * @param \BumbalClient\Model\AutoPlanDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -188,7 +188,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\AutoPlanOptionsModel
+     * @return \BumbalClient\Model\AutoPlanOptionsModel
      */
     public function getOptions()
     {
@@ -197,7 +197,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\AutoPlanOptionsModel $options
+     * @param \BumbalClient\Model\AutoPlanOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -209,7 +209,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\AutoPlanFiltersModel
+     * @return \BumbalClient\Model\AutoPlanFiltersModel
      */
     public function getFilters()
     {
@@ -218,7 +218,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\AutoPlanFiltersModel $filters
+     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

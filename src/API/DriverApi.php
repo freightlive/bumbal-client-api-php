@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class DriverApi
      *
      * Add a driver
      *
-     * @param \Model\DriverModel $body Driver object that needs to be created (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be created (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createDriver($body = null)
@@ -122,8 +122,8 @@ class DriverApi
      *
      * Add a driver
      *
-     * @param \Model\DriverModel $body Driver object that needs to be created (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be created (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createDriverWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/driver'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class DriverApi
      * Delete an driver
      *
      * @param int $driver_id ID of the driver to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteDriver($driver_id)
@@ -206,7 +206,7 @@ class DriverApi
      * Delete an driver
      *
      * @param int $driver_id ID of the driver to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteDriverWithHttpInfo($driver_id)
@@ -258,15 +258,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/driver/{driverId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -283,7 +283,7 @@ class DriverApi
      * @param int $driver_id ID of driver to return (required)
      * @param bool $include_driver_tags a list of tags bound to driver (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return \Model\DriverModel
+     * @return \BumbalClient\Model\DriverModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveDriver($driver_id, $include_driver_tags, $include_updated_by)
@@ -300,7 +300,7 @@ class DriverApi
      * @param int $driver_id ID of driver to return (required)
      * @param bool $include_driver_tags a list of tags bound to driver (required)
      * @param bool $include_updated_by include updated_by_name (required)
-     * @return Array of \Model\DriverModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\DriverModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveDriverWithHttpInfo($driver_id, $include_driver_tags, $include_updated_by)
@@ -368,15 +368,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\DriverModel',
+                '\BumbalClient\Model\DriverModel',
                 '/driver/{driverId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\DriverModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\DriverModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\DriverModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\DriverModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -390,8 +390,8 @@ class DriverApi
      *
      * Retrieve List of Drivers
      *
-     * @param \Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
-     * @return \Model\DriverListResponse
+     * @param \BumbalClient\Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\DriverListResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListDriver($arguments)
@@ -405,8 +405,8 @@ class DriverApi
      *
      * Retrieve List of Drivers
      *
-     * @param \Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
-     * @return Array of \Model\DriverListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\DriverRetrieveListArguments $arguments Driver RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\DriverListResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListDriverWithHttpInfo($arguments)
@@ -455,15 +455,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\DriverListResponse',
+                '\BumbalClient\Model\DriverListResponse',
                 '/driver'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\DriverListResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\DriverListResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\DriverListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\DriverListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -477,8 +477,8 @@ class DriverApi
      *
      * Set (create or update) a driver
      *
-     * @param \Model\DriverModel $body Driver object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\DriverModel $body Driver object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setDriver($body = null)
@@ -492,8 +492,8 @@ class DriverApi
      *
      * Set (create or update) a driver
      *
-     * @param \Model\DriverModel $body Driver object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\DriverModel $body Driver object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setDriverWithHttpInfo($body = null)
@@ -538,15 +538,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/driver/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -561,8 +561,8 @@ class DriverApi
      * Update a driver
      *
      * @param int $driver_id ID of driver to update (required)
-     * @param \Model\DriverModel $body Driver object that needs to be updated (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be updated (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateDriver($driver_id, $body = null)
@@ -577,8 +577,8 @@ class DriverApi
      * Update a driver
      *
      * @param int $driver_id ID of driver to update (required)
-     * @param \Model\DriverModel $body Driver object that needs to be updated (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\DriverModel $body Driver object that needs to be updated (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateDriverWithHttpInfo($driver_id, $body = null)
@@ -635,15 +635,15 @@ class DriverApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/driver/{driverId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

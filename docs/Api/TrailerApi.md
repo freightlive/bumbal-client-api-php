@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createTrailer**
-> \Model\ApiResponse createTrailer($body)
+> \BumbalClient\Model\ApiResponse createTrailer($body)
 
 Add a trailer
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TrailerApi();
-$body = new \Model\TrailerModel(); // \Model\TrailerModel | Trailer object that needs to be created
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be created
 
 try {
     $result = $api_instance->createTrailer($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\TrailerModel**](../Model/\Model\TrailerModel.md)| Trailer object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be created | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteTrailer**
-> \Model\ApiResponse deleteTrailer($trailer_id)
+> \BumbalClient\Model\ApiResponse deleteTrailer($trailer_id)
 
 Delete an trailer
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTrailer**
-> \Model\TrailerModel[] retrieveListTrailer($arguments)
+> \BumbalClient\Model\TrailerModel[] retrieveListTrailer($arguments)
 
 Retrieve List of Trailers
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TrailerApi();
-$arguments = new \Model\TrailerRetrieveListArguments(); // \Model\TrailerRetrieveListArguments | Trailer RetrieveList Arguments
+$arguments = new \BumbalClient\Model\TrailerRetrieveListArguments(); // \BumbalClient\Model\TrailerRetrieveListArguments | Trailer RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListTrailer($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\TrailerRetrieveListArguments**](../Model/\Model\TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\TrailerRetrieveListArguments**](../Model/\BumbalClient\Model\TrailerRetrieveListArguments.md)| Trailer RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\TrailerModel[]**](../Model/TrailerModel.md)
+[**\BumbalClient\Model\TrailerModel[]**](../Model/TrailerModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveTrailer**
-> \Model\TrailerModel retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
+> \BumbalClient\Model\TrailerModel retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
 
 Find trailer by ID
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\TrailerModel**](../Model/TrailerModel.md)
+[**\BumbalClient\Model\TrailerModel**](../Model/TrailerModel.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setTrailer**
-> \Model\ApiResponse setTrailer($body)
+> \BumbalClient\Model\ApiResponse setTrailer($body)
 
 Set (create or update) a trailer
 
@@ -234,7 +234,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\TrailerApi();
-$body = new \Model\TrailerModel(); // \Model\TrailerModel | Trailer object
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object
 
 try {
     $result = $api_instance->setTrailer($body);
@@ -249,11 +249,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\TrailerModel**](../Model/\Model\TrailerModel.md)| Trailer object | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateTrailer**
-> \Model\ApiResponse updateTrailer($trailer_id, $body)
+> \BumbalClient\Model\ApiResponse updateTrailer($trailer_id, $body)
 
 Update a trailer
 
@@ -285,7 +285,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\TrailerApi();
 $trailer_id = 789; // int | ID of trailer to update
-$body = new \Model\TrailerModel(); // \Model\TrailerModel | Trailer object that needs to be updated
+$body = new \BumbalClient\Model\TrailerModel(); // \BumbalClient\Model\TrailerModel | Trailer object that needs to be updated
 
 try {
     $result = $api_instance->updateTrailer($trailer_id, $body);
@@ -301,11 +301,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **trailer_id** | **int**| ID of trailer to update |
- **body** | [**\Model\TrailerModel**](../Model/\Model\TrailerModel.md)| Trailer object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\TrailerModel**](../Model/\BumbalClient\Model\TrailerModel.md)| Trailer object that needs to be updated | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

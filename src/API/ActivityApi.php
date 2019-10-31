@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -108,7 +108,7 @@ class ActivityApi
      * Delete an activity
      *
      * @param int $activity_id ID of the activity to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteActivity($activity_id)
@@ -123,7 +123,7 @@ class ActivityApi
      * Delete an activity
      *
      * @param int $activity_id ID of the activity to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteActivityWithHttpInfo($activity_id)
@@ -175,15 +175,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/activity/{activityId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -226,7 +226,7 @@ class ActivityApi
      * @param bool $include_brand Include brand (required)
      * @param bool $include_brand_colours Include brand colours (required)
      * @param bool $include_brand_files Include brand files (required)
-     * @return \Model\ActivityModel
+     * @return \BumbalClient\Model\ActivityModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
@@ -269,7 +269,7 @@ class ActivityApi
      * @param bool $include_brand Include brand (required)
      * @param bool $include_brand_colours Include brand colours (required)
      * @param bool $include_brand_files Include brand files (required)
-     * @return Array of \Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
@@ -545,15 +545,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ActivityModel',
+                '\BumbalClient\Model\ActivityModel',
                 '/activity/{activityId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ActivityModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ActivityModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -567,8 +567,8 @@ class ActivityApi
      *
      * Retrieve List of Activities
      *
-     * @param \Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
-     * @return \Model\ActivityListResponse
+     * @param \BumbalClient\Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\ActivityListResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListActivity($arguments)
@@ -582,8 +582,8 @@ class ActivityApi
      *
      * Retrieve List of Activities
      *
-     * @param \Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
-     * @return Array of \Model\ActivityListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ActivityRetrieveListArguments $arguments Activity RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\ActivityListResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListActivityWithHttpInfo($arguments)
@@ -632,15 +632,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ActivityListResponse',
+                '\BumbalClient\Model\ActivityListResponse',
                 '/activity'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ActivityListResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityListResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ActivityListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -654,8 +654,8 @@ class ActivityApi
      *
      * Set (create or update) an Activity
      *
-     * @param \Model\ActivityModel $body Activity object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setActivity($body = null)
@@ -669,8 +669,8 @@ class ActivityApi
      *
      * Set (create or update) an Activity
      *
-     * @param \Model\ActivityModel $body Activity object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ActivityModel $body Activity object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setActivityWithHttpInfo($body = null)
@@ -715,15 +715,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/activity/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -738,8 +738,8 @@ class ActivityApi
      * Update a activity
      *
      * @param int $activity_id ID of activity to update (required)
-     * @param \Model\ActivityModel $body Activity object that needs to be updated (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\ActivityModel $body Activity object that needs to be updated (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateActivity($activity_id, $body = null)
@@ -754,8 +754,8 @@ class ActivityApi
      * Update a activity
      *
      * @param int $activity_id ID of activity to update (required)
-     * @param \Model\ActivityModel $body Activity object that needs to be updated (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ActivityModel $body Activity object that needs to be updated (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateActivityWithHttpInfo($activity_id, $body = null)
@@ -812,15 +812,15 @@ class ActivityApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/activity/{activityId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

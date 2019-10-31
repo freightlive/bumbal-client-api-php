@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,9 +66,9 @@ class AutoPlanFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'activity' => '\Model\ActivityFiltersModel',
-        'route' => '\Model\RouteFiltersModel',
-        'route_general' => '\Model\RouteFiltersModel'
+        'activity' => '\BumbalClient\Model\ActivityFiltersModel',
+        'route' => '\BumbalClient\Model\RouteFiltersModel',
+        'route_general' => '\BumbalClient\Model\RouteFiltersModel'
     );
 
     public static function swaggerTypes()
@@ -167,7 +167,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets activity
-     * @return \Model\ActivityFiltersModel
+     * @return \BumbalClient\Model\ActivityFiltersModel
      */
     public function getActivity()
     {
@@ -176,7 +176,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \Model\ActivityFiltersModel $activity
+     * @param \BumbalClient\Model\ActivityFiltersModel $activity
      * @return $this
      */
     public function setActivity($activity)
@@ -188,7 +188,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets route
-     * @return \Model\RouteFiltersModel
+     * @return \BumbalClient\Model\RouteFiltersModel
      */
     public function getRoute()
     {
@@ -197,7 +197,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \Model\RouteFiltersModel $route
+     * @param \BumbalClient\Model\RouteFiltersModel $route
      * @return $this
      */
     public function setRoute($route)
@@ -209,7 +209,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Gets route_general
-     * @return \Model\RouteFiltersModel
+     * @return \BumbalClient\Model\RouteFiltersModel
      */
     public function getRouteGeneral()
     {
@@ -218,7 +218,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route_general
-     * @param \Model\RouteFiltersModel $route_general
+     * @param \BumbalClient\Model\RouteFiltersModel $route_general
      * @return $this
      */
     public function setRouteGeneral($route_general)

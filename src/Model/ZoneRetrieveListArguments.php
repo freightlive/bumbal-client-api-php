@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\ZoneOptionsModel',
-        'filters' => '\Model\ZoneFiltersModel',
+        'options' => '\BumbalClient\Model\ZoneOptionsModel',
+        'filters' => '\BumbalClient\Model\ZoneFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -177,7 +177,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\ZoneOptionsModel
+     * @return \BumbalClient\Model\ZoneOptionsModel
      */
     public function getOptions()
     {
@@ -186,7 +186,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\ZoneOptionsModel $options
+     * @param \BumbalClient\Model\ZoneOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -198,7 +198,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\ZoneFiltersModel
+     * @return \BumbalClient\Model\ZoneFiltersModel
      */
     public function getFilters()
     {
@@ -207,7 +207,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ZoneFiltersModel $filters
+     * @param \BumbalClient\Model\ZoneFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

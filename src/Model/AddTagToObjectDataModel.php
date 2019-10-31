@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -68,7 +68,7 @@ class AddTagToObjectDataModel implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'name' => 'string',
-        'links' => '\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]'
     );
 
     public static function swaggerTypes()
@@ -209,7 +209,7 @@ class AddTagToObjectDataModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -218,7 +218,7 @@ class AddTagToObjectDataModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links link to the tag which should be added to the object
+     * @param \BumbalClient\Model\LinkModel[] $links link to the tag which should be added to the object
      * @return $this
      */
     public function setLinks($links)

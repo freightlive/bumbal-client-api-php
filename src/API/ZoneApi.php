@@ -38,7 +38,7 @@
  * Do not edit the class manually.
  */
 
-namespace API;
+namespace BumbalClient\API;
 
 use \BumbalClient\Configuration;
 use \BumbalClient\ApiClient;
@@ -107,8 +107,8 @@ class ZoneApi
      *
      * Add a new Zone
      *
-     * @param \Model\ZoneModel $body Zone object that needs to be created (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\ZoneModel $body Zone object that needs to be created (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createZone($body = null)
@@ -122,8 +122,8 @@ class ZoneApi
      *
      * Add a new Zone
      *
-     * @param \Model\ZoneModel $body Zone object that needs to be created (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ZoneModel $body Zone object that needs to be created (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function createZoneWithHttpInfo($body = null)
@@ -168,15 +168,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/zone'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -191,7 +191,7 @@ class ZoneApi
      * Delete a Zone
      *
      * @param int $zone_id ID of zone to delete (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteZone($zone_id)
@@ -206,7 +206,7 @@ class ZoneApi
      * Delete a Zone
      *
      * @param int $zone_id ID of zone to delete (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function deleteZoneWithHttpInfo($zone_id)
@@ -258,15 +258,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/zone/{zoneId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -280,8 +280,8 @@ class ZoneApi
      *
      * Retrieve List of Zone
      *
-     * @param \Model\ZoneRetrieveListArguments $arguments Zone RetrieveList Arguments (required)
-     * @return \Model\ZoneModel[]
+     * @param \BumbalClient\Model\ZoneRetrieveListArguments $arguments Zone RetrieveList Arguments (required)
+     * @return \BumbalClient\Model\ZoneModel[]
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListZone($arguments)
@@ -295,8 +295,8 @@ class ZoneApi
      *
      * Retrieve List of Zone
      *
-     * @param \Model\ZoneRetrieveListArguments $arguments Zone RetrieveList Arguments (required)
-     * @return Array of \Model\ZoneModel[], HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ZoneRetrieveListArguments $arguments Zone RetrieveList Arguments (required)
+     * @return Array of \BumbalClient\Model\ZoneModel[], HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveListZoneWithHttpInfo($arguments)
@@ -345,15 +345,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ZoneModel[]',
+                '\BumbalClient\Model\ZoneModel[]',
                 '/zone'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ZoneModel[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ZoneModel[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ZoneModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ZoneModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,7 +368,7 @@ class ZoneApi
      * Retrieve a Zone
      *
      * @param int $zone_id ID of zone to retrieve (required)
-     * @return \Model\ZoneModel
+     * @return \BumbalClient\Model\ZoneModel
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveZone($zone_id)
@@ -383,7 +383,7 @@ class ZoneApi
      * Retrieve a Zone
      *
      * @param int $zone_id ID of zone to retrieve (required)
-     * @return Array of \Model\ZoneModel, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ZoneModel, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function retrieveZoneWithHttpInfo($zone_id)
@@ -435,15 +435,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ZoneModel',
+                '\BumbalClient\Model\ZoneModel',
                 '/zone/{zoneId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ZoneModel', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ZoneModel', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ZoneModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ZoneModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -457,8 +457,8 @@ class ZoneApi
      *
      * Set (create or update) a Zone
      *
-     * @param \Model\ZoneModel $body Zone object (optional)
-     * @return \Model\ApiResponse
+     * @param \BumbalClient\Model\ZoneModel $body Zone object (optional)
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setZone($body = null)
@@ -472,8 +472,8 @@ class ZoneApi
      *
      * Set (create or update) a Zone
      *
-     * @param \Model\ZoneModel $body Zone object (optional)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @param \BumbalClient\Model\ZoneModel $body Zone object (optional)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function setZoneWithHttpInfo($body = null)
@@ -518,15 +518,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/zone/set'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -541,7 +541,7 @@ class ZoneApi
      * Update a Zone
      *
      * @param int $zone_id ID of zone to update (required)
-     * @return \Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateZone($zone_id)
@@ -556,7 +556,7 @@ class ZoneApi
      * Update a Zone
      *
      * @param int $zone_id ID of zone to update (required)
-     * @return Array of \Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      * @throws \BumbalClient\ApiException on non-2xx response
      */
     public function updateZoneWithHttpInfo($zone_id)
@@ -608,15 +608,15 @@ class ZoneApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/zone/{zoneId}'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

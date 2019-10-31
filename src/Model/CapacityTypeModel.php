@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -71,7 +71,7 @@ class CapacityTypeModel implements ArrayAccess
         'properties' => 'string[]',
         'uom_id' => 'string',
         'uom_name' => 'string',
-        'uom' => '\Model\UomModel'
+        'uom' => '\BumbalClient\Model\UomModel'
     );
 
     public static function swaggerTypes()
@@ -287,7 +287,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Gets uom
-     * @return \Model\UomModel
+     * @return \BumbalClient\Model\UomModel
      */
     public function getUom()
     {
@@ -296,7 +296,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets uom
-     * @param \Model\UomModel $uom
+     * @param \BumbalClient\Model\UomModel $uom
      * @return $this
      */
     public function setUom($uom)

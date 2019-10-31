@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class CapacityTypeRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\CapacityTypeOptionsModel',
-        'filters' => '\Model\CapacityTypeFiltersModel',
+        'options' => '\BumbalClient\Model\CapacityTypeOptionsModel',
+        'filters' => '\BumbalClient\Model\CapacityTypeFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -242,7 +242,7 @@ class CapacityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\CapacityTypeOptionsModel
+     * @return \BumbalClient\Model\CapacityTypeOptionsModel
      */
     public function getOptions()
     {
@@ -251,7 +251,7 @@ class CapacityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\CapacityTypeOptionsModel $options
+     * @param \BumbalClient\Model\CapacityTypeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -263,7 +263,7 @@ class CapacityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\CapacityTypeFiltersModel
+     * @return \BumbalClient\Model\CapacityTypeFiltersModel
      */
     public function getFilters()
     {
@@ -272,7 +272,7 @@ class CapacityTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\CapacityTypeFiltersModel $filters
+     * @param \BumbalClient\Model\CapacityTypeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,8 +66,8 @@ class UsersRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\Model\UsersOptionsModel',
-        'filters' => '\Model\UsersFiltersModel',
+        'options' => '\BumbalClient\Model\UsersOptionsModel',
+        'filters' => '\BumbalClient\Model\UsersFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -238,7 +238,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Model\UsersOptionsModel
+     * @return \BumbalClient\Model\UsersOptionsModel
      */
     public function getOptions()
     {
@@ -247,7 +247,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\UsersOptionsModel $options
+     * @param \BumbalClient\Model\UsersOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -259,7 +259,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Model\UsersFiltersModel
+     * @return \BumbalClient\Model\UsersFiltersModel
      */
     public function getFilters()
     {
@@ -268,7 +268,7 @@ class UsersRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\UsersFiltersModel $filters
+     * @param \BumbalClient\Model\UsersFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

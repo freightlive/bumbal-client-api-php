@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -70,9 +70,9 @@ class ZoneModel implements ArrayAccess
         'name' => 'string',
         'filter_tag_names' => 'string[]',
         'filter_tags' => 'object',
-        'links' => '\Model\LinkModel[]',
-        'meta_data' => '\Model\MetaDataModel[]',
-        'zone_ranges' => '\Model\ZoneRangeModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'zone_ranges' => '\BumbalClient\Model\ZoneRangeModel[]',
         'zone_created_at' => '\DateTime',
         'zone_updated_at' => '\DateTime',
         'zone_created_by' => 'int',
@@ -291,7 +291,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -300,7 +300,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -312,7 +312,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -321,7 +321,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -333,7 +333,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Gets zone_ranges
-     * @return \Model\ZoneRangeModel[]
+     * @return \BumbalClient\Model\ZoneRangeModel[]
      */
     public function getZoneRanges()
     {
@@ -342,7 +342,7 @@ class ZoneModel implements ArrayAccess
 
     /**
      * Sets zone_ranges
-     * @param \Model\ZoneRangeModel[] $zone_ranges
+     * @param \BumbalClient\Model\ZoneRangeModel[] $zone_ranges
      * @return $this
      */
     public function setZoneRanges($zone_ranges)

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createVehicle**
-> \Model\ApiResponse createVehicle($body)
+> \BumbalClient\Model\ApiResponse createVehicle($body)
 
 Add a vehicle
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\VehicleApi();
-$body = new \Model\VehicleModel(); // \Model\VehicleModel | Vehicle object that needs to be created
+$body = new \BumbalClient\Model\VehicleModel(); // \BumbalClient\Model\VehicleModel | Vehicle object that needs to be created
 
 try {
     $result = $api_instance->createVehicle($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\VehicleModel**](../Model/\Model\VehicleModel.md)| Vehicle object that needs to be created | [optional]
+ **body** | [**\BumbalClient\Model\VehicleModel**](../Model/\BumbalClient\Model\VehicleModel.md)| Vehicle object that needs to be created | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteVehicle**
-> \Model\ApiResponse deleteVehicle($vehicle_id)
+> \BumbalClient\Model\ApiResponse deleteVehicle($vehicle_id)
 
 Delete a vehicle
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListVehicle**
-> \Model\VehicleModel[] retrieveListVehicle($arguments)
+> \BumbalClient\Model\VehicleModel[] retrieveListVehicle($arguments)
 
 Retrieve List of Vehicles
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\VehicleApi();
-$arguments = new \Model\VehicleRetrieveListArguments(); // \Model\VehicleRetrieveListArguments | Vehicle RetrieveList Arguments
+$arguments = new \BumbalClient\Model\VehicleRetrieveListArguments(); // \BumbalClient\Model\VehicleRetrieveListArguments | Vehicle RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListVehicle($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\Model\VehicleRetrieveListArguments**](../Model/\Model\VehicleRetrieveListArguments.md)| Vehicle RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\VehicleRetrieveListArguments**](../Model/\BumbalClient\Model\VehicleRetrieveListArguments.md)| Vehicle RetrieveList Arguments |
 
 ### Return type
 
-[**\Model\VehicleModel[]**](../Model/VehicleModel.md)
+[**\BumbalClient\Model\VehicleModel[]**](../Model/VehicleModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveVehicle**
-> \Model\VehicleModel retrieveVehicle($vehicle_id, $include_vehicle_tags, $include_updated_by)
+> \BumbalClient\Model\VehicleModel retrieveVehicle($vehicle_id, $include_vehicle_tags, $include_updated_by)
 
 Find vehicle by ID
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Model\VehicleModel**](../Model/VehicleModel.md)
+[**\BumbalClient\Model\VehicleModel**](../Model/VehicleModel.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setVehicle**
-> \Model\ApiResponse setVehicle($body)
+> \BumbalClient\Model\ApiResponse setVehicle($body)
 
 Set (create or update) a vehicle
 
@@ -234,7 +234,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\VehicleApi();
-$body = new \Model\VehicleModel(); // \Model\VehicleModel | Vehicle object
+$body = new \BumbalClient\Model\VehicleModel(); // \BumbalClient\Model\VehicleModel | Vehicle object
 
 try {
     $result = $api_instance->setVehicle($body);
@@ -249,11 +249,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Model\VehicleModel**](../Model/\Model\VehicleModel.md)| Vehicle object | [optional]
+ **body** | [**\BumbalClient\Model\VehicleModel**](../Model/\BumbalClient\Model\VehicleModel.md)| Vehicle object | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVehicle**
-> \Model\ApiResponse updateVehicle($vehicle_id, $body)
+> \BumbalClient\Model\ApiResponse updateVehicle($vehicle_id, $body)
 
 Update a vehicle
 
@@ -285,7 +285,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\VehicleApi();
 $vehicle_id = 789; // int | ID of vehicle to update
-$body = new \Model\VehicleModel(); // \Model\VehicleModel | Vehicle object that needs to be updated
+$body = new \BumbalClient\Model\VehicleModel(); // \BumbalClient\Model\VehicleModel | Vehicle object that needs to be updated
 
 try {
     $result = $api_instance->updateVehicle($vehicle_id, $body);
@@ -301,11 +301,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **vehicle_id** | **int**| ID of vehicle to update |
- **body** | [**\Model\VehicleModel**](../Model/\Model\VehicleModel.md)| Vehicle object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\VehicleModel**](../Model/\BumbalClient\Model\VehicleModel.md)| Vehicle object that needs to be updated | [optional]
 
 ### Return type
 
-[**\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

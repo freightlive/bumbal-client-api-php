@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Model\TrailerOptionsModel**](TrailerOptionsModel.md) |  | [optional] 
-**filters** | [**\Model\TrailerFiltersModel**](TrailerFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\TrailerOptionsModel**](TrailerOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\TrailerFiltersModel**](TrailerFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

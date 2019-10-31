@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -66,7 +66,7 @@ class CapacityTypeListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'items' => '\Model\CapacityTypeModel[]',
+        'items' => '\BumbalClient\Model\CapacityTypeModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -172,7 +172,7 @@ class CapacityTypeListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \Model\CapacityTypeModel[]
+     * @return \BumbalClient\Model\CapacityTypeModel[]
      */
     public function getItems()
     {
@@ -181,7 +181,7 @@ class CapacityTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\CapacityTypeModel[] $items
+     * @param \BumbalClient\Model\CapacityTypeModel[] $items
      * @return $this
      */
     public function setItems($items)
