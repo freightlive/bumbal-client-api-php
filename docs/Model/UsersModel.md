@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **address_id** | **int** | id of the user address | [optional] 
 **addresses** | [**\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **pause_id** | **int** | id of the pause to be applied by default for new user routes | [optional] 
-**pause** | [**\Model\PauseModel**](PauseModel.md) |  | [optional] 
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tags** | [**\Model\TagModel[]**](TagModel.md) |  | [optional] 

@@ -496,14 +496,6 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "pause"
-     */
-    public function testPropertyPause()
-    {
-
-    }
-
-    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()

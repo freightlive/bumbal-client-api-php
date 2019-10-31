@@ -116,7 +116,6 @@ class RouteModel implements ArrayAccess
         'notes' => '\Model\NoteModel[]',
         'files' => '\Model\FileModel[]',
         'pause_id' => 'int',
-        'pause' => '\Model\PauseModel',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'tags' => '\Model\TagModel[]',
@@ -185,7 +184,6 @@ class RouteModel implements ArrayAccess
         'notes' => 'notes',
         'files' => 'files',
         'pause_id' => 'pause_id',
-        'pause' => 'pause',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'tags' => 'tags',
@@ -254,7 +252,6 @@ class RouteModel implements ArrayAccess
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'pause_id' => 'setPauseId',
-        'pause' => 'setPause',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'tags' => 'setTags',
@@ -323,7 +320,6 @@ class RouteModel implements ArrayAccess
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'pause_id' => 'getPauseId',
-        'pause' => 'getPause',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'tags' => 'getTags',
@@ -439,7 +435,6 @@ class RouteModel implements ArrayAccess
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
-        $this->container['pause'] = isset($data['pause']) ? $data['pause'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -1543,27 +1538,6 @@ class RouteModel implements ArrayAccess
     public function setPauseId($pause_id)
     {
         $this->container['pause_id'] = $pause_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets pause
-     * @return \Model\PauseModel
-     */
-    public function getPause()
-    {
-        return $this->container['pause'];
-    }
-
-    /**
-     * Sets pause
-     * @param \Model\PauseModel $pause 
-     * @return $this
-     */
-    public function setPause($pause)
-    {
-        $this->container['pause'] = $pause;
 
         return $this;
     }

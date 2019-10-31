@@ -216,14 +216,6 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "pause"
-     */
-    public function testPropertyPause()
-    {
-
-    }
-
-    /**
      * Test attribute "removed"
      */
     public function testPropertyRemoved()

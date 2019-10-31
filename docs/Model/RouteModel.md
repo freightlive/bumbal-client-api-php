@@ -53,7 +53,6 @@ Name | Type | Description | Notes
 **notes** | [**\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
 **files** | [**\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **pause_id** | **int** | id of the pause to be applied by default for new user routes | [optional] 
-**pause** | [**\Model\PauseModel**](PauseModel.md) |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **tags** | [**\Model\TagModel[]**](TagModel.md) |  | [optional] 

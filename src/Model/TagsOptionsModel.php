@@ -66,8 +66,7 @@ class TagsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'include_phone_nrs' => 'bool',
-        'include_tag_type_name' => 'bool'
+        'include_phone_nrs' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -80,8 +79,7 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'include_phone_nrs' => 'include_phone_nrs',
-        'include_tag_type_name' => 'include_tag_type_name'
+        'include_phone_nrs' => 'include_phone_nrs'
     );
 
     public static function attributeMap()
@@ -94,8 +92,7 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'include_phone_nrs' => 'setIncludePhoneNrs',
-        'include_tag_type_name' => 'setIncludeTagTypeName'
+        'include_phone_nrs' => 'setIncludePhoneNrs'
     );
 
     public static function setters()
@@ -108,8 +105,7 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'include_phone_nrs' => 'getIncludePhoneNrs',
-        'include_tag_type_name' => 'getIncludeTagTypeName'
+        'include_phone_nrs' => 'getIncludePhoneNrs'
     );
 
     public static function getters()
@@ -134,7 +130,6 @@ class TagsOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
-        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
     }
 
     /**
@@ -177,27 +172,6 @@ class TagsOptionsModel implements ArrayAccess
     public function setIncludePhoneNrs($include_phone_nrs)
     {
         $this->container['include_phone_nrs'] = $include_phone_nrs;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_tag_type_name
-     * @return bool
-     */
-    public function getIncludeTagTypeName()
-    {
-        return $this->container['include_tag_type_name'];
-    }
-
-    /**
-     * Sets include_tag_type_name
-     * @param bool $include_tag_type_name 
-     * @return $this
-     */
-    public function setIncludeTagTypeName($include_tag_type_name)
-    {
-        $this->container['include_tag_type_name'] = $include_tag_type_name;
 
         return $this;
     }

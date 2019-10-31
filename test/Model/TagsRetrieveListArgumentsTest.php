@@ -135,12 +135,4 @@ class TagsRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "count_only"
-     */
-    public function testPropertyCountOnly()
-    {
-
-    }
-
 }

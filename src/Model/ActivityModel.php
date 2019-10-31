@@ -67,6 +67,7 @@ class ActivityModel implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
+        'uuid' => 'string',
         'shipment_activity_id' => 'int',
         'nr' => 'string',
         'activity_type_name' => 'string',
@@ -167,6 +168,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
+        'uuid' => 'uuid',
         'shipment_activity_id' => 'shipment_activity_id',
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
@@ -267,6 +269,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'shipment_activity_id' => 'setShipmentActivityId',
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
@@ -367,6 +370,7 @@ class ActivityModel implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'shipment_activity_id' => 'getShipmentActivityId',
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
@@ -624,6 +628,7 @@ class ActivityModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
@@ -780,6 +785,27 @@ class ActivityModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     * @return string
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     * @param string $uuid unique per activity
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

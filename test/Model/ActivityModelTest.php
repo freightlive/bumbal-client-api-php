@@ -104,6 +104,14 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+
+    }
+
+    /**
      * Test attribute "shipment_activity_id"
      */
     public function testPropertyShipmentActivityId()

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
+**uuid** | **string** | unique per activity | [optional] 
 **shipment_activity_id** | **int** | Unique Identifier for partner shipment activity | [optional] 
 **nr** | **string** | Number of this Activity | [optional] 
 **activity_type_name** | **string** | Activity Type Name. breakdown (:20), bundled (:32), car_end (:6), car_start (:5), car_wash (:27), combi (:29), depot (:28), driver_end (:10), driver_start (:9), dropoff (:2), gas_refill (:14), interior_wash (:30), maintenance (:26), maintenance_planned (:15), maintenance_unplanned (:16), other (:31), pause (:13), pickup (:1), route_end (:4), route_start (:3), sanitary (:21), stop (:11), unplanned_stop (:18), user_other (:17), wait (:19) | [optional] 

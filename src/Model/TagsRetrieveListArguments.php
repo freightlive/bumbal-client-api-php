@@ -70,8 +70,7 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => '\Model\TagsFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string',
-        'count_only' => 'bool'
+        'search_text' => 'string'
     );
 
     public static function swaggerTypes()
@@ -88,8 +87,7 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text',
-        'count_only' => 'count_only'
+        'search_text' => 'search_text'
     );
 
     public static function attributeMap()
@@ -106,8 +104,7 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText',
-        'count_only' => 'setCountOnly'
+        'search_text' => 'setSearchText'
     );
 
     public static function setters()
@@ -124,8 +121,7 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText',
-        'count_only' => 'getCountOnly'
+        'search_text' => 'getSearchText'
     );
 
     public static function getters()
@@ -154,7 +150,6 @@ class TagsRetrieveListArguments implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
-        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -281,27 +276,6 @@ class TagsRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
-
-        return $this;
-    }
-
-    /**
-     * Gets count_only
-     * @return bool
-     */
-    public function getCountOnly()
-    {
-        return $this->container['count_only'];
-    }
-
-    /**
-     * Sets count_only
-     * @param bool $count_only 
-     * @return $this
-     */
-    public function setCountOnly($count_only)
-    {
-        $this->container['count_only'] = $count_only;
 
         return $this;
     }

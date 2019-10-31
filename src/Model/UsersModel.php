@@ -81,7 +81,6 @@ class UsersModel implements ArrayAccess
         'address_id' => 'int',
         'addresses' => '\Model\AddressModel[]',
         'pause_id' => 'int',
-        'pause' => '\Model\PauseModel',
         'removed' => 'bool',
         'active' => 'bool',
         'tags' => '\Model\TagModel[]',
@@ -116,7 +115,6 @@ class UsersModel implements ArrayAccess
         'address_id' => 'address_id',
         'addresses' => 'addresses',
         'pause_id' => 'pause_id',
-        'pause' => 'pause',
         'removed' => 'removed',
         'active' => 'active',
         'tags' => 'tags',
@@ -151,7 +149,6 @@ class UsersModel implements ArrayAccess
         'address_id' => 'setAddressId',
         'addresses' => 'setAddresses',
         'pause_id' => 'setPauseId',
-        'pause' => 'setPause',
         'removed' => 'setRemoved',
         'active' => 'setActive',
         'tags' => 'setTags',
@@ -186,7 +183,6 @@ class UsersModel implements ArrayAccess
         'address_id' => 'getAddressId',
         'addresses' => 'getAddresses',
         'pause_id' => 'getPauseId',
-        'pause' => 'getPause',
         'removed' => 'getRemoved',
         'active' => 'getActive',
         'tags' => 'getTags',
@@ -252,7 +248,6 @@ class UsersModel implements ArrayAccess
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
-        $this->container['pause'] = isset($data['pause']) ? $data['pause'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -609,27 +604,6 @@ class UsersModel implements ArrayAccess
     public function setPauseId($pause_id)
     {
         $this->container['pause_id'] = $pause_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets pause
-     * @return \Model\PauseModel
-     */
-    public function getPause()
-    {
-        return $this->container['pause'];
-    }
-
-    /**
-     * Sets pause
-     * @param \Model\PauseModel $pause 
-     * @return $this
-     */
-    public function setPause($pause)
-    {
-        $this->container['pause'] = $pause;
 
         return $this;
     }

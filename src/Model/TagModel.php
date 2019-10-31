@@ -223,7 +223,7 @@ class TagModel implements ArrayAccess
 
     /**
      * Sets tag_type_id
-     * @param int $tag_type_id Tag type ID
+     * @param int $tag_type_id Tag Type ID
      * @return $this
      */
     public function setTagTypeId($tag_type_id)
@@ -244,7 +244,7 @@ class TagModel implements ArrayAccess
 
     /**
      * Sets tag_type_name
-     * @param string $tag_type_name Tag type Name
+     * @param string $tag_type_name Tag Type Name
      * @return $this
      */
     public function setTagTypeName($tag_type_name)
