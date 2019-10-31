@@ -269,7 +269,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -290,7 +290,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

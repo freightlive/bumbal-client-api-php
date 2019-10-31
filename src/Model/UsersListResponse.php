@@ -181,7 +181,7 @@ class UsersListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\UsersModel[] $items 
+     * @param \Model\UsersModel[] $items
      * @return $this
      */
     public function setItems($items)

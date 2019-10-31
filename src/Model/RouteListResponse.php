@@ -181,7 +181,7 @@ class RouteListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\RouteModel[] $items 
+     * @param \Model\RouteModel[] $items
      * @return $this
      */
     public function setItems($items)

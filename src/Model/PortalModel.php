@@ -218,7 +218,7 @@ class PortalModel implements ArrayAccess
 
     /**
      * Sets portal_settings
-     * @param \Model\PortalSettingModel[] $portal_settings 
+     * @param \Model\PortalSettingModel[] $portal_settings
      * @return $this
      */
     public function setPortalSettings($portal_settings)

@@ -257,7 +257,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets available_timewindows
-     * @param \Model\AvailabilityTimeSlotModel[] $available_timewindows 
+     * @param \Model\AvailabilityTimeSlotModel[] $available_timewindows
      * @return $this
      */
     public function setAvailableTimewindows($available_timewindows)
@@ -278,7 +278,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \Model\AvailabilityTimeSlotModel[] $unavailable_timewindows 
+     * @param \Model\AvailabilityTimeSlotModel[] $unavailable_timewindows
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)
@@ -299,7 +299,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets latest_analyzed_date
-     * @param \DateTime $latest_analyzed_date 
+     * @param \DateTime $latest_analyzed_date
      * @return $this
      */
     public function setLatestAnalyzedDate($latest_analyzed_date)

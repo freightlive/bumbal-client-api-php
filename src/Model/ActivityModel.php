@@ -1232,7 +1232,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time
-     * @param \DateTime $earliest_delivery_date_time 
+     * @param \DateTime $earliest_delivery_date_time
      * @return $this
      */
     public function setEarliestDeliveryDateTime($earliest_delivery_date_time)
@@ -1253,7 +1253,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time
-     * @param \DateTime $latest_delivery_date_time 
+     * @param \DateTime $latest_delivery_date_time
      * @return $this
      */
     public function setLatestDeliveryDateTime($latest_delivery_date_time)
@@ -1274,7 +1274,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date
-     * @param \DateTime $earliest_delivery_date 
+     * @param \DateTime $earliest_delivery_date
      * @return $this
      */
     public function setEarliestDeliveryDate($earliest_delivery_date)
@@ -1295,7 +1295,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date
-     * @param \DateTime $latest_delivery_date 
+     * @param \DateTime $latest_delivery_date
      * @return $this
      */
     public function setLatestDeliveryDate($latest_delivery_date)
@@ -1883,7 +1883,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \Model\AddressModel $address 
+     * @param \Model\AddressModel $address
      * @return $this
      */
     public function setAddress($address)
@@ -1904,7 +1904,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address_applied
-     * @param \Model\AddressAppliedModel $address_applied 
+     * @param \Model\AddressAppliedModel $address_applied
      * @return $this
      */
     public function setAddressApplied($address_applied)
@@ -1925,7 +1925,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \Model\AddressModel $depot_address 
+     * @param \Model\AddressModel $depot_address
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -1988,7 +1988,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers
-     * @param object $allowed_drivers 
+     * @param object $allowed_drivers
      * @return $this
      */
     public function setAllowedDrivers($allowed_drivers)
@@ -2009,7 +2009,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers_links
-     * @param \Model\LinkModel[] $allowed_drivers_links 
+     * @param \Model\LinkModel[] $allowed_drivers_links
      * @return $this
      */
     public function setAllowedDriversLinks($allowed_drivers_links)
@@ -2030,7 +2030,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -2051,7 +2051,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \Model\CapacityModel[] $capacities 
+     * @param \Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -2072,7 +2072,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets package_lines
-     * @param \Model\PackageLineModel[] $package_lines 
+     * @param \Model\PackageLineModel[] $package_lines
      * @return $this
      */
     public function setPackageLines($package_lines)
@@ -2093,7 +2093,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets time_slots
-     * @param \Model\TimeSlotModel[] $time_slots 
+     * @param \Model\TimeSlotModel[] $time_slots
      * @return $this
      */
     public function setTimeSlots($time_slots)
@@ -2135,7 +2135,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets brand
-     * @param \Model\BrandModel $brand 
+     * @param \Model\BrandModel $brand
      * @return $this
      */
     public function setBrand($brand)
@@ -2156,7 +2156,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \Model\CommunicationModel $communication 
+     * @param \Model\CommunicationModel $communication
      * @return $this
      */
     public function setCommunication($communication)
@@ -2177,7 +2177,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment_link
-     * @param \Model\LinkModel $assignment_link 
+     * @param \Model\LinkModel $assignment_link
      * @return $this
      */
     public function setAssignmentLink($assignment_link)
@@ -2198,7 +2198,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_link
-     * @param \Model\LinkModel $route_link 
+     * @param \Model\LinkModel $route_link
      * @return $this
      */
     public function setRouteLink($route_link)
@@ -2219,7 +2219,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \Model\RouteModel $route 
+     * @param \Model\RouteModel $route
      * @return $this
      */
     public function setRoute($route)
@@ -2240,7 +2240,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \Model\DriverModel $driver 
+     * @param \Model\DriverModel $driver
      * @return $this
      */
     public function setDriver($driver)
@@ -2261,7 +2261,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver_links
-     * @param \Model\LinkModel[] $driver_links 
+     * @param \Model\LinkModel[] $driver_links
      * @return $this
      */
     public function setDriverLinks($driver_links)
@@ -2282,7 +2282,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \Model\VehicleModel $car 
+     * @param \Model\VehicleModel $car
      * @return $this
      */
     public function setCar($car)
@@ -2303,7 +2303,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \Model\TrailerModel $trailer 
+     * @param \Model\TrailerModel $trailer
      * @return $this
      */
     public function setTrailer($trailer)
@@ -2345,7 +2345,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags 
+     * @param \Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -2366,7 +2366,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \Model\RecurrenceModel $recurrence 
+     * @param \Model\RecurrenceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -2408,7 +2408,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \Model\ZoneModel[] $zones 
+     * @param \Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)
@@ -2450,7 +2450,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -2471,7 +2471,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -2492,7 +2492,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \Model\NoteModel[] $notes 
+     * @param \Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -2513,7 +2513,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files 
+     * @param \Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -2618,7 +2618,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_created_by_user
-     * @param \Model\UsersModel $activity_created_by_user 
+     * @param \Model\UsersModel $activity_created_by_user
      * @return $this
      */
     public function setActivityCreatedByUser($activity_created_by_user)
@@ -2639,7 +2639,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_by_user
-     * @param \Model\UsersModel $activity_updated_by_user 
+     * @param \Model\UsersModel $activity_updated_by_user
      * @return $this
      */
     public function setActivityUpdatedByUser($activity_updated_by_user)

@@ -176,7 +176,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\AddTagToObjectDataModel $data 
+     * @param \Model\AddTagToObjectDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\AddTagToObjectOptionsModel $options 
+     * @param \Model\AddTagToObjectOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class AddTagToObjectArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\AddTagToObjectFiltersModel $filters 
+     * @param \Model\AddTagToObjectFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

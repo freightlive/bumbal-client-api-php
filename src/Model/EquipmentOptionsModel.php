@@ -166,7 +166,7 @@ class EquipmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activity_status
-     * @param bool $include_activity_status 
+     * @param bool $include_activity_status
      * @return $this
      */
     public function setIncludeActivityStatus($include_activity_status)

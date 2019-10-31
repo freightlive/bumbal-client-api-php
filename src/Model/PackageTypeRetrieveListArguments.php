@@ -251,7 +251,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\PackageTypeOptionsModel $options 
+     * @param \Model\PackageTypeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -272,7 +272,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\PackageTypeFiltersModel $filters 
+     * @param \Model\PackageTypeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -293,7 +293,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -314,7 +314,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -385,7 +385,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -406,7 +406,7 @@ class PackageTypeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

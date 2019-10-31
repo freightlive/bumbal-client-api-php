@@ -181,7 +181,7 @@ class PortalListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\PortalModel[] $items 
+     * @param \Model\PortalModel[] $items
      * @return $this
      */
     public function setItems($items)

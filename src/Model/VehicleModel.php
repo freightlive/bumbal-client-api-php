@@ -398,7 +398,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -419,7 +419,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \Model\CapacityModel[] $capacities 
+     * @param \Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -440,7 +440,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags 
+     * @param \Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -461,7 +461,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -482,7 +482,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -503,7 +503,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files 
+     * @param \Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

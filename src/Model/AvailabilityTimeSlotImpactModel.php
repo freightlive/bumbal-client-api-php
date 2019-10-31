@@ -171,7 +171,7 @@ class AvailabilityTimeSlotImpactModel implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type 
+     * @param string $type
      * @return $this
      */
     public function setType($type)
@@ -192,7 +192,7 @@ class AvailabilityTimeSlotImpactModel implements ArrayAccess
 
     /**
      * Sets value
-     * @param int $value 
+     * @param int $value
      * @return $this
      */
     public function setValue($value)

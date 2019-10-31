@@ -171,7 +171,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\PackageLineFiltersModel $filters 
+     * @param \Model\PackageLineFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -192,7 +192,7 @@ class PackageLineUpdateArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\PackageLineModel $data 
+     * @param \Model\PackageLineModel $data
      * @return $this
      */
     public function setData($data)

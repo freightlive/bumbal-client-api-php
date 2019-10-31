@@ -176,7 +176,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \Model\ActivityFiltersModel $activity 
+     * @param \Model\ActivityFiltersModel $activity
      * @return $this
      */
     public function setActivity($activity)
@@ -197,7 +197,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \Model\RouteFiltersModel $route 
+     * @param \Model\RouteFiltersModel $route
      * @return $this
      */
     public function setRoute($route)
@@ -218,7 +218,7 @@ class AutoPlanFiltersModel implements ArrayAccess
 
     /**
      * Sets route_general
-     * @param \Model\RouteFiltersModel $route_general 
+     * @param \Model\RouteFiltersModel $route_general
      * @return $this
      */
     public function setRouteGeneral($route_general)

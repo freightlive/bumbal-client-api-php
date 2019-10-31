@@ -181,7 +181,7 @@ class DriverListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\DriverModel[] $items 
+     * @param \Model\DriverModel[] $items
      * @return $this
      */
     public function setItems($items)

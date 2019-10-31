@@ -218,7 +218,7 @@ class AutoPlanDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \Model\ActivityModel[] $activity 
+     * @param \Model\ActivityModel[] $activity
      * @return $this
      */
     public function setActivity($activity)

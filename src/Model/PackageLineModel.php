@@ -921,7 +921,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -942,7 +942,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \Model\CapacityModel[] $capacities 
+     * @param \Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -984,7 +984,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -1005,7 +1005,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -1026,7 +1026,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \Model\NoteModel[] $notes 
+     * @param \Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -1047,7 +1047,7 @@ class PackageLineModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files 
+     * @param \Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

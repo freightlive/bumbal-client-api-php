@@ -260,7 +260,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\ActivityOptionsModel $options 
+     * @param \Model\ActivityOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -281,7 +281,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ActivityFiltersModel $filters 
+     * @param \Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -302,7 +302,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -323,7 +323,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -394,7 +394,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -415,7 +415,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -436,7 +436,7 @@ class ActivityRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

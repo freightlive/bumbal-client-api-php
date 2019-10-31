@@ -186,7 +186,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\FileOptionsModel $options 
+     * @param \Model\FileOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +207,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\FileFiltersModel $filters 
+     * @param \Model\FileFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -228,7 +228,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -249,7 +249,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -270,7 +270,7 @@ class FileRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

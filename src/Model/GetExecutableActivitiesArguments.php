@@ -176,7 +176,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\GetExecutableActivitiesDataModel $data 
+     * @param \Model\GetExecutableActivitiesDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\GetExecutableActivitiesOptionsModel $options 
+     * @param \Model\GetExecutableActivitiesOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\GetExecutableActivitiesFiltersModel $filters 
+     * @param \Model\GetExecutableActivitiesFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

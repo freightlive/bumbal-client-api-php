@@ -201,7 +201,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_phone_nrs
-     * @param bool $include_phone_nrs 
+     * @param bool $include_phone_nrs
      * @return $this
      */
     public function setIncludePhoneNrs($include_phone_nrs)
@@ -222,7 +222,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_emails
-     * @param bool $include_emails 
+     * @param bool $include_emails
      * @return $this
      */
     public function setIncludeEmails($include_emails)
@@ -243,7 +243,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_tags
-     * @param bool $include_address_tags 
+     * @param bool $include_address_tags
      * @return $this
      */
     public function setIncludeAddressTags($include_address_tags)
@@ -264,7 +264,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_party_info
-     * @param bool $include_party_info 
+     * @param bool $include_party_info
      * @return $this
      */
     public function setIncludePartyInfo($include_party_info)
@@ -285,7 +285,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_type_names
-     * @param bool $include_address_type_names 
+     * @param bool $include_address_type_names
      * @return $this
      */
     public function setIncludeAddressTypeNames($include_address_type_names)
@@ -306,7 +306,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_meta_data
-     * @param bool $include_address_meta_data 
+     * @param bool $include_address_meta_data
      * @return $this
      */
     public function setIncludeAddressMetaData($include_address_meta_data)
@@ -327,7 +327,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_files
-     * @param bool $include_address_files 
+     * @param bool $include_address_files
      * @return $this
      */
     public function setIncludeAddressFiles($include_address_files)
@@ -348,7 +348,7 @@ class AddressOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_notes
-     * @param bool $include_address_notes 
+     * @param bool $include_address_notes
      * @return $this
      */
     public function setIncludeAddressNotes($include_address_notes)

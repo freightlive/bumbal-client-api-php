@@ -181,7 +181,7 @@ class BrandListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\BrandModel[] $items 
+     * @param \Model\BrandModel[] $items
      * @return $this
      */
     public function setItems($items)

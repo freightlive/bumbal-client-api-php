@@ -451,7 +451,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags 
+     * @param \Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -514,7 +514,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -535,7 +535,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -556,7 +556,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \Model\NoteModel[] $notes 
+     * @param \Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -577,7 +577,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files 
+     * @param \Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -640,7 +640,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets party_created_by_user
-     * @param \Model\UsersModel $party_created_by_user 
+     * @param \Model\UsersModel $party_created_by_user
      * @return $this
      */
     public function setPartyCreatedByUser($party_created_by_user)
@@ -661,7 +661,7 @@ class PartyModel implements ArrayAccess
 
     /**
      * Sets party_updated_by_user
-     * @param \Model\UsersModel $party_updated_by_user 
+     * @param \Model\UsersModel $party_updated_by_user
      * @return $this
      */
     public function setPartyUpdatedByUser($party_updated_by_user)

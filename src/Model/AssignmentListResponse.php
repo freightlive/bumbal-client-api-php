@@ -181,7 +181,7 @@ class AssignmentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\AssignmentModel[] $items 
+     * @param \Model\AssignmentModel[] $items
      * @return $this
      */
     public function setItems($items)

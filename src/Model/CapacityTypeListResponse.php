@@ -181,7 +181,7 @@ class CapacityTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\CapacityTypeModel[] $items 
+     * @param \Model\CapacityTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

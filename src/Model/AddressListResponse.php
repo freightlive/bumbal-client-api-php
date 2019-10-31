@@ -181,7 +181,7 @@ class AddressListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\AddressModel[] $items 
+     * @param \Model\AddressModel[] $items
      * @return $this
      */
     public function setItems($items)

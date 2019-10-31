@@ -166,7 +166,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activities
-     * @param bool $include_activities 
+     * @param bool $include_activities
      * @return $this
      */
     public function setIncludeActivities($include_activities)

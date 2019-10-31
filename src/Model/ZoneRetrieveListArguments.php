@@ -186,7 +186,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\ZoneOptionsModel $options 
+     * @param \Model\ZoneOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +207,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ZoneFiltersModel $filters 
+     * @param \Model\ZoneFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -228,7 +228,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -249,7 +249,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -270,7 +270,7 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)

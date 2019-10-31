@@ -166,7 +166,7 @@ class RemoveActivitiesFromRouteArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ActivityFiltersModel $filters 
+     * @param \Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

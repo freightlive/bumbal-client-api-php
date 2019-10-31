@@ -243,7 +243,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \Model\TagModel[] $tags 
+     * @param \Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -264,7 +264,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -285,7 +285,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -306,7 +306,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets brand_colours
-     * @param \Model\BrandColourModel[] $brand_colours 
+     * @param \Model\BrandColourModel[] $brand_colours
      * @return $this
      */
     public function setBrandColours($brand_colours)
@@ -327,7 +327,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \Model\FileModel[] $files 
+     * @param \Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -348,7 +348,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets portal_settings
-     * @param \Model\PortalSettingModel[] $portal_settings 
+     * @param \Model\PortalSettingModel[] $portal_settings
      * @return $this
      */
     public function setPortalSettings($portal_settings)

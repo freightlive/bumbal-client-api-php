@@ -296,7 +296,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets uom
-     * @param \Model\UomModel $uom 
+     * @param \Model\UomModel $uom
      * @return $this
      */
     public function setUom($uom)

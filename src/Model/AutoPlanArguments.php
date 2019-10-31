@@ -176,7 +176,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\AutoPlanDataModel $data 
+     * @param \Model\AutoPlanDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\AutoPlanOptionsModel $options 
+     * @param \Model\AutoPlanOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\AutoPlanFiltersModel $filters 
+     * @param \Model\AutoPlanFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

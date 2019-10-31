@@ -181,7 +181,7 @@ class PackageLineListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\PackageLineModel[] $items 
+     * @param \Model\PackageLineModel[] $items
      * @return $this
      */
     public function setItems($items)

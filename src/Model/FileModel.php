@@ -241,7 +241,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -262,7 +262,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param string $uuid 
+     * @param string $uuid
      * @return $this
      */
     public function setUuid($uuid)
@@ -283,7 +283,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_id
-     * @param int $file_type_id 
+     * @param int $file_type_id
      * @return $this
      */
     public function setFileTypeId($file_type_id)
@@ -304,7 +304,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets file_type_name
-     * @param string $file_type_name 
+     * @param string $file_type_name
      * @return $this
      */
     public function setFileTypeName($file_type_name)
@@ -325,7 +325,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_id
-     * @param int $object_id 
+     * @param int $object_id
      * @return $this
      */
     public function setObjectId($object_id)
@@ -346,7 +346,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param int $object_type 
+     * @param int $object_type
      * @return $this
      */
     public function setObjectType($object_type)
@@ -388,7 +388,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets reference
-     * @param string $reference 
+     * @param string $reference
      * @return $this
      */
     public function setReference($reference)
@@ -409,7 +409,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets location
-     * @param string $location 
+     * @param string $location
      * @return $this
      */
     public function setLocation($location)
@@ -430,7 +430,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets base64
-     * @param string $base64 
+     * @param string $base64
      * @return $this
      */
     public function setBase64($base64)
@@ -451,7 +451,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \Model\MetaDataModel[] $meta_data 
+     * @param \Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -472,7 +472,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets created_by
-     * @param int $created_by 
+     * @param int $created_by
      * @return $this
      */
     public function setCreatedBy($created_by)
@@ -493,7 +493,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets updated_by
-     * @param int $updated_by 
+     * @param int $updated_by
      * @return $this
      */
     public function setUpdatedBy($updated_by)
@@ -556,7 +556,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \Model\LinkModel[] $links 
+     * @param \Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

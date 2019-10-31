@@ -176,7 +176,7 @@ class SettingsOptionsModel implements ArrayAccess
 
     /**
      * Sets include_settings_group_name
-     * @param bool $include_settings_group_name 
+     * @param bool $include_settings_group_name
      * @return $this
      */
     public function setIncludeSettingsGroupName($include_settings_group_name)
@@ -197,7 +197,7 @@ class SettingsOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info 
+     * @param bool $include_record_info
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -218,7 +218,7 @@ class SettingsOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_object
-     * @param bool $include_record_object 
+     * @param bool $include_record_object
      * @return $this
      */
     public function setIncludeRecordObject($include_record_object)

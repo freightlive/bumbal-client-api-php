@@ -176,7 +176,7 @@ class ApplyPlanningArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Model\ApplyPlanningDataModel $data 
+     * @param \Model\ApplyPlanningDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class ApplyPlanningArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Model\ApplyPlanningOptionsModel $options 
+     * @param \Model\ApplyPlanningOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class ApplyPlanningArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Model\ApplyPlanningFiltersModel $filters 
+     * @param \Model\ApplyPlanningFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

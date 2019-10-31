@@ -176,7 +176,7 @@ class FileCopyArguments implements ArrayAccess
 
     /**
      * Sets source_file_id
-     * @param int $source_file_id 
+     * @param int $source_file_id
      * @return $this
      */
     public function setSourceFileId($source_file_id)
@@ -197,7 +197,7 @@ class FileCopyArguments implements ArrayAccess
 
     /**
      * Sets target_object_id
-     * @param int $target_object_id 
+     * @param int $target_object_id
      * @return $this
      */
     public function setTargetObjectId($target_object_id)
@@ -218,7 +218,7 @@ class FileCopyArguments implements ArrayAccess
 
     /**
      * Sets target_object_type
-     * @param int $target_object_type 
+     * @param int $target_object_type
      * @return $this
      */
     public function setTargetObjectType($target_object_type)

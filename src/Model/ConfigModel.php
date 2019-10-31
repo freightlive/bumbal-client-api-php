@@ -171,7 +171,7 @@ class ConfigModel implements ArrayAccess
 
     /**
      * Sets options
-     * @param string $options 
+     * @param string $options
      * @return $this
      */
     public function setOptions($options)
@@ -192,7 +192,7 @@ class ConfigModel implements ArrayAccess
 
     /**
      * Sets key_ring
-     * @param string $key_ring 
+     * @param string $key_ring
      * @return $this
      */
     public function setKeyRing($key_ring)

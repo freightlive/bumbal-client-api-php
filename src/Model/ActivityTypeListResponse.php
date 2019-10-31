@@ -181,7 +181,7 @@ class ActivityTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \Model\ActivityTypeModel[] $items 
+     * @param \Model\ActivityTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

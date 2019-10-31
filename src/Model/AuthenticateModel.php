@@ -192,7 +192,7 @@ class AuthenticateModel implements ArrayAccess
 
     /**
      * Sets user
-     * @param \Model\UsersModel $user 
+     * @param \Model\UsersModel $user
      * @return $this
      */
     public function setUser($user)
