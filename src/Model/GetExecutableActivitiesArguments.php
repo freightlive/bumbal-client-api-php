@@ -176,7 +176,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\GetExecutableActivitiesDataModel $data
+     * @param \BumbalClient\Model\GetExecutableActivitiesDataModel $data 
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\GetExecutableActivitiesOptionsModel $options
+     * @param \BumbalClient\Model\GetExecutableActivitiesOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters
+     * @param \BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

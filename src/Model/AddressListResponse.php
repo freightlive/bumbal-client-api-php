@@ -181,7 +181,7 @@ class AddressListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\AddressModel[] $items
+     * @param \BumbalClient\Model\AddressModel[] $items 
      * @return $this
      */
     public function setItems($items)

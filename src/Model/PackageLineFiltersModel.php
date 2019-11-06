@@ -465,7 +465,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -486,7 +486,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -696,7 +696,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -717,7 +717,7 @@ class PackageLineFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\Model\LinkModel[] $activity_links
+     * @param \BumbalClient\Model\LinkModel[] $activity_links 
      * @return $this
      */
     public function setActivityLinks($activity_links)

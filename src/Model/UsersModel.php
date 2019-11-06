@@ -300,7 +300,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -661,7 +661,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -703,7 +703,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
      * @return $this
      */
     public function setZones($zones)
@@ -745,7 +745,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)

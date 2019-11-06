@@ -269,7 +269,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -290,7 +290,7 @@ class PackageTypeModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)

@@ -72,7 +72,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_proposed_plan_times' => 'bool',
         'include_proposed_driver' => 'bool',
         'activity_times_margins_leading' => 'bool',
-        'apply_cut_off_times' => 'bool'
+        'apply_cut_off_times' => 'bool',
+        'consider_historic_traffic_info' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -91,7 +92,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_proposed_plan_times' => 'include_proposed_plan_times',
         'include_proposed_driver' => 'include_proposed_driver',
         'activity_times_margins_leading' => 'activity_times_margins_leading',
-        'apply_cut_off_times' => 'apply_cut_off_times'
+        'apply_cut_off_times' => 'apply_cut_off_times',
+        'consider_historic_traffic_info' => 'consider_historic_traffic_info'
     );
 
     public static function attributeMap()
@@ -110,7 +112,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_proposed_plan_times' => 'setIncludeProposedPlanTimes',
         'include_proposed_driver' => 'setIncludeProposedDriver',
         'activity_times_margins_leading' => 'setActivityTimesMarginsLeading',
-        'apply_cut_off_times' => 'setApplyCutOffTimes'
+        'apply_cut_off_times' => 'setApplyCutOffTimes',
+        'consider_historic_traffic_info' => 'setConsiderHistoricTrafficInfo'
     );
 
     public static function setters()
@@ -129,7 +132,8 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         'include_proposed_plan_times' => 'getIncludeProposedPlanTimes',
         'include_proposed_driver' => 'getIncludeProposedDriver',
         'activity_times_margins_leading' => 'getActivityTimesMarginsLeading',
-        'apply_cut_off_times' => 'getApplyCutOffTimes'
+        'apply_cut_off_times' => 'getApplyCutOffTimes',
+        'consider_historic_traffic_info' => 'getConsiderHistoricTrafficInfo'
     );
 
     public static function getters()
@@ -160,6 +164,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
         $this->container['include_proposed_driver'] = isset($data['include_proposed_driver']) ? $data['include_proposed_driver'] : null;
         $this->container['activity_times_margins_leading'] = isset($data['activity_times_margins_leading']) ? $data['activity_times_margins_leading'] : null;
         $this->container['apply_cut_off_times'] = isset($data['apply_cut_off_times']) ? $data['apply_cut_off_times'] : null;
+        $this->container['consider_historic_traffic_info'] = isset($data['consider_historic_traffic_info']) ? $data['consider_historic_traffic_info'] : null;
     }
 
     /**
@@ -196,7 +201,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_impact
-     * @param bool $include_impact
+     * @param bool $include_impact 
      * @return $this
      */
     public function setIncludeImpact($include_impact)
@@ -217,7 +222,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets synchronous
-     * @param bool $synchronous
+     * @param bool $synchronous 
      * @return $this
      */
     public function setSynchronous($synchronous)
@@ -238,7 +243,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_capacities
-     * @param bool $include_capacities
+     * @param bool $include_capacities 
      * @return $this
      */
     public function setIncludeCapacities($include_capacities)
@@ -259,7 +264,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_proposed_plan_times
-     * @param bool $include_proposed_plan_times
+     * @param bool $include_proposed_plan_times 
      * @return $this
      */
     public function setIncludeProposedPlanTimes($include_proposed_plan_times)
@@ -280,7 +285,7 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_proposed_driver
-     * @param bool $include_proposed_driver
+     * @param bool $include_proposed_driver 
      * @return $this
      */
     public function setIncludeProposedDriver($include_proposed_driver)
@@ -328,6 +333,27 @@ class CheckAvailabilityOptionsModel implements ArrayAccess
     public function setApplyCutOffTimes($apply_cut_off_times)
     {
         $this->container['apply_cut_off_times'] = $apply_cut_off_times;
+
+        return $this;
+    }
+
+    /**
+     * Gets consider_historic_traffic_info
+     * @return bool
+     */
+    public function getConsiderHistoricTrafficInfo()
+    {
+        return $this->container['consider_historic_traffic_info'];
+    }
+
+    /**
+     * Sets consider_historic_traffic_info
+     * @param bool $consider_historic_traffic_info 
+     * @return $this
+     */
+    public function setConsiderHistoricTrafficInfo($consider_historic_traffic_info)
+    {
+        $this->container['consider_historic_traffic_info'] = $consider_historic_traffic_info;
 
         return $this;
     }

@@ -182,7 +182,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets activity
-     * @param \BumbalClient\Model\ActivityModel $activity
+     * @param \BumbalClient\Model\ActivityModel $activity 
      * @return $this
      */
     public function setActivity($activity)
@@ -203,7 +203,7 @@ class CheckAvailabilityDataModel implements ArrayAccess
 
     /**
      * Sets route_filters
-     * @param object $route_filters
+     * @param object $route_filters 
      * @return $this
      */
     public function setRouteFilters($route_filters)

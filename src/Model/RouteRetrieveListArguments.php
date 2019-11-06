@@ -257,7 +257,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\RouteOptionsModel $options
+     * @param \BumbalClient\Model\RouteOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -278,7 +278,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\RouteFiltersModel $filters
+     * @param \BumbalClient\Model\RouteFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
@@ -299,7 +299,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit
+     * @param int $limit 
      * @return $this
      */
     public function setLimit($limit)
@@ -320,7 +320,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset
+     * @param int $offset 
      * @return $this
      */
     public function setOffset($offset)
@@ -341,7 +341,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text
+     * @param string $search_text 
      * @return $this
      */
     public function setSearchText($search_text)
@@ -412,7 +412,7 @@ class RouteRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list
+     * @param bool $as_list 
      * @return $this
      */
     public function setAsList($as_list)

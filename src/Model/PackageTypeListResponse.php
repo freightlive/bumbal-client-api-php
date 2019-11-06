@@ -181,7 +181,7 @@ class PackageTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\Model\PackageTypeModel[] $items
+     * @param \BumbalClient\Model\PackageTypeModel[] $items 
      * @return $this
      */
     public function setItems($items)

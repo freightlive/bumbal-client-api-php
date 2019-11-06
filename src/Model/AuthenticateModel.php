@@ -192,7 +192,7 @@ class AuthenticateModel implements ArrayAccess
 
     /**
      * Sets user
-     * @param \BumbalClient\Model\UsersModel $user
+     * @param \BumbalClient\Model\UsersModel $user 
      * @return $this
      */
     public function setUser($user)

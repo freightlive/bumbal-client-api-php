@@ -186,7 +186,7 @@ class GPSLocationModel implements ArrayAccess
 
     /**
      * Sets longitude
-     * @param float $longitude
+     * @param float $longitude 
      * @return $this
      */
     public function setLongitude($longitude)
@@ -207,7 +207,7 @@ class GPSLocationModel implements ArrayAccess
 
     /**
      * Sets altitude
-     * @param float $altitude
+     * @param float $altitude 
      * @return $this
      */
     public function setAltitude($altitude)
@@ -228,7 +228,7 @@ class GPSLocationModel implements ArrayAccess
 
     /**
      * Sets latitude
-     * @param float $latitude
+     * @param float $latitude 
      * @return $this
      */
     public function setLatitude($latitude)
@@ -249,7 +249,7 @@ class GPSLocationModel implements ArrayAccess
 
     /**
      * Sets heading
-     * @param int $heading
+     * @param int $heading 
      * @return $this
      */
     public function setHeading($heading)
@@ -270,7 +270,7 @@ class GPSLocationModel implements ArrayAccess
 
     /**
      * Sets timestamp
-     * @param int $timestamp
+     * @param int $timestamp 
      * @return $this
      */
     public function setTimestamp($timestamp)

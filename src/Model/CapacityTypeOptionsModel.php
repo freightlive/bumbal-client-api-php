@@ -176,7 +176,7 @@ class CapacityTypeOptionsModel implements ArrayAccess
 
     /**
      * Sets include_uom
-     * @param bool $include_uom
+     * @param bool $include_uom 
      * @return $this
      */
     public function setIncludeUom($include_uom)
@@ -197,7 +197,7 @@ class CapacityTypeOptionsModel implements ArrayAccess
 
     /**
      * Sets include_uom_group
-     * @param bool $include_uom_group
+     * @param bool $include_uom_group 
      * @return $this
      */
     public function setIncludeUomGroup($include_uom_group)
@@ -218,7 +218,7 @@ class CapacityTypeOptionsModel implements ArrayAccess
 
     /**
      * Sets include_uom_name
-     * @param bool $include_uom_name
+     * @param bool $include_uom_name 
      * @return $this
      */
     public function setIncludeUomName($include_uom_name)

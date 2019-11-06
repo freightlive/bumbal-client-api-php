@@ -151,4 +151,12 @@ class CheckAvailabilityOptionsModelTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "consider_historic_traffic_info"
+     */
+    public function testPropertyConsiderHistoricTrafficInfo()
+    {
+
+    }
+
 }

@@ -176,7 +176,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\CheckAvailabilityDataModel $data
+     * @param \BumbalClient\Model\CheckAvailabilityDataModel $data 
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\CheckAvailabilityOptionsModel $options
+     * @param \BumbalClient\Model\CheckAvailabilityOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class CheckAvailabilityArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\CheckAvailabilityFiltersModel $filters
+     * @param \BumbalClient\Model\CheckAvailabilityFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)

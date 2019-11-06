@@ -176,7 +176,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\Model\AutoPlanDataModel $data
+     * @param \BumbalClient\Model\AutoPlanDataModel $data 
      * @return $this
      */
     public function setData($data)
@@ -197,7 +197,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AutoPlanOptionsModel $options
+     * @param \BumbalClient\Model\AutoPlanOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -218,7 +218,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters
+     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
