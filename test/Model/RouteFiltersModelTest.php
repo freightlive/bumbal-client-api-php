@@ -160,6 +160,22 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "updated_at_since"
+     */
+    public function testPropertyUpdatedAtSince()
+    {
+
+    }
+
+    /**
+     * Test attribute "updated_at_till"
+     */
+    public function testPropertyUpdatedAtTill()
+    {
+
+    }
+
+    /**
      * Test attribute "status_id"
      */
     public function testPropertyStatusId()

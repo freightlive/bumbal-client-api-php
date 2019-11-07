@@ -74,6 +74,8 @@ class RouteFiltersModel implements ArrayAccess
         'latest_date_time_since' => '\DateTime',
         'latest_date_time_till' => '\DateTime',
         'updated_at' => '\DateTime',
+        'updated_at_since' => '\DateTime',
+        'updated_at_till' => '\DateTime',
         'status_id' => 'int[]',
         'driver_id' => 'int[]',
         'recurrence_id' => 'int',
@@ -101,6 +103,8 @@ class RouteFiltersModel implements ArrayAccess
         'latest_date_time_since' => 'latest_date_time_since',
         'latest_date_time_till' => 'latest_date_time_till',
         'updated_at' => 'updated_at',
+        'updated_at_since' => 'updated_at_since',
+        'updated_at_till' => 'updated_at_till',
         'status_id' => 'status_id',
         'driver_id' => 'driver_id',
         'recurrence_id' => 'recurrence_id',
@@ -128,6 +132,8 @@ class RouteFiltersModel implements ArrayAccess
         'latest_date_time_since' => 'setLatestDateTimeSince',
         'latest_date_time_till' => 'setLatestDateTimeTill',
         'updated_at' => 'setUpdatedAt',
+        'updated_at_since' => 'setUpdatedAtSince',
+        'updated_at_till' => 'setUpdatedAtTill',
         'status_id' => 'setStatusId',
         'driver_id' => 'setDriverId',
         'recurrence_id' => 'setRecurrenceId',
@@ -155,6 +161,8 @@ class RouteFiltersModel implements ArrayAccess
         'latest_date_time_since' => 'getLatestDateTimeSince',
         'latest_date_time_till' => 'getLatestDateTimeTill',
         'updated_at' => 'getUpdatedAt',
+        'updated_at_since' => 'getUpdatedAtSince',
+        'updated_at_till' => 'getUpdatedAtTill',
         'status_id' => 'getStatusId',
         'driver_id' => 'getDriverId',
         'recurrence_id' => 'getRecurrenceId',
@@ -193,6 +201,8 @@ class RouteFiltersModel implements ArrayAccess
         $this->container['latest_date_time_since'] = isset($data['latest_date_time_since']) ? $data['latest_date_time_since'] : null;
         $this->container['latest_date_time_till'] = isset($data['latest_date_time_till']) ? $data['latest_date_time_till'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
+        $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
@@ -389,6 +399,48 @@ class RouteFiltersModel implements ArrayAccess
     public function setUpdatedAt($updated_at)
     {
         $this->container['updated_at'] = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at_since
+     * @return \DateTime
+     */
+    public function getUpdatedAtSince()
+    {
+        return $this->container['updated_at_since'];
+    }
+
+    /**
+     * Sets updated_at_since
+     * @param \DateTime $updated_at_since filter routes with an updated at date-time since this input
+     * @return $this
+     */
+    public function setUpdatedAtSince($updated_at_since)
+    {
+        $this->container['updated_at_since'] = $updated_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at_till
+     * @return \DateTime
+     */
+    public function getUpdatedAtTill()
+    {
+        return $this->container['updated_at_till'];
+    }
+
+    /**
+     * Sets updated_at_till
+     * @param \DateTime $updated_at_till filter routes with an updated at date-time till this input
+     * @return $this
+     */
+    public function setUpdatedAtTill($updated_at_till)
+    {
+        $this->container['updated_at_till'] = $updated_at_till;
 
         return $this;
     }
