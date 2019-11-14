@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class AddressReverseGeoCodeResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'addresses' => '\BumbalClient\BumbalClient\Model\AddressModel'
+        'addresses' => '\BumbalClient\Model\AddressModel'
     ];
 
     /**
@@ -162,7 +162,7 @@ class AddressReverseGeoCodeResponse implements ArrayAccess
 
     /**
      * Gets addresses
-     * @return \BumbalClient\BumbalClient\Model\AddressModel
+     * @return \BumbalClient\Model\AddressModel
      */
     public function getAddresses()
     {
@@ -171,7 +171,7 @@ class AddressReverseGeoCodeResponse implements ArrayAccess
 
     /**
      * Sets addresses
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $addresses
+     * @param \BumbalClient\Model\AddressModel $addresses
      * @return $this
      */
     public function setAddresses($addresses)

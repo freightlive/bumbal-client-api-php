@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class AssignmentListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalClient\BumbalClient\Model\AssignmentModel[]',
+        'items' => '\BumbalClient\Model\AssignmentModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class AssignmentListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalClient\BumbalClient\Model\AssignmentModel[]
+     * @return \BumbalClient\Model\AssignmentModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class AssignmentListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\BumbalClient\Model\AssignmentModel[] $items
+     * @param \BumbalClient\Model\AssignmentModel[] $items
      * @return $this
      */
     public function setItems($items)

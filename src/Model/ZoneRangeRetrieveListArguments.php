@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\ZoneRangeOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\ZoneRangeFiltersModel',
+        'options' => '\BumbalClient\Model\ZoneRangeOptionsModel',
+        'filters' => '\BumbalClient\Model\ZoneRangeFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string'
@@ -186,7 +186,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\ZoneRangeOptionsModel
+     * @return \BumbalClient\Model\ZoneRangeOptionsModel
      */
     public function getOptions()
     {
@@ -195,7 +195,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\ZoneRangeOptionsModel $options
+     * @param \BumbalClient\Model\ZoneRangeOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +207,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\ZoneRangeFiltersModel
+     * @return \BumbalClient\Model\ZoneRangeFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +216,7 @@ class ZoneRangeRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\ZoneRangeFiltersModel $filters
+     * @param \BumbalClient\Model\ZoneRangeFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

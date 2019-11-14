@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **triggerWebHook**
-> \BumbalClient\BumbalClient\Model\ApiResponse triggerWebHook($object_id, $web_hook_name)
+> \BumbalClient\Model\ApiResponse triggerWebHook($object_id, $web_hook_name)
 
 Trigger a webhook
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

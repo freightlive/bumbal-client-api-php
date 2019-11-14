@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **updateLink**
-> \BumbalClient\BumbalClient\Model\ApiResponse updateLink($link_id, $body)
+> \BumbalClient\Model\ApiResponse updateLink($link_id, $body)
 
 Update a specific link object
 
@@ -26,7 +26,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\LinkApi();
 $link_id = 789; // int | ID of the link object to update
-$body = new \BumbalClient\BumbalClient\Model\LinkModel(); // \BumbalClient\BumbalClient\Model\LinkModel | Link object that needs to be updated
+$body = new \BumbalClient\Model\LinkModel(); // \BumbalClient\Model\LinkModel | Link object that needs to be updated
 
 try {
     $result = $api_instance->updateLink($link_id, $body);
@@ -42,11 +42,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **link_id** | **int**| ID of the link object to update |
- **body** | [**\BumbalClient\BumbalClient\Model\LinkModel**](../Model/LinkModel.md)| Link object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\Model\LinkModel**](../Model/LinkModel.md)| Link object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

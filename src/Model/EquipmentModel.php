@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -59,8 +59,8 @@ class EquipmentModel implements ArrayAccess
         'info' => 'string',
         'registration_nr' => 'string',
         'applied_capacities' => 'object',
-        'capacities' => '\BumbalClient\BumbalClient\Model\CapacityModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]'
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
     /**
@@ -340,7 +340,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Gets capacities
-     * @return \BumbalClient\BumbalClient\Model\CapacityModel[]
+     * @return \BumbalClient\Model\CapacityModel[]
      */
     public function getCapacities()
     {
@@ -349,7 +349,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -361,7 +361,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -370,7 +370,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

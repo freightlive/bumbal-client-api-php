@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -64,12 +64,12 @@ class FileModel implements ArrayAccess
         'reference' => 'string',
         'location' => 'string',
         'base64' => 'string',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_by' => 'int',
         'updated_by' => 'int',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]'
     ];
 
     /**
@@ -462,7 +462,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -471,7 +471,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -567,7 +567,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -576,7 +576,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)

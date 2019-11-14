@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -57,9 +57,9 @@ class CapacityModel implements ArrayAccess
         'id' => 'int',
         'capacity_type_id' => 'int',
         'capacity_type_name' => 'string',
-        'capacity_type' => '\BumbalClient\BumbalClient\Model\CapacityTypeModel',
+        'capacity_type' => '\BumbalClient\Model\CapacityTypeModel',
         'capacity_value' => 'double',
-        'unit_values' => '\BumbalClient\BumbalClient\Model\UnitValueModel[]',
+        'unit_values' => '\BumbalClient\Model\UnitValueModel[]',
         'capacity_value_uom_name' => 'string',
         'unit_values_uom_name' => 'string'
     ];
@@ -379,7 +379,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Gets capacity_type
-     * @return \BumbalClient\BumbalClient\Model\CapacityTypeModel
+     * @return \BumbalClient\Model\CapacityTypeModel
      */
     public function getCapacityType()
     {
@@ -388,7 +388,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets capacity_type
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeModel $capacity_type
+     * @param \BumbalClient\Model\CapacityTypeModel $capacity_type
      * @return $this
      */
     public function setCapacityType($capacity_type)
@@ -421,7 +421,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Gets unit_values
-     * @return \BumbalClient\BumbalClient\Model\UnitValueModel[]
+     * @return \BumbalClient\Model\UnitValueModel[]
      */
     public function getUnitValues()
     {
@@ -430,7 +430,7 @@ class CapacityModel implements ArrayAccess
 
     /**
      * Sets unit_values
-     * @param \BumbalClient\BumbalClient\Model\UnitValueModel[] $unit_values
+     * @param \BumbalClient\Model\UnitValueModel[] $unit_values
      * @return $this
      */
     public function setUnitValues($unit_values)

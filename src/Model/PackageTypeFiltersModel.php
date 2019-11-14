@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -64,7 +64,7 @@ class PackageTypeFiltersModel implements ArrayAccess
         'package_type_name' => 'string[]',
         'package_type_id' => 'int[]',
         'applied_capacities' => 'object',
-        'capacities' => '\BumbalClient\BumbalClient\Model\CapacityModel[]',
+        'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'barcode' => 'string[]',
         'adr' => 'bool',
         'adr_class' => 'int[]',
@@ -74,8 +74,8 @@ class PackageTypeFiltersModel implements ArrayAccess
         'temp_max' => 'float',
         'hs_code' => 'string[]',
         'description' => 'string',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'activity_links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'activity_links' => '\BumbalClient\Model\LinkModel[]',
         'activity_id' => 'int[]'
     ];
 
@@ -504,7 +504,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets capacities
-     * @return \BumbalClient\BumbalClient\Model\CapacityModel[]
+     * @return \BumbalClient\Model\CapacityModel[]
      */
     public function getCapacities()
     {
@@ -513,7 +513,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -714,7 +714,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -723,7 +723,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -735,7 +735,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Gets activity_links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getActivityLinks()
     {
@@ -744,7 +744,7 @@ class PackageTypeFiltersModel implements ArrayAccess
 
     /**
      * Sets activity_links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $activity_links
+     * @param \BumbalClient\Model\LinkModel[] $activity_links
      * @return $this
      */
     public function setActivityLinks($activity_links)

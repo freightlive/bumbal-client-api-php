@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **addActivitiesToRoute**
-> \BumbalClient\BumbalClient\Model\ApiResponse addActivitiesToRoute()
+> \BumbalClient\Model\ApiResponse addActivitiesToRoute()
 
 Add Activities To Route
 
@@ -48,7 +48,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **applyPlanning**
-> \BumbalClient\BumbalClient\Model\ApiResponse applyPlanning($arguments)
+> \BumbalClient\Model\ApiResponse applyPlanning($arguments)
 
 Apply a planning schema
 
@@ -79,7 +79,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\ApplyPlanningArguments(); // \BumbalClient\BumbalClient\Model\ApplyPlanningArguments | Request Arguments
+$arguments = new \BumbalClient\Model\ApplyPlanningArguments(); // \BumbalClient\Model\ApplyPlanningArguments | Request Arguments
 
 try {
     $result = $api_instance->applyPlanning($arguments);
@@ -94,11 +94,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\ApplyPlanningArguments**](../Model/ApplyPlanningArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\ApplyPlanningArguments**](../Model/ApplyPlanningArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlan**
-> \BumbalClient\BumbalClient\Model\ApiResponse autoPlan($arguments)
+> \BumbalClient\Model\ApiResponse autoPlan($arguments)
 
 Plan a certain activity in any fitting route
 
@@ -129,7 +129,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\BumbalClient\Model\AutoPlanArguments | Request Arguments
+$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
     $result = $api_instance->autoPlan($arguments);
@@ -144,11 +144,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **autoPlanResult**
-> \BumbalClient\BumbalClient\Model\ApiResponse autoPlanResult($arguments)
+> \BumbalClient\Model\ApiResponse autoPlanResult($arguments)
 
 Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 
@@ -179,7 +179,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\BumbalClient\Model\AutoPlanArguments | Request Arguments
+$arguments = new \BumbalClient\Model\AutoPlanArguments(); // \BumbalClient\Model\AutoPlanArguments | Request Arguments
 
 try {
     $result = $api_instance->autoPlanResult($arguments);
@@ -194,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\AutoPlanArguments**](../Model/AutoPlanArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **changeActivitySequence**
-> \BumbalClient\BumbalClient\Model\ApiResponse changeActivitySequence()
+> \BumbalClient\Model\ApiResponse changeActivitySequence()
 
 Change Activity Sequence
 
@@ -244,7 +244,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkAvailability**
-> \BumbalClient\BumbalClient\Model\ApiResponse checkAvailability($arguments)
+> \BumbalClient\Model\ApiResponse checkAvailability($arguments)
 
 check availability in planning for a certain set of activity properties
 
@@ -275,7 +275,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
+$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
     $result = $api_instance->checkAvailability($arguments);
@@ -290,11 +290,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkAvailabilityResult**
-> \BumbalClient\BumbalClient\Model\ApiResponse checkAvailabilityResult($arguments)
+> \BumbalClient\Model\ApiResponse checkAvailabilityResult($arguments)
 
 Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 
@@ -325,7 +325,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
+$arguments = new \BumbalClient\Model\CheckAvailabilityArguments(); // \BumbalClient\Model\CheckAvailabilityArguments | Request Arguments
 
 try {
     $result = $api_instance->checkAvailabilityResult($arguments);
@@ -340,11 +340,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\CheckAvailabilityArguments**](../Model/CheckAvailabilityArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **lockActivities**
-> \BumbalClient\BumbalClient\Model\ApiResponse lockActivities()
+> \BumbalClient\Model\ApiResponse lockActivities()
 
 Lock Activities on Route
 
@@ -390,7 +390,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **removeActivitiesFromRoute**
-> \BumbalClient\BumbalClient\Model\ApiResponse removeActivitiesFromRoute($arguments)
+> \BumbalClient\Model\ApiResponse removeActivitiesFromRoute($arguments)
 
 Remove Activities From Route
 
@@ -421,7 +421,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PlannerApi();
-$arguments = new \BumbalClient\BumbalClient\Model\RemoveActivitiesFromRouteArguments(); // \BumbalClient\BumbalClient\Model\RemoveActivitiesFromRouteArguments | Request Arguments
+$arguments = new \BumbalClient\Model\RemoveActivitiesFromRouteArguments(); // \BumbalClient\Model\RemoveActivitiesFromRouteArguments | Request Arguments
 
 try {
     $result = $api_instance->removeActivitiesFromRoute($arguments);
@@ -436,11 +436,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\RemoveActivitiesFromRouteArguments**](../Model/RemoveActivitiesFromRouteArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\RemoveActivitiesFromRouteArguments**](../Model/RemoveActivitiesFromRouteArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

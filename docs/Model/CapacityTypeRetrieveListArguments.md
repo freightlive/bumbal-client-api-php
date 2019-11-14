@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\BumbalClient\Model\CapacityTypeOptionsModel**](CapacityTypeOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\BumbalClient\Model\CapacityTypeFiltersModel**](CapacityTypeFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\Model\CapacityTypeOptionsModel**](CapacityTypeOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\Model\CapacityTypeFiltersModel**](CapacityTypeFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

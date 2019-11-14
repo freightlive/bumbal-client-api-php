@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AddressModel
+     * @return \BumbalClient\Model\AddressModel
      */
     public function retrieveAddress($address_id)
     {
@@ -109,7 +109,7 @@ class AddressApi
      *
      * @param int $address_id ID of address to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AddressModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AddressModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveAddressWithHttpInfo($address_id)
     {
@@ -157,15 +157,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AddressModel',
+                '\BumbalClient\Model\AddressModel',
                 '/address/{addressId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AddressModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AddressModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,9 +179,9 @@ class AddressApi
      *
      * Retrieve List of Addresses
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AddressListResponse
+     * @return \BumbalClient\Model\AddressListResponse
      */
     public function retrieveListAddress($arguments)
     {
@@ -194,9 +194,9 @@ class AddressApi
      *
      * Retrieve List of Addresses
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\AddressRetrieveListArguments $arguments Address RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AddressListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AddressListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListAddressWithHttpInfo($arguments)
     {
@@ -241,15 +241,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AddressListResponse',
+                '\BumbalClient\Model\AddressListResponse',
                 '/address'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AddressListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AddressListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -263,9 +263,9 @@ class AddressApi
      *
      * Reverse Geo Code a address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
+     * @param \BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AddressReverseGeoCodeResponse
+     * @return \BumbalClient\Model\AddressReverseGeoCodeResponse
      */
     public function reverseGeoCodeAddress($arguments)
     {
@@ -278,9 +278,9 @@ class AddressApi
      *
      * Reverse Geo Code a address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
+     * @param \BumbalClient\Model\AddressReverseGeoCodeArguments $arguments Address Reverse GeoCode Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AddressReverseGeoCodeResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AddressReverseGeoCodeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function reverseGeoCodeAddressWithHttpInfo($arguments)
     {
@@ -325,15 +325,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AddressReverseGeoCodeResponse',
+                '\BumbalClient\Model\AddressReverseGeoCodeResponse',
                 '/address/reverse-geo-code'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AddressReverseGeoCodeResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AddressReverseGeoCodeResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AddressReverseGeoCodeResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AddressReverseGeoCodeResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -347,9 +347,9 @@ class AddressApi
      *
      * Add a new Address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
+     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function setAddress($body = null)
     {
@@ -362,9 +362,9 @@ class AddressApi
      *
      * Add a new Address
      *
-     * @param \BumbalClient\BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
+     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setAddressWithHttpInfo($body = null)
     {
@@ -405,15 +405,15 @@ class AddressApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/address/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -85,7 +85,7 @@ class ActivityFiltersModel implements ArrayAccess
         'user_id' => 'int',
         'party_id' => 'int',
         'recurrence_id' => 'int',
-        'depot_address_links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
+        'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
         'tag_names' => 'string[]',
         'zone_names' => 'string[]',
         'link' => 'object[]',
@@ -1023,7 +1023,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Gets depot_address_links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getDepotAddressLinks()
     {
@@ -1032,7 +1032,7 @@ class ActivityFiltersModel implements ArrayAccess
 
     /**
      * Sets depot_address_links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $depot_address_links
+     * @param \BumbalClient\Model\LinkModel[] $depot_address_links
      * @return $this
      */
     public function setDepotAddressLinks($depot_address_links)

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -93,7 +93,7 @@ class AuthenticateApi
      * Check a token for validity
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function authenticateCheckToken()
     {
@@ -107,7 +107,7 @@ class AuthenticateApi
      * Check a token for validity
      *
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function authenticateCheckTokenWithHttpInfo()
     {
@@ -143,15 +143,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/authenticate/check-token'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -165,9 +165,9 @@ class AuthenticateApi
      *
      * Sign In with your user credentials
      *
-     * @param \BumbalClient\BumbalClient\Model\CredentialsModel $body Credentials object (optional)
+     * @param \BumbalClient\Model\CredentialsModel $body Credentials object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AuthenticateModel
+     * @return \BumbalClient\Model\AuthenticateModel
      */
     public function authenticateSignIn($body = null)
     {
@@ -180,9 +180,9 @@ class AuthenticateApi
      *
      * Sign In with your user credentials
      *
-     * @param \BumbalClient\BumbalClient\Model\CredentialsModel $body Credentials object (optional)
+     * @param \BumbalClient\Model\CredentialsModel $body Credentials object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AuthenticateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AuthenticateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function authenticateSignInWithHttpInfo($body = null)
     {
@@ -218,15 +218,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AuthenticateModel',
+                '\BumbalClient\Model\AuthenticateModel',
                 '/authenticate/sign-in'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AuthenticateModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AuthenticateModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AuthenticateModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AuthenticateModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -242,7 +242,7 @@ class AuthenticateApi
      *
      * @param string $token Token (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function authenticateSignOut($token)
     {
@@ -257,7 +257,7 @@ class AuthenticateApi
      *
      * @param string $token Token (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function authenticateSignOutWithHttpInfo($token)
     {
@@ -301,15 +301,15 @@ class AuthenticateApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/authenticate/sign-out'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

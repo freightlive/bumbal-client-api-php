@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteCapacityType**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteCapacityType($capacity_type_id)
+> \BumbalClient\Model\ApiResponse deleteCapacityType($capacity_type_id)
 
 Delete a capacity-type
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveCapacityType**
-> \BumbalClient\BumbalClient\Model\CapacityTypeModel retrieveCapacityType($capacity_type_id, $include_uom, $include_uom_group, $include_uom_name)
+> \BumbalClient\Model\CapacityTypeModel retrieveCapacityType($capacity_type_id, $include_uom, $include_uom_group, $include_uom_name)
 
 Find capacity-type by ID
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\CapacityTypeModel**](../Model/CapacityTypeModel.md)
+[**\BumbalClient\Model\CapacityTypeModel**](../Model/CapacityTypeModel.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListCapacityType**
-> \BumbalClient\BumbalClient\Model\CapacityTypeListResponse retrieveListCapacityType($arguments)
+> \BumbalClient\Model\CapacityTypeListResponse retrieveListCapacityType($arguments)
 
 Retrieve List of CapacityTypes
 
@@ -134,7 +134,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CapacitytypeApi();
-$arguments = new \BumbalClient\BumbalClient\Model\CapacityTypeRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\CapacityTypeRetrieveListArguments | CapacityType RetrieveList Arguments
+$arguments = new \BumbalClient\Model\CapacityTypeRetrieveListArguments(); // \BumbalClient\Model\CapacityTypeRetrieveListArguments | CapacityType RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListCapacityType($arguments);
@@ -149,11 +149,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\CapacityTypeRetrieveListArguments**](../Model/CapacityTypeRetrieveListArguments.md)| CapacityType RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\CapacityTypeRetrieveListArguments**](../Model/CapacityTypeRetrieveListArguments.md)| CapacityType RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\CapacityTypeListResponse**](../Model/CapacityTypeListResponse.md)
+[**\BumbalClient\Model\CapacityTypeListResponse**](../Model/CapacityTypeListResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setCapacityType**
-> \BumbalClient\BumbalClient\Model\ApiResponse setCapacityType($body)
+> \BumbalClient\Model\ApiResponse setCapacityType($body)
 
 Set (create or update) an CapacityType
 
@@ -184,7 +184,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\CapacitytypeApi();
-$body = new \BumbalClient\BumbalClient\Model\CapacityTypeModel(); // \BumbalClient\BumbalClient\Model\CapacityTypeModel | CapacityType model
+$body = new \BumbalClient\Model\CapacityTypeModel(); // \BumbalClient\Model\CapacityTypeModel | CapacityType model
 
 try {
     $result = $api_instance->setCapacityType($body);
@@ -199,11 +199,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\CapacityTypeModel**](../Model/CapacityTypeModel.md)| CapacityType model | [optional]
+ **body** | [**\BumbalClient\Model\CapacityTypeModel**](../Model/CapacityTypeModel.md)| CapacityType model | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

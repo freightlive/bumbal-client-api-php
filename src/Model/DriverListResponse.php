@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class DriverListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalClient\BumbalClient\Model\DriverModel[]',
+        'items' => '\BumbalClient\Model\DriverModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class DriverListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalClient\BumbalClient\Model\DriverModel[]
+     * @return \BumbalClient\Model\DriverModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class DriverListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\BumbalClient\Model\DriverModel[] $items
+     * @param \BumbalClient\Model\DriverModel[] $items
      * @return $this
      */
     public function setItems($items)

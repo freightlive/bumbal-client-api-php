@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class SayWhenRetrievePortalURLsArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filters' => '\BumbalClient\BumbalClient\Model\ActivityFiltersModel',
+        'filters' => '\BumbalClient\Model\ActivityFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -244,7 +244,7 @@ class SayWhenRetrievePortalURLsArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\ActivityFiltersModel
+     * @return \BumbalClient\Model\ActivityFiltersModel
      */
     public function getFilters()
     {
@@ -253,7 +253,7 @@ class SayWhenRetrievePortalURLsArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\ActivityFiltersModel $filters
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,9 +54,9 @@ class GetExecutableActivitiesArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\BumbalClient\BumbalClient\Model\GetExecutableActivitiesDataModel',
-        'options' => '\BumbalClient\BumbalClient\Model\GetExecutableActivitiesOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\GetExecutableActivitiesFiltersModel'
+        'data' => '\BumbalClient\Model\GetExecutableActivitiesDataModel',
+        'options' => '\BumbalClient\Model\GetExecutableActivitiesOptionsModel',
+        'filters' => '\BumbalClient\Model\GetExecutableActivitiesFiltersModel'
     ];
 
     /**
@@ -174,7 +174,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \BumbalClient\BumbalClient\Model\GetExecutableActivitiesDataModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesDataModel
      */
     public function getData()
     {
@@ -183,7 +183,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\BumbalClient\Model\GetExecutableActivitiesDataModel $data
+     * @param \BumbalClient\Model\GetExecutableActivitiesDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -195,7 +195,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\GetExecutableActivitiesOptionsModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesOptionsModel
      */
     public function getOptions()
     {
@@ -204,7 +204,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\GetExecutableActivitiesOptionsModel $options
+     * @param \BumbalClient\Model\GetExecutableActivitiesOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\GetExecutableActivitiesFiltersModel
+     * @return \BumbalClient\Model\GetExecutableActivitiesFiltersModel
      */
     public function getFilters()
     {
@@ -225,7 +225,7 @@ class GetExecutableActivitiesArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters
+     * @param \BumbalClient\Model\GetExecutableActivitiesFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

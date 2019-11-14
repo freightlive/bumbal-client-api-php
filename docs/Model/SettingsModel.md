@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **value** | **string** | Set value for setting | [optional] 
 **setting_updated_at** | [**\DateTime**](\DateTime.md) | updated_at date time | [optional] 
 **setting_updated_by** | **int** | updated_by user id | [optional] 
-**setting_updated_by_user** | [**\BumbalClient\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
+**setting_updated_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

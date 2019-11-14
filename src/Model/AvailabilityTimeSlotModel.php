@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -60,8 +60,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'date_time_to' => '\DateTime',
         'proposed_plan_date_time_from' => '\DateTime',
         'proposed_plan_date_time_to' => '\DateTime',
-        'proposed_driver' => '\BumbalClient\BumbalClient\Model\DriverModel',
-        'impact' => '\BumbalClient\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]'
+        'proposed_driver' => '\BumbalClient\Model\DriverModel',
+        'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]'
     ];
 
     /**
@@ -330,7 +330,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets proposed_driver
-     * @return \BumbalClient\BumbalClient\Model\DriverModel
+     * @return \BumbalClient\Model\DriverModel
      */
     public function getProposedDriver()
     {
@@ -339,7 +339,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_driver
-     * @param \BumbalClient\BumbalClient\Model\DriverModel $proposed_driver
+     * @param \BumbalClient\Model\DriverModel $proposed_driver
      * @return $this
      */
     public function setProposedDriver($proposed_driver)
@@ -351,7 +351,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets impact
-     * @return \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]
+     * @return \BumbalClient\Model\AvailabilityTimeSlotImpactModel[]
      */
     public function getImpact()
     {
@@ -360,7 +360,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets impact
-     * @param \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact
+     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact
      * @return $this
      */
     public function setImpact($impact)

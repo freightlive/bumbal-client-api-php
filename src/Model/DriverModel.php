@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -56,19 +56,19 @@ class DriverModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'uuid' => 'string',
-        'addresses' => '\BumbalClient\BumbalClient\Model\AddressModel[]',
+        'addresses' => '\BumbalClient\Model\AddressModel[]',
         'tag_names' => 'string[]',
         'first_name' => 'string',
         'last_name' => 'string',
         'prefix' => 'string',
         'full_name' => 'string',
         'email' => 'string',
-        'tags' => '\BumbalClient\BumbalClient\Model\TagModel[]',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
         'removed' => 'bool',
         'active' => 'bool',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'files' => '\BumbalClient\BumbalClient\Model\FileModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'driver_created_at' => '\DateTime',
         'driver_updated_at' => '\DateTime',
         'driver_created_by' => 'int',
@@ -318,7 +318,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets addresses
-     * @return \BumbalClient\BumbalClient\Model\AddressModel[]
+     * @return \BumbalClient\Model\AddressModel[]
      */
     public function getAddresses()
     {
@@ -327,7 +327,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets addresses
-     * @param \BumbalClient\BumbalClient\Model\AddressModel[] $addresses user address (mostly interesting for drivers)
+     * @param \BumbalClient\Model\AddressModel[] $addresses user address (mostly interesting for drivers)
      * @return $this
      */
     public function setAddresses($addresses)
@@ -465,7 +465,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient\BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -474,7 +474,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -486,7 +486,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -495,7 +495,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -549,7 +549,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -558,7 +558,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -570,7 +570,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \BumbalClient\BumbalClient\Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -579,7 +579,7 @@ class DriverModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

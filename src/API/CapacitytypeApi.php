@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class CapacitytypeApi
      *
      * @param int $capacity_type_id ID of the capacity-type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteCapacityType($capacity_type_id)
     {
@@ -109,7 +109,7 @@ class CapacitytypeApi
      *
      * @param int $capacity_type_id ID of the capacity-type to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCapacityTypeWithHttpInfo($capacity_type_id)
     {
@@ -157,15 +157,15 @@ class CapacitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/capacity-type/{capacityTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -184,7 +184,7 @@ class CapacitytypeApi
      * @param bool $include_uom_group Include uom group (optional, default to false)
      * @param bool $include_uom_name Include uom name (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\CapacityTypeModel
+     * @return \BumbalClient\Model\CapacityTypeModel
      */
     public function retrieveCapacityType($capacity_type_id, $include_uom = 'false', $include_uom_group = 'false', $include_uom_name = 'false')
     {
@@ -202,7 +202,7 @@ class CapacitytypeApi
      * @param bool $include_uom_group Include uom group (optional, default to false)
      * @param bool $include_uom_name Include uom name (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\CapacityTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CapacityTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveCapacityTypeWithHttpInfo($capacity_type_id, $include_uom = 'false', $include_uom_group = 'false', $include_uom_name = 'false')
     {
@@ -262,15 +262,15 @@ class CapacitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\CapacityTypeModel',
+                '\BumbalClient\Model\CapacityTypeModel',
                 '/capacity-type/{capacityTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\CapacityTypeModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CapacityTypeModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\CapacityTypeModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CapacityTypeModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -284,9 +284,9 @@ class CapacitytypeApi
      *
      * Retrieve List of CapacityTypes
      *
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeRetrieveListArguments $arguments CapacityType RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\CapacityTypeRetrieveListArguments $arguments CapacityType RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\CapacityTypeListResponse
+     * @return \BumbalClient\Model\CapacityTypeListResponse
      */
     public function retrieveListCapacityType($arguments)
     {
@@ -299,9 +299,9 @@ class CapacitytypeApi
      *
      * Retrieve List of CapacityTypes
      *
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeRetrieveListArguments $arguments CapacityType RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\CapacityTypeRetrieveListArguments $arguments CapacityType RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\CapacityTypeListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\CapacityTypeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListCapacityTypeWithHttpInfo($arguments)
     {
@@ -346,15 +346,15 @@ class CapacitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\CapacityTypeListResponse',
+                '\BumbalClient\Model\CapacityTypeListResponse',
                 '/capacity-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\CapacityTypeListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\CapacityTypeListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\CapacityTypeListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\CapacityTypeListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,9 +368,9 @@ class CapacitytypeApi
      *
      * Set (create or update) an CapacityType
      *
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeModel $body CapacityType model (optional)
+     * @param \BumbalClient\Model\CapacityTypeModel $body CapacityType model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function setCapacityType($body = null)
     {
@@ -383,9 +383,9 @@ class CapacitytypeApi
      *
      * Set (create or update) an CapacityType
      *
-     * @param \BumbalClient\BumbalClient\Model\CapacityTypeModel $body CapacityType model (optional)
+     * @param \BumbalClient\Model\CapacityTypeModel $body CapacityType model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setCapacityTypeWithHttpInfo($body = null)
     {
@@ -426,15 +426,15 @@ class CapacitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/capacity-type/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

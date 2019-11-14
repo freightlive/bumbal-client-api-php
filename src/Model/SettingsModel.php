@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -61,7 +61,7 @@ class SettingsModel implements ArrayAccess
         'value' => 'string',
         'setting_updated_at' => '\DateTime',
         'setting_updated_by' => 'int',
-        'setting_updated_by_user' => '\BumbalClient\BumbalClient\Model\UsersModel'
+        'setting_updated_by_user' => '\BumbalClient\Model\UsersModel'
     ];
 
     /**
@@ -398,7 +398,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Gets setting_updated_by_user
-     * @return \BumbalClient\BumbalClient\Model\UsersModel
+     * @return \BumbalClient\Model\UsersModel
      */
     public function getSettingUpdatedByUser()
     {
@@ -407,7 +407,7 @@ class SettingsModel implements ArrayAccess
 
     /**
      * Sets setting_updated_by_user
-     * @param \BumbalClient\BumbalClient\Model\UsersModel $setting_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $setting_updated_by_user
      * @return $this
      */
     public function setSettingUpdatedByUser($setting_updated_by_user)

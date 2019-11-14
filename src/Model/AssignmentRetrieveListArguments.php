@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class AssignmentRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\AssignmentOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\AssignmentFiltersModel',
+        'options' => '\BumbalClient\Model\AssignmentOptionsModel',
+        'filters' => '\BumbalClient\Model\AssignmentFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string',
@@ -256,7 +256,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\AssignmentOptionsModel
+     * @return \BumbalClient\Model\AssignmentOptionsModel
      */
     public function getOptions()
     {
@@ -265,7 +265,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\AssignmentOptionsModel $options
+     * @param \BumbalClient\Model\AssignmentOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -277,7 +277,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\AssignmentFiltersModel
+     * @return \BumbalClient\Model\AssignmentFiltersModel
      */
     public function getFilters()
     {
@@ -286,7 +286,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\AssignmentFiltersModel $filters
+     * @param \BumbalClient\Model\AssignmentFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

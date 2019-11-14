@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class TrailerRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\TrailerOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\TrailerFiltersModel',
+        'options' => '\BumbalClient\Model\TrailerOptionsModel',
+        'filters' => '\BumbalClient\Model\TrailerFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'sorting_column' => 'string',
@@ -254,7 +254,7 @@ class TrailerRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\TrailerOptionsModel
+     * @return \BumbalClient\Model\TrailerOptionsModel
      */
     public function getOptions()
     {
@@ -263,7 +263,7 @@ class TrailerRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\TrailerOptionsModel $options
+     * @param \BumbalClient\Model\TrailerOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -275,7 +275,7 @@ class TrailerRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\TrailerFiltersModel
+     * @return \BumbalClient\Model\TrailerFiltersModel
      */
     public function getFilters()
     {
@@ -284,7 +284,7 @@ class TrailerRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\TrailerFiltersModel $filters
+     * @param \BumbalClient\Model\TrailerFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

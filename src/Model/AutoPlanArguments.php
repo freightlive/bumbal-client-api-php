@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,9 +54,9 @@ class AutoPlanArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => '\BumbalClient\BumbalClient\Model\AutoPlanDataModel',
-        'options' => '\BumbalClient\BumbalClient\Model\AutoPlanOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\AutoPlanFiltersModel'
+        'data' => '\BumbalClient\Model\AutoPlanDataModel',
+        'options' => '\BumbalClient\Model\AutoPlanOptionsModel',
+        'filters' => '\BumbalClient\Model\AutoPlanFiltersModel'
     ];
 
     /**
@@ -174,7 +174,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets data
-     * @return \BumbalClient\BumbalClient\Model\AutoPlanDataModel
+     * @return \BumbalClient\Model\AutoPlanDataModel
      */
     public function getData()
     {
@@ -183,7 +183,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets data
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanDataModel $data
+     * @param \BumbalClient\Model\AutoPlanDataModel $data
      * @return $this
      */
     public function setData($data)
@@ -195,7 +195,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\AutoPlanOptionsModel
+     * @return \BumbalClient\Model\AutoPlanOptionsModel
      */
     public function getOptions()
     {
@@ -204,7 +204,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanOptionsModel $options
+     * @param \BumbalClient\Model\AutoPlanOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -216,7 +216,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\AutoPlanFiltersModel
+     * @return \BumbalClient\Model\AutoPlanFiltersModel
      */
     public function getFilters()
     {
@@ -225,7 +225,7 @@ class AutoPlanArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\AutoPlanFiltersModel $filters
+     * @param \BumbalClient\Model\AutoPlanFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

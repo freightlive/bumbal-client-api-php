@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -92,9 +92,9 @@ class TrailerApi
      *
      * Add a trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object that needs to be created (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function createTrailer($body = null)
     {
@@ -107,9 +107,9 @@ class TrailerApi
      *
      * Add a trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object that needs to be created (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTrailerWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/trailer'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -174,7 +174,7 @@ class TrailerApi
      *
      * @param int $trailer_id ID of the trailer to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteTrailer($trailer_id)
     {
@@ -189,7 +189,7 @@ class TrailerApi
      *
      * @param int $trailer_id ID of the trailer to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTrailerWithHttpInfo($trailer_id)
     {
@@ -237,15 +237,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/trailer/{trailerId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -259,9 +259,9 @@ class TrailerApi
      *
      * Retrieve List of Trailers
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerRetrieveListArguments $arguments Trailer RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\TrailerRetrieveListArguments $arguments Trailer RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\TrailerModel[]
+     * @return \BumbalClient\Model\TrailerModel[]
      */
     public function retrieveListTrailer($arguments)
     {
@@ -274,9 +274,9 @@ class TrailerApi
      *
      * Retrieve List of Trailers
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerRetrieveListArguments $arguments Trailer RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\TrailerRetrieveListArguments $arguments Trailer RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\TrailerModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TrailerModel[], HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListTrailerWithHttpInfo($arguments)
     {
@@ -321,15 +321,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\TrailerModel[]',
+                '\BumbalClient\Model\TrailerModel[]',
                 '/trailer'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\TrailerModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TrailerModel[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\TrailerModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TrailerModel[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -347,7 +347,7 @@ class TrailerApi
      * @param bool $include_trailer_tags a list of tags bound to trailer (required)
      * @param bool $include_updated_by include updated_by_name (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\TrailerModel
+     * @return \BumbalClient\Model\TrailerModel
      */
     public function retrieveTrailer($trailer_id, $include_trailer_tags, $include_updated_by)
     {
@@ -364,7 +364,7 @@ class TrailerApi
      * @param bool $include_trailer_tags a list of tags bound to trailer (required)
      * @param bool $include_updated_by include updated_by_name (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\TrailerModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TrailerModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveTrailerWithHttpInfo($trailer_id, $include_trailer_tags, $include_updated_by)
     {
@@ -428,15 +428,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\TrailerModel',
+                '\BumbalClient\Model\TrailerModel',
                 '/trailer/{trailerId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\TrailerModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TrailerModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\TrailerModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TrailerModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -450,9 +450,9 @@ class TrailerApi
      *
      * Set (create or update) a trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function setTrailer($body = null)
     {
@@ -465,9 +465,9 @@ class TrailerApi
      *
      * Set (create or update) a trailer
      *
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setTrailerWithHttpInfo($body = null)
     {
@@ -508,15 +508,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/trailer/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -531,9 +531,9 @@ class TrailerApi
      * Update a trailer
      *
      * @param int $trailer_id ID of trailer to update (required)
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object that needs to be updated (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updateTrailer($trailer_id, $body = null)
     {
@@ -547,9 +547,9 @@ class TrailerApi
      * Update a trailer
      *
      * @param int $trailer_id ID of trailer to update (required)
-     * @param \BumbalClient\BumbalClient\Model\TrailerModel $body Trailer object that needs to be updated (optional)
+     * @param \BumbalClient\Model\TrailerModel $body Trailer object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTrailerWithHttpInfo($trailer_id, $body = null)
     {
@@ -602,15 +602,15 @@ class TrailerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/trailer/{trailerId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

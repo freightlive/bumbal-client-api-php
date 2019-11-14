@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class ActivityTypeListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalClient\BumbalClient\Model\ActivityTypeModel[]',
+        'items' => '\BumbalClient\Model\ActivityTypeModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class ActivityTypeListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalClient\BumbalClient\Model\ActivityTypeModel[]
+     * @return \BumbalClient\Model\ActivityTypeModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class ActivityTypeListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\BumbalClient\Model\ActivityTypeModel[] $items
+     * @param \BumbalClient\Model\ActivityTypeModel[] $items
      * @return $this
      */
     public function setItems($items)

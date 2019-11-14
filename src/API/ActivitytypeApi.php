@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class ActivitytypeApi
      *
      * @param int $activity_type_id ID of ActivityType to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ActivityTypeModel
+     * @return \BumbalClient\Model\ActivityTypeModel
      */
     public function retrieveActivityType($activity_type_id)
     {
@@ -109,7 +109,7 @@ class ActivitytypeApi
      *
      * @param int $activity_type_id ID of ActivityType to return (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ActivityTypeModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ActivityTypeModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveActivityTypeWithHttpInfo($activity_type_id)
     {
@@ -157,15 +157,15 @@ class ActivitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ActivityTypeModel',
+                '\BumbalClient\Model\ActivityTypeModel',
                 '/activity-type/{activityTypeId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ActivityTypeModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityTypeModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ActivityTypeModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityTypeModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,9 +179,9 @@ class ActivitytypeApi
      *
      * Retrieve List of ActivityTypes
      *
-     * @param \BumbalClient\BumbalClient\Model\ActivityTypeRetrieveListArguments $arguments ActivityType RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\ActivityTypeRetrieveListArguments $arguments ActivityType RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ActivityTypeListResponse
+     * @return \BumbalClient\Model\ActivityTypeListResponse
      */
     public function retrieveListActivityType($arguments)
     {
@@ -194,9 +194,9 @@ class ActivitytypeApi
      *
      * Retrieve List of ActivityTypes
      *
-     * @param \BumbalClient\BumbalClient\Model\ActivityTypeRetrieveListArguments $arguments ActivityType RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\ActivityTypeRetrieveListArguments $arguments ActivityType RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ActivityTypeListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ActivityTypeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListActivityTypeWithHttpInfo($arguments)
     {
@@ -241,15 +241,15 @@ class ActivitytypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ActivityTypeListResponse',
+                '\BumbalClient\Model\ActivityTypeListResponse',
                 '/activity-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ActivityTypeListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ActivityTypeListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ActivityTypeListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ActivityTypeListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

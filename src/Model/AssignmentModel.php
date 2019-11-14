@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -56,20 +56,20 @@ class AssignmentModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'party_id' => 'int',
-        'booking_account' => '\BumbalClient\BumbalClient\Model\PartyModel',
+        'booking_account' => '\BumbalClient\Model\PartyModel',
         'status_id' => 'int',
         'nr' => 'string',
-        'party_link' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
+        'party_link' => '\BumbalClient\Model\LinkModel[]',
         'account_name' => 'string',
         'reference' => 'string',
         'description' => 'string',
         'remarks' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
-        'links' => '\BumbalClient\BumbalClient\Model\LinkModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
-        'notes' => '\BumbalClient\BumbalClient\Model\NoteModel[]',
-        'files' => '\BumbalClient\BumbalClient\Model\FileModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
+        'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -338,7 +338,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets booking_account
-     * @return \BumbalClient\BumbalClient\Model\PartyModel
+     * @return \BumbalClient\Model\PartyModel
      */
     public function getBookingAccount()
     {
@@ -347,7 +347,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets booking_account
-     * @param \BumbalClient\BumbalClient\Model\PartyModel $booking_account
+     * @param \BumbalClient\Model\PartyModel $booking_account
      * @return $this
      */
     public function setBookingAccount($booking_account)
@@ -410,7 +410,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets party_link
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getPartyLink()
     {
@@ -419,7 +419,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets party_link
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $party_link
+     * @param \BumbalClient\Model\LinkModel[] $party_link
      * @return $this
      */
     public function setPartyLink($party_link)
@@ -557,7 +557,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets links
-     * @return \BumbalClient\BumbalClient\Model\LinkModel[]
+     * @return \BumbalClient\Model\LinkModel[]
      */
     public function getLinks()
     {
@@ -566,7 +566,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -578,7 +578,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -587,7 +587,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -599,7 +599,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets notes
-     * @return \BumbalClient\BumbalClient\Model\NoteModel[]
+     * @return \BumbalClient\Model\NoteModel[]
      */
     public function getNotes()
     {
@@ -608,7 +608,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -620,7 +620,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Gets files
-     * @return \BumbalClient\BumbalClient\Model\FileModel[]
+     * @return \BumbalClient\Model\FileModel[]
      */
     public function getFiles()
     {
@@ -629,7 +629,7 @@ class AssignmentModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

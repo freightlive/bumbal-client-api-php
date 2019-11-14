@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -59,7 +59,7 @@ class CapacityTypeModel implements ArrayAccess
         'properties' => 'string[]',
         'uom_id' => 'string',
         'uom_name' => 'string',
-        'uom' => '\BumbalClient\BumbalClient\Model\UomModel'
+        'uom' => '\BumbalClient\Model\UomModel'
     ];
 
     /**
@@ -297,7 +297,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Gets uom
-     * @return \BumbalClient\BumbalClient\Model\UomModel
+     * @return \BumbalClient\Model\UomModel
      */
     public function getUom()
     {
@@ -306,7 +306,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets uom
-     * @param \BumbalClient\BumbalClient\Model\UomModel $uom
+     * @param \BumbalClient\Model\UomModel $uom
      * @return $this
      */
     public function setUom($uom)

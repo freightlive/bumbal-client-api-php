@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class AssignmentApi
      *
      * @param int $assignment_id ID of the assignment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deleteAssignment($assignment_id)
     {
@@ -109,7 +109,7 @@ class AssignmentApi
      *
      * @param int $assignment_id ID of the assignment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAssignmentWithHttpInfo($assignment_id)
     {
@@ -157,15 +157,15 @@ class AssignmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/assignment/{assignmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -184,7 +184,7 @@ class AssignmentApi
      * @param bool $include_assignment_files Include files (required)
      * @param bool $include_assignment_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AssignmentModel
+     * @return \BumbalClient\Model\AssignmentModel
      */
     public function retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
     {
@@ -202,7 +202,7 @@ class AssignmentApi
      * @param bool $include_assignment_files Include files (required)
      * @param bool $include_assignment_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AssignmentModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AssignmentModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveAssignmentWithHttpInfo($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
     {
@@ -274,15 +274,15 @@ class AssignmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AssignmentModel',
+                '\BumbalClient\Model\AssignmentModel',
                 '/assignment/{assignmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AssignmentModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AssignmentModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AssignmentModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AssignmentModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -296,9 +296,9 @@ class AssignmentApi
      *
      * Retrieve List of Assignments
      *
-     * @param \BumbalClient\BumbalClient\Model\AssignmentRetrieveListArguments $arguments Assignment RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\AssignmentRetrieveListArguments $arguments Assignment RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\AssignmentListResponse
+     * @return \BumbalClient\Model\AssignmentListResponse
      */
     public function retrieveListAssignment($arguments)
     {
@@ -311,9 +311,9 @@ class AssignmentApi
      *
      * Retrieve List of Assignments
      *
-     * @param \BumbalClient\BumbalClient\Model\AssignmentRetrieveListArguments $arguments Assignment RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\AssignmentRetrieveListArguments $arguments Assignment RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\AssignmentListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\AssignmentListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListAssignmentWithHttpInfo($arguments)
     {
@@ -358,15 +358,15 @@ class AssignmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\AssignmentListResponse',
+                '\BumbalClient\Model\AssignmentListResponse',
                 '/assignment'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\AssignmentListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\AssignmentListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\AssignmentListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\AssignmentListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -380,9 +380,9 @@ class AssignmentApi
      *
      * Set (create or update) an Assignment
      *
-     * @param \BumbalClient\BumbalClient\Model\AssignmentModel $body Assignment object (optional)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function setAssignment($body = null)
     {
@@ -395,9 +395,9 @@ class AssignmentApi
      *
      * Set (create or update) an Assignment
      *
-     * @param \BumbalClient\BumbalClient\Model\AssignmentModel $body Assignment object (optional)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setAssignmentWithHttpInfo($body = null)
     {
@@ -438,15 +438,15 @@ class AssignmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/assignment/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -461,9 +461,9 @@ class AssignmentApi
      * Update a assignment
      *
      * @param int $assignment_id ID of assignment to update (required)
-     * @param \BumbalClient\BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updateAssignment($assignment_id, $body = null)
     {
@@ -477,9 +477,9 @@ class AssignmentApi
      * Update a assignment
      *
      * @param int $assignment_id ID of assignment to update (required)
-     * @param \BumbalClient\BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
+     * @param \BumbalClient\Model\AssignmentModel $body Assignment object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAssignmentWithHttpInfo($assignment_id, $body = null)
     {
@@ -532,15 +532,15 @@ class AssignmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/assignment/{assignmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -56,8 +56,8 @@ class CheckAvailabilityResponse implements ArrayAccess
     protected static $swaggerTypes = [
         'token' => 'string',
         'status' => 'string',
-        'available_timewindows' => '\BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[]',
-        'unavailable_timewindows' => '\BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[]',
+        'available_timewindows' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]',
+        'unavailable_timewindows' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]',
         'latest_analyzed_date' => '\DateTime'
     ];
 
@@ -265,7 +265,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets available_timewindows
-     * @return \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[]
+     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
      */
     public function getAvailableTimewindows()
     {
@@ -274,7 +274,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets available_timewindows
-     * @param \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[] $available_timewindows
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $available_timewindows
      * @return $this
      */
     public function setAvailableTimewindows($available_timewindows)
@@ -286,7 +286,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Gets unavailable_timewindows
-     * @return \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[]
+     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
      */
     public function getUnavailableTimewindows()
     {
@@ -295,7 +295,7 @@ class CheckAvailabilityResponse implements ArrayAccess
 
     /**
      * Sets unavailable_timewindows
-     * @param \BumbalClient\BumbalClient\Model\AvailabilityTimeSlotModel[] $unavailable_timewindows
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $unavailable_timewindows
      * @return $this
      */
     public function setUnavailableTimewindows($unavailable_timewindows)

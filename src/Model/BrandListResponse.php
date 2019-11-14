@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class BrandListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalClient\BumbalClient\Model\BrandModel[]',
+        'items' => '\BumbalClient\Model\BrandModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class BrandListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalClient\BumbalClient\Model\BrandModel[]
+     * @return \BumbalClient\Model\BrandModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class BrandListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\BumbalClient\Model\BrandModel[] $items
+     * @param \BumbalClient\Model\BrandModel[] $items
      * @return $this
      */
     public function setItems($items)

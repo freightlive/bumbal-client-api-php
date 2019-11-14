@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class AuthenticateModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'token' => 'string',
-        'user' => '\BumbalClient\BumbalClient\Model\UsersModel'
+        'user' => '\BumbalClient\Model\UsersModel'
     ];
 
     /**
@@ -189,7 +189,7 @@ class AuthenticateModel implements ArrayAccess
 
     /**
      * Gets user
-     * @return \BumbalClient\BumbalClient\Model\UsersModel
+     * @return \BumbalClient\Model\UsersModel
      */
     public function getUser()
     {
@@ -198,7 +198,7 @@ class AuthenticateModel implements ArrayAccess
 
     /**
      * Sets user
-     * @param \BumbalClient\BumbalClient\Model\UsersModel $user
+     * @param \BumbalClient\Model\UsersModel $user
      * @return $this
      */
     public function setUser($user)

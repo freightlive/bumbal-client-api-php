@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteFile**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteFile($file_id)
+> \BumbalClient\Model\ApiResponse deleteFile($file_id)
 
 Delete an File
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileCopy**
-> \BumbalClient\BumbalClient\Model\ApiResponse fileCopy($arguments)
+> \BumbalClient\Model\ApiResponse fileCopy($arguments)
 
 Copy File
 
@@ -79,7 +79,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
-$arguments = new \BumbalClient\BumbalClient\Model\FileCopyArguments(); // \BumbalClient\BumbalClient\Model\FileCopyArguments | Request Arguments
+$arguments = new \BumbalClient\Model\FileCopyArguments(); // \BumbalClient\Model\FileCopyArguments | Request Arguments
 
 try {
     $result = $api_instance->fileCopy($arguments);
@@ -94,11 +94,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\FileCopyArguments**](../Model/FileCopyArguments.md)| Request Arguments |
+ **arguments** | [**\BumbalClient\Model\FileCopyArguments**](../Model/FileCopyArguments.md)| Request Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveFile**
-> \BumbalClient\BumbalClient\Model\FileModel retrieveFile($file_id)
+> \BumbalClient\Model\FileModel retrieveFile($file_id)
 
 Retrieve a File
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\FileModel**](../Model/FileModel.md)
+[**\BumbalClient\Model\FileModel**](../Model/FileModel.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListFile**
-> \BumbalClient\BumbalClient\Model\FileModel[] retrieveListFile($arguments)
+> \BumbalClient\Model\FileModel[] retrieveListFile($arguments)
 
 Retrieve List of Files
 
@@ -179,7 +179,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
-$arguments = new \BumbalClient\BumbalClient\Model\FileRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\FileRetrieveListArguments | File RetrieveList Arguments
+$arguments = new \BumbalClient\Model\FileRetrieveListArguments(); // \BumbalClient\Model\FileRetrieveListArguments | File RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListFile($arguments);
@@ -194,11 +194,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\FileRetrieveListArguments**](../Model/FileRetrieveListArguments.md)| File RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\FileRetrieveListArguments**](../Model/FileRetrieveListArguments.md)| File RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\FileModel[]**](../Model/FileModel.md)
+[**\BumbalClient\Model\FileModel[]**](../Model/FileModel.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setFile**
-> \BumbalClient\BumbalClient\Model\ApiResponse setFile($body)
+> \BumbalClient\Model\ApiResponse setFile($body)
 
 Create or Update a File Object
 
@@ -229,7 +229,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\FileApi();
-$body = new \BumbalClient\BumbalClient\Model\FileModel(); // \BumbalClient\BumbalClient\Model\FileModel | File object that needs to be set
+$body = new \BumbalClient\Model\FileModel(); // \BumbalClient\Model\FileModel | File object that needs to be set
 
 try {
     $result = $api_instance->setFile($body);
@@ -244,11 +244,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be set | [optional]
+ **body** | [**\BumbalClient\Model\FileModel**](../Model/FileModel.md)| File object that needs to be set | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

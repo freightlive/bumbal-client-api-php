@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -56,7 +56,7 @@ class PortalModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
-        'portal_settings' => '\BumbalClient\BumbalClient\Model\PortalSettingModel[]'
+        'portal_settings' => '\BumbalClient\Model\PortalSettingModel[]'
     ];
 
     /**
@@ -216,7 +216,7 @@ class PortalModel implements ArrayAccess
 
     /**
      * Gets portal_settings
-     * @return \BumbalClient\BumbalClient\Model\PortalSettingModel[]
+     * @return \BumbalClient\Model\PortalSettingModel[]
      */
     public function getPortalSettings()
     {
@@ -225,7 +225,7 @@ class PortalModel implements ArrayAccess
 
     /**
      * Sets portal_settings
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingModel[] $portal_settings
+     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings
      * @return $this
      */
     public function setPortalSettings($portal_settings)

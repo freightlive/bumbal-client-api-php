@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteNote**
-> \BumbalClient\BumbalClient\Model\ApiResponse deleteNote($note_id)
+> \BumbalClient\Model\ApiResponse deleteNote($note_id)
 
 Delete an note
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListNote**
-> \BumbalClient\BumbalClient\Model\NoteModel[] retrieveListNote($arguments)
+> \BumbalClient\Model\NoteModel[] retrieveListNote($arguments)
 
 Retrieve List of Notes
 
@@ -78,7 +78,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\NoteApi();
-$arguments = new \BumbalClient\BumbalClient\Model\NoteRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\NoteRetrieveListArguments | Note RetrieveList Arguments
+$arguments = new \BumbalClient\Model\NoteRetrieveListArguments(); // \BumbalClient\Model\NoteRetrieveListArguments | Note RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListNote($arguments);
@@ -93,11 +93,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\BumbalClient\Model\NoteRetrieveListArguments**](../Model/NoteRetrieveListArguments.md)| Note RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\Model\NoteRetrieveListArguments**](../Model/NoteRetrieveListArguments.md)| Note RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\NoteModel[]**](../Model/NoteModel.md)
+[**\BumbalClient\Model\NoteModel[]**](../Model/NoteModel.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveNote**
-> \BumbalClient\BumbalClient\Model\NoteModel retrieveNote($note_id, $include_note_tags, $include_note_tag_type_link_ids, $include_note_object_link_ids, $include_updated_by)
+> \BumbalClient\Model\NoteModel retrieveNote($note_id, $include_note_tags, $include_note_tag_type_link_ids, $include_note_object_link_ids, $include_updated_by)
 
 Find note by ID
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)
+[**\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setNote**
-> \BumbalClient\BumbalClient\Model\ApiResponse setNote($body)
+> \BumbalClient\Model\ApiResponse setNote($body)
 
 Set (create or update) a note
 
@@ -186,7 +186,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\NoteApi();
-$body = new \BumbalClient\BumbalClient\Model\NoteModel(); // \BumbalClient\BumbalClient\Model\NoteModel | Note object
+$body = new \BumbalClient\Model\NoteModel(); // \BumbalClient\Model\NoteModel | Note object
 
 try {
     $result = $api_instance->setNote($body);
@@ -201,11 +201,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)| Note object | [optional]
+ **body** | [**\BumbalClient\Model\NoteModel**](../Model/NoteModel.md)| Note object | [optional]
 
 ### Return type
 
-[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

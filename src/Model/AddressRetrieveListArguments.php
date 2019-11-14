@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,8 +54,8 @@ class AddressRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\BumbalClient\Model\AddressOptionsModel',
-        'filters' => '\BumbalClient\BumbalClient\Model\AddressFiltersModel',
+        'options' => '\BumbalClient\Model\AddressOptionsModel',
+        'filters' => '\BumbalClient\Model\AddressFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
         'search_text' => 'string',
@@ -192,7 +192,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets options
-     * @return \BumbalClient\BumbalClient\Model\AddressOptionsModel
+     * @return \BumbalClient\Model\AddressOptionsModel
      */
     public function getOptions()
     {
@@ -201,7 +201,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\BumbalClient\Model\AddressOptionsModel $options
+     * @param \BumbalClient\Model\AddressOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -213,7 +213,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\BumbalClient\Model\AddressFiltersModel
+     * @return \BumbalClient\Model\AddressFiltersModel
      */
     public function getFilters()
     {
@@ -222,7 +222,7 @@ class AddressRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\BumbalClient\Model\AddressFiltersModel $filters
+     * @param \BumbalClient\Model\AddressFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -54,7 +54,7 @@ class PortalListResponse implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'items' => '\BumbalClient\BumbalClient\Model\PortalModel[]',
+        'items' => '\BumbalClient\Model\PortalModel[]',
         'count_filtered' => 'int',
         'count_unfiltered' => 'int',
         'count_limited' => 'int'
@@ -180,7 +180,7 @@ class PortalListResponse implements ArrayAccess
 
     /**
      * Gets items
-     * @return \BumbalClient\BumbalClient\Model\PortalModel[]
+     * @return \BumbalClient\Model\PortalModel[]
      */
     public function getItems()
     {
@@ -189,7 +189,7 @@ class PortalListResponse implements ArrayAccess
 
     /**
      * Sets items
-     * @param \BumbalClient\BumbalClient\Model\PortalModel[] $items
+     * @param \BumbalClient\Model\PortalModel[] $items
      * @return $this
      */
     public function setItems($items)

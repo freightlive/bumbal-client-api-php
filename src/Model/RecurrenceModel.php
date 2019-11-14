@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\Model;
+namespace BumbalClient\Model;
 
 use \ArrayAccess;
 
@@ -71,8 +71,8 @@ class RecurrenceModel implements ArrayAccess
         'next_run' => '\DateTime',
         'last_run' => '\DateTime',
         'active' => 'bool',
-        'tags' => '\BumbalClient\BumbalClient\Model\TagModel[]',
-        'meta_data' => '\BumbalClient\BumbalClient\Model\MetaDataModel[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
+        'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'updated_by_name' => 'string'
@@ -717,7 +717,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets tags
-     * @return \BumbalClient\BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagModel[]
      */
     public function getTags()
     {
@@ -726,7 +726,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -738,7 +738,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Gets meta_data
-     * @return \BumbalClient\BumbalClient\Model\MetaDataModel[]
+     * @return \BumbalClient\Model\MetaDataModel[]
      */
     public function getMetaData()
     {
@@ -747,7 +747,7 @@ class RecurrenceModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -94,7 +94,7 @@ class SaywhenApi
      *
      * @param int $activity_id ID of the activity to retrieve portal url for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function saywhenRetrievePortalURL($activity_id)
     {
@@ -109,7 +109,7 @@ class SaywhenApi
      *
      * @param int $activity_id ID of the activity to retrieve portal url for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function saywhenRetrievePortalURLWithHttpInfo($activity_id)
     {
@@ -157,15 +157,15 @@ class SaywhenApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/saywhen/retrieve-portal-url/{activityId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,9 +179,9 @@ class SaywhenApi
      *
      * Retrieve SayWhen Portal URLs
      *
-     * @param \BumbalClient\BumbalClient\Model\SayWhenRetrievePortalURLsArguments $arguments portal urls Arguments (required)
+     * @param \BumbalClient\Model\SayWhenRetrievePortalURLsArguments $arguments portal urls Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function saywhenRetrievePortalURLs($arguments)
     {
@@ -194,9 +194,9 @@ class SaywhenApi
      *
      * Retrieve SayWhen Portal URLs
      *
-     * @param \BumbalClient\BumbalClient\Model\SayWhenRetrievePortalURLsArguments $arguments portal urls Arguments (required)
+     * @param \BumbalClient\Model\SayWhenRetrievePortalURLsArguments $arguments portal urls Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function saywhenRetrievePortalURLsWithHttpInfo($arguments)
     {
@@ -241,15 +241,15 @@ class SaywhenApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/saywhen/retrieve-portal-urls'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -265,7 +265,7 @@ class SaywhenApi
      *
      * @param int $activity_id ID of the activity to retrieve status for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\SayWhenVisitModel
+     * @return \BumbalClient\Model\SayWhenVisitModel
      */
     public function saywhenRetrieveStatus($activity_id)
     {
@@ -280,7 +280,7 @@ class SaywhenApi
      *
      * @param int $activity_id ID of the activity to retrieve status for (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\SayWhenVisitModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\SayWhenVisitModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function saywhenRetrieveStatusWithHttpInfo($activity_id)
     {
@@ -328,15 +328,15 @@ class SaywhenApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\SayWhenVisitModel',
+                '\BumbalClient\Model\SayWhenVisitModel',
                 '/saywhen/retrieve-status/{activityId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\SayWhenVisitModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SayWhenVisitModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\SayWhenVisitModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SayWhenVisitModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BumbalClient\BumbalClient\API;
+namespace BumbalClient\API;
 
 use \BumbalClient\ApiClient;
 use \BumbalClient\ApiException;
@@ -92,9 +92,9 @@ class PortalsettingApi
      *
      * Add a new PortalSetting
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingModel $body PortalSetting object that needs to be created (optional)
+     * @param \BumbalClient\Model\PortalSettingModel $body PortalSetting object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function createPortalSetting($body = null)
     {
@@ -107,9 +107,9 @@ class PortalsettingApi
      *
      * Add a new PortalSetting
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingModel $body PortalSetting object that needs to be created (optional)
+     * @param \BumbalClient\Model\PortalSettingModel $body PortalSetting object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPortalSettingWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/portal-setting'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -174,7 +174,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function deletePortalSetting($portal_setting_id)
     {
@@ -189,7 +189,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePortalSettingWithHttpInfo($portal_setting_id)
     {
@@ -237,15 +237,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/portal-setting/{portal-settingId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -259,9 +259,9 @@ class PortalsettingApi
      *
      * Retrieve List of Portal Settings
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\PortalSettingListResponse
+     * @return \BumbalClient\Model\PortalSettingListResponse
      */
     public function retrieveListPortalSetting($arguments)
     {
@@ -274,9 +274,9 @@ class PortalsettingApi
      *
      * Retrieve List of Portal Settings
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
+     * @param \BumbalClient\Model\PortalSettingRetrieveListArguments $arguments PortalSetting RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\PortalSettingListResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\PortalSettingListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListPortalSettingWithHttpInfo($arguments)
     {
@@ -321,15 +321,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\PortalSettingListResponse',
+                '\BumbalClient\Model\PortalSettingListResponse',
                 '/portal-setting'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\PortalSettingListResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PortalSettingListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\PortalSettingListResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PortalSettingListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -345,7 +345,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\PortalSettingModel
+     * @return \BumbalClient\Model\PortalSettingModel
      */
     public function retrievePortalSetting($portal_setting_id)
     {
@@ -360,7 +360,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\PortalSettingModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\PortalSettingModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrievePortalSettingWithHttpInfo($portal_setting_id)
     {
@@ -408,15 +408,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\PortalSettingModel',
+                '\BumbalClient\Model\PortalSettingModel',
                 '/portal-setting/{portal-settingId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\PortalSettingModel', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PortalSettingModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\PortalSettingModel', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PortalSettingModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -430,9 +430,9 @@ class PortalsettingApi
      *
      * Set (create or update) a PortalSetting
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingModel $body PortalSetting object (optional)
+     * @param \BumbalClient\Model\PortalSettingModel $body PortalSetting object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function setPortalSetting($body = null)
     {
@@ -445,9 +445,9 @@ class PortalsettingApi
      *
      * Set (create or update) a PortalSetting
      *
-     * @param \BumbalClient\BumbalClient\Model\PortalSettingModel $body PortalSetting object (optional)
+     * @param \BumbalClient\Model\PortalSettingModel $body PortalSetting object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setPortalSettingWithHttpInfo($body = null)
     {
@@ -488,15 +488,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/portal-setting/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -512,7 +512,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\ApiResponse
      */
     public function updatePortalSetting($portal_setting_id)
     {
@@ -527,7 +527,7 @@ class PortalsettingApi
      *
      * @param int $portal_setting_id ID of portal-setting to update (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePortalSettingWithHttpInfo($portal_setting_id)
     {
@@ -575,15 +575,15 @@ class PortalsettingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\ApiResponse',
                 '/portal-setting/{portal-settingId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
