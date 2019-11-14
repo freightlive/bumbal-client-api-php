@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **trackTraceCalculateETA**
-> \BumbalClient\Model\ApiResponse trackTraceCalculateETA($activity_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse trackTraceCalculateETA($activity_id)
 
 Calculate ETA for Activity
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\BrandOptionsModel**](BrandOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\BrandFiltersModel**](BrandFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\BumbalClient\Model\BrandOptionsModel**](BrandOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\BumbalClient\Model\BrandFiltersModel**](BrandFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 

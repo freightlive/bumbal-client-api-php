@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **createPackageType**
-> \BumbalClient\Model\ApiResponse createPackageType($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createPackageType($body)
 
 Create or update an Package Line
 
-Create or update an PackageType. If id or links are set in the data, and a corresponding package-type    *     is found in Bumbal, an update will be performed.
+Create or update an PackageType. If id or links are set in the data, and a corresponding package-type   *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagetypeApi();
-$body = new \BumbalClient\Model\PackageTypeModel(); // \BumbalClient\Model\PackageTypeModel | PackageType model
+$body = new \BumbalClient\BumbalClient\Model\PackageTypeModel(); // \BumbalClient\BumbalClient\Model\PackageTypeModel | PackageType model
 
 try {
     $result = $api_instance->createPackageType($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageTypeModel**](../Model/\BumbalClient\Model\PackageTypeModel.md)| PackageType model | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageTypeModel**](../Model/PackageTypeModel.md)| PackageType model | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deletePackageType**
-> \BumbalClient\Model\ApiResponse deletePackageType($package_type_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deletePackageType($package_type_id)
 
 Delete an package-type
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListPackageType**
-> \BumbalClient\Model\PackageTypeListResponse retrieveListPackageType($arguments)
+> \BumbalClient\BumbalClient\Model\PackageTypeListResponse retrieveListPackageType($arguments)
 
 Retrieve List of PackageTypes
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagetypeApi();
-$arguments = new \BumbalClient\Model\PackageTypeRetrieveListArguments(); // \BumbalClient\Model\PackageTypeRetrieveListArguments | PackageType RetrieveList Arguments
+$arguments = new \BumbalClient\BumbalClient\Model\PackageTypeRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\PackageTypeRetrieveListArguments | PackageType RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListPackageType($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\PackageTypeRetrieveListArguments**](../Model/\BumbalClient\Model\PackageTypeRetrieveListArguments.md)| PackageType RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\PackageTypeRetrieveListArguments**](../Model/PackageTypeRetrieveListArguments.md)| PackageType RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\PackageTypeListResponse**](../Model/PackageTypeListResponse.md)
+[**\BumbalClient\BumbalClient\Model\PackageTypeListResponse**](../Model/PackageTypeListResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrievePackageType**
-> \BumbalClient\Model\PackageTypeModel retrievePackageType($package_type_id)
+> \BumbalClient\BumbalClient\Model\PackageTypeModel retrievePackageType($package_type_id)
 
 Find package-type by ID
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PackageTypeModel**](../Model/PackageTypeModel.md)
+[**\BumbalClient\BumbalClient\Model\PackageTypeModel**](../Model/PackageTypeModel.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setPackageType**
-> \BumbalClient\Model\ApiResponse setPackageType($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setPackageType($body)
 
 Set (create or update) an PackageType
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\PackagetypeApi();
-$body = new \BumbalClient\Model\PackageTypeModel(); // \BumbalClient\Model\PackageTypeModel | PackageType model
+$body = new \BumbalClient\BumbalClient\Model\PackageTypeModel(); // \BumbalClient\BumbalClient\Model\PackageTypeModel | PackageType model
 
 try {
     $result = $api_instance->setPackageType($body);
@@ -245,11 +245,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\PackageTypeModel**](../Model/\BumbalClient\Model\PackageTypeModel.md)| PackageType model | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageTypeModel**](../Model/PackageTypeModel.md)| PackageType model | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePackageType**
-> \BumbalClient\Model\ApiResponse updatePackageType($package_type_id, $body)
+> \BumbalClient\BumbalClient\Model\ApiResponse updatePackageType($package_type_id, $body)
 
 Update a package-type
 
@@ -281,7 +281,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\PackagetypeApi();
 $package_type_id = 789; // int | ID of package-type to update
-$body = new \BumbalClient\Model\PackageTypeModel(); // \BumbalClient\Model\PackageTypeModel | PackageType object that needs to be updated
+$body = new \BumbalClient\BumbalClient\Model\PackageTypeModel(); // \BumbalClient\BumbalClient\Model\PackageTypeModel | PackageType object that needs to be updated
 
 try {
     $result = $api_instance->updatePackageType($package_type_id, $body);
@@ -297,11 +297,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **package_type_id** | **int**| ID of package-type to update |
- **body** | [**\BumbalClient\Model\PackageTypeModel**](../Model/\BumbalClient\Model\PackageTypeModel.md)| PackageType object that needs to be updated | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\PackageTypeModel**](../Model/PackageTypeModel.md)| PackageType object that needs to be updated | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

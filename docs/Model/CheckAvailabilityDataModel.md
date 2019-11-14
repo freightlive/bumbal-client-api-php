@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activity** | [**\BumbalClient\Model\ActivityModel**](ActivityModel.md) |  | 
+**activity** | [**\BumbalClient\BumbalClient\Model\ActivityModel**](ActivityModel.md) |  | 
 **route_filters** | **object** |  | [optional] 
 **token** | **string** | unique per api request | [optional] 
 

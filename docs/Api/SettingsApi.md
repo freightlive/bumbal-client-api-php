@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **retrieveListSettings**
-> \BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
+> \BumbalClient\BumbalClient\Model\SettingsModel[] retrieveListSettings($arguments)
 
 Retrieve List of Settings
 
@@ -28,7 +28,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
-$arguments = new \BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
+$arguments = new \BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments | Settings RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListSettings($arguments);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/\BumbalClient\Model\SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\SettingsRetrieveListArguments**](../Model/SettingsRetrieveListArguments.md)| Settings RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
+[**\BumbalClient\BumbalClient\Model\SettingsModel[]**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveSettings**
-> \BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
+> \BumbalClient\BumbalClient\Model\SettingsModel retrieveSettings($settings_id)
 
 Retrieve a Settings
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
+[**\BumbalClient\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setSetting**
-> \BumbalClient\Model\ApiResponse setSetting($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setSetting($body)
 
 Set (update) Setting value
 
@@ -128,7 +128,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\SettingsApi();
-$body = new \BumbalClient\Model\SettingsModel(); // \BumbalClient\Model\SettingsModel | Setting object
+$body = new \BumbalClient\BumbalClient\Model\SettingsModel(); // \BumbalClient\BumbalClient\Model\SettingsModel | Setting object
 
 try {
     $result = $api_instance->setSetting($body);
@@ -143,11 +143,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\SettingsModel**](../Model/\BumbalClient\Model\SettingsModel.md)| Setting object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\SettingsModel**](../Model/SettingsModel.md)| Setting object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSettings**
-> \BumbalClient\Model\ApiResponse updateSettings($settings_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateSettings($settings_id)
 
 Update a Settings
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **authenticateCheckToken**
-> \BumbalClient\Model\ApiResponse authenticateCheckToken()
+> \BumbalClient\BumbalClient\Model\ApiResponse authenticateCheckToken()
 
 Check a token for validity
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authenticateSignIn**
-> \BumbalClient\Model\AuthenticateModel authenticateSignIn($body)
+> \BumbalClient\BumbalClient\Model\AuthenticateModel authenticateSignIn($body)
 
 Sign In with your user credentials
 
@@ -68,7 +68,7 @@ Sign In with your user credentials, you will get a access token if successful
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new BumbalClient\Api\AuthenticateApi();
-$body = new \BumbalClient\Model\CredentialsModel(); // \BumbalClient\Model\CredentialsModel | Credentials object
+$body = new \BumbalClient\BumbalClient\Model\CredentialsModel(); // \BumbalClient\BumbalClient\Model\CredentialsModel | Credentials object
 
 try {
     $result = $api_instance->authenticateSignIn($body);
@@ -83,11 +83,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\CredentialsModel**](../Model/\BumbalClient\Model\CredentialsModel.md)| Credentials object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\CredentialsModel**](../Model/CredentialsModel.md)| Credentials object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\AuthenticateModel**](../Model/AuthenticateModel.md)
+[**\BumbalClient\BumbalClient\Model\AuthenticateModel**](../Model/AuthenticateModel.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **authenticateSignOut**
-> \BumbalClient\Model\ApiResponse authenticateSignOut($token)
+> \BumbalClient\BumbalClient\Model\ApiResponse authenticateSignOut($token)
 
 Sign out
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

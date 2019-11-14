@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createZone**
-> \BumbalClient\Model\ApiResponse createZone($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse createZone($body)
 
 Add a new Zone
 
@@ -30,7 +30,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ZoneApi();
-$body = new \BumbalClient\Model\ZoneModel(); // \BumbalClient\Model\ZoneModel | Zone object that needs to be created
+$body = new \BumbalClient\BumbalClient\Model\ZoneModel(); // \BumbalClient\BumbalClient\Model\ZoneModel | Zone object that needs to be created
 
 try {
     $result = $api_instance->createZone($body);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ZoneModel**](../Model/\BumbalClient\Model\ZoneModel.md)| Zone object that needs to be created | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\ZoneModel**](../Model/ZoneModel.md)| Zone object that needs to be created | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteZone**
-> \BumbalClient\Model\ApiResponse deleteZone($zone_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse deleteZone($zone_id)
 
 Delete a Zone
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListZone**
-> \BumbalClient\Model\ZoneModel[] retrieveListZone($arguments)
+> \BumbalClient\BumbalClient\Model\ZoneModel[] retrieveListZone($arguments)
 
 Retrieve List of Zone
 
@@ -130,7 +130,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ZoneApi();
-$arguments = new \BumbalClient\Model\ZoneRetrieveListArguments(); // \BumbalClient\Model\ZoneRetrieveListArguments | Zone RetrieveList Arguments
+$arguments = new \BumbalClient\BumbalClient\Model\ZoneRetrieveListArguments(); // \BumbalClient\BumbalClient\Model\ZoneRetrieveListArguments | Zone RetrieveList Arguments
 
 try {
     $result = $api_instance->retrieveListZone($arguments);
@@ -145,11 +145,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **arguments** | [**\BumbalClient\Model\ZoneRetrieveListArguments**](../Model/\BumbalClient\Model\ZoneRetrieveListArguments.md)| Zone RetrieveList Arguments |
+ **arguments** | [**\BumbalClient\BumbalClient\Model\ZoneRetrieveListArguments**](../Model/ZoneRetrieveListArguments.md)| Zone RetrieveList Arguments |
 
 ### Return type
 
-[**\BumbalClient\Model\ZoneModel[]**](../Model/ZoneModel.md)
+[**\BumbalClient\BumbalClient\Model\ZoneModel[]**](../Model/ZoneModel.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveZone**
-> \BumbalClient\Model\ZoneModel retrieveZone($zone_id)
+> \BumbalClient\BumbalClient\Model\ZoneModel retrieveZone($zone_id)
 
 Retrieve a Zone
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ZoneModel**](../Model/ZoneModel.md)
+[**\BumbalClient\BumbalClient\Model\ZoneModel**](../Model/ZoneModel.md)
 
 ### Authorization
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setZone**
-> \BumbalClient\Model\ApiResponse setZone($body)
+> \BumbalClient\BumbalClient\Model\ApiResponse setZone($body)
 
 Set (create or update) a Zone
 
@@ -230,7 +230,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\ZoneApi();
-$body = new \BumbalClient\Model\ZoneModel(); // \BumbalClient\Model\ZoneModel | Zone object
+$body = new \BumbalClient\BumbalClient\Model\ZoneModel(); // \BumbalClient\BumbalClient\Model\ZoneModel | Zone object
 
 try {
     $result = $api_instance->setZone($body);
@@ -245,11 +245,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\ZoneModel**](../Model/\BumbalClient\Model\ZoneModel.md)| Zone object | [optional]
+ **body** | [**\BumbalClient\BumbalClient\Model\ZoneModel**](../Model/ZoneModel.md)| Zone object | [optional]
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateZone**
-> \BumbalClient\Model\ApiResponse updateZone($zone_id)
+> \BumbalClient\BumbalClient\Model\ApiResponse updateZone($zone_id)
 
 Update a Zone
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

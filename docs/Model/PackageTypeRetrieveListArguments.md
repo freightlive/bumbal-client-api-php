@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\BumbalClient\Model\PackageTypeOptionsModel**](PackageTypeOptionsModel.md) |  | [optional] 
-**filters** | [**\BumbalClient\Model\PackageTypeFiltersModel**](PackageTypeFiltersModel.md) |  | [optional] 
+**options** | [**\BumbalClient\BumbalClient\Model\PackageTypeOptionsModel**](PackageTypeOptionsModel.md) |  | [optional] 
+**filters** | [**\BumbalClient\BumbalClient\Model\PackageTypeFiltersModel**](PackageTypeFiltersModel.md) |  | [optional] 
 **limit** | **int** |  | [optional] 
 **offset** | **int** |  | [optional] 
 **sorting_column** | **string** | Sorting Column | [optional] 
