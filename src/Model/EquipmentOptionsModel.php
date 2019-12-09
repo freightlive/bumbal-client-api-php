@@ -54,7 +54,16 @@ class EquipmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_activity_status' => 'bool'
+        'include_equipment_tags' => 'bool',
+        'include_tag_type_name' => 'bool',
+        'include_equipment_meta_data' => 'bool',
+        'include_equipment_files' => 'bool',
+        'include_equipment_files_meta_data' => 'bool',
+        'include_equipment_notes' => 'bool',
+        'include_equipment_note_tags' => 'bool',
+        'include_equipment_links' => 'bool',
+        'include_capacities' => 'bool',
+        'include_applied_capacities' => 'bool'
     ];
 
     /**
@@ -62,7 +71,16 @@ class EquipmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_activity_status' => null
+        'include_equipment_tags' => null,
+        'include_tag_type_name' => null,
+        'include_equipment_meta_data' => null,
+        'include_equipment_files' => null,
+        'include_equipment_files_meta_data' => null,
+        'include_equipment_notes' => null,
+        'include_equipment_note_tags' => null,
+        'include_equipment_links' => null,
+        'include_capacities' => null,
+        'include_applied_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +98,16 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_activity_status' => 'include_activity_status'
+        'include_equipment_tags' => 'include_equipment_tags',
+        'include_tag_type_name' => 'include_tag_type_name',
+        'include_equipment_meta_data' => 'include_equipment_meta_data',
+        'include_equipment_files' => 'include_equipment_files',
+        'include_equipment_files_meta_data' => 'include_equipment_files_meta_data',
+        'include_equipment_notes' => 'include_equipment_notes',
+        'include_equipment_note_tags' => 'include_equipment_note_tags',
+        'include_equipment_links' => 'include_equipment_links',
+        'include_capacities' => 'include_capacities',
+        'include_applied_capacities' => 'include_applied_capacities'
     ];
 
 
@@ -89,7 +116,16 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_activity_status' => 'setIncludeActivityStatus'
+        'include_equipment_tags' => 'setIncludeEquipmentTags',
+        'include_tag_type_name' => 'setIncludeTagTypeName',
+        'include_equipment_meta_data' => 'setIncludeEquipmentMetaData',
+        'include_equipment_files' => 'setIncludeEquipmentFiles',
+        'include_equipment_files_meta_data' => 'setIncludeEquipmentFilesMetaData',
+        'include_equipment_notes' => 'setIncludeEquipmentNotes',
+        'include_equipment_note_tags' => 'setIncludeEquipmentNoteTags',
+        'include_equipment_links' => 'setIncludeEquipmentLinks',
+        'include_capacities' => 'setIncludeCapacities',
+        'include_applied_capacities' => 'setIncludeAppliedCapacities'
     ];
 
 
@@ -98,7 +134,16 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_activity_status' => 'getIncludeActivityStatus'
+        'include_equipment_tags' => 'getIncludeEquipmentTags',
+        'include_tag_type_name' => 'getIncludeTagTypeName',
+        'include_equipment_meta_data' => 'getIncludeEquipmentMetaData',
+        'include_equipment_files' => 'getIncludeEquipmentFiles',
+        'include_equipment_files_meta_data' => 'getIncludeEquipmentFilesMetaData',
+        'include_equipment_notes' => 'getIncludeEquipmentNotes',
+        'include_equipment_note_tags' => 'getIncludeEquipmentNoteTags',
+        'include_equipment_links' => 'getIncludeEquipmentLinks',
+        'include_capacities' => 'getIncludeCapacities',
+        'include_applied_capacities' => 'getIncludeAppliedCapacities'
     ];
 
     public static function attributeMap()
@@ -132,7 +177,16 @@ class EquipmentOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_activity_status'] = isset($data['include_activity_status']) ? $data['include_activity_status'] : null;
+        $this->container['include_equipment_tags'] = isset($data['include_equipment_tags']) ? $data['include_equipment_tags'] : null;
+        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
+        $this->container['include_equipment_meta_data'] = isset($data['include_equipment_meta_data']) ? $data['include_equipment_meta_data'] : null;
+        $this->container['include_equipment_files'] = isset($data['include_equipment_files']) ? $data['include_equipment_files'] : null;
+        $this->container['include_equipment_files_meta_data'] = isset($data['include_equipment_files_meta_data']) ? $data['include_equipment_files_meta_data'] : null;
+        $this->container['include_equipment_notes'] = isset($data['include_equipment_notes']) ? $data['include_equipment_notes'] : null;
+        $this->container['include_equipment_note_tags'] = isset($data['include_equipment_note_tags']) ? $data['include_equipment_note_tags'] : null;
+        $this->container['include_equipment_links'] = isset($data['include_equipment_links']) ? $data['include_equipment_links'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
     }
 
     /**
@@ -161,22 +215,211 @@ class EquipmentOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_activity_status
+     * Gets include_equipment_tags
      * @return bool
      */
-    public function getIncludeActivityStatus()
+    public function getIncludeEquipmentTags()
     {
-        return $this->container['include_activity_status'];
+        return $this->container['include_equipment_tags'];
     }
 
     /**
-     * Sets include_activity_status
-     * @param bool $include_activity_status
+     * Sets include_equipment_tags
+     * @param bool $include_equipment_tags 
      * @return $this
      */
-    public function setIncludeActivityStatus($include_activity_status)
+    public function setIncludeEquipmentTags($include_equipment_tags)
     {
-        $this->container['include_activity_status'] = $include_activity_status;
+        $this->container['include_equipment_tags'] = $include_equipment_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_type_name
+     * @return bool
+     */
+    public function getIncludeTagTypeName()
+    {
+        return $this->container['include_tag_type_name'];
+    }
+
+    /**
+     * Sets include_tag_type_name
+     * @param bool $include_tag_type_name 
+     * @return $this
+     */
+    public function setIncludeTagTypeName($include_tag_type_name)
+    {
+        $this->container['include_tag_type_name'] = $include_tag_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_meta_data
+     * @return bool
+     */
+    public function getIncludeEquipmentMetaData()
+    {
+        return $this->container['include_equipment_meta_data'];
+    }
+
+    /**
+     * Sets include_equipment_meta_data
+     * @param bool $include_equipment_meta_data 
+     * @return $this
+     */
+    public function setIncludeEquipmentMetaData($include_equipment_meta_data)
+    {
+        $this->container['include_equipment_meta_data'] = $include_equipment_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_files
+     * @return bool
+     */
+    public function getIncludeEquipmentFiles()
+    {
+        return $this->container['include_equipment_files'];
+    }
+
+    /**
+     * Sets include_equipment_files
+     * @param bool $include_equipment_files 
+     * @return $this
+     */
+    public function setIncludeEquipmentFiles($include_equipment_files)
+    {
+        $this->container['include_equipment_files'] = $include_equipment_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_files_meta_data
+     * @return bool
+     */
+    public function getIncludeEquipmentFilesMetaData()
+    {
+        return $this->container['include_equipment_files_meta_data'];
+    }
+
+    /**
+     * Sets include_equipment_files_meta_data
+     * @param bool $include_equipment_files_meta_data 
+     * @return $this
+     */
+    public function setIncludeEquipmentFilesMetaData($include_equipment_files_meta_data)
+    {
+        $this->container['include_equipment_files_meta_data'] = $include_equipment_files_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_notes
+     * @return bool
+     */
+    public function getIncludeEquipmentNotes()
+    {
+        return $this->container['include_equipment_notes'];
+    }
+
+    /**
+     * Sets include_equipment_notes
+     * @param bool $include_equipment_notes 
+     * @return $this
+     */
+    public function setIncludeEquipmentNotes($include_equipment_notes)
+    {
+        $this->container['include_equipment_notes'] = $include_equipment_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_note_tags
+     * @return bool
+     */
+    public function getIncludeEquipmentNoteTags()
+    {
+        return $this->container['include_equipment_note_tags'];
+    }
+
+    /**
+     * Sets include_equipment_note_tags
+     * @param bool $include_equipment_note_tags 
+     * @return $this
+     */
+    public function setIncludeEquipmentNoteTags($include_equipment_note_tags)
+    {
+        $this->container['include_equipment_note_tags'] = $include_equipment_note_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_equipment_links
+     * @return bool
+     */
+    public function getIncludeEquipmentLinks()
+    {
+        return $this->container['include_equipment_links'];
+    }
+
+    /**
+     * Sets include_equipment_links
+     * @param bool $include_equipment_links 
+     * @return $this
+     */
+    public function setIncludeEquipmentLinks($include_equipment_links)
+    {
+        $this->container['include_equipment_links'] = $include_equipment_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_applied_capacities
+     * @return bool
+     */
+    public function getIncludeAppliedCapacities()
+    {
+        return $this->container['include_applied_capacities'];
+    }
+
+    /**
+     * Sets include_applied_capacities
+     * @param bool $include_applied_capacities 
+     * @return $this
+     */
+    public function setIncludeAppliedCapacities($include_applied_capacities)
+    {
+        $this->container['include_applied_capacities'] = $include_applied_capacities;
 
         return $this;
     }

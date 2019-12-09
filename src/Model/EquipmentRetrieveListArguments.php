@@ -54,11 +54,15 @@ class EquipmentRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ActivityOptionsModel',
-        'filters' => '\BumbalClient\Model\ActivityFiltersModel',
+        'options' => '\BumbalClient\Model\EquipmentOptionsModel',
+        'filters' => '\BumbalClient\Model\EquipmentFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string'
+        'sorting_column' => 'string',
+        'sorting_direction' => 'string',
+        'search_text' => 'string',
+        'as_list' => 'bool',
+        'count_only' => 'bool'
     ];
 
     /**
@@ -70,7 +74,11 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null
+        'sorting_column' => null,
+        'sorting_direction' => null,
+        'search_text' => null,
+        'as_list' => null,
+        'count_only' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +100,11 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text'
+        'sorting_column' => 'sorting_column',
+        'sorting_direction' => 'sorting_direction',
+        'search_text' => 'search_text',
+        'as_list' => 'as_list',
+        'count_only' => 'count_only'
     ];
 
 
@@ -105,7 +117,11 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'sorting_column' => 'setSortingColumn',
+        'sorting_direction' => 'setSortingDirection',
+        'search_text' => 'setSearchText',
+        'as_list' => 'setAsList',
+        'count_only' => 'setCountOnly'
     ];
 
 
@@ -118,7 +134,11 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'sorting_column' => 'getSortingColumn',
+        'sorting_direction' => 'getSortingDirection',
+        'search_text' => 'getSearchText',
+        'as_list' => 'getAsList',
+        'count_only' => 'getCountOnly'
     ];
 
     public static function attributeMap()
@@ -136,8 +156,38 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         return self::$getters;
     }
 
+    const SORTING_COLUMN_NAME = 'name';
+    const SORTING_COLUMN_REGISTRATION_NR = 'registration_nr';
+    const SORTING_COLUMN_INFO = 'info';
+    const SORTING_DIRECTION_ASC = 'asc';
+    const SORTING_DIRECTION_DESC = 'desc';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingColumnAllowableValues()
+    {
+        return [
+            self::SORTING_COLUMN_NAME,
+            self::SORTING_COLUMN_REGISTRATION_NR,
+            self::SORTING_COLUMN_INFO,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getSortingDirectionAllowableValues()
+    {
+        return [
+            self::SORTING_DIRECTION_ASC,
+            self::SORTING_DIRECTION_DESC,
+        ];
+    }
     
 
     /**
@@ -156,7 +206,11 @@ class EquipmentRetrieveListArguments implements ArrayAccess
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
+        $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
+        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -167,6 +221,22 @@ class EquipmentRetrieveListArguments implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_column', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'sorting_direction', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
 
         return $invalid_properties;
     }
@@ -180,13 +250,21 @@ class EquipmentRetrieveListArguments implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!in_array($this->container['sorting_column'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!in_array($this->container['sorting_direction'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
 
     /**
      * Gets options
-     * @return \BumbalClient\Model\ActivityOptionsModel
+     * @return \BumbalClient\Model\EquipmentOptionsModel
      */
     public function getOptions()
     {
@@ -195,7 +273,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\ActivityOptionsModel $options
+     * @param \BumbalClient\Model\EquipmentOptionsModel $options 
      * @return $this
      */
     public function setOptions($options)
@@ -207,7 +285,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \BumbalClient\Model\ActivityFiltersModel
+     * @return \BumbalClient\Model\EquipmentFiltersModel
      */
     public function getFilters()
     {
@@ -216,7 +294,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\ActivityFiltersModel $filters
+     * @param \BumbalClient\Model\EquipmentFiltersModel $filters 
      * @return $this
      */
     public function setFilters($filters)
@@ -237,7 +315,7 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit
+     * @param int $limit 
      * @return $this
      */
     public function setLimit($limit)
@@ -258,12 +336,72 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset
+     * @param int $offset 
      * @return $this
      */
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_column
+     * @return string
+     */
+    public function getSortingColumn()
+    {
+        return $this->container['sorting_column'];
+    }
+
+    /**
+     * Sets sorting_column
+     * @param string $sorting_column Sorting Column
+     * @return $this
+     */
+    public function setSortingColumn($sorting_column)
+    {
+        $allowed_values = $this->getSortingColumnAllowableValues();
+        if (!is_null($sorting_column) && !in_array($sorting_column, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_column', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_column'] = $sorting_column;
+
+        return $this;
+    }
+
+    /**
+     * Gets sorting_direction
+     * @return string
+     */
+    public function getSortingDirection()
+    {
+        return $this->container['sorting_direction'];
+    }
+
+    /**
+     * Sets sorting_direction
+     * @param string $sorting_direction Sorting Direction
+     * @return $this
+     */
+    public function setSortingDirection($sorting_direction)
+    {
+        $allowed_values = $this->getSortingDirectionAllowableValues();
+        if (!is_null($sorting_direction) && !in_array($sorting_direction, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'sorting_direction', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['sorting_direction'] = $sorting_direction;
 
         return $this;
     }
@@ -279,12 +417,54 @@ class EquipmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text
+     * @param string $search_text 
      * @return $this
      */
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list 
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_only
+     * @return bool
+     */
+    public function getCountOnly()
+    {
+        return $this->container['count_only'];
+    }
+
+    /**
+     * Sets count_only
+     * @param bool $count_only 
+     * @return $this
+     */
+    public function setCountOnly($count_only)
+    {
+        $this->container['count_only'] = $count_only;
 
         return $this;
     }

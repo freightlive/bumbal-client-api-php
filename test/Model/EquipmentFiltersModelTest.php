@@ -78,30 +78,16 @@ class EquipmentFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "date_time_from"
+     * Test attribute "id"
      */
-    public function testPropertyDateTimeFrom()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "date_time_to"
+     * Test attribute "equipment_type"
      */
-    public function testPropertyDateTimeTo()
-    {
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
+    public function testPropertyEquipmentType()
     {
     }
 }

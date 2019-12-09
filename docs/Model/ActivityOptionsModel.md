@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **include_tag_type_name** | **bool** |  | [optional] 
 **include_record_info** | **bool** |  | [optional] 
 **include_record_object** | **bool** |  | [optional] 
+**include_notes** | **bool** |  | [optional] 
 **include_activity_notes** | **bool** |  | [optional] 
 **include_activity_note_tags** | **bool** |  | [optional] 
 **include_depot_address** | **bool** |  | [optional] 

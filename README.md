@@ -119,11 +119,10 @@ Class | Method | HTTP request | Description
 *DriverApi* | [**retrieveListDriver**](docs/Api/DriverApi.md#retrievelistdriver) | **PUT** /driver | Retrieve List of Drivers
 *DriverApi* | [**setDriver**](docs/Api/DriverApi.md#setdriver) | **POST** /driver/set | Set (create or update) a driver
 *DriverApi* | [**updateDriver**](docs/Api/DriverApi.md#updatedriver) | **PUT** /driver/{driverId} | Update a driver
-*EquipmentApi* | [**createEquipment**](docs/Api/EquipmentApi.md#createequipment) | **POST** /equipment | Add a new Equipment
 *EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment
 *EquipmentApi* | [**retrieveEquipment**](docs/Api/EquipmentApi.md#retrieveequipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
 *EquipmentApi* | [**retrieveListEquipment**](docs/Api/EquipmentApi.md#retrievelistequipment) | **PUT** /equipment | Retrieve List of Equipment
-*EquipmentApi* | [**updateEquipment**](docs/Api/EquipmentApi.md#updateequipment) | **PUT** /equipment/{equipmentId} | Update a Equipment
+*EquipmentApi* | [**setEquipment**](docs/Api/EquipmentApi.md#setequipment) | **POST** /equipment/set | Add/Update Equipment
 *FileApi* | [**deleteFile**](docs/Api/FileApi.md#deletefile) | **DELETE** /file/{fileId} | Delete an File
 *FileApi* | [**fileCopy**](docs/Api/FileApi.md#filecopy) | **POST** /file/copy | Copy File
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
@@ -310,6 +309,7 @@ Class | Method | HTTP request | Description
  - [DriverRetrieveListArguments](docs/Model/DriverRetrieveListArguments.md)
  - [EmailModel](docs/Model/EmailModel.md)
  - [EquipmentFiltersModel](docs/Model/EquipmentFiltersModel.md)
+ - [EquipmentListResponse](docs/Model/EquipmentListResponse.md)
  - [EquipmentModel](docs/Model/EquipmentModel.md)
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)

@@ -57,9 +57,13 @@ class EquipmentModel implements ArrayAccess
         'id' => 'int',
         'equipment_type' => 'string',
         'info' => 'string',
+        'name' => 'string',
         'registration_nr' => 'string',
+        'max_speed' => 'int',
+        'tags' => '\BumbalClient\Model\TagModel[]',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
 
@@ -71,9 +75,13 @@ class EquipmentModel implements ArrayAccess
         'id' => 'int64',
         'equipment_type' => null,
         'info' => null,
+        'name' => null,
         'registration_nr' => null,
+        'max_speed' => null,
+        'tags' => null,
         'applied_capacities' => null,
         'capacities' => null,
+        'links' => null,
         'meta_data' => null
     ];
 
@@ -95,9 +103,13 @@ class EquipmentModel implements ArrayAccess
         'id' => 'id',
         'equipment_type' => 'equipment_type',
         'info' => 'info',
+        'name' => 'name',
         'registration_nr' => 'registration_nr',
+        'max_speed' => 'max_speed',
+        'tags' => 'tags',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
+        'links' => 'links',
         'meta_data' => 'meta_data'
     ];
 
@@ -110,9 +122,13 @@ class EquipmentModel implements ArrayAccess
         'id' => 'setId',
         'equipment_type' => 'setEquipmentType',
         'info' => 'setInfo',
+        'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
+        'max_speed' => 'setMaxSpeed',
+        'tags' => 'setTags',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
+        'links' => 'setLinks',
         'meta_data' => 'setMetaData'
     ];
 
@@ -125,9 +141,13 @@ class EquipmentModel implements ArrayAccess
         'id' => 'getId',
         'equipment_type' => 'getEquipmentType',
         'info' => 'getInfo',
+        'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
+        'max_speed' => 'getMaxSpeed',
+        'tags' => 'getTags',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
+        'links' => 'getLinks',
         'meta_data' => 'getMetaData'
     ];
 
@@ -181,9 +201,13 @@ class EquipmentModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
         $this->container['info'] = isset($data['info']) ? $data['info'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
+        $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
 
@@ -235,7 +259,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -286,12 +310,33 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets info
-     * @param string $info
+     * @param string $info 
      * @return $this
      */
     public function setInfo($info)
     {
         $this->container['info'] = $info;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name 
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
 
         return $this;
     }
@@ -307,12 +352,54 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets registration_nr
-     * @param string $registration_nr
+     * @param string $registration_nr 
      * @return $this
      */
     public function setRegistrationNr($registration_nr)
     {
         $this->container['registration_nr'] = $registration_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_speed
+     * @return int
+     */
+    public function getMaxSpeed()
+    {
+        return $this->container['max_speed'];
+    }
+
+    /**
+     * Sets max_speed
+     * @param int $max_speed 
+     * @return $this
+     */
+    public function setMaxSpeed($max_speed)
+    {
+        $this->container['max_speed'] = $max_speed;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }
@@ -328,7 +415,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -349,12 +436,33 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
     {
         $this->container['capacities'] = $capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -370,7 +478,7 @@ class EquipmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)

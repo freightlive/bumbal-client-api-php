@@ -133,7 +133,7 @@ class WebhookApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml', 'application/x-www-form-urlencoded']);
 
         // form params
         if ($object_id !== null) {

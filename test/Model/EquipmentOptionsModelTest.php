@@ -78,9 +78,72 @@ class EquipmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_activity_status"
+     * Test attribute "include_equipment_tags"
      */
-    public function testPropertyIncludeActivityStatus()
+    public function testPropertyIncludeEquipmentTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_type_name"
+     */
+    public function testPropertyIncludeTagTypeName()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_meta_data"
+     */
+    public function testPropertyIncludeEquipmentMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_files"
+     */
+    public function testPropertyIncludeEquipmentFiles()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_files_meta_data"
+     */
+    public function testPropertyIncludeEquipmentFilesMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_notes"
+     */
+    public function testPropertyIncludeEquipmentNotes()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_note_tags"
+     */
+    public function testPropertyIncludeEquipmentNoteTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_equipment_links"
+     */
+    public function testPropertyIncludeEquipmentLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_capacities"
+     */
+    public function testPropertyIncludeCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "include_applied_capacities"
+     */
+    public function testPropertyIncludeAppliedCapacities()
     {
     }
 }

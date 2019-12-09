@@ -106,9 +106,37 @@ class EquipmentRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "sorting_column"
+     */
+    public function testPropertySortingColumn()
+    {
+    }
+
+    /**
+     * Test attribute "sorting_direction"
+     */
+    public function testPropertySortingDirection()
+    {
+    }
+
+    /**
      * Test attribute "search_text"
      */
     public function testPropertySearchText()
+    {
+    }
+
+    /**
+     * Test attribute "as_list"
+     */
+    public function testPropertyAsList()
+    {
+    }
+
+    /**
+     * Test attribute "count_only"
+     */
+    public function testPropertyCountOnly()
     {
     }
 }

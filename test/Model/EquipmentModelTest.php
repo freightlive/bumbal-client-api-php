@@ -99,9 +99,30 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
      * Test attribute "registration_nr"
      */
     public function testPropertyRegistrationNr()
+    {
+    }
+
+    /**
+     * Test attribute "max_speed"
+     */
+    public function testPropertyMaxSpeed()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
     {
     }
 
@@ -116,6 +137,13 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "capacities"
      */
     public function testPropertyCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
     {
     }
 

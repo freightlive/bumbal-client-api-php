@@ -4,62 +4,11 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createEquipment**](EquipmentApi.md#createEquipment) | **POST** /equipment | Add a new Equipment
 [**deleteEquipment**](EquipmentApi.md#deleteEquipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment
 [**retrieveEquipment**](EquipmentApi.md#retrieveEquipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
 [**retrieveListEquipment**](EquipmentApi.md#retrieveListEquipment) | **PUT** /equipment | Retrieve List of Equipment
-[**updateEquipment**](EquipmentApi.md#updateEquipment) | **PUT** /equipment/{equipmentId} | Update a Equipment
+[**setEquipment**](EquipmentApi.md#setEquipment) | **POST** /equipment/set | Add/Update Equipment
 
-
-# **createEquipment**
-> \BumbalClient\Model\ApiResponse createEquipment($body)
-
-Add a new Equipment
-
-Add a new Equipment
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-
-$api_instance = new BumbalClient\Api\EquipmentApi();
-$body = new \BumbalClient\Model\EquipmentModel(); // \BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
-
-try {
-    $result = $api_instance->createEquipment($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling EquipmentApi->createEquipment: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)| Equipment object that needs to be created | [optional]
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteEquipment**
 > \BumbalClient\Model\ApiResponse deleteEquipment($equipment_id)
@@ -162,7 +111,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListEquipment**
-> \BumbalClient\Model\EquipmentModel[] retrieveListEquipment($arguments)
+> \BumbalClient\Model\EquipmentListResponse retrieveListEquipment($arguments)
 
 Retrieve List of Equipment
 
@@ -198,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\EquipmentModel[]**](../Model/EquipmentModel.md)
+[**\BumbalClient\Model\EquipmentListResponse**](../Model/EquipmentListResponse.md)
 
 ### Authorization
 
@@ -211,12 +160,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateEquipment**
-> \BumbalClient\Model\ApiResponse updateEquipment($equipment_id)
+# **setEquipment**
+> \BumbalClient\Model\ApiResponse setEquipment($body)
 
-Update a Equipment
+Add/Update Equipment
 
-Update an Equipment
+add or update an a piece of Equipment
 
 ### Example
 ```php
@@ -229,13 +178,13 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\EquipmentApi();
-$equipment_id = 789; // int | ID of equipment to update
+$body = new \BumbalClient\Model\EquipmentModel(); // \BumbalClient\Model\EquipmentModel | Equipment object that needs to be created
 
 try {
-    $result = $api_instance->updateEquipment($equipment_id);
+    $result = $api_instance->setEquipment($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EquipmentApi->updateEquipment: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EquipmentApi->setEquipment: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -244,7 +193,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **equipment_id** | **int**| ID of equipment to update |
+ **body** | [**\BumbalClient\Model\EquipmentModel**](../Model/EquipmentModel.md)| Equipment object that needs to be created | [optional]
 
 ### Return type
 

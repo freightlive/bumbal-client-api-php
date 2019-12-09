@@ -218,6 +218,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "equipment"
+     */
+    public function testPropertyEquipment()
+    {
+    }
+
+    /**
      * Test attribute "earliest_date_time"
      */
     public function testPropertyEarliestDateTime()
@@ -256,6 +263,13 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "executed_date_time_to"
      */
     public function testPropertyExecutedDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "planned_driving_distance"
+     */
+    public function testPropertyPlannedDrivingDistance()
     {
     }
 

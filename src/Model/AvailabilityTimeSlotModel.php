@@ -213,7 +213,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -255,7 +255,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from
+     * @param \DateTime $date_time_from 
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -276,7 +276,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to
+     * @param \DateTime $date_time_to 
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -297,7 +297,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_from
-     * @param \DateTime $proposed_plan_date_time_from
+     * @param \DateTime $proposed_plan_date_time_from 
      * @return $this
      */
     public function setProposedPlanDateTimeFrom($proposed_plan_date_time_from)
@@ -318,7 +318,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_plan_date_time_to
-     * @param \DateTime $proposed_plan_date_time_to
+     * @param \DateTime $proposed_plan_date_time_to 
      * @return $this
      */
     public function setProposedPlanDateTimeTo($proposed_plan_date_time_to)
@@ -339,7 +339,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets proposed_driver
-     * @param \BumbalClient\Model\DriverModel $proposed_driver
+     * @param \BumbalClient\Model\DriverModel $proposed_driver 
      * @return $this
      */
     public function setProposedDriver($proposed_driver)
@@ -360,7 +360,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets impact
-     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact
+     * @param \BumbalClient\Model\AvailabilityTimeSlotImpactModel[] $impact 
      * @return $this
      */
     public function setImpact($impact)

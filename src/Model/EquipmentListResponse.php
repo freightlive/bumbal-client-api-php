@@ -1,6 +1,6 @@
 <?php
 /**
- * ZoneRetrieveListArguments
+ * EquipmentListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ZoneRetrieveListArguments Class Doc Comment
+ * EquipmentListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ZoneRetrieveListArguments implements ArrayAccess
+class EquipmentListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,17 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ZoneRetrieveListArguments';
+    protected static $swaggerModelName = 'EquipmentListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'options' => '\BumbalClient\Model\ZoneOptionsModel',
-        'filters' => '\BumbalClient\Model\ZoneFiltersModel',
-        'limit' => 'int',
-        'offset' => 'int',
-        'search_text' => 'string'
+        'items' => '\BumbalClient\Model\EquipmentModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -66,11 +65,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'options' => null,
-        'filters' => null,
-        'limit' => 'int64',
-        'offset' => 'int64',
-        'search_text' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -88,11 +86,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'options' => 'options',
-        'filters' => 'filters',
-        'limit' => 'limit',
-        'offset' => 'offset',
-        'search_text' => 'search_text'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -101,11 +98,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'options' => 'setOptions',
-        'filters' => 'setFilters',
-        'limit' => 'setLimit',
-        'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -114,11 +110,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'options' => 'getOptions',
-        'filters' => 'getFilters',
-        'limit' => 'getLimit',
-        'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -152,11 +147,10 @@ class ZoneRetrieveListArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
-        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -185,106 +179,85 @@ class ZoneRetrieveListArguments implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \BumbalClient\Model\ZoneOptionsModel
+     * Gets items
+     * @return \BumbalClient\Model\EquipmentModel[]
      */
-    public function getOptions()
+    public function getItems()
     {
-        return $this->container['options'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets options
-     * @param \BumbalClient\Model\ZoneOptionsModel $options 
+     * Sets items
+     * @param \BumbalClient\Model\EquipmentModel[] $items 
      * @return $this
      */
-    public function setOptions($options)
+    public function setItems($items)
     {
-        $this->container['options'] = $options;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets filters
-     * @return \BumbalClient\Model\ZoneFiltersModel
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     * @param \BumbalClient\Model\ZoneFiltersModel $filters 
-     * @return $this
-     */
-    public function setFilters($filters)
-    {
-        $this->container['filters'] = $filters;
-
-        return $this;
-    }
-
-    /**
-     * Gets limit
+     * Gets count_filtered
      * @return int
      */
-    public function getLimit()
+    public function getCountFiltered()
     {
-        return $this->container['limit'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets limit
-     * @param int $limit 
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setLimit($limit)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['limit'] = $limit;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets offset
+     * Gets count_unfiltered
      * @return int
      */
-    public function getOffset()
+    public function getCountUnfiltered()
     {
-        return $this->container['offset'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets offset
-     * @param int $offset 
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setOffset($offset)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['offset'] = $offset;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets search_text
-     * @return string
+     * Gets count_limited
+     * @return int
      */
-    public function getSearchText()
+    public function getCountLimited()
     {
-        return $this->container['search_text'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets search_text
-     * @param string $search_text 
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setSearchText($search_text)
+    public function setCountLimited($count_limited)
     {
-        $this->container['search_text'] = $search_text;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

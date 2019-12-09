@@ -183,6 +183,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_equipment"
+     */
+    public function testPropertyIncludeEquipment()
+    {
+    }
+
+    /**
      * Test attribute "include_gps_locations"
      */
     public function testPropertyIncludeGpsLocations()
@@ -214,6 +221,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_zone_names"
      */
     public function testPropertyIncludeZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_notes"
+     */
+    public function testPropertyIncludeNotes()
     {
     }
 }
