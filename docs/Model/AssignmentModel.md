@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **remarks** | **string** | Remarks about this Assignment | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | Earliest start time of all Activities is this Assignment | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) | Latest end time of all Activities is this Assignment | [optional] 
+**multi_day** | **bool** | Multi day type assignment | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 

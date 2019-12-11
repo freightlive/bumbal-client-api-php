@@ -162,6 +162,13 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "multi_day"
+     */
+    public function testPropertyMultiDay()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

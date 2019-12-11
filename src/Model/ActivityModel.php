@@ -64,6 +64,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'string',
         'assignment_id' => 'int',
         'assignment_nr' => 'string',
+        'assignment_sequence_nr' => 'int',
         'remarks' => 'string',
         'locked' => 'int',
         'optimized' => 'bool',
@@ -160,6 +161,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => null,
         'assignment_id' => null,
         'assignment_nr' => null,
+        'assignment_sequence_nr' => 'int64',
         'remarks' => null,
         'locked' => null,
         'optimized' => null,
@@ -266,6 +268,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'status_name',
         'assignment_id' => 'assignment_id',
         'assignment_nr' => 'assignment_nr',
+        'assignment_sequence_nr' => 'assignment_sequence_nr',
         'remarks' => 'remarks',
         'locked' => 'locked',
         'optimized' => 'optimized',
@@ -363,6 +366,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'setStatusName',
         'assignment_id' => 'setAssignmentId',
         'assignment_nr' => 'setAssignmentNr',
+        'assignment_sequence_nr' => 'setAssignmentSequenceNr',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
         'optimized' => 'setOptimized',
@@ -460,6 +464,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'getStatusName',
         'assignment_id' => 'getAssignmentId',
         'assignment_nr' => 'getAssignmentNr',
+        'assignment_sequence_nr' => 'getAssignmentSequenceNr',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
         'optimized' => 'getOptimized',
@@ -728,6 +733,7 @@ class ActivityModel implements ArrayAccess
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
         $this->container['assignment_nr'] = isset($data['assignment_nr']) ? $data['assignment_nr'] : null;
+        $this->container['assignment_sequence_nr'] = isset($data['assignment_sequence_nr']) ? $data['assignment_sequence_nr'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['optimized'] = isset($data['optimized']) ? $data['optimized'] : null;
@@ -1103,6 +1109,27 @@ class ActivityModel implements ArrayAccess
     public function setAssignmentNr($assignment_nr)
     {
         $this->container['assignment_nr'] = $assignment_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_sequence_nr
+     * @return int
+     */
+    public function getAssignmentSequenceNr()
+    {
+        return $this->container['assignment_sequence_nr'];
+    }
+
+    /**
+     * Sets assignment_sequence_nr
+     * @param int $assignment_sequence_nr Assignment sequence number for multi day assignments
+     * @return $this
+     */
+    public function setAssignmentSequenceNr($assignment_sequence_nr)
+    {
+        $this->container['assignment_sequence_nr'] = $assignment_sequence_nr;
 
         return $this;
     }

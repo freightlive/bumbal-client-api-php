@@ -66,6 +66,7 @@ class AssignmentModel implements ArrayAccess
         'remarks' => 'string',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
+        'multi_day' => 'bool',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
@@ -91,6 +92,7 @@ class AssignmentModel implements ArrayAccess
         'remarks' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
+        'multi_day' => null,
         'links' => null,
         'meta_data' => null,
         'notes' => null,
@@ -126,6 +128,7 @@ class AssignmentModel implements ArrayAccess
         'remarks' => 'remarks',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
+        'multi_day' => 'multi_day',
         'links' => 'links',
         'meta_data' => 'meta_data',
         'notes' => 'notes',
@@ -152,6 +155,7 @@ class AssignmentModel implements ArrayAccess
         'remarks' => 'setRemarks',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
+        'multi_day' => 'setMultiDay',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
@@ -178,6 +182,7 @@ class AssignmentModel implements ArrayAccess
         'remarks' => 'getRemarks',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
+        'multi_day' => 'getMultiDay',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
@@ -249,6 +254,7 @@ class AssignmentModel implements ArrayAccess
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['multi_day'] = isset($data['multi_day']) ? $data['multi_day'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
@@ -551,6 +557,27 @@ class AssignmentModel implements ArrayAccess
     public function setDateTimeTo($date_time_to)
     {
         $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets multi_day
+     * @return bool
+     */
+    public function getMultiDay()
+    {
+        return $this->container['multi_day'];
+    }
+
+    /**
+     * Sets multi_day
+     * @param bool $multi_day Multi day type assignment
+     * @return $this
+     */
+    public function setMultiDay($multi_day)
+    {
+        $this->container['multi_day'] = $multi_day;
 
         return $this;
     }
