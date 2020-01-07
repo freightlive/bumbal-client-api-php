@@ -54,7 +54,8 @@ class TagsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_phone_nrs' => 'bool'
+        'include_phone_nrs' => 'bool',
+        'include_tag_type_name' => 'bool'
     ];
 
     /**
@@ -62,7 +63,8 @@ class TagsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_phone_nrs' => null
+        'include_phone_nrs' => null,
+        'include_tag_type_name' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_phone_nrs' => 'include_phone_nrs'
+        'include_phone_nrs' => 'include_phone_nrs',
+        'include_tag_type_name' => 'include_tag_type_name'
     ];
 
 
@@ -89,7 +92,8 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_phone_nrs' => 'setIncludePhoneNrs'
+        'include_phone_nrs' => 'setIncludePhoneNrs',
+        'include_tag_type_name' => 'setIncludeTagTypeName'
     ];
 
 
@@ -98,7 +102,8 @@ class TagsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_phone_nrs' => 'getIncludePhoneNrs'
+        'include_phone_nrs' => 'getIncludePhoneNrs',
+        'include_tag_type_name' => 'getIncludeTagTypeName'
     ];
 
     public static function attributeMap()
@@ -133,6 +138,7 @@ class TagsOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
     }
 
     /**
@@ -177,6 +183,27 @@ class TagsOptionsModel implements ArrayAccess
     public function setIncludePhoneNrs($include_phone_nrs)
     {
         $this->container['include_phone_nrs'] = $include_phone_nrs;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_type_name
+     * @return bool
+     */
+    public function getIncludeTagTypeName()
+    {
+        return $this->container['include_tag_type_name'];
+    }
+
+    /**
+     * Sets include_tag_type_name
+     * @param bool $include_tag_type_name 
+     * @return $this
+     */
+    public function setIncludeTagTypeName($include_tag_type_name)
+    {
+        $this->container['include_tag_type_name'] = $include_tag_type_name;
 
         return $this;
     }

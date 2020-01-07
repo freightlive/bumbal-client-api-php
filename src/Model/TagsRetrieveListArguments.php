@@ -58,7 +58,8 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\TagsFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'count_only' => 'bool'
     ];
 
     /**
@@ -70,7 +71,8 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null
+        'search_text' => null,
+        'count_only' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text'
+        'search_text' => 'search_text',
+        'count_only' => 'count_only'
     ];
 
 
@@ -105,7 +108,8 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'count_only' => 'setCountOnly'
     ];
 
 
@@ -118,7 +122,8 @@ class TagsRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'count_only' => 'getCountOnly'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class TagsRetrieveListArguments implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class TagsRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_only
+     * @return bool
+     */
+    public function getCountOnly()
+    {
+        return $this->container['count_only'];
+    }
+
+    /**
+     * Sets count_only
+     * @param bool $count_only 
+     * @return $this
+     */
+    public function setCountOnly($count_only)
+    {
+        $this->container['count_only'] = $count_only;
 
         return $this;
     }

@@ -85,6 +85,13 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pause_id"
+     */
+    public function testPropertyPauseId()
+    {
+    }
+
+    /**
      * Test attribute "uuid"
      */
     public function testPropertyUuid()

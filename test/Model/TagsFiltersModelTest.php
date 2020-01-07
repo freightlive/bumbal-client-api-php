@@ -76,4 +76,32 @@ class TagsFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testTagsFiltersModel()
     {
     }
+
+    /**
+     * Test attribute "object_id"
+     */
+    public function testPropertyObjectId()
+    {
+    }
+
+    /**
+     * Test attribute "object_type"
+     */
+    public function testPropertyObjectType()
+    {
+    }
+
+    /**
+     * Test attribute "tag_type_id"
+     */
+    public function testPropertyTagTypeId()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
 }

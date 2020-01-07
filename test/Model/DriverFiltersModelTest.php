@@ -85,6 +85,13 @@ class DriverFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pause_id"
+     */
+    public function testPropertyPauseId()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

@@ -55,6 +55,7 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'pause_id' => 'int',
         'uuid' => 'string',
         'addresses' => '\BumbalClient\Model\AddressModel[]',
         'tag_names' => 'string[]',
@@ -82,6 +83,7 @@ class DriverModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'pause_id' => null,
         'uuid' => null,
         'addresses' => null,
         'tag_names' => null,
@@ -119,6 +121,7 @@ class DriverModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'pause_id' => 'pause_id',
         'uuid' => 'uuid',
         'addresses' => 'addresses',
         'tag_names' => 'tag_names',
@@ -147,6 +150,7 @@ class DriverModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'pause_id' => 'setPauseId',
         'uuid' => 'setUuid',
         'addresses' => 'setAddresses',
         'tag_names' => 'setTagNames',
@@ -175,6 +179,7 @@ class DriverModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'pause_id' => 'getPauseId',
         'uuid' => 'getUuid',
         'addresses' => 'getAddresses',
         'tag_names' => 'getTagNames',
@@ -228,6 +233,7 @@ class DriverModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
@@ -291,6 +297,27 @@ class DriverModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pause_id
+     * @return int
+     */
+    public function getPauseId()
+    {
+        return $this->container['pause_id'];
+    }
+
+    /**
+     * Sets pause_id
+     * @param int $pause_id id of pause scheme to apply
+     * @return $this
+     */
+    public function setPauseId($pause_id)
+    {
+        $this->container['pause_id'] = $pause_id;
 
         return $this;
     }

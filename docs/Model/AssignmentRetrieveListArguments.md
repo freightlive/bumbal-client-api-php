@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **sorting_column** | **string** | Sorting Column | [optional] 
 **sorting_direction** | **string** | Sorting Direction | [optional] 
 **as_list** | **bool** |  | [optional] 
+**count_only** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

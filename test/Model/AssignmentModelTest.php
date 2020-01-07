@@ -92,6 +92,34 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "booking_account_id"
+     */
+    public function testPropertyBookingAccountId()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "activities"
+     */
+    public function testPropertyActivities()
+    {
+    }
+
+    /**
      * Test attribute "booking_account"
      */
     public function testPropertyBookingAccount()
@@ -204,16 +232,58 @@ class AssignmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "assignment_created_at"
      */
-    public function testPropertyCreatedAt()
+    public function testPropertyAssignmentCreatedAt()
     {
     }
 
     /**
-     * Test attribute "updated_at"
+     * Test attribute "assignment_updated_at"
      */
-    public function testPropertyUpdatedAt()
+    public function testPropertyAssignmentUpdatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_created_by"
+     */
+    public function testPropertyAssignmentCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_updated_by"
+     */
+    public function testPropertyAssignmentUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_created_by_user"
+     */
+    public function testPropertyAssignmentCreatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_updated_by_user"
+     */
+    public function testPropertyAssignmentUpdatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_active"
+     */
+    public function testPropertyAssignmentActive()
+    {
+    }
+
+    /**
+     * Test attribute "assignment_removed"
+     */
+    public function testPropertyAssignmentRemoved()
     {
     }
 }

@@ -61,7 +61,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_from' => '\DateTime',
         'proposed_plan_date_time_to' => '\DateTime',
         'proposed_driver' => '\BumbalClient\Model\DriverModel',
-        'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]'
+        'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]',
+        'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]'
     ];
 
     /**
@@ -76,7 +77,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_from' => 'date-time',
         'proposed_plan_date_time_to' => 'date-time',
         'proposed_driver' => null,
-        'impact' => null
+        'impact' => null,
+        'follow_up_time_slots' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_from' => 'proposed_plan_date_time_from',
         'proposed_plan_date_time_to' => 'proposed_plan_date_time_to',
         'proposed_driver' => 'proposed_driver',
-        'impact' => 'impact'
+        'impact' => 'impact',
+        'follow_up_time_slots' => 'follow_up_time_slots'
     ];
 
 
@@ -117,7 +120,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_from' => 'setProposedPlanDateTimeFrom',
         'proposed_plan_date_time_to' => 'setProposedPlanDateTimeTo',
         'proposed_driver' => 'setProposedDriver',
-        'impact' => 'setImpact'
+        'impact' => 'setImpact',
+        'follow_up_time_slots' => 'setFollowUpTimeSlots'
     ];
 
 
@@ -133,7 +137,8 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_from' => 'getProposedPlanDateTimeFrom',
         'proposed_plan_date_time_to' => 'getProposedPlanDateTimeTo',
         'proposed_driver' => 'getProposedDriver',
-        'impact' => 'getImpact'
+        'impact' => 'getImpact',
+        'follow_up_time_slots' => 'getFollowUpTimeSlots'
     ];
 
     public static function attributeMap()
@@ -175,6 +180,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         $this->container['proposed_plan_date_time_to'] = isset($data['proposed_plan_date_time_to']) ? $data['proposed_plan_date_time_to'] : null;
         $this->container['proposed_driver'] = isset($data['proposed_driver']) ? $data['proposed_driver'] : null;
         $this->container['impact'] = isset($data['impact']) ? $data['impact'] : null;
+        $this->container['follow_up_time_slots'] = isset($data['follow_up_time_slots']) ? $data['follow_up_time_slots'] : null;
     }
 
     /**
@@ -366,6 +372,27 @@ class AvailabilityTimeSlotModel implements ArrayAccess
     public function setImpact($impact)
     {
         $this->container['impact'] = $impact;
+
+        return $this;
+    }
+
+    /**
+     * Gets follow_up_time_slots
+     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
+     */
+    public function getFollowUpTimeSlots()
+    {
+        return $this->container['follow_up_time_slots'];
+    }
+
+    /**
+     * Sets follow_up_time_slots
+     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $follow_up_time_slots 
+     * @return $this
+     */
+    public function setFollowUpTimeSlots($follow_up_time_slots)
+    {
+        $this->container['follow_up_time_slots'] = $follow_up_time_slots;
 
         return $this;
     }

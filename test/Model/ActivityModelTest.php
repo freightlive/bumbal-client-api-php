@@ -631,6 +631,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
      * Test attribute "zones"
      */
     public function testPropertyZones()
@@ -711,6 +718,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "activity_updated_by_user"
      */
     public function testPropertyActivityUpdatedByUser()
+    {
+    }
+
+    /**
+     * Test attribute "activity_active"
+     */
+    public function testPropertyActivityActive()
+    {
+    }
+
+    /**
+     * Test attribute "activity_removed"
+     */
+    public function testPropertyActivityRemoved()
     {
     }
 }

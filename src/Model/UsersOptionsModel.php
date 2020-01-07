@@ -58,6 +58,7 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_meta_data' => 'bool',
         'include_user_tags' => 'bool',
         'include_party_name' => 'bool',
+        'include_pause' => 'bool',
         'include_zones' => 'bool'
     ];
 
@@ -70,6 +71,7 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_meta_data' => null,
         'include_user_tags' => null,
         'include_party_name' => null,
+        'include_pause' => null,
         'include_zones' => null
     ];
 
@@ -92,6 +94,7 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_meta_data' => 'include_user_meta_data',
         'include_user_tags' => 'include_user_tags',
         'include_party_name' => 'include_party_name',
+        'include_pause' => 'include_pause',
         'include_zones' => 'include_zones'
     ];
 
@@ -105,6 +108,7 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_meta_data' => 'setIncludeUserMetaData',
         'include_user_tags' => 'setIncludeUserTags',
         'include_party_name' => 'setIncludePartyName',
+        'include_pause' => 'setIncludePause',
         'include_zones' => 'setIncludeZones'
     ];
 
@@ -118,6 +122,7 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_meta_data' => 'getIncludeUserMetaData',
         'include_user_tags' => 'getIncludeUserTags',
         'include_party_name' => 'getIncludePartyName',
+        'include_pause' => 'getIncludePause',
         'include_zones' => 'getIncludeZones'
     ];
 
@@ -156,6 +161,7 @@ class UsersOptionsModel implements ArrayAccess
         $this->container['include_user_meta_data'] = isset($data['include_user_meta_data']) ? $data['include_user_meta_data'] : null;
         $this->container['include_user_tags'] = isset($data['include_user_tags']) ? $data['include_user_tags'] : null;
         $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
+        $this->container['include_pause'] = isset($data['include_pause']) ? $data['include_pause'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
     }
 
@@ -264,6 +270,27 @@ class UsersOptionsModel implements ArrayAccess
     public function setIncludePartyName($include_party_name)
     {
         $this->container['include_party_name'] = $include_party_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_pause
+     * @return bool
+     */
+    public function getIncludePause()
+    {
+        return $this->container['include_pause'];
+    }
+
+    /**
+     * Sets include_pause
+     * @param bool $include_pause 
+     * @return $this
+     */
+    public function setIncludePause($include_pause)
+    {
+        $this->container['include_pause'] = $include_pause;
 
         return $this;
     }

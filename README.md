@@ -132,6 +132,8 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
 *LinkApi* | [**updateLink**](docs/Api/LinkApi.md#updatelink) | **PUT** /link/{linkId} | Update a specific link object
+*LogApi* | [**retrieveListLog**](docs/Api/LogApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log messages
+*LogApi* | [**setLog**](docs/Api/LogApi.md#setlog) | **POST** /log/set | Post a Log message
 *NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
@@ -154,8 +156,14 @@ Class | Method | HTTP request | Description
 *PartyApi* | [**retrieveParty**](docs/Api/PartyApi.md#retrieveparty) | **GET** /party/{partyId} | Find party by ID
 *PartyApi* | [**setParty**](docs/Api/PartyApi.md#setparty) | **POST** /party/set | Set (create or update) an Party
 *PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
+*PauseApi* | [**createPause**](docs/Api/PauseApi.md#createpause) | **POST** /pause | Add a new Pause
+*PauseApi* | [**deletePause**](docs/Api/PauseApi.md#deletepause) | **DELETE** /pause/{pauseId} | Delete a Pause
+*PauseApi* | [**retrieveListPause**](docs/Api/PauseApi.md#retrievelistpause) | **PUT** /pause | Retrieve List of Pauses
+*PauseApi* | [**retrievePause**](docs/Api/PauseApi.md#retrievepause) | **GET** /pause/{pauseId} | Retrieve a Pause
+*PauseApi* | [**setPause**](docs/Api/PauseApi.md#setpause) | **POST** /pause/set | Set (create or update) a Pause
+*PauseApi* | [**updatePause**](docs/Api/PauseApi.md#updatepause) | **PUT** /pause/{pauseId} | Update a Pause
 *PlannerApi* | [**addActivitiesToRoute**](docs/Api/PlannerApi.md#addactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
-*PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning-route | Apply a planning schema
+*PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**changeActivitySequence**](docs/Api/PlannerApi.md#changeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
@@ -277,6 +285,7 @@ Class | Method | HTTP request | Description
  - [AutoPlanFiltersModel](docs/Model/AutoPlanFiltersModel.md)
  - [AutoPlanOptionsModel](docs/Model/AutoPlanOptionsModel.md)
  - [AutoPlanResponse](docs/Model/AutoPlanResponse.md)
+ - [AvailabilityFollowUpTimeSlotModel](docs/Model/AvailabilityFollowUpTimeSlotModel.md)
  - [AvailabilityTimeSlotImpactModel](docs/Model/AvailabilityTimeSlotImpactModel.md)
  - [AvailabilityTimeSlotModel](docs/Model/AvailabilityTimeSlotModel.md)
  - [BrandColourFiltersModel](docs/Model/BrandColourFiltersModel.md)
@@ -325,6 +334,11 @@ Class | Method | HTTP request | Description
  - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
  - [LinkModel](docs/Model/LinkModel.md)
+ - [LogFiltersModel](docs/Model/LogFiltersModel.md)
+ - [LogListResponse](docs/Model/LogListResponse.md)
+ - [LogModel](docs/Model/LogModel.md)
+ - [LogOptionsModel](docs/Model/LogOptionsModel.md)
+ - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)
  - [NoteFiltersModel](docs/Model/NoteFiltersModel.md)
  - [NoteModel](docs/Model/NoteModel.md)
@@ -345,6 +359,11 @@ Class | Method | HTTP request | Description
  - [PartyModel](docs/Model/PartyModel.md)
  - [PartyOptionsModel](docs/Model/PartyOptionsModel.md)
  - [PartyRetrieveListArguments](docs/Model/PartyRetrieveListArguments.md)
+ - [PauseFiltersModel](docs/Model/PauseFiltersModel.md)
+ - [PauseListResponse](docs/Model/PauseListResponse.md)
+ - [PauseModel](docs/Model/PauseModel.md)
+ - [PauseOptionsModel](docs/Model/PauseOptionsModel.md)
+ - [PauseRetrieveListArguments](docs/Model/PauseRetrieveListArguments.md)
  - [PhoneNrModel](docs/Model/PhoneNrModel.md)
  - [PortalFiltersModel](docs/Model/PortalFiltersModel.md)
  - [PortalListResponse](docs/Model/PortalListResponse.md)
@@ -374,6 +393,7 @@ Class | Method | HTTP request | Description
  - [SettingsModel](docs/Model/SettingsModel.md)
  - [SettingsOptionsModel](docs/Model/SettingsOptionsModel.md)
  - [SettingsRetrieveListArguments](docs/Model/SettingsRetrieveListArguments.md)
+ - [TagListResponse](docs/Model/TagListResponse.md)
  - [TagModel](docs/Model/TagModel.md)
  - [TagTypeFiltersModel](docs/Model/TagTypeFiltersModel.md)
  - [TagTypeModel](docs/Model/TagTypeModel.md)

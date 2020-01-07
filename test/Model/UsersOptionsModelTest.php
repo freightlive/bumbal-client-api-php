@@ -106,6 +106,13 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_pause"
+     */
+    public function testPropertyIncludePause()
+    {
+    }
+
+    /**
      * Test attribute "include_zones"
      */
     public function testPropertyIncludeZones()

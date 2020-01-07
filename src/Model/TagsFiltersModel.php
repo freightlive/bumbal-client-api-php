@@ -54,7 +54,10 @@ class TagsFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'object_id' => 'int[]',
+        'object_type' => 'int[]',
+        'tag_type_id' => 'int[]',
+        'tag_names' => 'string[]'
     ];
 
     /**
@@ -62,7 +65,10 @@ class TagsFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'object_id' => null,
+        'object_type' => null,
+        'tag_type_id' => null,
+        'tag_names' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class TagsFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'object_id' => 'object_id',
+        'object_type' => 'object_type',
+        'tag_type_id' => 'tag_type_id',
+        'tag_names' => 'tag_names'
     ];
 
 
@@ -89,7 +98,10 @@ class TagsFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'object_id' => 'setObjectId',
+        'object_type' => 'setObjectType',
+        'tag_type_id' => 'setTagTypeId',
+        'tag_names' => 'setTagNames'
     ];
 
 
@@ -98,7 +110,10 @@ class TagsFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'object_id' => 'getObjectId',
+        'object_type' => 'getObjectType',
+        'tag_type_id' => 'getTagTypeId',
+        'tag_names' => 'getTagNames'
     ];
 
     public static function attributeMap()
@@ -132,6 +147,10 @@ class TagsFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
+        $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
     }
 
     /**
@@ -158,6 +177,90 @@ class TagsFiltersModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets object_id
+     * @return int[]
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int[] $object_id Object id
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type
+     * @return int[]
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param int[] $object_type Object type
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_type_id
+     * @return int[]
+     */
+    public function getTagTypeId()
+    {
+        return $this->container['tag_type_id'];
+    }
+
+    /**
+     * Sets tag_type_id
+     * @param int[] $tag_type_id Tag type id
+     * @return $this
+     */
+    public function setTagTypeId($tag_type_id)
+    {
+        $this->container['tag_type_id'] = $tag_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names Tag names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

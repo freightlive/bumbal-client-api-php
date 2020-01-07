@@ -111,4 +111,11 @@ class TagsRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     public function testPropertySearchText()
     {
     }
+
+    /**
+     * Test attribute "count_only"
+     */
+    public function testPropertyCountOnly()
+    {
+    }
 }

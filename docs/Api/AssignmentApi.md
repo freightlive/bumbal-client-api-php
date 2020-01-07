@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAssignment**
-> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
+> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id)
 
 Find assignment by ID
 
@@ -80,12 +80,9 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to return
-$include_assignment_links = true; // bool | Include Link Data
-$include_assignment_files = true; // bool | Include files
-$include_assignment_files_meta_data = true; // bool | Include files meta data
 
 try {
-    $result = $api_instance->retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data);
+    $result = $api_instance->retrieveAssignment($assignment_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->retrieveAssignment: ', $e->getMessage(), PHP_EOL;
@@ -98,9 +95,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to return |
- **include_assignment_links** | **bool**| Include Link Data | [default to true]
- **include_assignment_files** | **bool**| Include files | [default to true]
- **include_assignment_files_meta_data** | **bool**| Include files meta data | [default to true]
 
 ### Return type
 

@@ -191,7 +191,7 @@ class PlannerApi
             throw new \InvalidArgumentException('Missing the required parameter $arguments when calling applyPlanning');
         }
         // parse inputs
-        $resourcePath = "/planner/apply-planning-route";
+        $resourcePath = "/planner/apply-planning";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -228,7 +228,7 @@ class PlannerApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
-                '/planner/apply-planning-route'
+                '/planner/apply-planning'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

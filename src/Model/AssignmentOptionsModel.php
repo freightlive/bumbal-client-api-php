@@ -54,7 +54,15 @@ class AssignmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_activities' => 'bool'
+        'include_activities' => 'bool',
+        'include_meta_data' => 'bool',
+        'include_links' => 'bool',
+        'include_files' => 'bool',
+        'include_tag_ids' => 'bool',
+        'include_tag_names' => 'bool',
+        'include_booking_account' => 'bool',
+        'include_record_info' => 'bool',
+        'include_record_object' => 'bool'
     ];
 
     /**
@@ -62,7 +70,15 @@ class AssignmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_activities' => null
+        'include_activities' => null,
+        'include_meta_data' => null,
+        'include_links' => null,
+        'include_files' => null,
+        'include_tag_ids' => null,
+        'include_tag_names' => null,
+        'include_booking_account' => null,
+        'include_record_info' => null,
+        'include_record_object' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +96,15 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_activities' => 'include_activities'
+        'include_activities' => 'include_activities',
+        'include_meta_data' => 'include_meta_data',
+        'include_links' => 'include_links',
+        'include_files' => 'include_files',
+        'include_tag_ids' => 'include_tag_ids',
+        'include_tag_names' => 'include_tag_names',
+        'include_booking_account' => 'include_booking_account',
+        'include_record_info' => 'include_record_info',
+        'include_record_object' => 'include_record_object'
     ];
 
 
@@ -89,7 +113,15 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_activities' => 'setIncludeActivities'
+        'include_activities' => 'setIncludeActivities',
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_links' => 'setIncludeLinks',
+        'include_files' => 'setIncludeFiles',
+        'include_tag_ids' => 'setIncludeTagIds',
+        'include_tag_names' => 'setIncludeTagNames',
+        'include_booking_account' => 'setIncludeBookingAccount',
+        'include_record_info' => 'setIncludeRecordInfo',
+        'include_record_object' => 'setIncludeRecordObject'
     ];
 
 
@@ -98,7 +130,15 @@ class AssignmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_activities' => 'getIncludeActivities'
+        'include_activities' => 'getIncludeActivities',
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_links' => 'getIncludeLinks',
+        'include_files' => 'getIncludeFiles',
+        'include_tag_ids' => 'getIncludeTagIds',
+        'include_tag_names' => 'getIncludeTagNames',
+        'include_booking_account' => 'getIncludeBookingAccount',
+        'include_record_info' => 'getIncludeRecordInfo',
+        'include_record_object' => 'getIncludeRecordObject'
     ];
 
     public static function attributeMap()
@@ -133,6 +173,14 @@ class AssignmentOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_activities'] = isset($data['include_activities']) ? $data['include_activities'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
+        $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
+        $this->container['include_booking_account'] = isset($data['include_booking_account']) ? $data['include_booking_account'] : null;
+        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
+        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
     }
 
     /**
@@ -177,6 +225,174 @@ class AssignmentOptionsModel implements ArrayAccess
     public function setIncludeActivities($include_activities)
     {
         $this->container['include_activities'] = $include_activities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_files
+     * @return bool
+     */
+    public function getIncludeFiles()
+    {
+        return $this->container['include_files'];
+    }
+
+    /**
+     * Sets include_files
+     * @param bool $include_files 
+     * @return $this
+     */
+    public function setIncludeFiles($include_files)
+    {
+        $this->container['include_files'] = $include_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_ids
+     * @return bool
+     */
+    public function getIncludeTagIds()
+    {
+        return $this->container['include_tag_ids'];
+    }
+
+    /**
+     * Sets include_tag_ids
+     * @param bool $include_tag_ids 
+     * @return $this
+     */
+    public function setIncludeTagIds($include_tag_ids)
+    {
+        $this->container['include_tag_ids'] = $include_tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_names
+     * @return bool
+     */
+    public function getIncludeTagNames()
+    {
+        return $this->container['include_tag_names'];
+    }
+
+    /**
+     * Sets include_tag_names
+     * @param bool $include_tag_names 
+     * @return $this
+     */
+    public function setIncludeTagNames($include_tag_names)
+    {
+        $this->container['include_tag_names'] = $include_tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_booking_account
+     * @return bool
+     */
+    public function getIncludeBookingAccount()
+    {
+        return $this->container['include_booking_account'];
+    }
+
+    /**
+     * Sets include_booking_account
+     * @param bool $include_booking_account 
+     * @return $this
+     */
+    public function setIncludeBookingAccount($include_booking_account)
+    {
+        $this->container['include_booking_account'] = $include_booking_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_record_info
+     * @return bool
+     */
+    public function getIncludeRecordInfo()
+    {
+        return $this->container['include_record_info'];
+    }
+
+    /**
+     * Sets include_record_info
+     * @param bool $include_record_info 
+     * @return $this
+     */
+    public function setIncludeRecordInfo($include_record_info)
+    {
+        $this->container['include_record_info'] = $include_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_record_object
+     * @return bool
+     */
+    public function getIncludeRecordObject()
+    {
+        return $this->container['include_record_object'];
+    }
+
+    /**
+     * Sets include_record_object
+     * @param bool $include_record_object 
+     * @return $this
+     */
+    public function setIncludeRecordObject($include_record_object)
+    {
+        $this->container['include_record_object'] = $include_record_object;
 
         return $this;
     }

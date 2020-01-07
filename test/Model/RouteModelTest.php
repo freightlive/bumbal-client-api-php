@@ -120,6 +120,20 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "pause_id"
+     */
+    public function testPropertyPauseId()
+    {
+    }
+
+    /**
+     * Test attribute "pause"
+     */
+    public function testPropertyPause()
+    {
+    }
+
+    /**
      * Test attribute "driver_id"
      */
     public function testPropertyDriverId()
@@ -431,13 +445,6 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "files"
      */
     public function testPropertyFiles()
-    {
-    }
-
-    /**
-     * Test attribute "pause_id"
-     */
-    public function testPropertyPauseId()
     {
     }
 

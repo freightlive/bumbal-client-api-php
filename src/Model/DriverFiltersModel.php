@@ -54,7 +54,8 @@ class DriverFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
+        'id' => 'int[]',
+        'pause_id' => 'int[]',
         'links' => 'object[]',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime'
@@ -66,6 +67,7 @@ class DriverFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'pause_id' => null,
         'links' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time'
@@ -87,6 +89,7 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'pause_id' => 'pause_id',
         'links' => 'links',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till'
@@ -99,6 +102,7 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'pause_id' => 'setPauseId',
         'links' => 'setLinks',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill'
@@ -111,6 +115,7 @@ class DriverFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'pause_id' => 'getPauseId',
         'links' => 'getLinks',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill'
@@ -148,6 +153,7 @@ class DriverFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
@@ -180,7 +186,7 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return int[]
      */
     public function getId()
     {
@@ -189,12 +195,33 @@ class DriverFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Driver id's
+     * @param int[] $id Driver id's
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pause_id
+     * @return int[]
+     */
+    public function getPauseId()
+    {
+        return $this->container['pause_id'];
+    }
+
+    /**
+     * Sets pause_id
+     * @param int[] $pause_id ids of pause schemes applied to drivers
+     * @return $this
+     */
+    public function setPauseId($pause_id)
+    {
+        $this->container['pause_id'] = $pause_id;
 
         return $this;
     }

@@ -83,4 +83,11 @@ class TagsOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludePhoneNrs()
     {
     }
+
+    /**
+     * Test attribute "include_tag_type_name"
+     */
+    public function testPropertyIncludeTagTypeName()
+    {
+    }
 }

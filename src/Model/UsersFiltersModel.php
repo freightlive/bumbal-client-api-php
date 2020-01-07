@@ -54,10 +54,11 @@ class UsersFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'uuid' => 'int',
-        'role_id' => 'int',
-        'party_id' => 'int',
+        'id' => 'int[]',
+        'uuid' => 'string[]',
+        'pause_id' => 'int[]',
+        'role_id' => 'int[]',
+        'party_id' => 'int[]',
         'tag_names' => 'string[]',
         'zone_names' => 'string[]'
     ];
@@ -67,10 +68,11 @@ class UsersFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'uuid' => 'int64',
-        'role_id' => 'int64',
-        'party_id' => 'int64',
+        'id' => null,
+        'uuid' => null,
+        'pause_id' => null,
+        'role_id' => null,
+        'party_id' => null,
         'tag_names' => null,
         'zone_names' => null
     ];
@@ -92,6 +94,7 @@ class UsersFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'uuid' => 'uuid',
+        'pause_id' => 'pause_id',
         'role_id' => 'role_id',
         'party_id' => 'party_id',
         'tag_names' => 'tag_names',
@@ -106,6 +109,7 @@ class UsersFiltersModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'uuid' => 'setUuid',
+        'pause_id' => 'setPauseId',
         'role_id' => 'setRoleId',
         'party_id' => 'setPartyId',
         'tag_names' => 'setTagNames',
@@ -120,6 +124,7 @@ class UsersFiltersModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'uuid' => 'getUuid',
+        'pause_id' => 'getPauseId',
         'role_id' => 'getRoleId',
         'party_id' => 'getPartyId',
         'tag_names' => 'getTagNames',
@@ -159,6 +164,7 @@ class UsersFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['role_id'] = isset($data['role_id']) ? $data['role_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
@@ -192,7 +198,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return int[]
      */
     public function getId()
     {
@@ -201,7 +207,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id 
+     * @param int[] $id 
      * @return $this
      */
     public function setId($id)
@@ -213,7 +219,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Gets uuid
-     * @return int
+     * @return string[]
      */
     public function getUuid()
     {
@@ -222,7 +228,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Sets uuid
-     * @param int $uuid unique per user
+     * @param string[] $uuid unique per user
      * @return $this
      */
     public function setUuid($uuid)
@@ -233,8 +239,29 @@ class UsersFiltersModel implements ArrayAccess
     }
 
     /**
+     * Gets pause_id
+     * @return int[]
+     */
+    public function getPauseId()
+    {
+        return $this->container['pause_id'];
+    }
+
+    /**
+     * Sets pause_id
+     * @param int[] $pause_id ids of pause schemes applied to user with teh role driver
+     * @return $this
+     */
+    public function setPauseId($pause_id)
+    {
+        $this->container['pause_id'] = $pause_id;
+
+        return $this;
+    }
+
+    /**
      * Gets role_id
-     * @return int
+     * @return int[]
      */
     public function getRoleId()
     {
@@ -243,7 +270,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Sets role_id
-     * @param int $role_id id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin
+     * @param int[] $role_id ids of the user roles, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin
      * @return $this
      */
     public function setRoleId($role_id)
@@ -255,7 +282,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Gets party_id
-     * @return int
+     * @return int[]
      */
     public function getPartyId()
     {
@@ -264,7 +291,7 @@ class UsersFiltersModel implements ArrayAccess
 
     /**
      * Sets party_id
-     * @param int $party_id Associated Party ID
+     * @param int[] $party_id Associated Party IDs
      * @return $this
      */
     public function setPartyId($party_id)

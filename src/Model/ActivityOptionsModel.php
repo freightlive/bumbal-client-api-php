@@ -57,6 +57,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'bool',
         'include_activity_type_name' => 'bool',
         'include_activity_meta_data' => 'bool',
+        'include_meta_data' => 'bool',
         'include_address_applied' => 'bool',
         'include_address' => 'bool',
         'include_address_object' => 'bool',
@@ -115,6 +116,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => null,
         'include_activity_type_name' => null,
         'include_activity_meta_data' => null,
+        'include_meta_data' => null,
         'include_address_applied' => null,
         'include_address' => null,
         'include_address_object' => null,
@@ -183,6 +185,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'include_activity_status',
         'include_activity_type_name' => 'include_activity_type_name',
         'include_activity_meta_data' => 'include_activity_meta_data',
+        'include_meta_data' => 'include_meta_data',
         'include_address_applied' => 'include_address_applied',
         'include_address' => 'include_address',
         'include_address_object' => 'include_address_object',
@@ -242,6 +245,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'setIncludeActivityStatus',
         'include_activity_type_name' => 'setIncludeActivityTypeName',
         'include_activity_meta_data' => 'setIncludeActivityMetaData',
+        'include_meta_data' => 'setIncludeMetaData',
         'include_address_applied' => 'setIncludeAddressApplied',
         'include_address' => 'setIncludeAddress',
         'include_address_object' => 'setIncludeAddressObject',
@@ -301,6 +305,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_status' => 'getIncludeActivityStatus',
         'include_activity_type_name' => 'getIncludeActivityTypeName',
         'include_activity_meta_data' => 'getIncludeActivityMetaData',
+        'include_meta_data' => 'getIncludeMetaData',
         'include_address_applied' => 'getIncludeAddressApplied',
         'include_address' => 'getIncludeAddress',
         'include_address_object' => 'getIncludeAddressObject',
@@ -385,6 +390,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_status'] = isset($data['include_activity_status']) ? $data['include_activity_status'] : null;
         $this->container['include_activity_type_name'] = isset($data['include_activity_type_name']) ? $data['include_activity_type_name'] : null;
         $this->container['include_activity_meta_data'] = isset($data['include_activity_meta_data']) ? $data['include_activity_meta_data'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_address_applied'] = isset($data['include_address_applied']) ? $data['include_address_applied'] : null;
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
@@ -519,6 +525,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityMetaData($include_activity_meta_data)
     {
         $this->container['include_activity_meta_data'] = $include_activity_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
 
         return $this;
     }

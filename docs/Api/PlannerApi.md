@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addActivitiesToRoute**](PlannerApi.md#addActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities To Route
-[**applyPlanning**](PlannerApi.md#applyPlanning) | **POST** /planner/apply-planning-route | Apply a planning schema
+[**applyPlanning**](PlannerApi.md#applyPlanning) | **POST** /planner/apply-planning | Apply a planning schema
 [**autoPlan**](PlannerApi.md#autoPlan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 [**autoPlanResult**](PlannerApi.md#autoPlanResult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
 [**changeActivitySequence**](PlannerApi.md#changeActivitySequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence

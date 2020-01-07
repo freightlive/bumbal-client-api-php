@@ -180,15 +180,12 @@ class AssignmentApi
      * Find assignment by ID
      *
      * @param int $assignment_id ID of assignment to return (required)
-     * @param bool $include_assignment_links Include Link Data (required)
-     * @param bool $include_assignment_files Include files (required)
-     * @param bool $include_assignment_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\AssignmentModel
      */
-    public function retrieveAssignment($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
+    public function retrieveAssignment($assignment_id)
     {
-        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data);
+        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id);
         return $response;
     }
 
@@ -198,29 +195,14 @@ class AssignmentApi
      * Find assignment by ID
      *
      * @param int $assignment_id ID of assignment to return (required)
-     * @param bool $include_assignment_links Include Link Data (required)
-     * @param bool $include_assignment_files Include files (required)
-     * @param bool $include_assignment_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\AssignmentModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveAssignmentWithHttpInfo($assignment_id, $include_assignment_links, $include_assignment_files, $include_assignment_files_meta_data)
+    public function retrieveAssignmentWithHttpInfo($assignment_id)
     {
         // verify the required parameter 'assignment_id' is set
         if ($assignment_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $assignment_id when calling retrieveAssignment');
-        }
-        // verify the required parameter 'include_assignment_links' is set
-        if ($include_assignment_links === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_links when calling retrieveAssignment');
-        }
-        // verify the required parameter 'include_assignment_files' is set
-        if ($include_assignment_files === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_files when calling retrieveAssignment');
-        }
-        // verify the required parameter 'include_assignment_files_meta_data' is set
-        if ($include_assignment_files_meta_data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_assignment_files_meta_data when calling retrieveAssignment');
         }
         // parse inputs
         $resourcePath = "/assignment/{assignmentId}";
@@ -234,18 +216,6 @@ class AssignmentApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // query params
-        if ($include_assignment_links !== null) {
-            $queryParams['include_assignment_links'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_links);
-        }
-        // query params
-        if ($include_assignment_files !== null) {
-            $queryParams['include_assignment_files'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_files);
-        }
-        // query params
-        if ($include_assignment_files_meta_data !== null) {
-            $queryParams['include_assignment_files_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_assignment_files_meta_data);
-        }
         // path params
         if ($assignment_id !== null) {
             $resourcePath = str_replace(

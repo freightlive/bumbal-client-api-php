@@ -133,6 +133,7 @@ class ActivityModel implements ArrayAccess
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
         'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
@@ -144,7 +145,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_by' => 'int',
         'activity_updated_by' => 'int',
         'activity_created_by_user' => '\BumbalClient\Model\UsersModel',
-        'activity_updated_by_user' => '\BumbalClient\Model\UsersModel'
+        'activity_updated_by_user' => '\BumbalClient\Model\UsersModel',
+        'activity_active' => 'bool',
+        'activity_removed' => 'bool'
     ];
 
     /**
@@ -231,6 +234,7 @@ class ActivityModel implements ArrayAccess
         'tags' => null,
         'recurrence' => null,
         'tag_names' => null,
+        'tag_ids' => null,
         'zones' => null,
         'zone_names' => null,
         'links' => null,
@@ -242,7 +246,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_by' => null,
         'activity_updated_by' => null,
         'activity_created_by_user' => null,
-        'activity_updated_by_user' => null
+        'activity_updated_by_user' => null,
+        'activity_active' => null,
+        'activity_removed' => null
     ];
 
     public static function swaggerTypes()
@@ -339,6 +345,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'tags',
         'recurrence' => 'recurrence',
         'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
         'zones' => 'zones',
         'zone_names' => 'zone_names',
         'links' => 'links',
@@ -350,7 +357,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_by' => 'activity_created_by',
         'activity_updated_by' => 'activity_updated_by',
         'activity_created_by_user' => 'activity_created_by_user',
-        'activity_updated_by_user' => 'activity_updated_by_user'
+        'activity_updated_by_user' => 'activity_updated_by_user',
+        'activity_active' => 'activity_active',
+        'activity_removed' => 'activity_removed'
     ];
 
 
@@ -438,6 +447,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'setTags',
         'recurrence' => 'setRecurrence',
         'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
         'zones' => 'setZones',
         'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
@@ -449,7 +459,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_by' => 'setActivityCreatedBy',
         'activity_updated_by' => 'setActivityUpdatedBy',
         'activity_created_by_user' => 'setActivityCreatedByUser',
-        'activity_updated_by_user' => 'setActivityUpdatedByUser'
+        'activity_updated_by_user' => 'setActivityUpdatedByUser',
+        'activity_active' => 'setActivityActive',
+        'activity_removed' => 'setActivityRemoved'
     ];
 
 
@@ -537,6 +549,7 @@ class ActivityModel implements ArrayAccess
         'tags' => 'getTags',
         'recurrence' => 'getRecurrence',
         'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
         'zones' => 'getZones',
         'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
@@ -548,7 +561,9 @@ class ActivityModel implements ArrayAccess
         'activity_created_by' => 'getActivityCreatedBy',
         'activity_updated_by' => 'getActivityUpdatedBy',
         'activity_created_by_user' => 'getActivityCreatedByUser',
-        'activity_updated_by_user' => 'getActivityUpdatedByUser'
+        'activity_updated_by_user' => 'getActivityUpdatedByUser',
+        'activity_active' => 'getActivityActive',
+        'activity_removed' => 'getActivityRemoved'
     ];
 
     public static function attributeMap()
@@ -807,6 +822,7 @@ class ActivityModel implements ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
@@ -819,6 +835,8 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_updated_by'] = isset($data['activity_updated_by']) ? $data['activity_updated_by'] : null;
         $this->container['activity_created_by_user'] = isset($data['activity_created_by_user']) ? $data['activity_created_by_user'] : null;
         $this->container['activity_updated_by_user'] = isset($data['activity_updated_by_user']) ? $data['activity_updated_by_user'] : null;
+        $this->container['activity_active'] = isset($data['activity_active']) ? $data['activity_active'] : null;
+        $this->container['activity_removed'] = isset($data['activity_removed']) ? $data['activity_removed'] : null;
     }
 
     /**
@@ -2569,6 +2587,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag ids
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets zones
      * @return \BumbalClient\Model\ZoneModel[]
      */
@@ -2816,6 +2855,48 @@ class ActivityModel implements ArrayAccess
     public function setActivityUpdatedByUser($activity_updated_by_user)
     {
         $this->container['activity_updated_by_user'] = $activity_updated_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_active
+     * @return bool
+     */
+    public function getActivityActive()
+    {
+        return $this->container['activity_active'];
+    }
+
+    /**
+     * Sets activity_active
+     * @param bool $activity_active Activity is active (=true). Inactive activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui.
+     * @return $this
+     */
+    public function setActivityActive($activity_active)
+    {
+        $this->container['activity_active'] = $activity_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_removed
+     * @return bool
+     */
+    public function getActivityRemoved()
+    {
+        return $this->container['activity_removed'];
+    }
+
+    /**
+     * Sets activity_removed
+     * @param bool $activity_removed Activity is removed (=true). Removed activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed activities are usually irrepairable.
+     * @return $this
+     */
+    public function setActivityRemoved($activity_removed)
+    {
+        $this->container['activity_removed'] = $activity_removed;
 
         return $this;
     }

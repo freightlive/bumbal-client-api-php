@@ -56,6 +56,10 @@ class AssignmentModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'party_id' => 'int',
+        'booking_account_id' => 'int',
+        'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
+        'activities' => '\BumbalClient\Model\ActivityModel[]',
         'booking_account' => '\BumbalClient\Model\PartyModel',
         'status_id' => 'int',
         'nr' => 'string',
@@ -72,8 +76,14 @@ class AssignmentModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'assignment_created_at' => '\DateTime',
+        'assignment_updated_at' => '\DateTime',
+        'assignment_created_by' => 'int',
+        'assignment_updated_by' => 'int',
+        'assignment_created_by_user' => '\BumbalClient\Model\UsersModel',
+        'assignment_updated_by_user' => '\BumbalClient\Model\UsersModel',
+        'assignment_active' => 'bool',
+        'assignment_removed' => 'bool'
     ];
 
     /**
@@ -83,6 +93,10 @@ class AssignmentModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'party_id' => 'int64',
+        'booking_account_id' => 'int64',
+        'tag_names' => null,
+        'tag_ids' => null,
+        'activities' => null,
         'booking_account' => null,
         'status_id' => 'int64',
         'nr' => null,
@@ -99,8 +113,14 @@ class AssignmentModel implements ArrayAccess
         'meta_data' => null,
         'notes' => null,
         'files' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'assignment_created_at' => 'date-time',
+        'assignment_updated_at' => 'date-time',
+        'assignment_created_by' => null,
+        'assignment_updated_by' => null,
+        'assignment_created_by_user' => null,
+        'assignment_updated_by_user' => null,
+        'assignment_active' => null,
+        'assignment_removed' => null
     ];
 
     public static function swaggerTypes()
@@ -120,6 +140,10 @@ class AssignmentModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'party_id' => 'party_id',
+        'booking_account_id' => 'booking_account_id',
+        'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
+        'activities' => 'activities',
         'booking_account' => 'booking_account',
         'status_id' => 'status_id',
         'nr' => 'nr',
@@ -136,8 +160,14 @@ class AssignmentModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'notes' => 'notes',
         'files' => 'files',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'assignment_created_at' => 'assignment_created_at',
+        'assignment_updated_at' => 'assignment_updated_at',
+        'assignment_created_by' => 'assignment_created_by',
+        'assignment_updated_by' => 'assignment_updated_by',
+        'assignment_created_by_user' => 'assignment_created_by_user',
+        'assignment_updated_by_user' => 'assignment_updated_by_user',
+        'assignment_active' => 'assignment_active',
+        'assignment_removed' => 'assignment_removed'
     ];
 
 
@@ -148,6 +178,10 @@ class AssignmentModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'party_id' => 'setPartyId',
+        'booking_account_id' => 'setBookingAccountId',
+        'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
+        'activities' => 'setActivities',
         'booking_account' => 'setBookingAccount',
         'status_id' => 'setStatusId',
         'nr' => 'setNr',
@@ -164,8 +198,14 @@ class AssignmentModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
         'files' => 'setFiles',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'assignment_created_at' => 'setAssignmentCreatedAt',
+        'assignment_updated_at' => 'setAssignmentUpdatedAt',
+        'assignment_created_by' => 'setAssignmentCreatedBy',
+        'assignment_updated_by' => 'setAssignmentUpdatedBy',
+        'assignment_created_by_user' => 'setAssignmentCreatedByUser',
+        'assignment_updated_by_user' => 'setAssignmentUpdatedByUser',
+        'assignment_active' => 'setAssignmentActive',
+        'assignment_removed' => 'setAssignmentRemoved'
     ];
 
 
@@ -176,6 +216,10 @@ class AssignmentModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'party_id' => 'getPartyId',
+        'booking_account_id' => 'getBookingAccountId',
+        'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
+        'activities' => 'getActivities',
         'booking_account' => 'getBookingAccount',
         'status_id' => 'getStatusId',
         'nr' => 'getNr',
@@ -192,8 +236,14 @@ class AssignmentModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
         'files' => 'getFiles',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'assignment_created_at' => 'getAssignmentCreatedAt',
+        'assignment_updated_at' => 'getAssignmentUpdatedAt',
+        'assignment_created_by' => 'getAssignmentCreatedBy',
+        'assignment_updated_by' => 'getAssignmentUpdatedBy',
+        'assignment_created_by_user' => 'getAssignmentCreatedByUser',
+        'assignment_updated_by_user' => 'getAssignmentUpdatedByUser',
+        'assignment_active' => 'getAssignmentActive',
+        'assignment_removed' => 'getAssignmentRemoved'
     ];
 
     public static function attributeMap()
@@ -249,6 +299,10 @@ class AssignmentModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['booking_account_id'] = isset($data['booking_account_id']) ? $data['booking_account_id'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
+        $this->container['activities'] = isset($data['activities']) ? $data['activities'] : null;
         $this->container['booking_account'] = isset($data['booking_account']) ? $data['booking_account'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
@@ -265,8 +319,14 @@ class AssignmentModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['assignment_created_at'] = isset($data['assignment_created_at']) ? $data['assignment_created_at'] : null;
+        $this->container['assignment_updated_at'] = isset($data['assignment_updated_at']) ? $data['assignment_updated_at'] : null;
+        $this->container['assignment_created_by'] = isset($data['assignment_created_by']) ? $data['assignment_created_by'] : null;
+        $this->container['assignment_updated_by'] = isset($data['assignment_updated_by']) ? $data['assignment_updated_by'] : null;
+        $this->container['assignment_created_by_user'] = isset($data['assignment_created_by_user']) ? $data['assignment_created_by_user'] : null;
+        $this->container['assignment_updated_by_user'] = isset($data['assignment_updated_by_user']) ? $data['assignment_updated_by_user'] : null;
+        $this->container['assignment_active'] = isset($data['assignment_active']) ? $data['assignment_active'] : null;
+        $this->container['assignment_removed'] = isset($data['assignment_removed']) ? $data['assignment_removed'] : null;
     }
 
     /**
@@ -344,6 +404,90 @@ class AssignmentModel implements ArrayAccess
     public function setPartyId($party_id)
     {
         $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets booking_account_id
+     * @return int
+     */
+    public function getBookingAccountId()
+    {
+        return $this->container['booking_account_id'];
+    }
+
+    /**
+     * Sets booking_account_id
+     * @param int $booking_account_id Booking account ID
+     * @return $this
+     */
+    public function setBookingAccountId($booking_account_id)
+    {
+        $this->container['booking_account_id'] = $booking_account_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names Tag names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag ids
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets activities
+     * @return \BumbalClient\Model\ActivityModel[]
+     */
+    public function getActivities()
+    {
+        return $this->container['activities'];
+    }
+
+    /**
+     * Sets activities
+     * @param \BumbalClient\Model\ActivityModel[] $activities 
+     * @return $this
+     */
+    public function setActivities($activities)
+    {
+        $this->container['activities'] = $activities;
 
         return $this;
     }
@@ -694,43 +838,169 @@ class AssignmentModel implements ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets assignment_created_at
      * @return \DateTime
      */
-    public function getCreatedAt()
+    public function getAssignmentCreatedAt()
     {
-        return $this->container['created_at'];
+        return $this->container['assignment_created_at'];
     }
 
     /**
-     * Sets created_at
-     * @param \DateTime $created_at created_at date time
+     * Sets assignment_created_at
+     * @param \DateTime $assignment_created_at created_at date time
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setAssignmentCreatedAt($assignment_created_at)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['assignment_created_at'] = $assignment_created_at;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets assignment_updated_at
      * @return \DateTime
      */
-    public function getUpdatedAt()
+    public function getAssignmentUpdatedAt()
     {
-        return $this->container['updated_at'];
+        return $this->container['assignment_updated_at'];
     }
 
     /**
-     * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
+     * Sets assignment_updated_at
+     * @param \DateTime $assignment_updated_at updated_at date time
      * @return $this
      */
-    public function setUpdatedAt($updated_at)
+    public function setAssignmentUpdatedAt($assignment_updated_at)
     {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['assignment_updated_at'] = $assignment_updated_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_created_by
+     * @return int
+     */
+    public function getAssignmentCreatedBy()
+    {
+        return $this->container['assignment_created_by'];
+    }
+
+    /**
+     * Sets assignment_created_by
+     * @param int $assignment_created_by created_by user id
+     * @return $this
+     */
+    public function setAssignmentCreatedBy($assignment_created_by)
+    {
+        $this->container['assignment_created_by'] = $assignment_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_updated_by
+     * @return int
+     */
+    public function getAssignmentUpdatedBy()
+    {
+        return $this->container['assignment_updated_by'];
+    }
+
+    /**
+     * Sets assignment_updated_by
+     * @param int $assignment_updated_by updated_by user id
+     * @return $this
+     */
+    public function setAssignmentUpdatedBy($assignment_updated_by)
+    {
+        $this->container['assignment_updated_by'] = $assignment_updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_created_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getAssignmentCreatedByUser()
+    {
+        return $this->container['assignment_created_by_user'];
+    }
+
+    /**
+     * Sets assignment_created_by_user
+     * @param \BumbalClient\Model\UsersModel $assignment_created_by_user 
+     * @return $this
+     */
+    public function setAssignmentCreatedByUser($assignment_created_by_user)
+    {
+        $this->container['assignment_created_by_user'] = $assignment_created_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_updated_by_user
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getAssignmentUpdatedByUser()
+    {
+        return $this->container['assignment_updated_by_user'];
+    }
+
+    /**
+     * Sets assignment_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $assignment_updated_by_user 
+     * @return $this
+     */
+    public function setAssignmentUpdatedByUser($assignment_updated_by_user)
+    {
+        $this->container['assignment_updated_by_user'] = $assignment_updated_by_user;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_active
+     * @return bool
+     */
+    public function getAssignmentActive()
+    {
+        return $this->container['assignment_active'];
+    }
+
+    /**
+     * Sets assignment_active
+     * @param bool $assignment_active Assignment is active (=true). Inactive assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui.
+     * @return $this
+     */
+    public function setAssignmentActive($assignment_active)
+    {
+        $this->container['assignment_active'] = $assignment_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment_removed
+     * @return bool
+     */
+    public function getAssignmentRemoved()
+    {
+        return $this->container['assignment_removed'];
+    }
+
+    /**
+     * Sets assignment_removed
+     * @param bool $assignment_removed Assignment is removed (=true). Removed assignments are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed assignments are usually irrepairable.
+     * @return $this
+     */
+    public function setAssignmentRemoved($assignment_removed)
+    {
+        $this->container['assignment_removed'] = $assignment_removed;
 
         return $this;
     }

@@ -132,4 +132,11 @@ class AvailabilityTimeSlotModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyImpact()
     {
     }
+
+    /**
+     * Test attribute "follow_up_time_slots"
+     */
+    public function testPropertyFollowUpTimeSlots()
+    {
+    }
 }

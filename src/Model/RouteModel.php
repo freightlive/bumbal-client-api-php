@@ -60,6 +60,8 @@ class RouteModel implements ArrayAccess
         'status_name' => 'string',
         'status_id' => 'int',
         'nr_of_stops' => 'int',
+        'pause_id' => 'int',
+        'pause' => '\BumbalClient\Model\PauseModel',
         'driver_id' => 'int',
         'driver_link' => '\BumbalClient\Model\LinkModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
@@ -105,7 +107,6 @@ class RouteModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
-        'pause_id' => 'int',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -125,6 +126,8 @@ class RouteModel implements ArrayAccess
         'status_name' => null,
         'status_id' => 'int64',
         'nr_of_stops' => null,
+        'pause_id' => null,
+        'pause' => null,
         'driver_id' => null,
         'driver_link' => null,
         'driver_links' => null,
@@ -170,7 +173,6 @@ class RouteModel implements ArrayAccess
         'meta_data' => null,
         'notes' => null,
         'files' => null,
-        'pause_id' => 'int64',
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
         'tags' => null,
@@ -200,6 +202,8 @@ class RouteModel implements ArrayAccess
         'status_name' => 'status_name',
         'status_id' => 'status_id',
         'nr_of_stops' => 'nr_of_stops',
+        'pause_id' => 'pause_id',
+        'pause' => 'pause',
         'driver_id' => 'driver_id',
         'driver_link' => 'driver_link',
         'driver_links' => 'driver_links',
@@ -245,7 +249,6 @@ class RouteModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'notes' => 'notes',
         'files' => 'files',
-        'pause_id' => 'pause_id',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
         'tags' => 'tags',
@@ -266,6 +269,8 @@ class RouteModel implements ArrayAccess
         'status_name' => 'setStatusName',
         'status_id' => 'setStatusId',
         'nr_of_stops' => 'setNrOfStops',
+        'pause_id' => 'setPauseId',
+        'pause' => 'setPause',
         'driver_id' => 'setDriverId',
         'driver_link' => 'setDriverLink',
         'driver_links' => 'setDriverLinks',
@@ -311,7 +316,6 @@ class RouteModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'notes' => 'setNotes',
         'files' => 'setFiles',
-        'pause_id' => 'setPauseId',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
         'tags' => 'setTags',
@@ -332,6 +336,8 @@ class RouteModel implements ArrayAccess
         'status_name' => 'getStatusName',
         'status_id' => 'getStatusId',
         'nr_of_stops' => 'getNrOfStops',
+        'pause_id' => 'getPauseId',
+        'pause' => 'getPause',
         'driver_id' => 'getDriverId',
         'driver_link' => 'getDriverLink',
         'driver_links' => 'getDriverLinks',
@@ -377,7 +383,6 @@ class RouteModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'notes' => 'getNotes',
         'files' => 'getFiles',
-        'pause_id' => 'getPauseId',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
         'tags' => 'getTags',
@@ -459,6 +464,8 @@ class RouteModel implements ArrayAccess
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
         $this->container['nr_of_stops'] = isset($data['nr_of_stops']) ? $data['nr_of_stops'] : null;
+        $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
+        $this->container['pause'] = isset($data['pause']) ? $data['pause'] : null;
         $this->container['driver_id'] = isset($data['driver_id']) ? $data['driver_id'] : null;
         $this->container['driver_link'] = isset($data['driver_link']) ? $data['driver_link'] : null;
         $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
@@ -504,7 +511,6 @@ class RouteModel implements ArrayAccess
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -707,6 +713,48 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets pause_id
+     * @return int
+     */
+    public function getPauseId()
+    {
+        return $this->container['pause_id'];
+    }
+
+    /**
+     * Sets pause_id
+     * @param int $pause_id id of pause scheme to apply
+     * @return $this
+     */
+    public function setPauseId($pause_id)
+    {
+        $this->container['pause_id'] = $pause_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets pause
+     * @return \BumbalClient\Model\PauseModel
+     */
+    public function getPause()
+    {
+        return $this->container['pause'];
+    }
+
+    /**
+     * Sets pause
+     * @param \BumbalClient\Model\PauseModel $pause 
+     * @return $this
+     */
+    public function setPause($pause)
+    {
+        $this->container['pause'] = $pause;
+
+        return $this;
+    }
+
+    /**
      * Gets driver_id
      * @return int
      */
@@ -717,7 +765,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int $driver_id 
+     * @param int $driver_id id of executing driver
      * @return $this
      */
     public function setDriverId($driver_id)
@@ -1647,27 +1695,6 @@ class RouteModel implements ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
-
-        return $this;
-    }
-
-    /**
-     * Gets pause_id
-     * @return int
-     */
-    public function getPauseId()
-    {
-        return $this->container['pause_id'];
-    }
-
-    /**
-     * Sets pause_id
-     * @param int $pause_id id of the pause to be applied by default for new user routes
-     * @return $this
-     */
-    public function setPauseId($pause_id)
-    {
-        $this->container['pause_id'] = $pause_id;
 
         return $this;
     }

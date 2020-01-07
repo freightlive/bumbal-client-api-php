@@ -82,6 +82,7 @@ Name | Type | Description | Notes
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
+**tag_ids** | **int[]** | Tag ids | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
@@ -94,6 +95,8 @@ Name | Type | Description | Notes
 **activity_updated_by** | **int** | updated_by user id | [optional] 
 **activity_created_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
 **activity_updated_by_user** | [**\BumbalClient\Model\UsersModel**](UsersModel.md) |  | [optional] 
+**activity_active** | **bool** | Activity is active (&#x3D;true). Inactive activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. | [optional] 
+**activity_removed** | **bool** | Activity is removed (&#x3D;true). Removed activities are not automatically considered in any of the application algorithms and will not be shown in the Bumbal Gui. Removed activities are usually irrepairable. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

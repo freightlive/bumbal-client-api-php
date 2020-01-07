@@ -3,10 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**uuid** | **int** | unique per user | [optional] 
-**role_id** | **int** | id of the user role, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin | [optional] 
-**party_id** | **int** | Associated Party ID | [optional] 
+**id** | **int[]** |  | [optional] 
+**uuid** | **string[]** | unique per user | [optional] 
+**pause_id** | **int[]** | ids of pause schemes applied to user with teh role driver | [optional] 
+**role_id** | **int[]** | ids of the user roles, 1: Guest, 2: Driver, 3: Planner, 4: Manager, 5: Admin | [optional] 
+**party_id** | **int[]** | Associated Party IDs | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 

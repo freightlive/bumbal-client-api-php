@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Driver id&#39;s | [optional] 
+**id** | **int[]** | Driver id&#39;s | [optional] 
+**pause_id** | **int[]** | ids of pause schemes applied to drivers | [optional] 
 **links** | **object[]** | Driver Link ids | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 

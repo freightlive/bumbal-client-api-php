@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
+**pause_id** | **int** | id of pause scheme to apply | [optional] 
 **uuid** | **string** | unique per user | [optional] 
 **addresses** | [**\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 

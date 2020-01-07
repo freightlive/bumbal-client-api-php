@@ -83,4 +83,60 @@ class AssignmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeActivities()
     {
     }
+
+    /**
+     * Test attribute "include_meta_data"
+     */
+    public function testPropertyIncludeMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_files"
+     */
+    public function testPropertyIncludeFiles()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_ids"
+     */
+    public function testPropertyIncludeTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_names"
+     */
+    public function testPropertyIncludeTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_booking_account"
+     */
+    public function testPropertyIncludeBookingAccount()
+    {
+    }
+
+    /**
+     * Test attribute "include_record_info"
+     */
+    public function testPropertyIncludeRecordInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_record_object"
+     */
+    public function testPropertyIncludeRecordObject()
+    {
+    }
 }
