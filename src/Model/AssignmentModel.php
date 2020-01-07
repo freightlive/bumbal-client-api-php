@@ -61,6 +61,7 @@ class AssignmentModel implements ArrayAccess
         'nr' => 'string',
         'party_link' => '\BumbalClient\Model\LinkModel[]',
         'account_name' => 'string',
+        'party_name' => 'string',
         'reference' => 'string',
         'description' => 'string',
         'remarks' => 'string',
@@ -87,6 +88,7 @@ class AssignmentModel implements ArrayAccess
         'nr' => null,
         'party_link' => null,
         'account_name' => null,
+        'party_name' => null,
         'reference' => null,
         'description' => null,
         'remarks' => null,
@@ -123,6 +125,7 @@ class AssignmentModel implements ArrayAccess
         'nr' => 'nr',
         'party_link' => 'party_link',
         'account_name' => 'account_name',
+        'party_name' => 'party_name',
         'reference' => 'reference',
         'description' => 'description',
         'remarks' => 'remarks',
@@ -150,6 +153,7 @@ class AssignmentModel implements ArrayAccess
         'nr' => 'setNr',
         'party_link' => 'setPartyLink',
         'account_name' => 'setAccountName',
+        'party_name' => 'setPartyName',
         'reference' => 'setReference',
         'description' => 'setDescription',
         'remarks' => 'setRemarks',
@@ -177,6 +181,7 @@ class AssignmentModel implements ArrayAccess
         'nr' => 'getNr',
         'party_link' => 'getPartyLink',
         'account_name' => 'getAccountName',
+        'party_name' => 'getPartyName',
         'reference' => 'getReference',
         'description' => 'getDescription',
         'remarks' => 'getRemarks',
@@ -249,6 +254,7 @@ class AssignmentModel implements ArrayAccess
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['party_link'] = isset($data['party_link']) ? $data['party_link'] : null;
         $this->container['account_name'] = isset($data['account_name']) ? $data['account_name'] : null;
+        $this->container['party_name'] = isset($data['party_name']) ? $data['party_name'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
@@ -452,6 +458,27 @@ class AssignmentModel implements ArrayAccess
     public function setAccountName($account_name)
     {
         $this->container['account_name'] = $account_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_name
+     * @return string
+     */
+    public function getPartyName()
+    {
+        return $this->container['party_name'];
+    }
+
+    /**
+     * Sets party_name
+     * @param string $party_name Party Name associated with this Assignment
+     * @return $this
+     */
+    public function setPartyName($party_name)
+    {
+        $this->container['party_name'] = $party_name;
 
         return $this;
     }

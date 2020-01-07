@@ -426,4 +426,11 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeActivityRecordObject()
     {
     }
+
+    /**
+     * Test attribute "include_party_name"
+     */
+    public function testPropertyIncludePartyName()
+    {
+    }
 }

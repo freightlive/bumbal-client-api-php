@@ -64,6 +64,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'string',
         'assignment_id' => 'int',
         'assignment_nr' => 'string',
+        'assignment' => '\BumbalClient\Model\AssignmentModel',
         'assignment_sequence_nr' => 'int',
         'remarks' => 'string',
         'locked' => 'int',
@@ -161,6 +162,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => null,
         'assignment_id' => null,
         'assignment_nr' => null,
+        'assignment' => null,
         'assignment_sequence_nr' => 'int64',
         'remarks' => null,
         'locked' => null,
@@ -268,6 +270,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'status_name',
         'assignment_id' => 'assignment_id',
         'assignment_nr' => 'assignment_nr',
+        'assignment' => 'assignment',
         'assignment_sequence_nr' => 'assignment_sequence_nr',
         'remarks' => 'remarks',
         'locked' => 'locked',
@@ -366,6 +369,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'setStatusName',
         'assignment_id' => 'setAssignmentId',
         'assignment_nr' => 'setAssignmentNr',
+        'assignment' => 'setAssignment',
         'assignment_sequence_nr' => 'setAssignmentSequenceNr',
         'remarks' => 'setRemarks',
         'locked' => 'setLocked',
@@ -464,6 +468,7 @@ class ActivityModel implements ArrayAccess
         'status_name' => 'getStatusName',
         'assignment_id' => 'getAssignmentId',
         'assignment_nr' => 'getAssignmentNr',
+        'assignment' => 'getAssignment',
         'assignment_sequence_nr' => 'getAssignmentSequenceNr',
         'remarks' => 'getRemarks',
         'locked' => 'getLocked',
@@ -733,6 +738,7 @@ class ActivityModel implements ArrayAccess
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
         $this->container['assignment_nr'] = isset($data['assignment_nr']) ? $data['assignment_nr'] : null;
+        $this->container['assignment'] = isset($data['assignment']) ? $data['assignment'] : null;
         $this->container['assignment_sequence_nr'] = isset($data['assignment_sequence_nr']) ? $data['assignment_sequence_nr'] : null;
         $this->container['remarks'] = isset($data['remarks']) ? $data['remarks'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
@@ -1109,6 +1115,27 @@ class ActivityModel implements ArrayAccess
     public function setAssignmentNr($assignment_nr)
     {
         $this->container['assignment_nr'] = $assignment_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets assignment
+     * @return \BumbalClient\Model\AssignmentModel
+     */
+    public function getAssignment()
+    {
+        return $this->container['assignment'];
+    }
+
+    /**
+     * Sets assignment
+     * @param \BumbalClient\Model\AssignmentModel $assignment 
+     * @return $this
+     */
+    public function setAssignment($assignment)
+    {
+        $this->container['assignment'] = $assignment;
 
         return $this;
     }

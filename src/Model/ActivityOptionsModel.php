@@ -103,7 +103,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_bundled_activity_ids' => 'bool',
         'include_activity_files' => 'bool',
         'include_activity_record_info' => 'bool',
-        'include_activity_record_object' => 'bool'
+        'include_activity_record_object' => 'bool',
+        'include_party_name' => 'bool'
     ];
 
     /**
@@ -160,7 +161,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_bundled_activity_ids' => null,
         'include_activity_files' => null,
         'include_activity_record_info' => null,
-        'include_activity_record_object' => null
+        'include_activity_record_object' => null,
+        'include_party_name' => null
     ];
 
     public static function swaggerTypes()
@@ -227,7 +229,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_bundled_activity_ids' => 'include_bundled_activity_ids',
         'include_activity_files' => 'include_activity_files',
         'include_activity_record_info' => 'include_activity_record_info',
-        'include_activity_record_object' => 'include_activity_record_object'
+        'include_activity_record_object' => 'include_activity_record_object',
+        'include_party_name' => 'include_party_name'
     ];
 
 
@@ -285,7 +288,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_bundled_activity_ids' => 'setIncludeBundledActivityIds',
         'include_activity_files' => 'setIncludeActivityFiles',
         'include_activity_record_info' => 'setIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'setIncludeActivityRecordObject'
+        'include_activity_record_object' => 'setIncludeActivityRecordObject',
+        'include_party_name' => 'setIncludePartyName'
     ];
 
 
@@ -343,7 +347,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_bundled_activity_ids' => 'getIncludeBundledActivityIds',
         'include_activity_files' => 'getIncludeActivityFiles',
         'include_activity_record_info' => 'getIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'getIncludeActivityRecordObject'
+        'include_activity_record_object' => 'getIncludeActivityRecordObject',
+        'include_party_name' => 'getIncludePartyName'
     ];
 
     public static function attributeMap()
@@ -427,6 +432,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
         $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
         $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
+        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
     }
 
     /**
@@ -1500,6 +1506,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeActivityRecordObject($include_activity_record_object)
     {
         $this->container['include_activity_record_object'] = $include_activity_record_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_party_name
+     * @return bool
+     */
+    public function getIncludePartyName()
+    {
+        return $this->container['include_party_name'];
+    }
+
+    /**
+     * Sets include_party_name
+     * @param bool $include_party_name 
+     * @return $this
+     */
+    public function setIncludePartyName($include_party_name)
+    {
+        $this->container['include_party_name'] = $include_party_name;
 
         return $this;
     }

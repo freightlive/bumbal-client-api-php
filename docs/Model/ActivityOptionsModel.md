@@ -53,6 +53,7 @@ Name | Type | Description | Notes
 **include_activity_files** | **bool** |  | [optional] 
 **include_activity_record_info** | **bool** |  | [optional] 
 **include_activity_record_object** | **bool** |  | [optional] 
+**include_party_name** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
