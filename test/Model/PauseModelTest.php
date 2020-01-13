@@ -85,6 +85,13 @@ class PauseModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "drive_time_mode"
+     */
+    public function testPropertyDriveTimeMode()
+    {
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -116,6 +123,20 @@ class PauseModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "possible_split"
      */
     public function testPropertyPossibleSplit()
+    {
+    }
+
+    /**
+     * Test attribute "earliest_time"
+     */
+    public function testPropertyEarliestTime()
+    {
+    }
+
+    /**
+     * Test attribute "latest_time"
+     */
+    public function testPropertyLatestTime()
     {
     }
 

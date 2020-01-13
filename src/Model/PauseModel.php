@@ -55,11 +55,14 @@ class PauseModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'drive_time_mode' => 'bool',
         'name' => 'string',
         'initial_driving_duration' => 'int',
         'max_driving_duration' => 'int',
         'pause_duration' => 'int',
         'possible_split' => 'int[]',
+        'earliest_time' => 'string',
+        'latest_time' => 'string',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]'
     ];
@@ -70,11 +73,14 @@ class PauseModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
+        'drive_time_mode' => null,
         'name' => null,
         'initial_driving_duration' => 'int64',
         'max_driving_duration' => 'int64',
         'pause_duration' => 'int64',
         'possible_split' => null,
+        'earliest_time' => 'time',
+        'latest_time' => 'time',
         'links' => null,
         'meta_data' => null
     ];
@@ -95,11 +101,14 @@ class PauseModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'drive_time_mode' => 'drive_time_mode',
         'name' => 'name',
         'initial_driving_duration' => 'initial_driving_duration',
         'max_driving_duration' => 'max_driving_duration',
         'pause_duration' => 'pause_duration',
         'possible_split' => 'possible_split',
+        'earliest_time' => 'earliest_time',
+        'latest_time' => 'latest_time',
         'links' => 'links',
         'meta_data' => 'meta_data'
     ];
@@ -111,11 +120,14 @@ class PauseModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'drive_time_mode' => 'setDriveTimeMode',
         'name' => 'setName',
         'initial_driving_duration' => 'setInitialDrivingDuration',
         'max_driving_duration' => 'setMaxDrivingDuration',
         'pause_duration' => 'setPauseDuration',
         'possible_split' => 'setPossibleSplit',
+        'earliest_time' => 'setEarliestTime',
+        'latest_time' => 'setLatestTime',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData'
     ];
@@ -127,11 +139,14 @@ class PauseModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'drive_time_mode' => 'getDriveTimeMode',
         'name' => 'getName',
         'initial_driving_duration' => 'getInitialDrivingDuration',
         'max_driving_duration' => 'getMaxDrivingDuration',
         'pause_duration' => 'getPauseDuration',
         'possible_split' => 'getPossibleSplit',
+        'earliest_time' => 'getEarliestTime',
+        'latest_time' => 'getLatestTime',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData'
     ];
@@ -168,11 +183,14 @@ class PauseModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['drive_time_mode'] = isset($data['drive_time_mode']) ? $data['drive_time_mode'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['initial_driving_duration'] = isset($data['initial_driving_duration']) ? $data['initial_driving_duration'] : null;
         $this->container['max_driving_duration'] = isset($data['max_driving_duration']) ? $data['max_driving_duration'] : null;
         $this->container['pause_duration'] = isset($data['pause_duration']) ? $data['pause_duration'] : null;
         $this->container['possible_split'] = isset($data['possible_split']) ? $data['possible_split'] : null;
+        $this->container['earliest_time'] = isset($data['earliest_time']) ? $data['earliest_time'] : null;
+        $this->container['latest_time'] = isset($data['latest_time']) ? $data['latest_time'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
     }
@@ -224,6 +242,27 @@ class PauseModel implements ArrayAccess
     }
 
     /**
+     * Gets drive_time_mode
+     * @return bool
+     */
+    public function getDriveTimeMode()
+    {
+        return $this->container['drive_time_mode'];
+    }
+
+    /**
+     * Sets drive_time_mode
+     * @param bool $drive_time_mode Determines if pause is a drivetime pause or a timewindow pause
+     * @return $this
+     */
+    public function setDriveTimeMode($drive_time_mode)
+    {
+        $this->container['drive_time_mode'] = $drive_time_mode;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      * @return string
      */
@@ -255,7 +294,7 @@ class PauseModel implements ArrayAccess
 
     /**
      * Sets initial_driving_duration
-     * @param int $initial_driving_duration initial driving time in minutes until first possibility of starting pause
+     * @param int $initial_driving_duration initial driving time in minutes until first possibility of starting pause. (Only used in servicewindow pause)
      * @return $this
      */
     public function setInitialDrivingDuration($initial_driving_duration)
@@ -318,12 +357,54 @@ class PauseModel implements ArrayAccess
 
     /**
      * Sets possible_split
-     * @param int[] $possible_split A list of durations in minutes by witch the total duration of the pause may be split
+     * @param int[] $possible_split A list of durations in minutes by which the total duration of the pause may be split. (Only used in servicewindow pause)
      * @return $this
      */
     public function setPossibleSplit($possible_split)
     {
         $this->container['possible_split'] = $possible_split;
+
+        return $this;
+    }
+
+    /**
+     * Gets earliest_time
+     * @return string
+     */
+    public function getEarliestTime()
+    {
+        return $this->container['earliest_time'];
+    }
+
+    /**
+     * Sets earliest_time
+     * @param string $earliest_time Earliest time. (Only used in drivetime pause)
+     * @return $this
+     */
+    public function setEarliestTime($earliest_time)
+    {
+        $this->container['earliest_time'] = $earliest_time;
+
+        return $this;
+    }
+
+    /**
+     * Gets latest_time
+     * @return string
+     */
+    public function getLatestTime()
+    {
+        return $this->container['latest_time'];
+    }
+
+    /**
+     * Sets latest_time
+     * @param string $latest_time Latest time. (Only used in drivetime pause)
+     * @return $this
+     */
+    public function setLatestTime($latest_time)
+    {
+        $this->container['latest_time'] = $latest_time;
 
         return $this;
     }
