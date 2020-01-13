@@ -152,7 +152,7 @@ Class | Method | HTTP request | Description
 *PackagetypeApi* | [**updatePackageType**](docs/Api/PackagetypeApi.md#updatepackagetype) | **PUT** /package-type/{packageTypeId} | Update a package-type
 *PartyApi* | [**createParty**](docs/Api/PartyApi.md#createparty) | **POST** /party | Create or update an Party
 *PartyApi* | [**deleteParty**](docs/Api/PartyApi.md#deleteparty) | **DELETE** /party/{partyId} | Delete an party
-*PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Partys
+*PartyApi* | [**retrieveListParty**](docs/Api/PartyApi.md#retrievelistparty) | **PUT** /party | Retrieve List of Parties
 *PartyApi* | [**retrieveParty**](docs/Api/PartyApi.md#retrieveparty) | **GET** /party/{partyId} | Find party by ID
 *PartyApi* | [**setParty**](docs/Api/PartyApi.md#setparty) | **POST** /party/set | Set (create or update) an Party
 *PartyApi* | [**updateParty**](docs/Api/PartyApi.md#updateparty) | **PUT** /party/{partyId} | Update a party
@@ -356,6 +356,7 @@ Class | Method | HTTP request | Description
  - [PackageTypeOptionsModel](docs/Model/PackageTypeOptionsModel.md)
  - [PackageTypeRetrieveListArguments](docs/Model/PackageTypeRetrieveListArguments.md)
  - [PartyFiltersModel](docs/Model/PartyFiltersModel.md)
+ - [PartyListResponse](docs/Model/PartyListResponse.md)
  - [PartyModel](docs/Model/PartyModel.md)
  - [PartyOptionsModel](docs/Model/PartyOptionsModel.md)
  - [PartyRetrieveListArguments](docs/Model/PartyRetrieveListArguments.md)

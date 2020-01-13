@@ -95,7 +95,7 @@ class PartyApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for retrieveListParty
      *
-     * Retrieve List of Partys.
+     * Retrieve List of Parties.
      *
      */
     public function testRetrieveListParty()

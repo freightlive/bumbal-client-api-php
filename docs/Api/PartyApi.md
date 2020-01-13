@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createParty**](PartyApi.md#createParty) | **POST** /party | Create or update an Party
 [**deleteParty**](PartyApi.md#deleteParty) | **DELETE** /party/{partyId} | Delete an party
-[**retrieveListParty**](PartyApi.md#retrieveListParty) | **PUT** /party | Retrieve List of Partys
+[**retrieveListParty**](PartyApi.md#retrieveListParty) | **PUT** /party | Retrieve List of Parties
 [**retrieveParty**](PartyApi.md#retrieveParty) | **GET** /party/{partyId} | Find party by ID
 [**setParty**](PartyApi.md#setParty) | **POST** /party/set | Set (create or update) an Party
 [**updateParty**](PartyApi.md#updateParty) | **PUT** /party/{partyId} | Update a party
@@ -113,11 +113,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListParty**
-> \BumbalClient\Model\PartyModel[] retrieveListParty($arguments)
+> \BumbalClient\Model\PartyListResponse retrieveListParty($arguments)
 
-Retrieve List of Partys
+Retrieve List of Parties
 
-Retrieve List of Partys
+Retrieve List of Parties
 
 ### Example
 ```php
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\PartyModel[]**](../Model/PartyModel.md)
+[**\BumbalClient\Model\PartyListResponse**](../Model/PartyListResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveParty**
-> \BumbalClient\Model\PartyModel retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
+> \BumbalClient\Model\PartyModel retrieveParty($party_id)
 
 Find party by ID
 
@@ -181,12 +181,9 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\PartyApi();
 $party_id = 789; // int | ID of party to return
-$include_party_links = true; // bool | Include Link Data
-$include_party_files = true; // bool | Include files
-$include_party_files_meta_data = true; // bool | Include files meta data
 
 try {
-    $result = $api_instance->retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data);
+    $result = $api_instance->retrieveParty($party_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PartyApi->retrieveParty: ', $e->getMessage(), PHP_EOL;
@@ -199,9 +196,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **party_id** | **int**| ID of party to return |
- **include_party_links** | **bool**| Include Link Data | [default to true]
- **include_party_files** | **bool**| Include files | [default to true]
- **include_party_files_meta_data** | **bool**| Include files meta data | [default to true]
 
 ### Return type
 
@@ -223,7 +217,7 @@ Name | Type | Description  | Notes
 
 Set (create or update) an Party
 
-Set (create or update) an Party. If id or links are set in the data, and a corresponding party is found in Bumbal, an update will be performed.
+Set (create or update) an Party. If id or links are set in the data, and a corresponding party             is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

@@ -257,11 +257,11 @@ class PartyApi
     /**
      * Operation retrieveListParty
      *
-     * Retrieve List of Partys
+     * Retrieve List of Parties
      *
      * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\PartyModel[]
+     * @return \BumbalClient\Model\PartyListResponse
      */
     public function retrieveListParty($arguments)
     {
@@ -272,11 +272,11 @@ class PartyApi
     /**
      * Operation retrieveListPartyWithHttpInfo
      *
-     * Retrieve List of Partys
+     * Retrieve List of Parties
      *
      * @param \BumbalClient\Model\PartyRetrieveListArguments $arguments Party RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\PartyModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\PartyListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListPartyWithHttpInfo($arguments)
     {
@@ -321,15 +321,15 @@ class PartyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\PartyModel[]',
+                '\BumbalClient\Model\PartyListResponse',
                 '/party'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PartyModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\PartyListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PartyModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\PartyListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -344,15 +344,12 @@ class PartyApi
      * Find party by ID
      *
      * @param int $party_id ID of party to return (required)
-     * @param bool $include_party_links Include Link Data (required)
-     * @param bool $include_party_files Include files (required)
-     * @param bool $include_party_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\PartyModel
      */
-    public function retrieveParty($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
+    public function retrieveParty($party_id)
     {
-        list($response) = $this->retrievePartyWithHttpInfo($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data);
+        list($response) = $this->retrievePartyWithHttpInfo($party_id);
         return $response;
     }
 
@@ -362,29 +359,14 @@ class PartyApi
      * Find party by ID
      *
      * @param int $party_id ID of party to return (required)
-     * @param bool $include_party_links Include Link Data (required)
-     * @param bool $include_party_files Include files (required)
-     * @param bool $include_party_files_meta_data Include files meta data (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\PartyModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrievePartyWithHttpInfo($party_id, $include_party_links, $include_party_files, $include_party_files_meta_data)
+    public function retrievePartyWithHttpInfo($party_id)
     {
         // verify the required parameter 'party_id' is set
         if ($party_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $party_id when calling retrieveParty');
-        }
-        // verify the required parameter 'include_party_links' is set
-        if ($include_party_links === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_party_links when calling retrieveParty');
-        }
-        // verify the required parameter 'include_party_files' is set
-        if ($include_party_files === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_party_files when calling retrieveParty');
-        }
-        // verify the required parameter 'include_party_files_meta_data' is set
-        if ($include_party_files_meta_data === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $include_party_files_meta_data when calling retrieveParty');
         }
         // parse inputs
         $resourcePath = "/party/{partyId}";
@@ -398,18 +380,6 @@ class PartyApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
-        // query params
-        if ($include_party_links !== null) {
-            $queryParams['include_party_links'] = $this->apiClient->getSerializer()->toQueryValue($include_party_links);
-        }
-        // query params
-        if ($include_party_files !== null) {
-            $queryParams['include_party_files'] = $this->apiClient->getSerializer()->toQueryValue($include_party_files);
-        }
-        // query params
-        if ($include_party_files_meta_data !== null) {
-            $queryParams['include_party_files_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_party_files_meta_data);
-        }
         // path params
         if ($party_id !== null) {
             $resourcePath = str_replace(
