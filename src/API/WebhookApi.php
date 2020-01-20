@@ -93,13 +93,14 @@ class WebhookApi
      * Trigger a webhook
      *
      * @param int $object_id objectId (required)
-     * @param string $web_hook_name Name of this Web Hook (required)
+     * @param string[] $web_hook_name Name of this Web Hook (required)
+     * @param \BumbalClient\Model\PayloadItem[] $extra_payload extra payload to be sent when the webhook is triggered (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse
      */
-    public function triggerWebHook($object_id, $web_hook_name)
+    public function triggerWebHook($object_id, $web_hook_name, $extra_payload = null)
     {
-        list($response) = $this->triggerWebHookWithHttpInfo($object_id, $web_hook_name);
+        list($response) = $this->triggerWebHookWithHttpInfo($object_id, $web_hook_name, $extra_payload);
         return $response;
     }
 
@@ -109,11 +110,12 @@ class WebhookApi
      * Trigger a webhook
      *
      * @param int $object_id objectId (required)
-     * @param string $web_hook_name Name of this Web Hook (required)
+     * @param string[] $web_hook_name Name of this Web Hook (required)
+     * @param \BumbalClient\Model\PayloadItem[] $extra_payload extra payload to be sent when the webhook is triggered (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function triggerWebHookWithHttpInfo($object_id, $web_hook_name)
+    public function triggerWebHookWithHttpInfo($object_id, $web_hook_name, $extra_payload = null)
     {
         // verify the required parameter 'object_id' is set
         if ($object_id === null) {
@@ -142,6 +144,11 @@ class WebhookApi
         // form params
         if ($web_hook_name !== null) {
             $formParams['webHookName'] = $this->apiClient->getSerializer()->toFormValue($web_hook_name);
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($extra_payload)) {
+            $_tempBody = $extra_payload;
         }
 
         // for model (json/xml)

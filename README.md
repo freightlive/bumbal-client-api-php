@@ -365,6 +365,7 @@ Class | Method | HTTP request | Description
  - [PauseModel](docs/Model/PauseModel.md)
  - [PauseOptionsModel](docs/Model/PauseOptionsModel.md)
  - [PauseRetrieveListArguments](docs/Model/PauseRetrieveListArguments.md)
+ - [PayloadItem](docs/Model/PayloadItem.md)
  - [PhoneNrModel](docs/Model/PhoneNrModel.md)
  - [PortalFiltersModel](docs/Model/PortalFiltersModel.md)
  - [PortalListResponse](docs/Model/PortalListResponse.md)
