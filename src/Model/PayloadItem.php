@@ -82,8 +82,8 @@ class PayloadItem implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload_key' => 'payload_key',
-        'payload_value' => 'payload_value'
+        'payload_key' => 'payloadKey',
+        'payload_value' => 'payloadValue'
     ];
 
 

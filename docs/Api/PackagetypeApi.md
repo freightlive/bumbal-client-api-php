@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPackageType**](PackagetypeApi.md#createPackageType) | **POST** /package-type | Create or update an Package Line
+[**createPackageType**](PackagetypeApi.md#createPackageType) | **POST** /package-type | Create or update a Package Line
 [**deletePackageType**](PackagetypeApi.md#deletePackageType) | **DELETE** /package-type/{packageTypeId} | Delete an package-type
 [**retrieveListPackageType**](PackagetypeApi.md#retrieveListPackageType) | **PUT** /package-type | Retrieve List of PackageTypes
 [**retrievePackageType**](PackagetypeApi.md#retrievePackageType) | **GET** /package-type/{packageTypeId} | Find package-type by ID
@@ -15,9 +15,9 @@ Method | HTTP request | Description
 # **createPackageType**
 > \BumbalClient\Model\ApiResponse createPackageType($body)
 
-Create or update an Package Line
+Create or update a Package Line
 
-Create or update an PackageType. If id or links are set in the data, and a corresponding package-type    *     is found in Bumbal, an update will be performed.
+Create or update a PackageType. If id or links are set in the data, and a corresponding package-type    *     is found in Bumbal, an update will be performed.
 
 ### Example
 ```php

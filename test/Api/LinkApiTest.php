@@ -73,6 +73,16 @@ class LinkApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteLink
+     *
+     * Delete a link.
+     *
+     */
+    public function testDeleteLink()
+    {
+    }
+
+    /**
      * Test case for updateLink
      *
      * Update a specific link object.

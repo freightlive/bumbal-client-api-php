@@ -59,6 +59,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'id' => 'int[]',
         'nr' => 'string[]',
         'status_id' => 'int[]',
+        'active' => 'int[]',
         'status_name' => 'string[]',
         'nr_of_packages' => 'float',
         'package_type_name' => 'string[]',
@@ -89,6 +90,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'id' => null,
         'nr' => null,
         'status_id' => null,
+        'active' => null,
         'status_name' => null,
         'nr_of_packages' => 'float',
         'package_type_name' => null,
@@ -129,6 +131,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'id' => 'id',
         'nr' => 'nr',
         'status_id' => 'status_id',
+        'active' => 'active',
         'status_name' => 'status_name',
         'nr_of_packages' => 'nr_of_packages',
         'package_type_name' => 'package_type_name',
@@ -160,6 +163,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'id' => 'setId',
         'nr' => 'setNr',
         'status_id' => 'setStatusId',
+        'active' => 'setActive',
         'status_name' => 'setStatusName',
         'nr_of_packages' => 'setNrOfPackages',
         'package_type_name' => 'setPackageTypeName',
@@ -191,6 +195,7 @@ class PackageLineFiltersModel implements ArrayAccess
         'id' => 'getId',
         'nr' => 'getNr',
         'status_id' => 'getStatusId',
+        'active' => 'getActive',
         'status_name' => 'getStatusName',
         'nr_of_packages' => 'getNrOfPackages',
         'package_type_name' => 'getPackageTypeName',
@@ -247,6 +252,7 @@ class PackageLineFiltersModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['status_id'] = isset($data['status_id']) ? $data['status_id'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['nr_of_packages'] = isset($data['nr_of_packages']) ? $data['nr_of_packages'] : null;
         $this->container['package_type_name'] = isset($data['package_type_name']) ? $data['package_type_name'] : null;
@@ -393,6 +399,27 @@ class PackageLineFiltersModel implements ArrayAccess
     public function setStatusId($status_id)
     {
         $this->container['status_id'] = $status_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     * @return int[]
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     * @param int[] $active Active status of PackageLine, 0 values represent deleted PackageLines
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

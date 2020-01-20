@@ -90,7 +90,7 @@ class PackagetypeApi
     /**
      * Operation createPackageType
      *
-     * Create or update an Package Line
+     * Create or update a Package Line
      *
      * @param \BumbalClient\Model\PackageTypeModel $body PackageType model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
@@ -105,7 +105,7 @@ class PackagetypeApi
     /**
      * Operation createPackageTypeWithHttpInfo
      *
-     * Create or update an Package Line
+     * Create or update a Package Line
      *
      * @param \BumbalClient\Model\PackageTypeModel $body PackageType model (optional)
      * @throws \BumbalClient\ApiException on non-2xx response

@@ -75,7 +75,7 @@ class PackagetypeApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createPackageType
      *
-     * Create or update an Package Line.
+     * Create or update a Package Line.
      *
      */
     public function testCreatePackageType()

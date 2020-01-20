@@ -131,6 +131,7 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
+*LinkApi* | [**deleteLink**](docs/Api/LinkApi.md#deletelink) | **DELETE** /link/{linkId} | Delete a link
 *LinkApi* | [**updateLink**](docs/Api/LinkApi.md#updatelink) | **PUT** /link/{linkId} | Update a specific link object
 *LogApi* | [**retrieveListLog**](docs/Api/LogApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log messages
 *LogApi* | [**setLog**](docs/Api/LogApi.md#setlog) | **POST** /log/set | Post a Log message
@@ -144,7 +145,7 @@ Class | Method | HTTP request | Description
 *PackagelineApi* | [**retrievePackageLine**](docs/Api/PackagelineApi.md#retrievepackageline) | **GET** /package-line/{packageLineId} | Find package-line by ID
 *PackagelineApi* | [**setPackageLine**](docs/Api/PackagelineApi.md#setpackageline) | **POST** /package-line/set | Set (create or update) an PackageLine
 *PackagelineApi* | [**updatePackageLine**](docs/Api/PackagelineApi.md#updatepackageline) | **PUT** /package-line/update | Update package-lines in bulk
-*PackagetypeApi* | [**createPackageType**](docs/Api/PackagetypeApi.md#createpackagetype) | **POST** /package-type | Create or update an Package Line
+*PackagetypeApi* | [**createPackageType**](docs/Api/PackagetypeApi.md#createpackagetype) | **POST** /package-type | Create or update a Package Line
 *PackagetypeApi* | [**deletePackageType**](docs/Api/PackagetypeApi.md#deletepackagetype) | **DELETE** /package-type/{packageTypeId} | Delete an package-type
 *PackagetypeApi* | [**retrieveListPackageType**](docs/Api/PackagetypeApi.md#retrievelistpackagetype) | **PUT** /package-type | Retrieve List of PackageTypes
 *PackagetypeApi* | [**retrievePackageType**](docs/Api/PackagetypeApi.md#retrievepackagetype) | **GET** /package-type/{packageTypeId} | Find package-type by ID

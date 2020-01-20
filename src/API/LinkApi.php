@@ -88,6 +88,93 @@ class LinkApi
     }
 
     /**
+     * Operation deleteLink
+     *
+     * Delete a link
+     *
+     * @param int $driver_id ID of the link to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function deleteLink($driver_id)
+    {
+        list($response) = $this->deleteLinkWithHttpInfo($driver_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteLinkWithHttpInfo
+     *
+     * Delete a link
+     *
+     * @param int $driver_id ID of the link to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteLinkWithHttpInfo($driver_id)
+    {
+        // verify the required parameter 'driver_id' is set
+        if ($driver_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $driver_id when calling deleteLink');
+        }
+        // parse inputs
+        $resourcePath = "/link/{linkId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($driver_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "driverId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($driver_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/link/{linkId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation updateLink
      *
      * Update a specific link object
