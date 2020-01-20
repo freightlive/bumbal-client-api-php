@@ -145,10 +145,9 @@ class WebhookApi
         if ($web_hook_name !== null) {
             $formParams['webHookName'] = $this->apiClient->getSerializer()->toFormValue($web_hook_name);
         }
-        // body params
-        $_tempBody = null;
-        if (isset($extra_payload)) {
-            $_tempBody = $extra_payload;
+        // form params
+        if ($extra_payload !== null) {
+            $formParams['extraPayload'] = $this->apiClient->getSerializer()->toFormValue($extra_payload);
         }
 
         // for model (json/xml)

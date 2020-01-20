@@ -27,7 +27,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 $api_instance = new BumbalClient\Api\WebhookApi();
 $object_id = 56; // int | objectId
 $web_hook_name = array("web_hook_name_example"); // string[] | Name of this Web Hook
-$extra_payload = array(new \BumbalClient\Model\PayloadItem()); // \BumbalClient\Model\PayloadItem[] | extra payload to be sent when the webhook is triggered
+$extra_payload = array(new \BumbalClient\Model\\BumbalClient\Model\PayloadItem()); // \BumbalClient\Model\PayloadItem[] | extra payload to be sent when the webhook is triggered
 
 try {
     $result = $api_instance->triggerWebHook($object_id, $web_hook_name, $extra_payload);
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **object_id** | **int**| objectId |
  **web_hook_name** | [**string[]**](../Model/string.md)| Name of this Web Hook |
- **extra_payload** | [**\BumbalClient\Model\PayloadItem[]**](../Model/PayloadItem.md)| extra payload to be sent when the webhook is triggered | [optional]
+ **extra_payload** | [**\BumbalClient\Model\PayloadItem[]**](../Model/\BumbalClient\Model\PayloadItem.md)| extra payload to be sent when the webhook is triggered | [optional]
 
 ### Return type
 
