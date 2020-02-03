@@ -62,6 +62,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'bool',
         'include_meta_data' => 'bool',
         'include_files' => 'bool',
+        'include_capacities' => 'bool',
+        'include_applied_capacities' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_package_line_notes' => 'bool',
         'include_package_line_tags' => 'bool',
@@ -86,6 +88,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => null,
         'include_meta_data' => null,
         'include_files' => null,
+        'include_capacities' => null,
+        'include_applied_capacities' => null,
         'include_package_lines_info' => null,
         'include_package_line_notes' => null,
         'include_package_line_tags' => null,
@@ -120,6 +124,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'include_links',
         'include_meta_data' => 'include_meta_data',
         'include_files' => 'include_files',
+        'include_capacities' => 'include_capacities',
+        'include_applied_capacities' => 'include_applied_capacities',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_package_line_notes' => 'include_package_line_notes',
         'include_package_line_tags' => 'include_package_line_tags',
@@ -145,6 +151,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'setIncludeLinks',
         'include_meta_data' => 'setIncludeMetaData',
         'include_files' => 'setIncludeFiles',
+        'include_capacities' => 'setIncludeCapacities',
+        'include_applied_capacities' => 'setIncludeAppliedCapacities',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_package_line_notes' => 'setIncludePackageLineNotes',
         'include_package_line_tags' => 'setIncludePackageLineTags',
@@ -170,6 +178,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_links' => 'getIncludeLinks',
         'include_meta_data' => 'getIncludeMetaData',
         'include_files' => 'getIncludeFiles',
+        'include_capacities' => 'getIncludeCapacities',
+        'include_applied_capacities' => 'getIncludeAppliedCapacities',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_package_line_notes' => 'getIncludePackageLineNotes',
         'include_package_line_tags' => 'getIncludePackageLineTags',
@@ -220,6 +230,8 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
+        $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_package_line_notes'] = isset($data['include_package_line_notes']) ? $data['include_package_line_notes'] : null;
         $this->container['include_package_line_tags'] = isset($data['include_package_line_tags']) ? $data['include_package_line_tags'] : null;
@@ -420,6 +432,48 @@ class PackageLineOptionsModel implements ArrayAccess
     public function setIncludeFiles($include_files)
     {
         $this->container['include_files'] = $include_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_capacities
+     * @return bool
+     */
+    public function getIncludeCapacities()
+    {
+        return $this->container['include_capacities'];
+    }
+
+    /**
+     * Sets include_capacities
+     * @param bool $include_capacities 
+     * @return $this
+     */
+    public function setIncludeCapacities($include_capacities)
+    {
+        $this->container['include_capacities'] = $include_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_applied_capacities
+     * @return bool
+     */
+    public function getIncludeAppliedCapacities()
+    {
+        return $this->container['include_applied_capacities'];
+    }
+
+    /**
+     * Sets include_applied_capacities
+     * @param bool $include_applied_capacities 
+     * @return $this
+     */
+    public function setIncludeAppliedCapacities($include_applied_capacities)
+    {
+        $this->container['include_applied_capacities'] = $include_applied_capacities;
 
         return $this;
     }

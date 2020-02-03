@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **include_links** | **bool** |  | [optional] 
 **include_meta_data** | **bool** |  | [optional] 
 **include_files** | **bool** |  | [optional] 
+**include_capacities** | **bool** |  | [optional] 
+**include_applied_capacities** | **bool** |  | [optional] 
 **include_package_lines_info** | **bool** |  | [optional] 
 **include_package_line_notes** | **bool** |  | [optional] 
 **include_package_line_tags** | **bool** |  | [optional] 

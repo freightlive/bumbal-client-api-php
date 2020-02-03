@@ -134,6 +134,20 @@ class PackageLineOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_capacities"
+     */
+    public function testPropertyIncludeCapacities()
+    {
+    }
+
+    /**
+     * Test attribute "include_applied_capacities"
+     */
+    public function testPropertyIncludeAppliedCapacities()
+    {
+    }
+
+    /**
      * Test attribute "include_package_lines_info"
      */
     public function testPropertyIncludePackageLinesInfo()
