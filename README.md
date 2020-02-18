@@ -184,6 +184,10 @@ Class | Method | HTTP request | Description
 *PortalsettingApi* | [**retrievePortalSetting**](docs/Api/PortalsettingApi.md#retrieveportalsetting) | **GET** /portal-setting/{portal-settingId} | Retrieve a PortalSetting
 *PortalsettingApi* | [**setPortalSetting**](docs/Api/PortalsettingApi.md#setportalsetting) | **POST** /portal-setting/set | Set (create or update) a PortalSetting
 *PortalsettingApi* | [**updatePortalSetting**](docs/Api/PortalsettingApi.md#updateportalsetting) | **PUT** /portal-setting/{portal-settingId} | Update a PortalSetting
+*ProviderApi* | [**createProvider**](docs/Api/ProviderApi.md#createprovider) | **POST** /provider | Add a new Provider
+*ProviderApi* | [**retrieveListProvider**](docs/Api/ProviderApi.md#retrievelistprovider) | **PUT** /provider | Retrieve List of Providers
+*ProviderApi* | [**retrieveProvider**](docs/Api/ProviderApi.md#retrieveprovider) | **GET** /provider/{providerId} | Retrieve a Provider
+*ProviderApi* | [**updateProvider**](docs/Api/ProviderApi.md#updateprovider) | **PUT** /provider/{providerId} | Update a specific provider object
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -378,6 +382,10 @@ Class | Method | HTTP request | Description
  - [PortalSettingModel](docs/Model/PortalSettingModel.md)
  - [PortalSettingOptionsModel](docs/Model/PortalSettingOptionsModel.md)
  - [PortalSettingRetrieveListArguments](docs/Model/PortalSettingRetrieveListArguments.md)
+ - [ProviderFiltersModel](docs/Model/ProviderFiltersModel.md)
+ - [ProviderListResponse](docs/Model/ProviderListResponse.md)
+ - [ProviderModel](docs/Model/ProviderModel.md)
+ - [ProviderRetrieveListArguments](docs/Model/ProviderRetrieveListArguments.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
  - [RecurrenceModel](docs/Model/RecurrenceModel.md)
  - [RecurrenceOptionsModel](docs/Model/RecurrenceOptionsModel.md)

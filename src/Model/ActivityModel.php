@@ -120,7 +120,6 @@ class ActivityModel implements ArrayAccess
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'brand_id' => 'int',
-        'brand_name' => 'string',
         'brand' => '\BumbalClient\Model\BrandModel',
         'communication' => '\BumbalClient\Model\CommunicationModel',
         'assignment_link' => '\BumbalClient\Model\LinkModel',
@@ -222,7 +221,6 @@ class ActivityModel implements ArrayAccess
         'package_lines' => null,
         'time_slots' => null,
         'brand_id' => null,
-        'brand_name' => null,
         'brand' => null,
         'communication' => null,
         'assignment_link' => null,
@@ -334,7 +332,6 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'package_lines',
         'time_slots' => 'time_slots',
         'brand_id' => 'brand_id',
-        'brand_name' => 'brand_name',
         'brand' => 'brand',
         'communication' => 'communication',
         'assignment_link' => 'assignment_link',
@@ -437,7 +434,6 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'setPackageLines',
         'time_slots' => 'setTimeSlots',
         'brand_id' => 'setBrandId',
-        'brand_name' => 'setBrandName',
         'brand' => 'setBrand',
         'communication' => 'setCommunication',
         'assignment_link' => 'setAssignmentLink',
@@ -540,7 +536,6 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'getPackageLines',
         'time_slots' => 'getTimeSlots',
         'brand_id' => 'getBrandId',
-        'brand_name' => 'getBrandName',
         'brand' => 'getBrand',
         'communication' => 'getCommunication',
         'assignment_link' => 'getAssignmentLink',
@@ -814,7 +809,6 @@ class ActivityModel implements ArrayAccess
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
-        $this->container['brand_name'] = isset($data['brand_name']) ? $data['brand_name'] : null;
         $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['assignment_link'] = isset($data['assignment_link']) ? $data['assignment_link'] : null;
@@ -2315,27 +2309,6 @@ class ActivityModel implements ArrayAccess
     public function setBrandId($brand_id)
     {
         $this->container['brand_id'] = $brand_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets brand_name
-     * @return string
-     */
-    public function getBrandName()
-    {
-        return $this->container['brand_name'];
-    }
-
-    /**
-     * Sets brand_name
-     * @param string $brand_name Brand name (must be unique)
-     * @return $this
-     */
-    public function setBrandName($brand_name)
-    {
-        $this->container['brand_name'] = $brand_name;
 
         return $this;
     }

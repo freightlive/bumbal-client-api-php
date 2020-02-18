@@ -98,7 +98,6 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'bool',
         'include_zones' => 'bool',
         'include_brand' => 'bool',
-        'include_brand_name' => 'bool',
         'include_brand_colours' => 'bool',
         'include_brand_files' => 'bool',
         'apply_address_bundling' => 'bool',
@@ -158,7 +157,6 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => null,
         'include_zones' => null,
         'include_brand' => null,
-        'include_brand_name' => null,
         'include_brand_colours' => null,
         'include_brand_files' => null,
         'apply_address_bundling' => null,
@@ -228,7 +226,6 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'include_capacities',
         'include_zones' => 'include_zones',
         'include_brand' => 'include_brand',
-        'include_brand_name' => 'include_brand_name',
         'include_brand_colours' => 'include_brand_colours',
         'include_brand_files' => 'include_brand_files',
         'apply_address_bundling' => 'apply_address_bundling',
@@ -289,7 +286,6 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'setIncludeCapacities',
         'include_zones' => 'setIncludeZones',
         'include_brand' => 'setIncludeBrand',
-        'include_brand_name' => 'setIncludeBrandName',
         'include_brand_colours' => 'setIncludeBrandColours',
         'include_brand_files' => 'setIncludeBrandFiles',
         'apply_address_bundling' => 'setApplyAddressBundling',
@@ -350,7 +346,6 @@ class ActivityOptionsModel implements ArrayAccess
         'include_capacities' => 'getIncludeCapacities',
         'include_zones' => 'getIncludeZones',
         'include_brand' => 'getIncludeBrand',
-        'include_brand_name' => 'getIncludeBrandName',
         'include_brand_colours' => 'getIncludeBrandColours',
         'include_brand_files' => 'getIncludeBrandFiles',
         'apply_address_bundling' => 'getApplyAddressBundling',
@@ -436,7 +431,6 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
-        $this->container['include_brand_name'] = isset($data['include_brand_name']) ? $data['include_brand_name'] : null;
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
         $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
         $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
@@ -1392,27 +1386,6 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeBrand($include_brand)
     {
         $this->container['include_brand'] = $include_brand;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_brand_name
-     * @return bool
-     */
-    public function getIncludeBrandName()
-    {
-        return $this->container['include_brand_name'];
-    }
-
-    /**
-     * Sets include_brand_name
-     * @param bool $include_brand_name 
-     * @return $this
-     */
-    public function setIncludeBrandName($include_brand_name)
-    {
-        $this->container['include_brand_name'] = $include_brand_name;
 
         return $this;
     }

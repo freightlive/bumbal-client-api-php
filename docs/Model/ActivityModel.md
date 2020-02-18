@@ -69,7 +69,6 @@ Name | Type | Description | Notes
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
 **time_slots** | [**\BumbalClient\Model\TimeSlotModel[]**](TimeSlotModel.md) |  | [optional] 
 **brand_id** | **int** | Brand ID | [optional] 
-**brand_name** | **string** | Brand name (must be unique) | [optional] 
 **brand** | [**\BumbalClient\Model\BrandModel**](BrandModel.md) |  | [optional] 
 **communication** | [**\BumbalClient\Model\CommunicationModel**](CommunicationModel.md) |  | [optional] 
 **assignment_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 

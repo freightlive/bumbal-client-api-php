@@ -540,13 +540,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "brand_name"
-     */
-    public function testPropertyBrandName()
-    {
-    }
-
-    /**
      * Test attribute "brand"
      */
     public function testPropertyBrand()
