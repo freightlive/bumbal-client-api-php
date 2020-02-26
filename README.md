@@ -112,7 +112,13 @@ Class | Method | HTTP request | Description
 *CapacitytypeApi* | [**retrieveListCapacityType**](docs/Api/CapacitytypeApi.md#retrievelistcapacitytype) | **PUT** /capacity-type | Retrieve List of CapacityTypes
 *CapacitytypeApi* | [**setCapacityType**](docs/Api/CapacitytypeApi.md#setcapacitytype) | **POST** /capacity-type/set | Set (create or update) an CapacityType
 *CommunicationApi* | [**retrieveActivityCommunication**](docs/Api/CommunicationApi.md#retrieveactivitycommunication) | **POST** /communication/retrieve-activity | Retrieve Activity
+*CommunicationApi* | [**retrieveMappingCommunication**](docs/Api/CommunicationApi.md#retrievemappingcommunication) | **POST** /communication/retrieve-mappings | Retrieve Activity
 *CommunicationApi* | [**triggerMessageCommunication**](docs/Api/CommunicationApi.md#triggermessagecommunication) | **POST** /communication/trigger-message | Trigger Message to Communication
+*CommunicationtemplateApi* | [**createCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#createcommunicationtemplate) | **POST** /communication-template | Add a new CommunicationTemplate
+*CommunicationtemplateApi* | [**deleteCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#deletecommunicationtemplate) | **DELETE** /communication-template/{communicationTemplateId} | Delete a CommunicationTemplate
+*CommunicationtemplateApi* | [**retrieveCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievecommunicationtemplate) | **GET** /communication-template/{communicationTemplateId} | Retrieve a CommunicationTemplate
+*CommunicationtemplateApi* | [**retrieveListCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#retrievelistcommunicationtemplate) | **PUT** /communication-template | Retrieve List of CommunicationTemplates
+*CommunicationtemplateApi* | [**setCommunicationTemplate**](docs/Api/CommunicationtemplateApi.md#setcommunicationtemplate) | **POST** /communication-template/set | Set (create or update) a CommunicationTemplate
 *DriverApi* | [**createDriver**](docs/Api/DriverApi.md#createdriver) | **POST** /driver | Add a driver
 *DriverApi* | [**deleteDriver**](docs/Api/DriverApi.md#deletedriver) | **DELETE** /driver/{driverId} | Delete an driver
 *DriverApi* | [**retrieveDriver**](docs/Api/DriverApi.md#retrievedriver) | **GET** /driver/{driverId} | Find driver by ID
@@ -254,6 +260,7 @@ Class | Method | HTTP request | Description
 
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
+ - [ActivityMappingsModel](docs/Model/ActivityMappingsModel.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
  - [ActivityRetrieveListArguments](docs/Model/ActivityRetrieveListArguments.md)
@@ -313,7 +320,17 @@ Class | Method | HTTP request | Description
  - [CheckAvailabilityFiltersModel](docs/Model/CheckAvailabilityFiltersModel.md)
  - [CheckAvailabilityOptionsModel](docs/Model/CheckAvailabilityOptionsModel.md)
  - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
+ - [CommunicationMappingFiltersModel](docs/Model/CommunicationMappingFiltersModel.md)
+ - [CommunicationMappingListResponse](docs/Model/CommunicationMappingListResponse.md)
+ - [CommunicationMappingModel](docs/Model/CommunicationMappingModel.md)
+ - [CommunicationMappingOptionsModel](docs/Model/CommunicationMappingOptionsModel.md)
+ - [CommunicationMappingRetrieveListArguments](docs/Model/CommunicationMappingRetrieveListArguments.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
+ - [CommunicationTemplateFiltersModel](docs/Model/CommunicationTemplateFiltersModel.md)
+ - [CommunicationTemplateListResponse](docs/Model/CommunicationTemplateListResponse.md)
+ - [CommunicationTemplateModel](docs/Model/CommunicationTemplateModel.md)
+ - [CommunicationTemplateOptionsModel](docs/Model/CommunicationTemplateOptionsModel.md)
+ - [CommunicationTemplateRetrieveListArguments](docs/Model/CommunicationTemplateRetrieveListArguments.md)
  - [ConfigModel](docs/Model/ConfigModel.md)
  - [CredentialsModel](docs/Model/CredentialsModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
@@ -344,6 +361,7 @@ Class | Method | HTTP request | Description
  - [LogModel](docs/Model/LogModel.md)
  - [LogOptionsModel](docs/Model/LogOptionsModel.md)
  - [LogRetrieveListArguments](docs/Model/LogRetrieveListArguments.md)
+ - [MappingModel](docs/Model/MappingModel.md)
  - [MetaDataModel](docs/Model/MetaDataModel.md)
  - [NoteFiltersModel](docs/Model/NoteFiltersModel.md)
  - [NoteModel](docs/Model/NoteModel.md)
@@ -407,18 +425,21 @@ Class | Method | HTTP request | Description
  - [TagListResponse](docs/Model/TagListResponse.md)
  - [TagModel](docs/Model/TagModel.md)
  - [TagTypeFiltersModel](docs/Model/TagTypeFiltersModel.md)
+ - [TagTypeListResponse](docs/Model/TagTypeListResponse.md)
  - [TagTypeModel](docs/Model/TagTypeModel.md)
  - [TagTypeOptionsModel](docs/Model/TagTypeOptionsModel.md)
  - [TagTypeRetrieveListArguments](docs/Model/TagTypeRetrieveListArguments.md)
  - [TagsFiltersModel](docs/Model/TagsFiltersModel.md)
  - [TagsOptionsModel](docs/Model/TagsOptionsModel.md)
  - [TagsRetrieveListArguments](docs/Model/TagsRetrieveListArguments.md)
+ - [TemplateModel](docs/Model/TemplateModel.md)
  - [TimeSlotModel](docs/Model/TimeSlotModel.md)
  - [TrailerFiltersModel](docs/Model/TrailerFiltersModel.md)
  - [TrailerModel](docs/Model/TrailerModel.md)
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
  - [UnitValueModel](docs/Model/UnitValueModel.md)
+ - [UomGroupModel](docs/Model/UomGroupModel.md)
  - [UomModel](docs/Model/UomModel.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersListResponse](docs/Model/UsersListResponse.md)

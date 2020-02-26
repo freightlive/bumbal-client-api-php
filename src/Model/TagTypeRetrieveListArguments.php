@@ -58,7 +58,8 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         'filters' => '\BumbalClient\Model\TagTypeFiltersModel',
         'limit' => 'int',
         'offset' => 'int',
-        'search_text' => 'string'
+        'search_text' => 'string',
+        'as_list' => 'bool'
     ];
 
     /**
@@ -70,7 +71,8 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         'filters' => null,
         'limit' => 'int64',
         'offset' => 'int64',
-        'search_text' => null
+        'search_text' => null,
+        'as_list' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +94,8 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         'filters' => 'filters',
         'limit' => 'limit',
         'offset' => 'offset',
-        'search_text' => 'search_text'
+        'search_text' => 'search_text',
+        'as_list' => 'as_list'
     ];
 
 
@@ -105,7 +108,8 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         'filters' => 'setFilters',
         'limit' => 'setLimit',
         'offset' => 'setOffset',
-        'search_text' => 'setSearchText'
+        'search_text' => 'setSearchText',
+        'as_list' => 'setAsList'
     ];
 
 
@@ -118,7 +122,8 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         'filters' => 'getFilters',
         'limit' => 'getLimit',
         'offset' => 'getOffset',
-        'search_text' => 'getSearchText'
+        'search_text' => 'getSearchText',
+        'as_list' => 'getAsList'
     ];
 
     public static function attributeMap()
@@ -157,6 +162,7 @@ class TagTypeRetrieveListArguments implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
+        $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
     }
 
     /**
@@ -285,6 +291,27 @@ class TagTypeRetrieveListArguments implements ArrayAccess
     public function setSearchText($search_text)
     {
         $this->container['search_text'] = $search_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets as_list
+     * @return bool
+     */
+    public function getAsList()
+    {
+        return $this->container['as_list'];
+    }
+
+    /**
+     * Sets as_list
+     * @param bool $as_list 
+     * @return $this
+     */
+    public function setAsList($as_list)
+    {
+        $this->container['as_list'] = $as_list;
 
         return $this;
     }
