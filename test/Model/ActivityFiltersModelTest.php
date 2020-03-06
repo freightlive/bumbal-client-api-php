@@ -197,20 +197,6 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "created_at_since"
-     */
-    public function testPropertyCreatedAtSince()
-    {
-    }
-
-    /**
-     * Test attribute "created_at_till"
-     */
-    public function testPropertyCreatedAtTill()
-    {
-    }
-
-    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
@@ -312,6 +298,20 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "depot_address_links"
      */
     public function testPropertyDepotAddressLinks()
+    {
+    }
+
+    /**
+     * Test attribute "tag_names"
+     */
+    public function testPropertyTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
     {
     }
 

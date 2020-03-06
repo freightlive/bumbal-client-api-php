@@ -56,7 +56,11 @@ class MetaDataModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
-        'value' => 'string'
+        'value' => 'string',
+        'object_id' => 'int',
+        'object_type_name' => 'string',
+        'created_at' => '\DateTime',
+        'updated_at' => '\DateTime'
     ];
 
     /**
@@ -66,7 +70,11 @@ class MetaDataModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'name' => null,
-        'value' => null
+        'value' => null,
+        'object_id' => 'int64',
+        'object_type_name' => 'name',
+        'created_at' => 'date-time',
+        'updated_at' => 'date-time'
     ];
 
     public static function swaggerTypes()
@@ -86,7 +94,11 @@ class MetaDataModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'value' => 'value'
+        'value' => 'value',
+        'object_id' => 'object_id',
+        'object_type_name' => 'object_type_name',
+        'created_at' => 'created_at',
+        'updated_at' => 'updated_at'
     ];
 
 
@@ -97,7 +109,11 @@ class MetaDataModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'value' => 'setValue'
+        'value' => 'setValue',
+        'object_id' => 'setObjectId',
+        'object_type_name' => 'setObjectTypeName',
+        'created_at' => 'setCreatedAt',
+        'updated_at' => 'setUpdatedAt'
     ];
 
 
@@ -108,7 +124,11 @@ class MetaDataModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'value' => 'getValue'
+        'value' => 'getValue',
+        'object_id' => 'getObjectId',
+        'object_type_name' => 'getObjectTypeName',
+        'created_at' => 'getCreatedAt',
+        'updated_at' => 'getUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -145,6 +165,10 @@ class MetaDataModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
+        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
+        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
 
     /**
@@ -204,7 +228,7 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name Name
+     * @param string $name The name of the MetaData field
      * @return $this
      */
     public function setName($name)
@@ -225,12 +249,96 @@ class MetaDataModel implements ArrayAccess
 
     /**
      * Sets value
-     * @param string $value Value
+     * @param string $value The value of the MetaData field
      * @return $this
      */
     public function setValue($value)
     {
         $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_id
+     * @return int
+     */
+    public function getObjectId()
+    {
+        return $this->container['object_id'];
+    }
+
+    /**
+     * Sets object_id
+     * @param int $object_id Object ID
+     * @return $this
+     */
+    public function setObjectId($object_id)
+    {
+        $this->container['object_id'] = $object_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets object_type_name
+     * @return string
+     */
+    public function getObjectTypeName()
+    {
+        return $this->container['object_type_name'];
+    }
+
+    /**
+     * Sets object_type_name
+     * @param string $object_type_name Object type name
+     * @return $this
+     */
+    public function setObjectTypeName($object_type_name)
+    {
+        $this->container['object_type_name'] = $object_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->container['created_at'];
+    }
+
+    /**
+     * Sets created_at
+     * @param \DateTime $created_at created_at date time
+     * @return $this
+     */
+    public function setCreatedAt($created_at)
+    {
+        $this->container['created_at'] = $created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated_at
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->container['updated_at'];
+    }
+
+    /**
+     * Sets updated_at
+     * @param \DateTime $updated_at updated_at date time
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

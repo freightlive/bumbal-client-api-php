@@ -47,7 +47,6 @@ Name | Type | Description | Notes
 **include_capacities** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brand** | **bool** |  | [optional] 
-**include_brand_name** | **bool** |  | [optional] 
 **include_brand_colours** | **bool** |  | [optional] 
 **include_brand_files** | **bool** |  | [optional] 
 **apply_address_bundling** | **bool** |  | [optional] 

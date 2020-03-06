@@ -54,12 +54,8 @@ class EquipmentFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int[]',
-        'equipment_type' => 'string[]',
-        'date_time_from' => '\DateTime',
-        'date_time_to' => '\DateTime',
-        'updated_at' => '\DateTime',
-        'status' => 'string[]'
+        'id' => 'int',
+        'equipment_type' => 'string'
     ];
 
     /**
@@ -68,11 +64,7 @@ class EquipmentFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'equipment_type' => null,
-        'date_time_from' => 'date-time',
-        'date_time_to' => 'date-time',
-        'updated_at' => 'date-time',
-        'status' => null
+        'equipment_type' => null
     ];
 
     public static function swaggerTypes()
@@ -91,11 +83,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'equipment_type' => 'equipment_type',
-        'date_time_from' => 'date_time_from',
-        'date_time_to' => 'date_time_to',
-        'updated_at' => 'updated_at',
-        'status' => 'status'
+        'equipment_type' => 'equipment_type'
     ];
 
 
@@ -105,11 +93,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'equipment_type' => 'setEquipmentType',
-        'date_time_from' => 'setDateTimeFrom',
-        'date_time_to' => 'setDateTimeTo',
-        'updated_at' => 'setUpdatedAt',
-        'status' => 'setStatus'
+        'equipment_type' => 'setEquipmentType'
     ];
 
 
@@ -119,11 +103,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'equipment_type' => 'getEquipmentType',
-        'date_time_from' => 'getDateTimeFrom',
-        'date_time_to' => 'getDateTimeTo',
-        'updated_at' => 'getUpdatedAt',
-        'status' => 'getStatus'
+        'equipment_type' => 'getEquipmentType'
     ];
 
     public static function attributeMap()
@@ -159,10 +139,6 @@ class EquipmentFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
-        $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
-        $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -192,7 +168,7 @@ class EquipmentFiltersModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int[]
+     * @return int
      */
     public function getId()
     {
@@ -201,7 +177,7 @@ class EquipmentFiltersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int[] $id Equipment ID
+     * @param int $id Equipment ID
      * @return $this
      */
     public function setId($id)
@@ -213,7 +189,7 @@ class EquipmentFiltersModel implements ArrayAccess
 
     /**
      * Gets equipment_type
-     * @return string[]
+     * @return string
      */
     public function getEquipmentType()
     {
@@ -222,96 +198,12 @@ class EquipmentFiltersModel implements ArrayAccess
 
     /**
      * Sets equipment_type
-     * @param string[] $equipment_type Equipment Type
+     * @param string $equipment_type Equipment Type
      * @return $this
      */
     public function setEquipmentType($equipment_type)
     {
         $this->container['equipment_type'] = $equipment_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_time_from
-     * @return \DateTime
-     */
-    public function getDateTimeFrom()
-    {
-        return $this->container['date_time_from'];
-    }
-
-    /**
-     * Sets date_time_from
-     * @param \DateTime $date_time_from DateTime From
-     * @return $this
-     */
-    public function setDateTimeFrom($date_time_from)
-    {
-        $this->container['date_time_from'] = $date_time_from;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_time_to
-     * @return \DateTime
-     */
-    public function getDateTimeTo()
-    {
-        return $this->container['date_time_to'];
-    }
-
-    /**
-     * Sets date_time_to
-     * @param \DateTime $date_time_to DateTime To
-     * @return $this
-     */
-    public function setDateTimeTo($date_time_to)
-    {
-        $this->container['date_time_to'] = $date_time_to;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param \DateTime $updated_at Show updated since
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     * @return string[]
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     * @param string[] $status Activity Status
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
 
         return $this;
     }

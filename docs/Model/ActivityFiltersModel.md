@@ -20,8 +20,6 @@ Name | Type | Description | Notes
 **planned_date_time_to_till** | [**\DateTime**](\DateTime.md) | filter activities with a planned DateTime To till this input | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
-**created_at_since** | [**\DateTime**](\DateTime.md) | Show created since | [optional] 
-**created_at_till** | [**\DateTime**](\DateTime.md) | Show created till | [optional] 
 **status** | **string[]** | Activity Status | [optional] 
 **status_name** | **string[]** | Activity Status name | [optional] 
 **active** | **int[]** | Active status of Activity, 0 values represent deleted activities | [optional] 
@@ -37,6 +35,8 @@ Name | Type | Description | Notes
 **party_id** | **int** | Party ID | [optional] 
 **recurrence_id** | **int** | Recurrence ID | [optional] 
 **depot_address_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
+**tag_names** | **string[]** | Tag names | [optional] 
+**zone_names** | **string[]** | Zone names | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
 **links** | **object[]** | Activity Link ids | [optional] 
 

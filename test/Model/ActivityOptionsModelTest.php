@@ -386,13 +386,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_brand_name"
-     */
-    public function testPropertyIncludeBrandName()
-    {
-    }
-
-    /**
      * Test attribute "include_brand_colours"
      */
     public function testPropertyIncludeBrandColours()

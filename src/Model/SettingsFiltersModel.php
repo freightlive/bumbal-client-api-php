@@ -228,7 +228,7 @@ class SettingsFiltersModel implements ArrayAccess
 
     /**
      * Sets settings_group_id
-     * @param int[] $settings_group_id SettingsGroup id of this setting. Possible values: 1: general, 2: address, 3: package, 4:    * activity, 5: equipment, 6: note, 7: optimisation, 8: filters, 9: mobile, 10: communication
+     * @param int[] $settings_group_id SettingsGroup id of this setting. Possible values: 1: general, 2: address, 3: package, 4: activity, 5: equipment, 6: note, 7: optimisation, 8: filters
      * @return $this
      */
     public function setSettingsGroupId($settings_group_id)

@@ -71,8 +71,6 @@ class ActivityFiltersModel implements ArrayAccess
         'planned_date_time_to_till' => '\DateTime',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
-        'created_at_since' => '\DateTime',
-        'created_at_till' => '\DateTime',
         'status' => 'string[]',
         'status_name' => 'string[]',
         'active' => 'int[]',
@@ -88,6 +86,8 @@ class ActivityFiltersModel implements ArrayAccess
         'party_id' => 'int',
         'recurrence_id' => 'int',
         'depot_address_links' => '\BumbalClient\Model\LinkModel[]',
+        'tag_names' => 'string[]',
+        'zone_names' => 'string[]',
         'link' => 'object[]',
         'links' => 'object[]'
     ];
@@ -114,8 +114,6 @@ class ActivityFiltersModel implements ArrayAccess
         'planned_date_time_to_till' => 'date-time',
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
-        'created_at_since' => 'date-time',
-        'created_at_till' => 'date-time',
         'status' => null,
         'status_name' => null,
         'active' => null,
@@ -131,6 +129,8 @@ class ActivityFiltersModel implements ArrayAccess
         'party_id' => null,
         'recurrence_id' => null,
         'depot_address_links' => null,
+        'tag_names' => null,
+        'zone_names' => null,
         'link' => null,
         'links' => null
     ];
@@ -167,8 +167,6 @@ class ActivityFiltersModel implements ArrayAccess
         'planned_date_time_to_till' => 'planned_date_time_to_till',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
-        'created_at_since' => 'created_at_since',
-        'created_at_till' => 'created_at_till',
         'status' => 'status',
         'status_name' => 'status_name',
         'active' => 'active',
@@ -184,6 +182,8 @@ class ActivityFiltersModel implements ArrayAccess
         'party_id' => 'party_id',
         'recurrence_id' => 'recurrence_id',
         'depot_address_links' => 'depot_address_links',
+        'tag_names' => 'tag_names',
+        'zone_names' => 'zone_names',
         'link' => 'link',
         'links' => 'links'
     ];
@@ -211,8 +211,6 @@ class ActivityFiltersModel implements ArrayAccess
         'planned_date_time_to_till' => 'setPlannedDateTimeToTill',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
-        'created_at_since' => 'setCreatedAtSince',
-        'created_at_till' => 'setCreatedAtTill',
         'status' => 'setStatus',
         'status_name' => 'setStatusName',
         'active' => 'setActive',
@@ -228,6 +226,8 @@ class ActivityFiltersModel implements ArrayAccess
         'party_id' => 'setPartyId',
         'recurrence_id' => 'setRecurrenceId',
         'depot_address_links' => 'setDepotAddressLinks',
+        'tag_names' => 'setTagNames',
+        'zone_names' => 'setZoneNames',
         'link' => 'setLink',
         'links' => 'setLinks'
     ];
@@ -255,8 +255,6 @@ class ActivityFiltersModel implements ArrayAccess
         'planned_date_time_to_till' => 'getPlannedDateTimeToTill',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
-        'created_at_since' => 'getCreatedAtSince',
-        'created_at_till' => 'getCreatedAtTill',
         'status' => 'getStatus',
         'status_name' => 'getStatusName',
         'active' => 'getActive',
@@ -272,6 +270,8 @@ class ActivityFiltersModel implements ArrayAccess
         'party_id' => 'getPartyId',
         'recurrence_id' => 'getRecurrenceId',
         'depot_address_links' => 'getDepotAddressLinks',
+        'tag_names' => 'getTagNames',
+        'zone_names' => 'getZoneNames',
         'link' => 'getLink',
         'links' => 'getLinks'
     ];
@@ -324,8 +324,6 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['planned_date_time_to_till'] = isset($data['planned_date_time_to_till']) ? $data['planned_date_time_to_till'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
-        $this->container['created_at_since'] = isset($data['created_at_since']) ? $data['created_at_since'] : null;
-        $this->container['created_at_till'] = isset($data['created_at_till']) ? $data['created_at_till'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['status_name'] = isset($data['status_name']) ? $data['status_name'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -341,6 +339,8 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
         $this->container['recurrence_id'] = isset($data['recurrence_id']) ? $data['recurrence_id'] : null;
         $this->container['depot_address_links'] = isset($data['depot_address_links']) ? $data['depot_address_links'] : null;
+        $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
@@ -728,48 +728,6 @@ class ActivityFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets created_at_since
-     * @return \DateTime
-     */
-    public function getCreatedAtSince()
-    {
-        return $this->container['created_at_since'];
-    }
-
-    /**
-     * Sets created_at_since
-     * @param \DateTime $created_at_since Show created since
-     * @return $this
-     */
-    public function setCreatedAtSince($created_at_since)
-    {
-        $this->container['created_at_since'] = $created_at_since;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at_till
-     * @return \DateTime
-     */
-    public function getCreatedAtTill()
-    {
-        return $this->container['created_at_till'];
-    }
-
-    /**
-     * Sets created_at_till
-     * @param \DateTime $created_at_till Show created till
-     * @return $this
-     */
-    public function setCreatedAtTill($created_at_till)
-    {
-        $this->container['created_at_till'] = $created_at_till;
-
-        return $this;
-    }
-
-    /**
      * Gets status
      * @return string[]
      */
@@ -1080,6 +1038,48 @@ class ActivityFiltersModel implements ArrayAccess
     public function setDepotAddressLinks($depot_address_links)
     {
         $this->container['depot_address_links'] = $depot_address_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_names
+     * @return string[]
+     */
+    public function getTagNames()
+    {
+        return $this->container['tag_names'];
+    }
+
+    /**
+     * Sets tag_names
+     * @param string[] $tag_names Tag names
+     * @return $this
+     */
+    public function setTagNames($tag_names)
+    {
+        $this->container['tag_names'] = $tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return string[]
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param string[] $zone_names Zone names
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
 
         return $this;
     }

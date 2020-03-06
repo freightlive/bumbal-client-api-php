@@ -90,11 +90,4 @@ class UomModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyName()
     {
     }
-
-    /**
-     * Test attribute "uom_group"
-     */
-    public function testPropertyUomGroup()
-    {
-    }
 }
