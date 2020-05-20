@@ -104,4 +104,11 @@ class BrandFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPortalName()
     {
     }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+    }
 }

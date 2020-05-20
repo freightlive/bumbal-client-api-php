@@ -113,6 +113,55 @@ class VehicleModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "speed_factor"
+     */
+    public function testPropertySpeedFactor()
+    {
+    }
+
+    /**
+     * Test attribute "duration_factor"
+     */
+    public function testPropertyDurationFactor()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_meter"
+     */
+    public function testPropertyCostPerMeter()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_route"
+     */
+    public function testPropertyCostPerRoute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_driving_minute"
+     */
+    public function testPropertyCostPerDrivingMinute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_waiting_minute"
+     */
+    public function testPropertyCostPerWaitingMinute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_service_minute"
+     */
+    public function testPropertyCostPerServiceMinute()
+    {
+    }
+
+    /**
      * Test attribute "applied_capacities"
      */
     public function testPropertyAppliedCapacities()

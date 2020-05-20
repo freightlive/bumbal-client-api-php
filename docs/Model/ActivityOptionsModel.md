@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include_activity_status** | **bool** |  | [optional] 
+**include_status_name** | **bool** |  | [optional] 
 **include_activity_type_name** | **bool** |  | [optional] 
 **include_activity_meta_data** | **bool** |  | [optional] 
 **include_meta_data** | **bool** |  | [optional] 
@@ -28,6 +29,8 @@ Name | Type | Description | Notes
 **include_trailer** | **bool** |  | [optional] 
 **include_communication** | **bool** |  | [optional] 
 **include_communication_object** | **bool** |  | [optional] 
+**include_compartment_ids** | **bool** |  | [optional] 
+**include_compartments** | **bool** |  | [optional] 
 **include_links** | **bool** |  | [optional] 
 **include_activity_links** | **bool** |  | [optional] 
 **include_files** | **bool** |  | [optional] 
@@ -45,8 +48,10 @@ Name | Type | Description | Notes
 **include_depot_address_object** | **bool** |  | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
 **include_capacities** | **bool** |  | [optional] 
+**include_applied_capacities** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brand** | **bool** |  | [optional] 
+**include_brand_name** | **bool** |  | [optional] 
 **include_brand_colours** | **bool** |  | [optional] 
 **include_brand_files** | **bool** |  | [optional] 
 **apply_address_bundling** | **bool** |  | [optional] 
@@ -55,6 +60,7 @@ Name | Type | Description | Notes
 **include_activity_record_info** | **bool** |  | [optional] 
 **include_activity_record_object** | **bool** |  | [optional] 
 **include_party_name** | **bool** |  | [optional] 
+**include_shipment_activity_nr** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

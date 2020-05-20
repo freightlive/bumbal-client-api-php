@@ -92,9 +92,30 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bundle_activity_id"
+     */
+    public function testPropertyBundleActivityId()
+    {
+    }
+
+    /**
      * Test attribute "shipment_activity_id"
      */
     public function testPropertyShipmentActivityId()
+    {
+    }
+
+    /**
+     * Test attribute "shipment_activity_nr"
+     */
+    public function testPropertyShipmentActivityNr()
+    {
+    }
+
+    /**
+     * Test attribute "bundle_shipment_activity_nr"
+     */
+    public function testPropertyBundleShipmentActivityNr()
     {
     }
 
@@ -312,6 +333,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "duration"
      */
     public function testPropertyDuration()
+    {
+    }
+
+    /**
+     * Test attribute "depot_duration"
+     */
+    public function testPropertyDepotDuration()
     {
     }
 
@@ -540,6 +568,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brand_name"
+     */
+    public function testPropertyBrandName()
+    {
+    }
+
+    /**
      * Test attribute "brand"
      */
     public function testPropertyBrand()
@@ -592,6 +627,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "car"
      */
     public function testPropertyCar()
+    {
+    }
+
+    /**
+     * Test attribute "vehicle"
+     */
+    public function testPropertyVehicle()
     {
     }
 

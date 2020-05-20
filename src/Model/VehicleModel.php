@@ -59,6 +59,13 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'string',
         'name' => 'string',
         'registration_nr' => 'string',
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
+        'cost_per_meter' => 'double',
+        'cost_per_route' => 'double',
+        'cost_per_driving_minute' => 'double',
+        'cost_per_waiting_minute' => 'double',
+        'cost_per_service_minute' => 'double',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -80,6 +87,13 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => null,
         'name' => null,
         'registration_nr' => null,
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
+        'cost_per_meter' => 'double',
+        'cost_per_route' => 'double',
+        'cost_per_driving_minute' => 'double',
+        'cost_per_waiting_minute' => 'double',
+        'cost_per_service_minute' => 'double',
         'applied_capacities' => null,
         'capacities' => null,
         'tags' => null,
@@ -111,6 +125,13 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'vehicle_type_name',
         'name' => 'name',
         'registration_nr' => 'registration_nr',
+        'speed_factor' => 'speed_factor',
+        'duration_factor' => 'duration_factor',
+        'cost_per_meter' => 'cost_per_meter',
+        'cost_per_route' => 'cost_per_route',
+        'cost_per_driving_minute' => 'cost_per_driving_minute',
+        'cost_per_waiting_minute' => 'cost_per_waiting_minute',
+        'cost_per_service_minute' => 'cost_per_service_minute',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'tags' => 'tags',
@@ -133,6 +154,13 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'setVehicleTypeName',
         'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
+        'speed_factor' => 'setSpeedFactor',
+        'duration_factor' => 'setDurationFactor',
+        'cost_per_meter' => 'setCostPerMeter',
+        'cost_per_route' => 'setCostPerRoute',
+        'cost_per_driving_minute' => 'setCostPerDrivingMinute',
+        'cost_per_waiting_minute' => 'setCostPerWaitingMinute',
+        'cost_per_service_minute' => 'setCostPerServiceMinute',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'tags' => 'setTags',
@@ -155,6 +183,13 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'getVehicleTypeName',
         'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
+        'speed_factor' => 'getSpeedFactor',
+        'duration_factor' => 'getDurationFactor',
+        'cost_per_meter' => 'getCostPerMeter',
+        'cost_per_route' => 'getCostPerRoute',
+        'cost_per_driving_minute' => 'getCostPerDrivingMinute',
+        'cost_per_waiting_minute' => 'getCostPerWaitingMinute',
+        'cost_per_service_minute' => 'getCostPerServiceMinute',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'tags' => 'getTags',
@@ -238,6 +273,13 @@ class VehicleModel implements ArrayAccess
         $this->container['vehicle_type_name'] = isset($data['vehicle_type_name']) ? $data['vehicle_type_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
+        $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
+        $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
+        $this->container['cost_per_meter'] = isset($data['cost_per_meter']) ? $data['cost_per_meter'] : null;
+        $this->container['cost_per_route'] = isset($data['cost_per_route']) ? $data['cost_per_route'] : null;
+        $this->container['cost_per_driving_minute'] = isset($data['cost_per_driving_minute']) ? $data['cost_per_driving_minute'] : null;
+        $this->container['cost_per_waiting_minute'] = isset($data['cost_per_waiting_minute']) ? $data['cost_per_waiting_minute'] : null;
+        $this->container['cost_per_service_minute'] = isset($data['cost_per_service_minute']) ? $data['cost_per_service_minute'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -422,6 +464,153 @@ class VehicleModel implements ArrayAccess
     }
 
     /**
+     * Gets speed_factor
+     * @return double
+     */
+    public function getSpeedFactor()
+    {
+        return $this->container['speed_factor'];
+    }
+
+    /**
+     * Sets speed_factor
+     * @param double $speed_factor Speed Factor
+     * @return $this
+     */
+    public function setSpeedFactor($speed_factor)
+    {
+        $this->container['speed_factor'] = $speed_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets duration_factor
+     * @return double
+     */
+    public function getDurationFactor()
+    {
+        return $this->container['duration_factor'];
+    }
+
+    /**
+     * Sets duration_factor
+     * @param double $duration_factor Duration Factor
+     * @return $this
+     */
+    public function setDurationFactor($duration_factor)
+    {
+        $this->container['duration_factor'] = $duration_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_meter
+     * @return double
+     */
+    public function getCostPerMeter()
+    {
+        return $this->container['cost_per_meter'];
+    }
+
+    /**
+     * Sets cost_per_meter
+     * @param double $cost_per_meter Cost per meter
+     * @return $this
+     */
+    public function setCostPerMeter($cost_per_meter)
+    {
+        $this->container['cost_per_meter'] = $cost_per_meter;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_route
+     * @return double
+     */
+    public function getCostPerRoute()
+    {
+        return $this->container['cost_per_route'];
+    }
+
+    /**
+     * Sets cost_per_route
+     * @param double $cost_per_route Cost per route
+     * @return $this
+     */
+    public function setCostPerRoute($cost_per_route)
+    {
+        $this->container['cost_per_route'] = $cost_per_route;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_driving_minute
+     * @return double
+     */
+    public function getCostPerDrivingMinute()
+    {
+        return $this->container['cost_per_driving_minute'];
+    }
+
+    /**
+     * Sets cost_per_driving_minute
+     * @param double $cost_per_driving_minute Cost per driving minute
+     * @return $this
+     */
+    public function setCostPerDrivingMinute($cost_per_driving_minute)
+    {
+        $this->container['cost_per_driving_minute'] = $cost_per_driving_minute;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_waiting_minute
+     * @return double
+     */
+    public function getCostPerWaitingMinute()
+    {
+        return $this->container['cost_per_waiting_minute'];
+    }
+
+    /**
+     * Sets cost_per_waiting_minute
+     * @param double $cost_per_waiting_minute Cost per waiting minute
+     * @return $this
+     */
+    public function setCostPerWaitingMinute($cost_per_waiting_minute)
+    {
+        $this->container['cost_per_waiting_minute'] = $cost_per_waiting_minute;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_service_minute
+     * @return double
+     */
+    public function getCostPerServiceMinute()
+    {
+        return $this->container['cost_per_service_minute'];
+    }
+
+    /**
+     * Sets cost_per_service_minute
+     * @param double $cost_per_service_minute Cost per service minute
+     * @return $this
+     */
+    public function setCostPerServiceMinute($cost_per_service_minute)
+    {
+        $this->container['cost_per_service_minute'] = $cost_per_service_minute;
+
+        return $this;
+    }
+
+    /**
      * Gets applied_capacities
      * @return object
      */
@@ -432,7 +621,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -453,7 +642,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -474,7 +663,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -495,7 +684,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -516,7 +705,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -537,7 +726,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)

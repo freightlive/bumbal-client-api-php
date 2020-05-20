@@ -56,7 +56,10 @@ class ActivityModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'uuid' => 'string',
+        'bundle_activity_id' => 'int',
         'shipment_activity_id' => 'int',
+        'shipment_activity_nr' => 'string',
+        'bundle_shipment_activity_nr' => 'string',
         'nr' => 'string',
         'activity_type_name' => 'string',
         'activity_type_id' => 'int',
@@ -88,6 +91,7 @@ class ActivityModel implements ArrayAccess
         'executed_date_time_from' => '\DateTime',
         'executed_date_time_to' => '\DateTime',
         'duration' => 'int',
+        'depot_duration' => 'int',
         'active' => 'bool',
         'route_id' => 'string',
         'route_nr' => 'string',
@@ -120,6 +124,7 @@ class ActivityModel implements ArrayAccess
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'brand_id' => 'int',
+        'brand_name' => 'string',
         'brand' => '\BumbalClient\Model\BrandModel',
         'communication' => '\BumbalClient\Model\CommunicationModel',
         'assignment_link' => '\BumbalClient\Model\LinkModel',
@@ -128,6 +133,7 @@ class ActivityModel implements ArrayAccess
         'driver' => '\BumbalClient\Model\DriverModel',
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'car' => '\BumbalClient\Model\VehicleModel',
+        'vehicle' => '\BumbalClient\Model\VehicleModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -157,7 +163,10 @@ class ActivityModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'uuid' => null,
+        'bundle_activity_id' => 'int64',
         'shipment_activity_id' => 'int64',
+        'shipment_activity_nr' => null,
+        'bundle_shipment_activity_nr' => null,
         'nr' => null,
         'activity_type_name' => null,
         'activity_type_id' => 'int64',
@@ -189,6 +198,7 @@ class ActivityModel implements ArrayAccess
         'executed_date_time_from' => 'date-time',
         'executed_date_time_to' => 'date-time',
         'duration' => null,
+        'depot_duration' => null,
         'active' => null,
         'route_id' => null,
         'route_nr' => null,
@@ -221,6 +231,7 @@ class ActivityModel implements ArrayAccess
         'package_lines' => null,
         'time_slots' => null,
         'brand_id' => null,
+        'brand_name' => null,
         'brand' => null,
         'communication' => null,
         'assignment_link' => null,
@@ -229,6 +240,7 @@ class ActivityModel implements ArrayAccess
         'driver' => null,
         'driver_links' => null,
         'car' => null,
+        'vehicle' => null,
         'trailer' => null,
         'bundled_activity_ids' => null,
         'tags' => null,
@@ -268,7 +280,10 @@ class ActivityModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'uuid' => 'uuid',
+        'bundle_activity_id' => 'bundle_activity_id',
         'shipment_activity_id' => 'shipment_activity_id',
+        'shipment_activity_nr' => 'shipment_activity_nr',
+        'bundle_shipment_activity_nr' => 'bundle_shipment_activity_nr',
         'nr' => 'nr',
         'activity_type_name' => 'activity_type_name',
         'activity_type_id' => 'activity_type_id',
@@ -300,6 +315,7 @@ class ActivityModel implements ArrayAccess
         'executed_date_time_from' => 'executed_date_time_from',
         'executed_date_time_to' => 'executed_date_time_to',
         'duration' => 'duration',
+        'depot_duration' => 'depot_duration',
         'active' => 'active',
         'route_id' => 'route_id',
         'route_nr' => 'route_nr',
@@ -332,6 +348,7 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'package_lines',
         'time_slots' => 'time_slots',
         'brand_id' => 'brand_id',
+        'brand_name' => 'brand_name',
         'brand' => 'brand',
         'communication' => 'communication',
         'assignment_link' => 'assignment_link',
@@ -340,6 +357,7 @@ class ActivityModel implements ArrayAccess
         'driver' => 'driver',
         'driver_links' => 'driver_links',
         'car' => 'car',
+        'vehicle' => 'vehicle',
         'trailer' => 'trailer',
         'bundled_activity_ids' => 'bundled_activity_ids',
         'tags' => 'tags',
@@ -370,7 +388,10 @@ class ActivityModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'uuid' => 'setUuid',
+        'bundle_activity_id' => 'setBundleActivityId',
         'shipment_activity_id' => 'setShipmentActivityId',
+        'shipment_activity_nr' => 'setShipmentActivityNr',
+        'bundle_shipment_activity_nr' => 'setBundleShipmentActivityNr',
         'nr' => 'setNr',
         'activity_type_name' => 'setActivityTypeName',
         'activity_type_id' => 'setActivityTypeId',
@@ -402,6 +423,7 @@ class ActivityModel implements ArrayAccess
         'executed_date_time_from' => 'setExecutedDateTimeFrom',
         'executed_date_time_to' => 'setExecutedDateTimeTo',
         'duration' => 'setDuration',
+        'depot_duration' => 'setDepotDuration',
         'active' => 'setActive',
         'route_id' => 'setRouteId',
         'route_nr' => 'setRouteNr',
@@ -434,6 +456,7 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'setPackageLines',
         'time_slots' => 'setTimeSlots',
         'brand_id' => 'setBrandId',
+        'brand_name' => 'setBrandName',
         'brand' => 'setBrand',
         'communication' => 'setCommunication',
         'assignment_link' => 'setAssignmentLink',
@@ -442,6 +465,7 @@ class ActivityModel implements ArrayAccess
         'driver' => 'setDriver',
         'driver_links' => 'setDriverLinks',
         'car' => 'setCar',
+        'vehicle' => 'setVehicle',
         'trailer' => 'setTrailer',
         'bundled_activity_ids' => 'setBundledActivityIds',
         'tags' => 'setTags',
@@ -472,7 +496,10 @@ class ActivityModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'uuid' => 'getUuid',
+        'bundle_activity_id' => 'getBundleActivityId',
         'shipment_activity_id' => 'getShipmentActivityId',
+        'shipment_activity_nr' => 'getShipmentActivityNr',
+        'bundle_shipment_activity_nr' => 'getBundleShipmentActivityNr',
         'nr' => 'getNr',
         'activity_type_name' => 'getActivityTypeName',
         'activity_type_id' => 'getActivityTypeId',
@@ -504,6 +531,7 @@ class ActivityModel implements ArrayAccess
         'executed_date_time_from' => 'getExecutedDateTimeFrom',
         'executed_date_time_to' => 'getExecutedDateTimeTo',
         'duration' => 'getDuration',
+        'depot_duration' => 'getDepotDuration',
         'active' => 'getActive',
         'route_id' => 'getRouteId',
         'route_nr' => 'getRouteNr',
@@ -536,6 +564,7 @@ class ActivityModel implements ArrayAccess
         'package_lines' => 'getPackageLines',
         'time_slots' => 'getTimeSlots',
         'brand_id' => 'getBrandId',
+        'brand_name' => 'getBrandName',
         'brand' => 'getBrand',
         'communication' => 'getCommunication',
         'assignment_link' => 'getAssignmentLink',
@@ -544,6 +573,7 @@ class ActivityModel implements ArrayAccess
         'driver' => 'getDriver',
         'driver_links' => 'getDriverLinks',
         'car' => 'getCar',
+        'vehicle' => 'getVehicle',
         'trailer' => 'getTrailer',
         'bundled_activity_ids' => 'getBundledActivityIds',
         'tags' => 'getTags',
@@ -745,7 +775,10 @@ class ActivityModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['bundle_activity_id'] = isset($data['bundle_activity_id']) ? $data['bundle_activity_id'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
+        $this->container['shipment_activity_nr'] = isset($data['shipment_activity_nr']) ? $data['shipment_activity_nr'] : null;
+        $this->container['bundle_shipment_activity_nr'] = isset($data['bundle_shipment_activity_nr']) ? $data['bundle_shipment_activity_nr'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
@@ -777,6 +810,7 @@ class ActivityModel implements ArrayAccess
         $this->container['executed_date_time_from'] = isset($data['executed_date_time_from']) ? $data['executed_date_time_from'] : null;
         $this->container['executed_date_time_to'] = isset($data['executed_date_time_to']) ? $data['executed_date_time_to'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['depot_duration'] = isset($data['depot_duration']) ? $data['depot_duration'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['route_nr'] = isset($data['route_nr']) ? $data['route_nr'] : null;
@@ -809,6 +843,7 @@ class ActivityModel implements ArrayAccess
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
+        $this->container['brand_name'] = isset($data['brand_name']) ? $data['brand_name'] : null;
         $this->container['brand'] = isset($data['brand']) ? $data['brand'] : null;
         $this->container['communication'] = isset($data['communication']) ? $data['communication'] : null;
         $this->container['assignment_link'] = isset($data['assignment_link']) ? $data['assignment_link'] : null;
@@ -817,6 +852,7 @@ class ActivityModel implements ArrayAccess
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
+        $this->container['vehicle'] = isset($data['vehicle']) ? $data['vehicle'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['bundled_activity_ids'] = isset($data['bundled_activity_ids']) ? $data['bundled_activity_ids'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -943,6 +979,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets bundle_activity_id
+     * @return int
+     */
+    public function getBundleActivityId()
+    {
+        return $this->container['bundle_activity_id'];
+    }
+
+    /**
+     * Sets bundle_activity_id
+     * @param int $bundle_activity_id Unique Identifier for partner shipment activity
+     * @return $this
+     */
+    public function setBundleActivityId($bundle_activity_id)
+    {
+        $this->container['bundle_activity_id'] = $bundle_activity_id;
+
+        return $this;
+    }
+
+    /**
      * Gets shipment_activity_id
      * @return int
      */
@@ -959,6 +1016,48 @@ class ActivityModel implements ArrayAccess
     public function setShipmentActivityId($shipment_activity_id)
     {
         $this->container['shipment_activity_id'] = $shipment_activity_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets shipment_activity_nr
+     * @return string
+     */
+    public function getShipmentActivityNr()
+    {
+        return $this->container['shipment_activity_nr'];
+    }
+
+    /**
+     * Sets shipment_activity_nr
+     * @param string $shipment_activity_nr Number for partner shipment activity
+     * @return $this
+     */
+    public function setShipmentActivityNr($shipment_activity_nr)
+    {
+        $this->container['shipment_activity_nr'] = $shipment_activity_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets bundle_shipment_activity_nr
+     * @return string
+     */
+    public function getBundleShipmentActivityNr()
+    {
+        return $this->container['bundle_shipment_activity_nr'];
+    }
+
+    /**
+     * Sets bundle_shipment_activity_nr
+     * @param string $bundle_shipment_activity_nr Number for partner bundle shipment activity
+     * @return $this
+     */
+    public function setBundleShipmentActivityNr($bundle_shipment_activity_nr)
+    {
+        $this->container['bundle_shipment_activity_nr'] = $bundle_shipment_activity_nr;
 
         return $this;
     }
@@ -1148,7 +1247,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment
-     * @param \BumbalClient\Model\AssignmentModel $assignment 
+     * @param \BumbalClient\Model\AssignmentModel $assignment
      * @return $this
      */
     public function setAssignment($assignment)
@@ -1421,7 +1520,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time
-     * @param \DateTime $earliest_delivery_date_time 
+     * @param \DateTime $earliest_delivery_date_time
      * @return $this
      */
     public function setEarliestDeliveryDateTime($earliest_delivery_date_time)
@@ -1442,7 +1541,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time
-     * @param \DateTime $latest_delivery_date_time 
+     * @param \DateTime $latest_delivery_date_time
      * @return $this
      */
     public function setLatestDeliveryDateTime($latest_delivery_date_time)
@@ -1463,7 +1562,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date
-     * @param \DateTime $earliest_delivery_date 
+     * @param \DateTime $earliest_delivery_date
      * @return $this
      */
     public function setEarliestDeliveryDate($earliest_delivery_date)
@@ -1484,7 +1583,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date
-     * @param \DateTime $latest_delivery_date 
+     * @param \DateTime $latest_delivery_date
      * @return $this
      */
     public function setLatestDeliveryDate($latest_delivery_date)
@@ -1637,6 +1736,27 @@ class ActivityModel implements ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets depot_duration
+     * @return int
+     */
+    public function getDepotDuration()
+    {
+        return $this->container['depot_duration'];
+    }
+
+    /**
+     * Sets depot_duration
+     * @param int $depot_duration Duration of the depot activity in minutes
+     * @return $this
+     */
+    public function setDepotDuration($depot_duration)
+    {
+        $this->container['depot_duration'] = $depot_duration;
 
         return $this;
     }
@@ -2072,7 +2192,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address 
+     * @param \BumbalClient\Model\AddressModel $address
      * @return $this
      */
     public function setAddress($address)
@@ -2093,7 +2213,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address_applied
-     * @param \BumbalClient\Model\AddressAppliedModel $address_applied 
+     * @param \BumbalClient\Model\AddressAppliedModel $address_applied
      * @return $this
      */
     public function setAddressApplied($address_applied)
@@ -2114,7 +2234,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \BumbalClient\Model\AddressModel $depot_address 
+     * @param \BumbalClient\Model\AddressModel $depot_address
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -2177,7 +2297,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers
-     * @param object $allowed_drivers 
+     * @param object $allowed_drivers
      * @return $this
      */
     public function setAllowedDrivers($allowed_drivers)
@@ -2198,7 +2318,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers_links
-     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links 
+     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links
      * @return $this
      */
     public function setAllowedDriversLinks($allowed_drivers_links)
@@ -2219,7 +2339,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities 
+     * @param object $applied_capacities
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -2240,7 +2360,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities 
+     * @param \BumbalClient\Model\CapacityModel[] $capacities
      * @return $this
      */
     public function setCapacities($capacities)
@@ -2261,7 +2381,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets package_lines
-     * @param \BumbalClient\Model\PackageLineModel[] $package_lines 
+     * @param \BumbalClient\Model\PackageLineModel[] $package_lines
      * @return $this
      */
     public function setPackageLines($package_lines)
@@ -2282,7 +2402,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets time_slots
-     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots 
+     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots
      * @return $this
      */
     public function setTimeSlots($time_slots)
@@ -2314,6 +2434,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets brand_name
+     * @return string
+     */
+    public function getBrandName()
+    {
+        return $this->container['brand_name'];
+    }
+
+    /**
+     * Sets brand_name
+     * @param string $brand_name Brand name (must be unique)
+     * @return $this
+     */
+    public function setBrandName($brand_name)
+    {
+        $this->container['brand_name'] = $brand_name;
+
+        return $this;
+    }
+
+    /**
      * Gets brand
      * @return \BumbalClient\Model\BrandModel
      */
@@ -2324,7 +2465,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets brand
-     * @param \BumbalClient\Model\BrandModel $brand 
+     * @param \BumbalClient\Model\BrandModel $brand
      * @return $this
      */
     public function setBrand($brand)
@@ -2345,7 +2486,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \BumbalClient\Model\CommunicationModel $communication 
+     * @param \BumbalClient\Model\CommunicationModel $communication
      * @return $this
      */
     public function setCommunication($communication)
@@ -2366,7 +2507,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment_link
-     * @param \BumbalClient\Model\LinkModel $assignment_link 
+     * @param \BumbalClient\Model\LinkModel $assignment_link
      * @return $this
      */
     public function setAssignmentLink($assignment_link)
@@ -2387,7 +2528,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_link
-     * @param \BumbalClient\Model\LinkModel $route_link 
+     * @param \BumbalClient\Model\LinkModel $route_link
      * @return $this
      */
     public function setRouteLink($route_link)
@@ -2408,7 +2549,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\RouteModel $route 
+     * @param \BumbalClient\Model\RouteModel $route
      * @return $this
      */
     public function setRoute($route)
@@ -2429,7 +2570,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\DriverModel $driver 
+     * @param \BumbalClient\Model\DriverModel $driver
      * @return $this
      */
     public function setDriver($driver)
@@ -2450,7 +2591,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver_links
-     * @param \BumbalClient\Model\LinkModel[] $driver_links 
+     * @param \BumbalClient\Model\LinkModel[] $driver_links
      * @return $this
      */
     public function setDriverLinks($driver_links)
@@ -2471,12 +2612,33 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\VehicleModel $car 
+     * @param \BumbalClient\Model\VehicleModel $car
      * @return $this
      */
     public function setCar($car)
     {
         $this->container['car'] = $car;
+
+        return $this;
+    }
+
+    /**
+     * Gets vehicle
+     * @return \BumbalClient\Model\VehicleModel
+     */
+    public function getVehicle()
+    {
+        return $this->container['vehicle'];
+    }
+
+    /**
+     * Sets vehicle
+     * @param \BumbalClient\Model\VehicleModel $vehicle
+     * @return $this
+     */
+    public function setVehicle($vehicle)
+    {
+        $this->container['vehicle'] = $vehicle;
 
         return $this;
     }
@@ -2492,7 +2654,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer 
+     * @param \BumbalClient\Model\TrailerModel $trailer
      * @return $this
      */
     public function setTrailer($trailer)
@@ -2534,7 +2696,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -2555,7 +2717,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -2618,7 +2780,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @param \BumbalClient\Model\ZoneModel[] $zones
      * @return $this
      */
     public function setZones($zones)
@@ -2660,7 +2822,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -2681,7 +2843,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -2702,7 +2864,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @param \BumbalClient\Model\NoteModel[] $notes
      * @return $this
      */
     public function setNotes($notes)
@@ -2723,7 +2885,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -2828,7 +2990,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_created_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_created_by_user 
+     * @param \BumbalClient\Model\UsersModel $activity_created_by_user
      * @return $this
      */
     public function setActivityCreatedByUser($activity_created_by_user)
@@ -2849,7 +3011,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user 
+     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user
      * @return $this
      */
     public function setActivityUpdatedByUser($activity_updated_by_user)

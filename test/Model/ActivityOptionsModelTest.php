@@ -85,6 +85,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_status_name"
+     */
+    public function testPropertyIncludeStatusName()
+    {
+    }
+
+    /**
      * Test attribute "include_activity_type_name"
      */
     public function testPropertyIncludeActivityTypeName()
@@ -253,6 +260,20 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_compartment_ids"
+     */
+    public function testPropertyIncludeCompartmentIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_compartments"
+     */
+    public function testPropertyIncludeCompartments()
+    {
+    }
+
+    /**
      * Test attribute "include_links"
      */
     public function testPropertyIncludeLinks()
@@ -372,6 +393,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_applied_capacities"
+     */
+    public function testPropertyIncludeAppliedCapacities()
+    {
+    }
+
+    /**
      * Test attribute "include_zones"
      */
     public function testPropertyIncludeZones()
@@ -382,6 +410,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_brand"
      */
     public function testPropertyIncludeBrand()
+    {
+    }
+
+    /**
+     * Test attribute "include_brand_name"
+     */
+    public function testPropertyIncludeBrandName()
     {
     }
 
@@ -438,6 +473,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_party_name"
      */
     public function testPropertyIncludePartyName()
+    {
+    }
+
+    /**
+     * Test attribute "include_shipment_activity_nr"
+     */
+    public function testPropertyIncludeShipmentActivityNr()
     {
     }
 }

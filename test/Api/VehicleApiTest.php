@@ -75,7 +75,7 @@ class VehicleApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for createVehicle
      *
-     * Add a vehicle.
+     * Add a new vehicle.
      *
      */
     public function testCreateVehicle()
@@ -85,7 +85,7 @@ class VehicleApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for deleteVehicle
      *
-     * Delete a vehicle.
+     * Delete a vehicle entry.
      *
      */
     public function testDeleteVehicle()

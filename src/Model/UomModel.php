@@ -55,7 +55,8 @@ class UomModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'name' => 'string'
+        'name' => 'string',
+        'uom_group' => '\BumbalClient\Model\UomGroupModel'
     ];
 
     /**
@@ -64,7 +65,8 @@ class UomModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'name' => null
+        'name' => null,
+        'uom_group' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +85,8 @@ class UomModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name'
+        'name' => 'name',
+        'uom_group' => 'uom_group'
     ];
 
 
@@ -93,7 +96,8 @@ class UomModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName'
+        'name' => 'setName',
+        'uom_group' => 'setUomGroup'
     ];
 
 
@@ -103,7 +107,8 @@ class UomModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName'
+        'name' => 'getName',
+        'uom_group' => 'getUomGroup'
     ];
 
     public static function attributeMap()
@@ -139,6 +144,7 @@ class UomModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['uom_group'] = isset($data['uom_group']) ? $data['uom_group'] : null;
     }
 
     /**
@@ -204,6 +210,27 @@ class UomModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets uom_group
+     * @return \BumbalClient\Model\UomGroupModel
+     */
+    public function getUomGroup()
+    {
+        return $this->container['uom_group'];
+    }
+
+    /**
+     * Sets uom_group
+     * @param \BumbalClient\Model\UomGroupModel $uom_group
+     * @return $this
+     */
+    public function setUomGroup($uom_group)
+    {
+        $this->container['uom_group'] = $uom_group;
 
         return $this;
     }

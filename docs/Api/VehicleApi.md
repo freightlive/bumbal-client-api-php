@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createVehicle**](VehicleApi.md#createVehicle) | **POST** /vehicle | Add a vehicle
-[**deleteVehicle**](VehicleApi.md#deleteVehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle
+[**createVehicle**](VehicleApi.md#createVehicle) | **POST** /vehicle | Add a new vehicle
+[**deleteVehicle**](VehicleApi.md#deleteVehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
 [**retrieveListVehicle**](VehicleApi.md#retrieveListVehicle) | **PUT** /vehicle | Retrieve List of Vehicles
 [**retrieveVehicle**](VehicleApi.md#retrieveVehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
 [**setVehicle**](VehicleApi.md#setVehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
@@ -13,11 +13,11 @@ Method | HTTP request | Description
 
 
 # **createVehicle**
-> \BumbalClient\Model\ApiResponse createVehicle($body)
+> \BumbalClient\Model\ApiResponse16 createVehicle($body)
 
-Add a vehicle
+Add a new vehicle
 
-Add a vehicle
+Add a new vehicle
 
 ### Example
 ```php
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse16**](../Model/ApiResponse16.md)
 
 ### Authorization
 
@@ -63,11 +63,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteVehicle**
-> \BumbalClient\Model\ApiResponse deleteVehicle($vehicle_id)
+> \BumbalClient\Model\ApiResponse17 deleteVehicle($vehicle_id)
 
-Delete a vehicle
+Delete a vehicle entry
 
-Delete a vehicle
+Delete a vehicle entry
 
 ### Example
 ```php
@@ -80,7 +80,7 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\VehicleApi();
-$vehicle_id = 789; // int | ID of the vehicle to delete
+$vehicle_id = 789; // int | ID of vehicle to delete
 
 try {
     $result = $api_instance->deleteVehicle($vehicle_id);
@@ -95,11 +95,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vehicle_id** | **int**| ID of the vehicle to delete |
+ **vehicle_id** | **int**| ID of vehicle to delete |
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+[**\BumbalClient\Model\ApiResponse17**](../Model/ApiResponse17.md)
 
 ### Authorization
 

@@ -61,7 +61,11 @@ class BrandModel implements ArrayAccess
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'brand_colours' => '\BumbalClient\Model\BrandColourModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
-        'portal_settings' => '\BumbalClient\Model\PortalSettingModel[]'
+        'portal_settings' => '\BumbalClient\Model\PortalSettingModel[]',
+        'brand_created_by' => '\BumbalClient\Model\UsersModel',
+        'brand_updated_by' => '\BumbalClient\Model\UsersModel',
+        'brand_created_at' => '\DateTime',
+        'brand_updated_at' => '\DateTime'
     ];
 
     /**
@@ -76,7 +80,11 @@ class BrandModel implements ArrayAccess
         'meta_data' => null,
         'brand_colours' => null,
         'files' => null,
-        'portal_settings' => null
+        'portal_settings' => null,
+        'brand_created_by' => null,
+        'brand_updated_by' => null,
+        'brand_created_at' => 'date-time',
+        'brand_updated_at' => 'date-time'
     ];
 
     public static function swaggerTypes()
@@ -101,7 +109,11 @@ class BrandModel implements ArrayAccess
         'meta_data' => 'meta_data',
         'brand_colours' => 'brand_colours',
         'files' => 'files',
-        'portal_settings' => 'portal_settings'
+        'portal_settings' => 'portal_settings',
+        'brand_created_by' => 'brand_created_by',
+        'brand_updated_by' => 'brand_updated_by',
+        'brand_created_at' => 'brand_created_at',
+        'brand_updated_at' => 'brand_updated_at'
     ];
 
 
@@ -117,7 +129,11 @@ class BrandModel implements ArrayAccess
         'meta_data' => 'setMetaData',
         'brand_colours' => 'setBrandColours',
         'files' => 'setFiles',
-        'portal_settings' => 'setPortalSettings'
+        'portal_settings' => 'setPortalSettings',
+        'brand_created_by' => 'setBrandCreatedBy',
+        'brand_updated_by' => 'setBrandUpdatedBy',
+        'brand_created_at' => 'setBrandCreatedAt',
+        'brand_updated_at' => 'setBrandUpdatedAt'
     ];
 
 
@@ -133,7 +149,11 @@ class BrandModel implements ArrayAccess
         'meta_data' => 'getMetaData',
         'brand_colours' => 'getBrandColours',
         'files' => 'getFiles',
-        'portal_settings' => 'getPortalSettings'
+        'portal_settings' => 'getPortalSettings',
+        'brand_created_by' => 'getBrandCreatedBy',
+        'brand_updated_by' => 'getBrandUpdatedBy',
+        'brand_created_at' => 'getBrandCreatedAt',
+        'brand_updated_at' => 'getBrandUpdatedAt'
     ];
 
     public static function attributeMap()
@@ -175,6 +195,10 @@ class BrandModel implements ArrayAccess
         $this->container['brand_colours'] = isset($data['brand_colours']) ? $data['brand_colours'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['portal_settings'] = isset($data['portal_settings']) ? $data['portal_settings'] : null;
+        $this->container['brand_created_by'] = isset($data['brand_created_by']) ? $data['brand_created_by'] : null;
+        $this->container['brand_updated_by'] = isset($data['brand_updated_by']) ? $data['brand_updated_by'] : null;
+        $this->container['brand_created_at'] = isset($data['brand_created_at']) ? $data['brand_created_at'] : null;
+        $this->container['brand_updated_at'] = isset($data['brand_updated_at']) ? $data['brand_updated_at'] : null;
     }
 
     /**
@@ -255,7 +279,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @param \BumbalClient\Model\TagModel[] $tags
      * @return $this
      */
     public function setTags($tags)
@@ -276,7 +300,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -297,7 +321,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -318,7 +342,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets brand_colours
-     * @param \BumbalClient\Model\BrandColourModel[] $brand_colours 
+     * @param \BumbalClient\Model\BrandColourModel[] $brand_colours
      * @return $this
      */
     public function setBrandColours($brand_colours)
@@ -339,7 +363,7 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files 
+     * @param \BumbalClient\Model\FileModel[] $files
      * @return $this
      */
     public function setFiles($files)
@@ -360,12 +384,96 @@ class BrandModel implements ArrayAccess
 
     /**
      * Sets portal_settings
-     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings 
+     * @param \BumbalClient\Model\PortalSettingModel[] $portal_settings
      * @return $this
      */
     public function setPortalSettings($portal_settings)
     {
         $this->container['portal_settings'] = $portal_settings;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_created_by
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getBrandCreatedBy()
+    {
+        return $this->container['brand_created_by'];
+    }
+
+    /**
+     * Sets brand_created_by
+     * @param \BumbalClient\Model\UsersModel $brand_created_by
+     * @return $this
+     */
+    public function setBrandCreatedBy($brand_created_by)
+    {
+        $this->container['brand_created_by'] = $brand_created_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_updated_by
+     * @return \BumbalClient\Model\UsersModel
+     */
+    public function getBrandUpdatedBy()
+    {
+        return $this->container['brand_updated_by'];
+    }
+
+    /**
+     * Sets brand_updated_by
+     * @param \BumbalClient\Model\UsersModel $brand_updated_by
+     * @return $this
+     */
+    public function setBrandUpdatedBy($brand_updated_by)
+    {
+        $this->container['brand_updated_by'] = $brand_updated_by;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_created_at
+     * @return \DateTime
+     */
+    public function getBrandCreatedAt()
+    {
+        return $this->container['brand_created_at'];
+    }
+
+    /**
+     * Sets brand_created_at
+     * @param \DateTime $brand_created_at created_at date time
+     * @return $this
+     */
+    public function setBrandCreatedAt($brand_created_at)
+    {
+        $this->container['brand_created_at'] = $brand_created_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_updated_at
+     * @return \DateTime
+     */
+    public function getBrandUpdatedAt()
+    {
+        return $this->container['brand_updated_at'];
+    }
+
+    /**
+     * Sets brand_updated_at
+     * @param \DateTime $brand_updated_at updated_at date time
+     * @return $this
+     */
+    public function setBrandUpdatedAt($brand_updated_at)
+    {
+        $this->container['brand_updated_at'] = $brand_updated_at;
 
         return $this;
     }

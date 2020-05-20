@@ -113,6 +113,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for unsuccessful
+     *
+     * Report an unsuccessful activity.
+     *
+     */
+    public function testUnsuccessful()
+    {
+    }
+
+    /**
      * Test case for updateActivity
      *
      * Update a activity.

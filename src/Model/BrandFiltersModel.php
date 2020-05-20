@@ -57,7 +57,8 @@ class BrandFiltersModel implements ArrayAccess
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
         'name' => 'string[]',
-        'portal_name' => 'string[]'
+        'portal_name' => 'string[]',
+        'links' => 'object[]'
     ];
 
     /**
@@ -68,7 +69,8 @@ class BrandFiltersModel implements ArrayAccess
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
         'name' => null,
-        'portal_name' => null
+        'portal_name' => null,
+        'links' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +91,8 @@ class BrandFiltersModel implements ArrayAccess
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
         'name' => 'name',
-        'portal_name' => 'portal_name'
+        'portal_name' => 'portal_name',
+        'links' => 'links'
     ];
 
 
@@ -101,7 +104,8 @@ class BrandFiltersModel implements ArrayAccess
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
         'name' => 'setName',
-        'portal_name' => 'setPortalName'
+        'portal_name' => 'setPortalName',
+        'links' => 'setLinks'
     ];
 
 
@@ -113,7 +117,8 @@ class BrandFiltersModel implements ArrayAccess
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
         'name' => 'getName',
-        'portal_name' => 'getPortalName'
+        'portal_name' => 'getPortalName',
+        'links' => 'getLinks'
     ];
 
     public static function attributeMap()
@@ -151,6 +156,7 @@ class BrandFiltersModel implements ArrayAccess
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['portal_name'] = isset($data['portal_name']) ? $data['portal_name'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -258,6 +264,27 @@ class BrandFiltersModel implements ArrayAccess
     public function setPortalName($portal_name)
     {
         $this->container['portal_name'] = $portal_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return object[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param object[] $links Activity Link ids
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }

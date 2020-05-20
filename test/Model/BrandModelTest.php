@@ -132,4 +132,32 @@ class BrandModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyPortalSettings()
     {
     }
+
+    /**
+     * Test attribute "brand_created_by"
+     */
+    public function testPropertyBrandCreatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "brand_updated_by"
+     */
+    public function testPropertyBrandUpdatedBy()
+    {
+    }
+
+    /**
+     * Test attribute "brand_created_at"
+     */
+    public function testPropertyBrandCreatedAt()
+    {
+    }
+
+    /**
+     * Test attribute "brand_updated_at"
+     */
+    public function testPropertyBrandUpdatedAt()
+    {
+    }
 }

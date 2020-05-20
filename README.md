@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
+*ActivityApi* | [**unsuccessful**](docs/Api/ActivityApi.md#unsuccessful) | **POST** /activity/unsuccessful | Report an unsuccessful activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
 *ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
 *ActivitytypeApi* | [**retrieveListActivityType**](docs/Api/ActivitytypeApi.md#retrievelistactivitytype) | **PUT** /activity-type | Retrieve List of ActivityTypes
@@ -234,17 +235,27 @@ Class | Method | HTTP request | Description
 *TrailerApi* | [**retrieveTrailer**](docs/Api/TrailerApi.md#retrievetrailer) | **GET** /trailer/{trailerId} | Find trailer by ID
 *TrailerApi* | [**setTrailer**](docs/Api/TrailerApi.md#settrailer) | **POST** /trailer/set | Set (create or update) a trailer
 *TrailerApi* | [**updateTrailer**](docs/Api/TrailerApi.md#updatetrailer) | **PUT** /trailer/{trailerId} | Update a trailer
+*UnsuccessfulreasonApi* | [**createUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#createunsuccessfulreason) | **POST** /unsuccessful-reason | Add a new UnsuccessfulReason
+*UnsuccessfulreasonApi* | [**deleteUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#deleteunsuccessfulreason) | **DELETE** /unsuccessful-reason/{unsuccessful-reasonId} | Delete a UnsuccessfulReason entry
+*UnsuccessfulreasonApi* | [**retrieveListUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrievelistunsuccessfulreason) | **PUT** /unsuccessful-reason | Retrieve List of UnsuccessfulReason
+*UnsuccessfulreasonApi* | [**retrieveUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrieveunsuccessfulreason) | **GET** /unsuccessful-reason/{unsuccessful-reasonId} | Retrieve a UnsuccessfulReason
+*UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
-*VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a vehicle
-*VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle
+*VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a new vehicle
+*VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
 *VehicleApi* | [**retrieveListVehicle**](docs/Api/VehicleApi.md#retrievelistvehicle) | **PUT** /vehicle | Retrieve List of Vehicles
 *VehicleApi* | [**retrieveVehicle**](docs/Api/VehicleApi.md#retrievevehicle) | **GET** /vehicle/{vehicleId} | Find vehicle by ID
 *VehicleApi* | [**setVehicle**](docs/Api/VehicleApi.md#setvehicle) | **POST** /vehicle/set | Set (create or update) a vehicle
 *VehicleApi* | [**updateVehicle**](docs/Api/VehicleApi.md#updatevehicle) | **PUT** /vehicle/{vehicleId} | Update a vehicle
+*VehicletypeApi* | [**createVehicleType**](docs/Api/VehicletypeApi.md#createvehicletype) | **POST** /vehicle-type | Add a new VehicleType
+*VehicletypeApi* | [**deleteVehicleType**](docs/Api/VehicletypeApi.md#deletevehicletype) | **DELETE** /vehicle-type/{vehicleTypeId} | Delete a VehicleType entry
+*VehicletypeApi* | [**retrieveListVehicleType**](docs/Api/VehicletypeApi.md#retrievelistvehicletype) | **PUT** /vehicle-type | Retrieve List of VehicleTypes
+*VehicletypeApi* | [**retrieveVehicleType**](docs/Api/VehicletypeApi.md#retrievevehicletype) | **GET** /vehicle-type/{vehicleTypeId} | Retrieve a VehicleType
+*VehicletypeApi* | [**updateVehicleType**](docs/Api/VehicletypeApi.md#updatevehicletype) | **PUT** /vehicle-type/{vehicleTypeId} | Update a specific VehicleType object
 *WebhookApi* | [**triggerWebHook**](docs/Api/WebhookApi.md#triggerwebhook) | **POST** /web-hook/trigger | Trigger a webhook
 *WorkerApi* | [**addActionToWorkerStack**](docs/Api/WorkerApi.md#addactiontoworkerstack) | **POST** /worker/add-action-to-stack | Add Action To Worker Stack
 *ZoneApi* | [**createZone**](docs/Api/ZoneApi.md#createzone) | **POST** /zone | Add a new Zone
@@ -283,7 +294,22 @@ Class | Method | HTTP request | Description
  - [ApiResponse1](docs/Model/ApiResponse1.md)
  - [ApiResponse10](docs/Model/ApiResponse10.md)
  - [ApiResponse10AdditionalData](docs/Model/ApiResponse10AdditionalData.md)
+ - [ApiResponse11](docs/Model/ApiResponse11.md)
+ - [ApiResponse12](docs/Model/ApiResponse12.md)
+ - [ApiResponse13](docs/Model/ApiResponse13.md)
+ - [ApiResponse14](docs/Model/ApiResponse14.md)
+ - [ApiResponse15](docs/Model/ApiResponse15.md)
+ - [ApiResponse16](docs/Model/ApiResponse16.md)
+ - [ApiResponse17](docs/Model/ApiResponse17.md)
+ - [ApiResponse18](docs/Model/ApiResponse18.md)
+ - [ApiResponse19](docs/Model/ApiResponse19.md)
  - [ApiResponse2](docs/Model/ApiResponse2.md)
+ - [ApiResponse20](docs/Model/ApiResponse20.md)
+ - [ApiResponse21](docs/Model/ApiResponse21.md)
+ - [ApiResponse22](docs/Model/ApiResponse22.md)
+ - [ApiResponse23](docs/Model/ApiResponse23.md)
+ - [ApiResponse24](docs/Model/ApiResponse24.md)
+ - [ApiResponse24AdditionalData](docs/Model/ApiResponse24AdditionalData.md)
  - [ApiResponse3](docs/Model/ApiResponse3.md)
  - [ApiResponse4](docs/Model/ApiResponse4.md)
  - [ApiResponse5](docs/Model/ApiResponse5.md)
@@ -441,6 +467,14 @@ Class | Method | HTTP request | Description
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
  - [UnitValueModel](docs/Model/UnitValueModel.md)
+ - [UnsuccessfulModel](docs/Model/UnsuccessfulModel.md)
+ - [UnsuccessfulReasonFiltersModel](docs/Model/UnsuccessfulReasonFiltersModel.md)
+ - [UnsuccessfulReasonListResponse](docs/Model/UnsuccessfulReasonListResponse.md)
+ - [UnsuccessfulReasonModel](docs/Model/UnsuccessfulReasonModel.md)
+ - [UnsuccessfulReasonOptionsModel](docs/Model/UnsuccessfulReasonOptionsModel.md)
+ - [UnsuccessfulReasonRetrieveListArguments](docs/Model/UnsuccessfulReasonRetrieveListArguments.md)
+ - [UnsuccessfulResponseModel](docs/Model/UnsuccessfulResponseModel.md)
+ - [UomGroupModel](docs/Model/UomGroupModel.md)
  - [UomModel](docs/Model/UomModel.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersListResponse](docs/Model/UsersListResponse.md)
@@ -452,6 +486,11 @@ Class | Method | HTTP request | Description
  - [VehicleModel](docs/Model/VehicleModel.md)
  - [VehicleOptionsModel](docs/Model/VehicleOptionsModel.md)
  - [VehicleRetrieveListArguments](docs/Model/VehicleRetrieveListArguments.md)
+ - [VehicleTypeFiltersModel](docs/Model/VehicleTypeFiltersModel.md)
+ - [VehicleTypeListResponse](docs/Model/VehicleTypeListResponse.md)
+ - [VehicleTypeModel](docs/Model/VehicleTypeModel.md)
+ - [VehicleTypeOptionsModel](docs/Model/VehicleTypeOptionsModel.md)
+ - [VehicleTypeRetrieveListArguments](docs/Model/VehicleTypeRetrieveListArguments.md)
  - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
  - [ZoneModel](docs/Model/ZoneModel.md)
  - [ZoneOptionsModel](docs/Model/ZoneOptionsModel.md)
