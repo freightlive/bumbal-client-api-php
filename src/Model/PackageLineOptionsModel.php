@@ -63,6 +63,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_meta_data' => 'bool',
         'include_files' => 'bool',
         'include_capacities' => 'bool',
+        'include_filled_capacities' => 'bool',
         'include_applied_capacities' => 'bool',
         'include_package_lines_info' => 'bool',
         'include_package_line_notes' => 'bool',
@@ -89,6 +90,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_meta_data' => null,
         'include_files' => null,
         'include_capacities' => null,
+        'include_filled_capacities' => null,
         'include_applied_capacities' => null,
         'include_package_lines_info' => null,
         'include_package_line_notes' => null,
@@ -125,6 +127,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_meta_data' => 'include_meta_data',
         'include_files' => 'include_files',
         'include_capacities' => 'include_capacities',
+        'include_filled_capacities' => 'include_filled_capacities',
         'include_applied_capacities' => 'include_applied_capacities',
         'include_package_lines_info' => 'include_package_lines_info',
         'include_package_line_notes' => 'include_package_line_notes',
@@ -152,6 +155,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_meta_data' => 'setIncludeMetaData',
         'include_files' => 'setIncludeFiles',
         'include_capacities' => 'setIncludeCapacities',
+        'include_filled_capacities' => 'setIncludeFilledCapacities',
         'include_applied_capacities' => 'setIncludeAppliedCapacities',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
         'include_package_line_notes' => 'setIncludePackageLineNotes',
@@ -179,6 +183,7 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_meta_data' => 'getIncludeMetaData',
         'include_files' => 'getIncludeFiles',
         'include_capacities' => 'getIncludeCapacities',
+        'include_filled_capacities' => 'getIncludeFilledCapacities',
         'include_applied_capacities' => 'getIncludeAppliedCapacities',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
         'include_package_line_notes' => 'getIncludePackageLineNotes',
@@ -231,6 +236,7 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
         $this->container['include_package_line_notes'] = isset($data['include_package_line_notes']) ? $data['include_package_line_notes'] : null;
@@ -458,6 +464,27 @@ class PackageLineOptionsModel implements ArrayAccess
     }
 
     /**
+     * Gets include_filled_capacities
+     * @return bool
+     */
+    public function getIncludeFilledCapacities()
+    {
+        return $this->container['include_filled_capacities'];
+    }
+
+    /**
+     * Sets include_filled_capacities
+     * @param bool $include_filled_capacities
+     * @return $this
+     */
+    public function setIncludeFilledCapacities($include_filled_capacities)
+    {
+        $this->container['include_filled_capacities'] = $include_filled_capacities;
+
+        return $this;
+    }
+
+    /**
      * Gets include_applied_capacities
      * @return bool
      */
@@ -510,7 +537,7 @@ class PackageLineOptionsModel implements ArrayAccess
 
     /**
      * Sets include_package_line_notes
-     * @param bool $include_package_line_notes
+     * @param bool $include_package_line_notes Deprecated! use include_notes and include_package_lines
      * @return $this
      */
     public function setIncludePackageLineNotes($include_package_line_notes)

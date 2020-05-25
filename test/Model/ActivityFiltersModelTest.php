@@ -328,4 +328,32 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyLinks()
     {
     }
+
+    /**
+     * Test attribute "created_at_since"
+     */
+    public function testPropertyCreatedAtSince()
+    {
+    }
+
+    /**
+     * Test attribute "created_at_till"
+     */
+    public function testPropertyCreatedAtTill()
+    {
+    }
+
+    /**
+     * Test attribute "time_slots_created_at_since"
+     */
+    public function testPropertyTimeSlotsCreatedAtSince()
+    {
+    }
+
+    /**
+     * Test attribute "time_slots_created_at_till"
+     */
+    public function testPropertyTimeSlotsCreatedAtTill()
+    {
+    }
 }

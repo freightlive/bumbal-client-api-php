@@ -232,6 +232,13 @@ class PackageLineModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "compartments"
+     */
+    public function testPropertyCompartments()
+    {
+    }
+
+    /**
      * Test attribute "active"
      */
     public function testPropertyActive()

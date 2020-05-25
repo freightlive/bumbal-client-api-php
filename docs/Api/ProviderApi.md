@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **createProvider**
-> \BumbalClient\Model\ApiResponse10 createProvider($body)
+> \BumbalClient\Model\ApiResponse16 createProvider($body)
 
 Add a new Provider
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse10**](../Model/ApiResponse10.md)
+[**\BumbalClient\Model\ApiResponse16**](../Model/ApiResponse16.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateProvider**
-> \BumbalClient\Model\ApiResponse9 updateProvider($provider_id, $body)
+> \BumbalClient\Model\ApiResponse15 updateProvider($provider_id, $body)
 
 Update a specific provider object
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse9**](../Model/ApiResponse9.md)
+[**\BumbalClient\Model\ApiResponse15**](../Model/ApiResponse15.md)
 
 ### Authorization
 

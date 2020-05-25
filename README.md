@@ -145,6 +145,13 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
+*NotificationApi* | [**notificationList**](docs/Api/NotificationApi.md#notificationlist) | **POST** /notification/list | List conversations
+*NotificationcategoryApi* | [**createNotificationCategory**](docs/Api/NotificationcategoryApi.md#createnotificationcategory) | **POST** /notification-category | Add a new NotificationCategory
+*NotificationcategoryApi* | [**deleteNotificationCategory**](docs/Api/NotificationcategoryApi.md#deletenotificationcategory) | **DELETE** /notification-category/{notification-categoryId} | Delete an NotificationCategory entry
+*NotificationcategoryApi* | [**retrieveListNotificationCategory**](docs/Api/NotificationcategoryApi.md#retrievelistnotificationcategory) | **PUT** /notification-category | Retrieve List of NotificationCategory
+*NotificationcategoryApi* | [**retrieveNotificationCategory**](docs/Api/NotificationcategoryApi.md#retrievenotificationcategory) | **GET** /notification-category/{notification-categoryId} | Retrieve a NotificationCategory
+*NotificationcategoryApi* | [**setNotificationCategory**](docs/Api/NotificationcategoryApi.md#setnotificationcategory) | **POST** /notification-category/set | Create a new NotificationCategory or update an existing one
+*NotificationcategoryApi* | [**updateNotificationCategory**](docs/Api/NotificationcategoryApi.md#updatenotificationcategory) | **PUT** /notification-category/{notification-categoryId} | Update a specific NotificationCategory object
 *PackagelineApi* | [**createPackageLine**](docs/Api/PackagelineApi.md#createpackageline) | **POST** /package-line | Create or update an Package Line
 *PackagelineApi* | [**deletePackageLine**](docs/Api/PackagelineApi.md#deletepackageline) | **DELETE** /package-line/{packageLineId} | Delete an package-line
 *PackagelineApi* | [**retrieveListPackageLine**](docs/Api/PackagelineApi.md#retrievelistpackageline) | **PUT** /package-line | Retrieve List of PackageLines
@@ -240,6 +247,8 @@ Class | Method | HTTP request | Description
 *UnsuccessfulreasonApi* | [**retrieveListUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrievelistunsuccessfulreason) | **PUT** /unsuccessful-reason | Retrieve List of UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**retrieveUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrieveunsuccessfulreason) | **GET** /unsuccessful-reason/{unsuccessful-reasonId} | Retrieve a UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
+*UsernotificationApi* | [**retrieveListUserNotification**](docs/Api/UsernotificationApi.md#retrievelistusernotification) | **PUT** /user/notification | Retrieve List of UserNotification
+*UsernotificationApi* | [**setUserNotification**](docs/Api/UsernotificationApi.md#setusernotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
@@ -293,13 +302,13 @@ Class | Method | HTTP request | Description
  - [ApiResponse](docs/Model/ApiResponse.md)
  - [ApiResponse1](docs/Model/ApiResponse1.md)
  - [ApiResponse10](docs/Model/ApiResponse10.md)
- - [ApiResponse10AdditionalData](docs/Model/ApiResponse10AdditionalData.md)
  - [ApiResponse11](docs/Model/ApiResponse11.md)
  - [ApiResponse12](docs/Model/ApiResponse12.md)
  - [ApiResponse13](docs/Model/ApiResponse13.md)
  - [ApiResponse14](docs/Model/ApiResponse14.md)
  - [ApiResponse15](docs/Model/ApiResponse15.md)
  - [ApiResponse16](docs/Model/ApiResponse16.md)
+ - [ApiResponse16AdditionalData](docs/Model/ApiResponse16AdditionalData.md)
  - [ApiResponse17](docs/Model/ApiResponse17.md)
  - [ApiResponse18](docs/Model/ApiResponse18.md)
  - [ApiResponse19](docs/Model/ApiResponse19.md)
@@ -309,8 +318,15 @@ Class | Method | HTTP request | Description
  - [ApiResponse22](docs/Model/ApiResponse22.md)
  - [ApiResponse23](docs/Model/ApiResponse23.md)
  - [ApiResponse24](docs/Model/ApiResponse24.md)
- - [ApiResponse24AdditionalData](docs/Model/ApiResponse24AdditionalData.md)
+ - [ApiResponse25](docs/Model/ApiResponse25.md)
+ - [ApiResponse26](docs/Model/ApiResponse26.md)
+ - [ApiResponse27](docs/Model/ApiResponse27.md)
+ - [ApiResponse28](docs/Model/ApiResponse28.md)
+ - [ApiResponse29](docs/Model/ApiResponse29.md)
  - [ApiResponse3](docs/Model/ApiResponse3.md)
+ - [ApiResponse30](docs/Model/ApiResponse30.md)
+ - [ApiResponse31](docs/Model/ApiResponse31.md)
+ - [ApiResponse31AdditionalData](docs/Model/ApiResponse31AdditionalData.md)
  - [ApiResponse4](docs/Model/ApiResponse4.md)
  - [ApiResponse5](docs/Model/ApiResponse5.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
@@ -356,6 +372,11 @@ Class | Method | HTTP request | Description
  - [CheckAvailabilityOptionsModel](docs/Model/CheckAvailabilityOptionsModel.md)
  - [CheckAvailabilityResponse](docs/Model/CheckAvailabilityResponse.md)
  - [CommunicationModel](docs/Model/CommunicationModel.md)
+ - [CompartmentFiltersModel](docs/Model/CompartmentFiltersModel.md)
+ - [CompartmentListResponse](docs/Model/CompartmentListResponse.md)
+ - [CompartmentModel](docs/Model/CompartmentModel.md)
+ - [CompartmentOptionsModel](docs/Model/CompartmentOptionsModel.md)
+ - [CompartmentRetrieveListArguments](docs/Model/CompartmentRetrieveListArguments.md)
  - [ConfigModel](docs/Model/ConfigModel.md)
  - [CredentialsModel](docs/Model/CredentialsModel.md)
  - [DriverFiltersModel](docs/Model/DriverFiltersModel.md)
@@ -374,6 +395,7 @@ Class | Method | HTTP request | Description
  - [FileModel](docs/Model/FileModel.md)
  - [FileOptionsModel](docs/Model/FileOptionsModel.md)
  - [FileRetrieveListArguments](docs/Model/FileRetrieveListArguments.md)
+ - [FilledCapacityModel](docs/Model/FilledCapacityModel.md)
  - [GPSLocationModel](docs/Model/GPSLocationModel.md)
  - [GetExecutableActivitiesArguments](docs/Model/GetExecutableActivitiesArguments.md)
  - [GetExecutableActivitiesDataModel](docs/Model/GetExecutableActivitiesDataModel.md)
@@ -395,6 +417,16 @@ Class | Method | HTTP request | Description
  - [NoteModel](docs/Model/NoteModel.md)
  - [NoteOptionsModel](docs/Model/NoteOptionsModel.md)
  - [NoteRetrieveListArguments](docs/Model/NoteRetrieveListArguments.md)
+ - [NotificationCategoryFiltersModel](docs/Model/NotificationCategoryFiltersModel.md)
+ - [NotificationCategoryListResponse](docs/Model/NotificationCategoryListResponse.md)
+ - [NotificationCategoryModel](docs/Model/NotificationCategoryModel.md)
+ - [NotificationCategoryOptionsModel](docs/Model/NotificationCategoryOptionsModel.md)
+ - [NotificationCategoryRetrieveListArguments](docs/Model/NotificationCategoryRetrieveListArguments.md)
+ - [NotificationFiltersModel](docs/Model/NotificationFiltersModel.md)
+ - [NotificationListResponse](docs/Model/NotificationListResponse.md)
+ - [NotificationModel](docs/Model/NotificationModel.md)
+ - [NotificationOptionsModel](docs/Model/NotificationOptionsModel.md)
+ - [NotificationRetrieveListArguments](docs/Model/NotificationRetrieveListArguments.md)
  - [PackageLineFiltersModel](docs/Model/PackageLineFiltersModel.md)
  - [PackageLineListResponse](docs/Model/PackageLineListResponse.md)
  - [PackageLineModel](docs/Model/PackageLineModel.md)
@@ -476,6 +508,11 @@ Class | Method | HTTP request | Description
  - [UnsuccessfulResponseModel](docs/Model/UnsuccessfulResponseModel.md)
  - [UomGroupModel](docs/Model/UomGroupModel.md)
  - [UomModel](docs/Model/UomModel.md)
+ - [UserNotificationFiltersModel](docs/Model/UserNotificationFiltersModel.md)
+ - [UserNotificationListResponse](docs/Model/UserNotificationListResponse.md)
+ - [UserNotificationModel](docs/Model/UserNotificationModel.md)
+ - [UserNotificationOptionsModel](docs/Model/UserNotificationOptionsModel.md)
+ - [UserNotificationRetrieveListArguments](docs/Model/UserNotificationRetrieveListArguments.md)
  - [UsersFiltersModel](docs/Model/UsersFiltersModel.md)
  - [UsersListResponse](docs/Model/UsersListResponse.md)
  - [UsersModel](docs/Model/UsersModel.md)

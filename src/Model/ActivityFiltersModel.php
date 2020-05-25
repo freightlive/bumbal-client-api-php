@@ -89,7 +89,11 @@ class ActivityFiltersModel implements ArrayAccess
         'tag_names' => 'string[]',
         'zone_names' => 'string[]',
         'link' => 'object[]',
-        'links' => 'object[]'
+        'links' => 'object[]',
+        'created_at_since' => '\DateTime',
+        'created_at_till' => '\DateTime',
+        'time_slots_created_at_since' => '\DateTime',
+        'time_slots_created_at_till' => '\DateTime'
     ];
 
     /**
@@ -132,7 +136,11 @@ class ActivityFiltersModel implements ArrayAccess
         'tag_names' => null,
         'zone_names' => null,
         'link' => null,
-        'links' => null
+        'links' => null,
+        'created_at_since' => 'date-time',
+        'created_at_till' => 'date-time',
+        'time_slots_created_at_since' => 'date-time',
+        'time_slots_created_at_till' => 'date-time'
     ];
 
     public static function swaggerTypes()
@@ -185,7 +193,11 @@ class ActivityFiltersModel implements ArrayAccess
         'tag_names' => 'tag_names',
         'zone_names' => 'zone_names',
         'link' => 'link',
-        'links' => 'links'
+        'links' => 'links',
+        'created_at_since' => 'created_at_since',
+        'created_at_till' => 'created_at_till',
+        'time_slots_created_at_since' => 'time_slots_created_at_since',
+        'time_slots_created_at_till' => 'time_slots_created_at_till'
     ];
 
 
@@ -229,7 +241,11 @@ class ActivityFiltersModel implements ArrayAccess
         'tag_names' => 'setTagNames',
         'zone_names' => 'setZoneNames',
         'link' => 'setLink',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'created_at_since' => 'setCreatedAtSince',
+        'created_at_till' => 'setCreatedAtTill',
+        'time_slots_created_at_since' => 'setTimeSlotsCreatedAtSince',
+        'time_slots_created_at_till' => 'setTimeSlotsCreatedAtTill'
     ];
 
 
@@ -273,7 +289,11 @@ class ActivityFiltersModel implements ArrayAccess
         'tag_names' => 'getTagNames',
         'zone_names' => 'getZoneNames',
         'link' => 'getLink',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'created_at_since' => 'getCreatedAtSince',
+        'created_at_till' => 'getCreatedAtTill',
+        'time_slots_created_at_since' => 'getTimeSlotsCreatedAtSince',
+        'time_slots_created_at_till' => 'getTimeSlotsCreatedAtTill'
     ];
 
     public static function attributeMap()
@@ -343,6 +363,10 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['link'] = isset($data['link']) ? $data['link'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['created_at_since'] = isset($data['created_at_since']) ? $data['created_at_since'] : null;
+        $this->container['created_at_till'] = isset($data['created_at_till']) ? $data['created_at_till'] : null;
+        $this->container['time_slots_created_at_since'] = isset($data['time_slots_created_at_since']) ? $data['time_slots_created_at_since'] : null;
+        $this->container['time_slots_created_at_till'] = isset($data['time_slots_created_at_till']) ? $data['time_slots_created_at_till'] : null;
     }
 
     /**
@@ -1122,6 +1146,90 @@ class ActivityFiltersModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at_since
+     * @return \DateTime
+     */
+    public function getCreatedAtSince()
+    {
+        return $this->container['created_at_since'];
+    }
+
+    /**
+     * Sets created_at_since
+     * @param \DateTime $created_at_since Filter by activity created at since
+     * @return $this
+     */
+    public function setCreatedAtSince($created_at_since)
+    {
+        $this->container['created_at_since'] = $created_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets created_at_till
+     * @return \DateTime
+     */
+    public function getCreatedAtTill()
+    {
+        return $this->container['created_at_till'];
+    }
+
+    /**
+     * Sets created_at_till
+     * @param \DateTime $created_at_till Filter by activity created at till
+     * @return $this
+     */
+    public function setCreatedAtTill($created_at_till)
+    {
+        $this->container['created_at_till'] = $created_at_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slots_created_at_since
+     * @return \DateTime
+     */
+    public function getTimeSlotsCreatedAtSince()
+    {
+        return $this->container['time_slots_created_at_since'];
+    }
+
+    /**
+     * Sets time_slots_created_at_since
+     * @param \DateTime $time_slots_created_at_since Filter by time_slots created at since
+     * @return $this
+     */
+    public function setTimeSlotsCreatedAtSince($time_slots_created_at_since)
+    {
+        $this->container['time_slots_created_at_since'] = $time_slots_created_at_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets time_slots_created_at_till
+     * @return \DateTime
+     */
+    public function getTimeSlotsCreatedAtTill()
+    {
+        return $this->container['time_slots_created_at_till'];
+    }
+
+    /**
+     * Sets time_slots_created_at_till
+     * @param \DateTime $time_slots_created_at_till Filter by time_slots created at till
+     * @return $this
+     */
+    public function setTimeSlotsCreatedAtTill($time_slots_created_at_till)
+    {
+        $this->container['time_slots_created_at_till'] = $time_slots_created_at_till;
 
         return $this;
     }

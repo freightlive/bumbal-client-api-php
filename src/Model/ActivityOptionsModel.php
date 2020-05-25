@@ -99,6 +99,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_depot_address_object' => 'bool',
         'include_capacity_object' => 'bool',
         'include_capacities' => 'bool',
+        'include_filled_capacities' => 'bool',
         'include_applied_capacities' => 'bool',
         'include_zones' => 'bool',
         'include_brand' => 'bool',
@@ -164,6 +165,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_depot_address_object' => null,
         'include_capacity_object' => null,
         'include_capacities' => null,
+        'include_filled_capacities' => null,
         'include_applied_capacities' => null,
         'include_zones' => null,
         'include_brand' => null,
@@ -239,6 +241,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_depot_address_object' => 'include_depot_address_object',
         'include_capacity_object' => 'include_capacity_object',
         'include_capacities' => 'include_capacities',
+        'include_filled_capacities' => 'include_filled_capacities',
         'include_applied_capacities' => 'include_applied_capacities',
         'include_zones' => 'include_zones',
         'include_brand' => 'include_brand',
@@ -305,6 +308,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_depot_address_object' => 'setIncludeDepotAddressObject',
         'include_capacity_object' => 'setIncludeCapacityObject',
         'include_capacities' => 'setIncludeCapacities',
+        'include_filled_capacities' => 'setIncludeFilledCapacities',
         'include_applied_capacities' => 'setIncludeAppliedCapacities',
         'include_zones' => 'setIncludeZones',
         'include_brand' => 'setIncludeBrand',
@@ -371,6 +375,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_depot_address_object' => 'getIncludeDepotAddressObject',
         'include_capacity_object' => 'getIncludeCapacityObject',
         'include_capacities' => 'getIncludeCapacities',
+        'include_filled_capacities' => 'getIncludeFilledCapacities',
         'include_applied_capacities' => 'getIncludeAppliedCapacities',
         'include_zones' => 'getIncludeZones',
         'include_brand' => 'getIncludeBrand',
@@ -462,6 +467,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
         $this->container['include_capacity_object'] = isset($data['include_capacity_object']) ? $data['include_capacity_object'] : null;
         $this->container['include_capacities'] = isset($data['include_capacities']) ? $data['include_capacities'] : null;
+        $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
@@ -1443,6 +1449,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeCapacities($include_capacities)
     {
         $this->container['include_capacities'] = $include_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_filled_capacities
+     * @return bool
+     */
+    public function getIncludeFilledCapacities()
+    {
+        return $this->container['include_filled_capacities'];
+    }
+
+    /**
+     * Sets include_filled_capacities
+     * @param bool $include_filled_capacities
+     * @return $this
+     */
+    public function setIncludeFilledCapacities($include_filled_capacities)
+    {
+        $this->container['include_filled_capacities'] = $include_filled_capacities;
 
         return $this;
     }

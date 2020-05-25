@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **include_depot_address_object** | **bool** |  | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
 **include_capacities** | **bool** |  | [optional] 
+**include_filled_capacities** | **bool** |  | [optional] 
 **include_applied_capacities** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brand** | **bool** |  | [optional] 

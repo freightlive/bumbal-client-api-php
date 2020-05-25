@@ -39,6 +39,10 @@ Name | Type | Description | Notes
 **zone_names** | **string[]** | Zone names | [optional] 
 **link** | **object[]** | Activity Link ids | [optional] 
 **links** | **object[]** | Activity Link ids | [optional] 
+**created_at_since** | [**\DateTime**](\DateTime.md) | Filter by activity created at since | [optional] 
+**created_at_till** | [**\DateTime**](\DateTime.md) | Filter by activity created at till | [optional] 
+**time_slots_created_at_since** | [**\DateTime**](\DateTime.md) | Filter by time_slots created at since | [optional] 
+**time_slots_created_at_till** | [**\DateTime**](\DateTime.md) | Filter by time_slots created at till | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 **include_address** | **bool** |  | [optional] 
 **include_address_object** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
-**include_route_tags** | **bool** |  | [optional] 
+**include_route_tags** | **bool** | Deprecated! use include_tags | [optional] 
+**include_tags** | **bool** |  | [optional] 
 **include_tag_names** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 
 **include_driver_links** | **bool** |  | [optional] 
@@ -26,6 +27,7 @@ Name | Type | Description | Notes
 **include_zones** | **bool** |  | [optional] 
 **include_zone_names** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
+**include_meta_data** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

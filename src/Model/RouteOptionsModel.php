@@ -58,6 +58,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'bool',
         'include_route_status' => 'bool',
         'include_route_tags' => 'bool',
+        'include_tags' => 'bool',
         'include_tag_names' => 'bool',
         'include_driver' => 'bool',
         'include_driver_links' => 'bool',
@@ -76,7 +77,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_latest_position' => 'bool',
         'include_zones' => 'bool',
         'include_zone_names' => 'bool',
-        'include_notes' => 'bool'
+        'include_notes' => 'bool',
+        'include_meta_data' => 'bool'
     ];
 
     /**
@@ -88,6 +90,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => null,
         'include_route_status' => null,
         'include_route_tags' => null,
+        'include_tags' => null,
         'include_tag_names' => null,
         'include_driver' => null,
         'include_driver_links' => null,
@@ -106,7 +109,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_latest_position' => null,
         'include_zones' => null,
         'include_zone_names' => null,
-        'include_notes' => null
+        'include_notes' => null,
+        'include_meta_data' => null
     ];
 
     public static function swaggerTypes()
@@ -128,6 +132,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'include_address_object',
         'include_route_status' => 'include_route_status',
         'include_route_tags' => 'include_route_tags',
+        'include_tags' => 'include_tags',
         'include_tag_names' => 'include_tag_names',
         'include_driver' => 'include_driver',
         'include_driver_links' => 'include_driver_links',
@@ -146,7 +151,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_latest_position' => 'include_latest_position',
         'include_zones' => 'include_zones',
         'include_zone_names' => 'include_zone_names',
-        'include_notes' => 'include_notes'
+        'include_notes' => 'include_notes',
+        'include_meta_data' => 'include_meta_data'
     ];
 
 
@@ -159,6 +165,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'setIncludeAddressObject',
         'include_route_status' => 'setIncludeRouteStatus',
         'include_route_tags' => 'setIncludeRouteTags',
+        'include_tags' => 'setIncludeTags',
         'include_tag_names' => 'setIncludeTagNames',
         'include_driver' => 'setIncludeDriver',
         'include_driver_links' => 'setIncludeDriverLinks',
@@ -177,7 +184,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_latest_position' => 'setIncludeLatestPosition',
         'include_zones' => 'setIncludeZones',
         'include_zone_names' => 'setIncludeZoneNames',
-        'include_notes' => 'setIncludeNotes'
+        'include_notes' => 'setIncludeNotes',
+        'include_meta_data' => 'setIncludeMetaData'
     ];
 
 
@@ -190,6 +198,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'getIncludeAddressObject',
         'include_route_status' => 'getIncludeRouteStatus',
         'include_route_tags' => 'getIncludeRouteTags',
+        'include_tags' => 'getIncludeTags',
         'include_tag_names' => 'getIncludeTagNames',
         'include_driver' => 'getIncludeDriver',
         'include_driver_links' => 'getIncludeDriverLinks',
@@ -208,7 +217,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_latest_position' => 'getIncludeLatestPosition',
         'include_zones' => 'getIncludeZones',
         'include_zone_names' => 'getIncludeZoneNames',
-        'include_notes' => 'getIncludeNotes'
+        'include_notes' => 'getIncludeNotes',
+        'include_meta_data' => 'getIncludeMetaData'
     ];
 
     public static function attributeMap()
@@ -246,6 +256,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_route_status'] = isset($data['include_route_status']) ? $data['include_route_status'] : null;
         $this->container['include_route_tags'] = isset($data['include_route_tags']) ? $data['include_route_tags'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
         $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
@@ -265,6 +276,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_zone_names'] = isset($data['include_zone_names']) ? $data['include_zone_names'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
     }
 
     /**
@@ -366,12 +378,33 @@ class RouteOptionsModel implements ArrayAccess
 
     /**
      * Sets include_route_tags
-     * @param bool $include_route_tags
+     * @param bool $include_route_tags Deprecated! use include_tags
      * @return $this
      */
     public function setIncludeRouteTags($include_route_tags)
     {
         $this->container['include_route_tags'] = $include_route_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tags
+     * @return bool
+     */
+    public function getIncludeTags()
+    {
+        return $this->container['include_tags'];
+    }
+
+    /**
+     * Sets include_tags
+     * @param bool $include_tags
+     * @return $this
+     */
+    public function setIncludeTags($include_tags)
+    {
+        $this->container['include_tags'] = $include_tags;
 
         return $this;
     }
@@ -771,6 +804,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeNotes($include_notes)
     {
         $this->container['include_notes'] = $include_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
 
         return $this;
     }

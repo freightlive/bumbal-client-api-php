@@ -57,7 +57,7 @@ class ApiResponse16 implements ArrayAccess
         'message' => 'string',
         'type' => 'string',
         'code' => 'float',
-        'additional_data' => 'object'
+        'additional_data' => '\BumbalClient\Model\ApiResponse16AdditionalData'
     ];
 
     /**
@@ -243,7 +243,7 @@ class ApiResponse16 implements ArrayAccess
 
     /**
      * Gets additional_data
-     * @return object
+     * @return \BumbalClient\Model\ApiResponse16AdditionalData
      */
     public function getAdditionalData()
     {
@@ -252,7 +252,7 @@ class ApiResponse16 implements ArrayAccess
 
     /**
      * Sets additional_data
-     * @param object $additional_data
+     * @param \BumbalClient\Model\ApiResponse16AdditionalData $additional_data
      * @return $this
      */
     public function setAdditionalData($additional_data)

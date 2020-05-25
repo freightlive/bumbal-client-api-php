@@ -76,6 +76,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'float',
         'hs_code' => 'string',
         'description' => 'string',
+        'compartments' => '\BumbalClient\Model\CompartmentModel[]',
         'active' => 'bool',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
@@ -119,6 +120,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'float',
         'hs_code' => null,
         'description' => null,
+        'compartments' => null,
         'active' => null,
         'applied_capacities' => null,
         'capacities' => null,
@@ -172,6 +174,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'temp_max',
         'hs_code' => 'hs_code',
         'description' => 'description',
+        'compartments' => 'compartments',
         'active' => 'active',
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
@@ -216,6 +219,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'setTempMax',
         'hs_code' => 'setHsCode',
         'description' => 'setDescription',
+        'compartments' => 'setCompartments',
         'active' => 'setActive',
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
@@ -260,6 +264,7 @@ class PackageLineModel implements ArrayAccess
         'temp_max' => 'getTempMax',
         'hs_code' => 'getHsCode',
         'description' => 'getDescription',
+        'compartments' => 'getCompartments',
         'active' => 'getActive',
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
@@ -387,6 +392,7 @@ class PackageLineModel implements ArrayAccess
         $this->container['temp_max'] = isset($data['temp_max']) ? $data['temp_max'] : null;
         $this->container['hs_code'] = isset($data['hs_code']) ? $data['hs_code'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['compartments'] = isset($data['compartments']) ? $data['compartments'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
@@ -949,6 +955,27 @@ class PackageLineModel implements ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets compartments
+     * @return \BumbalClient\Model\CompartmentModel[]
+     */
+    public function getCompartments()
+    {
+        return $this->container['compartments'];
+    }
+
+    /**
+     * Sets compartments
+     * @param \BumbalClient\Model\CompartmentModel[] $compartments
+     * @return $this
+     */
+    public function setCompartments($compartments)
+    {
+        $this->container['compartments'] = $compartments;
 
         return $this;
     }
