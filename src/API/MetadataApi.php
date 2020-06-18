@@ -94,7 +94,7 @@ class MetadataApi
      *
      * @param \BumbalClient\Model\MetaDataModel $body MetaData object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse8
+     * @return \BumbalClient\Model\ApiResponse13
      */
     public function createMetaData($body = null)
     {
@@ -109,7 +109,7 @@ class MetadataApi
      *
      * @param \BumbalClient\Model\MetaDataModel $body MetaData object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse8, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse13, HTTP status code, HTTP response headers (array of strings)
      */
     public function createMetaDataWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class MetadataApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse8',
+                '\BumbalClient\Model\ApiResponse13',
                 '/metadata'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse8', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse13', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse8', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse13', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -186,7 +186,7 @@ class MetadataApi
      *
      * @param int $metadata_id ID of MetaData to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse5
+     * @return \BumbalClient\Model\ApiResponse10
      */
     public function deleteMetaData($metadata_id)
     {
@@ -201,7 +201,7 @@ class MetadataApi
      *
      * @param int $metadata_id ID of MetaData to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse5, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse10, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteMetaDataWithHttpInfo($metadata_id)
     {
@@ -249,15 +249,15 @@ class MetadataApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse5',
+                '\BumbalClient\Model\ApiResponse10',
                 '/metadata/{metadataId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse5', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse10', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse5', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse10', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -269,11 +269,11 @@ class MetadataApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse6', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse11', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse7', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse12', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -497,7 +497,7 @@ class MetadataApi
      * @param int $metadata_id ID of the MetaData object to update (required)
      * @param \BumbalClient\Model\MetaDataModel $body MetaData object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse4
+     * @return \BumbalClient\Model\ApiResponse9
      */
     public function updateMetaData($metadata_id, $body = null)
     {
@@ -513,7 +513,7 @@ class MetadataApi
      * @param int $metadata_id ID of the MetaData object to update (required)
      * @param \BumbalClient\Model\MetaDataModel $body MetaData object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse4, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse9, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateMetaDataWithHttpInfo($metadata_id, $body = null)
     {
@@ -566,15 +566,15 @@ class MetadataApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse4',
+                '\BumbalClient\Model\ApiResponse9',
                 '/metadata/{metadataId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse4', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse9', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse4', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse9', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

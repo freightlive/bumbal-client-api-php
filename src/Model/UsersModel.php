@@ -75,7 +75,8 @@ class UsersModel implements ArrayAccess
         'tag_names' => 'string[]',
         'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_names' => 'string[]',
-        'links' => '\BumbalClient\Model\LinkModel[]'
+        'links' => '\BumbalClient\Model\LinkModel[]',
+        'driver_unavailabilities' => '\BumbalClient\Model\DriverUnavailabilityModel[]'
     ];
 
     /**
@@ -104,7 +105,8 @@ class UsersModel implements ArrayAccess
         'tag_names' => null,
         'zones' => null,
         'zone_names' => null,
-        'links' => null
+        'links' => null,
+        'driver_unavailabilities' => null
     ];
 
     public static function swaggerTypes()
@@ -143,7 +145,8 @@ class UsersModel implements ArrayAccess
         'tag_names' => 'tag_names',
         'zones' => 'zones',
         'zone_names' => 'zone_names',
-        'links' => 'links'
+        'links' => 'links',
+        'driver_unavailabilities' => 'driver_unavailabilities'
     ];
 
 
@@ -173,7 +176,8 @@ class UsersModel implements ArrayAccess
         'tag_names' => 'setTagNames',
         'zones' => 'setZones',
         'zone_names' => 'setZoneNames',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'driver_unavailabilities' => 'setDriverUnavailabilities'
     ];
 
 
@@ -203,7 +207,8 @@ class UsersModel implements ArrayAccess
         'tag_names' => 'getTagNames',
         'zones' => 'getZones',
         'zone_names' => 'getZoneNames',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'driver_unavailabilities' => 'getDriverUnavailabilities'
     ];
 
     public static function attributeMap()
@@ -279,6 +284,7 @@ class UsersModel implements ArrayAccess
         $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['driver_unavailabilities'] = isset($data['driver_unavailabilities']) ? $data['driver_unavailabilities'] : null;
     }
 
     /**
@@ -329,7 +335,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id
+     * @param int $id 
      * @return $this
      */
     public function setId($id)
@@ -695,7 +701,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -737,7 +743,7 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
      * @return $this
      */
     public function setZones($zones)
@@ -779,12 +785,33 @@ class UsersModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets driver_unavailabilities
+     * @return \BumbalClient\Model\DriverUnavailabilityModel[]
+     */
+    public function getDriverUnavailabilities()
+    {
+        return $this->container['driver_unavailabilities'];
+    }
+
+    /**
+     * Sets driver_unavailabilities
+     * @param \BumbalClient\Model\DriverUnavailabilityModel[] $driver_unavailabilities 
+     * @return $this
+     */
+    public function setDriverUnavailabilities($driver_unavailabilities)
+    {
+        $this->container['driver_unavailabilities'] = $driver_unavailabilities;
 
         return $this;
     }

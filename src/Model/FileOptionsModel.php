@@ -54,7 +54,7 @@ class FileOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_file_meta_data' => 'bool',
+        'include_meta_data' => 'bool',
         'include_tag_type_name' => 'bool',
         'include_file_tags' => 'bool',
         'include_file_record_info' => 'bool',
@@ -66,7 +66,7 @@ class FileOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_file_meta_data' => null,
+        'include_meta_data' => null,
         'include_tag_type_name' => null,
         'include_file_tags' => null,
         'include_file_record_info' => null,
@@ -88,7 +88,7 @@ class FileOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_file_meta_data' => 'include_file_meta_data',
+        'include_meta_data' => 'include_meta_data',
         'include_tag_type_name' => 'include_tag_type_name',
         'include_file_tags' => 'include_file_tags',
         'include_file_record_info' => 'include_file_record_info',
@@ -101,7 +101,7 @@ class FileOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_file_meta_data' => 'setIncludeFileMetaData',
+        'include_meta_data' => 'setIncludeMetaData',
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_file_tags' => 'setIncludeFileTags',
         'include_file_record_info' => 'setIncludeFileRecordInfo',
@@ -114,7 +114,7 @@ class FileOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_file_meta_data' => 'getIncludeFileMetaData',
+        'include_meta_data' => 'getIncludeMetaData',
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_file_tags' => 'getIncludeFileTags',
         'include_file_record_info' => 'getIncludeFileRecordInfo',
@@ -152,7 +152,7 @@ class FileOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_file_meta_data'] = isset($data['include_file_meta_data']) ? $data['include_file_meta_data'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_file_tags'] = isset($data['include_file_tags']) ? $data['include_file_tags'] : null;
         $this->container['include_file_record_info'] = isset($data['include_file_record_info']) ? $data['include_file_record_info'] : null;
@@ -185,22 +185,22 @@ class FileOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_file_meta_data
+     * Gets include_meta_data
      * @return bool
      */
-    public function getIncludeFileMetaData()
+    public function getIncludeMetaData()
     {
-        return $this->container['include_file_meta_data'];
+        return $this->container['include_meta_data'];
     }
 
     /**
-     * Sets include_file_meta_data
-     * @param bool $include_file_meta_data
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
      * @return $this
      */
-    public function setIncludeFileMetaData($include_file_meta_data)
+    public function setIncludeMetaData($include_meta_data)
     {
-        $this->container['include_file_meta_data'] = $include_file_meta_data;
+        $this->container['include_meta_data'] = $include_meta_data;
 
         return $this;
     }
@@ -216,7 +216,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_type_name
-     * @param bool $include_tag_type_name
+     * @param bool $include_tag_type_name 
      * @return $this
      */
     public function setIncludeTagTypeName($include_tag_type_name)
@@ -237,7 +237,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_tags
-     * @param bool $include_file_tags
+     * @param bool $include_file_tags 
      * @return $this
      */
     public function setIncludeFileTags($include_file_tags)
@@ -258,7 +258,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_record_info
-     * @param bool $include_file_record_info
+     * @param bool $include_file_record_info 
      * @return $this
      */
     public function setIncludeFileRecordInfo($include_file_record_info)
@@ -279,7 +279,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_base64
-     * @param bool $include_file_base64
+     * @param bool $include_file_base64 
      * @return $this
      */
     public function setIncludeFileBase64($include_file_base64)

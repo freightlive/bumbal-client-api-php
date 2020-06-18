@@ -78,9 +78,9 @@ class FileOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_file_meta_data"
+     * Test attribute "include_meta_data"
      */
-    public function testPropertyIncludeFileMetaData()
+    public function testPropertyIncludeMetaData()
     {
     }
 

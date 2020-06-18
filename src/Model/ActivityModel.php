@@ -1247,7 +1247,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment
-     * @param \BumbalClient\Model\AssignmentModel $assignment
+     * @param \BumbalClient\Model\AssignmentModel $assignment 
      * @return $this
      */
     public function setAssignment($assignment)
@@ -1520,7 +1520,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date_time
-     * @param \DateTime $earliest_delivery_date_time
+     * @param \DateTime $earliest_delivery_date_time 
      * @return $this
      */
     public function setEarliestDeliveryDateTime($earliest_delivery_date_time)
@@ -1541,7 +1541,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date_time
-     * @param \DateTime $latest_delivery_date_time
+     * @param \DateTime $latest_delivery_date_time 
      * @return $this
      */
     public function setLatestDeliveryDateTime($latest_delivery_date_time)
@@ -1562,7 +1562,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets earliest_delivery_date
-     * @param \DateTime $earliest_delivery_date
+     * @param \DateTime $earliest_delivery_date 
      * @return $this
      */
     public function setEarliestDeliveryDate($earliest_delivery_date)
@@ -1583,7 +1583,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets latest_delivery_date
-     * @param \DateTime $latest_delivery_date
+     * @param \DateTime $latest_delivery_date 
      * @return $this
      */
     public function setLatestDeliveryDate($latest_delivery_date)
@@ -2192,7 +2192,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address
-     * @param \BumbalClient\Model\AddressModel $address
+     * @param \BumbalClient\Model\AddressModel $address 
      * @return $this
      */
     public function setAddress($address)
@@ -2213,7 +2213,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets address_applied
-     * @param \BumbalClient\Model\AddressAppliedModel $address_applied
+     * @param \BumbalClient\Model\AddressAppliedModel $address_applied 
      * @return $this
      */
     public function setAddressApplied($address_applied)
@@ -2234,7 +2234,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets depot_address
-     * @param \BumbalClient\Model\AddressModel $depot_address
+     * @param \BumbalClient\Model\AddressModel $depot_address 
      * @return $this
      */
     public function setDepotAddress($depot_address)
@@ -2297,7 +2297,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers
-     * @param object $allowed_drivers
+     * @param object $allowed_drivers 
      * @return $this
      */
     public function setAllowedDrivers($allowed_drivers)
@@ -2318,7 +2318,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets allowed_drivers_links
-     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links
+     * @param \BumbalClient\Model\LinkModel[] $allowed_drivers_links 
      * @return $this
      */
     public function setAllowedDriversLinks($allowed_drivers_links)
@@ -2339,7 +2339,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -2360,7 +2360,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -2381,7 +2381,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets package_lines
-     * @param \BumbalClient\Model\PackageLineModel[] $package_lines
+     * @param \BumbalClient\Model\PackageLineModel[] $package_lines 
      * @return $this
      */
     public function setPackageLines($package_lines)
@@ -2402,7 +2402,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets time_slots
-     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots
+     * @param \BumbalClient\Model\TimeSlotModel[] $time_slots 
      * @return $this
      */
     public function setTimeSlots($time_slots)
@@ -2465,7 +2465,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets brand
-     * @param \BumbalClient\Model\BrandModel $brand
+     * @param \BumbalClient\Model\BrandModel $brand 
      * @return $this
      */
     public function setBrand($brand)
@@ -2486,7 +2486,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets communication
-     * @param \BumbalClient\Model\CommunicationModel $communication
+     * @param \BumbalClient\Model\CommunicationModel $communication 
      * @return $this
      */
     public function setCommunication($communication)
@@ -2507,7 +2507,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets assignment_link
-     * @param \BumbalClient\Model\LinkModel $assignment_link
+     * @param \BumbalClient\Model\LinkModel $assignment_link 
      * @return $this
      */
     public function setAssignmentLink($assignment_link)
@@ -2528,7 +2528,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route_link
-     * @param \BumbalClient\Model\LinkModel $route_link
+     * @param \BumbalClient\Model\LinkModel $route_link 
      * @return $this
      */
     public function setRouteLink($route_link)
@@ -2549,7 +2549,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets route
-     * @param \BumbalClient\Model\RouteModel $route
+     * @param \BumbalClient\Model\RouteModel $route 
      * @return $this
      */
     public function setRoute($route)
@@ -2570,7 +2570,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver
-     * @param \BumbalClient\Model\DriverModel $driver
+     * @param \BumbalClient\Model\DriverModel $driver 
      * @return $this
      */
     public function setDriver($driver)
@@ -2591,7 +2591,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets driver_links
-     * @param \BumbalClient\Model\LinkModel[] $driver_links
+     * @param \BumbalClient\Model\LinkModel[] $driver_links 
      * @return $this
      */
     public function setDriverLinks($driver_links)
@@ -2612,7 +2612,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets car
-     * @param \BumbalClient\Model\VehicleModel $car
+     * @param \BumbalClient\Model\VehicleModel $car 
      * @return $this
      */
     public function setCar($car)
@@ -2633,7 +2633,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets vehicle
-     * @param \BumbalClient\Model\VehicleModel $vehicle
+     * @param \BumbalClient\Model\VehicleModel $vehicle 
      * @return $this
      */
     public function setVehicle($vehicle)
@@ -2654,7 +2654,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets trailer
-     * @param \BumbalClient\Model\TrailerModel $trailer
+     * @param \BumbalClient\Model\TrailerModel $trailer 
      * @return $this
      */
     public function setTrailer($trailer)
@@ -2696,7 +2696,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
@@ -2717,7 +2717,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets recurrence
-     * @param \BumbalClient\Model\RecurrenceModel $recurrence
+     * @param \BumbalClient\Model\RecurrenceModel $recurrence 
      * @return $this
      */
     public function setRecurrence($recurrence)
@@ -2780,7 +2780,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets zones
-     * @param \BumbalClient\Model\ZoneModel[] $zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
      * @return $this
      */
     public function setZones($zones)
@@ -2822,7 +2822,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)
@@ -2843,7 +2843,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -2864,7 +2864,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets notes
-     * @param \BumbalClient\Model\NoteModel[] $notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
      * @return $this
      */
     public function setNotes($notes)
@@ -2885,7 +2885,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)
@@ -2990,7 +2990,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_created_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_created_by_user
+     * @param \BumbalClient\Model\UsersModel $activity_created_by_user 
      * @return $this
      */
     public function setActivityCreatedByUser($activity_created_by_user)
@@ -3011,7 +3011,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets activity_updated_by_user
-     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user
+     * @param \BumbalClient\Model\UsersModel $activity_updated_by_user 
      * @return $this
      */
     public function setActivityUpdatedByUser($activity_updated_by_user)

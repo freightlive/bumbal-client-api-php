@@ -94,7 +94,7 @@ class UnsuccessfulreasonApi
      *
      * @param \BumbalClient\Model\UnsuccessfulReasonModel $body UnsuccessfulReason object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse21
+     * @return \BumbalClient\Model\ApiResponse63
      */
     public function createUnsuccessfulReason($body = null)
     {
@@ -109,7 +109,7 @@ class UnsuccessfulreasonApi
      *
      * @param \BumbalClient\Model\UnsuccessfulReasonModel $body UnsuccessfulReason object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse21, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse63, HTTP status code, HTTP response headers (array of strings)
      */
     public function createUnsuccessfulReasonWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class UnsuccessfulreasonApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse21',
+                '\BumbalClient\Model\ApiResponse63',
                 '/unsuccessful-reason'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse21', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse63', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse21', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse63', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -186,7 +186,7 @@ class UnsuccessfulreasonApi
      *
      * @param int $unsuccessful_reason_id ID of UnsuccessfulReason to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse18
+     * @return \BumbalClient\Model\ApiResponse60
      */
     public function deleteUnsuccessfulReason($unsuccessful_reason_id)
     {
@@ -201,7 +201,7 @@ class UnsuccessfulreasonApi
      *
      * @param int $unsuccessful_reason_id ID of UnsuccessfulReason to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse18, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse60, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteUnsuccessfulReasonWithHttpInfo($unsuccessful_reason_id)
     {
@@ -249,15 +249,15 @@ class UnsuccessfulreasonApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse18',
+                '\BumbalClient\Model\ApiResponse60',
                 '/unsuccessful-reason/{unsuccessful-reasonId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse18', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse60', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse18', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse60', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -269,11 +269,11 @@ class UnsuccessfulreasonApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse19', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse61', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse20', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse62', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -497,7 +497,7 @@ class UnsuccessfulreasonApi
      * @param int $unsuccessful_reason_id ID of the UnsuccessfulReason object to update (required)
      * @param \BumbalClient\Model\UnsuccessfulReasonModel $body UnsuccessfulReason object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse17
+     * @return \BumbalClient\Model\ApiResponse59
      */
     public function updateUnsuccessfulReason($unsuccessful_reason_id, $body = null)
     {
@@ -513,7 +513,7 @@ class UnsuccessfulreasonApi
      * @param int $unsuccessful_reason_id ID of the UnsuccessfulReason object to update (required)
      * @param \BumbalClient\Model\UnsuccessfulReasonModel $body UnsuccessfulReason object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse17, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse59, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateUnsuccessfulReasonWithHttpInfo($unsuccessful_reason_id, $body = null)
     {
@@ -566,15 +566,15 @@ class UnsuccessfulreasonApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse17',
+                '\BumbalClient\Model\ApiResponse59',
                 '/unsuccessful-reason/{unsuccessful-reasonId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse17', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse59', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse17', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse59', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

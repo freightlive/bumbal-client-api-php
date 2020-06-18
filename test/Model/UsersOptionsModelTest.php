@@ -118,4 +118,11 @@ class UsersOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeZones()
     {
     }
+
+    /**
+     * Test attribute "include_driver_unavailabilities"
+     */
+    public function testPropertyIncludeDriverUnavailabilities()
+    {
+    }
 }

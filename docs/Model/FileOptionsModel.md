@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**include_file_meta_data** | **bool** |  | [optional] 
+**include_meta_data** | **bool** |  | [optional] 
 **include_tag_type_name** | **bool** |  | [optional] 
 **include_file_tags** | **bool** |  | [optional] 
 **include_file_record_info** | **bool** |  | [optional] 

@@ -210,7 +210,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_from
-     * @param \DateTime $date_from
+     * @param \DateTime $date_from 
      * @return $this
      */
     public function setDateFrom($date_from)
@@ -231,7 +231,7 @@ class CheckAvailabilityFiltersModel implements ArrayAccess
 
     /**
      * Sets date_to
-     * @param \DateTime $date_to
+     * @param \DateTime $date_to 
      * @return $this
      */
     public function setDateTo($date_to)

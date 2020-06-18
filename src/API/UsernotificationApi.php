@@ -190,7 +190,7 @@ class UsernotificationApi
      *
      * @param \BumbalClient\Model\UserNotificationModel $body UserNotification object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse22
+     * @return \BumbalClient\Model\ApiResponse64
      */
     public function setUserNotification($body = null)
     {
@@ -205,7 +205,7 @@ class UsernotificationApi
      *
      * @param \BumbalClient\Model\UserNotificationModel $body UserNotification object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse22, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse64, HTTP status code, HTTP response headers (array of strings)
      */
     public function setUserNotificationWithHttpInfo($body = null)
     {
@@ -246,15 +246,15 @@ class UsernotificationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse22',
+                '\BumbalClient\Model\ApiResponse64',
                 '/users/notification'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse22', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse64', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse22', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse64', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

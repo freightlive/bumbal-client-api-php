@@ -59,7 +59,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_tags' => 'bool',
         'include_party_name' => 'bool',
         'include_pause' => 'bool',
-        'include_zones' => 'bool'
+        'include_zones' => 'bool',
+        'include_driver_unavailabilities' => 'bool'
     ];
 
     /**
@@ -72,7 +73,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_tags' => null,
         'include_party_name' => null,
         'include_pause' => null,
-        'include_zones' => null
+        'include_zones' => null,
+        'include_driver_unavailabilities' => null
     ];
 
     public static function swaggerTypes()
@@ -95,7 +97,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_tags' => 'include_user_tags',
         'include_party_name' => 'include_party_name',
         'include_pause' => 'include_pause',
-        'include_zones' => 'include_zones'
+        'include_zones' => 'include_zones',
+        'include_driver_unavailabilities' => 'include_driver_unavailabilities'
     ];
 
 
@@ -109,7 +112,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_tags' => 'setIncludeUserTags',
         'include_party_name' => 'setIncludePartyName',
         'include_pause' => 'setIncludePause',
-        'include_zones' => 'setIncludeZones'
+        'include_zones' => 'setIncludeZones',
+        'include_driver_unavailabilities' => 'setIncludeDriverUnavailabilities'
     ];
 
 
@@ -123,7 +127,8 @@ class UsersOptionsModel implements ArrayAccess
         'include_user_tags' => 'getIncludeUserTags',
         'include_party_name' => 'getIncludePartyName',
         'include_pause' => 'getIncludePause',
-        'include_zones' => 'getIncludeZones'
+        'include_zones' => 'getIncludeZones',
+        'include_driver_unavailabilities' => 'getIncludeDriverUnavailabilities'
     ];
 
     public static function attributeMap()
@@ -163,6 +168,7 @@ class UsersOptionsModel implements ArrayAccess
         $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
         $this->container['include_pause'] = isset($data['include_pause']) ? $data['include_pause'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['include_driver_unavailabilities'] = isset($data['include_driver_unavailabilities']) ? $data['include_driver_unavailabilities'] : null;
     }
 
     /**
@@ -201,7 +207,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_addresses
-     * @param bool $include_addresses
+     * @param bool $include_addresses 
      * @return $this
      */
     public function setIncludeAddresses($include_addresses)
@@ -222,7 +228,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_user_meta_data
-     * @param bool $include_user_meta_data
+     * @param bool $include_user_meta_data 
      * @return $this
      */
     public function setIncludeUserMetaData($include_user_meta_data)
@@ -243,7 +249,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_user_tags
-     * @param bool $include_user_tags
+     * @param bool $include_user_tags 
      * @return $this
      */
     public function setIncludeUserTags($include_user_tags)
@@ -264,7 +270,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_party_name
-     * @param bool $include_party_name
+     * @param bool $include_party_name 
      * @return $this
      */
     public function setIncludePartyName($include_party_name)
@@ -285,7 +291,7 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_pause
-     * @param bool $include_pause
+     * @param bool $include_pause 
      * @return $this
      */
     public function setIncludePause($include_pause)
@@ -306,12 +312,33 @@ class UsersOptionsModel implements ArrayAccess
 
     /**
      * Sets include_zones
-     * @param bool $include_zones
+     * @param bool $include_zones 
      * @return $this
      */
     public function setIncludeZones($include_zones)
     {
         $this->container['include_zones'] = $include_zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_unavailabilities
+     * @return bool
+     */
+    public function getIncludeDriverUnavailabilities()
+    {
+        return $this->container['include_driver_unavailabilities'];
+    }
+
+    /**
+     * Sets include_driver_unavailabilities
+     * @param bool $include_driver_unavailabilities 
+     * @return $this
+     */
+    public function setIncludeDriverUnavailabilities($include_driver_unavailabilities)
+    {
+        $this->container['include_driver_unavailabilities'] = $include_driver_unavailabilities;
 
         return $this;
     }

@@ -73,12 +73,62 @@ class NotificationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for notificationList
+     * Test case for createNotification
      *
-     * List conversations.
+     * Add a new Notification.
      *
      */
-    public function testNotificationList()
+    public function testCreateNotification()
+    {
+    }
+
+    /**
+     * Test case for deleteNotification
+     *
+     * Delete an Notification entry.
+     *
+     */
+    public function testDeleteNotification()
+    {
+    }
+
+    /**
+     * Test case for retrieveListNotification
+     *
+     * Retrieve List of Notification.
+     *
+     */
+    public function testRetrieveListNotification()
+    {
+    }
+
+    /**
+     * Test case for retrieveNotification
+     *
+     * Retrieve a Notification.
+     *
+     */
+    public function testRetrieveNotification()
+    {
+    }
+
+    /**
+     * Test case for setNotification
+     *
+     * Set (create or update) a notification.
+     *
+     */
+    public function testSetNotification()
+    {
+    }
+
+    /**
+     * Test case for updateNotification
+     *
+     * Update a specific Notification object.
+     *
+     */
+    public function testUpdateNotification()
     {
     }
 }

@@ -522,7 +522,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets users
-     * @param \BumbalClient\Model\UserNotificationModel[] $users
+     * @param \BumbalClient\Model\UserNotificationModel[] $users 
      * @return $this
      */
     public function setUsers($users)

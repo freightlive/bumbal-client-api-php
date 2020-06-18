@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **include_party_name** | **bool** |  | [optional] 
 **include_pause** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
+**include_driver_unavailabilities** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

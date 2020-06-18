@@ -189,7 +189,7 @@ class CompartmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_filled_capacities
-     * @param bool $include_filled_capacities
+     * @param bool $include_filled_capacities 
      * @return $this
      */
     public function setIncludeFilledCapacities($include_filled_capacities)
@@ -210,7 +210,7 @@ class CompartmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links
+     * @param bool $include_links 
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -231,7 +231,7 @@ class CompartmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info
+     * @param bool $include_record_info 
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -252,7 +252,7 @@ class CompartmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data
+     * @param bool $include_meta_data 
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)

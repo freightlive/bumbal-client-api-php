@@ -120,6 +120,11 @@ Class | Method | HTTP request | Description
 *DriverApi* | [**retrieveListDriver**](docs/Api/DriverApi.md#retrievelistdriver) | **PUT** /driver | Retrieve List of Drivers
 *DriverApi* | [**setDriver**](docs/Api/DriverApi.md#setdriver) | **POST** /driver/set | Set (create or update) a driver
 *DriverApi* | [**updateDriver**](docs/Api/DriverApi.md#updatedriver) | **PUT** /driver/{driverId} | Update a driver
+*DriverunavailabilityApi* | [**createDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#createdriverunavailability) | **POST** /driver-unavailability | Add a new DriverUnavailability
+*DriverunavailabilityApi* | [**deleteDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#deletedriverunavailability) | **DELETE** /driver-unavailability/{driverunavailabilityId} | Delete a DriverUnavailability entry
+*DriverunavailabilityApi* | [**retrieveDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievedriverunavailability) | **GET** /driver-unavailability/{driverunavailabilityId} | Retrieve a DriverUnavailability
+*DriverunavailabilityApi* | [**retrieveListDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievelistdriverunavailability) | **PUT** /driver-unavailability | Retrieve List of DriverUnavailability
+*DriverunavailabilityApi* | [**updateDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#updatedriverunavailability) | **PUT** /driver-unavailability/{driverunavailabilityId} | Update a specific DriverUnavailability object
 *EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment
 *EquipmentApi* | [**retrieveEquipment**](docs/Api/EquipmentApi.md#retrieveequipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
 *EquipmentApi* | [**retrieveListEquipment**](docs/Api/EquipmentApi.md#retrievelistequipment) | **PUT** /equipment | Retrieve List of Equipment
@@ -132,6 +137,7 @@ Class | Method | HTTP request | Description
 *InstantmessagingApi* | [**instantMessagingList**](docs/Api/InstantmessagingApi.md#instantmessaginglist) | **POST** /instant-messaging/list | List conversations
 *InstantmessagingApi* | [**instantMessagingPost**](docs/Api/InstantmessagingApi.md#instantmessagingpost) | **POST** /instant-messaging/post | Post a message to some one
 *InstantmessagingApi* | [**instantMessagingRetrieveConversation**](docs/Api/InstantmessagingApi.md#instantmessagingretrieveconversation) | **POST** /instant-messaging/retrieve-conversation | Retrieve Conversation
+*LanguageApi* | [**retrieveListLanguage**](docs/Api/LanguageApi.md#retrievelistlanguage) | **PUT** /language | Retrieve List of Language
 *LinkApi* | [**deleteLink**](docs/Api/LinkApi.md#deletelink) | **DELETE** /link/{linkId} | Delete a link
 *LinkApi* | [**updateLink**](docs/Api/LinkApi.md#updatelink) | **PUT** /link/{linkId} | Update a specific link object
 *LogApi* | [**retrieveListLog**](docs/Api/LogApi.md#retrievelistlog) | **PUT** /log | Retrieve List of Log messages
@@ -145,7 +151,12 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
-*NotificationApi* | [**notificationList**](docs/Api/NotificationApi.md#notificationlist) | **POST** /notification/list | List conversations
+*NotificationApi* | [**createNotification**](docs/Api/NotificationApi.md#createnotification) | **POST** /notification | Add a new Notification
+*NotificationApi* | [**deleteNotification**](docs/Api/NotificationApi.md#deletenotification) | **DELETE** /notification/{notificationId} | Delete an Notification entry
+*NotificationApi* | [**retrieveListNotification**](docs/Api/NotificationApi.md#retrievelistnotification) | **PUT** /notification | Retrieve List of Notification
+*NotificationApi* | [**retrieveNotification**](docs/Api/NotificationApi.md#retrievenotification) | **GET** /notification/{notificationId} | Retrieve a Notification
+*NotificationApi* | [**setNotification**](docs/Api/NotificationApi.md#setnotification) | **POST** /notification/set | Set (create or update) a notification
+*NotificationApi* | [**updateNotification**](docs/Api/NotificationApi.md#updatenotification) | **PUT** /notification/{notificationId} | Update a specific Notification object
 *NotificationcategoryApi* | [**createNotificationCategory**](docs/Api/NotificationcategoryApi.md#createnotificationcategory) | **POST** /notification-category | Add a new NotificationCategory
 *NotificationcategoryApi* | [**deleteNotificationCategory**](docs/Api/NotificationcategoryApi.md#deletenotificationcategory) | **DELETE** /notification-category/{notification-categoryId} | Delete an NotificationCategory entry
 *NotificationcategoryApi* | [**retrieveListNotificationCategory**](docs/Api/NotificationcategoryApi.md#retrievelistnotificationcategory) | **PUT** /notification-category | Retrieve List of NotificationCategory
@@ -201,6 +212,54 @@ Class | Method | HTTP request | Description
 *ProviderApi* | [**retrieveListProvider**](docs/Api/ProviderApi.md#retrievelistprovider) | **PUT** /provider | Retrieve List of Providers
 *ProviderApi* | [**retrieveProvider**](docs/Api/ProviderApi.md#retrieveprovider) | **GET** /provider/{providerId} | Retrieve a Provider
 *ProviderApi* | [**updateProvider**](docs/Api/ProviderApi.md#updateprovider) | **PUT** /provider/{providerId} | Update a specific provider object
+*QuestionnaireApi* | [**changeLanguage**](docs/Api/QuestionnaireApi.md#changelanguage) | **POST** /questionnaire/changeLanguage | change language of a Questionnaire
+*QuestionnaireApi* | [**deleteQuestionnaire**](docs/Api/QuestionnaireApi.md#deletequestionnaire) | **DELETE** /questionnaire/{questionnaireId} | Delete an Questionnaire entry
+*QuestionnaireApi* | [**getNextQuestion**](docs/Api/QuestionnaireApi.md#getnextquestion) | **POST** /questionnaire/getNextQuestion | getNextQuestion of an Questionnaire
+*QuestionnaireApi* | [**getPreviousQuestion**](docs/Api/QuestionnaireApi.md#getpreviousquestion) | **POST** /questionnaire/getPreviousQuestion | getPreviousQuestion of an Questionnaire
+*QuestionnaireApi* | [**retrieveListQuestionnaire**](docs/Api/QuestionnaireApi.md#retrievelistquestionnaire) | **PUT** /questionnaire | Retrieve List of Questionnaire
+*QuestionnaireApi* | [**retrieveQuestionnaire**](docs/Api/QuestionnaireApi.md#retrievequestionnaire) | **GET** /questionnaire/{questionnaireId} | Retrieve a Questionnaire
+*QuestionnaireanswerApi* | [**createQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#createquestionnaireanswer) | **POST** /questionnaire-answer | Add a new QuestionnaireAnswer
+*QuestionnaireanswerApi* | [**deleteQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#deletequestionnaireanswer) | **DELETE** /questionnaire-answer/{questionnaire-answerId} | Delete an QuestionnaireAnswer entry
+*QuestionnaireanswerApi* | [**retrieveListQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#retrievelistquestionnaireanswer) | **PUT** /questionnaire-answer | Retrieve List of QuestionnaireAnswer
+*QuestionnaireanswerApi* | [**retrieveQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#retrievequestionnaireanswer) | **GET** /questionnaire-answer/{questionnaire-answerId} | Retrieve a QuestionnaireAnswer
+*QuestionnaireanswerApi* | [**setQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#setquestionnaireanswer) | **POST** /questionnaire-answer/set | Set (create or update) a QuestionnaireAnswer
+*QuestionnaireanswerApi* | [**updateQuestionnaireAnswer**](docs/Api/QuestionnaireanswerApi.md#updatequestionnaireanswer) | **PUT** /questionnaire-answer/{questionnaire-answerId} | Update a specific QuestionnaireAnswer object
+*QuestionnairequestiontypeApi* | [**retrieveListQuestionnaireQuestionType**](docs/Api/QuestionnairequestiontypeApi.md#retrievelistquestionnairequestiontype) | **PUT** /questionnaire-question-type | Retrieve List of QuestionnaireQuestionType
+*QuestionnairequestiontypeApi* | [**retrieveQuestionnaireQuestionType**](docs/Api/QuestionnairequestiontypeApi.md#retrievequestionnairequestiontype) | **GET** /questionnaire-question-type/{questionnaire-question-typeId} | Retrieve a QuestionnaireQuestionType
+*QuestionnairetemplateApi* | [**createQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#createquestionnairetemplate) | **POST** /questionnaire-template | Add a new QuestionnaireTemplate
+*QuestionnairetemplateApi* | [**deleteQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#deletequestionnairetemplate) | **DELETE** /questionnaire-template/{questionnaire-templateId} | Delete an QuestionnaireTemplate entry
+*QuestionnairetemplateApi* | [**retrieveListQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievelistquestionnairetemplate) | **PUT** /questionnaire-template | Retrieve List of QuestionnaireTemplate
+*QuestionnairetemplateApi* | [**retrieveQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#retrievequestionnairetemplate) | **GET** /questionnaire-template/{questionnaire-templateId} | Retrieve a QuestionnaireTemplate
+*QuestionnairetemplateApi* | [**setQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#setquestionnairetemplate) | **POST** /questionnaire-template/set | Set (create or update) a QuestionnaireTemplate
+*QuestionnairetemplateApi* | [**updateQuestionnaireTemplate**](docs/Api/QuestionnairetemplateApi.md#updatequestionnairetemplate) | **PUT** /questionnaire-template/{questionnaire-templateId} | Update a specific QuestionnaireTemplate object
+*QuestionnairetemplategetlanguagesApi* | [**getQuestionnaireTemplateLanguages**](docs/Api/QuestionnairetemplategetlanguagesApi.md#getquestionnairetemplatelanguages) | **GET** /questionnaire-template/get-languages/{questionnaire-templateId} | Retrieves all set languages for an QuestionnaireTemplate entry
+*QuestionnairetemplatequestionApi* | [**createQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#createquestionnairetemplatequestion) | **POST** /questionnaire-template-question | Add a new QuestionnaireTemplateQuestion
+*QuestionnairetemplatequestionApi* | [**deleteQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#deletequestionnairetemplatequestion) | **DELETE** /questionnaire-template-question/{questionnaire-template-questionId} | Delete an QuestionnaireTemplateQuestion entry
+*QuestionnairetemplatequestionApi* | [**retrieveListQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#retrievelistquestionnairetemplatequestion) | **PUT** /questionnaire-template-question | Retrieve List of QuestionnaireTemplateQuestion
+*QuestionnairetemplatequestionApi* | [**retrieveQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#retrievequestionnairetemplatequestion) | **GET** /questionnaire-template-question/{questionnaire-template-questionId} | Retrieve a QuestionnaireTemplateQuestion
+*QuestionnairetemplatequestionApi* | [**setQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#setquestionnairetemplatequestion) | **POST** /questionnaire-template-question/set | Set (create or update) a QuestionnaireTemplateQuestion
+*QuestionnairetemplatequestionApi* | [**updateQuestionnaireTemplateQuestion**](docs/Api/QuestionnairetemplatequestionApi.md#updatequestionnairetemplatequestion) | **PUT** /questionnaire-template-question/{questionnaire-template-questionId} | Update a specific QuestionnaireTemplateQuestion object
+*QuestionnairetemplatequestionoptionApi* | [**createQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#createquestionnairetemplatequestionoption) | **POST** /questionnaire-template-question-option | Add a new QuestionnaireTemplateQuestionOption
+*QuestionnairetemplatequestionoptionApi* | [**deleteQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#deletequestionnairetemplatequestionoption) | **DELETE** /questionnaire-template-question-option/{questionnaire-template-question-optionId} | Delete an QuestionnaireTemplateQuestionOption entry
+*QuestionnairetemplatequestionoptionApi* | [**getPossibleFollowUpQuestions**](docs/Api/QuestionnairetemplatequestionoptionApi.md#getpossiblefollowupquestions) | **POST** /questionnaire-template-question-option/getPossibleFollowUpQuestions | get possible follow up questions
+*QuestionnairetemplatequestionoptionApi* | [**retrieveListQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#retrievelistquestionnairetemplatequestionoption) | **PUT** /questionnaire-template-question-option | Retrieve List of QuestionnaireTemplateQuestionOption
+*QuestionnairetemplatequestionoptionApi* | [**retrieveQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#retrievequestionnairetemplatequestionoption) | **GET** /questionnaire-template-question-option/{questionnaire-template-question-optionId} | Retrieve a QuestionnaireTemplateQuestionOption
+*QuestionnairetemplatequestionoptionApi* | [**setQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#setquestionnairetemplatequestionoption) | **POST** /questionnaire-template-question-option/set | Set (create or update) a QuestionnaireTemplateQuestionOption
+*QuestionnairetemplatequestionoptionApi* | [**updateQuestionnaireTemplateQuestionOption**](docs/Api/QuestionnairetemplatequestionoptionApi.md#updatequestionnairetemplatequestionoption) | **PUT** /questionnaire-template-question-option/{questionnaire-template-question-optionId} | Update a specific QuestionnaireTemplateQuestionOption object
+*QuestionnairetemplatequestionoptiontextApi* | [**createQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#createquestionnairetemplatequestionoptiontext) | **POST** /questionnaire-template-question-option-text | Add a new QuestionnaireTemplateQuestionOptionText
+*QuestionnairetemplatequestionoptiontextApi* | [**deleteQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#deletequestionnairetemplatequestionoptiontext) | **DELETE** /questionnaire-template-question-option-text/{questionnaire-template-question-option-textId} | Delete an QuestionnaireTemplateQuestionOptionText entry
+*QuestionnairetemplatequestionoptiontextApi* | [**retrieveListQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#retrievelistquestionnairetemplatequestionoptiontext) | **PUT** /questionnaire-template-question-option-text | Retrieve List of QuestionnaireTemplateQuestionOptionText
+*QuestionnairetemplatequestionoptiontextApi* | [**retrieveQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#retrievequestionnairetemplatequestionoptiontext) | **GET** /questionnaire-template-question-option-text/{questionnaire-template-question-option-textId} | Retrieve a QuestionnaireTemplateQuestionOptionText
+*QuestionnairetemplatequestionoptiontextApi* | [**setQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#setquestionnairetemplatequestionoptiontext) | **POST** /questionnaire-template-question-option-text/set | Set (create or update) a QuestionnaireTemplateQuestionOptionText
+*QuestionnairetemplatequestionoptiontextApi* | [**updateQuestionnaireTemplateQuestionOptionText**](docs/Api/QuestionnairetemplatequestionoptiontextApi.md#updatequestionnairetemplatequestionoptiontext) | **PUT** /questionnaire-template-question-option-text/{questionnaire-template-question-option-textId} | Update a specific QuestionnaireTemplateQuestionOptionText object
+*QuestionnairetemplatequestiontextApi* | [**createQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#createquestionnairetemplatequestiontext) | **POST** /questionnaire-template-question-text | Add a new QuestionnaireTemplateQuestionText
+*QuestionnairetemplatequestiontextApi* | [**deleteQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#deletequestionnairetemplatequestiontext) | **DELETE** /questionnaire-template-question-text/{questionnaire-template-question-textId} | Delete an QuestionnaireTemplateQuestionText entry
+*QuestionnairetemplatequestiontextApi* | [**retrieveListQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#retrievelistquestionnairetemplatequestiontext) | **PUT** /questionnaire-template-question-text | Retrieve List of QuestionnaireTemplateQuestionText
+*QuestionnairetemplatequestiontextApi* | [**retrieveQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#retrievequestionnairetemplatequestiontext) | **GET** /questionnaire-template-question-text/{questionnaire-template-question-textId} | Retrieve a QuestionnaireTemplateQuestionText
+*QuestionnairetemplatequestiontextApi* | [**setQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#setquestionnairetemplatequestiontext) | **POST** /questionnaire-template-question-text/set | Set (create or update) a QuestionnaireTemplateQuestionText
+*QuestionnairetemplatequestiontextApi* | [**updateQuestionnaireTemplateQuestionText**](docs/Api/QuestionnairetemplatequestiontextApi.md#updatequestionnairetemplatequestiontext) | **PUT** /questionnaire-template-question-text/{questionnaire-template-question-textId} | Update a specific QuestionnaireTemplateQuestionText object
+*QuestionnairetypeApi* | [**retrieveListQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievelistquestionnairetype) | **PUT** /questionnaire-type | Retrieve List of QuestionnaireType
+*QuestionnairetypeApi* | [**retrieveQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievequestionnairetype) | **GET** /questionnaire-type/{questionnaire-typeId} | Retrieve a QuestionnaireType
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
@@ -308,7 +367,6 @@ Class | Method | HTTP request | Description
  - [ApiResponse14](docs/Model/ApiResponse14.md)
  - [ApiResponse15](docs/Model/ApiResponse15.md)
  - [ApiResponse16](docs/Model/ApiResponse16.md)
- - [ApiResponse16AdditionalData](docs/Model/ApiResponse16AdditionalData.md)
  - [ApiResponse17](docs/Model/ApiResponse17.md)
  - [ApiResponse18](docs/Model/ApiResponse18.md)
  - [ApiResponse19](docs/Model/ApiResponse19.md)
@@ -320,17 +378,60 @@ Class | Method | HTTP request | Description
  - [ApiResponse24](docs/Model/ApiResponse24.md)
  - [ApiResponse25](docs/Model/ApiResponse25.md)
  - [ApiResponse26](docs/Model/ApiResponse26.md)
+ - [ApiResponse26AdditionalData](docs/Model/ApiResponse26AdditionalData.md)
  - [ApiResponse27](docs/Model/ApiResponse27.md)
  - [ApiResponse28](docs/Model/ApiResponse28.md)
  - [ApiResponse29](docs/Model/ApiResponse29.md)
  - [ApiResponse3](docs/Model/ApiResponse3.md)
  - [ApiResponse30](docs/Model/ApiResponse30.md)
  - [ApiResponse31](docs/Model/ApiResponse31.md)
- - [ApiResponse31AdditionalData](docs/Model/ApiResponse31AdditionalData.md)
+ - [ApiResponse32](docs/Model/ApiResponse32.md)
+ - [ApiResponse33](docs/Model/ApiResponse33.md)
+ - [ApiResponse34](docs/Model/ApiResponse34.md)
+ - [ApiResponse35](docs/Model/ApiResponse35.md)
+ - [ApiResponse36](docs/Model/ApiResponse36.md)
+ - [ApiResponse37](docs/Model/ApiResponse37.md)
+ - [ApiResponse38](docs/Model/ApiResponse38.md)
+ - [ApiResponse39](docs/Model/ApiResponse39.md)
  - [ApiResponse4](docs/Model/ApiResponse4.md)
+ - [ApiResponse40](docs/Model/ApiResponse40.md)
+ - [ApiResponse41](docs/Model/ApiResponse41.md)
+ - [ApiResponse42](docs/Model/ApiResponse42.md)
+ - [ApiResponse43](docs/Model/ApiResponse43.md)
+ - [ApiResponse44](docs/Model/ApiResponse44.md)
+ - [ApiResponse45](docs/Model/ApiResponse45.md)
+ - [ApiResponse46](docs/Model/ApiResponse46.md)
+ - [ApiResponse47](docs/Model/ApiResponse47.md)
+ - [ApiResponse48](docs/Model/ApiResponse48.md)
+ - [ApiResponse49](docs/Model/ApiResponse49.md)
  - [ApiResponse5](docs/Model/ApiResponse5.md)
+ - [ApiResponse50](docs/Model/ApiResponse50.md)
+ - [ApiResponse51](docs/Model/ApiResponse51.md)
+ - [ApiResponse52](docs/Model/ApiResponse52.md)
+ - [ApiResponse53](docs/Model/ApiResponse53.md)
+ - [ApiResponse54](docs/Model/ApiResponse54.md)
+ - [ApiResponse55](docs/Model/ApiResponse55.md)
+ - [ApiResponse56](docs/Model/ApiResponse56.md)
+ - [ApiResponse57](docs/Model/ApiResponse57.md)
+ - [ApiResponse58](docs/Model/ApiResponse58.md)
+ - [ApiResponse59](docs/Model/ApiResponse59.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
+ - [ApiResponse60](docs/Model/ApiResponse60.md)
+ - [ApiResponse61](docs/Model/ApiResponse61.md)
+ - [ApiResponse62](docs/Model/ApiResponse62.md)
+ - [ApiResponse63](docs/Model/ApiResponse63.md)
+ - [ApiResponse64](docs/Model/ApiResponse64.md)
+ - [ApiResponse65](docs/Model/ApiResponse65.md)
+ - [ApiResponse66](docs/Model/ApiResponse66.md)
+ - [ApiResponse67](docs/Model/ApiResponse67.md)
+ - [ApiResponse68](docs/Model/ApiResponse68.md)
+ - [ApiResponse69](docs/Model/ApiResponse69.md)
  - [ApiResponse7](docs/Model/ApiResponse7.md)
+ - [ApiResponse70](docs/Model/ApiResponse70.md)
+ - [ApiResponse71](docs/Model/ApiResponse71.md)
+ - [ApiResponse72](docs/Model/ApiResponse72.md)
+ - [ApiResponse73](docs/Model/ApiResponse73.md)
+ - [ApiResponse73AdditionalData](docs/Model/ApiResponse73AdditionalData.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)
  - [ApiResponse9](docs/Model/ApiResponse9.md)
  - [ApplyPlanningArguments](docs/Model/ApplyPlanningArguments.md)
@@ -384,6 +485,11 @@ Class | Method | HTTP request | Description
  - [DriverModel](docs/Model/DriverModel.md)
  - [DriverOptionsModel](docs/Model/DriverOptionsModel.md)
  - [DriverRetrieveListArguments](docs/Model/DriverRetrieveListArguments.md)
+ - [DriverUnavailabilityFiltersModel](docs/Model/DriverUnavailabilityFiltersModel.md)
+ - [DriverUnavailabilityListResponse](docs/Model/DriverUnavailabilityListResponse.md)
+ - [DriverUnavailabilityModel](docs/Model/DriverUnavailabilityModel.md)
+ - [DriverUnavailabilityOptionsModel](docs/Model/DriverUnavailabilityOptionsModel.md)
+ - [DriverUnavailabilityRetrieveListArguments](docs/Model/DriverUnavailabilityRetrieveListArguments.md)
  - [EmailModel](docs/Model/EmailModel.md)
  - [EquipmentFiltersModel](docs/Model/EquipmentFiltersModel.md)
  - [EquipmentListResponse](docs/Model/EquipmentListResponse.md)
@@ -402,6 +508,11 @@ Class | Method | HTTP request | Description
  - [GetExecutableActivitiesFiltersModel](docs/Model/GetExecutableActivitiesFiltersModel.md)
  - [GetExecutableActivitiesOptionsModel](docs/Model/GetExecutableActivitiesOptionsModel.md)
  - [InstructionModel](docs/Model/InstructionModel.md)
+ - [LanguageFiltersModel](docs/Model/LanguageFiltersModel.md)
+ - [LanguageListResponse](docs/Model/LanguageListResponse.md)
+ - [LanguageModel](docs/Model/LanguageModel.md)
+ - [LanguageOptionsModel](docs/Model/LanguageOptionsModel.md)
+ - [LanguageRetrieveListArguments](docs/Model/LanguageRetrieveListArguments.md)
  - [LinkModel](docs/Model/LinkModel.md)
  - [LogFiltersModel](docs/Model/LogFiltersModel.md)
  - [LogListResponse](docs/Model/LogListResponse.md)
@@ -464,6 +575,51 @@ Class | Method | HTTP request | Description
  - [ProviderListResponse](docs/Model/ProviderListResponse.md)
  - [ProviderModel](docs/Model/ProviderModel.md)
  - [ProviderRetrieveListArguments](docs/Model/ProviderRetrieveListArguments.md)
+ - [QuestionnaireAnswerFiltersModel](docs/Model/QuestionnaireAnswerFiltersModel.md)
+ - [QuestionnaireAnswerListResponse](docs/Model/QuestionnaireAnswerListResponse.md)
+ - [QuestionnaireAnswerModel](docs/Model/QuestionnaireAnswerModel.md)
+ - [QuestionnaireAnswerOptionsModel](docs/Model/QuestionnaireAnswerOptionsModel.md)
+ - [QuestionnaireAnswerRetrieveListArguments](docs/Model/QuestionnaireAnswerRetrieveListArguments.md)
+ - [QuestionnaireFiltersModel](docs/Model/QuestionnaireFiltersModel.md)
+ - [QuestionnaireListResponse](docs/Model/QuestionnaireListResponse.md)
+ - [QuestionnaireModel](docs/Model/QuestionnaireModel.md)
+ - [QuestionnaireOptionsModel](docs/Model/QuestionnaireOptionsModel.md)
+ - [QuestionnaireQuestionTypeFiltersModel](docs/Model/QuestionnaireQuestionTypeFiltersModel.md)
+ - [QuestionnaireQuestionTypeListResponse](docs/Model/QuestionnaireQuestionTypeListResponse.md)
+ - [QuestionnaireQuestionTypeModel](docs/Model/QuestionnaireQuestionTypeModel.md)
+ - [QuestionnaireQuestionTypeOptionsModel](docs/Model/QuestionnaireQuestionTypeOptionsModel.md)
+ - [QuestionnaireQuestionTypeRetrieveListArguments](docs/Model/QuestionnaireQuestionTypeRetrieveListArguments.md)
+ - [QuestionnaireRetrieveListArguments](docs/Model/QuestionnaireRetrieveListArguments.md)
+ - [QuestionnaireTemplateFiltersModel](docs/Model/QuestionnaireTemplateFiltersModel.md)
+ - [QuestionnaireTemplateListResponse](docs/Model/QuestionnaireTemplateListResponse.md)
+ - [QuestionnaireTemplateModel](docs/Model/QuestionnaireTemplateModel.md)
+ - [QuestionnaireTemplateOptionsModel](docs/Model/QuestionnaireTemplateOptionsModel.md)
+ - [QuestionnaireTemplateQuestionFiltersModel](docs/Model/QuestionnaireTemplateQuestionFiltersModel.md)
+ - [QuestionnaireTemplateQuestionListResponse](docs/Model/QuestionnaireTemplateQuestionListResponse.md)
+ - [QuestionnaireTemplateQuestionModel](docs/Model/QuestionnaireTemplateQuestionModel.md)
+ - [QuestionnaireTemplateQuestionOptionFiltersModel](docs/Model/QuestionnaireTemplateQuestionOptionFiltersModel.md)
+ - [QuestionnaireTemplateQuestionOptionListResponse](docs/Model/QuestionnaireTemplateQuestionOptionListResponse.md)
+ - [QuestionnaireTemplateQuestionOptionModel](docs/Model/QuestionnaireTemplateQuestionOptionModel.md)
+ - [QuestionnaireTemplateQuestionOptionOptionsModel](docs/Model/QuestionnaireTemplateQuestionOptionOptionsModel.md)
+ - [QuestionnaireTemplateQuestionOptionRetrieveListArguments](docs/Model/QuestionnaireTemplateQuestionOptionRetrieveListArguments.md)
+ - [QuestionnaireTemplateQuestionOptionTextFiltersModel](docs/Model/QuestionnaireTemplateQuestionOptionTextFiltersModel.md)
+ - [QuestionnaireTemplateQuestionOptionTextListResponse](docs/Model/QuestionnaireTemplateQuestionOptionTextListResponse.md)
+ - [QuestionnaireTemplateQuestionOptionTextModel](docs/Model/QuestionnaireTemplateQuestionOptionTextModel.md)
+ - [QuestionnaireTemplateQuestionOptionTextOptionsModel](docs/Model/QuestionnaireTemplateQuestionOptionTextOptionsModel.md)
+ - [QuestionnaireTemplateQuestionOptionTextRetrieveListArguments](docs/Model/QuestionnaireTemplateQuestionOptionTextRetrieveListArguments.md)
+ - [QuestionnaireTemplateQuestionOptionsModel](docs/Model/QuestionnaireTemplateQuestionOptionsModel.md)
+ - [QuestionnaireTemplateQuestionRetrieveListArguments](docs/Model/QuestionnaireTemplateQuestionRetrieveListArguments.md)
+ - [QuestionnaireTemplateQuestionTextFiltersModel](docs/Model/QuestionnaireTemplateQuestionTextFiltersModel.md)
+ - [QuestionnaireTemplateQuestionTextListResponse](docs/Model/QuestionnaireTemplateQuestionTextListResponse.md)
+ - [QuestionnaireTemplateQuestionTextModel](docs/Model/QuestionnaireTemplateQuestionTextModel.md)
+ - [QuestionnaireTemplateQuestionTextOptionsModel](docs/Model/QuestionnaireTemplateQuestionTextOptionsModel.md)
+ - [QuestionnaireTemplateQuestionTextRetrieveListArguments](docs/Model/QuestionnaireTemplateQuestionTextRetrieveListArguments.md)
+ - [QuestionnaireTemplateRetrieveListArguments](docs/Model/QuestionnaireTemplateRetrieveListArguments.md)
+ - [QuestionnaireTypeFiltersModel](docs/Model/QuestionnaireTypeFiltersModel.md)
+ - [QuestionnaireTypeListResponse](docs/Model/QuestionnaireTypeListResponse.md)
+ - [QuestionnaireTypeModel](docs/Model/QuestionnaireTypeModel.md)
+ - [QuestionnaireTypeOptionsModel](docs/Model/QuestionnaireTypeOptionsModel.md)
+ - [QuestionnaireTypeRetrieveListArguments](docs/Model/QuestionnaireTypeRetrieveListArguments.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
  - [RecurrenceListResponse](docs/Model/RecurrenceListResponse.md)
  - [RecurrenceModel](docs/Model/RecurrenceModel.md)
