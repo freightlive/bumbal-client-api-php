@@ -313,7 +313,7 @@ class QuestionnairetemplatequestionoptionApi
             throw new \InvalidArgumentException('Missing the required parameter $questionnaire_template_question_id when calling getPossibleFollowUpQuestions');
         }
         // parse inputs
-        $resourcePath = "/questionnaire-template-question-option/getPossibleFollowUpQuestions";
+        $resourcePath = "/questionnaire-template-question-option/get-possible-followup-questions";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -353,7 +353,7 @@ class QuestionnairetemplatequestionoptionApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse47',
-                '/questionnaire-template-question-option/getPossibleFollowUpQuestions'
+                '/questionnaire-template-question-option/get-possible-followup-questions'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse47', $httpHeader), $statusCode, $httpHeader];

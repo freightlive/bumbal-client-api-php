@@ -76,4 +76,18 @@ class QuestionnaireGetPreviousQuestionArgumentsTest extends \PHPUnit_Framework_T
     public function testQuestionnaireGetPreviousQuestionArguments()
     {
     }
+
+    /**
+     * Test attribute "questionnaire_id"
+     */
+    public function testPropertyQuestionnaireId()
+    {
+    }
+
+    /**
+     * Test attribute "questionnaire_question_id"
+     */
+    public function testPropertyQuestionnaireQuestionId()
+    {
+    }
 }

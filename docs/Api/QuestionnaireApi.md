@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**changeLanguage**](QuestionnaireApi.md#changeLanguage) | **POST** /questionnaire/changeLanguage | change language of a Questionnaire
+[**changeLanguage**](QuestionnaireApi.md#changeLanguage) | **POST** /questionnaire/change-language | change language of a Questionnaire
 [**deleteQuestionnaire**](QuestionnaireApi.md#deleteQuestionnaire) | **DELETE** /questionnaire/{questionnaireId} | Delete an Questionnaire entry
-[**getNextQuestion**](QuestionnaireApi.md#getNextQuestion) | **POST** /questionnaire/getNextQuestion | getNextQuestion of an Questionnaire
-[**getPreviousQuestion**](QuestionnaireApi.md#getPreviousQuestion) | **POST** /questionnaire/getPreviousQuestion | getPreviousQuestion of an Questionnaire
+[**getNextQuestion**](QuestionnaireApi.md#getNextQuestion) | **POST** /questionnaire/get-next-question | getNextQuestion of an Questionnaire
+[**getPreviousQuestion**](QuestionnaireApi.md#getPreviousQuestion) | **POST** /questionnaire/get-previous-question | getPreviousQuestion of an Questionnaire
 [**retrieveListQuestionnaire**](QuestionnaireApi.md#retrieveListQuestionnaire) | **PUT** /questionnaire | Retrieve List of Questionnaire
 [**retrieveQuestionnaire**](QuestionnaireApi.md#retrieveQuestionnaire) | **GET** /questionnaire/{questionnaireId} | Retrieve a Questionnaire
 

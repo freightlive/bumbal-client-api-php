@@ -78,6 +78,13 @@ class QuestionnaireChangeLanguageArgumentsTest extends \PHPUnit_Framework_TestCa
     }
 
     /**
+     * Test attribute "questionnaire_id"
+     */
+    public function testPropertyQuestionnaireId()
+    {
+    }
+
+    /**
      * Test attribute "lang_code"
      */
     public function testPropertyLangCode()

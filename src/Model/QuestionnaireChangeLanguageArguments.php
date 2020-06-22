@@ -54,6 +54,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'questionnaire_id' => 'int',
         'lang_code' => 'string'
     ];
 
@@ -62,6 +63,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'questionnaire_id' => null,
         'lang_code' => null
     ];
 
@@ -80,6 +82,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'questionnaire_id' => 'questionnaire_id',
         'lang_code' => 'lang_code'
     ];
 
@@ -89,6 +92,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'questionnaire_id' => 'setQuestionnaireId',
         'lang_code' => 'setLangCode'
     ];
 
@@ -98,6 +102,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'questionnaire_id' => 'getQuestionnaireId',
         'lang_code' => 'getLangCode'
     ];
 
@@ -132,6 +137,7 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['questionnaire_id'] = isset($data['questionnaire_id']) ? $data['questionnaire_id'] : null;
         $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
     }
 
@@ -159,6 +165,27 @@ class QuestionnaireChangeLanguageArguments implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets questionnaire_id
+     * @return int
+     */
+    public function getQuestionnaireId()
+    {
+        return $this->container['questionnaire_id'];
+    }
+
+    /**
+     * Sets questionnaire_id
+     * @param int $questionnaire_id Questionnaire ID
+     * @return $this
+     */
+    public function setQuestionnaireId($questionnaire_id)
+    {
+        $this->container['questionnaire_id'] = $questionnaire_id;
+
+        return $this;
+    }
 
     /**
      * Gets lang_code

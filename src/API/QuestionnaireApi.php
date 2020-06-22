@@ -118,7 +118,7 @@ class QuestionnaireApi
             throw new \InvalidArgumentException('Missing the required parameter $arguments when calling changeLanguage');
         }
         // parse inputs
-        $resourcePath = "/questionnaire/changeLanguage";
+        $resourcePath = "/questionnaire/change-language";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -155,7 +155,7 @@ class QuestionnaireApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse30',
-                '/questionnaire/changeLanguage'
+                '/questionnaire/change-language'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse30', $httpHeader), $statusCode, $httpHeader];
@@ -321,7 +321,7 @@ class QuestionnaireApi
             throw new \InvalidArgumentException('Missing the required parameter $arguments when calling getNextQuestion');
         }
         // parse inputs
-        $resourcePath = "/questionnaire/getNextQuestion";
+        $resourcePath = "/questionnaire/get-next-question";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -358,7 +358,7 @@ class QuestionnaireApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse30',
-                '/questionnaire/getNextQuestion'
+                '/questionnaire/get-next-question'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse30', $httpHeader), $statusCode, $httpHeader];
@@ -421,7 +421,7 @@ class QuestionnaireApi
             throw new \InvalidArgumentException('Missing the required parameter $arguments when calling getPreviousQuestion');
         }
         // parse inputs
-        $resourcePath = "/questionnaire/getPreviousQuestion";
+        $resourcePath = "/questionnaire/get-previous-question";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -458,7 +458,7 @@ class QuestionnaireApi
                 $httpBody,
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse30',
-                '/questionnaire/getPreviousQuestion'
+                '/questionnaire/get-previous-question'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse30', $httpHeader), $statusCode, $httpHeader];

@@ -54,7 +54,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'questionnaire_id' => 'int',
+        'questionnaire_question_id' => 'int'
     ];
 
     /**
@@ -62,7 +63,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        
+        'questionnaire_id' => null,
+        'questionnaire_question_id' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +82,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'questionnaire_id' => 'questionnaire_id',
+        'questionnaire_question_id' => 'questionnaire_question_id'
     ];
 
 
@@ -89,7 +92,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'questionnaire_id' => 'setQuestionnaireId',
+        'questionnaire_question_id' => 'setQuestionnaireQuestionId'
     ];
 
 
@@ -98,7 +102,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'questionnaire_id' => 'getQuestionnaireId',
+        'questionnaire_question_id' => 'getQuestionnaireQuestionId'
     ];
 
     public static function attributeMap()
@@ -132,6 +137,8 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['questionnaire_id'] = isset($data['questionnaire_id']) ? $data['questionnaire_id'] : null;
+        $this->container['questionnaire_question_id'] = isset($data['questionnaire_question_id']) ? $data['questionnaire_question_id'] : null;
     }
 
     /**
@@ -158,6 +165,48 @@ class QuestionnaireGetPreviousQuestionArguments implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets questionnaire_id
+     * @return int
+     */
+    public function getQuestionnaireId()
+    {
+        return $this->container['questionnaire_id'];
+    }
+
+    /**
+     * Sets questionnaire_id
+     * @param int $questionnaire_id Questionnaire ID
+     * @return $this
+     */
+    public function setQuestionnaireId($questionnaire_id)
+    {
+        $this->container['questionnaire_id'] = $questionnaire_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets questionnaire_question_id
+     * @return int
+     */
+    public function getQuestionnaireQuestionId()
+    {
+        return $this->container['questionnaire_question_id'];
+    }
+
+    /**
+     * Sets questionnaire_question_id
+     * @param int $questionnaire_question_id Question ID
+     * @return $this
+     */
+    public function setQuestionnaireQuestionId($questionnaire_question_id)
+    {
+        $this->container['questionnaire_question_id'] = $questionnaire_question_id;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
