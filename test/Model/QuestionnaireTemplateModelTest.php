@@ -92,6 +92,20 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brand_ids"
+     */
+    public function testPropertyBrandIds()
+    {
+    }
+
+    /**
+     * Test attribute "brand_names"
+     */
+    public function testPropertyBrandNames()
+    {
+    }
+
+    /**
      * Test attribute "zone_ids"
      */
     public function testPropertyZoneIds()

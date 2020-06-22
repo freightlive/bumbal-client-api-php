@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplate**
-> \BumbalClient\Model\ApiResponse41 createQuestionnaireTemplate($body)
+> \BumbalClient\Model\ApiResponse40 createQuestionnaireTemplate($body)
 
 Add a new QuestionnaireTemplate
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse41**](../Model/ApiResponse41.md)
+[**\BumbalClient\Model\ApiResponse40**](../Model/ApiResponse40.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplate**
-> \BumbalClient\Model\ApiResponse38 deleteQuestionnaireTemplate($notification_id)
+> \BumbalClient\Model\ApiResponse37 deleteQuestionnaireTemplate($notification_id)
 
 Delete an QuestionnaireTemplate entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse38**](../Model/ApiResponse38.md)
+[**\BumbalClient\Model\ApiResponse37**](../Model/ApiResponse37.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplate**
-> \BumbalClient\Model\ApiResponse37 updateQuestionnaireTemplate($notification_id, $body)
+> \BumbalClient\Model\ApiResponse36 updateQuestionnaireTemplate($notification_id, $body)
 
 Update a specific QuestionnaireTemplate object
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse37**](../Model/ApiResponse37.md)
+[**\BumbalClient\Model\ApiResponse36**](../Model/ApiResponse36.md)
 
 ### Authorization
 

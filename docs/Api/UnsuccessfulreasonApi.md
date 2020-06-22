@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createUnsuccessfulReason**
-> \BumbalClient\Model\ApiResponse63 createUnsuccessfulReason($body)
+> \BumbalClient\Model\ApiResponse62 createUnsuccessfulReason($body)
 
 Add a new UnsuccessfulReason
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse63**](../Model/ApiResponse63.md)
+[**\BumbalClient\Model\ApiResponse62**](../Model/ApiResponse62.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteUnsuccessfulReason**
-> \BumbalClient\Model\ApiResponse60 deleteUnsuccessfulReason($unsuccessful_reason_id)
+> \BumbalClient\Model\ApiResponse59 deleteUnsuccessfulReason($unsuccessful_reason_id)
 
 Delete a UnsuccessfulReason entry
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse60**](../Model/ApiResponse60.md)
+[**\BumbalClient\Model\ApiResponse59**](../Model/ApiResponse59.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUnsuccessfulReason**
-> \BumbalClient\Model\ApiResponse59 updateUnsuccessfulReason($unsuccessful_reason_id, $body)
+> \BumbalClient\Model\ApiResponse58 updateUnsuccessfulReason($unsuccessful_reason_id, $body)
 
 Update a specific UnsuccessfulReason object
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse59**](../Model/ApiResponse59.md)
+[**\BumbalClient\Model\ApiResponse58**](../Model/ApiResponse58.md)
 
 ### Authorization
 

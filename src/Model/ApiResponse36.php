@@ -54,7 +54,10 @@ class ApiResponse36 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'lang_code' => 'string'
+        'message' => 'string',
+        'type' => 'string',
+        'code' => 'float',
+        'additional_data' => 'object'
     ];
 
     /**
@@ -62,7 +65,10 @@ class ApiResponse36 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'lang_code' => null
+        'message' => null,
+        'type' => null,
+        'code' => null,
+        'additional_data' => null
     ];
 
     public static function swaggerTypes()
@@ -80,7 +86,10 @@ class ApiResponse36 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'lang_code' => 'lang_code'
+        'message' => 'message',
+        'type' => 'type',
+        'code' => 'code',
+        'additional_data' => 'additional_data'
     ];
 
 
@@ -89,7 +98,10 @@ class ApiResponse36 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'lang_code' => 'setLangCode'
+        'message' => 'setMessage',
+        'type' => 'setType',
+        'code' => 'setCode',
+        'additional_data' => 'setAdditionalData'
     ];
 
 
@@ -98,7 +110,10 @@ class ApiResponse36 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'lang_code' => 'getLangCode'
+        'message' => 'getMessage',
+        'type' => 'getType',
+        'code' => 'getCode',
+        'additional_data' => 'getAdditionalData'
     ];
 
     public static function attributeMap()
@@ -132,7 +147,10 @@ class ApiResponse36 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['additional_data'] = isset($data['additional_data']) ? $data['additional_data'] : null;
     }
 
     /**
@@ -161,22 +179,85 @@ class ApiResponse36 implements ArrayAccess
 
 
     /**
-     * Gets lang_code
+     * Gets message
      * @return string
      */
-    public function getLangCode()
+    public function getMessage()
     {
-        return $this->container['lang_code'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets lang_code
-     * @param string $lang_code Language code
+     * Sets message
+     * @param string $message Message describing the code
      * @return $this
      */
-    public function setLangCode($lang_code)
+    public function setMessage($message)
     {
-        $this->container['lang_code'] = $lang_code;
+        $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type Ready
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return float
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param float $code 
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_data
+     * @return object
+     */
+    public function getAdditionalData()
+    {
+        return $this->container['additional_data'];
+    }
+
+    /**
+     * Sets additional_data
+     * @param object $additional_data
+     * @return $this
+     */
+    public function setAdditionalData($additional_data)
+    {
+        $this->container['additional_data'] = $additional_data;
 
         return $this;
     }

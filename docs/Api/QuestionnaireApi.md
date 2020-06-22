@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **changeLanguage**
-> \BumbalClient\Model\ApiResponse30 changeLanguage($questionnaire)
+> \BumbalClient\Model\ApiResponse30 changeLanguage($arguments)
 
 change language of a Questionnaire
 
@@ -30,10 +30,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireApi();
-$questionnaire = new \BumbalClient\Model\ApiResponse36(); // \BumbalClient\Model\ApiResponse36 | questionnaire information
+$arguments = new \BumbalClient\Model\QuestionnaireChangeLanguageArguments(); // \BumbalClient\Model\QuestionnaireChangeLanguageArguments | Request Arguments
 
 try {
-    $result = $api_instance->changeLanguage($questionnaire);
+    $result = $api_instance->changeLanguage($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireApi->changeLanguage: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **questionnaire** | [**\BumbalClient\Model\ApiResponse36**](../Model/ApiResponse36.md)| questionnaire information |
+ **arguments** | [**\BumbalClient\Model\QuestionnaireChangeLanguageArguments**](../Model/QuestionnaireChangeLanguageArguments.md)| Request Arguments |
 
 ### Return type
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getNextQuestion**
-> \BumbalClient\Model\ApiResponse30 getNextQuestion($questionnaire)
+> \BumbalClient\Model\ApiResponse30 getNextQuestion($arguments)
 
 getNextQuestion of an Questionnaire
 
@@ -130,10 +130,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireApi();
-$questionnaire = NULL; // object | questionnaire information
+$arguments = new \BumbalClient\Model\QuestionnaireGetNextQuestionArguments(); // \BumbalClient\Model\QuestionnaireGetNextQuestionArguments | Request Arguments
 
 try {
-    $result = $api_instance->getNextQuestion($questionnaire);
+    $result = $api_instance->getNextQuestion($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireApi->getNextQuestion: ', $e->getMessage(), PHP_EOL;
@@ -145,7 +145,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **questionnaire** | **object**| questionnaire information |
+ **arguments** | [**\BumbalClient\Model\QuestionnaireGetNextQuestionArguments**](../Model/QuestionnaireGetNextQuestionArguments.md)| Request Arguments |
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPreviousQuestion**
-> \BumbalClient\Model\ApiResponse30 getPreviousQuestion($questionnaire)
+> \BumbalClient\Model\ApiResponse30 getPreviousQuestion($arguments)
 
 getPreviousQuestion of an Questionnaire
 
@@ -180,10 +180,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireApi();
-$questionnaire = NULL; // object | questionnaire information
+$arguments = new \BumbalClient\Model\QuestionnaireGetPreviousQuestionArguments(); // \BumbalClient\Model\QuestionnaireGetPreviousQuestionArguments | Request Arguments
 
 try {
-    $result = $api_instance->getPreviousQuestion($questionnaire);
+    $result = $api_instance->getPreviousQuestion($arguments);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireApi->getPreviousQuestion: ', $e->getMessage(), PHP_EOL;
@@ -195,7 +195,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **questionnaire** | **object**| questionnaire information |
+ **arguments** | [**\BumbalClient\Model\QuestionnaireGetPreviousQuestionArguments**](../Model/QuestionnaireGetPreviousQuestionArguments.md)| Request Arguments |
 
 ### Return type
 

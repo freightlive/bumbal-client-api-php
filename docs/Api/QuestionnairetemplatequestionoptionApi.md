@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplateQuestionOption**
-> \BumbalClient\Model\ApiResponse51 createQuestionnaireTemplateQuestionOption($body)
+> \BumbalClient\Model\ApiResponse50 createQuestionnaireTemplateQuestionOption($body)
 
 Add a new QuestionnaireTemplateQuestionOption
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse51**](../Model/ApiResponse51.md)
+[**\BumbalClient\Model\ApiResponse50**](../Model/ApiResponse50.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestionOption**
-> \BumbalClient\Model\ApiResponse48 deleteQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id)
+> \BumbalClient\Model\ApiResponse47 deleteQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id)
 
 Delete an QuestionnaireTemplateQuestionOption entry
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse48**](../Model/ApiResponse48.md)
+[**\BumbalClient\Model\ApiResponse47**](../Model/ApiResponse47.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPossibleFollowUpQuestions**
-> \BumbalClient\Model\ApiResponse48 getPossibleFollowUpQuestions($questionnaire_template_question_id)
+> \BumbalClient\Model\ApiResponse47 getPossibleFollowUpQuestions($questionnaire_template_question_id)
 
 get possible follow up questions
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse48**](../Model/ApiResponse48.md)
+[**\BumbalClient\Model\ApiResponse47**](../Model/ApiResponse47.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionOption**
-> \BumbalClient\Model\ApiResponse47 updateQuestionnaireTemplateQuestionOption($notification_id, $body)
+> \BumbalClient\Model\ApiResponse46 updateQuestionnaireTemplateQuestionOption($notification_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionOption object
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse47**](../Model/ApiResponse47.md)
+[**\BumbalClient\Model\ApiResponse46**](../Model/ApiResponse46.md)
 
 ### Authorization
 

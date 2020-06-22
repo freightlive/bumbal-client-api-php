@@ -92,13 +92,13 @@ class QuestionnaireApi
      *
      * change language of a Questionnaire
      *
-     * @param \BumbalClient\Model\ApiResponse36 $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireChangeLanguageArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse30
      */
-    public function changeLanguage($questionnaire)
+    public function changeLanguage($arguments)
     {
-        list($response) = $this->changeLanguageWithHttpInfo($questionnaire);
+        list($response) = $this->changeLanguageWithHttpInfo($arguments);
         return $response;
     }
 
@@ -107,15 +107,15 @@ class QuestionnaireApi
      *
      * change language of a Questionnaire
      *
-     * @param \BumbalClient\Model\ApiResponse36 $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireChangeLanguageArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse30, HTTP status code, HTTP response headers (array of strings)
      */
-    public function changeLanguageWithHttpInfo($questionnaire)
+    public function changeLanguageWithHttpInfo($arguments)
     {
-        // verify the required parameter 'questionnaire' is set
-        if ($questionnaire === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $questionnaire when calling changeLanguage');
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling changeLanguage');
         }
         // parse inputs
         $resourcePath = "/questionnaire/changeLanguage";
@@ -131,8 +131,8 @@ class QuestionnaireApi
 
         // body params
         $_tempBody = null;
-        if (isset($questionnaire)) {
-            $_tempBody = $questionnaire;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
         }
 
         // for model (json/xml)
@@ -295,13 +295,13 @@ class QuestionnaireApi
      *
      * getNextQuestion of an Questionnaire
      *
-     * @param object $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireGetNextQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse30
      */
-    public function getNextQuestion($questionnaire)
+    public function getNextQuestion($arguments)
     {
-        list($response) = $this->getNextQuestionWithHttpInfo($questionnaire);
+        list($response) = $this->getNextQuestionWithHttpInfo($arguments);
         return $response;
     }
 
@@ -310,15 +310,15 @@ class QuestionnaireApi
      *
      * getNextQuestion of an Questionnaire
      *
-     * @param object $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireGetNextQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse30, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getNextQuestionWithHttpInfo($questionnaire)
+    public function getNextQuestionWithHttpInfo($arguments)
     {
-        // verify the required parameter 'questionnaire' is set
-        if ($questionnaire === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $questionnaire when calling getNextQuestion');
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling getNextQuestion');
         }
         // parse inputs
         $resourcePath = "/questionnaire/getNextQuestion";
@@ -334,8 +334,8 @@ class QuestionnaireApi
 
         // body params
         $_tempBody = null;
-        if (isset($questionnaire)) {
-            $_tempBody = $questionnaire;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
         }
 
         // for model (json/xml)
@@ -395,13 +395,13 @@ class QuestionnaireApi
      *
      * getPreviousQuestion of an Questionnaire
      *
-     * @param object $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireGetPreviousQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse30
      */
-    public function getPreviousQuestion($questionnaire)
+    public function getPreviousQuestion($arguments)
     {
-        list($response) = $this->getPreviousQuestionWithHttpInfo($questionnaire);
+        list($response) = $this->getPreviousQuestionWithHttpInfo($arguments);
         return $response;
     }
 
@@ -410,15 +410,15 @@ class QuestionnaireApi
      *
      * getPreviousQuestion of an Questionnaire
      *
-     * @param object $questionnaire questionnaire information (required)
+     * @param \BumbalClient\Model\QuestionnaireGetPreviousQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse30, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPreviousQuestionWithHttpInfo($questionnaire)
+    public function getPreviousQuestionWithHttpInfo($arguments)
     {
-        // verify the required parameter 'questionnaire' is set
-        if ($questionnaire === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $questionnaire when calling getPreviousQuestion');
+        // verify the required parameter 'arguments' is set
+        if ($arguments === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $arguments when calling getPreviousQuestion');
         }
         // parse inputs
         $resourcePath = "/questionnaire/getPreviousQuestion";
@@ -434,8 +434,8 @@ class QuestionnaireApi
 
         // body params
         $_tempBody = null;
-        if (isset($questionnaire)) {
-            $_tempBody = $questionnaire;
+        if (isset($arguments)) {
+            $_tempBody = $arguments;
         }
 
         // for model (json/xml)

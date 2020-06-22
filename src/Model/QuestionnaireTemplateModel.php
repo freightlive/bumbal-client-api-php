@@ -56,6 +56,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'active' => 'bool',
+        'brand_ids' => 'int[]',
+        'brand_names' => 'string[]',
         'zone_ids' => 'int[]',
         'zone_names' => 'string[]',
         'tag_ids' => 'int[]',
@@ -75,6 +77,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'active' => null,
+        'brand_ids' => null,
+        'brand_names' => null,
         'zone_ids' => null,
         'zone_names' => null,
         'tag_ids' => null,
@@ -104,6 +108,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'active' => 'active',
+        'brand_ids' => 'brand_ids',
+        'brand_names' => 'brand_names',
         'zone_ids' => 'zone_ids',
         'zone_names' => 'zone_names',
         'tag_ids' => 'tag_ids',
@@ -124,6 +130,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'active' => 'setActive',
+        'brand_ids' => 'setBrandIds',
+        'brand_names' => 'setBrandNames',
         'zone_ids' => 'setZoneIds',
         'zone_names' => 'setZoneNames',
         'tag_ids' => 'setTagIds',
@@ -144,6 +152,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'active' => 'getActive',
+        'brand_ids' => 'getBrandIds',
+        'brand_names' => 'getBrandNames',
         'zone_ids' => 'getZoneIds',
         'zone_names' => 'getZoneNames',
         'tag_ids' => 'getTagIds',
@@ -189,6 +199,8 @@ class QuestionnaireTemplateModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
+        $this->container['brand_names'] = isset($data['brand_names']) ? $data['brand_names'] : null;
         $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
@@ -264,6 +276,48 @@ class QuestionnaireTemplateModel implements ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_ids
+     * @return int[]
+     */
+    public function getBrandIds()
+    {
+        return $this->container['brand_ids'];
+    }
+
+    /**
+     * Sets brand_ids
+     * @param int[] $brand_ids Brand ids
+     * @return $this
+     */
+    public function setBrandIds($brand_ids)
+    {
+        $this->container['brand_ids'] = $brand_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_names
+     * @return string[]
+     */
+    public function getBrandNames()
+    {
+        return $this->container['brand_names'];
+    }
+
+    /**
+     * Sets brand_names
+     * @param string[] $brand_names Brand names
+     * @return $this
+     */
+    public function setBrandNames($brand_names)
+    {
+        $this->container['brand_names'] = $brand_names;
 
         return $this;
     }

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse58 createQuestionnaireTemplateQuestionText($body)
+> \BumbalClient\Model\ApiResponse57 createQuestionnaireTemplateQuestionText($body)
 
 Add a new QuestionnaireTemplateQuestionText
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse58**](../Model/ApiResponse58.md)
+[**\BumbalClient\Model\ApiResponse57**](../Model/ApiResponse57.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse57 deleteQuestionnaireTemplateQuestionText($notification_id)
+> \BumbalClient\Model\ApiResponse56 deleteQuestionnaireTemplateQuestionText($notification_id)
 
 Delete an QuestionnaireTemplateQuestionText entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse57**](../Model/ApiResponse57.md)
+[**\BumbalClient\Model\ApiResponse56**](../Model/ApiResponse56.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionText**
-> \BumbalClient\Model\ApiResponse56 updateQuestionnaireTemplateQuestionText($notification_id, $body)
+> \BumbalClient\Model\ApiResponse55 updateQuestionnaireTemplateQuestionText($notification_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionText object
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse56**](../Model/ApiResponse56.md)
+[**\BumbalClient\Model\ApiResponse55**](../Model/ApiResponse55.md)
 
 ### Authorization
 

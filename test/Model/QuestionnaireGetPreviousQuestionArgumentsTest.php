@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiResponse50Test
+ * QuestionnaireGetPreviousQuestionArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * ApiResponse50Test Class Doc Comment
+ * QuestionnaireGetPreviousQuestionArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description ApiResponse50
+// * @description QuestionnaireGetPreviousQuestionArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ApiResponse50Test extends \PHPUnit_Framework_TestCase
+class QuestionnaireGetPreviousQuestionArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,9 @@ class ApiResponse50Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ApiResponse50"
+     * Test "QuestionnaireGetPreviousQuestionArguments"
      */
-    public function testApiResponse50()
-    {
-    }
-
-    /**
-     * Test attribute "message"
-     */
-    public function testPropertyMessage()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
-     * Test attribute "code"
-     */
-    public function testPropertyCode()
-    {
-    }
-
-    /**
-     * Test attribute "additional_data"
-     */
-    public function testPropertyAdditionalData()
+    public function testQuestionnaireGetPreviousQuestionArguments()
     {
     }
 }

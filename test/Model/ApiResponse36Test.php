@@ -78,9 +78,30 @@ class ApiResponse36Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "lang_code"
+     * Test attribute "message"
      */
-    public function testPropertyLangCode()
+    public function testPropertyMessage()
+    {
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+    }
+
+    /**
+     * Test attribute "additional_data"
+     */
+    public function testPropertyAdditionalData()
     {
     }
 }

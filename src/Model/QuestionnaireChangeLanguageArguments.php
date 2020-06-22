@@ -1,6 +1,6 @@
 <?php
 /**
- * ApiResponse68
+ * QuestionnaireChangeLanguageArguments
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * ApiResponse68 Class Doc Comment
+ * QuestionnaireChangeLanguageArguments Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ApiResponse68 implements ArrayAccess
+class QuestionnaireChangeLanguageArguments implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,14 @@ class ApiResponse68 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'ApiResponse_68';
+    protected static $swaggerModelName = 'QuestionnaireChangeLanguageArguments';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'message' => 'string',
-        'type' => 'string',
-        'code' => 'float',
-        'additional_data' => 'object'
+        'lang_code' => 'string'
     ];
 
     /**
@@ -65,10 +62,7 @@ class ApiResponse68 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'message' => null,
-        'type' => null,
-        'code' => null,
-        'additional_data' => null
+        'lang_code' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +80,7 @@ class ApiResponse68 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
-        'type' => 'type',
-        'code' => 'code',
-        'additional_data' => 'additional_data'
+        'lang_code' => 'lang_code'
     ];
 
 
@@ -98,10 +89,7 @@ class ApiResponse68 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
-        'type' => 'setType',
-        'code' => 'setCode',
-        'additional_data' => 'setAdditionalData'
+        'lang_code' => 'setLangCode'
     ];
 
 
@@ -110,10 +98,7 @@ class ApiResponse68 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
-        'type' => 'getType',
-        'code' => 'getCode',
-        'additional_data' => 'getAdditionalData'
+        'lang_code' => 'getLangCode'
     ];
 
     public static function attributeMap()
@@ -147,10 +132,7 @@ class ApiResponse68 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['additional_data'] = isset($data['additional_data']) ? $data['additional_data'] : null;
+        $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
     }
 
     /**
@@ -179,85 +161,22 @@ class ApiResponse68 implements ArrayAccess
 
 
     /**
-     * Gets message
+     * Gets lang_code
      * @return string
      */
-    public function getMessage()
+    public function getLangCode()
     {
-        return $this->container['message'];
+        return $this->container['lang_code'];
     }
 
     /**
-     * Sets message
-     * @param string $message Message describing the code
+     * Sets lang_code
+     * @param string $lang_code Language code
      * @return $this
      */
-    public function setMessage($message)
+    public function setLangCode($lang_code)
     {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Ready
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     * @return float
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     * @param float $code 
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets additional_data
-     * @return object
-     */
-    public function getAdditionalData()
-    {
-        return $this->container['additional_data'];
-    }
-
-    /**
-     * Sets additional_data
-     * @param object $additional_data
-     * @return $this
-     */
-    public function setAdditionalData($additional_data)
-    {
-        $this->container['additional_data'] = $additional_data;
+        $this->container['lang_code'] = $lang_code;
 
         return $this;
     }

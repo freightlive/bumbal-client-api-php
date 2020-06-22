@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
 **active** | **bool** | if active&#x3D;0: QuestionnaireTemplate has been removed and is no longer visible in any bumbal interface | [optional] 
+**brand_ids** | **int[]** | Brand ids | [optional] 
+**brand_names** | **string[]** | Brand names | [optional] 
 **zone_ids** | **int[]** | Zone ids | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **tag_ids** | **int[]** | Tag ids | [optional] 

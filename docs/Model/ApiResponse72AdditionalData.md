@@ -1,10 +1,9 @@
-# ApiResponse38
+# ApiResponse72AdditionalData
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **string** | Message describing the error | [optional] 
-**code** | **float** | Error code | [optional] 
+**vehicle_type_id** | **float** | ID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
