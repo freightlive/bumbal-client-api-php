@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **changeLanguage**
-> \BumbalClient\Model\ApiResponse30 changeLanguage($arguments)
+> \BumbalClient\Model\QuestionnaireChangeLanguageResponse changeLanguage($arguments)
 
 change language of a Questionnaire
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse30**](../Model/ApiResponse30.md)
+[**\BumbalClient\Model\QuestionnaireChangeLanguageResponse**](../Model/QuestionnaireChangeLanguageResponse.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPreviousQuestion**
-> \BumbalClient\Model\ApiResponse30 getPreviousQuestion($arguments)
+> \BumbalClient\Model\QuestionnaireQuestionModel getPreviousQuestion($arguments)
 
 getPreviousQuestion of an Questionnaire
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse30**](../Model/ApiResponse30.md)
+[**\BumbalClient\Model\QuestionnaireQuestionModel**](../Model/QuestionnaireQuestionModel.md)
 
 ### Authorization
 
