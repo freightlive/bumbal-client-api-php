@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **lang_code** | **string** | ISO lang code | [optional] 
 **answers** | [**\BumbalClient\Model\QuestionnaireAnswerModel[]**](QuestionnaireAnswerModel.md) |  | [optional] 
 **object_type** | **object** | Object type IDs available for this questionnaire | [optional] 
-**object_type_name** | **object** | Object type names available for this questionnaire | [optional] 
+**object_type_name** | **string** | Object type name for the bound object to this questionnaire | [optional] 
 **object_id** | **int** | Object ID | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

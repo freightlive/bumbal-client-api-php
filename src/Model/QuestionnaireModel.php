@@ -63,7 +63,7 @@ class QuestionnaireModel implements ArrayAccess
         'lang_code' => 'string',
         'answers' => '\BumbalClient\Model\QuestionnaireAnswerModel[]',
         'object_type' => 'object',
-        'object_type_name' => 'object',
+        'object_type_name' => 'string',
         'object_id' => 'int'
     ];
 
@@ -81,7 +81,7 @@ class QuestionnaireModel implements ArrayAccess
         'lang_code' => 'string',
         'answers' => null,
         'object_type' => null,
-        'object_type_name' => null,
+        'object_type_name' => 'string',
         'object_id' => null
     ];
 
@@ -411,7 +411,7 @@ class QuestionnaireModel implements ArrayAccess
 
     /**
      * Gets object_type_name
-     * @return object
+     * @return string
      */
     public function getObjectTypeName()
     {
@@ -420,7 +420,7 @@ class QuestionnaireModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this questionnaire
+     * @param string $object_type_name Object type name for the bound object to this questionnaire
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

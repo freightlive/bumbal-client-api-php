@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getNextQuestion**
-> \BumbalClient\Model\ApiResponse30 getNextQuestion($arguments)
+> \BumbalClient\Model\QuestionnaireQuestionModel getNextQuestion($arguments)
 
 getNextQuestion of an Questionnaire
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse30**](../Model/ApiResponse30.md)
+[**\BumbalClient\Model\QuestionnaireQuestionModel**](../Model/QuestionnaireQuestionModel.md)
 
 ### Authorization
 

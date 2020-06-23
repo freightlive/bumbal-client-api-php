@@ -297,7 +297,7 @@ class QuestionnaireApi
      *
      * @param \BumbalClient\Model\QuestionnaireGetNextQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse30
+     * @return \BumbalClient\Model\QuestionnaireQuestionModel
      */
     public function getNextQuestion($arguments)
     {
@@ -312,7 +312,7 @@ class QuestionnaireApi
      *
      * @param \BumbalClient\Model\QuestionnaireGetNextQuestionArguments $arguments Request Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse30, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\QuestionnaireQuestionModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNextQuestionWithHttpInfo($arguments)
     {
@@ -357,15 +357,15 @@ class QuestionnaireApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse30',
+                '\BumbalClient\Model\QuestionnaireQuestionModel',
                 '/questionnaire/get-next-question'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse30', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\QuestionnaireQuestionModel', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse30', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\QuestionnaireQuestionModel', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
