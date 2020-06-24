@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **order** | **int** | Order | [optional] 
 **question** | **string** | Textuale representation of the question | [optional] 
 **answer** | **string** | Textuale representation of the answer | [optional] 
-**option_id** | **int** | Unique Identifier | [optional] 
+**chosen_options** | **int[]** | Chosen options id&#39;s | [optional] 
+**answer_options** | **int[]** | Answer options | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

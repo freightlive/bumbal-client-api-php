@@ -61,7 +61,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'order' => 'int',
         'question' => 'string',
         'answer' => 'string',
-        'option_id' => 'int'
+        'chosen_options' => 'int[]',
+        'answer_options' => 'int[]'
     ];
 
     /**
@@ -76,7 +77,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'order' => 'int64',
         'question' => 'string',
         'answer' => 'string',
-        'option_id' => 'int64'
+        'chosen_options' => null,
+        'answer_options' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'order' => 'order',
         'question' => 'question',
         'answer' => 'answer',
-        'option_id' => 'option_id'
+        'chosen_options' => 'chosen_options',
+        'answer_options' => 'answer_options'
     ];
 
 
@@ -117,7 +120,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'order' => 'setOrder',
         'question' => 'setQuestion',
         'answer' => 'setAnswer',
-        'option_id' => 'setOptionId'
+        'chosen_options' => 'setChosenOptions',
+        'answer_options' => 'setAnswerOptions'
     ];
 
 
@@ -133,7 +137,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         'order' => 'getOrder',
         'question' => 'getQuestion',
         'answer' => 'getAnswer',
-        'option_id' => 'getOptionId'
+        'chosen_options' => 'getChosenOptions',
+        'answer_options' => 'getAnswerOptions'
     ];
 
     public static function attributeMap()
@@ -174,7 +179,8 @@ class QuestionnaireAnswerModel implements ArrayAccess
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
         $this->container['question'] = isset($data['question']) ? $data['question'] : null;
         $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
-        $this->container['option_id'] = isset($data['option_id']) ? $data['option_id'] : null;
+        $this->container['chosen_options'] = isset($data['chosen_options']) ? $data['chosen_options'] : null;
+        $this->container['answer_options'] = isset($data['answer_options']) ? $data['answer_options'] : null;
     }
 
     /**
@@ -350,22 +356,43 @@ class QuestionnaireAnswerModel implements ArrayAccess
     }
 
     /**
-     * Gets option_id
-     * @return int
+     * Gets chosen_options
+     * @return int[]
      */
-    public function getOptionId()
+    public function getChosenOptions()
     {
-        return $this->container['option_id'];
+        return $this->container['chosen_options'];
     }
 
     /**
-     * Sets option_id
-     * @param int $option_id Unique Identifier
+     * Sets chosen_options
+     * @param int[] $chosen_options Chosen options id's
      * @return $this
      */
-    public function setOptionId($option_id)
+    public function setChosenOptions($chosen_options)
     {
-        $this->container['option_id'] = $option_id;
+        $this->container['chosen_options'] = $chosen_options;
+
+        return $this;
+    }
+
+    /**
+     * Gets answer_options
+     * @return int[]
+     */
+    public function getAnswerOptions()
+    {
+        return $this->container['answer_options'];
+    }
+
+    /**
+     * Sets answer_options
+     * @param int[] $answer_options Answer options
+     * @return $this
+     */
+    public function setAnswerOptions($answer_options)
+    {
+        $this->container['answer_options'] = $answer_options;
 
         return $this;
     }

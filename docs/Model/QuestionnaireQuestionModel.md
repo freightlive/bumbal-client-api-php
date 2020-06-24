@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **question** | **string** | Question | [optional] 
 **answer_options** | [**\BumbalClient\Model\QuestionnaireQuestionOptionModel[]**](QuestionnaireQuestionOptionModel.md) |  | [optional] 
 **answer** | **string** | Answer | [optional] 
-**option_id** | **int** | Chosen option as answer | [optional] 
+**chosen_options** | **int[]** | Chosen option as answer | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

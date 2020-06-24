@@ -127,9 +127,16 @@ class QuestionnaireAnswerModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "option_id"
+     * Test attribute "chosen_options"
      */
-    public function testPropertyOptionId()
+    public function testPropertyChosenOptions()
+    {
+    }
+
+    /**
+     * Test attribute "answer_options"
+     */
+    public function testPropertyAnswerOptions()
     {
     }
 }
