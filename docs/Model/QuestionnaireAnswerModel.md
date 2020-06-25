@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **answer** | **string** | Textuale representation of the answer | [optional] 
 **chosen_options** | **int[]** | Chosen options id&#39;s | [optional] 
 **answer_options** | **int[]** | Answer options | [optional] 
+**questionnaire_question_type_name** | **string** | Question type name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

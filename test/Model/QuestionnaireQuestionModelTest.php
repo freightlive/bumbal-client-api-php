@@ -132,4 +132,11 @@ class QuestionnaireQuestionModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyChosenOptions()
     {
     }
+
+    /**
+     * Test attribute "questionnaire_question_type_name"
+     */
+    public function testPropertyQuestionnaireQuestionTypeName()
+    {
+    }
 }
