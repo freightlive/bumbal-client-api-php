@@ -57,7 +57,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         'questionnaire_id' => 'int',
         'questionnaire_question_id' => 'int',
         'order' => 'int',
-        'question_type_name' => 'string',
         'question' => 'string',
         'answer_options' => '\BumbalClient\Model\QuestionnaireQuestionOptionModel[]',
         'answer' => 'string',
@@ -73,7 +72,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         'questionnaire_id' => null,
         'questionnaire_question_id' => null,
         'order' => null,
-        'question_type_name' => null,
         'question' => null,
         'answer_options' => null,
         'answer' => null,
@@ -99,7 +97,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         'questionnaire_id' => 'questionnaire_id',
         'questionnaire_question_id' => 'questionnaire_question_id',
         'order' => 'order',
-        'question_type_name' => 'question_type_name',
         'question' => 'question',
         'answer_options' => 'answer_options',
         'answer' => 'answer',
@@ -116,7 +113,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         'questionnaire_id' => 'setQuestionnaireId',
         'questionnaire_question_id' => 'setQuestionnaireQuestionId',
         'order' => 'setOrder',
-        'question_type_name' => 'setQuestionTypeName',
         'question' => 'setQuestion',
         'answer_options' => 'setAnswerOptions',
         'answer' => 'setAnswer',
@@ -133,7 +129,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         'questionnaire_id' => 'getQuestionnaireId',
         'questionnaire_question_id' => 'getQuestionnaireQuestionId',
         'order' => 'getOrder',
-        'question_type_name' => 'getQuestionTypeName',
         'question' => 'getQuestion',
         'answer_options' => 'getAnswerOptions',
         'answer' => 'getAnswer',
@@ -175,7 +170,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
         $this->container['questionnaire_id'] = isset($data['questionnaire_id']) ? $data['questionnaire_id'] : null;
         $this->container['questionnaire_question_id'] = isset($data['questionnaire_question_id']) ? $data['questionnaire_question_id'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
-        $this->container['question_type_name'] = isset($data['question_type_name']) ? $data['question_type_name'] : null;
         $this->container['question'] = isset($data['question']) ? $data['question'] : null;
         $this->container['answer_options'] = isset($data['answer_options']) ? $data['answer_options'] : null;
         $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
@@ -267,27 +261,6 @@ class QuestionnaireQuestionModel implements ArrayAccess
     public function setOrder($order)
     {
         $this->container['order'] = $order;
-
-        return $this;
-    }
-
-    /**
-     * Gets question_type_name
-     * @return string
-     */
-    public function getQuestionTypeName()
-    {
-        return $this->container['question_type_name'];
-    }
-
-    /**
-     * Sets question_type_name
-     * @param string $question_type_name Question type name
-     * @return $this
-     */
-    public function setQuestionTypeName($question_type_name)
-    {
-        $this->container['question_type_name'] = $question_type_name;
 
         return $this;
     }

@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **questionnaire_id** | **int** | ID of the questionnaire id | [optional] 
 **questionnaire_question_id** | **int** | ID of the questionnaire question id | [optional] 
 **order** | **int** | order of the question inside the questionnaire | [optional] 
-**question_type_name** | **string** | Question type name | [optional] 
 **question** | **string** | Question | [optional] 
 **answer_options** | [**\BumbalClient\Model\QuestionnaireQuestionOptionModel[]**](QuestionnaireQuestionOptionModel.md) |  | [optional] 
 **answer** | **string** | Answer | [optional] 
