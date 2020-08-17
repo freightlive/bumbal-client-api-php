@@ -62,6 +62,8 @@ Name | Type | Description | Notes
 **include_activity_record_object** | **bool** |  | [optional] 
 **include_party_name** | **bool** |  | [optional] 
 **include_shipment_activity_nr** | **bool** |  | [optional] 
+**include_payments** | **bool** |  | [optional] 
+**include_transactions** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

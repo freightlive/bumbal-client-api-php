@@ -62,7 +62,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
         'proposed_plan_date_time_to' => '\DateTime',
         'proposed_driver' => '\BumbalClient\Model\DriverModel',
         'impact' => '\BumbalClient\Model\AvailabilityTimeSlotImpactModel[]',
-        'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityTimeSlotModel[]'
+        'follow_up_time_slots' => '\BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]'
     ];
 
     /**
@@ -378,7 +378,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Gets follow_up_time_slots
-     * @return \BumbalClient\Model\AvailabilityTimeSlotModel[]
+     * @return \BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[]
      */
     public function getFollowUpTimeSlots()
     {
@@ -387,7 +387,7 @@ class AvailabilityTimeSlotModel implements ArrayAccess
 
     /**
      * Sets follow_up_time_slots
-     * @param \BumbalClient\Model\AvailabilityTimeSlotModel[] $follow_up_time_slots 
+     * @param \BumbalClient\Model\AvailabilityFollowUpTimeSlotModel[] $follow_up_time_slots 
      * @return $this
      */
     public function setFollowUpTimeSlots($follow_up_time_slots)

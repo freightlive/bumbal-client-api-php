@@ -55,6 +55,7 @@ class CompartmentOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_filled_capacities' => 'bool',
+        'include_package_line_ids' => 'bool',
         'include_links' => 'bool',
         'include_record_info' => 'bool',
         'include_meta_data' => 'bool'
@@ -66,6 +67,7 @@ class CompartmentOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_filled_capacities' => null,
+        'include_package_line_ids' => null,
         'include_links' => null,
         'include_record_info' => null,
         'include_meta_data' => null
@@ -87,6 +89,7 @@ class CompartmentOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_filled_capacities' => 'include_filled_capacities',
+        'include_package_line_ids' => 'include_package_line_ids',
         'include_links' => 'include_links',
         'include_record_info' => 'include_record_info',
         'include_meta_data' => 'include_meta_data'
@@ -99,6 +102,7 @@ class CompartmentOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_filled_capacities' => 'setIncludeFilledCapacities',
+        'include_package_line_ids' => 'setIncludePackageLineIds',
         'include_links' => 'setIncludeLinks',
         'include_record_info' => 'setIncludeRecordInfo',
         'include_meta_data' => 'setIncludeMetaData'
@@ -111,6 +115,7 @@ class CompartmentOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_filled_capacities' => 'getIncludeFilledCapacities',
+        'include_package_line_ids' => 'getIncludePackageLineIds',
         'include_links' => 'getIncludeLinks',
         'include_record_info' => 'getIncludeRecordInfo',
         'include_meta_data' => 'getIncludeMetaData'
@@ -148,6 +153,7 @@ class CompartmentOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
+        $this->container['include_package_line_ids'] = isset($data['include_package_line_ids']) ? $data['include_package_line_ids'] : null;
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
@@ -195,6 +201,27 @@ class CompartmentOptionsModel implements ArrayAccess
     public function setIncludeFilledCapacities($include_filled_capacities)
     {
         $this->container['include_filled_capacities'] = $include_filled_capacities;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_package_line_ids
+     * @return bool
+     */
+    public function getIncludePackageLineIds()
+    {
+        return $this->container['include_package_line_ids'];
+    }
+
+    /**
+     * Sets include_package_line_ids
+     * @param bool $include_package_line_ids 
+     * @return $this
+     */
+    public function setIncludePackageLineIds($include_package_line_ids)
+    {
+        $this->container['include_package_line_ids'] = $include_package_line_ids;
 
         return $this;
     }

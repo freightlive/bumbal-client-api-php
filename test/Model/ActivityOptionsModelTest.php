@@ -489,4 +489,18 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeShipmentActivityNr()
     {
     }
+
+    /**
+     * Test attribute "include_payments"
+     */
+    public function testPropertyIncludePayments()
+    {
+    }
+
+    /**
+     * Test attribute "include_transactions"
+     */
+    public function testPropertyIncludeTransactions()
+    {
+    }
 }

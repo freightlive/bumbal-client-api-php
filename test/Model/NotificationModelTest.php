@@ -174,4 +174,11 @@ class NotificationModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUsers()
     {
     }
+
+    /**
+     * Test attribute "role_names"
+     */
+    public function testPropertyRoleNames()
+    {
+    }
 }

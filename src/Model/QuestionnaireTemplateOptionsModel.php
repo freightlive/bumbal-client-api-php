@@ -58,7 +58,16 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_questions' => 'bool',
         'include_options' => 'bool',
         'include_texts' => 'bool',
-        'include_question_type_name' => 'bool'
+        'include_question_type_name' => 'bool',
+        'include_zones' => 'bool',
+        'include_brands' => 'bool',
+        'include_tags' => 'bool',
+        'include_zone_ids' => 'bool',
+        'include_zone_names' => 'bool',
+        'include_tag_ids' => 'bool',
+        'include_tag_names' => 'bool',
+        'include_brand_ids' => 'bool',
+        'include_brand_names' => 'bool'
     ];
 
     /**
@@ -70,7 +79,16 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_questions' => null,
         'include_options' => null,
         'include_texts' => null,
-        'include_question_type_name' => null
+        'include_question_type_name' => null,
+        'include_zones' => null,
+        'include_brands' => null,
+        'include_tags' => null,
+        'include_zone_ids' => null,
+        'include_zone_names' => null,
+        'include_tag_ids' => null,
+        'include_tag_names' => null,
+        'include_brand_ids' => null,
+        'include_brand_names' => null
     ];
 
     public static function swaggerTypes()
@@ -92,7 +110,16 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_questions' => 'include_questions',
         'include_options' => 'include_options',
         'include_texts' => 'include_texts',
-        'include_question_type_name' => 'include_question_type_name'
+        'include_question_type_name' => 'include_question_type_name',
+        'include_zones' => 'include_zones',
+        'include_brands' => 'include_brands',
+        'include_tags' => 'include_tags',
+        'include_zone_ids' => 'include_zone_ids',
+        'include_zone_names' => 'include_zone_names',
+        'include_tag_ids' => 'include_tag_ids',
+        'include_tag_names' => 'include_tag_names',
+        'include_brand_ids' => 'include_brand_ids',
+        'include_brand_names' => 'include_brand_names'
     ];
 
 
@@ -105,7 +132,16 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_questions' => 'setIncludeQuestions',
         'include_options' => 'setIncludeOptions',
         'include_texts' => 'setIncludeTexts',
-        'include_question_type_name' => 'setIncludeQuestionTypeName'
+        'include_question_type_name' => 'setIncludeQuestionTypeName',
+        'include_zones' => 'setIncludeZones',
+        'include_brands' => 'setIncludeBrands',
+        'include_tags' => 'setIncludeTags',
+        'include_zone_ids' => 'setIncludeZoneIds',
+        'include_zone_names' => 'setIncludeZoneNames',
+        'include_tag_ids' => 'setIncludeTagIds',
+        'include_tag_names' => 'setIncludeTagNames',
+        'include_brand_ids' => 'setIncludeBrandIds',
+        'include_brand_names' => 'setIncludeBrandNames'
     ];
 
 
@@ -118,7 +154,16 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_questions' => 'getIncludeQuestions',
         'include_options' => 'getIncludeOptions',
         'include_texts' => 'getIncludeTexts',
-        'include_question_type_name' => 'getIncludeQuestionTypeName'
+        'include_question_type_name' => 'getIncludeQuestionTypeName',
+        'include_zones' => 'getIncludeZones',
+        'include_brands' => 'getIncludeBrands',
+        'include_tags' => 'getIncludeTags',
+        'include_zone_ids' => 'getIncludeZoneIds',
+        'include_zone_names' => 'getIncludeZoneNames',
+        'include_tag_ids' => 'getIncludeTagIds',
+        'include_tag_names' => 'getIncludeTagNames',
+        'include_brand_ids' => 'getIncludeBrandIds',
+        'include_brand_names' => 'getIncludeBrandNames'
     ];
 
     public static function attributeMap()
@@ -157,6 +202,15 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         $this->container['include_options'] = isset($data['include_options']) ? $data['include_options'] : null;
         $this->container['include_texts'] = isset($data['include_texts']) ? $data['include_texts'] : null;
         $this->container['include_question_type_name'] = isset($data['include_question_type_name']) ? $data['include_question_type_name'] : null;
+        $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
+        $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
+        $this->container['include_zone_ids'] = isset($data['include_zone_ids']) ? $data['include_zone_ids'] : null;
+        $this->container['include_zone_names'] = isset($data['include_zone_names']) ? $data['include_zone_names'] : null;
+        $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
+        $this->container['include_brand_ids'] = isset($data['include_brand_ids']) ? $data['include_brand_ids'] : null;
+        $this->container['include_brand_names'] = isset($data['include_brand_names']) ? $data['include_brand_names'] : null;
     }
 
     /**
@@ -285,6 +339,195 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
     public function setIncludeQuestionTypeName($include_question_type_name)
     {
         $this->container['include_question_type_name'] = $include_question_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zones
+     * @return bool
+     */
+    public function getIncludeZones()
+    {
+        return $this->container['include_zones'];
+    }
+
+    /**
+     * Sets include_zones
+     * @param bool $include_zones 
+     * @return $this
+     */
+    public function setIncludeZones($include_zones)
+    {
+        $this->container['include_zones'] = $include_zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brands
+     * @return bool
+     */
+    public function getIncludeBrands()
+    {
+        return $this->container['include_brands'];
+    }
+
+    /**
+     * Sets include_brands
+     * @param bool $include_brands 
+     * @return $this
+     */
+    public function setIncludeBrands($include_brands)
+    {
+        $this->container['include_brands'] = $include_brands;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tags
+     * @return bool
+     */
+    public function getIncludeTags()
+    {
+        return $this->container['include_tags'];
+    }
+
+    /**
+     * Sets include_tags
+     * @param bool $include_tags 
+     * @return $this
+     */
+    public function setIncludeTags($include_tags)
+    {
+        $this->container['include_tags'] = $include_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zone_ids
+     * @return bool
+     */
+    public function getIncludeZoneIds()
+    {
+        return $this->container['include_zone_ids'];
+    }
+
+    /**
+     * Sets include_zone_ids
+     * @param bool $include_zone_ids 
+     * @return $this
+     */
+    public function setIncludeZoneIds($include_zone_ids)
+    {
+        $this->container['include_zone_ids'] = $include_zone_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_zone_names
+     * @return bool
+     */
+    public function getIncludeZoneNames()
+    {
+        return $this->container['include_zone_names'];
+    }
+
+    /**
+     * Sets include_zone_names
+     * @param bool $include_zone_names 
+     * @return $this
+     */
+    public function setIncludeZoneNames($include_zone_names)
+    {
+        $this->container['include_zone_names'] = $include_zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_ids
+     * @return bool
+     */
+    public function getIncludeTagIds()
+    {
+        return $this->container['include_tag_ids'];
+    }
+
+    /**
+     * Sets include_tag_ids
+     * @param bool $include_tag_ids 
+     * @return $this
+     */
+    public function setIncludeTagIds($include_tag_ids)
+    {
+        $this->container['include_tag_ids'] = $include_tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_names
+     * @return bool
+     */
+    public function getIncludeTagNames()
+    {
+        return $this->container['include_tag_names'];
+    }
+
+    /**
+     * Sets include_tag_names
+     * @param bool $include_tag_names 
+     * @return $this
+     */
+    public function setIncludeTagNames($include_tag_names)
+    {
+        $this->container['include_tag_names'] = $include_tag_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brand_ids
+     * @return bool
+     */
+    public function getIncludeBrandIds()
+    {
+        return $this->container['include_brand_ids'];
+    }
+
+    /**
+     * Sets include_brand_ids
+     * @param bool $include_brand_ids 
+     * @return $this
+     */
+    public function setIncludeBrandIds($include_brand_ids)
+    {
+        $this->container['include_brand_ids'] = $include_brand_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brand_names
+     * @return bool
+     */
+    public function getIncludeBrandNames()
+    {
+        return $this->container['include_brand_names'];
+    }
+
+    /**
+     * Sets include_brand_names
+     * @param bool $include_brand_names 
+     * @return $this
+     */
+    public function setIncludeBrandNames($include_brand_names)
+    {
+        $this->container['include_brand_names'] = $include_brand_names;
 
         return $this;
     }

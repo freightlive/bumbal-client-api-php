@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaire**
-> \BumbalClient\Model\ApiResponse30 deleteQuestionnaire($notification_id)
+> \BumbalClient\Model\ApiResponse27 deleteQuestionnaire($notification_id)
 
 Delete an Questionnaire entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse30**](../Model/ApiResponse30.md)
+[**\BumbalClient\Model\ApiResponse27**](../Model/ApiResponse27.md)
 
 ### Authorization
 

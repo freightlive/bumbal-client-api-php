@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createVehicle**
-> \BumbalClient\Model\ApiResponse64 createVehicle($body)
+> \BumbalClient\Model\ApiResponse55 createVehicle($body)
 
 Add a new vehicle
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse64**](../Model/ApiResponse64.md)
+[**\BumbalClient\Model\ApiResponse55**](../Model/ApiResponse55.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteVehicle**
-> \BumbalClient\Model\ApiResponse65 deleteVehicle($vehicle_id)
+> \BumbalClient\Model\ApiResponse56 deleteVehicle($vehicle_id)
 
 Delete a vehicle entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse65**](../Model/ApiResponse65.md)
+[**\BumbalClient\Model\ApiResponse56**](../Model/ApiResponse56.md)
 
 ### Authorization
 

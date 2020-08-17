@@ -85,6 +85,13 @@ class CompartmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_package_line_ids"
+     */
+    public function testPropertyIncludePackageLineIds()
+    {
+    }
+
+    /**
      * Test attribute "include_links"
      */
     public function testPropertyIncludeLinks()

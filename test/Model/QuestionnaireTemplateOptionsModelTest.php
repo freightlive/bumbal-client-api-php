@@ -111,4 +111,67 @@ class QuestionnaireTemplateOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeQuestionTypeName()
     {
     }
+
+    /**
+     * Test attribute "include_zones"
+     */
+    public function testPropertyIncludeZones()
+    {
+    }
+
+    /**
+     * Test attribute "include_brands"
+     */
+    public function testPropertyIncludeBrands()
+    {
+    }
+
+    /**
+     * Test attribute "include_tags"
+     */
+    public function testPropertyIncludeTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_ids"
+     */
+    public function testPropertyIncludeZoneIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_names"
+     */
+    public function testPropertyIncludeZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_ids"
+     */
+    public function testPropertyIncludeTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_names"
+     */
+    public function testPropertyIncludeTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_brand_ids"
+     */
+    public function testPropertyIncludeBrandIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_brand_names"
+     */
+    public function testPropertyIncludeBrandNames()
+    {
+    }
 }

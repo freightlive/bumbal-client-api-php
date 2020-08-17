@@ -153,7 +153,12 @@ class ActivityModel implements ArrayAccess
         'activity_created_by_user' => '\BumbalClient\Model\UsersModel',
         'activity_updated_by_user' => '\BumbalClient\Model\UsersModel',
         'activity_active' => 'bool',
-        'activity_removed' => 'bool'
+        'activity_removed' => 'bool',
+        'payment_total' => 'int',
+        'transaction_total' => 'int',
+        'due_total' => 'int',
+        'payments' => '\BumbalClient\Model\PaymentModel[]',
+        'transactions' => '\BumbalClient\Model\TransactionModel[]'
     ];
 
     /**
@@ -260,7 +265,12 @@ class ActivityModel implements ArrayAccess
         'activity_created_by_user' => null,
         'activity_updated_by_user' => null,
         'activity_active' => null,
-        'activity_removed' => null
+        'activity_removed' => null,
+        'payment_total' => null,
+        'transaction_total' => null,
+        'due_total' => null,
+        'payments' => null,
+        'transactions' => null
     ];
 
     public static function swaggerTypes()
@@ -377,7 +387,12 @@ class ActivityModel implements ArrayAccess
         'activity_created_by_user' => 'activity_created_by_user',
         'activity_updated_by_user' => 'activity_updated_by_user',
         'activity_active' => 'activity_active',
-        'activity_removed' => 'activity_removed'
+        'activity_removed' => 'activity_removed',
+        'payment_total' => 'payment_total',
+        'transaction_total' => 'transaction_total',
+        'due_total' => 'due_total',
+        'payments' => 'payments',
+        'transactions' => 'transactions'
     ];
 
 
@@ -485,7 +500,12 @@ class ActivityModel implements ArrayAccess
         'activity_created_by_user' => 'setActivityCreatedByUser',
         'activity_updated_by_user' => 'setActivityUpdatedByUser',
         'activity_active' => 'setActivityActive',
-        'activity_removed' => 'setActivityRemoved'
+        'activity_removed' => 'setActivityRemoved',
+        'payment_total' => 'setPaymentTotal',
+        'transaction_total' => 'setTransactionTotal',
+        'due_total' => 'setDueTotal',
+        'payments' => 'setPayments',
+        'transactions' => 'setTransactions'
     ];
 
 
@@ -593,7 +613,12 @@ class ActivityModel implements ArrayAccess
         'activity_created_by_user' => 'getActivityCreatedByUser',
         'activity_updated_by_user' => 'getActivityUpdatedByUser',
         'activity_active' => 'getActivityActive',
-        'activity_removed' => 'getActivityRemoved'
+        'activity_removed' => 'getActivityRemoved',
+        'payment_total' => 'getPaymentTotal',
+        'transaction_total' => 'getTransactionTotal',
+        'due_total' => 'getDueTotal',
+        'payments' => 'getPayments',
+        'transactions' => 'getTransactions'
     ];
 
     public static function attributeMap()
@@ -873,6 +898,11 @@ class ActivityModel implements ArrayAccess
         $this->container['activity_updated_by_user'] = isset($data['activity_updated_by_user']) ? $data['activity_updated_by_user'] : null;
         $this->container['activity_active'] = isset($data['activity_active']) ? $data['activity_active'] : null;
         $this->container['activity_removed'] = isset($data['activity_removed']) ? $data['activity_removed'] : null;
+        $this->container['payment_total'] = isset($data['payment_total']) ? $data['payment_total'] : null;
+        $this->container['transaction_total'] = isset($data['transaction_total']) ? $data['transaction_total'] : null;
+        $this->container['due_total'] = isset($data['due_total']) ? $data['due_total'] : null;
+        $this->container['payments'] = isset($data['payments']) ? $data['payments'] : null;
+        $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
     }
 
     /**
@@ -3059,6 +3089,111 @@ class ActivityModel implements ArrayAccess
     public function setActivityRemoved($activity_removed)
     {
         $this->container['activity_removed'] = $activity_removed;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_total
+     * @return int
+     */
+    public function getPaymentTotal()
+    {
+        return $this->container['payment_total'];
+    }
+
+    /**
+     * Sets payment_total
+     * @param int $payment_total Total to be paid in cents. readonly
+     * @return $this
+     */
+    public function setPaymentTotal($payment_total)
+    {
+        $this->container['payment_total'] = $payment_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets transaction_total
+     * @return int
+     */
+    public function getTransactionTotal()
+    {
+        return $this->container['transaction_total'];
+    }
+
+    /**
+     * Sets transaction_total
+     * @param int $transaction_total Total has been paid in cents. readonly
+     * @return $this
+     */
+    public function setTransactionTotal($transaction_total)
+    {
+        $this->container['transaction_total'] = $transaction_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets due_total
+     * @return int
+     */
+    public function getDueTotal()
+    {
+        return $this->container['due_total'];
+    }
+
+    /**
+     * Sets due_total
+     * @param int $due_total Amount which hasn't been paid yet in cents. readonly
+     * @return $this
+     */
+    public function setDueTotal($due_total)
+    {
+        $this->container['due_total'] = $due_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets payments
+     * @return \BumbalClient\Model\PaymentModel[]
+     */
+    public function getPayments()
+    {
+        return $this->container['payments'];
+    }
+
+    /**
+     * Sets payments
+     * @param \BumbalClient\Model\PaymentModel[] $payments 
+     * @return $this
+     */
+    public function setPayments($payments)
+    {
+        $this->container['payments'] = $payments;
+
+        return $this;
+    }
+
+    /**
+     * Gets transactions
+     * @return \BumbalClient\Model\TransactionModel[]
+     */
+    public function getTransactions()
+    {
+        return $this->container['transactions'];
+    }
+
+    /**
+     * Sets transactions
+     * @param \BumbalClient\Model\TransactionModel[] $transactions 
+     * @return $this
+     */
+    public function setTransactions($transactions)
+    {
+        $this->container['transactions'] = $transactions;
 
         return $this;
     }

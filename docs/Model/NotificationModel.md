@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **notification_created_by** | **int** | created_by user id | [optional] 
 **notification_updated_by** | **int** | updated_by user id | [optional] 
 **users** | [**\BumbalClient\Model\UserNotificationModel[]**](UserNotificationModel.md) |  | [optional] 
+**role_names** | **string[]** | Roles to enable notification for, works only on create, ignored on update | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

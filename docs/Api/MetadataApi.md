@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createMetaData**
-> \BumbalClient\Model\ApiResponse13 createMetaData($body)
+> \BumbalClient\Model\ApiResponse8 createMetaData($body)
 
 Add a new MetaData
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse13**](../Model/ApiResponse13.md)
+[**\BumbalClient\Model\ApiResponse8**](../Model/ApiResponse8.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteMetaData**
-> \BumbalClient\Model\ApiResponse10 deleteMetaData($metadata_id)
+> \BumbalClient\Model\ApiResponse6 deleteMetaData($metadata_id)
 
 Delete a MetaData entry
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse10**](../Model/ApiResponse10.md)
+[**\BumbalClient\Model\ApiResponse6**](../Model/ApiResponse6.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateMetaData**
-> \BumbalClient\Model\ApiResponse9 updateMetaData($metadata_id, $body)
+> \BumbalClient\Model\ApiResponse5 updateMetaData($metadata_id, $body)
 
 Update a specific MetaData object
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse9**](../Model/ApiResponse9.md)
+[**\BumbalClient\Model\ApiResponse5**](../Model/ApiResponse5.md)
 
 ### Authorization
 

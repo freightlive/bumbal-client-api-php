@@ -187,6 +187,12 @@ Class | Method | HTTP request | Description
 *PauseApi* | [**retrievePause**](docs/Api/PauseApi.md#retrievepause) | **GET** /pause/{pauseId} | Retrieve a Pause
 *PauseApi* | [**setPause**](docs/Api/PauseApi.md#setpause) | **POST** /pause/set | Set (create or update) a Pause
 *PauseApi* | [**updatePause**](docs/Api/PauseApi.md#updatepause) | **PUT** /pause/{pauseId} | Update a Pause
+*PaymentApi* | [**createPayment**](docs/Api/PaymentApi.md#createpayment) | **POST** /payment | Add a new Payment
+*PaymentApi* | [**deletePayment**](docs/Api/PaymentApi.md#deletepayment) | **DELETE** /payment/{paymentId} | Delete an Payment entry
+*PaymentApi* | [**retrieveListPayment**](docs/Api/PaymentApi.md#retrievelistpayment) | **PUT** /payment | Retrieve List of Payment
+*PaymentApi* | [**retrievePayment**](docs/Api/PaymentApi.md#retrievepayment) | **GET** /payment/{paymentId} | Retrieve a Payment
+*PaymentApi* | [**setPayment**](docs/Api/PaymentApi.md#setpayment) | **POST** /payment/set | Set (create or update) a Payment
+*PaymentApi* | [**updatePayment**](docs/Api/PaymentApi.md#updatepayment) | **PUT** /payment/{paymentId} | Update a specific Payment object
 *PlannerApi* | [**addActivitiesToRoute**](docs/Api/PlannerApi.md#addactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
 *PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
@@ -301,17 +307,27 @@ Class | Method | HTTP request | Description
 *TrailerApi* | [**retrieveTrailer**](docs/Api/TrailerApi.md#retrievetrailer) | **GET** /trailer/{trailerId} | Find trailer by ID
 *TrailerApi* | [**setTrailer**](docs/Api/TrailerApi.md#settrailer) | **POST** /trailer/set | Set (create or update) a trailer
 *TrailerApi* | [**updateTrailer**](docs/Api/TrailerApi.md#updatetrailer) | **PUT** /trailer/{trailerId} | Update a trailer
+*TransactionApi* | [**createTransaction**](docs/Api/TransactionApi.md#createtransaction) | **POST** /transaction | Add a new Transaction
+*TransactionApi* | [**deleteTransaction**](docs/Api/TransactionApi.md#deletetransaction) | **DELETE** /transaction/{transactionId} | Delete an Transaction entry
+*TransactionApi* | [**retrieveListTransaction**](docs/Api/TransactionApi.md#retrievelisttransaction) | **PUT** /transaction | Retrieve List of Transaction
+*TransactionApi* | [**retrieveTransaction**](docs/Api/TransactionApi.md#retrievetransaction) | **GET** /transaction/{transactionId} | Retrieve a Transaction
+*TransactionApi* | [**setTransaction**](docs/Api/TransactionApi.md#settransaction) | **POST** /transaction/set | Set (create or update) a Transaction
+*TransactionApi* | [**token**](docs/Api/TransactionApi.md#token) | **POST** /transaction/token | get a transaction token
+*TransactionApi* | [**token_0**](docs/Api/TransactionApi.md#token_0) | **POST** /transaction/token-is-paid | set a transaction to paid with token
+*TransactionApi* | [**token_1**](docs/Api/TransactionApi.md#token_1) | **POST** /transaction/token-is-cancelled | set a transaction to cancelled with token
+*TransactionApi* | [**token_2**](docs/Api/TransactionApi.md#token_2) | **POST** /transaction/token-has-failed | set a transaction to failed with token
+*TransactionApi* | [**updateTransaction**](docs/Api/TransactionApi.md#updatetransaction) | **PUT** /transaction/{transactionId} | Update a specific Transaction object
 *UnsuccessfulreasonApi* | [**createUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#createunsuccessfulreason) | **POST** /unsuccessful-reason | Add a new UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**deleteUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#deleteunsuccessfulreason) | **DELETE** /unsuccessful-reason/{unsuccessful-reasonId} | Delete a UnsuccessfulReason entry
 *UnsuccessfulreasonApi* | [**retrieveListUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrievelistunsuccessfulreason) | **PUT** /unsuccessful-reason | Retrieve List of UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**retrieveUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrieveunsuccessfulreason) | **GET** /unsuccessful-reason/{unsuccessful-reasonId} | Retrieve a UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
-*UsernotificationApi* | [**retrieveListUserNotification**](docs/Api/UsernotificationApi.md#retrievelistusernotification) | **PUT** /user/notification | Retrieve List of UserNotification
-*UsernotificationApi* | [**setUserNotification**](docs/Api/UsernotificationApi.md#setusernotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
+*UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
 *UsersApi* | [**retrieveUsers**](docs/Api/UsersApi.md#retrieveusers) | **GET** /users/{usersId} | Retrieve a Users
 *UsersApi* | [**setUser**](docs/Api/UsersApi.md#setuser) | **POST** /users/set | Set (create or update) a User
+*UsersApi* | [**setUserNotification**](docs/Api/UsersApi.md#setusernotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
 *UsersApi* | [**updateUsers**](docs/Api/UsersApi.md#updateusers) | **PUT** /users/{usersId} | Update a Users
 *VehicleApi* | [**createVehicle**](docs/Api/VehicleApi.md#createvehicle) | **POST** /vehicle | Add a new vehicle
 *VehicleApi* | [**deleteVehicle**](docs/Api/VehicleApi.md#deletevehicle) | **DELETE** /vehicle/{vehicleId} | Delete a vehicle entry
@@ -378,7 +394,6 @@ Class | Method | HTTP request | Description
  - [ApiResponse24](docs/Model/ApiResponse24.md)
  - [ApiResponse25](docs/Model/ApiResponse25.md)
  - [ApiResponse26](docs/Model/ApiResponse26.md)
- - [ApiResponse26AdditionalData](docs/Model/ApiResponse26AdditionalData.md)
  - [ApiResponse27](docs/Model/ApiResponse27.md)
  - [ApiResponse28](docs/Model/ApiResponse28.md)
  - [ApiResponse29](docs/Model/ApiResponse29.md)
@@ -395,6 +410,9 @@ Class | Method | HTTP request | Description
  - [ApiResponse39](docs/Model/ApiResponse39.md)
  - [ApiResponse4](docs/Model/ApiResponse4.md)
  - [ApiResponse40](docs/Model/ApiResponse40.md)
+ - [ApiResponse401](docs/Model/ApiResponse401.md)
+ - [ApiResponse403](docs/Model/ApiResponse403.md)
+ - [ApiResponse405](docs/Model/ApiResponse405.md)
  - [ApiResponse41](docs/Model/ApiResponse41.md)
  - [ApiResponse42](docs/Model/ApiResponse42.md)
  - [ApiResponse43](docs/Model/ApiResponse43.md)
@@ -413,24 +431,8 @@ Class | Method | HTTP request | Description
  - [ApiResponse55](docs/Model/ApiResponse55.md)
  - [ApiResponse56](docs/Model/ApiResponse56.md)
  - [ApiResponse57](docs/Model/ApiResponse57.md)
- - [ApiResponse58](docs/Model/ApiResponse58.md)
- - [ApiResponse59](docs/Model/ApiResponse59.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
- - [ApiResponse60](docs/Model/ApiResponse60.md)
- - [ApiResponse61](docs/Model/ApiResponse61.md)
- - [ApiResponse62](docs/Model/ApiResponse62.md)
- - [ApiResponse63](docs/Model/ApiResponse63.md)
- - [ApiResponse64](docs/Model/ApiResponse64.md)
- - [ApiResponse65](docs/Model/ApiResponse65.md)
- - [ApiResponse66](docs/Model/ApiResponse66.md)
- - [ApiResponse67](docs/Model/ApiResponse67.md)
- - [ApiResponse68](docs/Model/ApiResponse68.md)
- - [ApiResponse69](docs/Model/ApiResponse69.md)
  - [ApiResponse7](docs/Model/ApiResponse7.md)
- - [ApiResponse70](docs/Model/ApiResponse70.md)
- - [ApiResponse71](docs/Model/ApiResponse71.md)
- - [ApiResponse72](docs/Model/ApiResponse72.md)
- - [ApiResponse72AdditionalData](docs/Model/ApiResponse72AdditionalData.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)
  - [ApiResponse9](docs/Model/ApiResponse9.md)
  - [ApplyPlanningArguments](docs/Model/ApplyPlanningArguments.md)
@@ -559,6 +561,16 @@ Class | Method | HTTP request | Description
  - [PauseOptionsModel](docs/Model/PauseOptionsModel.md)
  - [PauseRetrieveListArguments](docs/Model/PauseRetrieveListArguments.md)
  - [PayloadItem](docs/Model/PayloadItem.md)
+ - [PaymentCreateResponse](docs/Model/PaymentCreateResponse.md)
+ - [PaymentDeleteNotFoundResponse](docs/Model/PaymentDeleteNotFoundResponse.md)
+ - [PaymentDeleteResponse](docs/Model/PaymentDeleteResponse.md)
+ - [PaymentFiltersModel](docs/Model/PaymentFiltersModel.md)
+ - [PaymentListResponse](docs/Model/PaymentListResponse.md)
+ - [PaymentModel](docs/Model/PaymentModel.md)
+ - [PaymentOptionsModel](docs/Model/PaymentOptionsModel.md)
+ - [PaymentRetrieveListArguments](docs/Model/PaymentRetrieveListArguments.md)
+ - [PaymentSetResponse](docs/Model/PaymentSetResponse.md)
+ - [PaymentUpdateResponse](docs/Model/PaymentUpdateResponse.md)
  - [PhoneNrModel](docs/Model/PhoneNrModel.md)
  - [PortalFiltersModel](docs/Model/PortalFiltersModel.md)
  - [PortalListResponse](docs/Model/PortalListResponse.md)
@@ -659,6 +671,24 @@ Class | Method | HTTP request | Description
  - [TrailerModel](docs/Model/TrailerModel.md)
  - [TrailerOptionsModel](docs/Model/TrailerOptionsModel.md)
  - [TrailerRetrieveListArguments](docs/Model/TrailerRetrieveListArguments.md)
+ - [TransactionCreateResponse](docs/Model/TransactionCreateResponse.md)
+ - [TransactionDeleteNotFoundResponse](docs/Model/TransactionDeleteNotFoundResponse.md)
+ - [TransactionDeleteResponse](docs/Model/TransactionDeleteResponse.md)
+ - [TransactionFiltersModel](docs/Model/TransactionFiltersModel.md)
+ - [TransactionListResponse](docs/Model/TransactionListResponse.md)
+ - [TransactionModel](docs/Model/TransactionModel.md)
+ - [TransactionOptionsModel](docs/Model/TransactionOptionsModel.md)
+ - [TransactionRetrieveListArguments](docs/Model/TransactionRetrieveListArguments.md)
+ - [TransactionSetResponse](docs/Model/TransactionSetResponse.md)
+ - [TransactionTokenArguments](docs/Model/TransactionTokenArguments.md)
+ - [TransactionTokenHasFailedArguments](docs/Model/TransactionTokenHasFailedArguments.md)
+ - [TransactionTokenHasFailedResponse](docs/Model/TransactionTokenHasFailedResponse.md)
+ - [TransactionTokenIsCancelledArguments](docs/Model/TransactionTokenIsCancelledArguments.md)
+ - [TransactionTokenIsCancelledResponse](docs/Model/TransactionTokenIsCancelledResponse.md)
+ - [TransactionTokenIsPaidArguments](docs/Model/TransactionTokenIsPaidArguments.md)
+ - [TransactionTokenIsPaidResponse](docs/Model/TransactionTokenIsPaidResponse.md)
+ - [TransactionTokenResponse](docs/Model/TransactionTokenResponse.md)
+ - [TransactionUpdateResponse](docs/Model/TransactionUpdateResponse.md)
  - [UnitValueModel](docs/Model/UnitValueModel.md)
  - [UnsuccessfulModel](docs/Model/UnsuccessfulModel.md)
  - [UnsuccessfulReasonFiltersModel](docs/Model/UnsuccessfulReasonFiltersModel.md)
@@ -684,11 +714,16 @@ Class | Method | HTTP request | Description
  - [VehicleModel](docs/Model/VehicleModel.md)
  - [VehicleOptionsModel](docs/Model/VehicleOptionsModel.md)
  - [VehicleRetrieveListArguments](docs/Model/VehicleRetrieveListArguments.md)
+ - [VehicleTypeCreateResponse](docs/Model/VehicleTypeCreateResponse.md)
+ - [VehicleTypeDeleteNotFoundResponse](docs/Model/VehicleTypeDeleteNotFoundResponse.md)
+ - [VehicleTypeDeleteResponse](docs/Model/VehicleTypeDeleteResponse.md)
  - [VehicleTypeFiltersModel](docs/Model/VehicleTypeFiltersModel.md)
  - [VehicleTypeListResponse](docs/Model/VehicleTypeListResponse.md)
  - [VehicleTypeModel](docs/Model/VehicleTypeModel.md)
  - [VehicleTypeOptionsModel](docs/Model/VehicleTypeOptionsModel.md)
  - [VehicleTypeRetrieveListArguments](docs/Model/VehicleTypeRetrieveListArguments.md)
+ - [VehicleTypeSetResponse](docs/Model/VehicleTypeSetResponse.md)
+ - [VehicleTypeUpdateResponse](docs/Model/VehicleTypeUpdateResponse.md)
  - [ZoneFiltersModel](docs/Model/ZoneFiltersModel.md)
  - [ZoneModel](docs/Model/ZoneModel.md)
  - [ZoneOptionsModel](docs/Model/ZoneOptionsModel.md)

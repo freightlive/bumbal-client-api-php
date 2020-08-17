@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createVehicleType**
-> \BumbalClient\Model\ApiResponse72 createVehicleType($body)
+> \BumbalClient\Model\VehicleTypeCreateResponse createVehicleType($body)
 
 Add a new VehicleType
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse72**](../Model/ApiResponse72.md)
+[**\BumbalClient\Model\VehicleTypeCreateResponse**](../Model/VehicleTypeCreateResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteVehicleType**
-> \BumbalClient\Model\ApiResponse69 deleteVehicleType($vehicle_type_id)
+> \BumbalClient\Model\VehicleTypeDeleteResponse deleteVehicleType($vehicle_type_id)
 
 Delete a VehicleType entry
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse69**](../Model/ApiResponse69.md)
+[**\BumbalClient\Model\VehicleTypeDeleteResponse**](../Model/VehicleTypeDeleteResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateVehicleType**
-> \BumbalClient\Model\ApiResponse68 updateVehicleType($vehicle_type_id, $body)
+> \BumbalClient\Model\VehicleTypeUpdateResponse updateVehicleType($vehicle_type_id, $body)
 
 Update a specific VehicleType object
 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse68**](../Model/ApiResponse68.md)
+[**\BumbalClient\Model\VehicleTypeUpdateResponse**](../Model/VehicleTypeUpdateResponse.md)
 
 ### Authorization
 

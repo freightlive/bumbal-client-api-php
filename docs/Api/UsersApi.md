@@ -5,9 +5,11 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**checkCredentialsUser**](UsersApi.md#checkCredentialsUser) | **GET** /users/check-credentials | Checks the credentials of a User
+[**retrieveListUserNotification**](UsersApi.md#retrieveListUserNotification) | **PUT** /users/notification | Retrieve List of UserNotification
 [**retrieveListUsers**](UsersApi.md#retrieveListUsers) | **PUT** /users | Retrieve List of Users
 [**retrieveUsers**](UsersApi.md#retrieveUsers) | **GET** /users/{usersId} | Retrieve a Users
 [**setUser**](UsersApi.md#setUser) | **POST** /users/set | Set (create or update) a User
+[**setUserNotification**](UsersApi.md#setUserNotification) | **POST** /users/notification | Create a new UserNotification or update an existing one
 [**updateUsers**](UsersApi.md#updateUsers) | **PUT** /users/{usersId} | Update a Users
 
 
@@ -51,6 +53,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\UsersModel**](../Model/UsersModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **retrieveListUserNotification**
+> \BumbalClient\Model\UserNotificationListResponse retrieveListUserNotification($arguments)
+
+Retrieve List of UserNotification
+
+Retrieve List of UserNotification
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$arguments = new \BumbalClient\Model\UserNotificationRetrieveListArguments(); // \BumbalClient\Model\UserNotificationRetrieveListArguments | UserNotification RetrieveList Arguments
+
+try {
+    $result = $api_instance->retrieveListUserNotification($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->retrieveListUserNotification: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\UserNotificationRetrieveListArguments**](../Model/UserNotificationRetrieveListArguments.md)| UserNotification RetrieveList Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\UserNotificationListResponse**](../Model/UserNotificationListResponse.md)
 
 ### Authorization
 
@@ -201,6 +253,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setUserNotification**
+> \BumbalClient\Model\ApiResponse54 setUserNotification($body)
+
+Create a new UserNotification or update an existing one
+
+Set (create or update) a user notification. If id or links are set in the data, and a corresponding user notification is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\UsersApi();
+$body = new \BumbalClient\Model\UserNotificationModel(); // \BumbalClient\Model\UserNotificationModel | UserNotification object that needs to be set
+
+try {
+    $result = $api_instance->setUserNotification($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->setUserNotification: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\UserNotificationModel**](../Model/UserNotificationModel.md)| UserNotification object that needs to be set | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse54**](../Model/ApiResponse54.md)
 
 ### Authorization
 

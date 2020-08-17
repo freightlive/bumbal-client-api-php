@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createDriverUnavailability**
-> \BumbalClient\Model\ApiResponse8 createDriverUnavailability($body)
+> \BumbalClient\Model\ApiResponse4 createDriverUnavailability($body)
 
 Add a new DriverUnavailability
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse8**](../Model/ApiResponse8.md)
+[**\BumbalClient\Model\ApiResponse4**](../Model/ApiResponse4.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteDriverUnavailability**
-> \BumbalClient\Model\ApiResponse5 deleteDriverUnavailability($driverunavailability_id)
+> \BumbalClient\Model\ApiResponse2 deleteDriverUnavailability($driverunavailability_id)
 
 Delete a DriverUnavailability entry
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse5**](../Model/ApiResponse5.md)
+[**\BumbalClient\Model\ApiResponse2**](../Model/ApiResponse2.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateDriverUnavailability**
-> \BumbalClient\Model\ApiResponse4 updateDriverUnavailability($driverunavailability_id, $body)
+> \BumbalClient\Model\ApiResponse1 updateDriverUnavailability($driverunavailability_id, $body)
 
 Update a specific DriverUnavailability object
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse4**](../Model/ApiResponse4.md)
+[**\BumbalClient\Model\ApiResponse1**](../Model/ApiResponse1.md)
 
 ### Authorization
 

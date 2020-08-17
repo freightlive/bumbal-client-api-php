@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplateQuestionOptionText**
-> \BumbalClient\Model\ApiResponse54 createQuestionnaireTemplateQuestionOptionText($body)
+> \BumbalClient\Model\ApiResponse45 createQuestionnaireTemplateQuestionOptionText($body)
 
 Add a new QuestionnaireTemplateQuestionOptionText
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse54**](../Model/ApiResponse54.md)
+[**\BumbalClient\Model\ApiResponse45**](../Model/ApiResponse45.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestionOptionText**
-> \BumbalClient\Model\ApiResponse53 deleteQuestionnaireTemplateQuestionOptionText($notification_id)
+> \BumbalClient\Model\ApiResponse44 deleteQuestionnaireTemplateQuestionOptionText($notification_id)
 
 Delete an QuestionnaireTemplateQuestionOptionText entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse53**](../Model/ApiResponse53.md)
+[**\BumbalClient\Model\ApiResponse44**](../Model/ApiResponse44.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestionOptionText**
-> \BumbalClient\Model\ApiResponse52 updateQuestionnaireTemplateQuestionOptionText($notification_id, $body)
+> \BumbalClient\Model\ApiResponse43 updateQuestionnaireTemplateQuestionOptionText($notification_id, $body)
 
 Update a specific QuestionnaireTemplateQuestionOptionText object
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse52**](../Model/ApiResponse52.md)
+[**\BumbalClient\Model\ApiResponse43**](../Model/ApiResponse43.md)
 
 ### Authorization
 

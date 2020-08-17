@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **links** | **object[]** | Activity Link ids | [optional] 
 **search_text** | **string** | free search through text and numeric type columns | [optional] 
 **zone_id** | **int** | Zone ID | [optional] 
+**brand_id** | **int** | Brand ID | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 
 **questionnaire_type_name** | **object** | Questionnaire type name | [optional] 

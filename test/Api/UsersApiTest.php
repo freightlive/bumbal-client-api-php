@@ -83,6 +83,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for retrieveListUserNotification
+     *
+     * Retrieve List of UserNotification.
+     *
+     */
+    public function testRetrieveListUserNotification()
+    {
+    }
+
+    /**
      * Test case for retrieveListUsers
      *
      * Retrieve List of Users.
@@ -109,6 +119,16 @@ class UsersApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetUser()
+    {
+    }
+
+    /**
+     * Test case for setUserNotification
+     *
+     * Create a new UserNotification or update an existing one.
+     *
+     */
+    public function testSetUserNotification()
     {
     }
 

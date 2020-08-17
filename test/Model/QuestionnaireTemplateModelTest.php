@@ -92,6 +92,13 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brands"
+     */
+    public function testPropertyBrands()
+    {
+    }
+
+    /**
      * Test attribute "brand_ids"
      */
     public function testPropertyBrandIds()
@@ -106,6 +113,13 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "zones"
+     */
+    public function testPropertyZones()
+    {
+    }
+
+    /**
      * Test attribute "zone_ids"
      */
     public function testPropertyZoneIds()
@@ -116,6 +130,13 @@ class QuestionnaireTemplateModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "zone_names"
      */
     public function testPropertyZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
     {
     }
 

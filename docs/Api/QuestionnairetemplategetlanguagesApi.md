@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getQuestionnaireTemplateLanguages**
-> \BumbalClient\Model\ApiResponse41 getQuestionnaireTemplateLanguages($questionnaire_template_id)
+> \BumbalClient\Model\ApiResponse34 getQuestionnaireTemplateLanguages($questionnaire_template_id)
 
 Retrieves all set languages for an QuestionnaireTemplate entry
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse41**](../Model/ApiResponse41.md)
+[**\BumbalClient\Model\ApiResponse34**](../Model/ApiResponse34.md)
 
 ### Authorization
 

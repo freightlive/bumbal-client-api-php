@@ -56,10 +56,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'active' => 'bool',
+        'brands' => '\BumbalClient\Model\BrandModel[]',
         'brand_ids' => 'int[]',
         'brand_names' => 'string[]',
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
         'zone_ids' => 'int[]',
         'zone_names' => 'string[]',
+        'tags' => '\BumbalClient\Model\TagModel[]',
         'tag_ids' => 'int[]',
         'tag_names' => 'string[]',
         'name' => 'string',
@@ -77,10 +80,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'active' => null,
+        'brands' => null,
         'brand_ids' => null,
         'brand_names' => null,
+        'zones' => null,
         'zone_ids' => null,
         'zone_names' => null,
+        'tags' => null,
         'tag_ids' => null,
         'tag_names' => null,
         'name' => 'string',
@@ -108,10 +114,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'active' => 'active',
+        'brands' => 'brands',
         'brand_ids' => 'brand_ids',
         'brand_names' => 'brand_names',
+        'zones' => 'zones',
         'zone_ids' => 'zone_ids',
         'zone_names' => 'zone_names',
+        'tags' => 'tags',
         'tag_ids' => 'tag_ids',
         'tag_names' => 'tag_names',
         'name' => 'name',
@@ -130,10 +139,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'active' => 'setActive',
+        'brands' => 'setBrands',
         'brand_ids' => 'setBrandIds',
         'brand_names' => 'setBrandNames',
+        'zones' => 'setZones',
         'zone_ids' => 'setZoneIds',
         'zone_names' => 'setZoneNames',
+        'tags' => 'setTags',
         'tag_ids' => 'setTagIds',
         'tag_names' => 'setTagNames',
         'name' => 'setName',
@@ -152,10 +164,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'active' => 'getActive',
+        'brands' => 'getBrands',
         'brand_ids' => 'getBrandIds',
         'brand_names' => 'getBrandNames',
+        'zones' => 'getZones',
         'zone_ids' => 'getZoneIds',
         'zone_names' => 'getZoneNames',
+        'tags' => 'getTags',
         'tag_ids' => 'getTagIds',
         'tag_names' => 'getTagNames',
         'name' => 'getName',
@@ -199,10 +214,13 @@ class QuestionnaireTemplateModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['brands'] = isset($data['brands']) ? $data['brands'] : null;
         $this->container['brand_ids'] = isset($data['brand_ids']) ? $data['brand_ids'] : null;
         $this->container['brand_names'] = isset($data['brand_names']) ? $data['brand_names'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
         $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -281,6 +299,27 @@ class QuestionnaireTemplateModel implements ArrayAccess
     }
 
     /**
+     * Gets brands
+     * @return \BumbalClient\Model\BrandModel[]
+     */
+    public function getBrands()
+    {
+        return $this->container['brands'];
+    }
+
+    /**
+     * Sets brands
+     * @param \BumbalClient\Model\BrandModel[] $brands 
+     * @return $this
+     */
+    public function setBrands($brands)
+    {
+        $this->container['brands'] = $brands;
+
+        return $this;
+    }
+
+    /**
      * Gets brand_ids
      * @return int[]
      */
@@ -323,6 +362,27 @@ class QuestionnaireTemplateModel implements ArrayAccess
     }
 
     /**
+     * Gets zones
+     * @return \BumbalClient\Model\ZoneModel[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
      * Gets zone_ids
      * @return int[]
      */
@@ -360,6 +420,27 @@ class QuestionnaireTemplateModel implements ArrayAccess
     public function setZoneNames($zone_names)
     {
         $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     * @return \BumbalClient\Model\TagModel[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
 
         return $this;
     }

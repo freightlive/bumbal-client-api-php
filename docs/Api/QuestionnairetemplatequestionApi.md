@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse45 createQuestionnaireTemplateQuestion($body)
+> \BumbalClient\Model\ApiResponse37 createQuestionnaireTemplateQuestion($body)
 
 Add a new QuestionnaireTemplateQuestion
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse45**](../Model/ApiResponse45.md)
+[**\BumbalClient\Model\ApiResponse37**](../Model/ApiResponse37.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse44 deleteQuestionnaireTemplateQuestion($notification_id)
+> \BumbalClient\Model\ApiResponse36 deleteQuestionnaireTemplateQuestion($notification_id)
 
 Delete an QuestionnaireTemplateQuestion entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse44**](../Model/ApiResponse44.md)
+[**\BumbalClient\Model\ApiResponse36**](../Model/ApiResponse36.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireTemplateQuestion**
-> \BumbalClient\Model\ApiResponse43 updateQuestionnaireTemplateQuestion($notification_id, $body)
+> \BumbalClient\Model\ApiResponse35 updateQuestionnaireTemplateQuestion($notification_id, $body)
 
 Update a specific QuestionnaireTemplateQuestion object
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse43**](../Model/ApiResponse43.md)
+[**\BumbalClient\Model\ApiResponse35**](../Model/ApiResponse35.md)
 
 ### Authorization
 

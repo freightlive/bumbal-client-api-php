@@ -112,7 +112,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'bool',
         'include_activity_record_object' => 'bool',
         'include_party_name' => 'bool',
-        'include_shipment_activity_nr' => 'bool'
+        'include_shipment_activity_nr' => 'bool',
+        'include_payments' => 'bool',
+        'include_transactions' => 'bool'
     ];
 
     /**
@@ -178,7 +180,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => null,
         'include_activity_record_object' => null,
         'include_party_name' => null,
-        'include_shipment_activity_nr' => null
+        'include_shipment_activity_nr' => null,
+        'include_payments' => null,
+        'include_transactions' => null
     ];
 
     public static function swaggerTypes()
@@ -254,7 +258,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'include_activity_record_info',
         'include_activity_record_object' => 'include_activity_record_object',
         'include_party_name' => 'include_party_name',
-        'include_shipment_activity_nr' => 'include_shipment_activity_nr'
+        'include_shipment_activity_nr' => 'include_shipment_activity_nr',
+        'include_payments' => 'include_payments',
+        'include_transactions' => 'include_transactions'
     ];
 
 
@@ -321,7 +327,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'setIncludeActivityRecordInfo',
         'include_activity_record_object' => 'setIncludeActivityRecordObject',
         'include_party_name' => 'setIncludePartyName',
-        'include_shipment_activity_nr' => 'setIncludeShipmentActivityNr'
+        'include_shipment_activity_nr' => 'setIncludeShipmentActivityNr',
+        'include_payments' => 'setIncludePayments',
+        'include_transactions' => 'setIncludeTransactions'
     ];
 
 
@@ -388,7 +396,9 @@ class ActivityOptionsModel implements ArrayAccess
         'include_activity_record_info' => 'getIncludeActivityRecordInfo',
         'include_activity_record_object' => 'getIncludeActivityRecordObject',
         'include_party_name' => 'getIncludePartyName',
-        'include_shipment_activity_nr' => 'getIncludeShipmentActivityNr'
+        'include_shipment_activity_nr' => 'getIncludeShipmentActivityNr',
+        'include_payments' => 'getIncludePayments',
+        'include_transactions' => 'getIncludeTransactions'
     ];
 
     public static function attributeMap()
@@ -481,6 +491,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
         $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
         $this->container['include_shipment_activity_nr'] = isset($data['include_shipment_activity_nr']) ? $data['include_shipment_activity_nr'] : null;
+        $this->container['include_payments'] = isset($data['include_payments']) ? $data['include_payments'] : null;
+        $this->container['include_transactions'] = isset($data['include_transactions']) ? $data['include_transactions'] : null;
     }
 
     /**
@@ -1743,6 +1755,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeShipmentActivityNr($include_shipment_activity_nr)
     {
         $this->container['include_shipment_activity_nr'] = $include_shipment_activity_nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_payments
+     * @return bool
+     */
+    public function getIncludePayments()
+    {
+        return $this->container['include_payments'];
+    }
+
+    /**
+     * Sets include_payments
+     * @param bool $include_payments 
+     * @return $this
+     */
+    public function setIncludePayments($include_payments)
+    {
+        $this->container['include_payments'] = $include_payments;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_transactions
+     * @return bool
+     */
+    public function getIncludeTransactions()
+    {
+        return $this->container['include_transactions'];
+    }
+
+    /**
+     * Sets include_transactions
+     * @param bool $include_transactions 
+     * @return $this
+     */
+    public function setIncludeTransactions($include_transactions)
+    {
+        $this->container['include_transactions'] = $include_transactions;
 
         return $this;
     }

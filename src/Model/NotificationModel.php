@@ -67,7 +67,8 @@ class NotificationModel implements ArrayAccess
         'notification_updated_at' => '\DateTime',
         'notification_created_by' => 'int',
         'notification_updated_by' => 'int',
-        'users' => '\BumbalClient\Model\UserNotificationModel[]'
+        'users' => '\BumbalClient\Model\UserNotificationModel[]',
+        'role_names' => 'string[]'
     ];
 
     /**
@@ -88,7 +89,8 @@ class NotificationModel implements ArrayAccess
         'notification_updated_at' => 'date-time',
         'notification_created_by' => null,
         'notification_updated_by' => null,
-        'users' => null
+        'users' => null,
+        'role_names' => null
     ];
 
     public static function swaggerTypes()
@@ -119,7 +121,8 @@ class NotificationModel implements ArrayAccess
         'notification_updated_at' => 'notification_updated_at',
         'notification_created_by' => 'notification_created_by',
         'notification_updated_by' => 'notification_updated_by',
-        'users' => 'users'
+        'users' => 'users',
+        'role_names' => 'role_names'
     ];
 
 
@@ -141,7 +144,8 @@ class NotificationModel implements ArrayAccess
         'notification_updated_at' => 'setNotificationUpdatedAt',
         'notification_created_by' => 'setNotificationCreatedBy',
         'notification_updated_by' => 'setNotificationUpdatedBy',
-        'users' => 'setUsers'
+        'users' => 'setUsers',
+        'role_names' => 'setRoleNames'
     ];
 
 
@@ -163,7 +167,8 @@ class NotificationModel implements ArrayAccess
         'notification_updated_at' => 'getNotificationUpdatedAt',
         'notification_created_by' => 'getNotificationCreatedBy',
         'notification_updated_by' => 'getNotificationUpdatedBy',
-        'users' => 'getUsers'
+        'users' => 'getUsers',
+        'role_names' => 'getRoleNames'
     ];
 
     public static function attributeMap()
@@ -211,6 +216,7 @@ class NotificationModel implements ArrayAccess
         $this->container['notification_created_by'] = isset($data['notification_created_by']) ? $data['notification_created_by'] : null;
         $this->container['notification_updated_by'] = isset($data['notification_updated_by']) ? $data['notification_updated_by'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['role_names'] = isset($data['role_names']) ? $data['role_names'] : null;
     }
 
     /**
@@ -528,6 +534,27 @@ class NotificationModel implements ArrayAccess
     public function setUsers($users)
     {
         $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets role_names
+     * @return string[]
+     */
+    public function getRoleNames()
+    {
+        return $this->container['role_names'];
+    }
+
+    /**
+     * Sets role_names
+     * @param string[] $role_names Roles to enable notification for, works only on create, ignored on update
+     * @return $this
+     */
+    public function setRoleNames($role_names)
+    {
+        $this->container['role_names'] = $role_names;
 
         return $this;
     }

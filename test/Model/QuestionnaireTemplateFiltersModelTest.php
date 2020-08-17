@@ -127,6 +127,13 @@ class QuestionnaireTemplateFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "brand_id"
+     */
+    public function testPropertyBrandId()
+    {
+    }
+
+    /**
      * Test attribute "updated_at_since"
      */
     public function testPropertyUpdatedAtSince()

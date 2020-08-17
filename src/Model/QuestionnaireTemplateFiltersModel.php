@@ -61,6 +61,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'links' => 'object[]',
         'search_text' => 'string',
         'zone_id' => 'int',
+        'brand_id' => 'int',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime',
         'questionnaire_type_name' => 'object'
@@ -78,6 +79,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'links' => null,
         'search_text' => null,
         'zone_id' => null,
+        'brand_id' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time',
         'questionnaire_type_name' => null
@@ -105,6 +107,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'links' => 'links',
         'search_text' => 'search_text',
         'zone_id' => 'zone_id',
+        'brand_id' => 'brand_id',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till',
         'questionnaire_type_name' => 'questionnaire_type_name'
@@ -123,6 +126,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'links' => 'setLinks',
         'search_text' => 'setSearchText',
         'zone_id' => 'setZoneId',
+        'brand_id' => 'setBrandId',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill',
         'questionnaire_type_name' => 'setQuestionnaireTypeName'
@@ -141,6 +145,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         'links' => 'getLinks',
         'search_text' => 'getSearchText',
         'zone_id' => 'getZoneId',
+        'brand_id' => 'getBrandId',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill',
         'questionnaire_type_name' => 'getQuestionnaireTypeName'
@@ -184,6 +189,7 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['zone_id'] = isset($data['zone_id']) ? $data['zone_id'] : null;
+        $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
         $this->container['questionnaire_type_name'] = isset($data['questionnaire_type_name']) ? $data['questionnaire_type_name'] : null;
@@ -357,6 +363,27 @@ class QuestionnaireTemplateFiltersModel implements ArrayAccess
     public function setZoneId($zone_id)
     {
         $this->container['zone_id'] = $zone_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets brand_id
+     * @return int
+     */
+    public function getBrandId()
+    {
+        return $this->container['brand_id'];
+    }
+
+    /**
+     * Sets brand_id
+     * @param int $brand_id Brand ID
+     * @return $this
+     */
+    public function setBrandId($brand_id)
+    {
+        $this->container['brand_id'] = $brand_id;
 
         return $this;
     }

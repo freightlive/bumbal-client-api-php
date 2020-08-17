@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createNotificationCategory**
-> \BumbalClient\Model\ApiResponse18 createNotificationCategory($body)
+> \BumbalClient\Model\ApiResponse12 createNotificationCategory($body)
 
 Add a new NotificationCategory
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse18**](../Model/ApiResponse18.md)
+[**\BumbalClient\Model\ApiResponse12**](../Model/ApiResponse12.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNotificationCategory**
-> \BumbalClient\Model\ApiResponse15 deleteNotificationCategory($notification_category_id)
+> \BumbalClient\Model\ApiResponse10 deleteNotificationCategory($notification_category_id)
 
 Delete an NotificationCategory entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse15**](../Model/ApiResponse15.md)
+[**\BumbalClient\Model\ApiResponse10**](../Model/ApiResponse10.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setNotificationCategory**
-> \BumbalClient\Model\ApiResponse19 setNotificationCategory($body)
+> \BumbalClient\Model\ApiResponse13 setNotificationCategory($body)
 
 Create a new NotificationCategory or update an existing one
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse19**](../Model/ApiResponse19.md)
+[**\BumbalClient\Model\ApiResponse13**](../Model/ApiResponse13.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateNotificationCategory**
-> \BumbalClient\Model\ApiResponse14 updateNotificationCategory($notification_category_id, $body)
+> \BumbalClient\Model\ApiResponse9 updateNotificationCategory($notification_category_id, $body)
 
 Update a specific NotificationCategory object
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse14**](../Model/ApiResponse14.md)
+[**\BumbalClient\Model\ApiResponse9**](../Model/ApiResponse9.md)
 
 ### Authorization
 

@@ -776,4 +776,39 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyActivityRemoved()
     {
     }
+
+    /**
+     * Test attribute "payment_total"
+     */
+    public function testPropertyPaymentTotal()
+    {
+    }
+
+    /**
+     * Test attribute "transaction_total"
+     */
+    public function testPropertyTransactionTotal()
+    {
+    }
+
+    /**
+     * Test attribute "due_total"
+     */
+    public function testPropertyDueTotal()
+    {
+    }
+
+    /**
+     * Test attribute "payments"
+     */
+    public function testPropertyPayments()
+    {
+    }
+
+    /**
+     * Test attribute "transactions"
+     */
+    public function testPropertyTransactions()
+    {
+    }
 }
