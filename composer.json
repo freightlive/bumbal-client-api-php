@@ -1,6 +1,11 @@
 {
     "name": "bumbal/bumbal-client-api-php",
     "description": "",
+    "type": "package",
+    "package": {
+        "name": "bumbal/bumbal-client-api-php",
+        "version": "dev-master",
+    }
     "keywords": [
         "swagger",
         "php",
