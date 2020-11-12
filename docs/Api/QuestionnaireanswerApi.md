@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createQuestionnaireAnswer**
-> \BumbalClient\Model\ApiResponse26 createQuestionnaireAnswer($body)
+> \BumbalClient\Model\ApiResponse27 createQuestionnaireAnswer($body)
 
 Add a new QuestionnaireAnswer
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse26**](../Model/ApiResponse26.md)
+[**\BumbalClient\Model\ApiResponse27**](../Model/ApiResponse27.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteQuestionnaireAnswer**
-> \BumbalClient\Model\ApiResponse25 deleteQuestionnaireAnswer($notification_id)
+> \BumbalClient\Model\ApiResponse25 deleteQuestionnaireAnswer($questionnaire_answer_id)
 
 Delete an QuestionnaireAnswer entry
 
@@ -80,10 +80,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireanswerApi();
-$notification_id = 789; // int | ID of QuestionnaireAnswer to delete
+$questionnaire_answer_id = 789; // int | ID of QuestionnaireAnswer to delete
 
 try {
-    $result = $api_instance->deleteQuestionnaireAnswer($notification_id);
+    $result = $api_instance->deleteQuestionnaireAnswer($questionnaire_answer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireanswerApi->deleteQuestionnaireAnswer: ', $e->getMessage(), PHP_EOL;
@@ -95,7 +95,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireAnswer to delete |
+ **questionnaire_answer_id** | **int**| ID of QuestionnaireAnswer to delete |
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveQuestionnaireAnswer**
-> \BumbalClient\Model\QuestionnaireAnswerModel retrieveQuestionnaireAnswer($notification_id)
+> \BumbalClient\Model\QuestionnaireAnswerModel retrieveQuestionnaireAnswer($questionnaire_answer_id)
 
 Retrieve a QuestionnaireAnswer
 
@@ -180,10 +180,10 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireanswerApi();
-$notification_id = 789; // int | ID of QuestionnaireAnswer to retrieve
+$questionnaire_answer_id = 789; // int | ID of QuestionnaireAnswer to retrieve
 
 try {
-    $result = $api_instance->retrieveQuestionnaireAnswer($notification_id);
+    $result = $api_instance->retrieveQuestionnaireAnswer($questionnaire_answer_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireanswerApi->retrieveQuestionnaireAnswer: ', $e->getMessage(), PHP_EOL;
@@ -195,7 +195,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of QuestionnaireAnswer to retrieve |
+ **questionnaire_answer_id** | **int**| ID of QuestionnaireAnswer to retrieve |
 
 ### Return type
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateQuestionnaireAnswer**
-> \BumbalClient\Model\ApiResponse24 updateQuestionnaireAnswer($notification_id, $body)
+> \BumbalClient\Model\ApiResponse24 updateQuestionnaireAnswer($questionnaire_answer_id, $body)
 
 Update a specific QuestionnaireAnswer object
 
@@ -280,11 +280,11 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 // BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
 
 $api_instance = new BumbalClient\Api\QuestionnaireanswerApi();
-$notification_id = 789; // int | ID of the QuestionnaireAnswer object to update
+$questionnaire_answer_id = 789; // int | ID of the QuestionnaireAnswer object to update
 $body = new \BumbalClient\Model\QuestionnaireAnswerModel(); // \BumbalClient\Model\QuestionnaireAnswerModel | QuestionnaireAnswer object that needs to be updated
 
 try {
-    $result = $api_instance->updateQuestionnaireAnswer($notification_id, $body);
+    $result = $api_instance->updateQuestionnaireAnswer($questionnaire_answer_id, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling QuestionnaireanswerApi->updateQuestionnaireAnswer: ', $e->getMessage(), PHP_EOL;
@@ -296,7 +296,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notification_id** | **int**| ID of the QuestionnaireAnswer object to update |
+ **questionnaire_answer_id** | **int**| ID of the QuestionnaireAnswer object to update |
  **body** | [**\BumbalClient\Model\QuestionnaireAnswerModel**](../Model/QuestionnaireAnswerModel.md)| QuestionnaireAnswer object that needs to be updated | [optional]
 
 ### Return type

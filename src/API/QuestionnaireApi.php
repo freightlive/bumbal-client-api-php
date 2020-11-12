@@ -174,7 +174,7 @@ class QuestionnaireApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse29', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse30', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -194,7 +194,7 @@ class QuestionnaireApi
      *
      * @param int $notification_id ID of Questionnaire to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse27
+     * @return \BumbalClient\Model\ApiResponse28
      */
     public function deleteQuestionnaire($notification_id)
     {
@@ -209,7 +209,7 @@ class QuestionnaireApi
      *
      * @param int $notification_id ID of Questionnaire to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse27, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse28, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteQuestionnaireWithHttpInfo($notification_id)
     {
@@ -257,15 +257,15 @@ class QuestionnaireApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse27',
+                '\BumbalClient\Model\ApiResponse28',
                 '/questionnaire/{questionnaireId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse27', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse28', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse27', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse28', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -277,7 +277,7 @@ class QuestionnaireApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse28', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse29', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -377,7 +377,7 @@ class QuestionnaireApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse29', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse30', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -477,7 +477,7 @@ class QuestionnaireApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse29', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse30', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:

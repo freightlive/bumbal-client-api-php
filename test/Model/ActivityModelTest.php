@@ -512,6 +512,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "depot_activity"
+     */
+    public function testPropertyDepotActivity()
+    {
+    }
+
+    /**
      * Test attribute "allowed_driver_ids"
      */
     public function testPropertyAllowedDriverIds()
@@ -641,6 +648,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "trailer"
      */
     public function testPropertyTrailer()
+    {
+    }
+
+    /**
+     * Test attribute "activity_id_before"
+     */
+    public function testPropertyActivityIdBefore()
+    {
+    }
+
+    /**
+     * Test attribute "activity_id_after"
+     */
+    public function testPropertyActivityIdAfter()
     {
     }
 

@@ -95,6 +95,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_notes' => 'bool',
         'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
+        'include_depot_activity' => 'bool',
         'include_depot_address' => 'bool',
         'include_depot_address_object' => 'bool',
         'include_capacity_object' => 'bool',
@@ -114,7 +115,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_party_name' => 'bool',
         'include_shipment_activity_nr' => 'bool',
         'include_payments' => 'bool',
-        'include_transactions' => 'bool'
+        'include_transactions' => 'bool',
+        'include_relations' => 'bool'
     ];
 
     /**
@@ -163,6 +165,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_notes' => null,
         'include_activity_notes' => null,
         'include_activity_note_tags' => null,
+        'include_depot_activity' => null,
         'include_depot_address' => null,
         'include_depot_address_object' => null,
         'include_capacity_object' => null,
@@ -182,7 +185,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_party_name' => null,
         'include_shipment_activity_nr' => null,
         'include_payments' => null,
-        'include_transactions' => null
+        'include_transactions' => null,
+        'include_relations' => null
     ];
 
     public static function swaggerTypes()
@@ -241,6 +245,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_notes' => 'include_notes',
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
+        'include_depot_activity' => 'include_depot_activity',
         'include_depot_address' => 'include_depot_address',
         'include_depot_address_object' => 'include_depot_address_object',
         'include_capacity_object' => 'include_capacity_object',
@@ -260,7 +265,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_party_name' => 'include_party_name',
         'include_shipment_activity_nr' => 'include_shipment_activity_nr',
         'include_payments' => 'include_payments',
-        'include_transactions' => 'include_transactions'
+        'include_transactions' => 'include_transactions',
+        'include_relations' => 'include_relations'
     ];
 
 
@@ -310,6 +316,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_notes' => 'setIncludeNotes',
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
+        'include_depot_activity' => 'setIncludeDepotActivity',
         'include_depot_address' => 'setIncludeDepotAddress',
         'include_depot_address_object' => 'setIncludeDepotAddressObject',
         'include_capacity_object' => 'setIncludeCapacityObject',
@@ -329,7 +336,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_party_name' => 'setIncludePartyName',
         'include_shipment_activity_nr' => 'setIncludeShipmentActivityNr',
         'include_payments' => 'setIncludePayments',
-        'include_transactions' => 'setIncludeTransactions'
+        'include_transactions' => 'setIncludeTransactions',
+        'include_relations' => 'setIncludeRelations'
     ];
 
 
@@ -379,6 +387,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_notes' => 'getIncludeNotes',
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
+        'include_depot_activity' => 'getIncludeDepotActivity',
         'include_depot_address' => 'getIncludeDepotAddress',
         'include_depot_address_object' => 'getIncludeDepotAddressObject',
         'include_capacity_object' => 'getIncludeCapacityObject',
@@ -398,7 +407,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_party_name' => 'getIncludePartyName',
         'include_shipment_activity_nr' => 'getIncludeShipmentActivityNr',
         'include_payments' => 'getIncludePayments',
-        'include_transactions' => 'getIncludeTransactions'
+        'include_transactions' => 'getIncludeTransactions',
+        'include_relations' => 'getIncludeRelations'
     ];
 
     public static function attributeMap()
@@ -473,6 +483,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
+        $this->container['include_depot_activity'] = isset($data['include_depot_activity']) ? $data['include_depot_activity'] : null;
         $this->container['include_depot_address'] = isset($data['include_depot_address']) ? $data['include_depot_address'] : null;
         $this->container['include_depot_address_object'] = isset($data['include_depot_address_object']) ? $data['include_depot_address_object'] : null;
         $this->container['include_capacity_object'] = isset($data['include_capacity_object']) ? $data['include_capacity_object'] : null;
@@ -493,6 +504,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_shipment_activity_nr'] = isset($data['include_shipment_activity_nr']) ? $data['include_shipment_activity_nr'] : null;
         $this->container['include_payments'] = isset($data['include_payments']) ? $data['include_payments'] : null;
         $this->container['include_transactions'] = isset($data['include_transactions']) ? $data['include_transactions'] : null;
+        $this->container['include_relations'] = isset($data['include_relations']) ? $data['include_relations'] : null;
     }
 
     /**
@@ -1382,6 +1394,27 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
+     * Gets include_depot_activity
+     * @return bool
+     */
+    public function getIncludeDepotActivity()
+    {
+        return $this->container['include_depot_activity'];
+    }
+
+    /**
+     * Sets include_depot_activity
+     * @param bool $include_depot_activity 
+     * @return $this
+     */
+    public function setIncludeDepotActivity($include_depot_activity)
+    {
+        $this->container['include_depot_activity'] = $include_depot_activity;
+
+        return $this;
+    }
+
+    /**
      * Gets include_depot_address
      * @return bool
      */
@@ -1797,6 +1830,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeTransactions($include_transactions)
     {
         $this->container['include_transactions'] = $include_transactions;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_relations
+     * @return bool
+     */
+    public function getIncludeRelations()
+    {
+        return $this->container['include_relations'];
+    }
+
+    /**
+     * Sets include_relations
+     * @param bool $include_relations 
+     * @return $this
+     */
+    public function setIncludeRelations($include_relations)
+    {
+        $this->container['include_relations'] = $include_relations;
 
         return $this;
     }

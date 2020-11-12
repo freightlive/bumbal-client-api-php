@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | QuestionnaireAnswer id&#39;s | [optional] 
+**questionnaire_id** | **int[]** | Questionnaire id&#39;s | [optional] 
 **search_text** | **string** | free search through text and numeric type columns | [optional] 
 **updated_at_since** | [**\DateTime**](\DateTime.md) | Show updated since | [optional] 
 **updated_at_till** | [**\DateTime**](\DateTime.md) | Show updated till | [optional] 

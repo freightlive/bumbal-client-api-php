@@ -94,7 +94,7 @@ class QuestionnairetemplategetlanguagesApi
      *
      * @param int $questionnaire_template_id ID of QuestionnaireTemplate (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse34
+     * @return \BumbalClient\Model\ApiResponse35
      */
     public function getQuestionnaireTemplateLanguages($questionnaire_template_id)
     {
@@ -109,7 +109,7 @@ class QuestionnairetemplategetlanguagesApi
      *
      * @param int $questionnaire_template_id ID of QuestionnaireTemplate (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse34, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse35, HTTP status code, HTTP response headers (array of strings)
      */
     public function getQuestionnaireTemplateLanguagesWithHttpInfo($questionnaire_template_id)
     {
@@ -157,15 +157,15 @@ class QuestionnairetemplategetlanguagesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse34',
+                '\BumbalClient\Model\ApiResponse35',
                 '/questionnaire-template/get-languages/{questionnaire-templateId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse34', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse35', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse34', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse35', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -177,7 +177,7 @@ class QuestionnairetemplategetlanguagesApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse32', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse33', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:

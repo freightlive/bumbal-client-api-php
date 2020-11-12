@@ -281,6 +281,8 @@ Class | Method | HTTP request | Description
 *SaywhenApi* | [**saywhenRetrievePortalURL**](docs/Api/SaywhenApi.md#saywhenretrieveportalurl) | **GET** /saywhen/retrieve-portal-url/{activityId} | Retrieve SayWhen Portal URL
 *SaywhenApi* | [**saywhenRetrievePortalURLs**](docs/Api/SaywhenApi.md#saywhenretrieveportalurls) | **PUT** /saywhen/retrieve-portal-urls | Retrieve SayWhen Portal URLs
 *SaywhenApi* | [**saywhenRetrieveStatus**](docs/Api/SaywhenApi.md#saywhenretrievestatus) | **GET** /saywhen/retrieve-status/{activityId} | Retrieve SayWhen Status
+*SettingsApi* | [**getConstants**](docs/Api/SettingsApi.md#getconstants) | **GET** /settings/get-constants | getConstants, returns in structure &#39;string&#39;:&#39;string&#39;, can contain rounding errors for floating points
+*SettingsApi* | [**getConstantsReversed**](docs/Api/SettingsApi.md#getconstantsreversed) | **GET** /settings/get-constants-reversed | getConstantsReversed, returns in structure &#39;string&#39;:int/float
 *SettingsApi* | [**retrieveListSettings**](docs/Api/SettingsApi.md#retrievelistsettings) | **PUT** /settings | Retrieve List of Settings
 *SettingsApi* | [**retrieveSettings**](docs/Api/SettingsApi.md#retrievesettings) | **GET** /settings/{settingsId} | Retrieve a Settings
 *SettingsApi* | [**setSetting**](docs/Api/SettingsApi.md#setsetting) | **POST** /settings/set | Set (update) Setting value
@@ -288,6 +290,8 @@ Class | Method | HTTP request | Description
 *SystemApi* | [**systemGetConfig**](docs/Api/SystemApi.md#systemgetconfig) | **GET** /system/get-config | Retrieve System Configuration
 *SystemApi* | [**systemGetSayWhenConfig**](docs/Api/SystemApi.md#systemgetsaywhenconfig) | **GET** /system/get-say-when-config | Retrieve SayWhen System Configuration
 *SystemApi* | [**systemGetVariables**](docs/Api/SystemApi.md#systemgetvariables) | **GET** /system/get-variables | Retrieve System Variables
+*SystemproviderApi* | [**retrieveListSystemProvider**](docs/Api/SystemproviderApi.md#retrievelistsystemprovider) | **PUT** /system-provider | Retrieve List of System Providers
+*SystemproviderApi* | [**retrieveSystemProvider**](docs/Api/SystemproviderApi.md#retrievesystemprovider) | **GET** /system-provider/{providerId} | Retrieve a System Provider
 *TagsApi* | [**addTagToObject**](docs/Api/TagsApi.md#addtagtoobject) | **POST** /tags/add-tag-to-object | adds a tag to an object
 *TagsApi* | [**createTag**](docs/Api/TagsApi.md#createtag) | **POST** /tags | Add a new Tag
 *TagsApi* | [**deleteTag**](docs/Api/TagsApi.md#deletetag) | **DELETE** /tags/{tagId} | Delete a Tag
@@ -431,6 +435,7 @@ Class | Method | HTTP request | Description
  - [ApiResponse55](docs/Model/ApiResponse55.md)
  - [ApiResponse56](docs/Model/ApiResponse56.md)
  - [ApiResponse57](docs/Model/ApiResponse57.md)
+ - [ApiResponse58](docs/Model/ApiResponse58.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
  - [ApiResponse7](docs/Model/ApiResponse7.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)
@@ -653,9 +658,15 @@ Class | Method | HTTP request | Description
  - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)
  - [SettingsFiltersModel](docs/Model/SettingsFiltersModel.md)
+ - [SettingsGetConstantsResponse](docs/Model/SettingsGetConstantsResponse.md)
+ - [SettingsGetConstantsReversedResponse](docs/Model/SettingsGetConstantsReversedResponse.md)
  - [SettingsModel](docs/Model/SettingsModel.md)
  - [SettingsOptionsModel](docs/Model/SettingsOptionsModel.md)
  - [SettingsRetrieveListArguments](docs/Model/SettingsRetrieveListArguments.md)
+ - [SystemProviderFiltersModel](docs/Model/SystemProviderFiltersModel.md)
+ - [SystemProviderListResponse](docs/Model/SystemProviderListResponse.md)
+ - [SystemProviderModel](docs/Model/SystemProviderModel.md)
+ - [SystemProviderRetrieveListArguments](docs/Model/SystemProviderRetrieveListArguments.md)
  - [TagListResponse](docs/Model/TagListResponse.md)
  - [TagModel](docs/Model/TagModel.md)
  - [TagTypeFiltersModel](docs/Model/TagTypeFiltersModel.md)

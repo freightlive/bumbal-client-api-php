@@ -73,6 +73,26 @@ class SettingsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getConstants
+     *
+     * getConstants, returns in structure 'string':'string', can contain rounding errors for floating points.
+     *
+     */
+    public function testGetConstants()
+    {
+    }
+
+    /**
+     * Test case for getConstantsReversed
+     *
+     * getConstantsReversed, returns in structure 'string':int/float.
+     *
+     */
+    public function testGetConstantsReversed()
+    {
+    }
+
+    /**
      * Test case for retrieveListSettings
      *
      * Retrieve List of Settings.

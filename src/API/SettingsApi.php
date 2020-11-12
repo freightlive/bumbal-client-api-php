@@ -88,6 +88,176 @@ class SettingsApi
     }
 
     /**
+     * Operation getConstants
+     *
+     * getConstants, returns in structure 'string':'string', can contain rounding errors for floating points
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\SettingsGetConstantsResponse
+     */
+    public function getConstants()
+    {
+        list($response) = $this->getConstantsWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation getConstantsWithHttpInfo
+     *
+     * getConstants, returns in structure 'string':'string', can contain rounding errors for floating points
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\SettingsGetConstantsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getConstantsWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/settings/get-constants";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\SettingsGetConstantsResponse',
+                '/settings/get-constants'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsGetConstantsResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsGetConstantsResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getConstantsReversed
+     *
+     * getConstantsReversed, returns in structure 'string':int/float
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\SettingsGetConstantsReversedResponse
+     */
+    public function getConstantsReversed()
+    {
+        list($response) = $this->getConstantsReversedWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation getConstantsReversedWithHttpInfo
+     *
+     * getConstantsReversed, returns in structure 'string':int/float
+     *
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\SettingsGetConstantsReversedResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getConstantsReversedWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/settings/get-constants-reversed";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\SettingsGetConstantsReversedResponse',
+                '/settings/get-constants-reversed'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\SettingsGetConstantsReversedResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\SettingsGetConstantsReversedResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveListSettings
      *
      * Retrieve List of Settings

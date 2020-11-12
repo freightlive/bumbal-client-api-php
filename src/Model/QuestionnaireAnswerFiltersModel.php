@@ -55,6 +55,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'questionnaire_id' => 'int[]',
         'search_text' => 'string',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime'
@@ -66,6 +67,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'questionnaire_id' => null,
         'search_text' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time'
@@ -87,6 +89,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'questionnaire_id' => 'questionnaire_id',
         'search_text' => 'search_text',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till'
@@ -99,6 +102,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'questionnaire_id' => 'setQuestionnaireId',
         'search_text' => 'setSearchText',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill'
@@ -111,6 +115,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'questionnaire_id' => 'getQuestionnaireId',
         'search_text' => 'getSearchText',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill'
@@ -148,6 +153,7 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['questionnaire_id'] = isset($data['questionnaire_id']) ? $data['questionnaire_id'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
@@ -195,6 +201,27 @@ class QuestionnaireAnswerFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets questionnaire_id
+     * @return int[]
+     */
+    public function getQuestionnaireId()
+    {
+        return $this->container['questionnaire_id'];
+    }
+
+    /**
+     * Sets questionnaire_id
+     * @param int[] $questionnaire_id Questionnaire id's
+     * @return $this
+     */
+    public function setQuestionnaireId($questionnaire_id)
+    {
+        $this->container['questionnaire_id'] = $questionnaire_id;
 
         return $this;
     }

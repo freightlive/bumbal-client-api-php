@@ -365,6 +365,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_depot_activity"
+     */
+    public function testPropertyIncludeDepotActivity()
+    {
+    }
+
+    /**
      * Test attribute "include_depot_address"
      */
     public function testPropertyIncludeDepotAddress()
@@ -501,6 +508,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_transactions"
      */
     public function testPropertyIncludeTransactions()
+    {
+    }
+
+    /**
+     * Test attribute "include_relations"
+     */
+    public function testPropertyIncludeRelations()
     {
     }
 }

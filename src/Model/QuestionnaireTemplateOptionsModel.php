@@ -61,11 +61,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_question_type_name' => 'bool',
         'include_zones' => 'bool',
         'include_brands' => 'bool',
+        'include_tag_ids' => 'bool',
+        'include_tag_names' => 'bool',
         'include_tags' => 'bool',
         'include_zone_ids' => 'bool',
         'include_zone_names' => 'bool',
-        'include_tag_ids' => 'bool',
-        'include_tag_names' => 'bool',
         'include_brand_ids' => 'bool',
         'include_brand_names' => 'bool'
     ];
@@ -82,11 +82,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_question_type_name' => null,
         'include_zones' => null,
         'include_brands' => null,
+        'include_tag_ids' => null,
+        'include_tag_names' => null,
         'include_tags' => null,
         'include_zone_ids' => null,
         'include_zone_names' => null,
-        'include_tag_ids' => null,
-        'include_tag_names' => null,
         'include_brand_ids' => null,
         'include_brand_names' => null
     ];
@@ -113,11 +113,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_question_type_name' => 'include_question_type_name',
         'include_zones' => 'include_zones',
         'include_brands' => 'include_brands',
+        'include_tag_ids' => 'include_tag_ids',
+        'include_tag_names' => 'include_tag_names',
         'include_tags' => 'include_tags',
         'include_zone_ids' => 'include_zone_ids',
         'include_zone_names' => 'include_zone_names',
-        'include_tag_ids' => 'include_tag_ids',
-        'include_tag_names' => 'include_tag_names',
         'include_brand_ids' => 'include_brand_ids',
         'include_brand_names' => 'include_brand_names'
     ];
@@ -135,11 +135,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_question_type_name' => 'setIncludeQuestionTypeName',
         'include_zones' => 'setIncludeZones',
         'include_brands' => 'setIncludeBrands',
+        'include_tag_ids' => 'setIncludeTagIds',
+        'include_tag_names' => 'setIncludeTagNames',
         'include_tags' => 'setIncludeTags',
         'include_zone_ids' => 'setIncludeZoneIds',
         'include_zone_names' => 'setIncludeZoneNames',
-        'include_tag_ids' => 'setIncludeTagIds',
-        'include_tag_names' => 'setIncludeTagNames',
         'include_brand_ids' => 'setIncludeBrandIds',
         'include_brand_names' => 'setIncludeBrandNames'
     ];
@@ -157,11 +157,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         'include_question_type_name' => 'getIncludeQuestionTypeName',
         'include_zones' => 'getIncludeZones',
         'include_brands' => 'getIncludeBrands',
+        'include_tag_ids' => 'getIncludeTagIds',
+        'include_tag_names' => 'getIncludeTagNames',
         'include_tags' => 'getIncludeTags',
         'include_zone_ids' => 'getIncludeZoneIds',
         'include_zone_names' => 'getIncludeZoneNames',
-        'include_tag_ids' => 'getIncludeTagIds',
-        'include_tag_names' => 'getIncludeTagNames',
         'include_brand_ids' => 'getIncludeBrandIds',
         'include_brand_names' => 'getIncludeBrandNames'
     ];
@@ -204,11 +204,11 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
         $this->container['include_question_type_name'] = isset($data['include_question_type_name']) ? $data['include_question_type_name'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
         $this->container['include_brands'] = isset($data['include_brands']) ? $data['include_brands'] : null;
+        $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_zone_ids'] = isset($data['include_zone_ids']) ? $data['include_zone_ids'] : null;
         $this->container['include_zone_names'] = isset($data['include_zone_names']) ? $data['include_zone_names'] : null;
-        $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
-        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_brand_ids'] = isset($data['include_brand_ids']) ? $data['include_brand_ids'] : null;
         $this->container['include_brand_names'] = isset($data['include_brand_names']) ? $data['include_brand_names'] : null;
     }
@@ -386,6 +386,48 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
     }
 
     /**
+     * Gets include_tag_ids
+     * @return bool
+     */
+    public function getIncludeTagIds()
+    {
+        return $this->container['include_tag_ids'];
+    }
+
+    /**
+     * Sets include_tag_ids
+     * @param bool $include_tag_ids 
+     * @return $this
+     */
+    public function setIncludeTagIds($include_tag_ids)
+    {
+        $this->container['include_tag_ids'] = $include_tag_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_names
+     * @return bool
+     */
+    public function getIncludeTagNames()
+    {
+        return $this->container['include_tag_names'];
+    }
+
+    /**
+     * Sets include_tag_names
+     * @param bool $include_tag_names 
+     * @return $this
+     */
+    public function setIncludeTagNames($include_tag_names)
+    {
+        $this->container['include_tag_names'] = $include_tag_names;
+
+        return $this;
+    }
+
+    /**
      * Gets include_tags
      * @return bool
      */
@@ -444,48 +486,6 @@ class QuestionnaireTemplateOptionsModel implements ArrayAccess
     public function setIncludeZoneNames($include_zone_names)
     {
         $this->container['include_zone_names'] = $include_zone_names;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_tag_ids
-     * @return bool
-     */
-    public function getIncludeTagIds()
-    {
-        return $this->container['include_tag_ids'];
-    }
-
-    /**
-     * Sets include_tag_ids
-     * @param bool $include_tag_ids 
-     * @return $this
-     */
-    public function setIncludeTagIds($include_tag_ids)
-    {
-        $this->container['include_tag_ids'] = $include_tag_ids;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_tag_names
-     * @return bool
-     */
-    public function getIncludeTagNames()
-    {
-        return $this->container['include_tag_names'];
-    }
-
-    /**
-     * Sets include_tag_names
-     * @param bool $include_tag_names 
-     * @return $this
-     */
-    public function setIncludeTagNames($include_tag_names)
-    {
-        $this->container['include_tag_names'] = $include_tag_names;
 
         return $this;
     }

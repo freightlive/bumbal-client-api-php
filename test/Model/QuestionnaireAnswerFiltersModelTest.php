@@ -85,6 +85,13 @@ class QuestionnaireAnswerFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "questionnaire_id"
+     */
+    public function testPropertyQuestionnaireId()
+    {
+    }
+
+    /**
      * Test attribute "search_text"
      */
     public function testPropertySearchText()

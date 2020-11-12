@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **include_question_type_name** | **bool** |  | [optional] 
 **include_zones** | **bool** |  | [optional] 
 **include_brands** | **bool** |  | [optional] 
+**include_tag_ids** | **bool** |  | [optional] 
+**include_tag_names** | **bool** |  | [optional] 
 **include_tags** | **bool** |  | [optional] 
 **include_zone_ids** | **bool** |  | [optional] 
 **include_zone_names** | **bool** |  | [optional] 
-**include_tag_ids** | **bool** |  | [optional] 
-**include_tag_names** | **bool** |  | [optional] 
 **include_brand_ids** | **bool** |  | [optional] 
 **include_brand_names** | **bool** |  | [optional] 
 

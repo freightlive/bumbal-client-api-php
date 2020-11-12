@@ -127,6 +127,20 @@ class QuestionnaireTemplateOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_tag_ids"
+     */
+    public function testPropertyIncludeTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_names"
+     */
+    public function testPropertyIncludeTagNames()
+    {
+    }
+
+    /**
      * Test attribute "include_tags"
      */
     public function testPropertyIncludeTags()
@@ -144,20 +158,6 @@ class QuestionnaireTemplateOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_zone_names"
      */
     public function testPropertyIncludeZoneNames()
-    {
-    }
-
-    /**
-     * Test attribute "include_tag_ids"
-     */
-    public function testPropertyIncludeTagIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_tag_names"
-     */
-    public function testPropertyIncludeTagNames()
     {
     }
 

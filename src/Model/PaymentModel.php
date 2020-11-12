@@ -58,7 +58,7 @@ class PaymentModel implements ArrayAccess
         'active' => 'bool',
         'activity_id' => 'int',
         'amount' => 'int',
-        'title' => 'int'
+        'title' => 'string'
     ];
 
     /**
@@ -270,7 +270,7 @@ class PaymentModel implements ArrayAccess
 
     /**
      * Gets title
-     * @return int
+     * @return string
      */
     public function getTitle()
     {
@@ -279,7 +279,7 @@ class PaymentModel implements ArrayAccess
 
     /**
      * Sets title
-     * @param int $title title of the payment
+     * @param string $title title of the payment
      * @return $this
      */
     public function setTitle($title)

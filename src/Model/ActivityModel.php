@@ -116,6 +116,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => '\BumbalClient\Model\AddressAppliedModel',
         'depot_address' => '\BumbalClient\Model\AddressModel',
         'depot_address_id' => 'int',
+        'depot_activity' => '\BumbalClient\Model\ActivityModel[]',
         'allowed_driver_ids' => 'int[]',
         'allowed_drivers' => 'object',
         'allowed_drivers_links' => '\BumbalClient\Model\LinkModel[]',
@@ -135,6 +136,8 @@ class ActivityModel implements ArrayAccess
         'car' => '\BumbalClient\Model\VehicleModel',
         'vehicle' => '\BumbalClient\Model\VehicleModel',
         'trailer' => '\BumbalClient\Model\TrailerModel',
+        'activity_id_before' => 'string',
+        'activity_id_after' => 'string',
         'bundled_activity_ids' => 'int[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
         'recurrence' => '\BumbalClient\Model\RecurrenceModel',
@@ -228,6 +231,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => null,
         'depot_address' => null,
         'depot_address_id' => null,
+        'depot_activity' => null,
         'allowed_driver_ids' => null,
         'allowed_drivers' => null,
         'allowed_drivers_links' => null,
@@ -247,6 +251,8 @@ class ActivityModel implements ArrayAccess
         'car' => null,
         'vehicle' => null,
         'trailer' => null,
+        'activity_id_before' => null,
+        'activity_id_after' => null,
         'bundled_activity_ids' => null,
         'tags' => null,
         'recurrence' => null,
@@ -350,6 +356,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'address_applied',
         'depot_address' => 'depot_address',
         'depot_address_id' => 'depot_address_id',
+        'depot_activity' => 'depot_activity',
         'allowed_driver_ids' => 'allowed_driver_ids',
         'allowed_drivers' => 'allowed_drivers',
         'allowed_drivers_links' => 'allowed_drivers_links',
@@ -369,6 +376,8 @@ class ActivityModel implements ArrayAccess
         'car' => 'car',
         'vehicle' => 'vehicle',
         'trailer' => 'trailer',
+        'activity_id_before' => 'activity_id_before',
+        'activity_id_after' => 'activity_id_after',
         'bundled_activity_ids' => 'bundled_activity_ids',
         'tags' => 'tags',
         'recurrence' => 'recurrence',
@@ -463,6 +472,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'setAddressApplied',
         'depot_address' => 'setDepotAddress',
         'depot_address_id' => 'setDepotAddressId',
+        'depot_activity' => 'setDepotActivity',
         'allowed_driver_ids' => 'setAllowedDriverIds',
         'allowed_drivers' => 'setAllowedDrivers',
         'allowed_drivers_links' => 'setAllowedDriversLinks',
@@ -482,6 +492,8 @@ class ActivityModel implements ArrayAccess
         'car' => 'setCar',
         'vehicle' => 'setVehicle',
         'trailer' => 'setTrailer',
+        'activity_id_before' => 'setActivityIdBefore',
+        'activity_id_after' => 'setActivityIdAfter',
         'bundled_activity_ids' => 'setBundledActivityIds',
         'tags' => 'setTags',
         'recurrence' => 'setRecurrence',
@@ -576,6 +588,7 @@ class ActivityModel implements ArrayAccess
         'address_applied' => 'getAddressApplied',
         'depot_address' => 'getDepotAddress',
         'depot_address_id' => 'getDepotAddressId',
+        'depot_activity' => 'getDepotActivity',
         'allowed_driver_ids' => 'getAllowedDriverIds',
         'allowed_drivers' => 'getAllowedDrivers',
         'allowed_drivers_links' => 'getAllowedDriversLinks',
@@ -595,6 +608,8 @@ class ActivityModel implements ArrayAccess
         'car' => 'getCar',
         'vehicle' => 'getVehicle',
         'trailer' => 'getTrailer',
+        'activity_id_before' => 'getActivityIdBefore',
+        'activity_id_after' => 'getActivityIdAfter',
         'bundled_activity_ids' => 'getBundledActivityIds',
         'tags' => 'getTags',
         'recurrence' => 'getRecurrence',
@@ -860,6 +875,7 @@ class ActivityModel implements ArrayAccess
         $this->container['address_applied'] = isset($data['address_applied']) ? $data['address_applied'] : null;
         $this->container['depot_address'] = isset($data['depot_address']) ? $data['depot_address'] : null;
         $this->container['depot_address_id'] = isset($data['depot_address_id']) ? $data['depot_address_id'] : null;
+        $this->container['depot_activity'] = isset($data['depot_activity']) ? $data['depot_activity'] : null;
         $this->container['allowed_driver_ids'] = isset($data['allowed_driver_ids']) ? $data['allowed_driver_ids'] : null;
         $this->container['allowed_drivers'] = isset($data['allowed_drivers']) ? $data['allowed_drivers'] : null;
         $this->container['allowed_drivers_links'] = isset($data['allowed_drivers_links']) ? $data['allowed_drivers_links'] : null;
@@ -879,6 +895,8 @@ class ActivityModel implements ArrayAccess
         $this->container['car'] = isset($data['car']) ? $data['car'] : null;
         $this->container['vehicle'] = isset($data['vehicle']) ? $data['vehicle'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
+        $this->container['activity_id_before'] = isset($data['activity_id_before']) ? $data['activity_id_before'] : null;
+        $this->container['activity_id_after'] = isset($data['activity_id_after']) ? $data['activity_id_after'] : null;
         $this->container['bundled_activity_ids'] = isset($data['bundled_activity_ids']) ? $data['bundled_activity_ids'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['recurrence'] = isset($data['recurrence']) ? $data['recurrence'] : null;
@@ -2296,6 +2314,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets depot_activity
+     * @return \BumbalClient\Model\ActivityModel[]
+     */
+    public function getDepotActivity()
+    {
+        return $this->container['depot_activity'];
+    }
+
+    /**
+     * Sets depot_activity
+     * @param \BumbalClient\Model\ActivityModel[] $depot_activity 
+     * @return $this
+     */
+    public function setDepotActivity($depot_activity)
+    {
+        $this->container['depot_activity'] = $depot_activity;
+
+        return $this;
+    }
+
+    /**
      * Gets allowed_driver_ids
      * @return int[]
      */
@@ -2690,6 +2729,48 @@ class ActivityModel implements ArrayAccess
     public function setTrailer($trailer)
     {
         $this->container['trailer'] = $trailer;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_id_before
+     * @return string
+     */
+    public function getActivityIdBefore()
+    {
+        return $this->container['activity_id_before'];
+    }
+
+    /**
+     * Sets activity_id_before
+     * @param string $activity_id_before Activity ID of the activity which must be performed before this activity
+     * @return $this
+     */
+    public function setActivityIdBefore($activity_id_before)
+    {
+        $this->container['activity_id_before'] = $activity_id_before;
+
+        return $this;
+    }
+
+    /**
+     * Gets activity_id_after
+     * @return string
+     */
+    public function getActivityIdAfter()
+    {
+        return $this->container['activity_id_after'];
+    }
+
+    /**
+     * Sets activity_id_after
+     * @param string $activity_id_after Activity ID of the activity which must be performed after this activity
+     * @return $this
+     */
+    public function setActivityIdAfter($activity_id_after)
+    {
+        $this->container['activity_id_after'] = $activity_id_after;
 
         return $this;
     }

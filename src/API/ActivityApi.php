@@ -208,12 +208,13 @@ class ActivityApi
      * @param bool $include_brand Include brand (required)
      * @param bool $include_brand_colours Include brand colours (required)
      * @param bool $include_brand_files Include brand files (required)
+     * @param bool $include_relations Include activity_before and activity_after (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ActivityModel
      */
-    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+    public function retrieveActivity($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files, $include_relations)
     {
-        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files);
+        list($response) = $this->retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files, $include_relations);
         return $response;
     }
 
@@ -251,10 +252,11 @@ class ActivityApi
      * @param bool $include_brand Include brand (required)
      * @param bool $include_brand_colours Include brand colours (required)
      * @param bool $include_brand_files Include brand files (required)
+     * @param bool $include_relations Include activity_before and activity_after (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ActivityModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files)
+    public function retrieveActivityWithHttpInfo($activity_id, $include_activity_status, $include_activity_type_name, $include_activity_meta_data, $include_address_object, $include_time_slots, $include_route_info, $include_route, $include_package_lines, $include_package_lines_info, $include_driver_info, $include_communication, $include_communication_object, $include_activity_links, $include_activity_files, $include_activity_files_meta_data, $include_assignment_nr, $include_assignment, $include_activity_tags, $include_tag_type_name, $include_activity_record_info, $include_activity_notes, $include_activity_note_tags, $include_depot_address_object, $include_capacity_object, $include_zones, $include_brand, $include_brand_colours, $include_brand_files, $include_relations)
     {
         // verify the required parameter 'activity_id' is set
         if ($activity_id === null) {
@@ -371,6 +373,10 @@ class ActivityApi
         // verify the required parameter 'include_brand_files' is set
         if ($include_brand_files === null) {
             throw new \InvalidArgumentException('Missing the required parameter $include_brand_files when calling retrieveActivity');
+        }
+        // verify the required parameter 'include_relations' is set
+        if ($include_relations === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $include_relations when calling retrieveActivity');
         }
         // parse inputs
         $resourcePath = "/activity/{activityId}";
@@ -495,6 +501,10 @@ class ActivityApi
         // query params
         if ($include_brand_files !== null) {
             $queryParams['include_brand_files'] = $this->apiClient->getSerializer()->toQueryValue($include_brand_files);
+        }
+        // query params
+        if ($include_relations !== null) {
+            $queryParams['include_relations'] = $this->apiClient->getSerializer()->toQueryValue($include_relations);
         }
         // path params
         if ($activity_id !== null) {

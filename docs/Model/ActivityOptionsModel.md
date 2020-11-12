@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **include_notes** | **bool** |  | [optional] 
 **include_activity_notes** | **bool** |  | [optional] 
 **include_activity_note_tags** | **bool** |  | [optional] 
+**include_depot_activity** | **bool** |  | [optional] 
 **include_depot_address** | **bool** |  | [optional] 
 **include_depot_address_object** | **bool** |  | [optional] 
 **include_capacity_object** | **bool** |  | [optional] 
@@ -64,6 +65,7 @@ Name | Type | Description | Notes
 **include_shipment_activity_nr** | **bool** |  | [optional] 
 **include_payments** | **bool** |  | [optional] 
 **include_transactions** | **bool** |  | [optional] 
+**include_relations** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

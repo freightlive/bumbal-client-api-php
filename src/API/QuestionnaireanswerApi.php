@@ -94,7 +94,7 @@ class QuestionnaireanswerApi
      *
      * @param \BumbalClient\Model\QuestionnaireAnswerModel $body QuestionnaireAnswer object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse26
+     * @return \BumbalClient\Model\ApiResponse27
      */
     public function createQuestionnaireAnswer($body = null)
     {
@@ -109,7 +109,7 @@ class QuestionnaireanswerApi
      *
      * @param \BumbalClient\Model\QuestionnaireAnswerModel $body QuestionnaireAnswer object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse26, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse27, HTTP status code, HTTP response headers (array of strings)
      */
     public function createQuestionnaireAnswerWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class QuestionnaireanswerApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse26',
+                '\BumbalClient\Model\ApiResponse27',
                 '/questionnaire-answer'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse26', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse27', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse26', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse27', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -184,13 +184,13 @@ class QuestionnaireanswerApi
      *
      * Delete an QuestionnaireAnswer entry
      *
-     * @param int $notification_id ID of QuestionnaireAnswer to delete (required)
+     * @param int $questionnaire_answer_id ID of QuestionnaireAnswer to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse25
      */
-    public function deleteQuestionnaireAnswer($notification_id)
+    public function deleteQuestionnaireAnswer($questionnaire_answer_id)
     {
-        list($response) = $this->deleteQuestionnaireAnswerWithHttpInfo($notification_id);
+        list($response) = $this->deleteQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id);
         return $response;
     }
 
@@ -199,15 +199,15 @@ class QuestionnaireanswerApi
      *
      * Delete an QuestionnaireAnswer entry
      *
-     * @param int $notification_id ID of QuestionnaireAnswer to delete (required)
+     * @param int $questionnaire_answer_id ID of QuestionnaireAnswer to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse25, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteQuestionnaireAnswerWithHttpInfo($notification_id)
+    public function deleteQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id)
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling deleteQuestionnaireAnswer');
+        // verify the required parameter 'questionnaire_answer_id' is set
+        if ($questionnaire_answer_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $questionnaire_answer_id when calling deleteQuestionnaireAnswer');
         }
         // parse inputs
         $resourcePath = "/questionnaire-answer/{questionnaire-answerId}";
@@ -222,10 +222,10 @@ class QuestionnaireanswerApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($notification_id !== null) {
+        if ($questionnaire_answer_id !== null) {
             $resourcePath = str_replace(
-                "{" . "notificationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($notification_id),
+                "{" . "questionnaireAnswerId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($questionnaire_answer_id),
                 $resourcePath
             );
         }
@@ -269,7 +269,7 @@ class QuestionnaireanswerApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse19', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse26', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -383,13 +383,13 @@ class QuestionnaireanswerApi
      *
      * Retrieve a QuestionnaireAnswer
      *
-     * @param int $notification_id ID of QuestionnaireAnswer to retrieve (required)
+     * @param int $questionnaire_answer_id ID of QuestionnaireAnswer to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\QuestionnaireAnswerModel
      */
-    public function retrieveQuestionnaireAnswer($notification_id)
+    public function retrieveQuestionnaireAnswer($questionnaire_answer_id)
     {
-        list($response) = $this->retrieveQuestionnaireAnswerWithHttpInfo($notification_id);
+        list($response) = $this->retrieveQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id);
         return $response;
     }
 
@@ -398,15 +398,15 @@ class QuestionnaireanswerApi
      *
      * Retrieve a QuestionnaireAnswer
      *
-     * @param int $notification_id ID of QuestionnaireAnswer to retrieve (required)
+     * @param int $questionnaire_answer_id ID of QuestionnaireAnswer to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\QuestionnaireAnswerModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveQuestionnaireAnswerWithHttpInfo($notification_id)
+    public function retrieveQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id)
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling retrieveQuestionnaireAnswer');
+        // verify the required parameter 'questionnaire_answer_id' is set
+        if ($questionnaire_answer_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $questionnaire_answer_id when calling retrieveQuestionnaireAnswer');
         }
         // parse inputs
         $resourcePath = "/questionnaire-answer/{questionnaire-answerId}";
@@ -421,10 +421,10 @@ class QuestionnaireanswerApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($notification_id !== null) {
+        if ($questionnaire_answer_id !== null) {
             $resourcePath = str_replace(
-                "{" . "notificationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($notification_id),
+                "{" . "questionnaireAnswerId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($questionnaire_answer_id),
                 $resourcePath
             );
         }
@@ -562,14 +562,14 @@ class QuestionnaireanswerApi
      *
      * Update a specific QuestionnaireAnswer object
      *
-     * @param int $notification_id ID of the QuestionnaireAnswer object to update (required)
+     * @param int $questionnaire_answer_id ID of the QuestionnaireAnswer object to update (required)
      * @param \BumbalClient\Model\QuestionnaireAnswerModel $body QuestionnaireAnswer object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\ApiResponse24
      */
-    public function updateQuestionnaireAnswer($notification_id, $body = null)
+    public function updateQuestionnaireAnswer($questionnaire_answer_id, $body = null)
     {
-        list($response) = $this->updateQuestionnaireAnswerWithHttpInfo($notification_id, $body);
+        list($response) = $this->updateQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id, $body);
         return $response;
     }
 
@@ -578,16 +578,16 @@ class QuestionnaireanswerApi
      *
      * Update a specific QuestionnaireAnswer object
      *
-     * @param int $notification_id ID of the QuestionnaireAnswer object to update (required)
+     * @param int $questionnaire_answer_id ID of the QuestionnaireAnswer object to update (required)
      * @param \BumbalClient\Model\QuestionnaireAnswerModel $body QuestionnaireAnswer object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\ApiResponse24, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateQuestionnaireAnswerWithHttpInfo($notification_id, $body = null)
+    public function updateQuestionnaireAnswerWithHttpInfo($questionnaire_answer_id, $body = null)
     {
-        // verify the required parameter 'notification_id' is set
-        if ($notification_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $notification_id when calling updateQuestionnaireAnswer');
+        // verify the required parameter 'questionnaire_answer_id' is set
+        if ($questionnaire_answer_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $questionnaire_answer_id when calling updateQuestionnaireAnswer');
         }
         // parse inputs
         $resourcePath = "/questionnaire-answer/{questionnaire-answerId}";
@@ -602,10 +602,10 @@ class QuestionnaireanswerApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
         // path params
-        if ($notification_id !== null) {
+        if ($questionnaire_answer_id !== null) {
             $resourcePath = str_replace(
-                "{" . "notificationId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($notification_id),
+                "{" . "questionnaireAnswerId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($questionnaire_answer_id),
                 $resourcePath
             );
         }
