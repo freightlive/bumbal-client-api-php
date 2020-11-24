@@ -169,6 +169,20 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "co_driver_ids"
+     */
+    public function testPropertyCoDriverIds()
+    {
+    }
+
+    /**
+     * Test attribute "co_drivers"
+     */
+    public function testPropertyCoDrivers()
+    {
+    }
+
+    /**
      * Test attribute "car_id"
      */
     public function testPropertyCarId()
@@ -235,6 +249,76 @@ class RouteModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "equipment"
      */
     public function testPropertyEquipment()
+    {
+    }
+
+    /**
+     * Test attribute "planned_start_duration"
+     */
+    public function testPropertyPlannedStartDuration()
+    {
+    }
+
+    /**
+     * Test attribute "planned_end_duration"
+     */
+    public function testPropertyPlannedEndDuration()
+    {
+    }
+
+    /**
+     * Test attribute "max_speed"
+     */
+    public function testPropertyMaxSpeed()
+    {
+    }
+
+    /**
+     * Test attribute "speed_factor"
+     */
+    public function testPropertySpeedFactor()
+    {
+    }
+
+    /**
+     * Test attribute "duration_factor"
+     */
+    public function testPropertyDurationFactor()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_meter"
+     */
+    public function testPropertyCostPerMeter()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_route"
+     */
+    public function testPropertyCostPerRoute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_driving_minute"
+     */
+    public function testPropertyCostPerDrivingMinute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_waiting_minute"
+     */
+    public function testPropertyCostPerWaitingMinute()
+    {
+    }
+
+    /**
+     * Test attribute "cost_per_service_minute"
+     */
+    public function testPropertyCostPerServiceMinute()
     {
     }
 

@@ -54,6 +54,7 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'apply_address_bundling' => 'bool',
         'include_address' => 'bool',
         'include_address_object' => 'bool',
         'include_route_status' => 'bool',
@@ -62,6 +63,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_tag_names' => 'bool',
         'include_driver' => 'bool',
         'include_driver_links' => 'bool',
+        'include_co_drivers' => 'bool',
         'include_car' => 'bool',
         'include_car_links' => 'bool',
         'include_vehicle' => 'bool',
@@ -86,6 +88,7 @@ class RouteOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'apply_address_bundling' => null,
         'include_address' => null,
         'include_address_object' => null,
         'include_route_status' => null,
@@ -94,6 +97,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_tag_names' => null,
         'include_driver' => null,
         'include_driver_links' => null,
+        'include_co_drivers' => null,
         'include_car' => null,
         'include_car_links' => null,
         'include_vehicle' => null,
@@ -128,6 +132,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'apply_address_bundling' => 'apply_address_bundling',
         'include_address' => 'include_address',
         'include_address_object' => 'include_address_object',
         'include_route_status' => 'include_route_status',
@@ -136,6 +141,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_tag_names' => 'include_tag_names',
         'include_driver' => 'include_driver',
         'include_driver_links' => 'include_driver_links',
+        'include_co_drivers' => 'include_co_drivers',
         'include_car' => 'include_car',
         'include_car_links' => 'include_car_links',
         'include_vehicle' => 'include_vehicle',
@@ -161,6 +167,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'apply_address_bundling' => 'setApplyAddressBundling',
         'include_address' => 'setIncludeAddress',
         'include_address_object' => 'setIncludeAddressObject',
         'include_route_status' => 'setIncludeRouteStatus',
@@ -169,6 +176,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_tag_names' => 'setIncludeTagNames',
         'include_driver' => 'setIncludeDriver',
         'include_driver_links' => 'setIncludeDriverLinks',
+        'include_co_drivers' => 'setIncludeCoDrivers',
         'include_car' => 'setIncludeCar',
         'include_car_links' => 'setIncludeCarLinks',
         'include_vehicle' => 'setIncludeVehicle',
@@ -194,6 +202,7 @@ class RouteOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'apply_address_bundling' => 'getApplyAddressBundling',
         'include_address' => 'getIncludeAddress',
         'include_address_object' => 'getIncludeAddressObject',
         'include_route_status' => 'getIncludeRouteStatus',
@@ -202,6 +211,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_tag_names' => 'getIncludeTagNames',
         'include_driver' => 'getIncludeDriver',
         'include_driver_links' => 'getIncludeDriverLinks',
+        'include_co_drivers' => 'getIncludeCoDrivers',
         'include_car' => 'getIncludeCar',
         'include_car_links' => 'getIncludeCarLinks',
         'include_vehicle' => 'getIncludeVehicle',
@@ -252,6 +262,7 @@ class RouteOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_route_status'] = isset($data['include_route_status']) ? $data['include_route_status'] : null;
@@ -260,6 +271,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
         $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_co_drivers'] = isset($data['include_co_drivers']) ? $data['include_co_drivers'] : null;
         $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
         $this->container['include_car_links'] = isset($data['include_car_links']) ? $data['include_car_links'] : null;
         $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
@@ -303,6 +315,27 @@ class RouteOptionsModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets apply_address_bundling
+     * @return bool
+     */
+    public function getApplyAddressBundling()
+    {
+        return $this->container['apply_address_bundling'];
+    }
+
+    /**
+     * Sets apply_address_bundling
+     * @param bool $apply_address_bundling 
+     * @return $this
+     */
+    public function setApplyAddressBundling($apply_address_bundling)
+    {
+        $this->container['apply_address_bundling'] = $apply_address_bundling;
+
+        return $this;
+    }
 
     /**
      * Gets include_address
@@ -468,6 +501,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeDriverLinks($include_driver_links)
     {
         $this->container['include_driver_links'] = $include_driver_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_co_drivers
+     * @return bool
+     */
+    public function getIncludeCoDrivers()
+    {
+        return $this->container['include_co_drivers'];
+    }
+
+    /**
+     * Sets include_co_drivers
+     * @param bool $include_co_drivers 
+     * @return $this
+     */
+    public function setIncludeCoDrivers($include_co_drivers)
+    {
+        $this->container['include_co_drivers'] = $include_co_drivers;
 
         return $this;
     }

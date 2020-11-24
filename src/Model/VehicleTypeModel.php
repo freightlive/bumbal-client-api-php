@@ -56,6 +56,7 @@ class VehicleTypeModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'name' => 'string',
+        'max_speed' => 'int',
         'speed_factor' => 'double',
         'duration_factor' => 'double',
         'cost_per_meter' => 'double',
@@ -74,6 +75,7 @@ class VehicleTypeModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'name' => null,
+        'max_speed' => 'int64',
         'speed_factor' => 'double',
         'duration_factor' => 'double',
         'cost_per_meter' => 'double',
@@ -102,6 +104,7 @@ class VehicleTypeModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
+        'max_speed' => 'max_speed',
         'speed_factor' => 'speed_factor',
         'duration_factor' => 'duration_factor',
         'cost_per_meter' => 'cost_per_meter',
@@ -121,6 +124,7 @@ class VehicleTypeModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
+        'max_speed' => 'setMaxSpeed',
         'speed_factor' => 'setSpeedFactor',
         'duration_factor' => 'setDurationFactor',
         'cost_per_meter' => 'setCostPerMeter',
@@ -140,6 +144,7 @@ class VehicleTypeModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
+        'max_speed' => 'getMaxSpeed',
         'speed_factor' => 'getSpeedFactor',
         'duration_factor' => 'getDurationFactor',
         'cost_per_meter' => 'getCostPerMeter',
@@ -184,6 +189,7 @@ class VehicleTypeModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
         $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
         $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
         $this->container['cost_per_meter'] = isset($data['cost_per_meter']) ? $data['cost_per_meter'] : null;
@@ -258,6 +264,27 @@ class VehicleTypeModel implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_speed
+     * @return int
+     */
+    public function getMaxSpeed()
+    {
+        return $this->container['max_speed'];
+    }
+
+    /**
+     * Sets max_speed
+     * @param int $max_speed Max Speed in km/h, Bikes (id 4) ignore max_speed
+     * @return $this
+     */
+    public function setMaxSpeed($max_speed)
+    {
+        $this->container['max_speed'] = $max_speed;
 
         return $this;
     }

@@ -92,6 +92,20 @@ class EquipmentModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "equipment_type_id"
+     */
+    public function testPropertyEquipmentTypeId()
+    {
+    }
+
+    /**
+     * Test attribute "equipment_type_name"
+     */
+    public function testPropertyEquipmentTypeName()
+    {
+    }
+
+    /**
      * Test attribute "info"
      */
     public function testPropertyInfo()

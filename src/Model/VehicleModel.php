@@ -59,7 +59,10 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'string',
         'name' => 'string',
         'registration_nr' => 'string',
+        'max_speed' => 'int',
         'speed_factor' => 'double',
+        'start_duration' => 'int',
+        'end_duration' => 'int',
         'duration_factor' => 'double',
         'cost_per_meter' => 'double',
         'cost_per_route' => 'double',
@@ -87,7 +90,10 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => null,
         'name' => null,
         'registration_nr' => null,
+        'max_speed' => 'int64',
         'speed_factor' => 'double',
+        'start_duration' => 'int64',
+        'end_duration' => 'int64',
         'duration_factor' => 'double',
         'cost_per_meter' => 'double',
         'cost_per_route' => 'double',
@@ -125,7 +131,10 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'vehicle_type_name',
         'name' => 'name',
         'registration_nr' => 'registration_nr',
+        'max_speed' => 'max_speed',
         'speed_factor' => 'speed_factor',
+        'start_duration' => 'start_duration',
+        'end_duration' => 'end_duration',
         'duration_factor' => 'duration_factor',
         'cost_per_meter' => 'cost_per_meter',
         'cost_per_route' => 'cost_per_route',
@@ -154,7 +163,10 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'setVehicleTypeName',
         'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
+        'max_speed' => 'setMaxSpeed',
         'speed_factor' => 'setSpeedFactor',
+        'start_duration' => 'setStartDuration',
+        'end_duration' => 'setEndDuration',
         'duration_factor' => 'setDurationFactor',
         'cost_per_meter' => 'setCostPerMeter',
         'cost_per_route' => 'setCostPerRoute',
@@ -183,7 +195,10 @@ class VehicleModel implements ArrayAccess
         'vehicle_type_name' => 'getVehicleTypeName',
         'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
+        'max_speed' => 'getMaxSpeed',
         'speed_factor' => 'getSpeedFactor',
+        'start_duration' => 'getStartDuration',
+        'end_duration' => 'getEndDuration',
         'duration_factor' => 'getDurationFactor',
         'cost_per_meter' => 'getCostPerMeter',
         'cost_per_route' => 'getCostPerRoute',
@@ -273,7 +288,10 @@ class VehicleModel implements ArrayAccess
         $this->container['vehicle_type_name'] = isset($data['vehicle_type_name']) ? $data['vehicle_type_name'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
+        $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
         $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
+        $this->container['start_duration'] = isset($data['start_duration']) ? $data['start_duration'] : null;
+        $this->container['end_duration'] = isset($data['end_duration']) ? $data['end_duration'] : null;
         $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
         $this->container['cost_per_meter'] = isset($data['cost_per_meter']) ? $data['cost_per_meter'] : null;
         $this->container['cost_per_route'] = isset($data['cost_per_route']) ? $data['cost_per_route'] : null;
@@ -464,6 +482,27 @@ class VehicleModel implements ArrayAccess
     }
 
     /**
+     * Gets max_speed
+     * @return int
+     */
+    public function getMaxSpeed()
+    {
+        return $this->container['max_speed'];
+    }
+
+    /**
+     * Sets max_speed
+     * @param int $max_speed Max Speed in km/h
+     * @return $this
+     */
+    public function setMaxSpeed($max_speed)
+    {
+        $this->container['max_speed'] = $max_speed;
+
+        return $this;
+    }
+
+    /**
      * Gets speed_factor
      * @return double
      */
@@ -480,6 +519,48 @@ class VehicleModel implements ArrayAccess
     public function setSpeedFactor($speed_factor)
     {
         $this->container['speed_factor'] = $speed_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_duration
+     * @return int
+     */
+    public function getStartDuration()
+    {
+        return $this->container['start_duration'];
+    }
+
+    /**
+     * Sets start_duration
+     * @param int $start_duration Start duration of using this vehicle in minutes
+     * @return $this
+     */
+    public function setStartDuration($start_duration)
+    {
+        $this->container['start_duration'] = $start_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_duration
+     * @return int
+     */
+    public function getEndDuration()
+    {
+        return $this->container['end_duration'];
+    }
+
+    /**
+     * Sets end_duration
+     * @param int $end_duration End duration of using this vehicle in minutes
+     * @return $this
+     */
+    public function setEndDuration($end_duration)
+    {
+        $this->container['end_duration'] = $end_duration;
 
         return $this;
     }

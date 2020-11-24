@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**apply_address_bundling** | **bool** |  | [optional] 
 **include_address** | **bool** |  | [optional] 
 **include_address_object** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
@@ -11,6 +12,7 @@ Name | Type | Description | Notes
 **include_tag_names** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 
 **include_driver_links** | **bool** |  | [optional] 
+**include_co_drivers** | **bool** |  | [optional] 
 **include_car** | **bool** |  | [optional] 
 **include_car_links** | **bool** |  | [optional] 
 **include_vehicle** | **bool** |  | [optional] 

@@ -69,6 +69,8 @@ class UsersModel implements ArrayAccess
         'address_id' => 'int',
         'addresses' => '\BumbalClient\Model\AddressModel[]',
         'pause_id' => 'int',
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
         'removed' => 'bool',
         'active' => 'bool',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -99,6 +101,8 @@ class UsersModel implements ArrayAccess
         'address_id' => 'int64',
         'addresses' => null,
         'pause_id' => 'int64',
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
         'removed' => null,
         'active' => null,
         'tags' => null,
@@ -139,6 +143,8 @@ class UsersModel implements ArrayAccess
         'address_id' => 'address_id',
         'addresses' => 'addresses',
         'pause_id' => 'pause_id',
+        'speed_factor' => 'speed_factor',
+        'duration_factor' => 'duration_factor',
         'removed' => 'removed',
         'active' => 'active',
         'tags' => 'tags',
@@ -170,6 +176,8 @@ class UsersModel implements ArrayAccess
         'address_id' => 'setAddressId',
         'addresses' => 'setAddresses',
         'pause_id' => 'setPauseId',
+        'speed_factor' => 'setSpeedFactor',
+        'duration_factor' => 'setDurationFactor',
         'removed' => 'setRemoved',
         'active' => 'setActive',
         'tags' => 'setTags',
@@ -201,6 +209,8 @@ class UsersModel implements ArrayAccess
         'address_id' => 'getAddressId',
         'addresses' => 'getAddresses',
         'pause_id' => 'getPauseId',
+        'speed_factor' => 'getSpeedFactor',
+        'duration_factor' => 'getDurationFactor',
         'removed' => 'getRemoved',
         'active' => 'getActive',
         'tags' => 'getTags',
@@ -277,6 +287,8 @@ class UsersModel implements ArrayAccess
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['pause_id'] = isset($data['pause_id']) ? $data['pause_id'] : null;
+        $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
+        $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -644,6 +656,48 @@ class UsersModel implements ArrayAccess
     public function setPauseId($pause_id)
     {
         $this->container['pause_id'] = $pause_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets speed_factor
+     * @return double
+     */
+    public function getSpeedFactor()
+    {
+        return $this->container['speed_factor'];
+    }
+
+    /**
+     * Sets speed_factor
+     * @param double $speed_factor Speed Factor
+     * @return $this
+     */
+    public function setSpeedFactor($speed_factor)
+    {
+        $this->container['speed_factor'] = $speed_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets duration_factor
+     * @return double
+     */
+    public function getDurationFactor()
+    {
+        return $this->container['duration_factor'];
+    }
+
+    /**
+     * Sets duration_factor
+     * @param double $duration_factor Duration Factor
+     * @return $this
+     */
+    public function setDurationFactor($duration_factor)
+    {
+        $this->container['duration_factor'] = $duration_factor;
 
         return $this;
     }

@@ -83,6 +83,36 @@ class RecurrenceApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for finish
+     *
+     * Cleans up after the process run.
+     *
+     */
+    public function testFinish()
+    {
+    }
+
+    /**
+     * Test case for getRuns
+     *
+     * Returns the given runs for the next recurrences!.
+     *
+     */
+    public function testGetRuns()
+    {
+    }
+
+    /**
+     * Test case for processRuns
+     *
+     * Executes the the processes for the ids retrieved with get-runs.
+     *
+     */
+    public function testProcessRuns()
+    {
+    }
+
+    /**
      * Test case for retrieveListRecurrence
      *
      * Retrieve List of Recurrences.

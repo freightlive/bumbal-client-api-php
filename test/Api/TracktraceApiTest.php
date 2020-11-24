@@ -81,4 +81,14 @@ class TracktraceApiTest extends \PHPUnit_Framework_TestCase
     public function testTrackTraceCalculateETA()
     {
     }
+
+    /**
+     * Test case for trackTraceCalculateRoutesETA
+     *
+     * Calculate ETA for Activities on Routes.
+     *
+     */
+    public function testTrackTraceCalculateRoutesETA()
+    {
+    }
 }

@@ -78,6 +78,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "apply_address_bundling"
+     */
+    public function testPropertyApplyAddressBundling()
+    {
+    }
+
+    /**
      * Test attribute "include_address"
      */
     public function testPropertyIncludeAddress()
@@ -130,6 +137,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_driver_links"
      */
     public function testPropertyIncludeDriverLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_co_drivers"
+     */
+    public function testPropertyIncludeCoDrivers()
     {
     }
 

@@ -125,10 +125,12 @@ Class | Method | HTTP request | Description
 *DriverunavailabilityApi* | [**retrieveDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievedriverunavailability) | **GET** /driver-unavailability/{driverunavailabilityId} | Retrieve a DriverUnavailability
 *DriverunavailabilityApi* | [**retrieveListDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievelistdriverunavailability) | **PUT** /driver-unavailability | Retrieve List of DriverUnavailability
 *DriverunavailabilityApi* | [**updateDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#updatedriverunavailability) | **PUT** /driver-unavailability/{driverunavailabilityId} | Update a specific DriverUnavailability object
-*EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment
+*EquipmentApi* | [**createEquipment**](docs/Api/EquipmentApi.md#createequipment) | **POST** /equipment | Add a new Equipment
+*EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment entry
 *EquipmentApi* | [**retrieveEquipment**](docs/Api/EquipmentApi.md#retrieveequipment) | **GET** /equipment/{equipmentId} | Retrieve a Equipment
 *EquipmentApi* | [**retrieveListEquipment**](docs/Api/EquipmentApi.md#retrievelistequipment) | **PUT** /equipment | Retrieve List of Equipment
-*EquipmentApi* | [**setEquipment**](docs/Api/EquipmentApi.md#setequipment) | **POST** /equipment/set | Add/Update Equipment
+*EquipmentApi* | [**setEquipment**](docs/Api/EquipmentApi.md#setequipment) | **POST** /equipment/set | Set (create or update) a Equipment
+*EquipmentApi* | [**updateEquipment**](docs/Api/EquipmentApi.md#updateequipment) | **PUT** /equipment/{equipmentId} | Update a specific Equipment object
 *FileApi* | [**deleteFile**](docs/Api/FileApi.md#deletefile) | **DELETE** /file/{fileId} | Delete an File
 *FileApi* | [**fileCopy**](docs/Api/FileApi.md#filecopy) | **POST** /file/copy | Copy File
 *FileApi* | [**retrieveFile**](docs/Api/FileApi.md#retrievefile) | **GET** /file/{fileId} | Retrieve a File
@@ -267,6 +269,9 @@ Class | Method | HTTP request | Description
 *QuestionnairetypeApi* | [**retrieveListQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievelistquestionnairetype) | **PUT** /questionnaire-type | Retrieve List of QuestionnaireType
 *QuestionnairetypeApi* | [**retrieveQuestionnaireType**](docs/Api/QuestionnairetypeApi.md#retrievequestionnairetype) | **GET** /questionnaire-type/{questionnaire-typeId} | Retrieve a QuestionnaireType
 *RecurrenceApi* | [**deleteRecurrence**](docs/Api/RecurrenceApi.md#deleterecurrence) | **DELETE** /recurrence/{recurrenceId} | Delete an Recurrence
+*RecurrenceApi* | [**finish**](docs/Api/RecurrenceApi.md#finish) | **POST** /recurrence/finish | Cleans up after the process run
+*RecurrenceApi* | [**getRuns**](docs/Api/RecurrenceApi.md#getruns) | **POST** /recurrence/get-runs | Returns the given runs for the next recurrences!
+*RecurrenceApi* | [**processRuns**](docs/Api/RecurrenceApi.md#processruns) | **POST** /recurrence/process-runs | Executes the the processes for the ids retrieved with get-runs
 *RecurrenceApi* | [**retrieveListRecurrence**](docs/Api/RecurrenceApi.md#retrievelistrecurrence) | **PUT** /recurrence | Retrieve List of Recurrences
 *RecurrenceApi* | [**retrieveRecurrence**](docs/Api/RecurrenceApi.md#retrieverecurrence) | **GET** /recurrence/{recurrenceId} | Retrieve a Recurrence
 *RecurrenceApi* | [**updateRecurrence**](docs/Api/RecurrenceApi.md#updaterecurrence) | **PUT** /recurrence/{recurrenceId} | Update a Recurrence
@@ -305,6 +310,7 @@ Class | Method | HTTP request | Description
 *TagtypeApi* | [**setTagType**](docs/Api/TagtypeApi.md#settagtype) | **POST** /tag-type/set | Set (create or update) Tag type
 *TagtypeApi* | [**updateTagType**](docs/Api/TagtypeApi.md#updatetagtype) | **PUT** /tag-type/{tagTypeId} | Update a Tag type
 *TracktraceApi* | [**trackTraceCalculateETA**](docs/Api/TracktraceApi.md#tracktracecalculateeta) | **GET** /track-and-trace/calculate-eta/{activityId} | Calculate ETA for Activity
+*TracktraceApi* | [**trackTraceCalculateRoutesETA**](docs/Api/TracktraceApi.md#tracktracecalculaterouteseta) | **PUT** /track-and-trace/calculate-routes-eta | Calculate ETA for Activities on Routes
 *TrailerApi* | [**createTrailer**](docs/Api/TrailerApi.md#createtrailer) | **POST** /trailer | Add a trailer
 *TrailerApi* | [**deleteTrailer**](docs/Api/TrailerApi.md#deletetrailer) | **DELETE** /trailer/{trailerId} | Delete an trailer
 *TrailerApi* | [**retrieveListTrailer**](docs/Api/TrailerApi.md#retrievelisttrailer) | **PUT** /trailer | Retrieve List of Trailers
@@ -356,6 +362,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
@@ -497,11 +504,16 @@ Class | Method | HTTP request | Description
  - [DriverUnavailabilityOptionsModel](docs/Model/DriverUnavailabilityOptionsModel.md)
  - [DriverUnavailabilityRetrieveListArguments](docs/Model/DriverUnavailabilityRetrieveListArguments.md)
  - [EmailModel](docs/Model/EmailModel.md)
+ - [EquipmentCreateResponse](docs/Model/EquipmentCreateResponse.md)
+ - [EquipmentDeleteNotFoundResponse](docs/Model/EquipmentDeleteNotFoundResponse.md)
+ - [EquipmentDeleteResponse](docs/Model/EquipmentDeleteResponse.md)
  - [EquipmentFiltersModel](docs/Model/EquipmentFiltersModel.md)
  - [EquipmentListResponse](docs/Model/EquipmentListResponse.md)
  - [EquipmentModel](docs/Model/EquipmentModel.md)
  - [EquipmentOptionsModel](docs/Model/EquipmentOptionsModel.md)
  - [EquipmentRetrieveListArguments](docs/Model/EquipmentRetrieveListArguments.md)
+ - [EquipmentSetResponse](docs/Model/EquipmentSetResponse.md)
+ - [EquipmentUpdateResponse](docs/Model/EquipmentUpdateResponse.md)
  - [FileCopyArguments](docs/Model/FileCopyArguments.md)
  - [FileFiltersModel](docs/Model/FileFiltersModel.md)
  - [FileModel](docs/Model/FileModel.md)
@@ -643,17 +655,27 @@ Class | Method | HTTP request | Description
  - [QuestionnaireTypeOptionsModel](docs/Model/QuestionnaireTypeOptionsModel.md)
  - [QuestionnaireTypeRetrieveListArguments](docs/Model/QuestionnaireTypeRetrieveListArguments.md)
  - [RecurrenceFiltersModel](docs/Model/RecurrenceFiltersModel.md)
+ - [RecurrenceFinishResponse](docs/Model/RecurrenceFinishResponse.md)
+ - [RecurrenceGetRunsArguments](docs/Model/RecurrenceGetRunsArguments.md)
+ - [RecurrenceGetRunsResponse](docs/Model/RecurrenceGetRunsResponse.md)
  - [RecurrenceListResponse](docs/Model/RecurrenceListResponse.md)
  - [RecurrenceModel](docs/Model/RecurrenceModel.md)
  - [RecurrenceOptionsModel](docs/Model/RecurrenceOptionsModel.md)
+ - [RecurrenceProcessRunsArguments](docs/Model/RecurrenceProcessRunsArguments.md)
+ - [RecurrenceProcessRunsResponse](docs/Model/RecurrenceProcessRunsResponse.md)
  - [RecurrenceRetrieveListArguments](docs/Model/RecurrenceRetrieveListArguments.md)
  - [RemoveActivitiesFromRouteArguments](docs/Model/RemoveActivitiesFromRouteArguments.md)
+ - [RouteEtaModel](docs/Model/RouteEtaModel.md)
  - [RouteFiltersModel](docs/Model/RouteFiltersModel.md)
  - [RouteListResponse](docs/Model/RouteListResponse.md)
  - [RouteModel](docs/Model/RouteModel.md)
  - [RouteOptionsModel](docs/Model/RouteOptionsModel.md)
  - [RouteRetrieveListArguments](docs/Model/RouteRetrieveListArguments.md)
  - [RouteStoreGeoLocations](docs/Model/RouteStoreGeoLocations.md)
+ - [RoutesEtaArguments](docs/Model/RoutesEtaArguments.md)
+ - [RoutesEtaFiltersModel](docs/Model/RoutesEtaFiltersModel.md)
+ - [RoutesEtaOptionsModel](docs/Model/RoutesEtaOptionsModel.md)
+ - [RoutesEtaResponse](docs/Model/RoutesEtaResponse.md)
  - [SayWhenConfigModel](docs/Model/SayWhenConfigModel.md)
  - [SayWhenRetrievePortalURLsArguments](docs/Model/SayWhenRetrievePortalURLsArguments.md)
  - [SayWhenVisitModel](docs/Model/SayWhenVisitModel.md)

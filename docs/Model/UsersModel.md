@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **address_id** | **int** | id of the user address | [optional] 
 **addresses** | [**\BumbalClient\Model\AddressModel[]**](AddressModel.md) | user address (mostly interesting for drivers) | [optional] 
 **pause_id** | **int** | id of the pause to be applied by default for new user routes | [optional] 
+**speed_factor** | **double** | Speed Factor | [optional] 
+**duration_factor** | **double** | Duration Factor | [optional] 
 **removed** | **bool** | Whether user is removed or not | [optional] 
 **active** | **bool** | Whether user is still active or not | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 

@@ -183,6 +183,20 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "speed_factor"
+     */
+    public function testPropertySpeedFactor()
+    {
+    }
+
+    /**
+     * Test attribute "duration_factor"
+     */
+    public function testPropertyDurationFactor()
+    {
+    }
+
+    /**
      * Test attribute "removed"
      */
     public function testPropertyRemoved()

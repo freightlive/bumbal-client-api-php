@@ -88,13 +88,105 @@ class EquipmentApi
     }
 
     /**
+     * Operation createEquipment
+     *
+     * Add a new Equipment
+     *
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be created (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\EquipmentCreateResponse
+     */
+    public function createEquipment($body = null)
+    {
+        list($response) = $this->createEquipmentWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation createEquipmentWithHttpInfo
+     *
+     * Add a new Equipment
+     *
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be created (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\EquipmentCreateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createEquipmentWithHttpInfo($body = null)
+    {
+        // parse inputs
+        $resourcePath = "/equipment";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\EquipmentCreateResponse',
+                '/equipment'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\EquipmentCreateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentCreateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation deleteEquipment
      *
-     * Delete an Equipment
+     * Delete an Equipment entry
      *
-     * @param int $equipment_id ID of equipment to update (required)
+     * @param int $equipment_id ID of Equipment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\EquipmentDeleteResponse
      */
     public function deleteEquipment($equipment_id)
     {
@@ -105,11 +197,11 @@ class EquipmentApi
     /**
      * Operation deleteEquipmentWithHttpInfo
      *
-     * Delete an Equipment
+     * Delete an Equipment entry
      *
-     * @param int $equipment_id ID of equipment to update (required)
+     * @param int $equipment_id ID of Equipment to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\EquipmentDeleteResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEquipmentWithHttpInfo($equipment_id)
     {
@@ -157,15 +249,31 @@ class EquipmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\EquipmentDeleteResponse',
                 '/equipment/{equipmentId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\EquipmentDeleteResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentDeleteResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentDeleteNotFoundResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -179,7 +287,7 @@ class EquipmentApi
      *
      * Retrieve a Equipment
      *
-     * @param int $equipment_id ID of equipment to retrieve (required)
+     * @param int $equipment_id ID of Equipment to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\EquipmentModel
      */
@@ -194,7 +302,7 @@ class EquipmentApi
      *
      * Retrieve a Equipment
      *
-     * @param int $equipment_id ID of equipment to retrieve (required)
+     * @param int $equipment_id ID of Equipment to retrieve (required)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\EquipmentModel, HTTP status code, HTTP response headers (array of strings)
      */
@@ -253,6 +361,18 @@ class EquipmentApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentModel', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -339,6 +459,18 @@ class EquipmentApi
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
             }
 
             throw $e;
@@ -348,11 +480,11 @@ class EquipmentApi
     /**
      * Operation setEquipment
      *
-     * Add/Update Equipment
+     * Set (create or update) a Equipment
      *
-     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be created (optional)
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse
+     * @return \BumbalClient\Model\EquipmentSetResponse
      */
     public function setEquipment($body = null)
     {
@@ -363,11 +495,11 @@ class EquipmentApi
     /**
      * Operation setEquipmentWithHttpInfo
      *
-     * Add/Update Equipment
+     * Set (create or update) a Equipment
      *
-     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be created (optional)
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\EquipmentSetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function setEquipmentWithHttpInfo($body = null)
     {
@@ -408,15 +540,133 @@ class EquipmentApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse',
+                '\BumbalClient\Model\EquipmentSetResponse',
                 '/equipment/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\EquipmentSetResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentSetResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateEquipment
+     *
+     * Update a specific Equipment object
+     *
+     * @param int $equipment_id ID of the Equipment object to update (required)
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\EquipmentUpdateResponse
+     */
+    public function updateEquipment($equipment_id, $body = null)
+    {
+        list($response) = $this->updateEquipmentWithHttpInfo($equipment_id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation updateEquipmentWithHttpInfo
+     *
+     * Update a specific Equipment object
+     *
+     * @param int $equipment_id ID of the Equipment object to update (required)
+     * @param \BumbalClient\Model\EquipmentModel $body Equipment object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\EquipmentUpdateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateEquipmentWithHttpInfo($equipment_id, $body = null)
+    {
+        // verify the required parameter 'equipment_id' is set
+        if ($equipment_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $equipment_id when calling updateEquipment');
+        }
+        // parse inputs
+        $resourcePath = "/equipment/{equipmentId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($equipment_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "equipmentId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($equipment_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\EquipmentUpdateResponse',
+                '/equipment/{equipmentId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\EquipmentUpdateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\EquipmentUpdateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse401', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse403', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse405', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

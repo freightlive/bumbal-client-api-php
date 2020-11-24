@@ -66,6 +66,7 @@ Name | Type | Description | Notes
 **include_payments** | **bool** |  | [optional] 
 **include_transactions** | **bool** |  | [optional] 
 **include_relations** | **bool** |  | [optional] 
+**include_packagelines_for_whole_route_on_start_activity** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

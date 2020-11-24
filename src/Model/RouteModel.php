@@ -67,6 +67,8 @@ class RouteModel implements ArrayAccess
         'driver_links' => '\BumbalClient\Model\LinkModel[]',
         'driver' => '\BumbalClient\Model\UsersModel',
         'user_link' => '\BumbalClient\Model\LinkModel[]',
+        'co_driver_ids' => 'int[]',
+        'co_drivers' => '\BumbalClient\Model\UsersModel[]',
         'car_id' => 'int',
         'vehicle_id' => 'int',
         'vehicle_link' => '\BumbalClient\Model\LinkModel[]',
@@ -77,6 +79,16 @@ class RouteModel implements ArrayAccess
         'trailer_link' => '\BumbalClient\Model\LinkModel[]',
         'trailer' => '\BumbalClient\Model\TrailerModel',
         'equipment' => '\BumbalClient\Model\EquipmentModel[]',
+        'planned_start_duration' => 'int',
+        'planned_end_duration' => 'int',
+        'max_speed' => 'int',
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
+        'cost_per_meter' => 'double',
+        'cost_per_route' => 'double',
+        'cost_per_driving_minute' => 'double',
+        'cost_per_waiting_minute' => 'double',
+        'cost_per_service_minute' => 'double',
         'earliest_date_time' => '\DateTime',
         'latest_date_time' => '\DateTime',
         'planned_date_time_from' => '\DateTime',
@@ -133,6 +145,8 @@ class RouteModel implements ArrayAccess
         'driver_links' => null,
         'driver' => null,
         'user_link' => null,
+        'co_driver_ids' => null,
+        'co_drivers' => null,
         'car_id' => null,
         'vehicle_id' => null,
         'vehicle_link' => null,
@@ -143,6 +157,16 @@ class RouteModel implements ArrayAccess
         'trailer_link' => null,
         'trailer' => null,
         'equipment' => null,
+        'planned_start_duration' => null,
+        'planned_end_duration' => null,
+        'max_speed' => 'int64',
+        'speed_factor' => 'double',
+        'duration_factor' => 'double',
+        'cost_per_meter' => 'double',
+        'cost_per_route' => 'double',
+        'cost_per_driving_minute' => 'double',
+        'cost_per_waiting_minute' => 'double',
+        'cost_per_service_minute' => 'double',
         'earliest_date_time' => 'date-time',
         'latest_date_time' => 'date-time',
         'planned_date_time_from' => 'date-time',
@@ -209,6 +233,8 @@ class RouteModel implements ArrayAccess
         'driver_links' => 'driver_links',
         'driver' => 'driver',
         'user_link' => 'user_link',
+        'co_driver_ids' => 'co_driver_ids',
+        'co_drivers' => 'co_drivers',
         'car_id' => 'car_id',
         'vehicle_id' => 'vehicle_id',
         'vehicle_link' => 'vehicle_link',
@@ -219,6 +245,16 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'trailer_link',
         'trailer' => 'trailer',
         'equipment' => 'equipment',
+        'planned_start_duration' => 'planned_start_duration',
+        'planned_end_duration' => 'planned_end_duration',
+        'max_speed' => 'max_speed',
+        'speed_factor' => 'speed_factor',
+        'duration_factor' => 'duration_factor',
+        'cost_per_meter' => 'cost_per_meter',
+        'cost_per_route' => 'cost_per_route',
+        'cost_per_driving_minute' => 'cost_per_driving_minute',
+        'cost_per_waiting_minute' => 'cost_per_waiting_minute',
+        'cost_per_service_minute' => 'cost_per_service_minute',
         'earliest_date_time' => 'earliest_date_time',
         'latest_date_time' => 'latest_date_time',
         'planned_date_time_from' => 'planned_date_time_from',
@@ -276,6 +312,8 @@ class RouteModel implements ArrayAccess
         'driver_links' => 'setDriverLinks',
         'driver' => 'setDriver',
         'user_link' => 'setUserLink',
+        'co_driver_ids' => 'setCoDriverIds',
+        'co_drivers' => 'setCoDrivers',
         'car_id' => 'setCarId',
         'vehicle_id' => 'setVehicleId',
         'vehicle_link' => 'setVehicleLink',
@@ -286,6 +324,16 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'setTrailerLink',
         'trailer' => 'setTrailer',
         'equipment' => 'setEquipment',
+        'planned_start_duration' => 'setPlannedStartDuration',
+        'planned_end_duration' => 'setPlannedEndDuration',
+        'max_speed' => 'setMaxSpeed',
+        'speed_factor' => 'setSpeedFactor',
+        'duration_factor' => 'setDurationFactor',
+        'cost_per_meter' => 'setCostPerMeter',
+        'cost_per_route' => 'setCostPerRoute',
+        'cost_per_driving_minute' => 'setCostPerDrivingMinute',
+        'cost_per_waiting_minute' => 'setCostPerWaitingMinute',
+        'cost_per_service_minute' => 'setCostPerServiceMinute',
         'earliest_date_time' => 'setEarliestDateTime',
         'latest_date_time' => 'setLatestDateTime',
         'planned_date_time_from' => 'setPlannedDateTimeFrom',
@@ -343,6 +391,8 @@ class RouteModel implements ArrayAccess
         'driver_links' => 'getDriverLinks',
         'driver' => 'getDriver',
         'user_link' => 'getUserLink',
+        'co_driver_ids' => 'getCoDriverIds',
+        'co_drivers' => 'getCoDrivers',
         'car_id' => 'getCarId',
         'vehicle_id' => 'getVehicleId',
         'vehicle_link' => 'getVehicleLink',
@@ -353,6 +403,16 @@ class RouteModel implements ArrayAccess
         'trailer_link' => 'getTrailerLink',
         'trailer' => 'getTrailer',
         'equipment' => 'getEquipment',
+        'planned_start_duration' => 'getPlannedStartDuration',
+        'planned_end_duration' => 'getPlannedEndDuration',
+        'max_speed' => 'getMaxSpeed',
+        'speed_factor' => 'getSpeedFactor',
+        'duration_factor' => 'getDurationFactor',
+        'cost_per_meter' => 'getCostPerMeter',
+        'cost_per_route' => 'getCostPerRoute',
+        'cost_per_driving_minute' => 'getCostPerDrivingMinute',
+        'cost_per_waiting_minute' => 'getCostPerWaitingMinute',
+        'cost_per_service_minute' => 'getCostPerServiceMinute',
         'earliest_date_time' => 'getEarliestDateTime',
         'latest_date_time' => 'getLatestDateTime',
         'planned_date_time_from' => 'getPlannedDateTimeFrom',
@@ -471,6 +531,8 @@ class RouteModel implements ArrayAccess
         $this->container['driver_links'] = isset($data['driver_links']) ? $data['driver_links'] : null;
         $this->container['driver'] = isset($data['driver']) ? $data['driver'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
+        $this->container['co_driver_ids'] = isset($data['co_driver_ids']) ? $data['co_driver_ids'] : null;
+        $this->container['co_drivers'] = isset($data['co_drivers']) ? $data['co_drivers'] : null;
         $this->container['car_id'] = isset($data['car_id']) ? $data['car_id'] : null;
         $this->container['vehicle_id'] = isset($data['vehicle_id']) ? $data['vehicle_id'] : null;
         $this->container['vehicle_link'] = isset($data['vehicle_link']) ? $data['vehicle_link'] : null;
@@ -481,6 +543,16 @@ class RouteModel implements ArrayAccess
         $this->container['trailer_link'] = isset($data['trailer_link']) ? $data['trailer_link'] : null;
         $this->container['trailer'] = isset($data['trailer']) ? $data['trailer'] : null;
         $this->container['equipment'] = isset($data['equipment']) ? $data['equipment'] : null;
+        $this->container['planned_start_duration'] = isset($data['planned_start_duration']) ? $data['planned_start_duration'] : null;
+        $this->container['planned_end_duration'] = isset($data['planned_end_duration']) ? $data['planned_end_duration'] : null;
+        $this->container['max_speed'] = isset($data['max_speed']) ? $data['max_speed'] : null;
+        $this->container['speed_factor'] = isset($data['speed_factor']) ? $data['speed_factor'] : null;
+        $this->container['duration_factor'] = isset($data['duration_factor']) ? $data['duration_factor'] : null;
+        $this->container['cost_per_meter'] = isset($data['cost_per_meter']) ? $data['cost_per_meter'] : null;
+        $this->container['cost_per_route'] = isset($data['cost_per_route']) ? $data['cost_per_route'] : null;
+        $this->container['cost_per_driving_minute'] = isset($data['cost_per_driving_minute']) ? $data['cost_per_driving_minute'] : null;
+        $this->container['cost_per_waiting_minute'] = isset($data['cost_per_waiting_minute']) ? $data['cost_per_waiting_minute'] : null;
+        $this->container['cost_per_service_minute'] = isset($data['cost_per_service_minute']) ? $data['cost_per_service_minute'] : null;
         $this->container['earliest_date_time'] = isset($data['earliest_date_time']) ? $data['earliest_date_time'] : null;
         $this->container['latest_date_time'] = isset($data['latest_date_time']) ? $data['latest_date_time'] : null;
         $this->container['planned_date_time_from'] = isset($data['planned_date_time_from']) ? $data['planned_date_time_from'] : null;
@@ -860,6 +932,48 @@ class RouteModel implements ArrayAccess
     }
 
     /**
+     * Gets co_driver_ids
+     * @return int[]
+     */
+    public function getCoDriverIds()
+    {
+        return $this->container['co_driver_ids'];
+    }
+
+    /**
+     * Sets co_driver_ids
+     * @param int[] $co_driver_ids Unique Identifier(s) for co-drivers on route
+     * @return $this
+     */
+    public function setCoDriverIds($co_driver_ids)
+    {
+        $this->container['co_driver_ids'] = $co_driver_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets co_drivers
+     * @return \BumbalClient\Model\UsersModel[]
+     */
+    public function getCoDrivers()
+    {
+        return $this->container['co_drivers'];
+    }
+
+    /**
+     * Sets co_drivers
+     * @param \BumbalClient\Model\UsersModel[] $co_drivers list of co-drivers on route
+     * @return $this
+     */
+    public function setCoDrivers($co_drivers)
+    {
+        $this->container['co_drivers'] = $co_drivers;
+
+        return $this;
+    }
+
+    /**
      * Gets car_id
      * @return int
      */
@@ -1065,6 +1179,216 @@ class RouteModel implements ArrayAccess
     public function setEquipment($equipment)
     {
         $this->container['equipment'] = $equipment;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_start_duration
+     * @return int
+     */
+    public function getPlannedStartDuration()
+    {
+        return $this->container['planned_start_duration'];
+    }
+
+    /**
+     * Sets planned_start_duration
+     * @param int $planned_start_duration Duration for start activity
+     * @return $this
+     */
+    public function setPlannedStartDuration($planned_start_duration)
+    {
+        $this->container['planned_start_duration'] = $planned_start_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets planned_end_duration
+     * @return int
+     */
+    public function getPlannedEndDuration()
+    {
+        return $this->container['planned_end_duration'];
+    }
+
+    /**
+     * Sets planned_end_duration
+     * @param int $planned_end_duration Duration for end activity
+     * @return $this
+     */
+    public function setPlannedEndDuration($planned_end_duration)
+    {
+        $this->container['planned_end_duration'] = $planned_end_duration;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_speed
+     * @return int
+     */
+    public function getMaxSpeed()
+    {
+        return $this->container['max_speed'];
+    }
+
+    /**
+     * Sets max_speed
+     * @param int $max_speed Max Speed in km/h
+     * @return $this
+     */
+    public function setMaxSpeed($max_speed)
+    {
+        $this->container['max_speed'] = $max_speed;
+
+        return $this;
+    }
+
+    /**
+     * Gets speed_factor
+     * @return double
+     */
+    public function getSpeedFactor()
+    {
+        return $this->container['speed_factor'];
+    }
+
+    /**
+     * Sets speed_factor
+     * @param double $speed_factor Speed Factor
+     * @return $this
+     */
+    public function setSpeedFactor($speed_factor)
+    {
+        $this->container['speed_factor'] = $speed_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets duration_factor
+     * @return double
+     */
+    public function getDurationFactor()
+    {
+        return $this->container['duration_factor'];
+    }
+
+    /**
+     * Sets duration_factor
+     * @param double $duration_factor Duration Factor
+     * @return $this
+     */
+    public function setDurationFactor($duration_factor)
+    {
+        $this->container['duration_factor'] = $duration_factor;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_meter
+     * @return double
+     */
+    public function getCostPerMeter()
+    {
+        return $this->container['cost_per_meter'];
+    }
+
+    /**
+     * Sets cost_per_meter
+     * @param double $cost_per_meter Cost per meter
+     * @return $this
+     */
+    public function setCostPerMeter($cost_per_meter)
+    {
+        $this->container['cost_per_meter'] = $cost_per_meter;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_route
+     * @return double
+     */
+    public function getCostPerRoute()
+    {
+        return $this->container['cost_per_route'];
+    }
+
+    /**
+     * Sets cost_per_route
+     * @param double $cost_per_route Cost per route
+     * @return $this
+     */
+    public function setCostPerRoute($cost_per_route)
+    {
+        $this->container['cost_per_route'] = $cost_per_route;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_driving_minute
+     * @return double
+     */
+    public function getCostPerDrivingMinute()
+    {
+        return $this->container['cost_per_driving_minute'];
+    }
+
+    /**
+     * Sets cost_per_driving_minute
+     * @param double $cost_per_driving_minute Cost per driving minute
+     * @return $this
+     */
+    public function setCostPerDrivingMinute($cost_per_driving_minute)
+    {
+        $this->container['cost_per_driving_minute'] = $cost_per_driving_minute;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_waiting_minute
+     * @return double
+     */
+    public function getCostPerWaitingMinute()
+    {
+        return $this->container['cost_per_waiting_minute'];
+    }
+
+    /**
+     * Sets cost_per_waiting_minute
+     * @param double $cost_per_waiting_minute Cost per waiting minute
+     * @return $this
+     */
+    public function setCostPerWaitingMinute($cost_per_waiting_minute)
+    {
+        $this->container['cost_per_waiting_minute'] = $cost_per_waiting_minute;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_per_service_minute
+     * @return double
+     */
+    public function getCostPerServiceMinute()
+    {
+        return $this->container['cost_per_service_minute'];
+    }
+
+    /**
+     * Sets cost_per_service_minute
+     * @param double $cost_per_service_minute Cost per service minute
+     * @return $this
+     */
+    public function setCostPerServiceMinute($cost_per_service_minute)
+    {
+        $this->container['cost_per_service_minute'] = $cost_per_service_minute;
 
         return $this;
     }

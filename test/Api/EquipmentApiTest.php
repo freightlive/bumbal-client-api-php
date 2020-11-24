@@ -73,9 +73,19 @@ class EquipmentApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for createEquipment
+     *
+     * Add a new Equipment.
+     *
+     */
+    public function testCreateEquipment()
+    {
+    }
+
+    /**
      * Test case for deleteEquipment
      *
-     * Delete an Equipment.
+     * Delete an Equipment entry.
      *
      */
     public function testDeleteEquipment()
@@ -105,10 +115,20 @@ class EquipmentApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for setEquipment
      *
-     * Add/Update Equipment.
+     * Set (create or update) a Equipment.
      *
      */
     public function testSetEquipment()
+    {
+    }
+
+    /**
+     * Test case for updateEquipment
+     *
+     * Update a specific Equipment object.
+     *
+     */
+    public function testUpdateEquipment()
     {
     }
 }

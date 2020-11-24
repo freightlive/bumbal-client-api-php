@@ -116,7 +116,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_shipment_activity_nr' => 'bool',
         'include_payments' => 'bool',
         'include_transactions' => 'bool',
-        'include_relations' => 'bool'
+        'include_relations' => 'bool',
+        'include_packagelines_for_whole_route_on_start_activity' => 'bool'
     ];
 
     /**
@@ -186,7 +187,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_shipment_activity_nr' => null,
         'include_payments' => null,
         'include_transactions' => null,
-        'include_relations' => null
+        'include_relations' => null,
+        'include_packagelines_for_whole_route_on_start_activity' => null
     ];
 
     public static function swaggerTypes()
@@ -266,7 +268,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_shipment_activity_nr' => 'include_shipment_activity_nr',
         'include_payments' => 'include_payments',
         'include_transactions' => 'include_transactions',
-        'include_relations' => 'include_relations'
+        'include_relations' => 'include_relations',
+        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity'
     ];
 
 
@@ -337,7 +340,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_shipment_activity_nr' => 'setIncludeShipmentActivityNr',
         'include_payments' => 'setIncludePayments',
         'include_transactions' => 'setIncludeTransactions',
-        'include_relations' => 'setIncludeRelations'
+        'include_relations' => 'setIncludeRelations',
+        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity'
     ];
 
 
@@ -408,7 +412,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_shipment_activity_nr' => 'getIncludeShipmentActivityNr',
         'include_payments' => 'getIncludePayments',
         'include_transactions' => 'getIncludeTransactions',
-        'include_relations' => 'getIncludeRelations'
+        'include_relations' => 'getIncludeRelations',
+        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity'
     ];
 
     public static function attributeMap()
@@ -505,6 +510,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_payments'] = isset($data['include_payments']) ? $data['include_payments'] : null;
         $this->container['include_transactions'] = isset($data['include_transactions']) ? $data['include_transactions'] : null;
         $this->container['include_relations'] = isset($data['include_relations']) ? $data['include_relations'] : null;
+        $this->container['include_packagelines_for_whole_route_on_start_activity'] = isset($data['include_packagelines_for_whole_route_on_start_activity']) ? $data['include_packagelines_for_whole_route_on_start_activity'] : null;
     }
 
     /**
@@ -1851,6 +1857,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeRelations($include_relations)
     {
         $this->container['include_relations'] = $include_relations;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_packagelines_for_whole_route_on_start_activity
+     * @return bool
+     */
+    public function getIncludePackagelinesForWholeRouteOnStartActivity()
+    {
+        return $this->container['include_packagelines_for_whole_route_on_start_activity'];
+    }
+
+    /**
+     * Sets include_packagelines_for_whole_route_on_start_activity
+     * @param bool $include_packagelines_for_whole_route_on_start_activity 
+     * @return $this
+     */
+    public function setIncludePackagelinesForWholeRouteOnStartActivity($include_packagelines_for_whole_route_on_start_activity)
+    {
+        $this->container['include_packagelines_for_whole_route_on_start_activity'] = $include_packagelines_for_whole_route_on_start_activity;
 
         return $this;
     }

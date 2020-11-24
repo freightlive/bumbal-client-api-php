@@ -56,6 +56,8 @@ class EquipmentModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int',
         'equipment_type' => 'string',
+        'equipment_type_id' => 'int',
+        'equipment_type_name' => 'string',
         'info' => 'string',
         'name' => 'string',
         'registration_nr' => 'string',
@@ -74,6 +76,8 @@ class EquipmentModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => 'int64',
         'equipment_type' => null,
+        'equipment_type_id' => null,
+        'equipment_type_name' => null,
         'info' => null,
         'name' => null,
         'registration_nr' => null,
@@ -102,6 +106,8 @@ class EquipmentModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'equipment_type' => 'equipment_type',
+        'equipment_type_id' => 'equipment_type_id',
+        'equipment_type_name' => 'equipment_type_name',
         'info' => 'info',
         'name' => 'name',
         'registration_nr' => 'registration_nr',
@@ -121,6 +127,8 @@ class EquipmentModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'equipment_type' => 'setEquipmentType',
+        'equipment_type_id' => 'setEquipmentTypeId',
+        'equipment_type_name' => 'setEquipmentTypeName',
         'info' => 'setInfo',
         'name' => 'setName',
         'registration_nr' => 'setRegistrationNr',
@@ -140,6 +148,8 @@ class EquipmentModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'equipment_type' => 'getEquipmentType',
+        'equipment_type_id' => 'getEquipmentTypeId',
+        'equipment_type_name' => 'getEquipmentTypeName',
         'info' => 'getInfo',
         'name' => 'getName',
         'registration_nr' => 'getRegistrationNr',
@@ -169,6 +179,9 @@ class EquipmentModel implements ArrayAccess
     const EQUIPMENT_TYPE_CAR = 'car';
     const EQUIPMENT_TYPE_TRAILER = 'trailer';
     const EQUIPMENT_TYPE_OTHER = 'other';
+    const EQUIPMENT_TYPE_NAME_CAR = 'car';
+    const EQUIPMENT_TYPE_NAME_TRAILER = 'trailer';
+    const EQUIPMENT_TYPE_NAME_OTHER = 'other';
     
 
     
@@ -182,6 +195,19 @@ class EquipmentModel implements ArrayAccess
             self::EQUIPMENT_TYPE_CAR,
             self::EQUIPMENT_TYPE_TRAILER,
             self::EQUIPMENT_TYPE_OTHER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getEquipmentTypeNameAllowableValues()
+    {
+        return [
+            self::EQUIPMENT_TYPE_NAME_CAR,
+            self::EQUIPMENT_TYPE_NAME_TRAILER,
+            self::EQUIPMENT_TYPE_NAME_OTHER,
         ];
     }
     
@@ -200,6 +226,8 @@ class EquipmentModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
+        $this->container['equipment_type_id'] = isset($data['equipment_type_id']) ? $data['equipment_type_id'] : null;
+        $this->container['equipment_type_name'] = isset($data['equipment_type_name']) ? $data['equipment_type_name'] : null;
         $this->container['info'] = isset($data['info']) ? $data['info'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['registration_nr'] = isset($data['registration_nr']) ? $data['registration_nr'] : null;
@@ -228,6 +256,14 @@ class EquipmentModel implements ArrayAccess
             );
         }
 
+        $allowed_values = $this->getEquipmentTypeNameAllowableValues();
+        if (!in_array($this->container['equipment_type_name'], $allowed_values)) {
+            $invalid_properties[] = sprintf(
+                "invalid value for 'equipment_type_name', must be one of '%s'",
+                implode("', '", $allowed_values)
+            );
+        }
+
         return $invalid_properties;
     }
 
@@ -242,6 +278,10 @@ class EquipmentModel implements ArrayAccess
 
         $allowed_values = $this->getEquipmentTypeAllowableValues();
         if (!in_array($this->container['equipment_type'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = $this->getEquipmentTypeNameAllowableValues();
+        if (!in_array($this->container['equipment_type_name'], $allowed_values)) {
             return false;
         }
         return true;
@@ -295,6 +335,57 @@ class EquipmentModel implements ArrayAccess
             );
         }
         $this->container['equipment_type'] = $equipment_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets equipment_type_id
+     * @return int
+     */
+    public function getEquipmentTypeId()
+    {
+        return $this->container['equipment_type_id'];
+    }
+
+    /**
+     * Sets equipment_type_id
+     * @param int $equipment_type_id Equipment Type ID
+     * @return $this
+     */
+    public function setEquipmentTypeId($equipment_type_id)
+    {
+        $this->container['equipment_type_id'] = $equipment_type_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets equipment_type_name
+     * @return string
+     */
+    public function getEquipmentTypeName()
+    {
+        return $this->container['equipment_type_name'];
+    }
+
+    /**
+     * Sets equipment_type_name
+     * @param string $equipment_type_name Equipment Type Name
+     * @return $this
+     */
+    public function setEquipmentTypeName($equipment_type_name)
+    {
+        $allowed_values = $this->getEquipmentTypeNameAllowableValues();
+        if (!is_null($equipment_type_name) && !in_array($equipment_type_name, $allowed_values)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'equipment_type_name', must be one of '%s'",
+                    implode("', '", $allowed_values)
+                )
+            );
+        }
+        $this->container['equipment_type_name'] = $equipment_type_name;
 
         return $this;
     }

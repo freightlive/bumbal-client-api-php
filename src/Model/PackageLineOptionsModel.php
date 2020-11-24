@@ -73,7 +73,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_meta_data' => 'bool',
         'include_package_line_files' => 'bool',
         'include_package_line_files_meta_data' => 'bool',
-        'include_action_type_name' => 'bool'
+        'include_action_type_name' => 'bool',
+        'include_packagelines_for_whole_route_on_start_activity' => 'bool'
     ];
 
     /**
@@ -100,7 +101,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_meta_data' => null,
         'include_package_line_files' => null,
         'include_package_line_files_meta_data' => null,
-        'include_action_type_name' => null
+        'include_action_type_name' => null,
+        'include_packagelines_for_whole_route_on_start_activity' => null
     ];
 
     public static function swaggerTypes()
@@ -137,7 +139,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_meta_data' => 'include_package_line_meta_data',
         'include_package_line_files' => 'include_package_line_files',
         'include_package_line_files_meta_data' => 'include_package_line_files_meta_data',
-        'include_action_type_name' => 'include_action_type_name'
+        'include_action_type_name' => 'include_action_type_name',
+        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity'
     ];
 
 
@@ -165,7 +168,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_meta_data' => 'setIncludePackageLineMetaData',
         'include_package_line_files' => 'setIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'setIncludePackageLineFilesMetaData',
-        'include_action_type_name' => 'setIncludeActionTypeName'
+        'include_action_type_name' => 'setIncludeActionTypeName',
+        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity'
     ];
 
 
@@ -193,7 +197,8 @@ class PackageLineOptionsModel implements ArrayAccess
         'include_package_line_meta_data' => 'getIncludePackageLineMetaData',
         'include_package_line_files' => 'getIncludePackageLineFiles',
         'include_package_line_files_meta_data' => 'getIncludePackageLineFilesMetaData',
-        'include_action_type_name' => 'getIncludeActionTypeName'
+        'include_action_type_name' => 'getIncludeActionTypeName',
+        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity'
     ];
 
     public static function attributeMap()
@@ -247,6 +252,7 @@ class PackageLineOptionsModel implements ArrayAccess
         $this->container['include_package_line_files'] = isset($data['include_package_line_files']) ? $data['include_package_line_files'] : null;
         $this->container['include_package_line_files_meta_data'] = isset($data['include_package_line_files_meta_data']) ? $data['include_package_line_files_meta_data'] : null;
         $this->container['include_action_type_name'] = isset($data['include_action_type_name']) ? $data['include_action_type_name'] : null;
+        $this->container['include_packagelines_for_whole_route_on_start_activity'] = isset($data['include_packagelines_for_whole_route_on_start_activity']) ? $data['include_packagelines_for_whole_route_on_start_activity'] : null;
     }
 
     /**
@@ -690,6 +696,27 @@ class PackageLineOptionsModel implements ArrayAccess
     public function setIncludeActionTypeName($include_action_type_name)
     {
         $this->container['include_action_type_name'] = $include_action_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_packagelines_for_whole_route_on_start_activity
+     * @return bool
+     */
+    public function getIncludePackagelinesForWholeRouteOnStartActivity()
+    {
+        return $this->container['include_packagelines_for_whole_route_on_start_activity'];
+    }
+
+    /**
+     * Sets include_packagelines_for_whole_route_on_start_activity
+     * @param bool $include_packagelines_for_whole_route_on_start_activity 
+     * @return $this
+     */
+    public function setIncludePackagelinesForWholeRouteOnStartActivity($include_packagelines_for_whole_route_on_start_activity)
+    {
+        $this->container['include_packagelines_for_whole_route_on_start_activity'] = $include_packagelines_for_whole_route_on_start_activity;
 
         return $this;
     }

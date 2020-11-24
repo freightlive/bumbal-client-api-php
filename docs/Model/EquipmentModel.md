@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **equipment_type** | **string** | Equipment Type | [optional] 
+**equipment_type_id** | **int** | Equipment Type ID | [optional] 
+**equipment_type_name** | **string** | Equipment Type Name | [optional] 
 **info** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **registration_nr** | **string** |  | [optional] 

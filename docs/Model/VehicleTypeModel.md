@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique ID | [optional] 
 **name** | **string** | The name of the VehicleType | [optional] 
+**max_speed** | **int** | Max Speed in km/h, Bikes (id 4) ignore max_speed | [optional] 
 **speed_factor** | **double** | Speed Factor | [optional] 
 **duration_factor** | **double** | Duration Factor | [optional] 
 **cost_per_meter** | **double** | Cost per meter | [optional] 
