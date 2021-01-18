@@ -85,6 +85,13 @@ class RouteFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+    }
+
+    /**
      * Test attribute "date_time_from"
      */
     public function testPropertyDateTimeFrom()

@@ -344,6 +344,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_tag_names"
+     */
+    public function testPropertyIncludeTagNames()
+    {
+    }
+
+    /**
      * Test attribute "include_notes"
      */
     public function testPropertyIncludeNotes()

@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveAssignment**
-> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id)
+> \BumbalClient\Model\AssignmentModel retrieveAssignment($assignment_id, $include_activities, $include_meta_data, $include_links, $include_files, $include_tag_ids, $include_tag_names, $include_booking_account, $include_record_info, $include_record_object)
 
 Find assignment by ID
 
@@ -80,9 +80,18 @@ BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR
 
 $api_instance = new BumbalClient\Api\AssignmentApi();
 $assignment_id = 789; // int | ID of assignment to return
+$include_activities = false; // bool | Include activities belonging to assignment
+$include_meta_data = false; // bool | Include meta data
+$include_links = false; // bool | Include links
+$include_files = false; // bool | Include files
+$include_tag_ids = false; // bool | Include tag ids
+$include_tag_names = false; // bool | Include tag names
+$include_booking_account = false; // bool | Include booking account
+$include_record_info = false; // bool | Include record info
+$include_record_object = false; // bool | Include record object
 
 try {
-    $result = $api_instance->retrieveAssignment($assignment_id);
+    $result = $api_instance->retrieveAssignment($assignment_id, $include_activities, $include_meta_data, $include_links, $include_files, $include_tag_ids, $include_tag_names, $include_booking_account, $include_record_info, $include_record_object);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssignmentApi->retrieveAssignment: ', $e->getMessage(), PHP_EOL;
@@ -95,6 +104,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **assignment_id** | **int**| ID of assignment to return |
+ **include_activities** | **bool**| Include activities belonging to assignment | [optional] [default to false]
+ **include_meta_data** | **bool**| Include meta data | [optional] [default to false]
+ **include_links** | **bool**| Include links | [optional] [default to false]
+ **include_files** | **bool**| Include files | [optional] [default to false]
+ **include_tag_ids** | **bool**| Include tag ids | [optional] [default to false]
+ **include_tag_names** | **bool**| Include tag names | [optional] [default to false]
+ **include_booking_account** | **bool**| Include booking account | [optional] [default to false]
+ **include_record_info** | **bool**| Include record info | [optional] [default to false]
+ **include_record_object** | **bool**| Include record object | [optional] [default to false]
 
 ### Return type
 

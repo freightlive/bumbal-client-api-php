@@ -67,7 +67,7 @@ Name | Type | Description | Notes
 **depot_address_id** | **int** | Depot Address ID | [optional] 
 **depot_activity** | [**\BumbalClient\Model\ActivityModel[]**](ActivityModel.md) |  | [optional] 
 **allowed_driver_ids** | **int[]** | Unique Identifier(s) for allowed drivers in activity | [optional] 
-**allowed_drivers** | **object** |  | [optional] 
+**allowed_drivers** | [**\BumbalClient\Model\AllowedDriverModel[]**](AllowedDriverModel.md) |  | [optional] 
 **allowed_drivers_links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 

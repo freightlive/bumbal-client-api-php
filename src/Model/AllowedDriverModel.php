@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverUnavailabilityModel
+ * AllowedDriverModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * DriverUnavailabilityModel Class Doc Comment
+ * AllowedDriverModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverUnavailabilityModel implements ArrayAccess
+class AllowedDriverModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class DriverUnavailabilityModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'DriverUnavailabilityModel';
+    protected static $swaggerModelName = 'AllowedDriverModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,10 +55,8 @@ class DriverUnavailabilityModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'user_id' => 'string',
-        'reference' => 'string',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'full_name' => 'string',
+        'initials' => 'string'
     ];
 
     /**
@@ -67,10 +65,8 @@ class DriverUnavailabilityModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'user_id' => null,
-        'reference' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'full_name' => null,
+        'initials' => null
     ];
 
     public static function swaggerTypes()
@@ -89,10 +85,8 @@ class DriverUnavailabilityModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'user_id' => 'user_id',
-        'reference' => 'reference',
-        'created_at' => 'created_at',
-        'updated_at' => 'updated_at'
+        'full_name' => 'full_name',
+        'initials' => 'initials'
     ];
 
 
@@ -102,10 +96,8 @@ class DriverUnavailabilityModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'user_id' => 'setUserId',
-        'reference' => 'setReference',
-        'created_at' => 'setCreatedAt',
-        'updated_at' => 'setUpdatedAt'
+        'full_name' => 'setFullName',
+        'initials' => 'setInitials'
     ];
 
 
@@ -115,10 +107,8 @@ class DriverUnavailabilityModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'user_id' => 'getUserId',
-        'reference' => 'getReference',
-        'created_at' => 'getCreatedAt',
-        'updated_at' => 'getUpdatedAt'
+        'full_name' => 'getFullName',
+        'initials' => 'getInitials'
     ];
 
     public static function attributeMap()
@@ -153,10 +143,8 @@ class DriverUnavailabilityModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
+        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
     }
 
     /**
@@ -195,7 +183,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Unique ID
+     * @param int $id User identifier
      * @return $this
      */
     public function setId($id)
@@ -206,85 +194,43 @@ class DriverUnavailabilityModel implements ArrayAccess
     }
 
     /**
-     * Gets user_id
+     * Gets full_name
      * @return string
      */
-    public function getUserId()
+    public function getFullName()
     {
-        return $this->container['user_id'];
+        return $this->container['full_name'];
     }
 
     /**
-     * Sets user_id
-     * @param string $user_id The user_id of the DriverUnavailability
+     * Sets full_name
+     * @param string $full_name User Full Name
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setFullName($full_name)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['full_name'] = $full_name;
 
         return $this;
     }
 
     /**
-     * Gets reference
+     * Gets initials
      * @return string
      */
-    public function getReference()
+    public function getInitials()
     {
-        return $this->container['reference'];
+        return $this->container['initials'];
     }
 
     /**
-     * Sets reference
-     * @param string $reference The reference of the DriverUnavailability
+     * Sets initials
+     * @param string $initials User Initials
      * @return $this
      */
-    public function setReference($reference)
+    public function setInitials($initials)
     {
-        $this->container['reference'] = $reference;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     * @param \DateTime $created_at created_at date time
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     * @param \DateTime $updated_at updated_at date time
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['initials'] = $initials;
 
         return $this;
     }

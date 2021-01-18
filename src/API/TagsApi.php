@@ -334,7 +334,7 @@ class TagsApi
      *
      * @param \BumbalClient\Model\TagsRetrieveListArguments $arguments Tags RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagModel[]
+     * @return \BumbalClient\Model\TagListResponse
      */
     public function retrieveListTags($arguments)
     {
@@ -349,7 +349,7 @@ class TagsApi
      *
      * @param \BumbalClient\Model\TagsRetrieveListArguments $arguments Tags RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TagListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListTagsWithHttpInfo($arguments)
     {
@@ -394,15 +394,15 @@ class TagsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagModel[]',
+                '\BumbalClient\Model\TagListResponse',
                 '/tags'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagListResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagListResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

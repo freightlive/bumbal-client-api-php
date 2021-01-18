@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **retrieveListTags**
-> \BumbalClient\Model\TagModel[] retrieveListTags($arguments)
+> \BumbalClient\Model\TagListResponse retrieveListTags($arguments)
 
 Retrieve List of Tags
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\TagModel[]**](../Model/TagModel.md)
+[**\BumbalClient\Model\TagListResponse**](../Model/TagListResponse.md)
 
 ### Authorization
 

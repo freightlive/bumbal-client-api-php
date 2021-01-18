@@ -92,6 +92,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'bool',
         'include_record_info' => 'bool',
         'include_record_object' => 'bool',
+        'include_tag_names' => 'bool',
         'include_notes' => 'bool',
         'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
@@ -163,6 +164,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => null,
         'include_record_info' => null,
         'include_record_object' => null,
+        'include_tag_names' => null,
         'include_notes' => null,
         'include_activity_notes' => null,
         'include_activity_note_tags' => null,
@@ -244,6 +246,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'include_tag_type_name',
         'include_record_info' => 'include_record_info',
         'include_record_object' => 'include_record_object',
+        'include_tag_names' => 'include_tag_names',
         'include_notes' => 'include_notes',
         'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
@@ -316,6 +319,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_record_info' => 'setIncludeRecordInfo',
         'include_record_object' => 'setIncludeRecordObject',
+        'include_tag_names' => 'setIncludeTagNames',
         'include_notes' => 'setIncludeNotes',
         'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
@@ -388,6 +392,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_record_info' => 'getIncludeRecordInfo',
         'include_record_object' => 'getIncludeRecordObject',
+        'include_tag_names' => 'getIncludeTagNames',
         'include_notes' => 'getIncludeNotes',
         'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
@@ -485,6 +490,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
         $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
+        $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
@@ -1332,6 +1338,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeRecordObject($include_record_object)
     {
         $this->container['include_record_object'] = $include_record_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_tag_names
+     * @return bool
+     */
+    public function getIncludeTagNames()
+    {
+        return $this->container['include_tag_names'];
+    }
+
+    /**
+     * Sets include_tag_names
+     * @param bool $include_tag_names 
+     * @return $this
+     */
+    public function setIncludeTagNames($include_tag_names)
+    {
+        $this->container['include_tag_names'] = $include_tag_names;
 
         return $this;
     }

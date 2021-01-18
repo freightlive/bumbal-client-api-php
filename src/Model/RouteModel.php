@@ -114,7 +114,7 @@ class RouteModel implements ArrayAccess
         'planned_capacities' => 'object',
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
-        'activity_ids' => 'object',
+        'activity_ids' => 'int[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
         'notes' => '\BumbalClient\Model\NoteModel[]',
@@ -1920,7 +1920,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Gets activity_ids
-     * @return object
+     * @return int[]
      */
     public function getActivityIds()
     {
@@ -1929,7 +1929,7 @@ class RouteModel implements ArrayAccess
 
     /**
      * Sets activity_ids
-     * @param object $activity_ids 
+     * @param int[] $activity_ids activity ids on route in order of execution
      * @return $this
      */
     public function setActivityIds($activity_ids)

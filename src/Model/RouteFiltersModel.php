@@ -55,6 +55,7 @@ class RouteFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'nr' => 'int[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'earliest_date_time_since' => '\DateTime',
@@ -79,6 +80,7 @@ class RouteFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'nr' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
         'earliest_date_time_since' => 'date-time',
@@ -113,6 +115,7 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'nr' => 'nr',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
         'earliest_date_time_since' => 'earliest_date_time_since',
@@ -138,6 +141,7 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'nr' => 'setNr',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
         'earliest_date_time_since' => 'setEarliestDateTimeSince',
@@ -163,6 +167,7 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'nr' => 'getNr',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
         'earliest_date_time_since' => 'getEarliestDateTimeSince',
@@ -213,6 +218,7 @@ class RouteFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
         $this->container['earliest_date_time_since'] = isset($data['earliest_date_time_since']) ? $data['earliest_date_time_since'] : null;
@@ -273,6 +279,27 @@ class RouteFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr
+     * @return int[]
+     */
+    public function getNr()
+    {
+        return $this->container['nr'];
+    }
+
+    /**
+     * Sets nr
+     * @param int[] $nr Route nr
+     * @return $this
+     */
+    public function setNr($nr)
+    {
+        $this->container['nr'] = $nr;
 
         return $this;
     }

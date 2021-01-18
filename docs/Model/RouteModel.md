@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 **planned_capacities** | **object** |  | [optional] 
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
-**activity_ids** | **object** |  | [optional] 
+**activity_ids** | **int[]** | activity ids on route in order of execution | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 

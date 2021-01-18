@@ -385,6 +385,7 @@ Class | Method | HTTP request | Description
  - [AddressRetrieveListArguments](docs/Model/AddressRetrieveListArguments.md)
  - [AddressReverseGeoCodeArguments](docs/Model/AddressReverseGeoCodeArguments.md)
  - [AddressReverseGeoCodeResponse](docs/Model/AddressReverseGeoCodeResponse.md)
+ - [AllowedDriverModel](docs/Model/AllowedDriverModel.md)
  - [ApiResponse](docs/Model/ApiResponse.md)
  - [ApiResponse1](docs/Model/ApiResponse1.md)
  - [ApiResponse10](docs/Model/ApiResponse10.md)

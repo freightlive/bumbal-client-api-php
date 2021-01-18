@@ -180,12 +180,21 @@ class AssignmentApi
      * Find assignment by ID
      *
      * @param int $assignment_id ID of assignment to return (required)
+     * @param bool $include_activities Include activities belonging to assignment (optional, default to false)
+     * @param bool $include_meta_data Include meta data (optional, default to false)
+     * @param bool $include_links Include links (optional, default to false)
+     * @param bool $include_files Include files (optional, default to false)
+     * @param bool $include_tag_ids Include tag ids (optional, default to false)
+     * @param bool $include_tag_names Include tag names (optional, default to false)
+     * @param bool $include_booking_account Include booking account (optional, default to false)
+     * @param bool $include_record_info Include record info (optional, default to false)
+     * @param bool $include_record_object Include record object (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return \BumbalClient\Model\AssignmentModel
      */
-    public function retrieveAssignment($assignment_id)
+    public function retrieveAssignment($assignment_id, $include_activities = 'false', $include_meta_data = 'false', $include_links = 'false', $include_files = 'false', $include_tag_ids = 'false', $include_tag_names = 'false', $include_booking_account = 'false', $include_record_info = 'false', $include_record_object = 'false')
     {
-        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id);
+        list($response) = $this->retrieveAssignmentWithHttpInfo($assignment_id, $include_activities, $include_meta_data, $include_links, $include_files, $include_tag_ids, $include_tag_names, $include_booking_account, $include_record_info, $include_record_object);
         return $response;
     }
 
@@ -195,10 +204,19 @@ class AssignmentApi
      * Find assignment by ID
      *
      * @param int $assignment_id ID of assignment to return (required)
+     * @param bool $include_activities Include activities belonging to assignment (optional, default to false)
+     * @param bool $include_meta_data Include meta data (optional, default to false)
+     * @param bool $include_links Include links (optional, default to false)
+     * @param bool $include_files Include files (optional, default to false)
+     * @param bool $include_tag_ids Include tag ids (optional, default to false)
+     * @param bool $include_tag_names Include tag names (optional, default to false)
+     * @param bool $include_booking_account Include booking account (optional, default to false)
+     * @param bool $include_record_info Include record info (optional, default to false)
+     * @param bool $include_record_object Include record object (optional, default to false)
      * @throws \BumbalClient\ApiException on non-2xx response
      * @return array of \BumbalClient\Model\AssignmentModel, HTTP status code, HTTP response headers (array of strings)
      */
-    public function retrieveAssignmentWithHttpInfo($assignment_id)
+    public function retrieveAssignmentWithHttpInfo($assignment_id, $include_activities = 'false', $include_meta_data = 'false', $include_links = 'false', $include_files = 'false', $include_tag_ids = 'false', $include_tag_names = 'false', $include_booking_account = 'false', $include_record_info = 'false', $include_record_object = 'false')
     {
         // verify the required parameter 'assignment_id' is set
         if ($assignment_id === null) {
@@ -216,6 +234,42 @@ class AssignmentApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
 
+        // query params
+        if ($include_activities !== null) {
+            $queryParams['include_activities'] = $this->apiClient->getSerializer()->toQueryValue($include_activities);
+        }
+        // query params
+        if ($include_meta_data !== null) {
+            $queryParams['include_meta_data'] = $this->apiClient->getSerializer()->toQueryValue($include_meta_data);
+        }
+        // query params
+        if ($include_links !== null) {
+            $queryParams['include_links'] = $this->apiClient->getSerializer()->toQueryValue($include_links);
+        }
+        // query params
+        if ($include_files !== null) {
+            $queryParams['include_files'] = $this->apiClient->getSerializer()->toQueryValue($include_files);
+        }
+        // query params
+        if ($include_tag_ids !== null) {
+            $queryParams['include_tag_ids'] = $this->apiClient->getSerializer()->toQueryValue($include_tag_ids);
+        }
+        // query params
+        if ($include_tag_names !== null) {
+            $queryParams['include_tag_names'] = $this->apiClient->getSerializer()->toQueryValue($include_tag_names);
+        }
+        // query params
+        if ($include_booking_account !== null) {
+            $queryParams['include_booking_account'] = $this->apiClient->getSerializer()->toQueryValue($include_booking_account);
+        }
+        // query params
+        if ($include_record_info !== null) {
+            $queryParams['include_record_info'] = $this->apiClient->getSerializer()->toQueryValue($include_record_info);
+        }
+        // query params
+        if ($include_record_object !== null) {
+            $queryParams['include_record_object'] = $this->apiClient->getSerializer()->toQueryValue($include_record_object);
+        }
         // path params
         if ($assignment_id !== null) {
             $resourcePath = str_replace(

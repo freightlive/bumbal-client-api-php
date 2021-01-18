@@ -1,6 +1,6 @@
 <?php
 /**
- * DriverUnavailabilityModelTest
+ * AllowedDriverModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * DriverUnavailabilityModelTest Class Doc Comment
+ * AllowedDriverModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description DriverUnavailabilityModel
+// * @description AllowedDriverModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
+class AllowedDriverModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DriverUnavailabilityModel"
+     * Test "AllowedDriverModel"
      */
-    public function testDriverUnavailabilityModel()
+    public function testAllowedDriverModel()
     {
     }
 
@@ -85,30 +85,16 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "user_id"
+     * Test attribute "full_name"
      */
-    public function testPropertyUserId()
+    public function testPropertyFullName()
     {
     }
 
     /**
-     * Test attribute "reference"
+     * Test attribute "initials"
      */
-    public function testPropertyReference()
-    {
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
+    public function testPropertyInitials()
     {
     }
 }
