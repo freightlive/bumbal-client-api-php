@@ -99,6 +99,20 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "date_time_to"
+     */
+    public function testPropertyDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_from"
+     */
+    public function testPropertyDateTimeFrom()
+    {
+    }
+
+    /**
      * Test attribute "user_link"
      */
     public function testPropertyUserLink()

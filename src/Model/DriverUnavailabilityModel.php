@@ -57,6 +57,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'int',
         'user_id' => 'string',
         'reference' => 'string',
+        'date_time_to' => '\DateTime',
+        'date_time_from' => '\DateTime',
         'user_link' => '\BumbalClient\Model\LinkModel',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
@@ -71,6 +73,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'int64',
         'user_id' => null,
         'reference' => null,
+        'date_time_to' => 'date-time',
+        'date_time_from' => 'date-time',
         'user_link' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
@@ -95,6 +99,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'id',
         'user_id' => 'user_id',
         'reference' => 'reference',
+        'date_time_to' => 'date_time_to',
+        'date_time_from' => 'date_time_from',
         'user_link' => 'user_link',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
@@ -110,6 +116,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'setId',
         'user_id' => 'setUserId',
         'reference' => 'setReference',
+        'date_time_to' => 'setDateTimeTo',
+        'date_time_from' => 'setDateTimeFrom',
         'user_link' => 'setUserLink',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
@@ -125,6 +133,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'getId',
         'user_id' => 'getUserId',
         'reference' => 'getReference',
+        'date_time_to' => 'getDateTimeTo',
+        'date_time_from' => 'getDateTimeFrom',
         'user_link' => 'getUserLink',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
@@ -165,6 +175,8 @@ class DriverUnavailabilityModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -255,6 +267,48 @@ class DriverUnavailabilityModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_to
+     * @return \DateTime
+     */
+    public function getDateTimeTo()
+    {
+        return $this->container['date_time_to'];
+    }
+
+    /**
+     * Sets date_time_to
+     * @param \DateTime $date_time_to date_time_to date time
+     * @return $this
+     */
+    public function setDateTimeTo($date_time_to)
+    {
+        $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_from
+     * @return \DateTime
+     */
+    public function getDateTimeFrom()
+    {
+        return $this->container['date_time_from'];
+    }
+
+    /**
+     * Sets date_time_from
+     * @param \DateTime $date_time_from date_time_from date time
+     * @return $this
+     */
+    public function setDateTimeFrom($date_time_from)
+    {
+        $this->container['date_time_from'] = $date_time_from;
 
         return $this;
     }
