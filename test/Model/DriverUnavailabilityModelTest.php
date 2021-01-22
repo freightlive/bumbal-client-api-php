@@ -118,4 +118,11 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyUpdatedAt()
     {
     }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+    }
 }
