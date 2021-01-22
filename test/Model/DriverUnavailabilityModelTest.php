@@ -99,6 +99,13 @@ class DriverUnavailabilityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "user_link"
+     */
+    public function testPropertyUserLink()
+    {
+    }
+
+    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()

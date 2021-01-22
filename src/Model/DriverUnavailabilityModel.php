@@ -57,6 +57,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'int',
         'user_id' => 'string',
         'reference' => 'string',
+        'user_link' => '\BumbalClient\Model\LinkModel',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime'
     ];
@@ -69,6 +70,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'int64',
         'user_id' => null,
         'reference' => null,
+        'user_link' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time'
     ];
@@ -91,6 +93,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'id',
         'user_id' => 'user_id',
         'reference' => 'reference',
+        'user_link' => 'user_link',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at'
     ];
@@ -104,6 +107,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'setId',
         'user_id' => 'setUserId',
         'reference' => 'setReference',
+        'user_link' => 'setUserLink',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt'
     ];
@@ -117,6 +121,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         'id' => 'getId',
         'user_id' => 'getUserId',
         'reference' => 'getReference',
+        'user_link' => 'getUserLink',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt'
     ];
@@ -155,6 +160,7 @@ class DriverUnavailabilityModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['user_link'] = isset($data['user_link']) ? $data['user_link'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
     }
@@ -243,6 +249,27 @@ class DriverUnavailabilityModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_link
+     * @return \BumbalClient\Model\LinkModel
+     */
+    public function getUserLink()
+    {
+        return $this->container['user_link'];
+    }
+
+    /**
+     * Sets user_link
+     * @param \BumbalClient\Model\LinkModel $user_link 
+     * @return $this
+     */
+    public function setUserLink($user_link)
+    {
+        $this->container['user_link'] = $user_link;
 
         return $this;
     }
