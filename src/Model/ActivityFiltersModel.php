@@ -78,6 +78,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'int[]',
         'locked' => 'int[]',
         'activity_type_name' => 'string[]',
+        'bundle_activity_id' => 'int[]',
         'description' => 'string[]',
         'reference' => 'string[]',
         'search_text' => 'string',
@@ -125,6 +126,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => null,
         'locked' => null,
         'activity_type_name' => null,
+        'bundle_activity_id' => null,
         'description' => null,
         'reference' => null,
         'search_text' => null,
@@ -182,6 +184,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'activity_type_id',
         'locked' => 'locked',
         'activity_type_name' => 'activity_type_name',
+        'bundle_activity_id' => 'bundle_activity_id',
         'description' => 'description',
         'reference' => 'reference',
         'search_text' => 'search_text',
@@ -230,6 +233,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'setActivityTypeId',
         'locked' => 'setLocked',
         'activity_type_name' => 'setActivityTypeName',
+        'bundle_activity_id' => 'setBundleActivityId',
         'description' => 'setDescription',
         'reference' => 'setReference',
         'search_text' => 'setSearchText',
@@ -278,6 +282,7 @@ class ActivityFiltersModel implements ArrayAccess
         'activity_type_id' => 'getActivityTypeId',
         'locked' => 'getLocked',
         'activity_type_name' => 'getActivityTypeName',
+        'bundle_activity_id' => 'getBundleActivityId',
         'description' => 'getDescription',
         'reference' => 'getReference',
         'search_text' => 'getSearchText',
@@ -351,6 +356,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['activity_type_id'] = isset($data['activity_type_id']) ? $data['activity_type_id'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
         $this->container['activity_type_name'] = isset($data['activity_type_name']) ? $data['activity_type_name'] : null;
+        $this->container['bundle_activity_id'] = isset($data['bundle_activity_id']) ? $data['bundle_activity_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
@@ -894,6 +900,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setActivityTypeName($activity_type_name)
     {
         $this->container['activity_type_name'] = $activity_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets bundle_activity_id
+     * @return int[]
+     */
+    public function getBundleActivityId()
+    {
+        return $this->container['bundle_activity_id'];
+    }
+
+    /**
+     * Sets bundle_activity_id
+     * @param int[] $bundle_activity_id bundle activity id(s)
+     * @return $this
+     */
+    public function setBundleActivityId($bundle_activity_id)
+    {
+        $this->container['bundle_activity_id'] = $bundle_activity_id;
 
         return $this;
     }

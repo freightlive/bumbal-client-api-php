@@ -246,6 +246,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "bundle_activity_id"
+     */
+    public function testPropertyBundleActivityId()
+    {
+    }
+
+    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
