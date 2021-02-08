@@ -55,46 +55,42 @@ class ActivityOptionsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'include_activity_status' => 'bool',
-        'include_status_name' => 'bool',
         'include_activity_type_name' => 'bool',
-        'include_activity_meta_data' => 'bool',
-        'include_meta_data' => 'bool',
-        'include_address_applied' => 'bool',
         'include_address' => 'bool',
-        'include_address_object' => 'bool',
-        'include_allowed_driver_ids' => 'bool',
+        'include_address_applied' => 'bool',
         'include_allowed_drivers' => 'bool',
+        'include_allowed_driver_ids' => 'bool',
         'include_allowed_drivers_links' => 'bool',
-        'include_time_slots' => 'bool',
-        'include_time_slot_tags' => 'bool',
-        'include_route_info' => 'bool',
-        'include_route' => 'bool',
+        'include_assignment' => 'bool',
+        'include_assignment_nr' => 'bool',
+        'include_brand' => 'bool',
+        'include_compartment_ids' => 'bool',
+        'include_compartments' => 'bool',
+        'include_driver' => 'bool',
+        'include_driver_info' => 'bool',
+        'include_driver_links' => 'bool',
+        'include_emails' => 'bool',
+        'include_meta_data' => 'bool',
+        'include_notes' => 'bool',
         'include_package_lines' => 'bool',
         'include_package_line_links' => 'bool',
         'include_package_lines_info' => 'bool',
-        'include_driver_info' => 'bool',
-        'include_driver' => 'bool',
-        'include_driver_links' => 'bool',
-        'include_car' => 'bool',
-        'include_vehicle' => 'bool',
+        'include_phone_nrs' => 'bool',
+        'include_route' => 'bool',
+        'include_route_info' => 'bool',
+        'include_status_name' => 'bool',
+        'include_time_slots' => 'bool',
         'include_trailer' => 'bool',
+        'include_vehicle' => 'bool',
         'include_communication' => 'bool',
         'include_communication_object' => 'bool',
-        'include_compartment_ids' => 'bool',
-        'include_compartments' => 'bool',
         'include_links' => 'bool',
-        'include_activity_links' => 'bool',
         'include_files' => 'bool',
-        'include_activity_files_meta_data' => 'bool',
-        'include_assignment_nr' => 'bool',
-        'include_assignment' => 'bool',
-        'include_activity_tags' => 'bool',
+        'include_tags' => 'bool',
         'include_tag_type_name' => 'bool',
         'include_record_info' => 'bool',
         'include_record_object' => 'bool',
         'include_tag_names' => 'bool',
-        'include_notes' => 'bool',
-        'include_activity_notes' => 'bool',
         'include_activity_note_tags' => 'bool',
         'include_depot_activity' => 'bool',
         'include_depot_address' => 'bool',
@@ -104,21 +100,27 @@ class ActivityOptionsModel implements ArrayAccess
         'include_filled_capacities' => 'bool',
         'include_applied_capacities' => 'bool',
         'include_zones' => 'bool',
-        'include_brand' => 'bool',
         'include_brand_name' => 'bool',
         'include_brand_colours' => 'bool',
-        'include_brand_files' => 'bool',
         'apply_address_bundling' => 'bool',
         'include_bundled_activity_ids' => 'bool',
-        'include_activity_files' => 'bool',
-        'include_activity_record_info' => 'bool',
-        'include_activity_record_object' => 'bool',
         'include_party_name' => 'bool',
         'include_shipment_activity_nr' => 'bool',
         'include_payments' => 'bool',
         'include_transactions' => 'bool',
         'include_relations' => 'bool',
-        'include_packagelines_for_whole_route_on_start_activity' => 'bool'
+        'include_packagelines_for_whole_route_on_start_activity' => 'bool',
+        'include_activity_meta_data' => 'bool',
+        'include_address_object' => 'bool',
+        'include_car' => 'bool',
+        'include_activity_links' => 'bool',
+        'include_activity_files' => 'bool',
+        'include_brand_files' => 'bool',
+        'include_activity_files_meta_data' => 'bool',
+        'include_activity_record_info' => 'bool',
+        'include_activity_record_object' => 'bool',
+        'include_activity_notes' => 'bool',
+        'include_activity_tags' => 'bool'
     ];
 
     /**
@@ -127,46 +129,42 @@ class ActivityOptionsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'include_activity_status' => null,
-        'include_status_name' => null,
         'include_activity_type_name' => null,
-        'include_activity_meta_data' => null,
-        'include_meta_data' => null,
-        'include_address_applied' => null,
         'include_address' => null,
-        'include_address_object' => null,
-        'include_allowed_driver_ids' => null,
+        'include_address_applied' => null,
         'include_allowed_drivers' => null,
+        'include_allowed_driver_ids' => null,
         'include_allowed_drivers_links' => null,
-        'include_time_slots' => null,
-        'include_time_slot_tags' => null,
-        'include_route_info' => null,
-        'include_route' => null,
+        'include_assignment' => null,
+        'include_assignment_nr' => null,
+        'include_brand' => null,
+        'include_compartment_ids' => null,
+        'include_compartments' => null,
+        'include_driver' => null,
+        'include_driver_info' => null,
+        'include_driver_links' => null,
+        'include_emails' => null,
+        'include_meta_data' => null,
+        'include_notes' => null,
         'include_package_lines' => null,
         'include_package_line_links' => null,
         'include_package_lines_info' => null,
-        'include_driver_info' => null,
-        'include_driver' => null,
-        'include_driver_links' => null,
-        'include_car' => null,
-        'include_vehicle' => null,
+        'include_phone_nrs' => null,
+        'include_route' => null,
+        'include_route_info' => null,
+        'include_status_name' => null,
+        'include_time_slots' => null,
         'include_trailer' => null,
+        'include_vehicle' => null,
         'include_communication' => null,
         'include_communication_object' => null,
-        'include_compartment_ids' => null,
-        'include_compartments' => null,
         'include_links' => null,
-        'include_activity_links' => null,
         'include_files' => null,
-        'include_activity_files_meta_data' => null,
-        'include_assignment_nr' => null,
-        'include_assignment' => null,
-        'include_activity_tags' => null,
+        'include_tags' => null,
         'include_tag_type_name' => null,
         'include_record_info' => null,
         'include_record_object' => null,
         'include_tag_names' => null,
-        'include_notes' => null,
-        'include_activity_notes' => null,
         'include_activity_note_tags' => null,
         'include_depot_activity' => null,
         'include_depot_address' => null,
@@ -176,21 +174,27 @@ class ActivityOptionsModel implements ArrayAccess
         'include_filled_capacities' => null,
         'include_applied_capacities' => null,
         'include_zones' => null,
-        'include_brand' => null,
         'include_brand_name' => null,
         'include_brand_colours' => null,
-        'include_brand_files' => null,
         'apply_address_bundling' => null,
         'include_bundled_activity_ids' => null,
-        'include_activity_files' => null,
-        'include_activity_record_info' => null,
-        'include_activity_record_object' => null,
         'include_party_name' => null,
         'include_shipment_activity_nr' => null,
         'include_payments' => null,
         'include_transactions' => null,
         'include_relations' => null,
-        'include_packagelines_for_whole_route_on_start_activity' => null
+        'include_packagelines_for_whole_route_on_start_activity' => null,
+        'include_activity_meta_data' => null,
+        'include_address_object' => null,
+        'include_car' => null,
+        'include_activity_links' => null,
+        'include_activity_files' => null,
+        'include_brand_files' => null,
+        'include_activity_files_meta_data' => null,
+        'include_activity_record_info' => null,
+        'include_activity_record_object' => null,
+        'include_activity_notes' => null,
+        'include_activity_tags' => null
     ];
 
     public static function swaggerTypes()
@@ -209,46 +213,42 @@ class ActivityOptionsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'include_activity_status' => 'include_activity_status',
-        'include_status_name' => 'include_status_name',
         'include_activity_type_name' => 'include_activity_type_name',
-        'include_activity_meta_data' => 'include_activity_meta_data',
-        'include_meta_data' => 'include_meta_data',
-        'include_address_applied' => 'include_address_applied',
         'include_address' => 'include_address',
-        'include_address_object' => 'include_address_object',
-        'include_allowed_driver_ids' => 'include_allowed_driver_ids',
+        'include_address_applied' => 'include_address_applied',
         'include_allowed_drivers' => 'include_allowed_drivers',
+        'include_allowed_driver_ids' => 'include_allowed_driver_ids',
         'include_allowed_drivers_links' => 'include_allowed_drivers_links',
-        'include_time_slots' => 'include_time_slots',
-        'include_time_slot_tags' => 'include_time_slot_tags',
-        'include_route_info' => 'include_route_info',
-        'include_route' => 'include_route',
+        'include_assignment' => 'include_assignment',
+        'include_assignment_nr' => 'include_assignment_nr',
+        'include_brand' => 'include_brand',
+        'include_compartment_ids' => 'include_compartment_ids',
+        'include_compartments' => 'include_compartments',
+        'include_driver' => 'include_driver',
+        'include_driver_info' => 'include_driver_info',
+        'include_driver_links' => 'include_driver_links',
+        'include_emails' => 'include_emails',
+        'include_meta_data' => 'include_meta_data',
+        'include_notes' => 'include_notes',
         'include_package_lines' => 'include_package_lines',
         'include_package_line_links' => 'include_package_line_links',
         'include_package_lines_info' => 'include_package_lines_info',
-        'include_driver_info' => 'include_driver_info',
-        'include_driver' => 'include_driver',
-        'include_driver_links' => 'include_driver_links',
-        'include_car' => 'include_car',
-        'include_vehicle' => 'include_vehicle',
+        'include_phone_nrs' => 'include_phone_nrs',
+        'include_route' => 'include_route',
+        'include_route_info' => 'include_route_info',
+        'include_status_name' => 'include_status_name',
+        'include_time_slots' => 'include_time_slots',
         'include_trailer' => 'include_trailer',
+        'include_vehicle' => 'include_vehicle',
         'include_communication' => 'include_communication',
         'include_communication_object' => 'include_communication_object',
-        'include_compartment_ids' => 'include_compartment_ids',
-        'include_compartments' => 'include_compartments',
         'include_links' => 'include_links',
-        'include_activity_links' => 'include_activity_links',
         'include_files' => 'include_files',
-        'include_activity_files_meta_data' => 'include_activity_files_meta_data',
-        'include_assignment_nr' => 'include_assignment_nr',
-        'include_assignment' => 'include_assignment',
-        'include_activity_tags' => 'include_activity_tags',
+        'include_tags' => 'include_tags',
         'include_tag_type_name' => 'include_tag_type_name',
         'include_record_info' => 'include_record_info',
         'include_record_object' => 'include_record_object',
         'include_tag_names' => 'include_tag_names',
-        'include_notes' => 'include_notes',
-        'include_activity_notes' => 'include_activity_notes',
         'include_activity_note_tags' => 'include_activity_note_tags',
         'include_depot_activity' => 'include_depot_activity',
         'include_depot_address' => 'include_depot_address',
@@ -258,21 +258,27 @@ class ActivityOptionsModel implements ArrayAccess
         'include_filled_capacities' => 'include_filled_capacities',
         'include_applied_capacities' => 'include_applied_capacities',
         'include_zones' => 'include_zones',
-        'include_brand' => 'include_brand',
         'include_brand_name' => 'include_brand_name',
         'include_brand_colours' => 'include_brand_colours',
-        'include_brand_files' => 'include_brand_files',
         'apply_address_bundling' => 'apply_address_bundling',
         'include_bundled_activity_ids' => 'include_bundled_activity_ids',
-        'include_activity_files' => 'include_activity_files',
-        'include_activity_record_info' => 'include_activity_record_info',
-        'include_activity_record_object' => 'include_activity_record_object',
         'include_party_name' => 'include_party_name',
         'include_shipment_activity_nr' => 'include_shipment_activity_nr',
         'include_payments' => 'include_payments',
         'include_transactions' => 'include_transactions',
         'include_relations' => 'include_relations',
-        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity',
+        'include_activity_meta_data' => 'include_activity_meta_data',
+        'include_address_object' => 'include_address_object',
+        'include_car' => 'include_car',
+        'include_activity_links' => 'include_activity_links',
+        'include_activity_files' => 'include_activity_files',
+        'include_brand_files' => 'include_brand_files',
+        'include_activity_files_meta_data' => 'include_activity_files_meta_data',
+        'include_activity_record_info' => 'include_activity_record_info',
+        'include_activity_record_object' => 'include_activity_record_object',
+        'include_activity_notes' => 'include_activity_notes',
+        'include_activity_tags' => 'include_activity_tags'
     ];
 
 
@@ -282,46 +288,42 @@ class ActivityOptionsModel implements ArrayAccess
      */
     protected static $setters = [
         'include_activity_status' => 'setIncludeActivityStatus',
-        'include_status_name' => 'setIncludeStatusName',
         'include_activity_type_name' => 'setIncludeActivityTypeName',
-        'include_activity_meta_data' => 'setIncludeActivityMetaData',
-        'include_meta_data' => 'setIncludeMetaData',
-        'include_address_applied' => 'setIncludeAddressApplied',
         'include_address' => 'setIncludeAddress',
-        'include_address_object' => 'setIncludeAddressObject',
-        'include_allowed_driver_ids' => 'setIncludeAllowedDriverIds',
+        'include_address_applied' => 'setIncludeAddressApplied',
         'include_allowed_drivers' => 'setIncludeAllowedDrivers',
+        'include_allowed_driver_ids' => 'setIncludeAllowedDriverIds',
         'include_allowed_drivers_links' => 'setIncludeAllowedDriversLinks',
-        'include_time_slots' => 'setIncludeTimeSlots',
-        'include_time_slot_tags' => 'setIncludeTimeSlotTags',
-        'include_route_info' => 'setIncludeRouteInfo',
-        'include_route' => 'setIncludeRoute',
+        'include_assignment' => 'setIncludeAssignment',
+        'include_assignment_nr' => 'setIncludeAssignmentNr',
+        'include_brand' => 'setIncludeBrand',
+        'include_compartment_ids' => 'setIncludeCompartmentIds',
+        'include_compartments' => 'setIncludeCompartments',
+        'include_driver' => 'setIncludeDriver',
+        'include_driver_info' => 'setIncludeDriverInfo',
+        'include_driver_links' => 'setIncludeDriverLinks',
+        'include_emails' => 'setIncludeEmails',
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_notes' => 'setIncludeNotes',
         'include_package_lines' => 'setIncludePackageLines',
         'include_package_line_links' => 'setIncludePackageLineLinks',
         'include_package_lines_info' => 'setIncludePackageLinesInfo',
-        'include_driver_info' => 'setIncludeDriverInfo',
-        'include_driver' => 'setIncludeDriver',
-        'include_driver_links' => 'setIncludeDriverLinks',
-        'include_car' => 'setIncludeCar',
-        'include_vehicle' => 'setIncludeVehicle',
+        'include_phone_nrs' => 'setIncludePhoneNrs',
+        'include_route' => 'setIncludeRoute',
+        'include_route_info' => 'setIncludeRouteInfo',
+        'include_status_name' => 'setIncludeStatusName',
+        'include_time_slots' => 'setIncludeTimeSlots',
         'include_trailer' => 'setIncludeTrailer',
+        'include_vehicle' => 'setIncludeVehicle',
         'include_communication' => 'setIncludeCommunication',
         'include_communication_object' => 'setIncludeCommunicationObject',
-        'include_compartment_ids' => 'setIncludeCompartmentIds',
-        'include_compartments' => 'setIncludeCompartments',
         'include_links' => 'setIncludeLinks',
-        'include_activity_links' => 'setIncludeActivityLinks',
         'include_files' => 'setIncludeFiles',
-        'include_activity_files_meta_data' => 'setIncludeActivityFilesMetaData',
-        'include_assignment_nr' => 'setIncludeAssignmentNr',
-        'include_assignment' => 'setIncludeAssignment',
-        'include_activity_tags' => 'setIncludeActivityTags',
+        'include_tags' => 'setIncludeTags',
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_record_info' => 'setIncludeRecordInfo',
         'include_record_object' => 'setIncludeRecordObject',
         'include_tag_names' => 'setIncludeTagNames',
-        'include_notes' => 'setIncludeNotes',
-        'include_activity_notes' => 'setIncludeActivityNotes',
         'include_activity_note_tags' => 'setIncludeActivityNoteTags',
         'include_depot_activity' => 'setIncludeDepotActivity',
         'include_depot_address' => 'setIncludeDepotAddress',
@@ -331,21 +333,27 @@ class ActivityOptionsModel implements ArrayAccess
         'include_filled_capacities' => 'setIncludeFilledCapacities',
         'include_applied_capacities' => 'setIncludeAppliedCapacities',
         'include_zones' => 'setIncludeZones',
-        'include_brand' => 'setIncludeBrand',
         'include_brand_name' => 'setIncludeBrandName',
         'include_brand_colours' => 'setIncludeBrandColours',
-        'include_brand_files' => 'setIncludeBrandFiles',
         'apply_address_bundling' => 'setApplyAddressBundling',
         'include_bundled_activity_ids' => 'setIncludeBundledActivityIds',
-        'include_activity_files' => 'setIncludeActivityFiles',
-        'include_activity_record_info' => 'setIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'setIncludeActivityRecordObject',
         'include_party_name' => 'setIncludePartyName',
         'include_shipment_activity_nr' => 'setIncludeShipmentActivityNr',
         'include_payments' => 'setIncludePayments',
         'include_transactions' => 'setIncludeTransactions',
         'include_relations' => 'setIncludeRelations',
-        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity',
+        'include_activity_meta_data' => 'setIncludeActivityMetaData',
+        'include_address_object' => 'setIncludeAddressObject',
+        'include_car' => 'setIncludeCar',
+        'include_activity_links' => 'setIncludeActivityLinks',
+        'include_activity_files' => 'setIncludeActivityFiles',
+        'include_brand_files' => 'setIncludeBrandFiles',
+        'include_activity_files_meta_data' => 'setIncludeActivityFilesMetaData',
+        'include_activity_record_info' => 'setIncludeActivityRecordInfo',
+        'include_activity_record_object' => 'setIncludeActivityRecordObject',
+        'include_activity_notes' => 'setIncludeActivityNotes',
+        'include_activity_tags' => 'setIncludeActivityTags'
     ];
 
 
@@ -355,46 +363,42 @@ class ActivityOptionsModel implements ArrayAccess
      */
     protected static $getters = [
         'include_activity_status' => 'getIncludeActivityStatus',
-        'include_status_name' => 'getIncludeStatusName',
         'include_activity_type_name' => 'getIncludeActivityTypeName',
-        'include_activity_meta_data' => 'getIncludeActivityMetaData',
-        'include_meta_data' => 'getIncludeMetaData',
-        'include_address_applied' => 'getIncludeAddressApplied',
         'include_address' => 'getIncludeAddress',
-        'include_address_object' => 'getIncludeAddressObject',
-        'include_allowed_driver_ids' => 'getIncludeAllowedDriverIds',
+        'include_address_applied' => 'getIncludeAddressApplied',
         'include_allowed_drivers' => 'getIncludeAllowedDrivers',
+        'include_allowed_driver_ids' => 'getIncludeAllowedDriverIds',
         'include_allowed_drivers_links' => 'getIncludeAllowedDriversLinks',
-        'include_time_slots' => 'getIncludeTimeSlots',
-        'include_time_slot_tags' => 'getIncludeTimeSlotTags',
-        'include_route_info' => 'getIncludeRouteInfo',
-        'include_route' => 'getIncludeRoute',
+        'include_assignment' => 'getIncludeAssignment',
+        'include_assignment_nr' => 'getIncludeAssignmentNr',
+        'include_brand' => 'getIncludeBrand',
+        'include_compartment_ids' => 'getIncludeCompartmentIds',
+        'include_compartments' => 'getIncludeCompartments',
+        'include_driver' => 'getIncludeDriver',
+        'include_driver_info' => 'getIncludeDriverInfo',
+        'include_driver_links' => 'getIncludeDriverLinks',
+        'include_emails' => 'getIncludeEmails',
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_notes' => 'getIncludeNotes',
         'include_package_lines' => 'getIncludePackageLines',
         'include_package_line_links' => 'getIncludePackageLineLinks',
         'include_package_lines_info' => 'getIncludePackageLinesInfo',
-        'include_driver_info' => 'getIncludeDriverInfo',
-        'include_driver' => 'getIncludeDriver',
-        'include_driver_links' => 'getIncludeDriverLinks',
-        'include_car' => 'getIncludeCar',
-        'include_vehicle' => 'getIncludeVehicle',
+        'include_phone_nrs' => 'getIncludePhoneNrs',
+        'include_route' => 'getIncludeRoute',
+        'include_route_info' => 'getIncludeRouteInfo',
+        'include_status_name' => 'getIncludeStatusName',
+        'include_time_slots' => 'getIncludeTimeSlots',
         'include_trailer' => 'getIncludeTrailer',
+        'include_vehicle' => 'getIncludeVehicle',
         'include_communication' => 'getIncludeCommunication',
         'include_communication_object' => 'getIncludeCommunicationObject',
-        'include_compartment_ids' => 'getIncludeCompartmentIds',
-        'include_compartments' => 'getIncludeCompartments',
         'include_links' => 'getIncludeLinks',
-        'include_activity_links' => 'getIncludeActivityLinks',
         'include_files' => 'getIncludeFiles',
-        'include_activity_files_meta_data' => 'getIncludeActivityFilesMetaData',
-        'include_assignment_nr' => 'getIncludeAssignmentNr',
-        'include_assignment' => 'getIncludeAssignment',
-        'include_activity_tags' => 'getIncludeActivityTags',
+        'include_tags' => 'getIncludeTags',
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_record_info' => 'getIncludeRecordInfo',
         'include_record_object' => 'getIncludeRecordObject',
         'include_tag_names' => 'getIncludeTagNames',
-        'include_notes' => 'getIncludeNotes',
-        'include_activity_notes' => 'getIncludeActivityNotes',
         'include_activity_note_tags' => 'getIncludeActivityNoteTags',
         'include_depot_activity' => 'getIncludeDepotActivity',
         'include_depot_address' => 'getIncludeDepotAddress',
@@ -404,21 +408,27 @@ class ActivityOptionsModel implements ArrayAccess
         'include_filled_capacities' => 'getIncludeFilledCapacities',
         'include_applied_capacities' => 'getIncludeAppliedCapacities',
         'include_zones' => 'getIncludeZones',
-        'include_brand' => 'getIncludeBrand',
         'include_brand_name' => 'getIncludeBrandName',
         'include_brand_colours' => 'getIncludeBrandColours',
-        'include_brand_files' => 'getIncludeBrandFiles',
         'apply_address_bundling' => 'getApplyAddressBundling',
         'include_bundled_activity_ids' => 'getIncludeBundledActivityIds',
-        'include_activity_files' => 'getIncludeActivityFiles',
-        'include_activity_record_info' => 'getIncludeActivityRecordInfo',
-        'include_activity_record_object' => 'getIncludeActivityRecordObject',
         'include_party_name' => 'getIncludePartyName',
         'include_shipment_activity_nr' => 'getIncludeShipmentActivityNr',
         'include_payments' => 'getIncludePayments',
         'include_transactions' => 'getIncludeTransactions',
         'include_relations' => 'getIncludeRelations',
-        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity'
+        'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity',
+        'include_activity_meta_data' => 'getIncludeActivityMetaData',
+        'include_address_object' => 'getIncludeAddressObject',
+        'include_car' => 'getIncludeCar',
+        'include_activity_links' => 'getIncludeActivityLinks',
+        'include_activity_files' => 'getIncludeActivityFiles',
+        'include_brand_files' => 'getIncludeBrandFiles',
+        'include_activity_files_meta_data' => 'getIncludeActivityFilesMetaData',
+        'include_activity_record_info' => 'getIncludeActivityRecordInfo',
+        'include_activity_record_object' => 'getIncludeActivityRecordObject',
+        'include_activity_notes' => 'getIncludeActivityNotes',
+        'include_activity_tags' => 'getIncludeActivityTags'
     ];
 
     public static function attributeMap()
@@ -453,46 +463,42 @@ class ActivityOptionsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['include_activity_status'] = isset($data['include_activity_status']) ? $data['include_activity_status'] : null;
-        $this->container['include_status_name'] = isset($data['include_status_name']) ? $data['include_status_name'] : null;
         $this->container['include_activity_type_name'] = isset($data['include_activity_type_name']) ? $data['include_activity_type_name'] : null;
-        $this->container['include_activity_meta_data'] = isset($data['include_activity_meta_data']) ? $data['include_activity_meta_data'] : null;
-        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
-        $this->container['include_address_applied'] = isset($data['include_address_applied']) ? $data['include_address_applied'] : null;
         $this->container['include_address'] = isset($data['include_address']) ? $data['include_address'] : null;
-        $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
-        $this->container['include_allowed_driver_ids'] = isset($data['include_allowed_driver_ids']) ? $data['include_allowed_driver_ids'] : null;
+        $this->container['include_address_applied'] = isset($data['include_address_applied']) ? $data['include_address_applied'] : null;
         $this->container['include_allowed_drivers'] = isset($data['include_allowed_drivers']) ? $data['include_allowed_drivers'] : null;
+        $this->container['include_allowed_driver_ids'] = isset($data['include_allowed_driver_ids']) ? $data['include_allowed_driver_ids'] : null;
         $this->container['include_allowed_drivers_links'] = isset($data['include_allowed_drivers_links']) ? $data['include_allowed_drivers_links'] : null;
-        $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
-        $this->container['include_time_slot_tags'] = isset($data['include_time_slot_tags']) ? $data['include_time_slot_tags'] : null;
-        $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
-        $this->container['include_route'] = isset($data['include_route']) ? $data['include_route'] : null;
+        $this->container['include_assignment'] = isset($data['include_assignment']) ? $data['include_assignment'] : null;
+        $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
+        $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
+        $this->container['include_compartment_ids'] = isset($data['include_compartment_ids']) ? $data['include_compartment_ids'] : null;
+        $this->container['include_compartments'] = isset($data['include_compartments']) ? $data['include_compartments'] : null;
+        $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
+        $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
+        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
+        $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_package_lines'] = isset($data['include_package_lines']) ? $data['include_package_lines'] : null;
         $this->container['include_package_line_links'] = isset($data['include_package_line_links']) ? $data['include_package_line_links'] : null;
         $this->container['include_package_lines_info'] = isset($data['include_package_lines_info']) ? $data['include_package_lines_info'] : null;
-        $this->container['include_driver_info'] = isset($data['include_driver_info']) ? $data['include_driver_info'] : null;
-        $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
-        $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
-        $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
-        $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
+        $this->container['include_phone_nrs'] = isset($data['include_phone_nrs']) ? $data['include_phone_nrs'] : null;
+        $this->container['include_route'] = isset($data['include_route']) ? $data['include_route'] : null;
+        $this->container['include_route_info'] = isset($data['include_route_info']) ? $data['include_route_info'] : null;
+        $this->container['include_status_name'] = isset($data['include_status_name']) ? $data['include_status_name'] : null;
+        $this->container['include_time_slots'] = isset($data['include_time_slots']) ? $data['include_time_slots'] : null;
         $this->container['include_trailer'] = isset($data['include_trailer']) ? $data['include_trailer'] : null;
+        $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
         $this->container['include_communication'] = isset($data['include_communication']) ? $data['include_communication'] : null;
         $this->container['include_communication_object'] = isset($data['include_communication_object']) ? $data['include_communication_object'] : null;
-        $this->container['include_compartment_ids'] = isset($data['include_compartment_ids']) ? $data['include_compartment_ids'] : null;
-        $this->container['include_compartments'] = isset($data['include_compartments']) ? $data['include_compartments'] : null;
         $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
-        $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
         $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
-        $this->container['include_activity_files_meta_data'] = isset($data['include_activity_files_meta_data']) ? $data['include_activity_files_meta_data'] : null;
-        $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
-        $this->container['include_assignment'] = isset($data['include_assignment']) ? $data['include_assignment'] : null;
-        $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
         $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
-        $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
-        $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
         $this->container['include_activity_note_tags'] = isset($data['include_activity_note_tags']) ? $data['include_activity_note_tags'] : null;
         $this->container['include_depot_activity'] = isset($data['include_depot_activity']) ? $data['include_depot_activity'] : null;
         $this->container['include_depot_address'] = isset($data['include_depot_address']) ? $data['include_depot_address'] : null;
@@ -502,21 +508,27 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_filled_capacities'] = isset($data['include_filled_capacities']) ? $data['include_filled_capacities'] : null;
         $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
         $this->container['include_zones'] = isset($data['include_zones']) ? $data['include_zones'] : null;
-        $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
         $this->container['include_brand_name'] = isset($data['include_brand_name']) ? $data['include_brand_name'] : null;
         $this->container['include_brand_colours'] = isset($data['include_brand_colours']) ? $data['include_brand_colours'] : null;
-        $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
         $this->container['apply_address_bundling'] = isset($data['apply_address_bundling']) ? $data['apply_address_bundling'] : null;
         $this->container['include_bundled_activity_ids'] = isset($data['include_bundled_activity_ids']) ? $data['include_bundled_activity_ids'] : null;
-        $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
-        $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
-        $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
         $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
         $this->container['include_shipment_activity_nr'] = isset($data['include_shipment_activity_nr']) ? $data['include_shipment_activity_nr'] : null;
         $this->container['include_payments'] = isset($data['include_payments']) ? $data['include_payments'] : null;
         $this->container['include_transactions'] = isset($data['include_transactions']) ? $data['include_transactions'] : null;
         $this->container['include_relations'] = isset($data['include_relations']) ? $data['include_relations'] : null;
         $this->container['include_packagelines_for_whole_route_on_start_activity'] = isset($data['include_packagelines_for_whole_route_on_start_activity']) ? $data['include_packagelines_for_whole_route_on_start_activity'] : null;
+        $this->container['include_activity_meta_data'] = isset($data['include_activity_meta_data']) ? $data['include_activity_meta_data'] : null;
+        $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
+        $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
+        $this->container['include_activity_links'] = isset($data['include_activity_links']) ? $data['include_activity_links'] : null;
+        $this->container['include_activity_files'] = isset($data['include_activity_files']) ? $data['include_activity_files'] : null;
+        $this->container['include_brand_files'] = isset($data['include_brand_files']) ? $data['include_brand_files'] : null;
+        $this->container['include_activity_files_meta_data'] = isset($data['include_activity_files_meta_data']) ? $data['include_activity_files_meta_data'] : null;
+        $this->container['include_activity_record_info'] = isset($data['include_activity_record_info']) ? $data['include_activity_record_info'] : null;
+        $this->container['include_activity_record_object'] = isset($data['include_activity_record_object']) ? $data['include_activity_record_object'] : null;
+        $this->container['include_activity_notes'] = isset($data['include_activity_notes']) ? $data['include_activity_notes'] : null;
+        $this->container['include_activity_tags'] = isset($data['include_activity_tags']) ? $data['include_activity_tags'] : null;
     }
 
     /**
@@ -566,27 +578,6 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_status_name
-     * @return bool
-     */
-    public function getIncludeStatusName()
-    {
-        return $this->container['include_status_name'];
-    }
-
-    /**
-     * Sets include_status_name
-     * @param bool $include_status_name 
-     * @return $this
-     */
-    public function setIncludeStatusName($include_status_name)
-    {
-        $this->container['include_status_name'] = $include_status_name;
-
-        return $this;
-    }
-
-    /**
      * Gets include_activity_type_name
      * @return bool
      */
@@ -608,43 +599,22 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_activity_meta_data
+     * Gets include_address
      * @return bool
      */
-    public function getIncludeActivityMetaData()
+    public function getIncludeAddress()
     {
-        return $this->container['include_activity_meta_data'];
+        return $this->container['include_address'];
     }
 
     /**
-     * Sets include_activity_meta_data
-     * @param bool $include_activity_meta_data 
+     * Sets include_address
+     * @param bool $include_address Include the address in the addressbook
      * @return $this
      */
-    public function setIncludeActivityMetaData($include_activity_meta_data)
+    public function setIncludeAddress($include_address)
     {
-        $this->container['include_activity_meta_data'] = $include_activity_meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_meta_data
-     * @return bool
-     */
-    public function getIncludeMetaData()
-    {
-        return $this->container['include_meta_data'];
-    }
-
-    /**
-     * Sets include_meta_data
-     * @param bool $include_meta_data 
-     * @return $this
-     */
-    public function setIncludeMetaData($include_meta_data)
-    {
-        $this->container['include_meta_data'] = $include_meta_data;
+        $this->container['include_address'] = $include_address;
 
         return $this;
     }
@@ -660,75 +630,12 @@ class ActivityOptionsModel implements ArrayAccess
 
     /**
      * Sets include_address_applied
-     * @param bool $include_address_applied 
+     * @param bool $include_address_applied Include the addres applied to the activity (not the original addres from the address book)
      * @return $this
      */
     public function setIncludeAddressApplied($include_address_applied)
     {
         $this->container['include_address_applied'] = $include_address_applied;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_address
-     * @return bool
-     */
-    public function getIncludeAddress()
-    {
-        return $this->container['include_address'];
-    }
-
-    /**
-     * Sets include_address
-     * @param bool $include_address 
-     * @return $this
-     */
-    public function setIncludeAddress($include_address)
-    {
-        $this->container['include_address'] = $include_address;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_address_object
-     * @return bool
-     */
-    public function getIncludeAddressObject()
-    {
-        return $this->container['include_address_object'];
-    }
-
-    /**
-     * Sets include_address_object
-     * @param bool $include_address_object 
-     * @return $this
-     */
-    public function setIncludeAddressObject($include_address_object)
-    {
-        $this->container['include_address_object'] = $include_address_object;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_allowed_driver_ids
-     * @return bool
-     */
-    public function getIncludeAllowedDriverIds()
-    {
-        return $this->container['include_allowed_driver_ids'];
-    }
-
-    /**
-     * Sets include_allowed_driver_ids
-     * @param bool $include_allowed_driver_ids 
-     * @return $this
-     */
-    public function setIncludeAllowedDriverIds($include_allowed_driver_ids)
-    {
-        $this->container['include_allowed_driver_ids'] = $include_allowed_driver_ids;
 
         return $this;
     }
@@ -755,6 +662,27 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
+     * Gets include_allowed_driver_ids
+     * @return bool
+     */
+    public function getIncludeAllowedDriverIds()
+    {
+        return $this->container['include_allowed_driver_ids'];
+    }
+
+    /**
+     * Sets include_allowed_driver_ids
+     * @param bool $include_allowed_driver_ids 
+     * @return $this
+     */
+    public function setIncludeAllowedDriverIds($include_allowed_driver_ids)
+    {
+        $this->container['include_allowed_driver_ids'] = $include_allowed_driver_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets include_allowed_drivers_links
      * @return bool
      */
@@ -776,85 +704,232 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_time_slots
+     * Gets include_assignment
      * @return bool
      */
-    public function getIncludeTimeSlots()
+    public function getIncludeAssignment()
     {
-        return $this->container['include_time_slots'];
+        return $this->container['include_assignment'];
     }
 
     /**
-     * Sets include_time_slots
-     * @param bool $include_time_slots 
+     * Sets include_assignment
+     * @param bool $include_assignment 
      * @return $this
      */
-    public function setIncludeTimeSlots($include_time_slots)
+    public function setIncludeAssignment($include_assignment)
     {
-        $this->container['include_time_slots'] = $include_time_slots;
+        $this->container['include_assignment'] = $include_assignment;
 
         return $this;
     }
 
     /**
-     * Gets include_time_slot_tags
+     * Gets include_assignment_nr
      * @return bool
      */
-    public function getIncludeTimeSlotTags()
+    public function getIncludeAssignmentNr()
     {
-        return $this->container['include_time_slot_tags'];
+        return $this->container['include_assignment_nr'];
     }
 
     /**
-     * Sets include_time_slot_tags
-     * @param bool $include_time_slot_tags 
+     * Sets include_assignment_nr
+     * @param bool $include_assignment_nr 
      * @return $this
      */
-    public function setIncludeTimeSlotTags($include_time_slot_tags)
+    public function setIncludeAssignmentNr($include_assignment_nr)
     {
-        $this->container['include_time_slot_tags'] = $include_time_slot_tags;
+        $this->container['include_assignment_nr'] = $include_assignment_nr;
 
         return $this;
     }
 
     /**
-     * Gets include_route_info
+     * Gets include_brand
      * @return bool
      */
-    public function getIncludeRouteInfo()
+    public function getIncludeBrand()
     {
-        return $this->container['include_route_info'];
+        return $this->container['include_brand'];
     }
 
     /**
-     * Sets include_route_info
-     * @param bool $include_route_info 
+     * Sets include_brand
+     * @param bool $include_brand 
      * @return $this
      */
-    public function setIncludeRouteInfo($include_route_info)
+    public function setIncludeBrand($include_brand)
     {
-        $this->container['include_route_info'] = $include_route_info;
+        $this->container['include_brand'] = $include_brand;
 
         return $this;
     }
 
     /**
-     * Gets include_route
+     * Gets include_compartment_ids
      * @return bool
      */
-    public function getIncludeRoute()
+    public function getIncludeCompartmentIds()
     {
-        return $this->container['include_route'];
+        return $this->container['include_compartment_ids'];
     }
 
     /**
-     * Sets include_route
-     * @param bool $include_route 
+     * Sets include_compartment_ids
+     * @param bool $include_compartment_ids 
      * @return $this
      */
-    public function setIncludeRoute($include_route)
+    public function setIncludeCompartmentIds($include_compartment_ids)
     {
-        $this->container['include_route'] = $include_route;
+        $this->container['include_compartment_ids'] = $include_compartment_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_compartments
+     * @return bool
+     */
+    public function getIncludeCompartments()
+    {
+        return $this->container['include_compartments'];
+    }
+
+    /**
+     * Sets include_compartments
+     * @param bool $include_compartments 
+     * @return $this
+     */
+    public function setIncludeCompartments($include_compartments)
+    {
+        $this->container['include_compartments'] = $include_compartments;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver
+     * @return bool
+     */
+    public function getIncludeDriver()
+    {
+        return $this->container['include_driver'];
+    }
+
+    /**
+     * Sets include_driver
+     * @param bool $include_driver 
+     * @return $this
+     */
+    public function setIncludeDriver($include_driver)
+    {
+        $this->container['include_driver'] = $include_driver;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_info
+     * @return bool
+     */
+    public function getIncludeDriverInfo()
+    {
+        return $this->container['include_driver_info'];
+    }
+
+    /**
+     * Sets include_driver_info
+     * @param bool $include_driver_info 
+     * @return $this
+     */
+    public function setIncludeDriverInfo($include_driver_info)
+    {
+        $this->container['include_driver_info'] = $include_driver_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_driver_links
+     * @return bool
+     */
+    public function getIncludeDriverLinks()
+    {
+        return $this->container['include_driver_links'];
+    }
+
+    /**
+     * Sets include_driver_links
+     * @param bool $include_driver_links 
+     * @return $this
+     */
+    public function setIncludeDriverLinks($include_driver_links)
+    {
+        $this->container['include_driver_links'] = $include_driver_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_emails
+     * @return bool
+     */
+    public function getIncludeEmails()
+    {
+        return $this->container['include_emails'];
+    }
+
+    /**
+     * Sets include_emails
+     * @param bool $include_emails 
+     * @return $this
+     */
+    public function setIncludeEmails($include_emails)
+    {
+        $this->container['include_emails'] = $include_emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_notes
+     * @return bool
+     */
+    public function getIncludeNotes()
+    {
+        return $this->container['include_notes'];
+    }
+
+    /**
+     * Sets include_notes
+     * @param bool $include_notes 
+     * @return $this
+     */
+    public function setIncludeNotes($include_notes)
+    {
+        $this->container['include_notes'] = $include_notes;
 
         return $this;
     }
@@ -923,106 +998,106 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_driver_info
+     * Gets include_phone_nrs
      * @return bool
      */
-    public function getIncludeDriverInfo()
+    public function getIncludePhoneNrs()
     {
-        return $this->container['include_driver_info'];
+        return $this->container['include_phone_nrs'];
     }
 
     /**
-     * Sets include_driver_info
-     * @param bool $include_driver_info 
+     * Sets include_phone_nrs
+     * @param bool $include_phone_nrs 
      * @return $this
      */
-    public function setIncludeDriverInfo($include_driver_info)
+    public function setIncludePhoneNrs($include_phone_nrs)
     {
-        $this->container['include_driver_info'] = $include_driver_info;
+        $this->container['include_phone_nrs'] = $include_phone_nrs;
 
         return $this;
     }
 
     /**
-     * Gets include_driver
+     * Gets include_route
      * @return bool
      */
-    public function getIncludeDriver()
+    public function getIncludeRoute()
     {
-        return $this->container['include_driver'];
+        return $this->container['include_route'];
     }
 
     /**
-     * Sets include_driver
-     * @param bool $include_driver 
+     * Sets include_route
+     * @param bool $include_route 
      * @return $this
      */
-    public function setIncludeDriver($include_driver)
+    public function setIncludeRoute($include_route)
     {
-        $this->container['include_driver'] = $include_driver;
+        $this->container['include_route'] = $include_route;
 
         return $this;
     }
 
     /**
-     * Gets include_driver_links
+     * Gets include_route_info
      * @return bool
      */
-    public function getIncludeDriverLinks()
+    public function getIncludeRouteInfo()
     {
-        return $this->container['include_driver_links'];
+        return $this->container['include_route_info'];
     }
 
     /**
-     * Sets include_driver_links
-     * @param bool $include_driver_links 
+     * Sets include_route_info
+     * @param bool $include_route_info 
      * @return $this
      */
-    public function setIncludeDriverLinks($include_driver_links)
+    public function setIncludeRouteInfo($include_route_info)
     {
-        $this->container['include_driver_links'] = $include_driver_links;
+        $this->container['include_route_info'] = $include_route_info;
 
         return $this;
     }
 
     /**
-     * Gets include_car
+     * Gets include_status_name
      * @return bool
      */
-    public function getIncludeCar()
+    public function getIncludeStatusName()
     {
-        return $this->container['include_car'];
+        return $this->container['include_status_name'];
     }
 
     /**
-     * Sets include_car
-     * @param bool $include_car 
+     * Sets include_status_name
+     * @param bool $include_status_name 
      * @return $this
      */
-    public function setIncludeCar($include_car)
+    public function setIncludeStatusName($include_status_name)
     {
-        $this->container['include_car'] = $include_car;
+        $this->container['include_status_name'] = $include_status_name;
 
         return $this;
     }
 
     /**
-     * Gets include_vehicle
+     * Gets include_time_slots
      * @return bool
      */
-    public function getIncludeVehicle()
+    public function getIncludeTimeSlots()
     {
-        return $this->container['include_vehicle'];
+        return $this->container['include_time_slots'];
     }
 
     /**
-     * Sets include_vehicle
-     * @param bool $include_vehicle 
+     * Sets include_time_slots
+     * @param bool $include_time_slots 
      * @return $this
      */
-    public function setIncludeVehicle($include_vehicle)
+    public function setIncludeTimeSlots($include_time_slots)
     {
-        $this->container['include_vehicle'] = $include_vehicle;
+        $this->container['include_time_slots'] = $include_time_slots;
 
         return $this;
     }
@@ -1044,6 +1119,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeTrailer($include_trailer)
     {
         $this->container['include_trailer'] = $include_trailer;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_vehicle
+     * @return bool
+     */
+    public function getIncludeVehicle()
+    {
+        return $this->container['include_vehicle'];
+    }
+
+    /**
+     * Sets include_vehicle
+     * @param bool $include_vehicle 
+     * @return $this
+     */
+    public function setIncludeVehicle($include_vehicle)
+    {
+        $this->container['include_vehicle'] = $include_vehicle;
 
         return $this;
     }
@@ -1091,48 +1187,6 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_compartment_ids
-     * @return bool
-     */
-    public function getIncludeCompartmentIds()
-    {
-        return $this->container['include_compartment_ids'];
-    }
-
-    /**
-     * Sets include_compartment_ids
-     * @param bool $include_compartment_ids 
-     * @return $this
-     */
-    public function setIncludeCompartmentIds($include_compartment_ids)
-    {
-        $this->container['include_compartment_ids'] = $include_compartment_ids;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_compartments
-     * @return bool
-     */
-    public function getIncludeCompartments()
-    {
-        return $this->container['include_compartments'];
-    }
-
-    /**
-     * Sets include_compartments
-     * @param bool $include_compartments 
-     * @return $this
-     */
-    public function setIncludeCompartments($include_compartments)
-    {
-        $this->container['include_compartments'] = $include_compartments;
-
-        return $this;
-    }
-
-    /**
      * Gets include_links
      * @return bool
      */
@@ -1149,27 +1203,6 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeLinks($include_links)
     {
         $this->container['include_links'] = $include_links;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_links
-     * @return bool
-     */
-    public function getIncludeActivityLinks()
-    {
-        return $this->container['include_activity_links'];
-    }
-
-    /**
-     * Sets include_activity_links
-     * @param bool $include_activity_links 
-     * @return $this
-     */
-    public function setIncludeActivityLinks($include_activity_links)
-    {
-        $this->container['include_activity_links'] = $include_activity_links;
 
         return $this;
     }
@@ -1196,85 +1229,22 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_activity_files_meta_data
+     * Gets include_tags
      * @return bool
      */
-    public function getIncludeActivityFilesMetaData()
+    public function getIncludeTags()
     {
-        return $this->container['include_activity_files_meta_data'];
+        return $this->container['include_tags'];
     }
 
     /**
-     * Sets include_activity_files_meta_data
-     * @param bool $include_activity_files_meta_data 
+     * Sets include_tags
+     * @param bool $include_tags 
      * @return $this
      */
-    public function setIncludeActivityFilesMetaData($include_activity_files_meta_data)
+    public function setIncludeTags($include_tags)
     {
-        $this->container['include_activity_files_meta_data'] = $include_activity_files_meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_assignment_nr
-     * @return bool
-     */
-    public function getIncludeAssignmentNr()
-    {
-        return $this->container['include_assignment_nr'];
-    }
-
-    /**
-     * Sets include_assignment_nr
-     * @param bool $include_assignment_nr 
-     * @return $this
-     */
-    public function setIncludeAssignmentNr($include_assignment_nr)
-    {
-        $this->container['include_assignment_nr'] = $include_assignment_nr;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_assignment
-     * @return bool
-     */
-    public function getIncludeAssignment()
-    {
-        return $this->container['include_assignment'];
-    }
-
-    /**
-     * Sets include_assignment
-     * @param bool $include_assignment 
-     * @return $this
-     */
-    public function setIncludeAssignment($include_assignment)
-    {
-        $this->container['include_assignment'] = $include_assignment;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_tags
-     * @return bool
-     */
-    public function getIncludeActivityTags()
-    {
-        return $this->container['include_activity_tags'];
-    }
-
-    /**
-     * Sets include_activity_tags
-     * @param bool $include_activity_tags 
-     * @return $this
-     */
-    public function setIncludeActivityTags($include_activity_tags)
-    {
-        $this->container['include_activity_tags'] = $include_activity_tags;
+        $this->container['include_tags'] = $include_tags;
 
         return $this;
     }
@@ -1359,48 +1329,6 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeTagNames($include_tag_names)
     {
         $this->container['include_tag_names'] = $include_tag_names;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_notes
-     * @return bool
-     */
-    public function getIncludeNotes()
-    {
-        return $this->container['include_notes'];
-    }
-
-    /**
-     * Sets include_notes
-     * @param bool $include_notes 
-     * @return $this
-     */
-    public function setIncludeNotes($include_notes)
-    {
-        $this->container['include_notes'] = $include_notes;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_notes
-     * @return bool
-     */
-    public function getIncludeActivityNotes()
-    {
-        return $this->container['include_activity_notes'];
-    }
-
-    /**
-     * Sets include_activity_notes
-     * @param bool $include_activity_notes 
-     * @return $this
-     */
-    public function setIncludeActivityNotes($include_activity_notes)
-    {
-        $this->container['include_activity_notes'] = $include_activity_notes;
 
         return $this;
     }
@@ -1595,27 +1523,6 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_brand
-     * @return bool
-     */
-    public function getIncludeBrand()
-    {
-        return $this->container['include_brand'];
-    }
-
-    /**
-     * Sets include_brand
-     * @param bool $include_brand 
-     * @return $this
-     */
-    public function setIncludeBrand($include_brand)
-    {
-        $this->container['include_brand'] = $include_brand;
-
-        return $this;
-    }
-
-    /**
      * Gets include_brand_name
      * @return bool
      */
@@ -1658,27 +1565,6 @@ class ActivityOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_brand_files
-     * @return bool
-     */
-    public function getIncludeBrandFiles()
-    {
-        return $this->container['include_brand_files'];
-    }
-
-    /**
-     * Sets include_brand_files
-     * @param bool $include_brand_files 
-     * @return $this
-     */
-    public function setIncludeBrandFiles($include_brand_files)
-    {
-        $this->container['include_brand_files'] = $include_brand_files;
-
-        return $this;
-    }
-
-    /**
      * Gets apply_address_bundling
      * @return bool
      */
@@ -1716,69 +1602,6 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeBundledActivityIds($include_bundled_activity_ids)
     {
         $this->container['include_bundled_activity_ids'] = $include_bundled_activity_ids;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_files
-     * @return bool
-     */
-    public function getIncludeActivityFiles()
-    {
-        return $this->container['include_activity_files'];
-    }
-
-    /**
-     * Sets include_activity_files
-     * @param bool $include_activity_files 
-     * @return $this
-     */
-    public function setIncludeActivityFiles($include_activity_files)
-    {
-        $this->container['include_activity_files'] = $include_activity_files;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_record_info
-     * @return bool
-     */
-    public function getIncludeActivityRecordInfo()
-    {
-        return $this->container['include_activity_record_info'];
-    }
-
-    /**
-     * Sets include_activity_record_info
-     * @param bool $include_activity_record_info 
-     * @return $this
-     */
-    public function setIncludeActivityRecordInfo($include_activity_record_info)
-    {
-        $this->container['include_activity_record_info'] = $include_activity_record_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_activity_record_object
-     * @return bool
-     */
-    public function getIncludeActivityRecordObject()
-    {
-        return $this->container['include_activity_record_object'];
-    }
-
-    /**
-     * Sets include_activity_record_object
-     * @param bool $include_activity_record_object 
-     * @return $this
-     */
-    public function setIncludeActivityRecordObject($include_activity_record_object)
-    {
-        $this->container['include_activity_record_object'] = $include_activity_record_object;
 
         return $this;
     }
@@ -1905,6 +1728,237 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludePackagelinesForWholeRouteOnStartActivity($include_packagelines_for_whole_route_on_start_activity)
     {
         $this->container['include_packagelines_for_whole_route_on_start_activity'] = $include_packagelines_for_whole_route_on_start_activity;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_meta_data
+     * @return bool
+     */
+    public function getIncludeActivityMetaData()
+    {
+        return $this->container['include_activity_meta_data'];
+    }
+
+    /**
+     * Sets include_activity_meta_data
+     * @param bool $include_activity_meta_data Deprecated! Use include_meta_data instead
+     * @return $this
+     */
+    public function setIncludeActivityMetaData($include_activity_meta_data)
+    {
+        $this->container['include_activity_meta_data'] = $include_activity_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_address_object
+     * @return bool
+     */
+    public function getIncludeAddressObject()
+    {
+        return $this->container['include_address_object'];
+    }
+
+    /**
+     * Sets include_address_object
+     * @param bool $include_address_object Deprecated! Use include_adderess or include_address_applied instead
+     * @return $this
+     */
+    public function setIncludeAddressObject($include_address_object)
+    {
+        $this->container['include_address_object'] = $include_address_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_car
+     * @return bool
+     */
+    public function getIncludeCar()
+    {
+        return $this->container['include_car'];
+    }
+
+    /**
+     * Sets include_car
+     * @param bool $include_car Deprecated! Use include_vehicle instead
+     * @return $this
+     */
+    public function setIncludeCar($include_car)
+    {
+        $this->container['include_car'] = $include_car;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_links
+     * @return bool
+     */
+    public function getIncludeActivityLinks()
+    {
+        return $this->container['include_activity_links'];
+    }
+
+    /**
+     * Sets include_activity_links
+     * @param bool $include_activity_links Deprecated! Use include_links instead
+     * @return $this
+     */
+    public function setIncludeActivityLinks($include_activity_links)
+    {
+        $this->container['include_activity_links'] = $include_activity_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_files
+     * @return bool
+     */
+    public function getIncludeActivityFiles()
+    {
+        return $this->container['include_activity_files'];
+    }
+
+    /**
+     * Sets include_activity_files
+     * @param bool $include_activity_files Deprecated! Use include_files instead
+     * @return $this
+     */
+    public function setIncludeActivityFiles($include_activity_files)
+    {
+        $this->container['include_activity_files'] = $include_activity_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_brand_files
+     * @return bool
+     */
+    public function getIncludeBrandFiles()
+    {
+        return $this->container['include_brand_files'];
+    }
+
+    /**
+     * Sets include_brand_files
+     * @param bool $include_brand_files Deprecated! Use include_files instead
+     * @return $this
+     */
+    public function setIncludeBrandFiles($include_brand_files)
+    {
+        $this->container['include_brand_files'] = $include_brand_files;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_files_meta_data
+     * @return bool
+     */
+    public function getIncludeActivityFilesMetaData()
+    {
+        return $this->container['include_activity_files_meta_data'];
+    }
+
+    /**
+     * Sets include_activity_files_meta_data
+     * @param bool $include_activity_files_meta_data Deprecated! Use include_meta_data instead
+     * @return $this
+     */
+    public function setIncludeActivityFilesMetaData($include_activity_files_meta_data)
+    {
+        $this->container['include_activity_files_meta_data'] = $include_activity_files_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_record_info
+     * @return bool
+     */
+    public function getIncludeActivityRecordInfo()
+    {
+        return $this->container['include_activity_record_info'];
+    }
+
+    /**
+     * Sets include_activity_record_info
+     * @param bool $include_activity_record_info Deprecated! Use include_record_info instead
+     * @return $this
+     */
+    public function setIncludeActivityRecordInfo($include_activity_record_info)
+    {
+        $this->container['include_activity_record_info'] = $include_activity_record_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_record_object
+     * @return bool
+     */
+    public function getIncludeActivityRecordObject()
+    {
+        return $this->container['include_activity_record_object'];
+    }
+
+    /**
+     * Sets include_activity_record_object
+     * @param bool $include_activity_record_object Deprecated! Use include_record_object instead
+     * @return $this
+     */
+    public function setIncludeActivityRecordObject($include_activity_record_object)
+    {
+        $this->container['include_activity_record_object'] = $include_activity_record_object;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_notes
+     * @return bool
+     */
+    public function getIncludeActivityNotes()
+    {
+        return $this->container['include_activity_notes'];
+    }
+
+    /**
+     * Sets include_activity_notes
+     * @param bool $include_activity_notes Deprecated! Use include_notes instead
+     * @return $this
+     */
+    public function setIncludeActivityNotes($include_activity_notes)
+    {
+        $this->container['include_activity_notes'] = $include_activity_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_activity_tags
+     * @return bool
+     */
+    public function getIncludeActivityTags()
+    {
+        return $this->container['include_activity_tags'];
+    }
+
+    /**
+     * Sets include_activity_tags
+     * @param bool $include_activity_tags Deprecated! Use include_tags instead
+     * @return $this
+     */
+    public function setIncludeActivityTags($include_activity_tags)
+    {
+        $this->container['include_activity_tags'] = $include_activity_tags;
 
         return $this;
     }

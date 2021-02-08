@@ -85,37 +85,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_status_name"
-     */
-    public function testPropertyIncludeStatusName()
-    {
-    }
-
-    /**
      * Test attribute "include_activity_type_name"
      */
     public function testPropertyIncludeActivityTypeName()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_meta_data"
-     */
-    public function testPropertyIncludeActivityMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_meta_data"
-     */
-    public function testPropertyIncludeMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_address_applied"
-     */
-    public function testPropertyIncludeAddressApplied()
     {
     }
 
@@ -127,16 +99,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_address_object"
+     * Test attribute "include_address_applied"
      */
-    public function testPropertyIncludeAddressObject()
-    {
-    }
-
-    /**
-     * Test attribute "include_allowed_driver_ids"
-     */
-    public function testPropertyIncludeAllowedDriverIds()
+    public function testPropertyIncludeAddressApplied()
     {
     }
 
@@ -148,6 +113,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_allowed_driver_ids"
+     */
+    public function testPropertyIncludeAllowedDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "include_allowed_drivers_links"
      */
     public function testPropertyIncludeAllowedDriversLinks()
@@ -155,30 +127,79 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_time_slots"
+     * Test attribute "include_assignment"
      */
-    public function testPropertyIncludeTimeSlots()
+    public function testPropertyIncludeAssignment()
     {
     }
 
     /**
-     * Test attribute "include_time_slot_tags"
+     * Test attribute "include_assignment_nr"
      */
-    public function testPropertyIncludeTimeSlotTags()
+    public function testPropertyIncludeAssignmentNr()
     {
     }
 
     /**
-     * Test attribute "include_route_info"
+     * Test attribute "include_brand"
      */
-    public function testPropertyIncludeRouteInfo()
+    public function testPropertyIncludeBrand()
     {
     }
 
     /**
-     * Test attribute "include_route"
+     * Test attribute "include_compartment_ids"
      */
-    public function testPropertyIncludeRoute()
+    public function testPropertyIncludeCompartmentIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_compartments"
+     */
+    public function testPropertyIncludeCompartments()
+    {
+    }
+
+    /**
+     * Test attribute "include_driver"
+     */
+    public function testPropertyIncludeDriver()
+    {
+    }
+
+    /**
+     * Test attribute "include_driver_info"
+     */
+    public function testPropertyIncludeDriverInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_driver_links"
+     */
+    public function testPropertyIncludeDriverLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_emails"
+     */
+    public function testPropertyIncludeEmails()
+    {
+    }
+
+    /**
+     * Test attribute "include_meta_data"
+     */
+    public function testPropertyIncludeMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_notes"
+     */
+    public function testPropertyIncludeNotes()
     {
     }
 
@@ -204,37 +225,37 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_driver_info"
+     * Test attribute "include_phone_nrs"
      */
-    public function testPropertyIncludeDriverInfo()
+    public function testPropertyIncludePhoneNrs()
     {
     }
 
     /**
-     * Test attribute "include_driver"
+     * Test attribute "include_route"
      */
-    public function testPropertyIncludeDriver()
+    public function testPropertyIncludeRoute()
     {
     }
 
     /**
-     * Test attribute "include_driver_links"
+     * Test attribute "include_route_info"
      */
-    public function testPropertyIncludeDriverLinks()
+    public function testPropertyIncludeRouteInfo()
     {
     }
 
     /**
-     * Test attribute "include_car"
+     * Test attribute "include_status_name"
      */
-    public function testPropertyIncludeCar()
+    public function testPropertyIncludeStatusName()
     {
     }
 
     /**
-     * Test attribute "include_vehicle"
+     * Test attribute "include_time_slots"
      */
-    public function testPropertyIncludeVehicle()
+    public function testPropertyIncludeTimeSlots()
     {
     }
 
@@ -242,6 +263,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_trailer"
      */
     public function testPropertyIncludeTrailer()
+    {
+    }
+
+    /**
+     * Test attribute "include_vehicle"
+     */
+    public function testPropertyIncludeVehicle()
     {
     }
 
@@ -260,30 +288,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_compartment_ids"
-     */
-    public function testPropertyIncludeCompartmentIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_compartments"
-     */
-    public function testPropertyIncludeCompartments()
-    {
-    }
-
-    /**
      * Test attribute "include_links"
      */
     public function testPropertyIncludeLinks()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_links"
-     */
-    public function testPropertyIncludeActivityLinks()
     {
     }
 
@@ -295,30 +302,9 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_activity_files_meta_data"
+     * Test attribute "include_tags"
      */
-    public function testPropertyIncludeActivityFilesMetaData()
-    {
-    }
-
-    /**
-     * Test attribute "include_assignment_nr"
-     */
-    public function testPropertyIncludeAssignmentNr()
-    {
-    }
-
-    /**
-     * Test attribute "include_assignment"
-     */
-    public function testPropertyIncludeAssignment()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_tags"
-     */
-    public function testPropertyIncludeActivityTags()
+    public function testPropertyIncludeTags()
     {
     }
 
@@ -347,20 +333,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_tag_names"
      */
     public function testPropertyIncludeTagNames()
-    {
-    }
-
-    /**
-     * Test attribute "include_notes"
-     */
-    public function testPropertyIncludeNotes()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_notes"
-     */
-    public function testPropertyIncludeActivityNotes()
     {
     }
 
@@ -428,13 +400,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_brand"
-     */
-    public function testPropertyIncludeBrand()
-    {
-    }
-
-    /**
      * Test attribute "include_brand_name"
      */
     public function testPropertyIncludeBrandName()
@@ -449,13 +414,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_brand_files"
-     */
-    public function testPropertyIncludeBrandFiles()
-    {
-    }
-
-    /**
      * Test attribute "apply_address_bundling"
      */
     public function testPropertyApplyAddressBundling()
@@ -466,27 +424,6 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_bundled_activity_ids"
      */
     public function testPropertyIncludeBundledActivityIds()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_files"
-     */
-    public function testPropertyIncludeActivityFiles()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_record_info"
-     */
-    public function testPropertyIncludeActivityRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_activity_record_object"
-     */
-    public function testPropertyIncludeActivityRecordObject()
     {
     }
 
@@ -529,6 +466,83 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_packagelines_for_whole_route_on_start_activity"
      */
     public function testPropertyIncludePackagelinesForWholeRouteOnStartActivity()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_meta_data"
+     */
+    public function testPropertyIncludeActivityMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_address_object"
+     */
+    public function testPropertyIncludeAddressObject()
+    {
+    }
+
+    /**
+     * Test attribute "include_car"
+     */
+    public function testPropertyIncludeCar()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_links"
+     */
+    public function testPropertyIncludeActivityLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_files"
+     */
+    public function testPropertyIncludeActivityFiles()
+    {
+    }
+
+    /**
+     * Test attribute "include_brand_files"
+     */
+    public function testPropertyIncludeBrandFiles()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_files_meta_data"
+     */
+    public function testPropertyIncludeActivityFilesMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_record_info"
+     */
+    public function testPropertyIncludeActivityRecordInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_record_object"
+     */
+    public function testPropertyIncludeActivityRecordObject()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_notes"
+     */
+    public function testPropertyIncludeActivityNotes()
+    {
+    }
+
+    /**
+     * Test attribute "include_activity_tags"
+     */
+    public function testPropertyIncludeActivityTags()
     {
     }
 }
