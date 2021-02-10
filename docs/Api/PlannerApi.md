@@ -4,7 +4,6 @@ All URIs are relative to *http://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addActivitiesToRoute**](PlannerApi.md#addActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities To Route
 [**applyPlanning**](PlannerApi.md#applyPlanning) | **POST** /planner/apply-planning | Apply a planning schema
 [**autoPlan**](PlannerApi.md#autoPlan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 [**autoPlanResult**](PlannerApi.md#autoPlanResult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
@@ -12,54 +11,9 @@ Method | HTTP request | Description
 [**checkAvailability**](PlannerApi.md#checkAvailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 [**checkAvailabilityResult**](PlannerApi.md#checkAvailabilityResult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 [**lockActivities**](PlannerApi.md#lockActivities) | **POST** /planner/lock-activities | Lock Activities on Route
+[**plannerAddActivitiesToRoute**](PlannerApi.md#plannerAddActivitiesToRoute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 [**removeActivitiesFromRoute**](PlannerApi.md#removeActivitiesFromRoute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
 
-
-# **addActivitiesToRoute**
-> \BumbalClient\Model\ApiResponse addActivitiesToRoute()
-
-Add Activities To Route
-
-Add Activities To Route
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
-
-$api_instance = new BumbalClient\Api\PlannerApi();
-
-try {
-    $result = $api_instance->addActivitiesToRoute();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PlannerApi->addActivitiesToRoute: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **applyPlanning**
 > \BumbalClient\Model\ApiResponse applyPlanning($arguments)
@@ -391,6 +345,56 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **plannerAddActivitiesToRoute**
+> \BumbalClient\Model\AddActivitiesToRouteResponse plannerAddActivitiesToRoute($arguments)
+
+Add Activities to Route
+
+Add Activities to Route
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\PlannerApi();
+$arguments = new \BumbalClient\Model\AddActivitiesToRouteArguments(); // \BumbalClient\Model\AddActivitiesToRouteArguments | Request Arguments
+
+try {
+    $result = $api_instance->plannerAddActivitiesToRoute($arguments);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PlannerApi->plannerAddActivitiesToRoute: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **arguments** | [**\BumbalClient\Model\AddActivitiesToRouteArguments**](../Model/AddActivitiesToRouteArguments.md)| Request Arguments |
+
+### Return type
+
+[**\BumbalClient\Model\AddActivitiesToRouteResponse**](../Model/AddActivitiesToRouteResponse.md)
 
 ### Authorization
 

@@ -195,7 +195,6 @@ Class | Method | HTTP request | Description
 *PaymentApi* | [**retrievePayment**](docs/Api/PaymentApi.md#retrievepayment) | **GET** /payment/{paymentId} | Retrieve a Payment
 *PaymentApi* | [**setPayment**](docs/Api/PaymentApi.md#setpayment) | **POST** /payment/set | Set (create or update) a Payment
 *PaymentApi* | [**updatePayment**](docs/Api/PaymentApi.md#updatepayment) | **PUT** /payment/{paymentId} | Update a specific Payment object
-*PlannerApi* | [**addActivitiesToRoute**](docs/Api/PlannerApi.md#addactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities To Route
 *PlannerApi* | [**applyPlanning**](docs/Api/PlannerApi.md#applyplanning) | **POST** /planner/apply-planning | Apply a planning schema
 *PlannerApi* | [**autoPlan**](docs/Api/PlannerApi.md#autoplan) | **POST** /planner/auto-plan | Plan a certain activity in any fitting route
 *PlannerApi* | [**autoPlanResult**](docs/Api/PlannerApi.md#autoplanresult) | **POST** /planner/auto-plan-result | Fetch current result for a auto plan Request. This could be done, in progress or cancelled.
@@ -203,6 +202,7 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
 *PlannerApi* | [**lockActivities**](docs/Api/PlannerApi.md#lockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
+*PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
 *PortalApi* | [**createPortal**](docs/Api/PortalApi.md#createportal) | **POST** /portal | Add a new Portal
 *PortalApi* | [**deletePortal**](docs/Api/PortalApi.md#deleteportal) | **DELETE** /portal/{portalId} | Delete a Portal
@@ -364,6 +364,7 @@ Class | Method | HTTP request | Description
 
  - [ActivityEtaModel](docs/Model/ActivityEtaModel.md)
  - [ActivityFiltersModel](docs/Model/ActivityFiltersModel.md)
+ - [ActivityForToRouteModel](docs/Model/ActivityForToRouteModel.md)
  - [ActivityListResponse](docs/Model/ActivityListResponse.md)
  - [ActivityModel](docs/Model/ActivityModel.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
@@ -373,6 +374,8 @@ Class | Method | HTTP request | Description
  - [ActivityTypeModel](docs/Model/ActivityTypeModel.md)
  - [ActivityTypeOptionsModel](docs/Model/ActivityTypeOptionsModel.md)
  - [ActivityTypeRetrieveListArguments](docs/Model/ActivityTypeRetrieveListArguments.md)
+ - [AddActivitiesToRouteArguments](docs/Model/AddActivitiesToRouteArguments.md)
+ - [AddActivitiesToRouteResponse](docs/Model/AddActivitiesToRouteResponse.md)
  - [AddTagToObjectArguments](docs/Model/AddTagToObjectArguments.md)
  - [AddTagToObjectDataModel](docs/Model/AddTagToObjectDataModel.md)
  - [AddTagToObjectFiltersModel](docs/Model/AddTagToObjectFiltersModel.md)

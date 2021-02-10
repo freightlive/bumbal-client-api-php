@@ -81,6 +81,9 @@ class ActivityFiltersModel implements ArrayAccess
         'bundle_activity_id' => 'int[]',
         'description' => 'string[]',
         'reference' => 'string[]',
+        'priority' => 'int[]',
+        'top_priority' => 'bool',
+        'has_geolocation' => 'bool',
         'search_text' => 'string',
         'route_id' => 'int[]',
         'user_id' => 'int',
@@ -129,6 +132,9 @@ class ActivityFiltersModel implements ArrayAccess
         'bundle_activity_id' => null,
         'description' => null,
         'reference' => null,
+        'priority' => null,
+        'top_priority' => null,
+        'has_geolocation' => null,
         'search_text' => null,
         'route_id' => null,
         'user_id' => null,
@@ -187,6 +193,9 @@ class ActivityFiltersModel implements ArrayAccess
         'bundle_activity_id' => 'bundle_activity_id',
         'description' => 'description',
         'reference' => 'reference',
+        'priority' => 'priority',
+        'top_priority' => 'top_priority',
+        'has_geolocation' => 'has_geolocation',
         'search_text' => 'search_text',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
@@ -236,6 +245,9 @@ class ActivityFiltersModel implements ArrayAccess
         'bundle_activity_id' => 'setBundleActivityId',
         'description' => 'setDescription',
         'reference' => 'setReference',
+        'priority' => 'setPriority',
+        'top_priority' => 'setTopPriority',
+        'has_geolocation' => 'setHasGeolocation',
         'search_text' => 'setSearchText',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
@@ -285,6 +297,9 @@ class ActivityFiltersModel implements ArrayAccess
         'bundle_activity_id' => 'getBundleActivityId',
         'description' => 'getDescription',
         'reference' => 'getReference',
+        'priority' => 'getPriority',
+        'top_priority' => 'getTopPriority',
+        'has_geolocation' => 'getHasGeolocation',
         'search_text' => 'getSearchText',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
@@ -359,6 +374,9 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['bundle_activity_id'] = isset($data['bundle_activity_id']) ? $data['bundle_activity_id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
+        $this->container['has_geolocation'] = isset($data['has_geolocation']) ? $data['has_geolocation'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
@@ -963,6 +981,69 @@ class ActivityFiltersModel implements ArrayAccess
     public function setReference($reference)
     {
         $this->container['reference'] = $reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets priority
+     * @return int[]
+     */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+     * Sets priority
+     * @param int[] $priority Priority. 1: low, 2: medium, 3: high
+     * @return $this
+     */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets top_priority
+     * @return bool
+     */
+    public function getTopPriority()
+    {
+        return $this->container['top_priority'];
+    }
+
+    /**
+     * Sets top_priority
+     * @param bool $top_priority top priority
+     * @return $this
+     */
+    public function setTopPriority($top_priority)
+    {
+        $this->container['top_priority'] = $top_priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_geolocation
+     * @return bool
+     */
+    public function getHasGeolocation()
+    {
+        return $this->container['has_geolocation'];
+    }
+
+    /**
+     * Sets has_geolocation
+     * @param bool $has_geolocation has a properly geocoded address
+     * @return $this
+     */
+    public function setHasGeolocation($has_geolocation)
+    {
+        $this->container['has_geolocation'] = $has_geolocation;
 
         return $this;
     }

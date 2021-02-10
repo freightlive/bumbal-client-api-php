@@ -73,16 +73,6 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for addActivitiesToRoute
-     *
-     * Add Activities To Route.
-     *
-     */
-    public function testAddActivitiesToRoute()
-    {
-    }
-
-    /**
      * Test case for applyPlanning
      *
      * Apply a planning schema.
@@ -149,6 +139,16 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testLockActivities()
+    {
+    }
+
+    /**
+     * Test case for plannerAddActivitiesToRoute
+     *
+     * Add Activities to Route.
+     *
+     */
+    public function testPlannerAddActivitiesToRoute()
     {
     }
 

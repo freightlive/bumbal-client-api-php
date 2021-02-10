@@ -267,6 +267,27 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "priority"
+     */
+    public function testPropertyPriority()
+    {
+    }
+
+    /**
+     * Test attribute "top_priority"
+     */
+    public function testPropertyTopPriority()
+    {
+    }
+
+    /**
+     * Test attribute "has_geolocation"
+     */
+    public function testPropertyHasGeolocation()
+    {
+    }
+
+    /**
      * Test attribute "search_text"
      */
     public function testPropertySearchText()
