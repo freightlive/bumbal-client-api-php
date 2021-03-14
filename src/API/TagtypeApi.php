@@ -265,7 +265,7 @@ class TagtypeApi
      *
      * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\TagTypeModel[]
+     * @return \BumbalClient\Model\TagTypeRetrieveResponse
      */
     public function retrieveListTagType($arguments)
     {
@@ -280,7 +280,7 @@ class TagtypeApi
      *
      * @param \BumbalClient\Model\TagTypeRetrieveListArguments $arguments Tag types RetrieveList Arguments (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\TagTypeModel[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\TagTypeRetrieveResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function retrieveListTagTypeWithHttpInfo($arguments)
     {
@@ -325,15 +325,15 @@ class TagtypeApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\TagTypeModel[]',
+                '\BumbalClient\Model\TagTypeRetrieveResponse',
                 '/tag-type'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeModel[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\TagTypeRetrieveResponse', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeModel[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\TagTypeRetrieveResponse', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

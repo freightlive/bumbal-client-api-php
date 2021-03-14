@@ -700,6 +700,7 @@ Class | Method | HTTP request | Description
  - [TagTypeModel](docs/Model/TagTypeModel.md)
  - [TagTypeOptionsModel](docs/Model/TagTypeOptionsModel.md)
  - [TagTypeRetrieveListArguments](docs/Model/TagTypeRetrieveListArguments.md)
+ - [TagTypeRetrieveResponse](docs/Model/TagTypeRetrieveResponse.md)
  - [TagsFiltersModel](docs/Model/TagsFiltersModel.md)
  - [TagsOptionsModel](docs/Model/TagsOptionsModel.md)
  - [TagsRetrieveListArguments](docs/Model/TagsRetrieveListArguments.md)
