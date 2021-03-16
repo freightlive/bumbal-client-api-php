@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteDriverUnavailability**](DriverunavailabilityApi.md#deleteDriverUnavailability) | **DELETE** /driver-unavailability/{driverunavailabilityId} | Delete a DriverUnavailability entry
 [**retrieveDriverUnavailability**](DriverunavailabilityApi.md#retrieveDriverUnavailability) | **GET** /driver-unavailability/{driverunavailabilityId} | Retrieve a DriverUnavailability
 [**retrieveListDriverUnavailability**](DriverunavailabilityApi.md#retrieveListDriverUnavailability) | **PUT** /driver-unavailability | Retrieve List of DriverUnavailability
+[**setDriverUnavailability**](DriverunavailabilityApi.md#setDriverUnavailability) | **POST** /driver-unavailability/set | Set (create or update) a driver unavailability
 [**updateDriverUnavailability**](DriverunavailabilityApi.md#updateDriverUnavailability) | **PUT** /driver-unavailability/{driverunavailabilityId} | Update a specific DriverUnavailability object
 
 
@@ -203,6 +204,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\DriverUnavailabilityListResponse**](../Model/DriverUnavailabilityListResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setDriverUnavailability**
+> \BumbalClient\Model\ApiResponse setDriverUnavailability($body)
+
+Set (create or update) a driver unavailability
+
+Set (create or update) a driver unavailability. If id or links are set in the data, and a corresponding driver unavailability is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\DriverunavailabilityApi();
+$body = new \BumbalClient\Model\DriverUnavailabilityModel(); // \BumbalClient\Model\DriverUnavailabilityModel | DriverUnavailability object
+
+try {
+    $result = $api_instance->setDriverUnavailability($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DriverunavailabilityApi->setDriverUnavailability: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\DriverUnavailabilityModel**](../Model/DriverUnavailabilityModel.md)| DriverUnavailability object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

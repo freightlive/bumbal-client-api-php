@@ -124,6 +124,7 @@ Class | Method | HTTP request | Description
 *DriverunavailabilityApi* | [**deleteDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#deletedriverunavailability) | **DELETE** /driver-unavailability/{driverunavailabilityId} | Delete a DriverUnavailability entry
 *DriverunavailabilityApi* | [**retrieveDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievedriverunavailability) | **GET** /driver-unavailability/{driverunavailabilityId} | Retrieve a DriverUnavailability
 *DriverunavailabilityApi* | [**retrieveListDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#retrievelistdriverunavailability) | **PUT** /driver-unavailability | Retrieve List of DriverUnavailability
+*DriverunavailabilityApi* | [**setDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#setdriverunavailability) | **POST** /driver-unavailability/set | Set (create or update) a driver unavailability
 *DriverunavailabilityApi* | [**updateDriverUnavailability**](docs/Api/DriverunavailabilityApi.md#updatedriverunavailability) | **PUT** /driver-unavailability/{driverunavailabilityId} | Update a specific DriverUnavailability object
 *EquipmentApi* | [**createEquipment**](docs/Api/EquipmentApi.md#createequipment) | **POST** /equipment | Add a new Equipment
 *EquipmentApi* | [**deleteEquipment**](docs/Api/EquipmentApi.md#deleteequipment) | **DELETE** /equipment/{equipmentId} | Delete an Equipment entry

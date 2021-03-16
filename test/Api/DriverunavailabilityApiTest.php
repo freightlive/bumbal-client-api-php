@@ -113,6 +113,16 @@ class DriverunavailabilityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setDriverUnavailability
+     *
+     * Set (create or update) a driver unavailability.
+     *
+     */
+    public function testSetDriverUnavailability()
+    {
+    }
+
+    /**
      * Test case for updateDriverUnavailability
      *
      * Update a specific DriverUnavailability object.
