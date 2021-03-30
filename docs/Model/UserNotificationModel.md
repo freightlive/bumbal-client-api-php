@@ -12,8 +12,9 @@ Name | Type | Description | Notes
 **archive_date** | [**\DateTime**](\DateTime.md) | Archive date | [optional] 
 **notification_created_at** | [**\DateTime**](\DateTime.md) | Creation date | [optional] 
 **object_id** | **int** | Object Identifier | [optional] 
+**object_type** | **int** | Object type ID | [optional] 
 **notification_updated_at** | [**\DateTime**](\DateTime.md) | Modification date | [optional] 
-**object_type_name** | **object** | Object type names available for this user notification | [optional] 
+**object_type_name** | **string** | Object type name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier(s) | [optional] 
+**nr** | **string[]** | Activity nr | [optional] 
 **assignment_id** | **int[]** | Identifier(s) assignment(s) for activities | [optional] 
 **shipment_activity_id** | **int[]** | Unique Identifier(s) partner shipment activity | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) | DateTime From | [optional] 
@@ -33,6 +34,7 @@ Name | Type | Description | Notes
 **priority** | **int[]** | Priority. 1: low, 2: medium, 3: high | [optional] 
 **top_priority** | **bool** | top priority | [optional] 
 **has_geolocation** | **bool** | has a properly geocoded address | [optional] 
+**has_route_assigned** | **bool** | has a route assigned | [optional] 
 **search_text** | **string** | free search through text and numeric type columns | [optional] 
 **route_id** | **int[]** | Route id | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 

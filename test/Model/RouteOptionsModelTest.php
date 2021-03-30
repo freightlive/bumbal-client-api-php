@@ -265,4 +265,11 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeMetaData()
     {
     }
+
+    /**
+     * Test attribute "include_applied_capacities"
+     */
+    public function testPropertyIncludeAppliedCapacities()
+    {
+    }
 }

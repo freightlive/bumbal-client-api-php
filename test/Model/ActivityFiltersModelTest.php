@@ -85,6 +85,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "nr"
+     */
+    public function testPropertyNr()
+    {
+    }
+
+    /**
      * Test attribute "assignment_id"
      */
     public function testPropertyAssignmentId()
@@ -284,6 +291,13 @@ class ActivityFiltersModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "has_geolocation"
      */
     public function testPropertyHasGeolocation()
+    {
+    }
+
+    /**
+     * Test attribute "has_route_assigned"
+     */
+    public function testPropertyHasRouteAssigned()
     {
     }
 

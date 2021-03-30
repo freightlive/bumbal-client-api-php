@@ -1,6 +1,6 @@
 <?php
 /**
- * QuestionnaireFiltersModel
+ * ActivityStatsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * QuestionnaireFiltersModel Class Doc Comment
+ * ActivityStatsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class QuestionnaireFiltersModel implements ArrayAccess
+class ActivityStatsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,18 +47,17 @@ class QuestionnaireFiltersModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'QuestionnaireFiltersModel';
+    protected static $swaggerModelName = 'ActivityStatsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'object_type' => 'int',
-        'object_id' => 'int',
-        'object_type_name' => 'string',
-        'lang_code' => 'string',
-        'questionnaire_type_name' => 'object'
+        'nr_of_package_lines' => 'int',
+        'nr_of_bundled_lines' => 'int',
+        'nr_of_transactions' => 'int',
+        'nr_of_notes' => 'int'
     ];
 
     /**
@@ -66,11 +65,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'object_type' => null,
-        'object_id' => null,
-        'object_type_name' => null,
-        'lang_code' => 'string',
-        'questionnaire_type_name' => null
+        'nr_of_package_lines' => 'int64',
+        'nr_of_bundled_lines' => 'int64',
+        'nr_of_transactions' => 'int64',
+        'nr_of_notes' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -88,11 +86,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'object_type' => 'object_type',
-        'object_id' => 'object_id',
-        'object_type_name' => 'object_type_name',
-        'lang_code' => 'lang_code',
-        'questionnaire_type_name' => 'questionnaire_type_name'
+        'nr_of_package_lines' => 'nr_of_package_lines',
+        'nr_of_bundled_lines' => 'nr_of_bundled_lines',
+        'nr_of_transactions' => 'nr_of_transactions',
+        'nr_of_notes' => 'nr_of_notes'
     ];
 
 
@@ -101,11 +98,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'object_type' => 'setObjectType',
-        'object_id' => 'setObjectId',
-        'object_type_name' => 'setObjectTypeName',
-        'lang_code' => 'setLangCode',
-        'questionnaire_type_name' => 'setQuestionnaireTypeName'
+        'nr_of_package_lines' => 'setNrOfPackageLines',
+        'nr_of_bundled_lines' => 'setNrOfBundledLines',
+        'nr_of_transactions' => 'setNrOfTransactions',
+        'nr_of_notes' => 'setNrOfNotes'
     ];
 
 
@@ -114,11 +110,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'object_type' => 'getObjectType',
-        'object_id' => 'getObjectId',
-        'object_type_name' => 'getObjectTypeName',
-        'lang_code' => 'getLangCode',
-        'questionnaire_type_name' => 'getQuestionnaireTypeName'
+        'nr_of_package_lines' => 'getNrOfPackageLines',
+        'nr_of_bundled_lines' => 'getNrOfBundledLines',
+        'nr_of_transactions' => 'getNrOfTransactions',
+        'nr_of_notes' => 'getNrOfNotes'
     ];
 
     public static function attributeMap()
@@ -152,11 +147,10 @@ class QuestionnaireFiltersModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
-        $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
-        $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
-        $this->container['lang_code'] = isset($data['lang_code']) ? $data['lang_code'] : null;
-        $this->container['questionnaire_type_name'] = isset($data['questionnaire_type_name']) ? $data['questionnaire_type_name'] : null;
+        $this->container['nr_of_package_lines'] = isset($data['nr_of_package_lines']) ? $data['nr_of_package_lines'] : null;
+        $this->container['nr_of_bundled_lines'] = isset($data['nr_of_bundled_lines']) ? $data['nr_of_bundled_lines'] : null;
+        $this->container['nr_of_transactions'] = isset($data['nr_of_transactions']) ? $data['nr_of_transactions'] : null;
+        $this->container['nr_of_notes'] = isset($data['nr_of_notes']) ? $data['nr_of_notes'] : null;
     }
 
     /**
@@ -185,106 +179,85 @@ class QuestionnaireFiltersModel implements ArrayAccess
 
 
     /**
-     * Gets object_type
+     * Gets nr_of_package_lines
      * @return int
      */
-    public function getObjectType()
+    public function getNrOfPackageLines()
     {
-        return $this->container['object_type'];
+        return $this->container['nr_of_package_lines'];
     }
 
     /**
-     * Sets object_type
-     * @param int $object_type Object type IDs available for this questionnaire
+     * Sets nr_of_package_lines
+     * @param int $nr_of_package_lines nr of package lines
      * @return $this
      */
-    public function setObjectType($object_type)
+    public function setNrOfPackageLines($nr_of_package_lines)
     {
-        $this->container['object_type'] = $object_type;
+        $this->container['nr_of_package_lines'] = $nr_of_package_lines;
 
         return $this;
     }
 
     /**
-     * Gets object_id
+     * Gets nr_of_bundled_lines
      * @return int
      */
-    public function getObjectId()
+    public function getNrOfBundledLines()
     {
-        return $this->container['object_id'];
+        return $this->container['nr_of_bundled_lines'];
     }
 
     /**
-     * Sets object_id
-     * @param int $object_id Object id's available for this questionnaire
+     * Sets nr_of_bundled_lines
+     * @param int $nr_of_bundled_lines nr of bundled activities
      * @return $this
      */
-    public function setObjectId($object_id)
+    public function setNrOfBundledLines($nr_of_bundled_lines)
     {
-        $this->container['object_id'] = $object_id;
+        $this->container['nr_of_bundled_lines'] = $nr_of_bundled_lines;
 
         return $this;
     }
 
     /**
-     * Gets object_type_name
-     * @return string
+     * Gets nr_of_transactions
+     * @return int
      */
-    public function getObjectTypeName()
+    public function getNrOfTransactions()
     {
-        return $this->container['object_type_name'];
+        return $this->container['nr_of_transactions'];
     }
 
     /**
-     * Sets object_type_name
-     * @param string $object_type_name Object type name available for this questionnaire
+     * Sets nr_of_transactions
+     * @param int $nr_of_transactions nr of transactions
      * @return $this
      */
-    public function setObjectTypeName($object_type_name)
+    public function setNrOfTransactions($nr_of_transactions)
     {
-        $this->container['object_type_name'] = $object_type_name;
+        $this->container['nr_of_transactions'] = $nr_of_transactions;
 
         return $this;
     }
 
     /**
-     * Gets lang_code
-     * @return string
+     * Gets nr_of_notes
+     * @return int
      */
-    public function getLangCode()
+    public function getNrOfNotes()
     {
-        return $this->container['lang_code'];
+        return $this->container['nr_of_notes'];
     }
 
     /**
-     * Sets lang_code
-     * @param string $lang_code ISO lang code
+     * Sets nr_of_notes
+     * @param int $nr_of_notes nr of notes
      * @return $this
      */
-    public function setLangCode($lang_code)
+    public function setNrOfNotes($nr_of_notes)
     {
-        $this->container['lang_code'] = $lang_code;
-
-        return $this;
-    }
-
-    /**
-     * Gets questionnaire_type_name
-     * @return object
-     */
-    public function getQuestionnaireTypeName()
-    {
-        return $this->container['questionnaire_type_name'];
-    }
-
-    /**
-     * Sets questionnaire_type_name
-     * @param object $questionnaire_type_name Questionnaire type name
-     * @return $this
-     */
-    public function setQuestionnaireTypeName($questionnaire_type_name)
-    {
-        $this->container['questionnaire_type_name'] = $questionnaire_type_name;
+        $this->container['nr_of_notes'] = $nr_of_notes;
 
         return $this;
     }

@@ -62,8 +62,8 @@ class UserNotificationFiltersModel implements ArrayAccess
         'archived' => 'int',
         'notification_category_id' => 'int[]',
         'notification_category_name' => 'string[]',
-        'object_type' => 'object',
-        'object_type_name' => 'object'
+        'object_type' => 'int[]',
+        'object_type_name' => 'string[]'
     ];
 
     /**
@@ -384,7 +384,7 @@ class UserNotificationFiltersModel implements ArrayAccess
 
     /**
      * Gets object_type
-     * @return object
+     * @return int[]
      */
     public function getObjectType()
     {
@@ -393,7 +393,7 @@ class UserNotificationFiltersModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param object $object_type Object type IDs available for this object type
+     * @param int[] $object_type Object type ID
      * @return $this
      */
     public function setObjectType($object_type)
@@ -405,7 +405,7 @@ class UserNotificationFiltersModel implements ArrayAccess
 
     /**
      * Gets object_type_name
-     * @return object
+     * @return string[]
      */
     public function getObjectTypeName()
     {
@@ -414,7 +414,7 @@ class UserNotificationFiltersModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this object type
+     * @param string[] $object_type_name Object type name
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

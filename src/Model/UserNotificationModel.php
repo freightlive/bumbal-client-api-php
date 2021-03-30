@@ -63,8 +63,9 @@ class UserNotificationModel implements ArrayAccess
         'archive_date' => '\DateTime',
         'notification_created_at' => '\DateTime',
         'object_id' => 'int',
+        'object_type' => 'int',
         'notification_updated_at' => '\DateTime',
-        'object_type_name' => 'object'
+        'object_type_name' => 'string'
     ];
 
     /**
@@ -81,6 +82,7 @@ class UserNotificationModel implements ArrayAccess
         'archive_date' => 'date-time',
         'notification_created_at' => 'date-time',
         'object_id' => 'int64',
+        'object_type' => 'int64',
         'notification_updated_at' => 'date-time',
         'object_type_name' => null
     ];
@@ -109,6 +111,7 @@ class UserNotificationModel implements ArrayAccess
         'archive_date' => 'archive_date',
         'notification_created_at' => 'notification_created_at',
         'object_id' => 'object_id',
+        'object_type' => 'object_type',
         'notification_updated_at' => 'notification_updated_at',
         'object_type_name' => 'object_type_name'
     ];
@@ -128,6 +131,7 @@ class UserNotificationModel implements ArrayAccess
         'archive_date' => 'setArchiveDate',
         'notification_created_at' => 'setNotificationCreatedAt',
         'object_id' => 'setObjectId',
+        'object_type' => 'setObjectType',
         'notification_updated_at' => 'setNotificationUpdatedAt',
         'object_type_name' => 'setObjectTypeName'
     ];
@@ -147,6 +151,7 @@ class UserNotificationModel implements ArrayAccess
         'archive_date' => 'getArchiveDate',
         'notification_created_at' => 'getNotificationCreatedAt',
         'object_id' => 'getObjectId',
+        'object_type' => 'getObjectType',
         'notification_updated_at' => 'getNotificationUpdatedAt',
         'object_type_name' => 'getObjectTypeName'
     ];
@@ -191,6 +196,7 @@ class UserNotificationModel implements ArrayAccess
         $this->container['archive_date'] = isset($data['archive_date']) ? $data['archive_date'] : null;
         $this->container['notification_created_at'] = isset($data['notification_created_at']) ? $data['notification_created_at'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
+        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['notification_updated_at'] = isset($data['notification_updated_at']) ? $data['notification_updated_at'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
     }
@@ -410,6 +416,27 @@ class UserNotificationModel implements ArrayAccess
     }
 
     /**
+     * Gets object_type
+     * @return int
+     */
+    public function getObjectType()
+    {
+        return $this->container['object_type'];
+    }
+
+    /**
+     * Sets object_type
+     * @param int $object_type Object type ID
+     * @return $this
+     */
+    public function setObjectType($object_type)
+    {
+        $this->container['object_type'] = $object_type;
+
+        return $this;
+    }
+
+    /**
      * Gets notification_updated_at
      * @return \DateTime
      */
@@ -432,7 +459,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Gets object_type_name
-     * @return object
+     * @return string
      */
     public function getObjectTypeName()
     {
@@ -441,7 +468,7 @@ class UserNotificationModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this user notification
+     * @param string $object_type_name Object type name
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

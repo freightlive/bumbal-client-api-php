@@ -370,6 +370,7 @@ Class | Method | HTTP request | Description
  - [ActivityModel](docs/Model/ActivityModel.md)
  - [ActivityOptionsModel](docs/Model/ActivityOptionsModel.md)
  - [ActivityRetrieveListArguments](docs/Model/ActivityRetrieveListArguments.md)
+ - [ActivityStatsModel](docs/Model/ActivityStatsModel.md)
  - [ActivityTypeFiltersModel](docs/Model/ActivityTypeFiltersModel.md)
  - [ActivityTypeListResponse](docs/Model/ActivityTypeListResponse.md)
  - [ActivityTypeModel](docs/Model/ActivityTypeModel.md)

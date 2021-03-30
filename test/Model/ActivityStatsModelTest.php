@@ -1,6 +1,6 @@
 <?php
 /**
- * RouteRetrieveListArgumentsTest
+ * ActivityStatsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * RouteRetrieveListArgumentsTest Class Doc Comment
+ * ActivityStatsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description RouteRetrieveListArguments
+// * @description ActivityStatsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RouteRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
+class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,72 +71,37 @@ class RouteRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "RouteRetrieveListArguments"
+     * Test "ActivityStatsModel"
      */
-    public function testRouteRetrieveListArguments()
+    public function testActivityStatsModel()
     {
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "nr_of_package_lines"
      */
-    public function testPropertyOptions()
+    public function testPropertyNrOfPackageLines()
     {
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "nr_of_bundled_lines"
      */
-    public function testPropertyFilters()
+    public function testPropertyNrOfBundledLines()
     {
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "nr_of_transactions"
      */
-    public function testPropertyLimit()
+    public function testPropertyNrOfTransactions()
     {
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "nr_of_notes"
      */
-    public function testPropertyOffset()
-    {
-    }
-
-    /**
-     * Test attribute "search_text"
-     */
-    public function testPropertySearchText()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_column"
-     */
-    public function testPropertySortingColumn()
-    {
-    }
-
-    /**
-     * Test attribute "sorting_direction"
-     */
-    public function testPropertySortingDirection()
-    {
-    }
-
-    /**
-     * Test attribute "as_list"
-     */
-    public function testPropertyAsList()
-    {
-    }
-
-    /**
-     * Test attribute "count_only"
-     */
-    public function testPropertyCountOnly()
+    public function testPropertyNrOfNotes()
     {
     }
 }

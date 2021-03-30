@@ -80,7 +80,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_zones' => 'bool',
         'include_zone_names' => 'bool',
         'include_notes' => 'bool',
-        'include_meta_data' => 'bool'
+        'include_meta_data' => 'bool',
+        'include_applied_capacities' => 'bool'
     ];
 
     /**
@@ -114,7 +115,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_zones' => null,
         'include_zone_names' => null,
         'include_notes' => null,
-        'include_meta_data' => null
+        'include_meta_data' => null,
+        'include_applied_capacities' => null
     ];
 
     public static function swaggerTypes()
@@ -158,7 +160,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_zones' => 'include_zones',
         'include_zone_names' => 'include_zone_names',
         'include_notes' => 'include_notes',
-        'include_meta_data' => 'include_meta_data'
+        'include_meta_data' => 'include_meta_data',
+        'include_applied_capacities' => 'include_applied_capacities'
     ];
 
 
@@ -193,7 +196,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_zones' => 'setIncludeZones',
         'include_zone_names' => 'setIncludeZoneNames',
         'include_notes' => 'setIncludeNotes',
-        'include_meta_data' => 'setIncludeMetaData'
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_applied_capacities' => 'setIncludeAppliedCapacities'
     ];
 
 
@@ -228,7 +232,8 @@ class RouteOptionsModel implements ArrayAccess
         'include_zones' => 'getIncludeZones',
         'include_zone_names' => 'getIncludeZoneNames',
         'include_notes' => 'getIncludeNotes',
-        'include_meta_data' => 'getIncludeMetaData'
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_applied_capacities' => 'getIncludeAppliedCapacities'
     ];
 
     public static function attributeMap()
@@ -289,6 +294,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_zone_names'] = isset($data['include_zone_names']) ? $data['include_zone_names'] : null;
         $this->container['include_notes'] = isset($data['include_notes']) ? $data['include_notes'] : null;
         $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_applied_capacities'] = isset($data['include_applied_capacities']) ? $data['include_applied_capacities'] : null;
     }
 
     /**
@@ -879,6 +885,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeMetaData($include_meta_data)
     {
         $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_applied_capacities
+     * @return bool
+     */
+    public function getIncludeAppliedCapacities()
+    {
+        return $this->container['include_applied_capacities'];
+    }
+
+    /**
+     * Sets include_applied_capacities
+     * @param bool $include_applied_capacities 
+     * @return $this
+     */
+    public function setIncludeAppliedCapacities($include_applied_capacities)
+    {
+        $this->container['include_applied_capacities'] = $include_applied_capacities;
 
         return $this;
     }

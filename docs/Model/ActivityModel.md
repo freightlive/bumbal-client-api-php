@@ -96,6 +96,7 @@ Name | Type | Description | Notes
 **zone_names** | **string[]** | Zone names | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 
 **meta_data** | [**\BumbalClient\Model\MetaDataModel[]**](MetaDataModel.md) |  | [optional] 
+**stats** | [**\BumbalClient\Model\ActivityStatsModel**](ActivityStatsModel.md) |  | [optional] 
 **notes** | [**\BumbalClient\Model\NoteModel[]**](NoteModel.md) |  | [optional] 
 **files** | [**\BumbalClient\Model\FileModel[]**](FileModel.md) |  | [optional] 
 **activity_created_at** | [**\DateTime**](\DateTime.md) | created_at date time | [optional] 

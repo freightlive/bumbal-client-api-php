@@ -4,8 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
-**object_type** | **object** | Object type IDs available for this note | [optional] 
-**object_type_name** | **object** | Object type names available for this note | [optional] 
+**object_type_name** | **string** | Object type name | [optional] 
 **object_id** | **int** | Object ID | [optional] 
 **object_link** | [**\BumbalClient\Model\LinkModel**](LinkModel.md) |  | [optional] 
 **note_category_id** | **int** | Note category id | [optional] 

@@ -463,6 +463,13 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_stats"
+     */
+    public function testPropertyIncludeStats()
+    {
+    }
+
+    /**
      * Test attribute "include_packagelines_for_whole_route_on_start_activity"
      */
     public function testPropertyIncludePackagelinesForWholeRouteOnStartActivity()

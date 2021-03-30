@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique Identifier | [optional] 
-**object_type** | **object** | Object type IDs available for this notification | [optional] 
-**object_type_name** | **object** | Object type names available for this notification | [optional] 
+**object_type** | **int** | Object type ID | [optional] 
+**object_type_name** | **string** | Object type name | [optional] 
 **object_id** | **int** | Object ID | [optional] 
 **notification_category_id** | **int** | Notification category id | [optional] 
 **notification_category_name** | **string** | Notification category name | [optional] 

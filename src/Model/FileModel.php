@@ -60,7 +60,7 @@ class FileModel implements ArrayAccess
         'file_type_name' => 'string',
         'object_id' => 'int',
         'object_type' => 'int',
-        'object_type_name' => 'object',
+        'object_type_name' => 'string',
         'reference' => 'string',
         'location' => 'string',
         'base64' => 'string',
@@ -366,7 +366,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param int $object_type 
+     * @param int $object_type Object type ID
      * @return $this
      */
     public function setObjectType($object_type)
@@ -378,7 +378,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Gets object_type_name
-     * @return object
+     * @return string
      */
     public function getObjectTypeName()
     {
@@ -387,7 +387,7 @@ class FileModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this file
+     * @param string $object_type_name Object type name
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

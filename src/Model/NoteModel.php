@@ -55,8 +55,7 @@ class NoteModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'object_type' => 'object',
-        'object_type_name' => 'object',
+        'object_type_name' => 'string',
         'object_id' => 'int',
         'object_link' => '\BumbalClient\Model\LinkModel',
         'note_category_id' => 'int',
@@ -81,7 +80,6 @@ class NoteModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'object_type' => null,
         'object_type_name' => null,
         'object_id' => null,
         'object_link' => null,
@@ -117,7 +115,6 @@ class NoteModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'object_type' => 'object_type',
         'object_type_name' => 'object_type_name',
         'object_id' => 'object_id',
         'object_link' => 'object_link',
@@ -144,7 +141,6 @@ class NoteModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'object_type' => 'setObjectType',
         'object_type_name' => 'setObjectTypeName',
         'object_id' => 'setObjectId',
         'object_link' => 'setObjectLink',
@@ -171,7 +167,6 @@ class NoteModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'object_type' => 'getObjectType',
         'object_type_name' => 'getObjectTypeName',
         'object_id' => 'getObjectId',
         'object_link' => 'getObjectLink',
@@ -223,7 +218,6 @@ class NoteModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['object_type_name'] = isset($data['object_type_name']) ? $data['object_type_name'] : null;
         $this->container['object_id'] = isset($data['object_id']) ? $data['object_id'] : null;
         $this->container['object_link'] = isset($data['object_link']) ? $data['object_link'] : null;
@@ -290,29 +284,8 @@ class NoteModel implements ArrayAccess
     }
 
     /**
-     * Gets object_type
-     * @return object
-     */
-    public function getObjectType()
-    {
-        return $this->container['object_type'];
-    }
-
-    /**
-     * Sets object_type
-     * @param object $object_type Object type IDs available for this note
-     * @return $this
-     */
-    public function setObjectType($object_type)
-    {
-        $this->container['object_type'] = $object_type;
-
-        return $this;
-    }
-
-    /**
      * Gets object_type_name
-     * @return object
+     * @return string
      */
     public function getObjectTypeName()
     {
@@ -321,7 +294,7 @@ class NoteModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this note
+     * @param string $object_type_name Object type name
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

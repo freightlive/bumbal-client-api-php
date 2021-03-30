@@ -109,6 +109,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_payments' => 'bool',
         'include_transactions' => 'bool',
         'include_relations' => 'bool',
+        'include_stats' => 'bool',
         'include_packagelines_for_whole_route_on_start_activity' => 'bool',
         'include_activity_meta_data' => 'bool',
         'include_address_object' => 'bool',
@@ -183,6 +184,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_payments' => null,
         'include_transactions' => null,
         'include_relations' => null,
+        'include_stats' => null,
         'include_packagelines_for_whole_route_on_start_activity' => null,
         'include_activity_meta_data' => null,
         'include_address_object' => null,
@@ -267,6 +269,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_payments' => 'include_payments',
         'include_transactions' => 'include_transactions',
         'include_relations' => 'include_relations',
+        'include_stats' => 'include_stats',
         'include_packagelines_for_whole_route_on_start_activity' => 'include_packagelines_for_whole_route_on_start_activity',
         'include_activity_meta_data' => 'include_activity_meta_data',
         'include_address_object' => 'include_address_object',
@@ -342,6 +345,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_payments' => 'setIncludePayments',
         'include_transactions' => 'setIncludeTransactions',
         'include_relations' => 'setIncludeRelations',
+        'include_stats' => 'setIncludeStats',
         'include_packagelines_for_whole_route_on_start_activity' => 'setIncludePackagelinesForWholeRouteOnStartActivity',
         'include_activity_meta_data' => 'setIncludeActivityMetaData',
         'include_address_object' => 'setIncludeAddressObject',
@@ -417,6 +421,7 @@ class ActivityOptionsModel implements ArrayAccess
         'include_payments' => 'getIncludePayments',
         'include_transactions' => 'getIncludeTransactions',
         'include_relations' => 'getIncludeRelations',
+        'include_stats' => 'getIncludeStats',
         'include_packagelines_for_whole_route_on_start_activity' => 'getIncludePackagelinesForWholeRouteOnStartActivity',
         'include_activity_meta_data' => 'getIncludeActivityMetaData',
         'include_address_object' => 'getIncludeAddressObject',
@@ -517,6 +522,7 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_payments'] = isset($data['include_payments']) ? $data['include_payments'] : null;
         $this->container['include_transactions'] = isset($data['include_transactions']) ? $data['include_transactions'] : null;
         $this->container['include_relations'] = isset($data['include_relations']) ? $data['include_relations'] : null;
+        $this->container['include_stats'] = isset($data['include_stats']) ? $data['include_stats'] : null;
         $this->container['include_packagelines_for_whole_route_on_start_activity'] = isset($data['include_packagelines_for_whole_route_on_start_activity']) ? $data['include_packagelines_for_whole_route_on_start_activity'] : null;
         $this->container['include_activity_meta_data'] = isset($data['include_activity_meta_data']) ? $data['include_activity_meta_data'] : null;
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
@@ -1707,6 +1713,27 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeRelations($include_relations)
     {
         $this->container['include_relations'] = $include_relations;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_stats
+     * @return bool
+     */
+    public function getIncludeStats()
+    {
+        return $this->container['include_stats'];
+    }
+
+    /**
+     * Sets include_stats
+     * @param bool $include_stats 
+     * @return $this
+     */
+    public function setIncludeStats($include_stats)
+    {
+        $this->container['include_stats'] = $include_stats;
 
         return $this;
     }

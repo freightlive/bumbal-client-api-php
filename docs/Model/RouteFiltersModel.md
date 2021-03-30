@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier | [optional] 
-**nr** | **int[]** | Route nr | [optional] 
+**nr** | **string[]** | Route nr | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **earliest_date_time_since** | [**\DateTime**](\DateTime.md) | filter routes with an Earliest DateTime To since this input | [optional] 

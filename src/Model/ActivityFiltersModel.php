@@ -55,6 +55,7 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'nr' => 'string[]',
         'assignment_id' => 'int[]',
         'shipment_activity_id' => 'int[]',
         'date_time_from' => '\DateTime',
@@ -84,6 +85,7 @@ class ActivityFiltersModel implements ArrayAccess
         'priority' => 'int[]',
         'top_priority' => 'bool',
         'has_geolocation' => 'bool',
+        'has_route_assigned' => 'bool',
         'search_text' => 'string',
         'route_id' => 'int[]',
         'user_id' => 'int',
@@ -106,6 +108,7 @@ class ActivityFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'nr' => null,
         'assignment_id' => null,
         'shipment_activity_id' => null,
         'date_time_from' => 'date-time',
@@ -135,6 +138,7 @@ class ActivityFiltersModel implements ArrayAccess
         'priority' => null,
         'top_priority' => null,
         'has_geolocation' => null,
+        'has_route_assigned' => null,
         'search_text' => null,
         'route_id' => null,
         'user_id' => null,
@@ -167,6 +171,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'nr' => 'nr',
         'assignment_id' => 'assignment_id',
         'shipment_activity_id' => 'shipment_activity_id',
         'date_time_from' => 'date_time_from',
@@ -196,6 +201,7 @@ class ActivityFiltersModel implements ArrayAccess
         'priority' => 'priority',
         'top_priority' => 'top_priority',
         'has_geolocation' => 'has_geolocation',
+        'has_route_assigned' => 'has_route_assigned',
         'search_text' => 'search_text',
         'route_id' => 'route_id',
         'user_id' => 'user_id',
@@ -219,6 +225,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'nr' => 'setNr',
         'assignment_id' => 'setAssignmentId',
         'shipment_activity_id' => 'setShipmentActivityId',
         'date_time_from' => 'setDateTimeFrom',
@@ -248,6 +255,7 @@ class ActivityFiltersModel implements ArrayAccess
         'priority' => 'setPriority',
         'top_priority' => 'setTopPriority',
         'has_geolocation' => 'setHasGeolocation',
+        'has_route_assigned' => 'setHasRouteAssigned',
         'search_text' => 'setSearchText',
         'route_id' => 'setRouteId',
         'user_id' => 'setUserId',
@@ -271,6 +279,7 @@ class ActivityFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'nr' => 'getNr',
         'assignment_id' => 'getAssignmentId',
         'shipment_activity_id' => 'getShipmentActivityId',
         'date_time_from' => 'getDateTimeFrom',
@@ -300,6 +309,7 @@ class ActivityFiltersModel implements ArrayAccess
         'priority' => 'getPriority',
         'top_priority' => 'getTopPriority',
         'has_geolocation' => 'getHasGeolocation',
+        'has_route_assigned' => 'getHasRouteAssigned',
         'search_text' => 'getSearchText',
         'route_id' => 'getRouteId',
         'user_id' => 'getUserId',
@@ -348,6 +358,7 @@ class ActivityFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['assignment_id'] = isset($data['assignment_id']) ? $data['assignment_id'] : null;
         $this->container['shipment_activity_id'] = isset($data['shipment_activity_id']) ? $data['shipment_activity_id'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
@@ -377,6 +388,7 @@ class ActivityFiltersModel implements ArrayAccess
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['top_priority'] = isset($data['top_priority']) ? $data['top_priority'] : null;
         $this->container['has_geolocation'] = isset($data['has_geolocation']) ? $data['has_geolocation'] : null;
+        $this->container['has_route_assigned'] = isset($data['has_route_assigned']) ? $data['has_route_assigned'] : null;
         $this->container['search_text'] = isset($data['search_text']) ? $data['search_text'] : null;
         $this->container['route_id'] = isset($data['route_id']) ? $data['route_id'] : null;
         $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
@@ -435,6 +447,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr
+     * @return string[]
+     */
+    public function getNr()
+    {
+        return $this->container['nr'];
+    }
+
+    /**
+     * Sets nr
+     * @param string[] $nr Activity nr
+     * @return $this
+     */
+    public function setNr($nr)
+    {
+        $this->container['nr'] = $nr;
 
         return $this;
     }
@@ -1044,6 +1077,27 @@ class ActivityFiltersModel implements ArrayAccess
     public function setHasGeolocation($has_geolocation)
     {
         $this->container['has_geolocation'] = $has_geolocation;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_route_assigned
+     * @return bool
+     */
+    public function getHasRouteAssigned()
+    {
+        return $this->container['has_route_assigned'];
+    }
+
+    /**
+     * Sets has_route_assigned
+     * @param bool $has_route_assigned has a route assigned
+     * @return $this
+     */
+    public function setHasRouteAssigned($has_route_assigned)
+    {
+        $this->container['has_route_assigned'] = $has_route_assigned;
 
         return $this;
     }

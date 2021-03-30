@@ -55,7 +55,7 @@ class RouteFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
-        'nr' => 'int[]',
+        'nr' => 'string[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
         'earliest_date_time_since' => '\DateTime',
@@ -285,7 +285,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Gets nr
-     * @return int[]
+     * @return string[]
      */
     public function getNr()
     {
@@ -294,7 +294,7 @@ class RouteFiltersModel implements ArrayAccess
 
     /**
      * Sets nr
-     * @param int[] $nr Route nr
+     * @param string[] $nr Route nr
      * @return $this
      */
     public function setNr($nr)

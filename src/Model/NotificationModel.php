@@ -55,8 +55,8 @@ class NotificationModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'object_type' => 'object',
-        'object_type_name' => 'object',
+        'object_type' => 'int',
+        'object_type_name' => 'string',
         'object_id' => 'int',
         'notification_category_id' => 'int',
         'notification_category_name' => 'string',
@@ -77,7 +77,7 @@ class NotificationModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'object_type' => null,
+        'object_type' => 'int64',
         'object_type_name' => null,
         'object_id' => null,
         'notification_category_id' => null,
@@ -267,7 +267,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets object_type
-     * @return object
+     * @return int
      */
     public function getObjectType()
     {
@@ -276,7 +276,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets object_type
-     * @param object $object_type Object type IDs available for this notification
+     * @param int $object_type Object type ID
      * @return $this
      */
     public function setObjectType($object_type)
@@ -288,7 +288,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Gets object_type_name
-     * @return object
+     * @return string
      */
     public function getObjectTypeName()
     {
@@ -297,7 +297,7 @@ class NotificationModel implements ArrayAccess
 
     /**
      * Sets object_type_name
-     * @param object $object_type_name Object type names available for this notification
+     * @param string $object_type_name Object type name
      * @return $this
      */
     public function setObjectTypeName($object_type_name)

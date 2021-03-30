@@ -147,6 +147,7 @@ class ActivityModel implements ArrayAccess
         'zone_names' => 'string[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'stats' => '\BumbalClient\Model\ActivityStatsModel',
         'notes' => '\BumbalClient\Model\NoteModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'activity_created_at' => '\DateTime',
@@ -262,6 +263,7 @@ class ActivityModel implements ArrayAccess
         'zone_names' => null,
         'links' => null,
         'meta_data' => null,
+        'stats' => null,
         'notes' => null,
         'files' => null,
         'activity_created_at' => 'date-time',
@@ -387,6 +389,7 @@ class ActivityModel implements ArrayAccess
         'zone_names' => 'zone_names',
         'links' => 'links',
         'meta_data' => 'meta_data',
+        'stats' => 'stats',
         'notes' => 'notes',
         'files' => 'files',
         'activity_created_at' => 'activity_created_at',
@@ -503,6 +506,7 @@ class ActivityModel implements ArrayAccess
         'zone_names' => 'setZoneNames',
         'links' => 'setLinks',
         'meta_data' => 'setMetaData',
+        'stats' => 'setStats',
         'notes' => 'setNotes',
         'files' => 'setFiles',
         'activity_created_at' => 'setActivityCreatedAt',
@@ -619,6 +623,7 @@ class ActivityModel implements ArrayAccess
         'zone_names' => 'getZoneNames',
         'links' => 'getLinks',
         'meta_data' => 'getMetaData',
+        'stats' => 'getStats',
         'notes' => 'getNotes',
         'files' => 'getFiles',
         'activity_created_at' => 'getActivityCreatedAt',
@@ -906,6 +911,7 @@ class ActivityModel implements ArrayAccess
         $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['stats'] = isset($data['stats']) ? $data['stats'] : null;
         $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['activity_created_at'] = isset($data['activity_created_at']) ? $data['activity_created_at'] : null;
@@ -2960,6 +2966,27 @@ class ActivityModel implements ArrayAccess
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets stats
+     * @return \BumbalClient\Model\ActivityStatsModel
+     */
+    public function getStats()
+    {
+        return $this->container['stats'];
+    }
+
+    /**
+     * Sets stats
+     * @param \BumbalClient\Model\ActivityStatsModel $stats 
+     * @return $this
+     */
+    public function setStats($stats)
+    {
+        $this->container['stats'] = $stats;
 
         return $this;
     }

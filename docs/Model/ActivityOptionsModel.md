@@ -58,6 +58,7 @@ Name | Type | Description | Notes
 **include_payments** | **bool** |  | [optional] 
 **include_transactions** | **bool** |  | [optional] 
 **include_relations** | **bool** |  | [optional] 
+**include_stats** | **bool** |  | [optional] 
 **include_packagelines_for_whole_route_on_start_activity** | **bool** |  | [optional] 
 **include_activity_meta_data** | **bool** | Deprecated! Use include_meta_data instead | [optional] 
 **include_address_object** | **bool** | Deprecated! Use include_adderess or include_address_applied instead | [optional] 

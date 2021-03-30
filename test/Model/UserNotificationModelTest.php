@@ -141,6 +141,13 @@ class UserNotificationModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "object_type"
+     */
+    public function testPropertyObjectType()
+    {
+    }
+
+    /**
      * Test attribute "notification_updated_at"
      */
     public function testPropertyNotificationUpdatedAt()

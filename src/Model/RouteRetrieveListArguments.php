@@ -61,7 +61,8 @@ class RouteRetrieveListArguments implements ArrayAccess
         'search_text' => 'string',
         'sorting_column' => 'string',
         'sorting_direction' => 'string',
-        'as_list' => 'bool'
+        'as_list' => 'bool',
+        'count_only' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class RouteRetrieveListArguments implements ArrayAccess
         'search_text' => null,
         'sorting_column' => null,
         'sorting_direction' => null,
-        'as_list' => null
+        'as_list' => null,
+        'count_only' => null
     ];
 
     public static function swaggerTypes()
@@ -101,7 +103,8 @@ class RouteRetrieveListArguments implements ArrayAccess
         'search_text' => 'search_text',
         'sorting_column' => 'sorting_column',
         'sorting_direction' => 'sorting_direction',
-        'as_list' => 'as_list'
+        'as_list' => 'as_list',
+        'count_only' => 'count_only'
     ];
 
 
@@ -117,7 +120,8 @@ class RouteRetrieveListArguments implements ArrayAccess
         'search_text' => 'setSearchText',
         'sorting_column' => 'setSortingColumn',
         'sorting_direction' => 'setSortingDirection',
-        'as_list' => 'setAsList'
+        'as_list' => 'setAsList',
+        'count_only' => 'setCountOnly'
     ];
 
 
@@ -133,7 +137,8 @@ class RouteRetrieveListArguments implements ArrayAccess
         'search_text' => 'getSearchText',
         'sorting_column' => 'getSortingColumn',
         'sorting_direction' => 'getSortingDirection',
-        'as_list' => 'getAsList'
+        'as_list' => 'getAsList',
+        'count_only' => 'getCountOnly'
     ];
 
     public static function attributeMap()
@@ -213,6 +218,7 @@ class RouteRetrieveListArguments implements ArrayAccess
         $this->container['sorting_column'] = isset($data['sorting_column']) ? $data['sorting_column'] : null;
         $this->container['sorting_direction'] = isset($data['sorting_direction']) ? $data['sorting_direction'] : null;
         $this->container['as_list'] = isset($data['as_list']) ? $data['as_list'] : null;
+        $this->container['count_only'] = isset($data['count_only']) ? $data['count_only'] : null;
     }
 
     /**
@@ -446,6 +452,27 @@ class RouteRetrieveListArguments implements ArrayAccess
     public function setAsList($as_list)
     {
         $this->container['as_list'] = $as_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_only
+     * @return bool
+     */
+    public function getCountOnly()
+    {
+        return $this->container['count_only'];
+    }
+
+    /**
+     * Sets count_only
+     * @param bool $count_only 
+     * @return $this
+     */
+    public function setCountOnly($count_only)
+    {
+        $this->container['count_only'] = $count_only;
 
         return $this;
     }

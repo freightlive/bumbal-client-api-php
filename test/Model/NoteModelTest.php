@@ -85,13 +85,6 @@ class NoteModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "object_type"
-     */
-    public function testPropertyObjectType()
-    {
-    }
-
-    /**
      * Test attribute "object_type_name"
      */
     public function testPropertyObjectTypeName()
