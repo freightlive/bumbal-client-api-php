@@ -148,6 +148,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_co_driver_ids"
+     */
+    public function testPropertyIncludeCoDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "include_car"
      */
     public function testPropertyIncludeCar()

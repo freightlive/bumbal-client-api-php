@@ -64,6 +64,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver' => 'bool',
         'include_driver_links' => 'bool',
         'include_co_drivers' => 'bool',
+        'include_co_driver_ids' => 'bool',
         'include_car' => 'bool',
         'include_car_links' => 'bool',
         'include_vehicle' => 'bool',
@@ -99,6 +100,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver' => null,
         'include_driver_links' => null,
         'include_co_drivers' => null,
+        'include_co_driver_ids' => null,
         'include_car' => null,
         'include_car_links' => null,
         'include_vehicle' => null,
@@ -144,6 +146,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver' => 'include_driver',
         'include_driver_links' => 'include_driver_links',
         'include_co_drivers' => 'include_co_drivers',
+        'include_co_driver_ids' => 'include_co_driver_ids',
         'include_car' => 'include_car',
         'include_car_links' => 'include_car_links',
         'include_vehicle' => 'include_vehicle',
@@ -180,6 +183,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver' => 'setIncludeDriver',
         'include_driver_links' => 'setIncludeDriverLinks',
         'include_co_drivers' => 'setIncludeCoDrivers',
+        'include_co_driver_ids' => 'setIncludeCoDriverIds',
         'include_car' => 'setIncludeCar',
         'include_car_links' => 'setIncludeCarLinks',
         'include_vehicle' => 'setIncludeVehicle',
@@ -216,6 +220,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_driver' => 'getIncludeDriver',
         'include_driver_links' => 'getIncludeDriverLinks',
         'include_co_drivers' => 'getIncludeCoDrivers',
+        'include_co_driver_ids' => 'getIncludeCoDriverIds',
         'include_car' => 'getIncludeCar',
         'include_car_links' => 'getIncludeCarLinks',
         'include_vehicle' => 'getIncludeVehicle',
@@ -277,6 +282,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
         $this->container['include_driver_links'] = isset($data['include_driver_links']) ? $data['include_driver_links'] : null;
         $this->container['include_co_drivers'] = isset($data['include_co_drivers']) ? $data['include_co_drivers'] : null;
+        $this->container['include_co_driver_ids'] = isset($data['include_co_driver_ids']) ? $data['include_co_driver_ids'] : null;
         $this->container['include_car'] = isset($data['include_car']) ? $data['include_car'] : null;
         $this->container['include_car_links'] = isset($data['include_car_links']) ? $data['include_car_links'] : null;
         $this->container['include_vehicle'] = isset($data['include_vehicle']) ? $data['include_vehicle'] : null;
@@ -528,6 +534,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeCoDrivers($include_co_drivers)
     {
         $this->container['include_co_drivers'] = $include_co_drivers;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_co_driver_ids
+     * @return bool
+     */
+    public function getIncludeCoDriverIds()
+    {
+        return $this->container['include_co_driver_ids'];
+    }
+
+    /**
+     * Sets include_co_driver_ids
+     * @param bool $include_co_driver_ids 
+     * @return $this
+     */
+    public function setIncludeCoDriverIds($include_co_driver_ids)
+    {
+        $this->container['include_co_driver_ids'] = $include_co_driver_ids;
 
         return $this;
     }

@@ -428,6 +428,20 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "co_driver_ids"
+     */
+    public function testPropertyCoDriverIds()
+    {
+    }
+
+    /**
+     * Test attribute "co_drivers"
+     */
+    public function testPropertyCoDrivers()
+    {
+    }
+
+    /**
      * Test attribute "user_id"
      */
     public function testPropertyUserId()

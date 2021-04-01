@@ -53,6 +53,8 @@ Name | Type | Description | Notes
 **route_status_name** | **string** | Status Name of this Route | [optional] 
 **route_nr_of_stops** | **int** | Number of stops on this route | [optional] 
 **route_overdue** | **bool** | Route is overdue | [optional] 
+**co_driver_ids** | **int[]** | Unique Identifier(s) for co-drivers on route | [optional] 
+**co_drivers** | [**\BumbalClient\Model\UsersModel[]**](UsersModel.md) | list of co-drivers on route | [optional] 
 **user_id** | **int** | ID of the user who will execute this activity | [optional] 
 **driver_id** | **int** | Driver ID connected to this route/activity | [optional] 
 **driver_first_name** | **string** | Driver first name | [optional] 

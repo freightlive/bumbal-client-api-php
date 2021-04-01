@@ -148,6 +148,20 @@ class ActivityOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_co_drivers"
+     */
+    public function testPropertyIncludeCoDrivers()
+    {
+    }
+
+    /**
+     * Test attribute "include_co_driver_ids"
+     */
+    public function testPropertyIncludeCoDriverIds()
+    {
+    }
+
+    /**
      * Test attribute "include_compartment_ids"
      */
     public function testPropertyIncludeCompartmentIds()

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **include_driver** | **bool** |  | [optional] 
 **include_driver_links** | **bool** |  | [optional] 
 **include_co_drivers** | **bool** |  | [optional] 
+**include_co_driver_ids** | **bool** |  | [optional] 
 **include_car** | **bool** |  | [optional] 
 **include_car_links** | **bool** |  | [optional] 
 **include_vehicle** | **bool** |  | [optional] 

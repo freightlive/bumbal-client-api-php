@@ -64,6 +64,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'bool',
         'include_assignment_nr' => 'bool',
         'include_brand' => 'bool',
+        'include_co_drivers' => 'bool',
+        'include_co_driver_ids' => 'bool',
         'include_compartment_ids' => 'bool',
         'include_compartments' => 'bool',
         'include_driver' => 'bool',
@@ -139,6 +141,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => null,
         'include_assignment_nr' => null,
         'include_brand' => null,
+        'include_co_drivers' => null,
+        'include_co_driver_ids' => null,
         'include_compartment_ids' => null,
         'include_compartments' => null,
         'include_driver' => null,
@@ -224,6 +228,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'include_assignment',
         'include_assignment_nr' => 'include_assignment_nr',
         'include_brand' => 'include_brand',
+        'include_co_drivers' => 'include_co_drivers',
+        'include_co_driver_ids' => 'include_co_driver_ids',
         'include_compartment_ids' => 'include_compartment_ids',
         'include_compartments' => 'include_compartments',
         'include_driver' => 'include_driver',
@@ -300,6 +306,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'setIncludeAssignment',
         'include_assignment_nr' => 'setIncludeAssignmentNr',
         'include_brand' => 'setIncludeBrand',
+        'include_co_drivers' => 'setIncludeCoDrivers',
+        'include_co_driver_ids' => 'setIncludeCoDriverIds',
         'include_compartment_ids' => 'setIncludeCompartmentIds',
         'include_compartments' => 'setIncludeCompartments',
         'include_driver' => 'setIncludeDriver',
@@ -376,6 +384,8 @@ class ActivityOptionsModel implements ArrayAccess
         'include_assignment' => 'getIncludeAssignment',
         'include_assignment_nr' => 'getIncludeAssignmentNr',
         'include_brand' => 'getIncludeBrand',
+        'include_co_drivers' => 'getIncludeCoDrivers',
+        'include_co_driver_ids' => 'getIncludeCoDriverIds',
         'include_compartment_ids' => 'getIncludeCompartmentIds',
         'include_compartments' => 'getIncludeCompartments',
         'include_driver' => 'getIncludeDriver',
@@ -477,6 +487,8 @@ class ActivityOptionsModel implements ArrayAccess
         $this->container['include_assignment'] = isset($data['include_assignment']) ? $data['include_assignment'] : null;
         $this->container['include_assignment_nr'] = isset($data['include_assignment_nr']) ? $data['include_assignment_nr'] : null;
         $this->container['include_brand'] = isset($data['include_brand']) ? $data['include_brand'] : null;
+        $this->container['include_co_drivers'] = isset($data['include_co_drivers']) ? $data['include_co_drivers'] : null;
+        $this->container['include_co_driver_ids'] = isset($data['include_co_driver_ids']) ? $data['include_co_driver_ids'] : null;
         $this->container['include_compartment_ids'] = isset($data['include_compartment_ids']) ? $data['include_compartment_ids'] : null;
         $this->container['include_compartments'] = isset($data['include_compartments']) ? $data['include_compartments'] : null;
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
@@ -768,6 +780,48 @@ class ActivityOptionsModel implements ArrayAccess
     public function setIncludeBrand($include_brand)
     {
         $this->container['include_brand'] = $include_brand;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_co_drivers
+     * @return bool
+     */
+    public function getIncludeCoDrivers()
+    {
+        return $this->container['include_co_drivers'];
+    }
+
+    /**
+     * Sets include_co_drivers
+     * @param bool $include_co_drivers 
+     * @return $this
+     */
+    public function setIncludeCoDrivers($include_co_drivers)
+    {
+        $this->container['include_co_drivers'] = $include_co_drivers;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_co_driver_ids
+     * @return bool
+     */
+    public function getIncludeCoDriverIds()
+    {
+        return $this->container['include_co_driver_ids'];
+    }
+
+    /**
+     * Sets include_co_driver_ids
+     * @param bool $include_co_driver_ids 
+     * @return $this
+     */
+    public function setIncludeCoDriverIds($include_co_driver_ids)
+    {
+        $this->container['include_co_driver_ids'] = $include_co_driver_ids;
 
         return $this;
     }

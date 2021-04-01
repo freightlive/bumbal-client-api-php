@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **include_assignment** | **bool** |  | [optional] 
 **include_assignment_nr** | **bool** |  | [optional] 
 **include_brand** | **bool** |  | [optional] 
+**include_co_drivers** | **bool** |  | [optional] 
+**include_co_driver_ids** | **bool** |  | [optional] 
 **include_compartment_ids** | **bool** |  | [optional] 
 **include_compartments** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 
