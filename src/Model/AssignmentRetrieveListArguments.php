@@ -271,7 +271,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\AssignmentOptionsModel $options 
+     * @param \BumbalClient\Model\AssignmentOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -292,7 +292,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\AssignmentFiltersModel $filters 
+     * @param \BumbalClient\Model\AssignmentFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -313,7 +313,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -334,7 +334,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -355,7 +355,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -436,7 +436,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -457,7 +457,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

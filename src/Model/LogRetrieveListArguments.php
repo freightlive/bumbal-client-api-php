@@ -275,7 +275,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\LogOptionsModel $options 
+     * @param \BumbalClient\Model\LogOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -296,7 +296,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\LogFiltersModel $filters 
+     * @param \BumbalClient\Model\LogFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -419,7 +419,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)
@@ -440,7 +440,7 @@ class LogRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets count_only
-     * @param bool $count_only 
+     * @param bool $count_only
      * @return $this
      */
     public function setCountOnly($count_only)

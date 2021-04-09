@@ -265,7 +265,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param \BumbalClient\Model\NotificationCategoryOptionsModel $options 
+     * @param \BumbalClient\Model\NotificationCategoryOptionsModel $options
      * @return $this
      */
     public function setOptions($options)
@@ -286,7 +286,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \BumbalClient\Model\NotificationCategoryFiltersModel $filters 
+     * @param \BumbalClient\Model\NotificationCategoryFiltersModel $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -307,7 +307,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets limit
-     * @param int $limit 
+     * @param int $limit
      * @return $this
      */
     public function setLimit($limit)
@@ -328,7 +328,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets offset
-     * @param int $offset 
+     * @param int $offset
      * @return $this
      */
     public function setOffset($offset)
@@ -409,7 +409,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets search_text
-     * @param string $search_text 
+     * @param string $search_text
      * @return $this
      */
     public function setSearchText($search_text)
@@ -430,7 +430,7 @@ class NotificationCategoryRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets as_list
-     * @param bool $as_list 
+     * @param bool $as_list
      * @return $this
      */
     public function setAsList($as_list)

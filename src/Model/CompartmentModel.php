@@ -273,7 +273,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets trailer_id
-     * @param int $trailer_id 
+     * @param int $trailer_id
      * @return $this
      */
     public function setTrailerId($trailer_id)
@@ -294,7 +294,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets filled_capacities
-     * @param \BumbalClient\Model\FilledCapacityModel[] $filled_capacities 
+     * @param \BumbalClient\Model\FilledCapacityModel[] $filled_capacities
      * @return $this
      */
     public function setFilledCapacities($filled_capacities)
@@ -315,7 +315,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets trailer_link
-     * @param \BumbalClient\Model\LinkModel[] $trailer_link 
+     * @param \BumbalClient\Model\LinkModel[] $trailer_link
      * @return $this
      */
     public function setTrailerLink($trailer_link)
@@ -336,7 +336,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @param \BumbalClient\Model\LinkModel[] $links
      * @return $this
      */
     public function setLinks($links)
@@ -357,7 +357,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
      * @return $this
      */
     public function setMetaData($meta_data)
@@ -378,7 +378,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_created_by
-     * @param \BumbalClient\Model\UsersModel $compartment_created_by 
+     * @param \BumbalClient\Model\UsersModel $compartment_created_by
      * @return $this
      */
     public function setCompartmentCreatedBy($compartment_created_by)
@@ -399,7 +399,7 @@ class CompartmentModel implements ArrayAccess
 
     /**
      * Sets compartment_updated_by
-     * @param \BumbalClient\Model\UsersModel $compartment_updated_by 
+     * @param \BumbalClient\Model\UsersModel $compartment_updated_by
      * @return $this
      */
     public function setCompartmentUpdatedBy($compartment_updated_by)
