@@ -204,16 +204,16 @@ class VehicleModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
+     * Test attribute "meta_data"
      */
-    public function testPropertyLinks()
+    public function testPropertyMetaData()
     {
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "links"
      */
-    public function testPropertyMetaData()
+    public function testPropertyLinks()
     {
     }
 

@@ -288,7 +288,7 @@ class RoutesEtaFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_from
-     * @param \DateTime $date_time_from
+     * @param \DateTime $date_time_from 
      * @return $this
      */
     public function setDateTimeFrom($date_time_from)
@@ -309,7 +309,7 @@ class RoutesEtaFiltersModel implements ArrayAccess
 
     /**
      * Sets date_time_to
-     * @param \DateTime $date_time_to
+     * @param \DateTime $date_time_to 
      * @return $this
      */
     public function setDateTimeTo($date_time_to)
@@ -414,7 +414,7 @@ class RoutesEtaFiltersModel implements ArrayAccess
 
     /**
      * Sets updated_at
-     * @param \DateTime $updated_at
+     * @param \DateTime $updated_at 
      * @return $this
      */
     public function setUpdatedAt($updated_at)
@@ -477,7 +477,7 @@ class RoutesEtaFiltersModel implements ArrayAccess
 
     /**
      * Sets status_id
-     * @param int[] $status_id
+     * @param int[] $status_id 
      * @return $this
      */
     public function setStatusId($status_id)
@@ -498,7 +498,7 @@ class RoutesEtaFiltersModel implements ArrayAccess
 
     /**
      * Sets driver_id
-     * @param int[] $driver_id
+     * @param int[] $driver_id 
      * @return $this
      */
     public function setDriverId($driver_id)

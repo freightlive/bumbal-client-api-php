@@ -72,8 +72,8 @@ class VehicleModel implements ArrayAccess
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'tags' => '\BumbalClient\Model\TagModel[]',
-        'links' => '\BumbalClient\Model\LinkModel[]',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
+        'links' => '\BumbalClient\Model\LinkModel[]',
         'files' => '\BumbalClient\Model\FileModel[]',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
@@ -103,8 +103,8 @@ class VehicleModel implements ArrayAccess
         'applied_capacities' => null,
         'capacities' => null,
         'tags' => null,
-        'links' => null,
         'meta_data' => null,
+        'links' => null,
         'files' => null,
         'created_at' => 'date-time',
         'updated_at' => 'date-time',
@@ -144,8 +144,8 @@ class VehicleModel implements ArrayAccess
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'tags' => 'tags',
-        'links' => 'links',
         'meta_data' => 'meta_data',
+        'links' => 'links',
         'files' => 'files',
         'created_at' => 'created_at',
         'updated_at' => 'updated_at',
@@ -176,8 +176,8 @@ class VehicleModel implements ArrayAccess
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'tags' => 'setTags',
-        'links' => 'setLinks',
         'meta_data' => 'setMetaData',
+        'links' => 'setLinks',
         'files' => 'setFiles',
         'created_at' => 'setCreatedAt',
         'updated_at' => 'setUpdatedAt',
@@ -208,8 +208,8 @@ class VehicleModel implements ArrayAccess
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'tags' => 'getTags',
-        'links' => 'getLinks',
         'meta_data' => 'getMetaData',
+        'links' => 'getLinks',
         'files' => 'getFiles',
         'created_at' => 'getCreatedAt',
         'updated_at' => 'getUpdatedAt',
@@ -301,8 +301,8 @@ class VehicleModel implements ArrayAccess
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -702,7 +702,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets applied_capacities
-     * @param object $applied_capacities
+     * @param object $applied_capacities 
      * @return $this
      */
     public function setAppliedCapacities($applied_capacities)
@@ -723,7 +723,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets capacities
-     * @param \BumbalClient\Model\CapacityModel[] $capacities
+     * @param \BumbalClient\Model\CapacityModel[] $capacities 
      * @return $this
      */
     public function setCapacities($capacities)
@@ -744,33 +744,12 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets tags
-     * @param \BumbalClient\Model\TagModel[] $tags
+     * @param \BumbalClient\Model\TagModel[] $tags 
      * @return $this
      */
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets links
-     * @return \BumbalClient\Model\LinkModel[]
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
-     * @return $this
-     */
-    public function setLinks($links)
-    {
-        $this->container['links'] = $links;
 
         return $this;
     }
@@ -786,12 +765,33 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets meta_data
-     * @param \BumbalClient\Model\MetaDataModel[] $meta_data
+     * @param \BumbalClient\Model\MetaDataModel[] $meta_data 
      * @return $this
      */
     public function setMetaData($meta_data)
     {
         $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     * @return \BumbalClient\Model\LinkModel[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     * @param \BumbalClient\Model\LinkModel[] $links 
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -807,7 +807,7 @@ class VehicleModel implements ArrayAccess
 
     /**
      * Sets files
-     * @param \BumbalClient\Model\FileModel[] $files
+     * @param \BumbalClient\Model\FileModel[] $files 
      * @return $this
      */
     public function setFiles($files)

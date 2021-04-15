@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **include_zones** | **bool** |  | [optional] 
 **include_zone_names** | **bool** |  | [optional] 
 **include_notes** | **bool** |  | [optional] 
+**include_links** | **bool** |  | [optional] 
 **include_meta_data** | **bool** |  | [optional] 
 **include_applied_capacities** | **bool** |  | [optional] 
 

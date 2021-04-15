@@ -324,7 +324,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets user_link
-     * @param \BumbalClient\Model\LinkModel $user_link
+     * @param \BumbalClient\Model\LinkModel $user_link 
      * @return $this
      */
     public function setUserLink($user_link)
@@ -387,7 +387,7 @@ class DriverUnavailabilityModel implements ArrayAccess
 
     /**
      * Sets links
-     * @param \BumbalClient\Model\LinkModel[] $links
+     * @param \BumbalClient\Model\LinkModel[] $links 
      * @return $this
      */
     public function setLinks($links)

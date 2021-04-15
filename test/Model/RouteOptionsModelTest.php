@@ -267,6 +267,13 @@ class RouteOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
+
+    /**
      * Test attribute "include_meta_data"
      */
     public function testPropertyIncludeMetaData()

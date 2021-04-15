@@ -219,7 +219,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_activities
-     * @param bool $include_activities
+     * @param bool $include_activities 
      * @return $this
      */
     public function setIncludeActivities($include_activities)
@@ -240,7 +240,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data
+     * @param bool $include_meta_data 
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -261,7 +261,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_links
-     * @param bool $include_links
+     * @param bool $include_links 
      * @return $this
      */
     public function setIncludeLinks($include_links)
@@ -282,7 +282,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_files
-     * @param bool $include_files
+     * @param bool $include_files 
      * @return $this
      */
     public function setIncludeFiles($include_files)
@@ -303,7 +303,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_ids
-     * @param bool $include_tag_ids
+     * @param bool $include_tag_ids 
      * @return $this
      */
     public function setIncludeTagIds($include_tag_ids)
@@ -324,7 +324,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_names
-     * @param bool $include_tag_names
+     * @param bool $include_tag_names 
      * @return $this
      */
     public function setIncludeTagNames($include_tag_names)
@@ -345,7 +345,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_booking_account
-     * @param bool $include_booking_account
+     * @param bool $include_booking_account 
      * @return $this
      */
     public function setIncludeBookingAccount($include_booking_account)
@@ -366,7 +366,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_info
-     * @param bool $include_record_info
+     * @param bool $include_record_info 
      * @return $this
      */
     public function setIncludeRecordInfo($include_record_info)
@@ -387,7 +387,7 @@ class AssignmentOptionsModel implements ArrayAccess
 
     /**
      * Sets include_record_object
-     * @param bool $include_record_object
+     * @param bool $include_record_object 
      * @return $this
      */
     public function setIncludeRecordObject($include_record_object)

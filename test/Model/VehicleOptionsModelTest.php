@@ -78,9 +78,30 @@ class VehicleOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_vehicle_tags"
+     * Test attribute "include_tags"
      */
-    public function testPropertyIncludeVehicleTags()
+    public function testPropertyIncludeTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_meta_data"
+     */
+    public function testPropertyIncludeMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_updated_by_name"
+     */
+    public function testPropertyIncludeUpdatedByName()
     {
     }
 
@@ -99,9 +120,9 @@ class VehicleOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "include_updated_by_name"
+     * Test attribute "include_vehicle_tags"
      */
-    public function testPropertyIncludeUpdatedByName()
+    public function testPropertyIncludeVehicleTags()
     {
     }
 }

@@ -204,7 +204,7 @@ class ActivityEtaModel implements ArrayAccess
 
     /**
      * Sets eta_date_time
-     * @param \DateTime $eta_date_time
+     * @param \DateTime $eta_date_time 
      * @return $this
      */
     public function setEtaDateTime($eta_date_time)

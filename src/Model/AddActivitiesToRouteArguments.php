@@ -204,7 +204,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
 
     /**
      * Sets activities
-     * @param \BumbalClient\Model\ActivityForToRouteModel[] $activities
+     * @param \BumbalClient\Model\ActivityForToRouteModel[] $activities 
      * @return $this
      */
     public function setActivities($activities)
@@ -225,7 +225,7 @@ class AddActivitiesToRouteArguments implements ArrayAccess
 
     /**
      * Sets options
-     * @param map[string,bool] $options
+     * @param map[string,bool] $options 
      * @return $this
      */
     public function setOptions($options)

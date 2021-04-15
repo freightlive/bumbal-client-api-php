@@ -195,7 +195,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_meta_data
-     * @param bool $include_meta_data
+     * @param bool $include_meta_data 
      * @return $this
      */
     public function setIncludeMetaData($include_meta_data)
@@ -216,7 +216,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_tag_type_name
-     * @param bool $include_tag_type_name
+     * @param bool $include_tag_type_name 
      * @return $this
      */
     public function setIncludeTagTypeName($include_tag_type_name)
@@ -237,7 +237,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_tags
-     * @param bool $include_file_tags
+     * @param bool $include_file_tags 
      * @return $this
      */
     public function setIncludeFileTags($include_file_tags)
@@ -258,7 +258,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_record_info
-     * @param bool $include_file_record_info
+     * @param bool $include_file_record_info 
      * @return $this
      */
     public function setIncludeFileRecordInfo($include_file_record_info)
@@ -279,7 +279,7 @@ class FileOptionsModel implements ArrayAccess
 
     /**
      * Sets include_file_base64
-     * @param bool $include_file_base64
+     * @param bool $include_file_base64 
      * @return $this
      */
     public function setIncludeFileBase64($include_file_base64)

@@ -54,10 +54,13 @@ class VehicleOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_vehicle_tags' => 'bool',
+        'include_tags' => 'bool',
+        'include_links' => 'bool',
+        'include_meta_data' => 'bool',
+        'include_updated_by_name' => 'bool',
         'include_vehicle_meta_data' => 'bool',
         'include_vehicle_links' => 'bool',
-        'include_updated_by_name' => 'bool'
+        'include_vehicle_tags' => 'bool'
     ];
 
     /**
@@ -65,10 +68,13 @@ class VehicleOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_vehicle_tags' => null,
+        'include_tags' => null,
+        'include_links' => null,
+        'include_meta_data' => null,
+        'include_updated_by_name' => null,
         'include_vehicle_meta_data' => null,
         'include_vehicle_links' => null,
-        'include_updated_by_name' => null
+        'include_vehicle_tags' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +92,13 @@ class VehicleOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_vehicle_tags' => 'include_vehicle_tags',
+        'include_tags' => 'include_tags',
+        'include_links' => 'include_links',
+        'include_meta_data' => 'include_meta_data',
+        'include_updated_by_name' => 'include_updated_by_name',
         'include_vehicle_meta_data' => 'include_vehicle_meta_data',
         'include_vehicle_links' => 'include_vehicle_links',
-        'include_updated_by_name' => 'include_updated_by_name'
+        'include_vehicle_tags' => 'include_vehicle_tags'
     ];
 
 
@@ -98,10 +107,13 @@ class VehicleOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_vehicle_tags' => 'setIncludeVehicleTags',
+        'include_tags' => 'setIncludeTags',
+        'include_links' => 'setIncludeLinks',
+        'include_meta_data' => 'setIncludeMetaData',
+        'include_updated_by_name' => 'setIncludeUpdatedByName',
         'include_vehicle_meta_data' => 'setIncludeVehicleMetaData',
         'include_vehicle_links' => 'setIncludeVehicleLinks',
-        'include_updated_by_name' => 'setIncludeUpdatedByName'
+        'include_vehicle_tags' => 'setIncludeVehicleTags'
     ];
 
 
@@ -110,10 +122,13 @@ class VehicleOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_vehicle_tags' => 'getIncludeVehicleTags',
+        'include_tags' => 'getIncludeTags',
+        'include_links' => 'getIncludeLinks',
+        'include_meta_data' => 'getIncludeMetaData',
+        'include_updated_by_name' => 'getIncludeUpdatedByName',
         'include_vehicle_meta_data' => 'getIncludeVehicleMetaData',
         'include_vehicle_links' => 'getIncludeVehicleLinks',
-        'include_updated_by_name' => 'getIncludeUpdatedByName'
+        'include_vehicle_tags' => 'getIncludeVehicleTags'
     ];
 
     public static function attributeMap()
@@ -147,10 +162,13 @@ class VehicleOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_vehicle_tags'] = isset($data['include_vehicle_tags']) ? $data['include_vehicle_tags'] : null;
+        $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
+        $this->container['include_links'] = isset($data['include_links']) ? $data['include_links'] : null;
+        $this->container['include_meta_data'] = isset($data['include_meta_data']) ? $data['include_meta_data'] : null;
+        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
         $this->container['include_vehicle_meta_data'] = isset($data['include_vehicle_meta_data']) ? $data['include_vehicle_meta_data'] : null;
         $this->container['include_vehicle_links'] = isset($data['include_vehicle_links']) ? $data['include_vehicle_links'] : null;
-        $this->container['include_updated_by_name'] = isset($data['include_updated_by_name']) ? $data['include_updated_by_name'] : null;
+        $this->container['include_vehicle_tags'] = isset($data['include_vehicle_tags']) ? $data['include_vehicle_tags'] : null;
     }
 
     /**
@@ -179,22 +197,85 @@ class VehicleOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_vehicle_tags
+     * Gets include_tags
      * @return bool
      */
-    public function getIncludeVehicleTags()
+    public function getIncludeTags()
     {
-        return $this->container['include_vehicle_tags'];
+        return $this->container['include_tags'];
     }
 
     /**
-     * Sets include_vehicle_tags
-     * @param bool $include_vehicle_tags
+     * Sets include_tags
+     * @param bool $include_tags 
      * @return $this
      */
-    public function setIncludeVehicleTags($include_vehicle_tags)
+    public function setIncludeTags($include_tags)
     {
-        $this->container['include_vehicle_tags'] = $include_vehicle_tags;
+        $this->container['include_tags'] = $include_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_links
+     * @return bool
+     */
+    public function getIncludeLinks()
+    {
+        return $this->container['include_links'];
+    }
+
+    /**
+     * Sets include_links
+     * @param bool $include_links 
+     * @return $this
+     */
+    public function setIncludeLinks($include_links)
+    {
+        $this->container['include_links'] = $include_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_meta_data
+     * @return bool
+     */
+    public function getIncludeMetaData()
+    {
+        return $this->container['include_meta_data'];
+    }
+
+    /**
+     * Sets include_meta_data
+     * @param bool $include_meta_data 
+     * @return $this
+     */
+    public function setIncludeMetaData($include_meta_data)
+    {
+        $this->container['include_meta_data'] = $include_meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_updated_by_name
+     * @return bool
+     */
+    public function getIncludeUpdatedByName()
+    {
+        return $this->container['include_updated_by_name'];
+    }
+
+    /**
+     * Sets include_updated_by_name
+     * @param bool $include_updated_by_name 
+     * @return $this
+     */
+    public function setIncludeUpdatedByName($include_updated_by_name)
+    {
+        $this->container['include_updated_by_name'] = $include_updated_by_name;
 
         return $this;
     }
@@ -210,7 +291,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_vehicle_meta_data
-     * @param bool $include_vehicle_meta_data
+     * @param bool $include_vehicle_meta_data Deprecated! use include_meta_data
      * @return $this
      */
     public function setIncludeVehicleMetaData($include_vehicle_meta_data)
@@ -231,7 +312,7 @@ class VehicleOptionsModel implements ArrayAccess
 
     /**
      * Sets include_vehicle_links
-     * @param bool $include_vehicle_links
+     * @param bool $include_vehicle_links Deprecated! use include_links
      * @return $this
      */
     public function setIncludeVehicleLinks($include_vehicle_links)
@@ -242,22 +323,22 @@ class VehicleOptionsModel implements ArrayAccess
     }
 
     /**
-     * Gets include_updated_by_name
+     * Gets include_vehicle_tags
      * @return bool
      */
-    public function getIncludeUpdatedByName()
+    public function getIncludeVehicleTags()
     {
-        return $this->container['include_updated_by_name'];
+        return $this->container['include_vehicle_tags'];
     }
 
     /**
-     * Sets include_updated_by_name
-     * @param bool $include_updated_by_name
+     * Sets include_vehicle_tags
+     * @param bool $include_vehicle_tags Deprecated! use include_tags
      * @return $this
      */
-    public function setIncludeUpdatedByName($include_updated_by_name)
+    public function setIncludeVehicleTags($include_vehicle_tags)
     {
-        $this->container['include_updated_by_name'] = $include_updated_by_name;
+        $this->container['include_vehicle_tags'] = $include_vehicle_tags;
 
         return $this;
     }
