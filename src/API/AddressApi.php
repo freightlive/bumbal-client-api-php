@@ -88,6 +88,93 @@ class AddressApi
     }
 
     /**
+     * Operation deleteAddress
+     *
+     * Delete an address
+     *
+     * @param int $address_id ID of the address to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function deleteAddress($address_id)
+    {
+        list($response) = $this->deleteAddressWithHttpInfo($address_id);
+        return $response;
+    }
+
+    /**
+     * Operation deleteAddressWithHttpInfo
+     *
+     * Delete an address
+     *
+     * @param int $address_id ID of the address to delete (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteAddressWithHttpInfo($address_id)
+    {
+        // verify the required parameter 'address_id' is set
+        if ($address_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $address_id when calling deleteAddress');
+        }
+        // parse inputs
+        $resourcePath = "/address/{addressId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($address_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "addressId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($address_id),
+                $resourcePath
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/address/{addressId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveAddress
      *
      * Retrieve a Address
@@ -407,6 +494,100 @@ class AddressApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/address/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateAddress
+     *
+     * Update a address
+     *
+     * @param int $address_id ID of address to update (required)
+     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function updateAddress($address_id, $body = null)
+    {
+        list($response) = $this->updateAddressWithHttpInfo($address_id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation updateAddressWithHttpInfo
+     *
+     * Update a address
+     *
+     * @param int $address_id ID of address to update (required)
+     * @param \BumbalClient\Model\AddressModel $body Address object that needs to be updated (optional)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateAddressWithHttpInfo($address_id, $body = null)
+    {
+        // verify the required parameter 'address_id' is set
+        if ($address_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $address_id when calling updateAddress');
+        }
+        // parse inputs
+        $resourcePath = "/address/{addressId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // path params
+        if ($address_id !== null) {
+            $resourcePath = str_replace(
+                "{" . "addressId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($address_id),
+                $resourcePath
+            );
+        }
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/address/{addressId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

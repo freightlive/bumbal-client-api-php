@@ -61,6 +61,7 @@ class AssignmentOptionsModel implements ArrayAccess
         'include_tag_ids' => 'bool',
         'include_tag_names' => 'bool',
         'include_booking_account' => 'bool',
+        'include_party_name' => 'bool',
         'include_record_info' => 'bool',
         'include_record_object' => 'bool'
     ];
@@ -77,6 +78,7 @@ class AssignmentOptionsModel implements ArrayAccess
         'include_tag_ids' => null,
         'include_tag_names' => null,
         'include_booking_account' => null,
+        'include_party_name' => null,
         'include_record_info' => null,
         'include_record_object' => null
     ];
@@ -103,6 +105,7 @@ class AssignmentOptionsModel implements ArrayAccess
         'include_tag_ids' => 'include_tag_ids',
         'include_tag_names' => 'include_tag_names',
         'include_booking_account' => 'include_booking_account',
+        'include_party_name' => 'include_party_name',
         'include_record_info' => 'include_record_info',
         'include_record_object' => 'include_record_object'
     ];
@@ -120,6 +123,7 @@ class AssignmentOptionsModel implements ArrayAccess
         'include_tag_ids' => 'setIncludeTagIds',
         'include_tag_names' => 'setIncludeTagNames',
         'include_booking_account' => 'setIncludeBookingAccount',
+        'include_party_name' => 'setIncludePartyName',
         'include_record_info' => 'setIncludeRecordInfo',
         'include_record_object' => 'setIncludeRecordObject'
     ];
@@ -137,6 +141,7 @@ class AssignmentOptionsModel implements ArrayAccess
         'include_tag_ids' => 'getIncludeTagIds',
         'include_tag_names' => 'getIncludeTagNames',
         'include_booking_account' => 'getIncludeBookingAccount',
+        'include_party_name' => 'getIncludePartyName',
         'include_record_info' => 'getIncludeRecordInfo',
         'include_record_object' => 'getIncludeRecordObject'
     ];
@@ -179,6 +184,7 @@ class AssignmentOptionsModel implements ArrayAccess
         $this->container['include_tag_ids'] = isset($data['include_tag_ids']) ? $data['include_tag_ids'] : null;
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_booking_account'] = isset($data['include_booking_account']) ? $data['include_booking_account'] : null;
+        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
         $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
         $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
     }
@@ -351,6 +357,27 @@ class AssignmentOptionsModel implements ArrayAccess
     public function setIncludeBookingAccount($include_booking_account)
     {
         $this->container['include_booking_account'] = $include_booking_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_party_name
+     * @return bool
+     */
+    public function getIncludePartyName()
+    {
+        return $this->container['include_party_name'];
+    }
+
+    /**
+     * Sets include_party_name
+     * @param bool $include_party_name 
+     * @return $this
+     */
+    public function setIncludePartyName($include_party_name)
+    {
+        $this->container['include_party_name'] = $include_party_name;
 
         return $this;
     }

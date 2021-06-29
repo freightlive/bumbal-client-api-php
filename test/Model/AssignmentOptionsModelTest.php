@@ -127,6 +127,13 @@ class AssignmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_party_name"
+     */
+    public function testPropertyIncludePartyName()
+    {
+    }
+
+    /**
      * Test attribute "include_record_info"
      */
     public function testPropertyIncludeRecordInfo()

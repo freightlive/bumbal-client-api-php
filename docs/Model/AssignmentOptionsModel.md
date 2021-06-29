@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **include_tag_ids** | **bool** |  | [optional] 
 **include_tag_names** | **bool** |  | [optional] 
 **include_booking_account** | **bool** |  | [optional] 
+**include_party_name** | **bool** |  | [optional] 
 **include_record_info** | **bool** |  | [optional] 
 **include_record_object** | **bool** |  | [optional] 
 

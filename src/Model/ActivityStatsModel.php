@@ -55,9 +55,10 @@ class ActivityStatsModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'nr_of_package_lines' => 'int',
-        'nr_of_bundled_lines' => 'int',
+        'nr_of_bundled_activities' => 'int',
         'nr_of_transactions' => 'int',
-        'nr_of_notes' => 'int'
+        'nr_of_notes' => 'int',
+        'nr_of_irregularities' => 'int'
     ];
 
     /**
@@ -66,9 +67,10 @@ class ActivityStatsModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'nr_of_package_lines' => 'int64',
-        'nr_of_bundled_lines' => 'int64',
+        'nr_of_bundled_activities' => 'int64',
         'nr_of_transactions' => 'int64',
-        'nr_of_notes' => 'int64'
+        'nr_of_notes' => 'int64',
+        'nr_of_irregularities' => 'int64'
     ];
 
     public static function swaggerTypes()
@@ -87,9 +89,10 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'nr_of_package_lines' => 'nr_of_package_lines',
-        'nr_of_bundled_lines' => 'nr_of_bundled_lines',
+        'nr_of_bundled_activities' => 'nr_of_bundled_activities',
         'nr_of_transactions' => 'nr_of_transactions',
-        'nr_of_notes' => 'nr_of_notes'
+        'nr_of_notes' => 'nr_of_notes',
+        'nr_of_irregularities' => 'nr_of_irregularities'
     ];
 
 
@@ -99,9 +102,10 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $setters = [
         'nr_of_package_lines' => 'setNrOfPackageLines',
-        'nr_of_bundled_lines' => 'setNrOfBundledLines',
+        'nr_of_bundled_activities' => 'setNrOfBundledActivities',
         'nr_of_transactions' => 'setNrOfTransactions',
-        'nr_of_notes' => 'setNrOfNotes'
+        'nr_of_notes' => 'setNrOfNotes',
+        'nr_of_irregularities' => 'setNrOfIrregularities'
     ];
 
 
@@ -111,9 +115,10 @@ class ActivityStatsModel implements ArrayAccess
      */
     protected static $getters = [
         'nr_of_package_lines' => 'getNrOfPackageLines',
-        'nr_of_bundled_lines' => 'getNrOfBundledLines',
+        'nr_of_bundled_activities' => 'getNrOfBundledActivities',
         'nr_of_transactions' => 'getNrOfTransactions',
-        'nr_of_notes' => 'getNrOfNotes'
+        'nr_of_notes' => 'getNrOfNotes',
+        'nr_of_irregularities' => 'getNrOfIrregularities'
     ];
 
     public static function attributeMap()
@@ -148,9 +153,10 @@ class ActivityStatsModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['nr_of_package_lines'] = isset($data['nr_of_package_lines']) ? $data['nr_of_package_lines'] : null;
-        $this->container['nr_of_bundled_lines'] = isset($data['nr_of_bundled_lines']) ? $data['nr_of_bundled_lines'] : null;
+        $this->container['nr_of_bundled_activities'] = isset($data['nr_of_bundled_activities']) ? $data['nr_of_bundled_activities'] : null;
         $this->container['nr_of_transactions'] = isset($data['nr_of_transactions']) ? $data['nr_of_transactions'] : null;
         $this->container['nr_of_notes'] = isset($data['nr_of_notes']) ? $data['nr_of_notes'] : null;
+        $this->container['nr_of_irregularities'] = isset($data['nr_of_irregularities']) ? $data['nr_of_irregularities'] : null;
     }
 
     /**
@@ -200,22 +206,22 @@ class ActivityStatsModel implements ArrayAccess
     }
 
     /**
-     * Gets nr_of_bundled_lines
+     * Gets nr_of_bundled_activities
      * @return int
      */
-    public function getNrOfBundledLines()
+    public function getNrOfBundledActivities()
     {
-        return $this->container['nr_of_bundled_lines'];
+        return $this->container['nr_of_bundled_activities'];
     }
 
     /**
-     * Sets nr_of_bundled_lines
-     * @param int $nr_of_bundled_lines nr of bundled activities
+     * Sets nr_of_bundled_activities
+     * @param int $nr_of_bundled_activities nr of bundled activities
      * @return $this
      */
-    public function setNrOfBundledLines($nr_of_bundled_lines)
+    public function setNrOfBundledActivities($nr_of_bundled_activities)
     {
-        $this->container['nr_of_bundled_lines'] = $nr_of_bundled_lines;
+        $this->container['nr_of_bundled_activities'] = $nr_of_bundled_activities;
 
         return $this;
     }
@@ -258,6 +264,27 @@ class ActivityStatsModel implements ArrayAccess
     public function setNrOfNotes($nr_of_notes)
     {
         $this->container['nr_of_notes'] = $nr_of_notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets nr_of_irregularities
+     * @return int
+     */
+    public function getNrOfIrregularities()
+    {
+        return $this->container['nr_of_irregularities'];
+    }
+
+    /**
+     * Sets nr_of_irregularities
+     * @param int $nr_of_irregularities nr of irregularities
+     * @return $this
+     */
+    public function setNrOfIrregularities($nr_of_irregularities)
+    {
+        $this->container['nr_of_irregularities'] = $nr_of_irregularities;
 
         return $this;
     }

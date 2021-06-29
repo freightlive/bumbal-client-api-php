@@ -85,9 +85,9 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "nr_of_bundled_lines"
+     * Test attribute "nr_of_bundled_activities"
      */
-    public function testPropertyNrOfBundledLines()
+    public function testPropertyNrOfBundledActivities()
     {
     }
 
@@ -102,6 +102,13 @@ class ActivityStatsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "nr_of_notes"
      */
     public function testPropertyNrOfNotes()
+    {
+    }
+
+    /**
+     * Test attribute "nr_of_irregularities"
+     */
+    public function testPropertyNrOfIrregularities()
     {
     }
 }

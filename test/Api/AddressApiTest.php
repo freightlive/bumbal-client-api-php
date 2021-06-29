@@ -73,6 +73,16 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for deleteAddress
+     *
+     * Delete an address.
+     *
+     */
+    public function testDeleteAddress()
+    {
+    }
+
+    /**
      * Test case for retrieveAddress
      *
      * Retrieve a Address.
@@ -109,6 +119,16 @@ class AddressApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetAddress()
+    {
+    }
+
+    /**
+     * Test case for updateAddress
+     *
+     * Update a address.
+     *
+     */
+    public function testUpdateAddress()
     {
     }
 }
