@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityTypeModel
+ * UomListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CapacityTypeModel Class Doc Comment
+ * UomListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityTypeModel implements ArrayAccess
+class UomListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,17 @@ class CapacityTypeModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CapacityTypeModel';
+    protected static $swaggerModelName = 'UomListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'properties' => 'string[]',
-        'uom_id' => 'string',
-        'uom_name' => 'string',
-        'uom' => '\BumbalClient\Model\UomModel',
-        'values_uom' => '\BumbalClient\Model\UomModel'
+        'items' => '\BumbalClient\Model\UomModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -68,13 +65,10 @@ class CapacityTypeModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'name' => null,
-        'properties' => null,
-        'uom_id' => null,
-        'uom_name' => null,
-        'uom' => null,
-        'values_uom' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -92,13 +86,10 @@ class CapacityTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'properties' => 'properties',
-        'uom_id' => 'uom_id',
-        'uom_name' => 'uom_name',
-        'uom' => 'uom',
-        'values_uom' => 'values_uom'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -107,13 +98,10 @@ class CapacityTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'properties' => 'setProperties',
-        'uom_id' => 'setUomId',
-        'uom_name' => 'setUomName',
-        'uom' => 'setUom',
-        'values_uom' => 'setValuesUom'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -122,13 +110,10 @@ class CapacityTypeModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'properties' => 'getProperties',
-        'uom_id' => 'getUomId',
-        'uom_name' => 'getUomName',
-        'uom' => 'getUom',
-        'values_uom' => 'getValuesUom'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -162,13 +147,10 @@ class CapacityTypeModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['uom_id'] = isset($data['uom_id']) ? $data['uom_id'] : null;
-        $this->container['uom_name'] = isset($data['uom_name']) ? $data['uom_name'] : null;
-        $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
-        $this->container['values_uom'] = isset($data['values_uom']) ? $data['values_uom'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -197,148 +179,85 @@ class CapacityTypeModel implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets items
+     * @return \BumbalClient\Model\UomModel[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     * @param \BumbalClient\Model\UomModel[] $items 
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_filtered
      * @return int
      */
-    public function getId()
+    public function getCountFiltered()
     {
-        return $this->container['id'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets id
-     * @param int $id Unique ID
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setId($id)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['id'] = $id;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets name
-     * @return string
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getName()
+    public function getCountUnfiltered()
     {
-        return $this->container['name'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets name
-     * @param string $name name of capacity type
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setName($name)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['name'] = $name;
+        $this->container['count_unfiltered'] = $count_unfiltered;
 
         return $this;
     }
 
     /**
-     * Gets properties
-     * @return string[]
+     * Gets count_limited
+     * @return int
      */
-    public function getProperties()
+    public function getCountLimited()
     {
-        return $this->container['properties'];
+        return $this->container['count_limited'];
     }
 
     /**
-     * Sets properties
-     * @param string[] $properties extra properties of capacity type
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
      * @return $this
      */
-    public function setProperties($properties)
+    public function setCountLimited($count_limited)
     {
-        $this->container['properties'] = $properties;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom_id
-     * @return string
-     */
-    public function getUomId()
-    {
-        return $this->container['uom_id'];
-    }
-
-    /**
-     * Sets uom_id
-     * @param string $uom_id Unit of Measurement ID
-     * @return $this
-     */
-    public function setUomId($uom_id)
-    {
-        $this->container['uom_id'] = $uom_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom_name
-     * @return string
-     */
-    public function getUomName()
-    {
-        return $this->container['uom_name'];
-    }
-
-    /**
-     * Sets uom_name
-     * @param string $uom_name Unit of Measurement Name
-     * @return $this
-     */
-    public function setUomName($uom_name)
-    {
-        $this->container['uom_name'] = $uom_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom
-     * @return \BumbalClient\Model\UomModel
-     */
-    public function getUom()
-    {
-        return $this->container['uom'];
-    }
-
-    /**
-     * Sets uom
-     * @param \BumbalClient\Model\UomModel $uom 
-     * @return $this
-     */
-    public function setUom($uom)
-    {
-        $this->container['uom'] = $uom;
-
-        return $this;
-    }
-
-    /**
-     * Gets values_uom
-     * @return \BumbalClient\Model\UomModel
-     */
-    public function getValuesUom()
-    {
-        return $this->container['values_uom'];
-    }
-
-    /**
-     * Sets values_uom
-     * @param \BumbalClient\Model\UomModel $values_uom 
-     * @return $this
-     */
-    public function setValuesUom($values_uom)
-    {
-        $this->container['values_uom'] = $values_uom;
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

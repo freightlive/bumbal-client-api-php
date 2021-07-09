@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityTypeModel
+ * UomFiltersModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * CapacityTypeModel Class Doc Comment
+ * UomFiltersModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityTypeModel implements ArrayAccess
+class UomFiltersModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,20 +47,15 @@ class CapacityTypeModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'CapacityTypeModel';
+    protected static $swaggerModelName = 'UomFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'properties' => 'string[]',
-        'uom_id' => 'string',
-        'uom_name' => 'string',
-        'uom' => '\BumbalClient\Model\UomModel',
-        'values_uom' => '\BumbalClient\Model\UomModel'
+        'id' => 'int[]',
+        'name' => 'string[]'
     ];
 
     /**
@@ -68,13 +63,8 @@ class CapacityTypeModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int64',
-        'name' => null,
-        'properties' => null,
-        'uom_id' => null,
-        'uom_name' => null,
-        'uom' => null,
-        'values_uom' => null
+        'id' => null,
+        'name' => null
     ];
 
     public static function swaggerTypes()
@@ -93,12 +83,7 @@ class CapacityTypeModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name',
-        'properties' => 'properties',
-        'uom_id' => 'uom_id',
-        'uom_name' => 'uom_name',
-        'uom' => 'uom',
-        'values_uom' => 'values_uom'
+        'name' => 'name'
     ];
 
 
@@ -108,12 +93,7 @@ class CapacityTypeModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName',
-        'properties' => 'setProperties',
-        'uom_id' => 'setUomId',
-        'uom_name' => 'setUomName',
-        'uom' => 'setUom',
-        'values_uom' => 'setValuesUom'
+        'name' => 'setName'
     ];
 
 
@@ -123,12 +103,7 @@ class CapacityTypeModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName',
-        'properties' => 'getProperties',
-        'uom_id' => 'getUomId',
-        'uom_name' => 'getUomName',
-        'uom' => 'getUom',
-        'values_uom' => 'getValuesUom'
+        'name' => 'getName'
     ];
 
     public static function attributeMap()
@@ -164,11 +139,6 @@ class CapacityTypeModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
-        $this->container['uom_id'] = isset($data['uom_id']) ? $data['uom_id'] : null;
-        $this->container['uom_name'] = isset($data['uom_name']) ? $data['uom_name'] : null;
-        $this->container['uom'] = isset($data['uom']) ? $data['uom'] : null;
-        $this->container['values_uom'] = isset($data['values_uom']) ? $data['values_uom'] : null;
     }
 
     /**
@@ -198,7 +168,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Gets id
-     * @return int
+     * @return int[]
      */
     public function getId()
     {
@@ -207,7 +177,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Unique ID
+     * @param int[] $id 
      * @return $this
      */
     public function setId($id)
@@ -219,7 +189,7 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Gets name
-     * @return string
+     * @return string[]
      */
     public function getName()
     {
@@ -228,117 +198,12 @@ class CapacityTypeModel implements ArrayAccess
 
     /**
      * Sets name
-     * @param string $name name of capacity type
+     * @param string[] $name name
      * @return $this
      */
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets properties
-     * @return string[]
-     */
-    public function getProperties()
-    {
-        return $this->container['properties'];
-    }
-
-    /**
-     * Sets properties
-     * @param string[] $properties extra properties of capacity type
-     * @return $this
-     */
-    public function setProperties($properties)
-    {
-        $this->container['properties'] = $properties;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom_id
-     * @return string
-     */
-    public function getUomId()
-    {
-        return $this->container['uom_id'];
-    }
-
-    /**
-     * Sets uom_id
-     * @param string $uom_id Unit of Measurement ID
-     * @return $this
-     */
-    public function setUomId($uom_id)
-    {
-        $this->container['uom_id'] = $uom_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom_name
-     * @return string
-     */
-    public function getUomName()
-    {
-        return $this->container['uom_name'];
-    }
-
-    /**
-     * Sets uom_name
-     * @param string $uom_name Unit of Measurement Name
-     * @return $this
-     */
-    public function setUomName($uom_name)
-    {
-        $this->container['uom_name'] = $uom_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets uom
-     * @return \BumbalClient\Model\UomModel
-     */
-    public function getUom()
-    {
-        return $this->container['uom'];
-    }
-
-    /**
-     * Sets uom
-     * @param \BumbalClient\Model\UomModel $uom 
-     * @return $this
-     */
-    public function setUom($uom)
-    {
-        $this->container['uom'] = $uom;
-
-        return $this;
-    }
-
-    /**
-     * Gets values_uom
-     * @return \BumbalClient\Model\UomModel
-     */
-    public function getValuesUom()
-    {
-        return $this->container['values_uom'];
-    }
-
-    /**
-     * Sets values_uom
-     * @param \BumbalClient\Model\UomModel $values_uom 
-     * @return $this
-     */
-    public function setValuesUom($values_uom)
-    {
-        $this->container['values_uom'] = $values_uom;
 
         return $this;
     }

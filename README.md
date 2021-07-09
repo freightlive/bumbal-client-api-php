@@ -335,6 +335,7 @@ Class | Method | HTTP request | Description
 *UnsuccessfulreasonApi* | [**retrieveListUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrievelistunsuccessfulreason) | **PUT** /unsuccessful-reason | Retrieve List of UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**retrieveUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#retrieveunsuccessfulreason) | **GET** /unsuccessful-reason/{unsuccessful-reasonId} | Retrieve a UnsuccessfulReason
 *UnsuccessfulreasonApi* | [**updateUnsuccessfulReason**](docs/Api/UnsuccessfulreasonApi.md#updateunsuccessfulreason) | **PUT** /unsuccessful-reason/{unsuccessful-reasonId} | Update a specific UnsuccessfulReason object
+*UomApi* | [**retrieveListUom**](docs/Api/UomApi.md#retrievelistuom) | **PUT** /uom | Retrieve List of Uom&#39;s
 *UsersApi* | [**checkCredentialsUser**](docs/Api/UsersApi.md#checkcredentialsuser) | **GET** /users/check-credentials | Checks the credentials of a User
 *UsersApi* | [**retrieveListUserNotification**](docs/Api/UsersApi.md#retrievelistusernotification) | **PUT** /users/notification | Retrieve List of UserNotification
 *UsersApi* | [**retrieveListUsers**](docs/Api/UsersApi.md#retrievelistusers) | **PUT** /users | Retrieve List of Users
@@ -739,8 +740,12 @@ Class | Method | HTTP request | Description
  - [UnsuccessfulReasonOptionsModel](docs/Model/UnsuccessfulReasonOptionsModel.md)
  - [UnsuccessfulReasonRetrieveListArguments](docs/Model/UnsuccessfulReasonRetrieveListArguments.md)
  - [UnsuccessfulResponseModel](docs/Model/UnsuccessfulResponseModel.md)
+ - [UomFiltersModel](docs/Model/UomFiltersModel.md)
  - [UomGroupModel](docs/Model/UomGroupModel.md)
+ - [UomListResponse](docs/Model/UomListResponse.md)
  - [UomModel](docs/Model/UomModel.md)
+ - [UomOptionsModel](docs/Model/UomOptionsModel.md)
+ - [UomRetrieveListArguments](docs/Model/UomRetrieveListArguments.md)
  - [UserNotificationFiltersModel](docs/Model/UserNotificationFiltersModel.md)
  - [UserNotificationListResponse](docs/Model/UserNotificationListResponse.md)
  - [UserNotificationModel](docs/Model/UserNotificationModel.md)

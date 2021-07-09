@@ -1,6 +1,6 @@
 <?php
 /**
- * CapacityTypeModelTest
+ * UomRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * CapacityTypeModelTest Class Doc Comment
+ * UomRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description CapacityTypeModel
+// * @description UomRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
+class UomRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,58 +71,58 @@ class CapacityTypeModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CapacityTypeModel"
+     * Test "UomRetrieveListArguments"
      */
-    public function testCapacityTypeModel()
+    public function testUomRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "options"
      */
-    public function testPropertyId()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "filters"
      */
-    public function testPropertyName()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "properties"
+     * Test attribute "limit"
      */
-    public function testPropertyProperties()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "uom_id"
+     * Test attribute "offset"
      */
-    public function testPropertyUomId()
+    public function testPropertyOffset()
     {
     }
 
     /**
-     * Test attribute "uom_name"
+     * Test attribute "sorting_column"
      */
-    public function testPropertyUomName()
+    public function testPropertySortingColumn()
     {
     }
 
     /**
-     * Test attribute "uom"
+     * Test attribute "sorting_direction"
      */
-    public function testPropertyUom()
+    public function testPropertySortingDirection()
     {
     }
 
     /**
-     * Test attribute "values_uom"
+     * Test attribute "as_list"
      */
-    public function testPropertyValuesUom()
+    public function testPropertyAsList()
     {
     }
 }
