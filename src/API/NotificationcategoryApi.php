@@ -94,7 +94,7 @@ class NotificationcategoryApi
      *
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse12
+     * @return \BumbalClient\Model\ApiResponse11
      */
     public function createNotificationCategory($body = null)
     {
@@ -109,7 +109,7 @@ class NotificationcategoryApi
      *
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse12, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse11, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNotificationCategoryWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class NotificationcategoryApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse12',
+                '\BumbalClient\Model\ApiResponse11',
                 '/notification-category'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse12', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse11', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse12', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse11', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -186,7 +186,7 @@ class NotificationcategoryApi
      *
      * @param int $notification_category_id ID of NotificationCategory to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse10
+     * @return \BumbalClient\Model\ApiResponse9
      */
     public function deleteNotificationCategory($notification_category_id)
     {
@@ -201,7 +201,7 @@ class NotificationcategoryApi
      *
      * @param int $notification_category_id ID of NotificationCategory to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse10, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse9, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNotificationCategoryWithHttpInfo($notification_category_id)
     {
@@ -249,15 +249,15 @@ class NotificationcategoryApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse10',
+                '\BumbalClient\Model\ApiResponse9',
                 '/notification-category/{notification-categoryId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse10', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse9', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse10', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse9', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -269,7 +269,7 @@ class NotificationcategoryApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse11', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse10', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -496,7 +496,7 @@ class NotificationcategoryApi
      *
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse13
+     * @return \BumbalClient\Model\ApiResponse12
      */
     public function setNotificationCategory($body = null)
     {
@@ -511,7 +511,7 @@ class NotificationcategoryApi
      *
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be set (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse13, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse12, HTTP status code, HTTP response headers (array of strings)
      */
     public function setNotificationCategoryWithHttpInfo($body = null)
     {
@@ -552,15 +552,15 @@ class NotificationcategoryApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse13',
+                '\BumbalClient\Model\ApiResponse12',
                 '/notification-category/set'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse13', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse12', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse13', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse12', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -589,7 +589,7 @@ class NotificationcategoryApi
      * @param int $notification_category_id ID of the NotificationCategory object to update (required)
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse9
+     * @return \BumbalClient\Model\ApiResponse8
      */
     public function updateNotificationCategory($notification_category_id, $body = null)
     {
@@ -605,7 +605,7 @@ class NotificationcategoryApi
      * @param int $notification_category_id ID of the NotificationCategory object to update (required)
      * @param \BumbalClient\Model\NotificationCategoryModel $body NotificationCategory object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse9, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse8, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNotificationCategoryWithHttpInfo($notification_category_id, $body = null)
     {
@@ -658,15 +658,15 @@ class NotificationcategoryApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse9',
+                '\BumbalClient\Model\ApiResponse8',
                 '/notification-category/{notification-categoryId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse9', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse8', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse9', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse8', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

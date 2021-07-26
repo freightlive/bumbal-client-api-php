@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createMetaData**
-> \BumbalClient\Model\ApiResponse8 createMetaData($body)
+> \BumbalClient\Model\ApiResponse createMetaData($body)
 
 Add a new MetaData
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse8**](../Model/ApiResponse8.md)
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

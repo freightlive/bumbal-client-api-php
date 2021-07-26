@@ -94,7 +94,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel $body QuestionnaireTemplateQuestionOption object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse42
+     * @return \BumbalClient\Model\ApiResponse41
      */
     public function createQuestionnaireTemplateQuestionOption($body = null)
     {
@@ -109,7 +109,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel $body QuestionnaireTemplateQuestionOption object that needs to be created (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse42, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse41, HTTP status code, HTTP response headers (array of strings)
      */
     public function createQuestionnaireTemplateQuestionOptionWithHttpInfo($body = null)
     {
@@ -150,15 +150,15 @@ class QuestionnairetemplatequestionoptionApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse42',
+                '\BumbalClient\Model\ApiResponse41',
                 '/questionnaire-template-question-option'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse42', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse41', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse42', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse41', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -186,7 +186,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param int $questionnaire_template_question_option_id ID of QuestionnaireTemplateQuestionOption to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse40
+     * @return \BumbalClient\Model\ApiResponse39
      */
     public function deleteQuestionnaireTemplateQuestionOption($questionnaire_template_question_option_id)
     {
@@ -201,7 +201,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param int $questionnaire_template_question_option_id ID of QuestionnaireTemplateQuestionOption to delete (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse40, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse39, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteQuestionnaireTemplateQuestionOptionWithHttpInfo($questionnaire_template_question_option_id)
     {
@@ -249,15 +249,15 @@ class QuestionnairetemplatequestionoptionApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse40',
+                '\BumbalClient\Model\ApiResponse39',
                 '/questionnaire-template-question-option/{questionnaire-template-question-optionId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse40', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse39', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse40', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse39', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -269,7 +269,7 @@ class QuestionnairetemplatequestionoptionApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse41', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse40', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -289,7 +289,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param int $questionnaire_template_question_id ID of QuestionnaireTemplateQuestion (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse40
+     * @return \BumbalClient\Model\ApiResponse39
      */
     public function getPossibleFollowUpQuestions($questionnaire_template_question_id)
     {
@@ -304,7 +304,7 @@ class QuestionnairetemplatequestionoptionApi
      *
      * @param int $questionnaire_template_question_id ID of QuestionnaireTemplateQuestion (required)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse40, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse39, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPossibleFollowUpQuestionsWithHttpInfo($questionnaire_template_question_id)
     {
@@ -352,15 +352,15 @@ class QuestionnairetemplatequestionoptionApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse40',
+                '\BumbalClient\Model\ApiResponse39',
                 '/questionnaire-template-question-option/get-possible-followup-questions'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse40', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse39', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse40', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse39', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:
@@ -372,7 +372,7 @@ class QuestionnairetemplatequestionoptionApi
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse43', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse42', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 405:
@@ -668,7 +668,7 @@ class QuestionnairetemplatequestionoptionApi
      * @param int $notification_id ID of the QuestionnaireTemplateQuestionOption object to update (required)
      * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel $body QuestionnaireTemplateQuestionOption object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return \BumbalClient\Model\ApiResponse39
+     * @return \BumbalClient\Model\ApiResponse38
      */
     public function updateQuestionnaireTemplateQuestionOption($notification_id, $body = null)
     {
@@ -684,7 +684,7 @@ class QuestionnairetemplatequestionoptionApi
      * @param int $notification_id ID of the QuestionnaireTemplateQuestionOption object to update (required)
      * @param \BumbalClient\Model\QuestionnaireTemplateQuestionOptionModel $body QuestionnaireTemplateQuestionOption object that needs to be updated (optional)
      * @throws \BumbalClient\ApiException on non-2xx response
-     * @return array of \BumbalClient\Model\ApiResponse39, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BumbalClient\Model\ApiResponse38, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateQuestionnaireTemplateQuestionOptionWithHttpInfo($notification_id, $body = null)
     {
@@ -737,15 +737,15 @@ class QuestionnairetemplatequestionoptionApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\BumbalClient\Model\ApiResponse39',
+                '\BumbalClient\Model\ApiResponse38',
                 '/questionnaire-template-question-option/{questionnaire-template-question-optionId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse39', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse38', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse39', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse38', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 401:

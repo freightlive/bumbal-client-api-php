@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **setUserNotification**
-> \BumbalClient\Model\ApiResponse55 setUserNotification($body)
+> \BumbalClient\Model\ApiResponse54 setUserNotification($body)
 
 Create a new UserNotification or update an existing one
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse55**](../Model/ApiResponse55.md)
+[**\BumbalClient\Model\ApiResponse54**](../Model/ApiResponse54.md)
 
 ### Authorization
 

@@ -175,6 +175,90 @@ class ActivityApi
     }
 
     /**
+     * Operation lockActivity
+     *
+     * Lock activities which satisfy set filters
+     *
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function lockActivity($filters)
+    {
+        list($response) = $this->lockActivityWithHttpInfo($filters);
+        return $response;
+    }
+
+    /**
+     * Operation lockActivityWithHttpInfo
+     *
+     * Lock activities which satisfy set filters
+     *
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function lockActivityWithHttpInfo($filters)
+    {
+        // verify the required parameter 'filters' is set
+        if ($filters === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $filters when calling lockActivity');
+        }
+        // parse inputs
+        $resourcePath = "/activity/lock";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($filters)) {
+            $_tempBody = $filters;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/activity/lock'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation retrieveActivity
      *
      * Find activity by ID
@@ -700,6 +784,90 @@ class ActivityApi
                 $headerParams,
                 '\BumbalClient\Model\ApiResponse',
                 '/activity/set'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\BumbalClient\Model\ApiResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation unlockActivity
+     *
+     * Unlock activities which satisfy set filters
+     *
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return \BumbalClient\Model\ApiResponse
+     */
+    public function unlockActivity($filters)
+    {
+        list($response) = $this->unlockActivityWithHttpInfo($filters);
+        return $response;
+    }
+
+    /**
+     * Operation unlockActivityWithHttpInfo
+     *
+     * Unlock activities which satisfy set filters
+     *
+     * @param \BumbalClient\Model\ActivityFiltersModel $filters Request Filters (required)
+     * @throws \BumbalClient\ApiException on non-2xx response
+     * @return array of \BumbalClient\Model\ApiResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function unlockActivityWithHttpInfo($filters)
+    {
+        // verify the required parameter 'filters' is set
+        if ($filters === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $filters when calling unlockActivity');
+        }
+        // parse inputs
+        $resourcePath = "/activity/unlock";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json', 'application/xml']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json', 'application/xml']);
+
+        // body params
+        $_tempBody = null;
+        if (isset($filters)) {
+            $_tempBody = $filters;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('ApiKey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['ApiKey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\BumbalClient\Model\ApiResponse',
+                '/activity/unlock'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\BumbalClient\Model\ApiResponse', $httpHeader), $statusCode, $httpHeader];

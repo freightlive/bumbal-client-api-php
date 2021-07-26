@@ -81,9 +81,11 @@ All URIs are relative to *http://localhost/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ActivityApi* | [**deleteActivity**](docs/Api/ActivityApi.md#deleteactivity) | **DELETE** /activity/{activityId} | Delete an activity
+*ActivityApi* | [**lockActivity**](docs/Api/ActivityApi.md#lockactivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 *ActivityApi* | [**retrieveActivity**](docs/Api/ActivityApi.md#retrieveactivity) | **GET** /activity/{activityId} | Find activity by ID
 *ActivityApi* | [**retrieveListActivity**](docs/Api/ActivityApi.md#retrievelistactivity) | **PUT** /activity | Retrieve List of Activities
 *ActivityApi* | [**setActivity**](docs/Api/ActivityApi.md#setactivity) | **POST** /activity/set | Set (create or update) an Activity
+*ActivityApi* | [**unlockActivity**](docs/Api/ActivityApi.md#unlockactivity) | **POST** /activity/unlock | Unlock activities which satisfy set filters
 *ActivityApi* | [**unsuccessful**](docs/Api/ActivityApi.md#unsuccessful) | **POST** /activity/unsuccessful | Report an unsuccessful activity
 *ActivityApi* | [**updateActivity**](docs/Api/ActivityApi.md#updateactivity) | **PUT** /activity/{activityId} | Update a activity
 *ActivitytypeApi* | [**retrieveActivityType**](docs/Api/ActivitytypeApi.md#retrieveactivitytype) | **GET** /activity-type/{activityTypeId} | Find ActivityType by ID
@@ -204,7 +206,6 @@ Class | Method | HTTP request | Description
 *PlannerApi* | [**changeActivitySequence**](docs/Api/PlannerApi.md#changeactivitysequence) | **POST** /planner/change-activity-sequence | Change Activity Sequence
 *PlannerApi* | [**checkAvailability**](docs/Api/PlannerApi.md#checkavailability) | **POST** /planner/check-availability | check availability in planning for a certain set of activity properties
 *PlannerApi* | [**checkAvailabilityResult**](docs/Api/PlannerApi.md#checkavailabilityresult) | **POST** /planner/check-availability-result | Fetch current result for a checkAvailability Request. This could be done, in progress or cancelled.
-*PlannerApi* | [**lockActivities**](docs/Api/PlannerApi.md#lockactivities) | **POST** /planner/lock-activities | Lock Activities on Route
 *PlannerApi* | [**plannerAddActivitiesToRoute**](docs/Api/PlannerApi.md#planneraddactivitiestoroute) | **POST** /planner/add-activities-to-route | Add Activities to Route
 *PlannerApi* | [**removeActivitiesFromRoute**](docs/Api/PlannerApi.md#removeactivitiesfromroute) | **POST** /planner/remove-activities-from-route | Remove Activities From Route
 *PortalApi* | [**createPortal**](docs/Api/PortalApi.md#createportal) | **POST** /portal | Add a new Portal
@@ -451,7 +452,6 @@ Class | Method | HTTP request | Description
  - [ApiResponse55](docs/Model/ApiResponse55.md)
  - [ApiResponse56](docs/Model/ApiResponse56.md)
  - [ApiResponse57](docs/Model/ApiResponse57.md)
- - [ApiResponse58](docs/Model/ApiResponse58.md)
  - [ApiResponse6](docs/Model/ApiResponse6.md)
  - [ApiResponse7](docs/Model/ApiResponse7.md)
  - [ApiResponse8](docs/Model/ApiResponse8.md)

@@ -5,9 +5,11 @@ All URIs are relative to *http://localhost/api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteActivity**](ActivityApi.md#deleteActivity) | **DELETE** /activity/{activityId} | Delete an activity
+[**lockActivity**](ActivityApi.md#lockActivity) | **POST** /activity/lock | Lock activities which satisfy set filters
 [**retrieveActivity**](ActivityApi.md#retrieveActivity) | **GET** /activity/{activityId} | Find activity by ID
 [**retrieveListActivity**](ActivityApi.md#retrieveListActivity) | **PUT** /activity | Retrieve List of Activities
 [**setActivity**](ActivityApi.md#setActivity) | **POST** /activity/set | Set (create or update) an Activity
+[**unlockActivity**](ActivityApi.md#unlockActivity) | **POST** /activity/unlock | Unlock activities which satisfy set filters
 [**unsuccessful**](ActivityApi.md#unsuccessful) | **POST** /activity/unsuccessful | Report an unsuccessful activity
 [**updateActivity**](ActivityApi.md#updateActivity) | **PUT** /activity/{activityId} | Update a activity
 
@@ -46,6 +48,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_id** | **int**| ID of the activity to delete |
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **lockActivity**
+> \BumbalClient\Model\ApiResponse lockActivity($filters)
+
+Lock activities which satisfy set filters
+
+Lock activities which satisfy set filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$filters = new \BumbalClient\Model\ActivityFiltersModel(); // \BumbalClient\Model\ActivityFiltersModel | Request Filters
+
+try {
+    $result = $api_instance->lockActivity($filters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->lockActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filters** | [**\BumbalClient\Model\ActivityFiltersModel**](../Model/ActivityFiltersModel.md)| Request Filters |
 
 ### Return type
 
@@ -254,6 +306,56 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\BumbalClient\Model\ActivityModel**](../Model/ActivityModel.md)| Activity object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **unlockActivity**
+> \BumbalClient\Model\ApiResponse unlockActivity($filters)
+
+Unlock activities which satisfy set filters
+
+Unlock activities which satisfy set filters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\ActivityApi();
+$filters = new \BumbalClient\Model\ActivityFiltersModel(); // \BumbalClient\Model\ActivityFiltersModel | Request Filters
+
+try {
+    $result = $api_instance->unlockActivity($filters);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ActivityApi->unlockActivity: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filters** | [**\BumbalClient\Model\ActivityFiltersModel**](../Model/ActivityFiltersModel.md)| Request Filters |
 
 ### Return type
 

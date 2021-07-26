@@ -133,16 +133,6 @@ class PlannerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for lockActivities
-     *
-     * Lock Activities on Route.
-     *
-     */
-    public function testLockActivities()
-    {
-    }
-
-    /**
      * Test case for plannerAddActivitiesToRoute
      *
      * Add Activities to Route.

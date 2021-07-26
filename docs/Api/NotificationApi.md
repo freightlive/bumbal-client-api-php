@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createNotification**
-> \BumbalClient\Model\ApiResponse21 createNotification($body)
+> \BumbalClient\Model\ApiResponse20 createNotification($body)
 
 Add a new Notification
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse21**](../Model/ApiResponse21.md)
+[**\BumbalClient\Model\ApiResponse20**](../Model/ApiResponse20.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteNotification**
-> \BumbalClient\Model\ApiResponse18 deleteNotification($notification_id)
+> \BumbalClient\Model\ApiResponse17 deleteNotification($notification_id)
 
 Delete an Notification entry
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse18**](../Model/ApiResponse18.md)
+[**\BumbalClient\Model\ApiResponse17**](../Model/ApiResponse17.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateNotification**
-> \BumbalClient\Model\ApiResponse17 updateNotification($notification_id, $body)
+> \BumbalClient\Model\ApiResponse16 updateNotification($notification_id, $body)
 
 Update a specific Notification object
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BumbalClient\Model\ApiResponse17**](../Model/ApiResponse17.md)
+[**\BumbalClient\Model\ApiResponse16**](../Model/ApiResponse16.md)
 
 ### Authorization
 

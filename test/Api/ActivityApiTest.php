@@ -83,6 +83,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for lockActivity
+     *
+     * Lock activities which satisfy set filters.
+     *
+     */
+    public function testLockActivity()
+    {
+    }
+
+    /**
      * Test case for retrieveActivity
      *
      * Find activity by ID.
@@ -109,6 +119,16 @@ class ActivityApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSetActivity()
+    {
+    }
+
+    /**
+     * Test case for unlockActivity
+     *
+     * Unlock activities which satisfy set filters.
+     *
+     */
+    public function testUnlockActivity()
     {
     }
 
