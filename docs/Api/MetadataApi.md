@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteMetaData**](MetadataApi.md#deleteMetaData) | **DELETE** /metadata/{metadataId} | Delete a MetaData entry
 [**retrieveListMetaData**](MetadataApi.md#retrieveListMetaData) | **PUT** /metadata | Retrieve List of MetaData
 [**retrieveMetaData**](MetadataApi.md#retrieveMetaData) | **GET** /metadata/{metadataId} | Retrieve a MetaData
+[**setMetaData**](MetadataApi.md#setMetaData) | **POST** /metadata/set | Set (create or update) a MetaData record
 [**updateMetaData**](MetadataApi.md#updateMetaData) | **PUT** /metadata/{metadataId} | Update a specific MetaData object
 
 
@@ -203,6 +204,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\BumbalClient\Model\MetaDataModel**](../Model/MetaDataModel.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setMetaData**
+> \BumbalClient\Model\ApiResponse setMetaData($body)
+
+Set (create or update) a MetaData record
+
+Set (create or update) a meta data record. If id or name is set in the data, and a corresponding meta data record is found in Bumbal, an update will be performed.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+BumbalClient\Configuration::getDefaultConfiguration()->setApiKey('ApiKey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// BumbalClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApiKey', 'Bearer');
+
+$api_instance = new BumbalClient\Api\MetadataApi();
+$body = new \BumbalClient\Model\MetaDataModel(); // \BumbalClient\Model\MetaDataModel | MetaData object
+
+try {
+    $result = $api_instance->setMetaData($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetadataApi->setMetaData: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\BumbalClient\Model\MetaDataModel**](../Model/MetaDataModel.md)| MetaData object | [optional]
+
+### Return type
+
+[**\BumbalClient\Model\ApiResponse**](../Model/ApiResponse.md)
 
 ### Authorization
 

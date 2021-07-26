@@ -113,6 +113,16 @@ class MetadataApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for setMetaData
+     *
+     * Set (create or update) a MetaData record.
+     *
+     */
+    public function testSetMetaData()
+    {
+    }
+
+    /**
      * Test case for updateMetaData
      *
      * Update a specific MetaData object.

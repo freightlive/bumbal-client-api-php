@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
 *MetadataApi* | [**deleteMetaData**](docs/Api/MetadataApi.md#deletemetadata) | **DELETE** /metadata/{metadataId} | Delete a MetaData entry
 *MetadataApi* | [**retrieveListMetaData**](docs/Api/MetadataApi.md#retrievelistmetadata) | **PUT** /metadata | Retrieve List of MetaData
 *MetadataApi* | [**retrieveMetaData**](docs/Api/MetadataApi.md#retrievemetadata) | **GET** /metadata/{metadataId} | Retrieve a MetaData
+*MetadataApi* | [**setMetaData**](docs/Api/MetadataApi.md#setmetadata) | **POST** /metadata/set | Set (create or update) a MetaData record
 *MetadataApi* | [**updateMetaData**](docs/Api/MetadataApi.md#updatemetadata) | **PUT** /metadata/{metadataId} | Update a specific MetaData object
 *NoteApi* | [**deleteNote**](docs/Api/NoteApi.md#deletenote) | **DELETE** /note/{noteId} | Delete an note
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes

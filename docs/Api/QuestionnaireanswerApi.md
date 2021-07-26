@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 Set (create or update) a QuestionnaireAnswer
 
-Set (create or update) a d=QuestionnaireAnswer. If id or links are set in the data, and a corresponding QuestionnaireAnswer is found in Bumbal, an update will be performed.
+Set (create or update) a QuestionnaireAnswer. If id or links are set in the data, and a corresponding QuestionnaireAnswer is found in Bumbal, an update will be performed.
 
 ### Example
 ```php
