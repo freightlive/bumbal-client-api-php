@@ -55,7 +55,6 @@ class EquipmentModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'equipment_type' => 'string',
         'equipment_type_id' => 'int',
         'equipment_type_name' => 'string',
         'info' => 'string',
@@ -75,7 +74,6 @@ class EquipmentModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'int64',
-        'equipment_type' => null,
         'equipment_type_id' => null,
         'equipment_type_name' => null,
         'info' => null,
@@ -105,7 +103,6 @@ class EquipmentModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'equipment_type' => 'equipment_type',
         'equipment_type_id' => 'equipment_type_id',
         'equipment_type_name' => 'equipment_type_name',
         'info' => 'info',
@@ -126,7 +123,6 @@ class EquipmentModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'equipment_type' => 'setEquipmentType',
         'equipment_type_id' => 'setEquipmentTypeId',
         'equipment_type_name' => 'setEquipmentTypeName',
         'info' => 'setInfo',
@@ -147,7 +143,6 @@ class EquipmentModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'equipment_type' => 'getEquipmentType',
         'equipment_type_id' => 'getEquipmentTypeId',
         'equipment_type_name' => 'getEquipmentTypeName',
         'info' => 'getInfo',
@@ -176,27 +171,11 @@ class EquipmentModel implements ArrayAccess
         return self::$getters;
     }
 
-    const EQUIPMENT_TYPE_CAR = 'car';
-    const EQUIPMENT_TYPE_TRAILER = 'trailer';
-    const EQUIPMENT_TYPE_OTHER = 'other';
     const EQUIPMENT_TYPE_NAME_CAR = 'car';
     const EQUIPMENT_TYPE_NAME_TRAILER = 'trailer';
     const EQUIPMENT_TYPE_NAME_OTHER = 'other';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getEquipmentTypeAllowableValues()
-    {
-        return [
-            self::EQUIPMENT_TYPE_CAR,
-            self::EQUIPMENT_TYPE_TRAILER,
-            self::EQUIPMENT_TYPE_OTHER,
-        ];
-    }
     
     /**
      * Gets allowable values of the enum
@@ -225,7 +204,6 @@ class EquipmentModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
         $this->container['equipment_type_id'] = isset($data['equipment_type_id']) ? $data['equipment_type_id'] : null;
         $this->container['equipment_type_name'] = isset($data['equipment_type_name']) ? $data['equipment_type_name'] : null;
         $this->container['info'] = isset($data['info']) ? $data['info'] : null;
@@ -248,14 +226,6 @@ class EquipmentModel implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = $this->getEquipmentTypeAllowableValues();
-        if (!in_array($this->container['equipment_type'], $allowed_values)) {
-            $invalid_properties[] = sprintf(
-                "invalid value for 'equipment_type', must be one of '%s'",
-                implode("', '", $allowed_values)
-            );
-        }
-
         $allowed_values = $this->getEquipmentTypeNameAllowableValues();
         if (!in_array($this->container['equipment_type_name'], $allowed_values)) {
             $invalid_properties[] = sprintf(
@@ -276,10 +246,6 @@ class EquipmentModel implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = $this->getEquipmentTypeAllowableValues();
-        if (!in_array($this->container['equipment_type'], $allowed_values)) {
-            return false;
-        }
         $allowed_values = $this->getEquipmentTypeNameAllowableValues();
         if (!in_array($this->container['equipment_type_name'], $allowed_values)) {
             return false;
@@ -305,36 +271,6 @@ class EquipmentModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets equipment_type
-     * @return string
-     */
-    public function getEquipmentType()
-    {
-        return $this->container['equipment_type'];
-    }
-
-    /**
-     * Sets equipment_type
-     * @param string $equipment_type Equipment Type
-     * @return $this
-     */
-    public function setEquipmentType($equipment_type)
-    {
-        $allowed_values = $this->getEquipmentTypeAllowableValues();
-        if (!is_null($equipment_type) && !in_array($equipment_type, $allowed_values)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'equipment_type', must be one of '%s'",
-                    implode("', '", $allowed_values)
-                )
-            );
-        }
-        $this->container['equipment_type'] = $equipment_type;
 
         return $this;
     }

@@ -57,6 +57,7 @@ class AddressModel implements ArrayAccess
         'id' => 'int',
         'address_id' => 'int',
         'party_id' => 'int',
+        'party_name' => 'string',
         'code' => 'string',
         'summary' => 'string',
         'full_name' => 'string',
@@ -98,6 +99,7 @@ class AddressModel implements ArrayAccess
         'id' => 'int64',
         'address_id' => 'int64',
         'party_id' => null,
+        'party_name' => null,
         'code' => null,
         'summary' => null,
         'full_name' => null,
@@ -149,6 +151,7 @@ class AddressModel implements ArrayAccess
         'id' => 'id',
         'address_id' => 'address_id',
         'party_id' => 'party_id',
+        'party_name' => 'party_name',
         'code' => 'code',
         'summary' => 'summary',
         'full_name' => 'full_name',
@@ -191,6 +194,7 @@ class AddressModel implements ArrayAccess
         'id' => 'setId',
         'address_id' => 'setAddressId',
         'party_id' => 'setPartyId',
+        'party_name' => 'setPartyName',
         'code' => 'setCode',
         'summary' => 'setSummary',
         'full_name' => 'setFullName',
@@ -233,6 +237,7 @@ class AddressModel implements ArrayAccess
         'id' => 'getId',
         'address_id' => 'getAddressId',
         'party_id' => 'getPartyId',
+        'party_name' => 'getPartyName',
         'code' => 'getCode',
         'summary' => 'getSummary',
         'full_name' => 'getFullName',
@@ -300,6 +305,7 @@ class AddressModel implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['address_id'] = isset($data['address_id']) ? $data['address_id'] : null;
         $this->container['party_id'] = isset($data['party_id']) ? $data['party_id'] : null;
+        $this->container['party_name'] = isset($data['party_name']) ? $data['party_name'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
@@ -417,6 +423,27 @@ class AddressModel implements ArrayAccess
     public function setPartyId($party_id)
     {
         $this->container['party_id'] = $party_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets party_name
+     * @return string
+     */
+    public function getPartyName()
+    {
+        return $this->container['party_name'];
+    }
+
+    /**
+     * Sets party_name
+     * @param string $party_name 
+     * @return $this
+     */
+    public function setPartyName($party_name)
+    {
+        $this->container['party_name'] = $party_name;
 
         return $this;
     }

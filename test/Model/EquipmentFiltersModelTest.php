@@ -85,9 +85,9 @@ class EquipmentFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "equipment_type"
+     * Test attribute "equipment_type_id"
      */
-    public function testPropertyEquipmentType()
+    public function testPropertyEquipmentTypeId()
     {
     }
 }

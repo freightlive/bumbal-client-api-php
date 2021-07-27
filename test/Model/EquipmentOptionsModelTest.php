@@ -78,6 +78,13 @@ class EquipmentOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_equipment_type_name"
+     */
+    public function testPropertyIncludeEquipmentTypeName()
+    {
+    }
+
+    /**
      * Test attribute "include_equipment_tags"
      */
     public function testPropertyIncludeEquipmentTags()

@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**include_equipment_type_name** | **bool** |  | [optional] 
 **include_equipment_tags** | **bool** |  | [optional] 
 **include_tag_type_name** | **bool** |  | [optional] 
 **include_equipment_meta_data** | **bool** |  | [optional] 

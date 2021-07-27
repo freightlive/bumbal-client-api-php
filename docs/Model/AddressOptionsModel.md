@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **include_emails** | **bool** |  | [optional] 
 **include_address_tags** | **bool** |  | [optional] 
 **include_party_info** | **bool** |  | [optional] 
+**include_party_name** | **bool** |  | [optional] 
 **include_address_type_names** | **bool** |  | [optional] 
 **include_address_meta_data** | **bool** |  | [optional] 
 **include_address_files** | **bool** |  | [optional] 

@@ -106,6 +106,13 @@ class AddressOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_party_name"
+     */
+    public function testPropertyIncludePartyName()
+    {
+    }
+
+    /**
      * Test attribute "include_address_type_names"
      */
     public function testPropertyIncludeAddressTypeNames()

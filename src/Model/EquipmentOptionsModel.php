@@ -54,6 +54,7 @@ class EquipmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'include_equipment_type_name' => 'bool',
         'include_equipment_tags' => 'bool',
         'include_tag_type_name' => 'bool',
         'include_equipment_meta_data' => 'bool',
@@ -71,6 +72,7 @@ class EquipmentOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
+        'include_equipment_type_name' => null,
         'include_equipment_tags' => null,
         'include_tag_type_name' => null,
         'include_equipment_meta_data' => null,
@@ -98,6 +100,7 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'include_equipment_type_name' => 'include_equipment_type_name',
         'include_equipment_tags' => 'include_equipment_tags',
         'include_tag_type_name' => 'include_tag_type_name',
         'include_equipment_meta_data' => 'include_equipment_meta_data',
@@ -116,6 +119,7 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'include_equipment_type_name' => 'setIncludeEquipmentTypeName',
         'include_equipment_tags' => 'setIncludeEquipmentTags',
         'include_tag_type_name' => 'setIncludeTagTypeName',
         'include_equipment_meta_data' => 'setIncludeEquipmentMetaData',
@@ -134,6 +138,7 @@ class EquipmentOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'include_equipment_type_name' => 'getIncludeEquipmentTypeName',
         'include_equipment_tags' => 'getIncludeEquipmentTags',
         'include_tag_type_name' => 'getIncludeTagTypeName',
         'include_equipment_meta_data' => 'getIncludeEquipmentMetaData',
@@ -177,6 +182,7 @@ class EquipmentOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['include_equipment_type_name'] = isset($data['include_equipment_type_name']) ? $data['include_equipment_type_name'] : null;
         $this->container['include_equipment_tags'] = isset($data['include_equipment_tags']) ? $data['include_equipment_tags'] : null;
         $this->container['include_tag_type_name'] = isset($data['include_tag_type_name']) ? $data['include_tag_type_name'] : null;
         $this->container['include_equipment_meta_data'] = isset($data['include_equipment_meta_data']) ? $data['include_equipment_meta_data'] : null;
@@ -213,6 +219,27 @@ class EquipmentOptionsModel implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets include_equipment_type_name
+     * @return bool
+     */
+    public function getIncludeEquipmentTypeName()
+    {
+        return $this->container['include_equipment_type_name'];
+    }
+
+    /**
+     * Sets include_equipment_type_name
+     * @param bool $include_equipment_type_name 
+     * @return $this
+     */
+    public function setIncludeEquipmentTypeName($include_equipment_type_name)
+    {
+        $this->container['include_equipment_type_name'] = $include_equipment_type_name;
+
+        return $this;
+    }
 
     /**
      * Gets include_equipment_tags

@@ -113,6 +113,13 @@ class UsersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "party_name"
+     */
+    public function testPropertyPartyName()
+    {
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()

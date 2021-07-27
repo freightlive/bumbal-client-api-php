@@ -55,7 +55,7 @@ class EquipmentFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'equipment_type' => 'string'
+        'equipment_type_id' => 'int[]'
     ];
 
     /**
@@ -64,7 +64,7 @@ class EquipmentFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'equipment_type' => null
+        'equipment_type_id' => null
     ];
 
     public static function swaggerTypes()
@@ -83,7 +83,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'equipment_type' => 'equipment_type'
+        'equipment_type_id' => 'equipment_type_id'
     ];
 
 
@@ -93,7 +93,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'equipment_type' => 'setEquipmentType'
+        'equipment_type_id' => 'setEquipmentTypeId'
     ];
 
 
@@ -103,7 +103,7 @@ class EquipmentFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'equipment_type' => 'getEquipmentType'
+        'equipment_type_id' => 'getEquipmentTypeId'
     ];
 
     public static function attributeMap()
@@ -138,7 +138,7 @@ class EquipmentFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['equipment_type'] = isset($data['equipment_type']) ? $data['equipment_type'] : null;
+        $this->container['equipment_type_id'] = isset($data['equipment_type_id']) ? $data['equipment_type_id'] : null;
     }
 
     /**
@@ -188,22 +188,22 @@ class EquipmentFiltersModel implements ArrayAccess
     }
 
     /**
-     * Gets equipment_type
-     * @return string
+     * Gets equipment_type_id
+     * @return int[]
      */
-    public function getEquipmentType()
+    public function getEquipmentTypeId()
     {
-        return $this->container['equipment_type'];
+        return $this->container['equipment_type_id'];
     }
 
     /**
-     * Sets equipment_type
-     * @param string $equipment_type Equipment Type
+     * Sets equipment_type_id
+     * @param int[] $equipment_type_id Equipment Type ID's
      * @return $this
      */
-    public function setEquipmentType($equipment_type)
+    public function setEquipmentTypeId($equipment_type_id)
     {
-        $this->container['equipment_type'] = $equipment_type;
+        $this->container['equipment_type_id'] = $equipment_type_id;
 
         return $this;
     }

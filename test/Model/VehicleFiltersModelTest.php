@@ -85,6 +85,13 @@ class VehicleFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "vehicle_type_id"
+     */
+    public function testPropertyVehicleTypeId()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

@@ -58,6 +58,7 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'bool',
         'include_address_tags' => 'bool',
         'include_party_info' => 'bool',
+        'include_party_name' => 'bool',
         'include_address_type_names' => 'bool',
         'include_address_meta_data' => 'bool',
         'include_address_files' => 'bool',
@@ -73,6 +74,7 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => null,
         'include_address_tags' => null,
         'include_party_info' => null,
+        'include_party_name' => null,
         'include_address_type_names' => null,
         'include_address_meta_data' => null,
         'include_address_files' => null,
@@ -98,6 +100,7 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'include_emails',
         'include_address_tags' => 'include_address_tags',
         'include_party_info' => 'include_party_info',
+        'include_party_name' => 'include_party_name',
         'include_address_type_names' => 'include_address_type_names',
         'include_address_meta_data' => 'include_address_meta_data',
         'include_address_files' => 'include_address_files',
@@ -114,6 +117,7 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'setIncludeEmails',
         'include_address_tags' => 'setIncludeAddressTags',
         'include_party_info' => 'setIncludePartyInfo',
+        'include_party_name' => 'setIncludePartyName',
         'include_address_type_names' => 'setIncludeAddressTypeNames',
         'include_address_meta_data' => 'setIncludeAddressMetaData',
         'include_address_files' => 'setIncludeAddressFiles',
@@ -130,6 +134,7 @@ class AddressOptionsModel implements ArrayAccess
         'include_emails' => 'getIncludeEmails',
         'include_address_tags' => 'getIncludeAddressTags',
         'include_party_info' => 'getIncludePartyInfo',
+        'include_party_name' => 'getIncludePartyName',
         'include_address_type_names' => 'getIncludeAddressTypeNames',
         'include_address_meta_data' => 'getIncludeAddressMetaData',
         'include_address_files' => 'getIncludeAddressFiles',
@@ -171,6 +176,7 @@ class AddressOptionsModel implements ArrayAccess
         $this->container['include_emails'] = isset($data['include_emails']) ? $data['include_emails'] : null;
         $this->container['include_address_tags'] = isset($data['include_address_tags']) ? $data['include_address_tags'] : null;
         $this->container['include_party_info'] = isset($data['include_party_info']) ? $data['include_party_info'] : null;
+        $this->container['include_party_name'] = isset($data['include_party_name']) ? $data['include_party_name'] : null;
         $this->container['include_address_type_names'] = isset($data['include_address_type_names']) ? $data['include_address_type_names'] : null;
         $this->container['include_address_meta_data'] = isset($data['include_address_meta_data']) ? $data['include_address_meta_data'] : null;
         $this->container['include_address_files'] = isset($data['include_address_files']) ? $data['include_address_files'] : null;
@@ -282,6 +288,27 @@ class AddressOptionsModel implements ArrayAccess
     public function setIncludePartyInfo($include_party_info)
     {
         $this->container['include_party_info'] = $include_party_info;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_party_name
+     * @return bool
+     */
+    public function getIncludePartyName()
+    {
+        return $this->container['include_party_name'];
+    }
+
+    /**
+     * Sets include_party_name
+     * @param bool $include_party_name 
+     * @return $this
+     */
+    public function setIncludePartyName($include_party_name)
+    {
+        $this->container['include_party_name'] = $include_party_name;
 
         return $this;
     }

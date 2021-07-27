@@ -55,6 +55,7 @@ class VehicleFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
+        'vehicle_type_id' => 'int[]',
         'links' => 'object[]',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime'
@@ -66,6 +67,7 @@ class VehicleFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
+        'vehicle_type_id' => null,
         'links' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time'
@@ -87,6 +89,7 @@ class VehicleFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'vehicle_type_id' => 'vehicle_type_id',
         'links' => 'links',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till'
@@ -99,6 +102,7 @@ class VehicleFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'vehicle_type_id' => 'setVehicleTypeId',
         'links' => 'setLinks',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill'
@@ -111,6 +115,7 @@ class VehicleFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'vehicle_type_id' => 'getVehicleTypeId',
         'links' => 'getLinks',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill'
@@ -148,6 +153,7 @@ class VehicleFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['vehicle_type_id'] = isset($data['vehicle_type_id']) ? $data['vehicle_type_id'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
@@ -195,6 +201,27 @@ class VehicleFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets vehicle_type_id
+     * @return int[]
+     */
+    public function getVehicleTypeId()
+    {
+        return $this->container['vehicle_type_id'];
+    }
+
+    /**
+     * Sets vehicle_type_id
+     * @param int[] $vehicle_type_id Vehicle type id's
+     * @return $this
+     */
+    public function setVehicleTypeId($vehicle_type_id)
+    {
+        $this->container['vehicle_type_id'] = $vehicle_type_id;
 
         return $this;
     }
