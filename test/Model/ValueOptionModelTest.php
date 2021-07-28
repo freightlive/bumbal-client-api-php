@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsOptionsModelTest
+ * ValueOptionModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsOptionsModelTest Class Doc Comment
+ * ValueOptionModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsOptionsModel
+// * @description ValueOptionModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsOptionsModelTest extends \PHPUnit_Framework_TestCase
+class ValueOptionModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,37 +71,23 @@ class SettingsOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsOptionsModel"
+     * Test "ValueOptionModel"
      */
-    public function testSettingsOptionsModel()
+    public function testValueOptionModel()
     {
     }
 
     /**
-     * Test attribute "include_settings_group_name"
+     * Test attribute "name"
      */
-    public function testPropertyIncludeSettingsGroupName()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "include_record_info"
+     * Test attribute "value"
      */
-    public function testPropertyIncludeRecordInfo()
-    {
-    }
-
-    /**
-     * Test attribute "include_record_object"
-     */
-    public function testPropertyIncludeRecordObject()
-    {
-    }
-
-    /**
-     * Test attribute "include_value_options"
-     */
-    public function testPropertyIncludeValueOptions()
+    public function testPropertyValue()
     {
     }
 }

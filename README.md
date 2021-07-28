@@ -757,6 +757,7 @@ Class | Method | HTTP request | Description
  - [UsersModel](docs/Model/UsersModel.md)
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)
+ - [ValueOptionModel](docs/Model/ValueOptionModel.md)
  - [VariablesModel](docs/Model/VariablesModel.md)
  - [VehicleFiltersModel](docs/Model/VehicleFiltersModel.md)
  - [VehicleModel](docs/Model/VehicleModel.md)

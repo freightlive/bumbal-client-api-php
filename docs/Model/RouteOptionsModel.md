@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **include_address_object** | **bool** |  | [optional] 
 **include_route_status** | **bool** |  | [optional] 
 **include_route_tags** | **bool** | Deprecated! use include_tags | [optional] 
+**include_files** | **bool** |  | [optional] 
 **include_tags** | **bool** |  | [optional] 
 **include_tag_names** | **bool** |  | [optional] 
 **include_driver** | **bool** |  | [optional] 

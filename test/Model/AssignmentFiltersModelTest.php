@@ -92,6 +92,48 @@ class AssignmentFiltersModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "date_time_from"
+     */
+    public function testPropertyDateTimeFrom()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to"
+     */
+    public function testPropertyDateTimeTo()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_from_since"
+     */
+    public function testPropertyDateTimeFromSince()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_from_till"
+     */
+    public function testPropertyDateTimeFromTill()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to_since"
+     */
+    public function testPropertyDateTimeToSince()
+    {
+    }
+
+    /**
+     * Test attribute "date_time_to_till"
+     */
+    public function testPropertyDateTimeToTill()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()

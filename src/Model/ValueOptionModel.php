@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsOptionsModel
+ * ValueOptionModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * SettingsOptionsModel Class Doc Comment
+ * ValueOptionModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsOptionsModel implements ArrayAccess
+class ValueOptionModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,17 +47,15 @@ class SettingsOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SettingsOptionsModel';
+    protected static $swaggerModelName = 'ValueOptionModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_settings_group_name' => 'bool',
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool',
-        'include_value_options' => 'bool'
+        'name' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -65,10 +63,8 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_settings_group_name' => null,
-        'include_record_info' => null,
-        'include_record_object' => null,
-        'include_value_options' => null
+        'name' => null,
+        'value' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +82,8 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_settings_group_name' => 'include_settings_group_name',
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object',
-        'include_value_options' => 'include_value_options'
+        'name' => 'name',
+        'value' => 'value'
     ];
 
 
@@ -98,10 +92,8 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_settings_group_name' => 'setIncludeSettingsGroupName',
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject',
-        'include_value_options' => 'setIncludeValueOptions'
+        'name' => 'setName',
+        'value' => 'setValue'
     ];
 
 
@@ -110,10 +102,8 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_settings_group_name' => 'getIncludeSettingsGroupName',
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject',
-        'include_value_options' => 'getIncludeValueOptions'
+        'name' => 'getName',
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -147,10 +137,8 @@ class SettingsOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
-        $this->container['include_value_options'] = isset($data['include_value_options']) ? $data['include_value_options'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -179,85 +167,43 @@ class SettingsOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_settings_group_name
-     * @return bool
+     * Gets name
+     * @return string
      */
-    public function getIncludeSettingsGroupName()
+    public function getName()
     {
-        return $this->container['include_settings_group_name'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets include_settings_group_name
-     * @param bool $include_settings_group_name 
+     * Sets name
+     * @param string $name The name of the value option (just as a discription)
      * @return $this
      */
-    public function setIncludeSettingsGroupName($include_settings_group_name)
+    public function setName($name)
     {
-        $this->container['include_settings_group_name'] = $include_settings_group_name;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets include_record_info
-     * @return bool
+     * Gets value
+     * @return string
      */
-    public function getIncludeRecordInfo()
+    public function getValue()
     {
-        return $this->container['include_record_info'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets include_record_info
-     * @param bool $include_record_info 
+     * Sets value
+     * @param string $value The value of the value option (should be posted as value for the setting)
      * @return $this
      */
-    public function setIncludeRecordInfo($include_record_info)
+    public function setValue($value)
     {
-        $this->container['include_record_info'] = $include_record_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_record_object
-     * @return bool
-     */
-    public function getIncludeRecordObject()
-    {
-        return $this->container['include_record_object'];
-    }
-
-    /**
-     * Sets include_record_object
-     * @param bool $include_record_object 
-     * @return $this
-     */
-    public function setIncludeRecordObject($include_record_object)
-    {
-        $this->container['include_record_object'] = $include_record_object;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_value_options
-     * @return bool
-     */
-    public function getIncludeValueOptions()
-    {
-        return $this->container['include_value_options'];
-    }
-
-    /**
-     * Sets include_value_options
-     * @param bool $include_value_options 
-     * @return $this
-     */
-    public function setIncludeValueOptions($include_value_options)
-    {
-        $this->container['include_value_options'] = $include_value_options;
+        $this->container['value'] = $value;
 
         return $this;
     }

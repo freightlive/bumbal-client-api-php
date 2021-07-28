@@ -56,6 +56,12 @@ class AssignmentFiltersModel implements ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'int[]',
         'nr' => 'string[]',
+        'date_time_from' => '\DateTime',
+        'date_time_to' => '\DateTime',
+        'date_time_from_since' => '\DateTime',
+        'date_time_from_till' => '\DateTime',
+        'date_time_to_since' => '\DateTime',
+        'date_time_to_till' => '\DateTime',
         'links' => 'object[]',
         'updated_at_since' => '\DateTime',
         'updated_at_till' => '\DateTime'
@@ -68,6 +74,12 @@ class AssignmentFiltersModel implements ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
         'nr' => null,
+        'date_time_from' => 'date-time',
+        'date_time_to' => 'date-time',
+        'date_time_from_since' => 'date-time',
+        'date_time_from_till' => 'date-time',
+        'date_time_to_since' => 'date-time',
+        'date_time_to_till' => 'date-time',
         'links' => null,
         'updated_at_since' => 'date-time',
         'updated_at_till' => 'date-time'
@@ -90,6 +102,12 @@ class AssignmentFiltersModel implements ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
         'nr' => 'nr',
+        'date_time_from' => 'date_time_from',
+        'date_time_to' => 'date_time_to',
+        'date_time_from_since' => 'date_time_from_since',
+        'date_time_from_till' => 'date_time_from_till',
+        'date_time_to_since' => 'date_time_to_since',
+        'date_time_to_till' => 'date_time_to_till',
         'links' => 'links',
         'updated_at_since' => 'updated_at_since',
         'updated_at_till' => 'updated_at_till'
@@ -103,6 +121,12 @@ class AssignmentFiltersModel implements ArrayAccess
     protected static $setters = [
         'id' => 'setId',
         'nr' => 'setNr',
+        'date_time_from' => 'setDateTimeFrom',
+        'date_time_to' => 'setDateTimeTo',
+        'date_time_from_since' => 'setDateTimeFromSince',
+        'date_time_from_till' => 'setDateTimeFromTill',
+        'date_time_to_since' => 'setDateTimeToSince',
+        'date_time_to_till' => 'setDateTimeToTill',
         'links' => 'setLinks',
         'updated_at_since' => 'setUpdatedAtSince',
         'updated_at_till' => 'setUpdatedAtTill'
@@ -116,6 +140,12 @@ class AssignmentFiltersModel implements ArrayAccess
     protected static $getters = [
         'id' => 'getId',
         'nr' => 'getNr',
+        'date_time_from' => 'getDateTimeFrom',
+        'date_time_to' => 'getDateTimeTo',
+        'date_time_from_since' => 'getDateTimeFromSince',
+        'date_time_from_till' => 'getDateTimeFromTill',
+        'date_time_to_since' => 'getDateTimeToSince',
+        'date_time_to_till' => 'getDateTimeToTill',
         'links' => 'getLinks',
         'updated_at_since' => 'getUpdatedAtSince',
         'updated_at_till' => 'getUpdatedAtTill'
@@ -154,6 +184,12 @@ class AssignmentFiltersModel implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
+        $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
+        $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
+        $this->container['date_time_from_since'] = isset($data['date_time_from_since']) ? $data['date_time_from_since'] : null;
+        $this->container['date_time_from_till'] = isset($data['date_time_from_till']) ? $data['date_time_from_till'] : null;
+        $this->container['date_time_to_since'] = isset($data['date_time_to_since']) ? $data['date_time_to_since'] : null;
+        $this->container['date_time_to_till'] = isset($data['date_time_to_till']) ? $data['date_time_to_till'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['updated_at_since'] = isset($data['updated_at_since']) ? $data['updated_at_since'] : null;
         $this->container['updated_at_till'] = isset($data['updated_at_till']) ? $data['updated_at_till'] : null;
@@ -222,6 +258,132 @@ class AssignmentFiltersModel implements ArrayAccess
     public function setNr($nr)
     {
         $this->container['nr'] = $nr;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_from
+     * @return \DateTime
+     */
+    public function getDateTimeFrom()
+    {
+        return $this->container['date_time_from'];
+    }
+
+    /**
+     * Sets date_time_from
+     * @param \DateTime $date_time_from DateTime From
+     * @return $this
+     */
+    public function setDateTimeFrom($date_time_from)
+    {
+        $this->container['date_time_from'] = $date_time_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_to
+     * @return \DateTime
+     */
+    public function getDateTimeTo()
+    {
+        return $this->container['date_time_to'];
+    }
+
+    /**
+     * Sets date_time_to
+     * @param \DateTime $date_time_to DateTime To
+     * @return $this
+     */
+    public function setDateTimeTo($date_time_to)
+    {
+        $this->container['date_time_to'] = $date_time_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_from_since
+     * @return \DateTime
+     */
+    public function getDateTimeFromSince()
+    {
+        return $this->container['date_time_from_since'];
+    }
+
+    /**
+     * Sets date_time_from_since
+     * @param \DateTime $date_time_from_since filter assignments with a DateTime From since this input
+     * @return $this
+     */
+    public function setDateTimeFromSince($date_time_from_since)
+    {
+        $this->container['date_time_from_since'] = $date_time_from_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_from_till
+     * @return \DateTime
+     */
+    public function getDateTimeFromTill()
+    {
+        return $this->container['date_time_from_till'];
+    }
+
+    /**
+     * Sets date_time_from_till
+     * @param \DateTime $date_time_from_till filter assignments with a DateTime From till this input
+     * @return $this
+     */
+    public function setDateTimeFromTill($date_time_from_till)
+    {
+        $this->container['date_time_from_till'] = $date_time_from_till;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_to_since
+     * @return \DateTime
+     */
+    public function getDateTimeToSince()
+    {
+        return $this->container['date_time_to_since'];
+    }
+
+    /**
+     * Sets date_time_to_since
+     * @param \DateTime $date_time_to_since filter assignments with a DateTime To since this input
+     * @return $this
+     */
+    public function setDateTimeToSince($date_time_to_since)
+    {
+        $this->container['date_time_to_since'] = $date_time_to_since;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_time_to_till
+     * @return \DateTime
+     */
+    public function getDateTimeToTill()
+    {
+        return $this->container['date_time_to_till'];
+    }
+
+    /**
+     * Sets date_time_to_till
+     * @param \DateTime $date_time_to_till filter assignments with a DateTime To till this input
+     * @return $this
+     */
+    public function setDateTimeToTill($date_time_to_till)
+    {
+        $this->container['date_time_to_till'] = $date_time_to_till;
 
         return $this;
     }

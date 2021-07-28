@@ -59,6 +59,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'bool',
         'include_route_status' => 'bool',
         'include_route_tags' => 'bool',
+        'include_files' => 'bool',
         'include_tags' => 'bool',
         'include_tag_names' => 'bool',
         'include_driver' => 'bool',
@@ -96,6 +97,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => null,
         'include_route_status' => null,
         'include_route_tags' => null,
+        'include_files' => null,
         'include_tags' => null,
         'include_tag_names' => null,
         'include_driver' => null,
@@ -143,6 +145,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'include_address_object',
         'include_route_status' => 'include_route_status',
         'include_route_tags' => 'include_route_tags',
+        'include_files' => 'include_files',
         'include_tags' => 'include_tags',
         'include_tag_names' => 'include_tag_names',
         'include_driver' => 'include_driver',
@@ -181,6 +184,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'setIncludeAddressObject',
         'include_route_status' => 'setIncludeRouteStatus',
         'include_route_tags' => 'setIncludeRouteTags',
+        'include_files' => 'setIncludeFiles',
         'include_tags' => 'setIncludeTags',
         'include_tag_names' => 'setIncludeTagNames',
         'include_driver' => 'setIncludeDriver',
@@ -219,6 +223,7 @@ class RouteOptionsModel implements ArrayAccess
         'include_address_object' => 'getIncludeAddressObject',
         'include_route_status' => 'getIncludeRouteStatus',
         'include_route_tags' => 'getIncludeRouteTags',
+        'include_files' => 'getIncludeFiles',
         'include_tags' => 'getIncludeTags',
         'include_tag_names' => 'getIncludeTagNames',
         'include_driver' => 'getIncludeDriver',
@@ -282,6 +287,7 @@ class RouteOptionsModel implements ArrayAccess
         $this->container['include_address_object'] = isset($data['include_address_object']) ? $data['include_address_object'] : null;
         $this->container['include_route_status'] = isset($data['include_route_status']) ? $data['include_route_status'] : null;
         $this->container['include_route_tags'] = isset($data['include_route_tags']) ? $data['include_route_tags'] : null;
+        $this->container['include_files'] = isset($data['include_files']) ? $data['include_files'] : null;
         $this->container['include_tags'] = isset($data['include_tags']) ? $data['include_tags'] : null;
         $this->container['include_tag_names'] = isset($data['include_tag_names']) ? $data['include_tag_names'] : null;
         $this->container['include_driver'] = isset($data['include_driver']) ? $data['include_driver'] : null;
@@ -435,6 +441,27 @@ class RouteOptionsModel implements ArrayAccess
     public function setIncludeRouteTags($include_route_tags)
     {
         $this->container['include_route_tags'] = $include_route_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets include_files
+     * @return bool
+     */
+    public function getIncludeFiles()
+    {
+        return $this->container['include_files'];
+    }
+
+    /**
+     * Sets include_files
+     * @param bool $include_files 
+     * @return $this
+     */
+    public function setIncludeFiles($include_files)
+    {
+        $this->container['include_files'] = $include_files;
 
         return $this;
     }
