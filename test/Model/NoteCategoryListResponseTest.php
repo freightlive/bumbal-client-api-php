@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * NoteCategoryListResponseTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * NoteCategoryListResponseTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description NoteCategoryListResponse
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class NoteCategoryListResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,37 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "NoteCategoryListResponse"
      */
-    public function testSettingsModel()
+    public function testNoteCategoryListResponse()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "items"
      */
-    public function testPropertyId()
+    public function testPropertyItems()
     {
     }
 
     /**
-     * Test attribute "settings_group_id"
+     * Test attribute "count_filtered"
      */
-    public function testPropertySettingsGroupId()
+    public function testPropertyCountFiltered()
     {
     }
 
     /**
-     * Test attribute "settings_group_name"
+     * Test attribute "count_unfiltered"
      */
-    public function testPropertySettingsGroupName()
+    public function testPropertyCountUnfiltered()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "count_limited"
      */
-    public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_at"
-     */
-    public function testPropertySettingUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by"
-     */
-    public function testPropertySettingUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by_user"
-     */
-    public function testPropertySettingUpdatedByUser()
+    public function testPropertyCountLimited()
     {
     }
 }

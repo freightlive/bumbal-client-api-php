@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * NoteCategoryModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * NoteCategoryModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description NoteCategoryModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class NoteCategoryModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "NoteCategoryModel"
      */
-    public function testSettingsModel()
+    public function testNoteCategoryModel()
     {
     }
 
@@ -85,51 +85,23 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "settings_group_id"
+     * Test attribute "name"
      */
-    public function testPropertySettingsGroupId()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "settings_group_name"
+     * Test attribute "sys"
      */
-    public function testPropertySettingsGroupName()
+    public function testPropertySys()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "show_in_app"
      */
-    public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_at"
-     */
-    public function testPropertySettingUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by"
-     */
-    public function testPropertySettingUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by_user"
-     */
-    public function testPropertySettingUpdatedByUser()
+    public function testPropertyShowInApp()
     {
     }
 }

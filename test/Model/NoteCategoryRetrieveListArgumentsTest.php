@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * NoteCategoryRetrieveListArgumentsTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * NoteCategoryRetrieveListArgumentsTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description NoteCategoryRetrieveListArguments
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class NoteCategoryRetrieveListArgumentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,65 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "NoteCategoryRetrieveListArguments"
      */
-    public function testSettingsModel()
+    public function testNoteCategoryRetrieveListArguments()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "options"
      */
-    public function testPropertyId()
+    public function testPropertyOptions()
     {
     }
 
     /**
-     * Test attribute "settings_group_id"
+     * Test attribute "filters"
      */
-    public function testPropertySettingsGroupId()
+    public function testPropertyFilters()
     {
     }
 
     /**
-     * Test attribute "settings_group_name"
+     * Test attribute "limit"
      */
-    public function testPropertySettingsGroupName()
+    public function testPropertyLimit()
     {
     }
 
     /**
-     * Test attribute "key"
+     * Test attribute "offset"
      */
-    public function testPropertyKey()
+    public function testPropertyOffset()
     {
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "sorting_column"
      */
-    public function testPropertyValue()
+    public function testPropertySortingColumn()
     {
     }
 
     /**
-     * Test attribute "setting_updated_at"
+     * Test attribute "sorting_direction"
      */
-    public function testPropertySettingUpdatedAt()
+    public function testPropertySortingDirection()
     {
     }
 
     /**
-     * Test attribute "setting_updated_by"
+     * Test attribute "search_text"
      */
-    public function testPropertySettingUpdatedBy()
+    public function testPropertySearchText()
     {
     }
 
     /**
-     * Test attribute "setting_updated_by_user"
+     * Test attribute "as_list"
      */
-    public function testPropertySettingUpdatedByUser()
+    public function testPropertyAsList()
     {
     }
 }

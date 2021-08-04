@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsModelTest
+ * NoteCategoryOptionsModelTest
  *
  * PHP version 5
  *
@@ -30,16 +30,16 @@
 namespace BumbalClient;
 
 /**
- * SettingsModelTest Class Doc Comment
+ * NoteCategoryOptionsModelTest Class Doc Comment
  *
  * @category    Class */
-// * @description SettingsModel
+// * @description NoteCategoryOptionsModel
 /**
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsModelTest extends \PHPUnit_Framework_TestCase
+class NoteCategoryOptionsModelTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,65 +71,9 @@ class SettingsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SettingsModel"
+     * Test "NoteCategoryOptionsModel"
      */
-    public function testSettingsModel()
-    {
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-    }
-
-    /**
-     * Test attribute "settings_group_id"
-     */
-    public function testPropertySettingsGroupId()
-    {
-    }
-
-    /**
-     * Test attribute "settings_group_name"
-     */
-    public function testPropertySettingsGroupName()
-    {
-    }
-
-    /**
-     * Test attribute "key"
-     */
-    public function testPropertyKey()
-    {
-    }
-
-    /**
-     * Test attribute "value"
-     */
-    public function testPropertyValue()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_at"
-     */
-    public function testPropertySettingUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by"
-     */
-    public function testPropertySettingUpdatedBy()
-    {
-    }
-
-    /**
-     * Test attribute "setting_updated_by_user"
-     */
-    public function testPropertySettingUpdatedByUser()
+    public function testNoteCategoryOptionsModel()
     {
     }
 }

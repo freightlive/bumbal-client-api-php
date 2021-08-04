@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsOptionsModel
+ * NoteCategoryListResponse
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * SettingsOptionsModel Class Doc Comment
+ * NoteCategoryListResponse Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsOptionsModel implements ArrayAccess
+class NoteCategoryListResponse implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class SettingsOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SettingsOptionsModel';
+    protected static $swaggerModelName = 'NoteCategoryListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_settings_group_name' => 'bool',
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool'
+        'items' => '\BumbalClient\Model\NoteCategoryModel[]',
+        'count_filtered' => 'int',
+        'count_unfiltered' => 'int',
+        'count_limited' => 'int'
     ];
 
     /**
@@ -64,9 +65,10 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_settings_group_name' => null,
-        'include_record_info' => null,
-        'include_record_object' => null
+        'items' => null,
+        'count_filtered' => null,
+        'count_unfiltered' => null,
+        'count_limited' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +86,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_settings_group_name' => 'include_settings_group_name',
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object'
+        'items' => 'items',
+        'count_filtered' => 'count_filtered',
+        'count_unfiltered' => 'count_unfiltered',
+        'count_limited' => 'count_limited'
     ];
 
 
@@ -95,9 +98,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_settings_group_name' => 'setIncludeSettingsGroupName',
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject'
+        'items' => 'setItems',
+        'count_filtered' => 'setCountFiltered',
+        'count_unfiltered' => 'setCountUnfiltered',
+        'count_limited' => 'setCountLimited'
     ];
 
 
@@ -106,9 +110,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_settings_group_name' => 'getIncludeSettingsGroupName',
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject'
+        'items' => 'getItems',
+        'count_filtered' => 'getCountFiltered',
+        'count_unfiltered' => 'getCountUnfiltered',
+        'count_limited' => 'getCountLimited'
     ];
 
     public static function attributeMap()
@@ -142,9 +147,10 @@ class SettingsOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['count_filtered'] = isset($data['count_filtered']) ? $data['count_filtered'] : null;
+        $this->container['count_unfiltered'] = isset($data['count_unfiltered']) ? $data['count_unfiltered'] : null;
+        $this->container['count_limited'] = isset($data['count_limited']) ? $data['count_limited'] : null;
     }
 
     /**
@@ -173,64 +179,85 @@ class SettingsOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_settings_group_name
-     * @return bool
+     * Gets items
+     * @return \BumbalClient\Model\NoteCategoryModel[]
      */
-    public function getIncludeSettingsGroupName()
+    public function getItems()
     {
-        return $this->container['include_settings_group_name'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets include_settings_group_name
-     * @param bool $include_settings_group_name 
+     * Sets items
+     * @param \BumbalClient\Model\NoteCategoryModel[] $items 
      * @return $this
      */
-    public function setIncludeSettingsGroupName($include_settings_group_name)
+    public function setItems($items)
     {
-        $this->container['include_settings_group_name'] = $include_settings_group_name;
+        $this->container['items'] = $items;
 
         return $this;
     }
 
     /**
-     * Gets include_record_info
-     * @return bool
+     * Gets count_filtered
+     * @return int
      */
-    public function getIncludeRecordInfo()
+    public function getCountFiltered()
     {
-        return $this->container['include_record_info'];
+        return $this->container['count_filtered'];
     }
 
     /**
-     * Sets include_record_info
-     * @param bool $include_record_info 
+     * Sets count_filtered
+     * @param int $count_filtered Count of total items with filters in place
      * @return $this
      */
-    public function setIncludeRecordInfo($include_record_info)
+    public function setCountFiltered($count_filtered)
     {
-        $this->container['include_record_info'] = $include_record_info;
+        $this->container['count_filtered'] = $count_filtered;
 
         return $this;
     }
 
     /**
-     * Gets include_record_object
-     * @return bool
+     * Gets count_unfiltered
+     * @return int
      */
-    public function getIncludeRecordObject()
+    public function getCountUnfiltered()
     {
-        return $this->container['include_record_object'];
+        return $this->container['count_unfiltered'];
     }
 
     /**
-     * Sets include_record_object
-     * @param bool $include_record_object 
+     * Sets count_unfiltered
+     * @param int $count_unfiltered Count of total items without filters in place
      * @return $this
      */
-    public function setIncludeRecordObject($include_record_object)
+    public function setCountUnfiltered($count_unfiltered)
     {
-        $this->container['include_record_object'] = $include_record_object;
+        $this->container['count_unfiltered'] = $count_unfiltered;
+
+        return $this;
+    }
+
+    /**
+     * Gets count_limited
+     * @return int
+     */
+    public function getCountLimited()
+    {
+        return $this->container['count_limited'];
+    }
+
+    /**
+     * Sets count_limited
+     * @param int $count_limited Count of items with limit in place
+     * @return $this
+     */
+    public function setCountLimited($count_limited)
+    {
+        $this->container['count_limited'] = $count_limited;
 
         return $this;
     }

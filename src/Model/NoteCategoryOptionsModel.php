@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsOptionsModel
+ * NoteCategoryOptionsModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * SettingsOptionsModel Class Doc Comment
+ * NoteCategoryOptionsModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsOptionsModel implements ArrayAccess
+class NoteCategoryOptionsModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,14 @@ class SettingsOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SettingsOptionsModel';
+    protected static $swaggerModelName = 'NoteCategoryOptionsModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_settings_group_name' => 'bool',
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool'
+        
     ];
 
     /**
@@ -64,9 +62,7 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_settings_group_name' => null,
-        'include_record_info' => null,
-        'include_record_object' => null
+        
     ];
 
     public static function swaggerTypes()
@@ -84,9 +80,7 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_settings_group_name' => 'include_settings_group_name',
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object'
+        
     ];
 
 
@@ -95,9 +89,7 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_settings_group_name' => 'setIncludeSettingsGroupName',
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject'
+        
     ];
 
 
@@ -106,9 +98,7 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_settings_group_name' => 'getIncludeSettingsGroupName',
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject'
+        
     ];
 
     public static function attributeMap()
@@ -142,9 +132,6 @@ class SettingsOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
     }
 
     /**
@@ -171,69 +158,6 @@ class SettingsOptionsModel implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets include_settings_group_name
-     * @return bool
-     */
-    public function getIncludeSettingsGroupName()
-    {
-        return $this->container['include_settings_group_name'];
-    }
-
-    /**
-     * Sets include_settings_group_name
-     * @param bool $include_settings_group_name 
-     * @return $this
-     */
-    public function setIncludeSettingsGroupName($include_settings_group_name)
-    {
-        $this->container['include_settings_group_name'] = $include_settings_group_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_record_info
-     * @return bool
-     */
-    public function getIncludeRecordInfo()
-    {
-        return $this->container['include_record_info'];
-    }
-
-    /**
-     * Sets include_record_info
-     * @param bool $include_record_info 
-     * @return $this
-     */
-    public function setIncludeRecordInfo($include_record_info)
-    {
-        $this->container['include_record_info'] = $include_record_info;
-
-        return $this;
-    }
-
-    /**
-     * Gets include_record_object
-     * @return bool
-     */
-    public function getIncludeRecordObject()
-    {
-        return $this->container['include_record_object'];
-    }
-
-    /**
-     * Sets include_record_object
-     * @param bool $include_record_object 
-     * @return $this
-     */
-    public function setIncludeRecordObject($include_record_object)
-    {
-        $this->container['include_record_object'] = $include_record_object;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

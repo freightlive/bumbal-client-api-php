@@ -1,6 +1,6 @@
 <?php
 /**
- * SettingsOptionsModel
+ * NoteCategoryFiltersModel
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace BumbalClient\Model;
 use \ArrayAccess;
 
 /**
- * SettingsOptionsModel Class Doc Comment
+ * NoteCategoryFiltersModel Class Doc Comment
  *
  * @category    Class
  * @package     BumbalClient
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SettingsOptionsModel implements ArrayAccess
+class NoteCategoryFiltersModel implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,16 +47,17 @@ class SettingsOptionsModel implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SettingsOptionsModel';
+    protected static $swaggerModelName = 'NoteCategoryFiltersModel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'include_settings_group_name' => 'bool',
-        'include_record_info' => 'bool',
-        'include_record_object' => 'bool'
+        'id' => 'int[]',
+        'name' => 'string[]',
+        'show_in_app' => 'bool[]',
+        'sys' => 'bool[]'
     ];
 
     /**
@@ -64,9 +65,10 @@ class SettingsOptionsModel implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'include_settings_group_name' => null,
-        'include_record_info' => null,
-        'include_record_object' => null
+        'id' => null,
+        'name' => null,
+        'show_in_app' => null,
+        'sys' => null
     ];
 
     public static function swaggerTypes()
@@ -84,9 +86,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'include_settings_group_name' => 'include_settings_group_name',
-        'include_record_info' => 'include_record_info',
-        'include_record_object' => 'include_record_object'
+        'id' => 'id',
+        'name' => 'name',
+        'show_in_app' => 'show_in_app',
+        'sys' => 'sys'
     ];
 
 
@@ -95,9 +98,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'include_settings_group_name' => 'setIncludeSettingsGroupName',
-        'include_record_info' => 'setIncludeRecordInfo',
-        'include_record_object' => 'setIncludeRecordObject'
+        'id' => 'setId',
+        'name' => 'setName',
+        'show_in_app' => 'setShowInApp',
+        'sys' => 'setSys'
     ];
 
 
@@ -106,9 +110,10 @@ class SettingsOptionsModel implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'include_settings_group_name' => 'getIncludeSettingsGroupName',
-        'include_record_info' => 'getIncludeRecordInfo',
-        'include_record_object' => 'getIncludeRecordObject'
+        'id' => 'getId',
+        'name' => 'getName',
+        'show_in_app' => 'getShowInApp',
+        'sys' => 'getSys'
     ];
 
     public static function attributeMap()
@@ -142,9 +147,10 @@ class SettingsOptionsModel implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['include_settings_group_name'] = isset($data['include_settings_group_name']) ? $data['include_settings_group_name'] : null;
-        $this->container['include_record_info'] = isset($data['include_record_info']) ? $data['include_record_info'] : null;
-        $this->container['include_record_object'] = isset($data['include_record_object']) ? $data['include_record_object'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['show_in_app'] = isset($data['show_in_app']) ? $data['show_in_app'] : null;
+        $this->container['sys'] = isset($data['sys']) ? $data['sys'] : null;
     }
 
     /**
@@ -173,64 +179,85 @@ class SettingsOptionsModel implements ArrayAccess
 
 
     /**
-     * Gets include_settings_group_name
-     * @return bool
+     * Gets id
+     * @return int[]
      */
-    public function getIncludeSettingsGroupName()
+    public function getId()
     {
-        return $this->container['include_settings_group_name'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets include_settings_group_name
-     * @param bool $include_settings_group_name 
+     * Sets id
+     * @param int[] $id Bumbal note category id's
      * @return $this
      */
-    public function setIncludeSettingsGroupName($include_settings_group_name)
+    public function setId($id)
     {
-        $this->container['include_settings_group_name'] = $include_settings_group_name;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets include_record_info
-     * @return bool
+     * Gets name
+     * @return string[]
      */
-    public function getIncludeRecordInfo()
+    public function getName()
     {
-        return $this->container['include_record_info'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets include_record_info
-     * @param bool $include_record_info 
+     * Sets name
+     * @param string[] $name Bumbal note category names
      * @return $this
      */
-    public function setIncludeRecordInfo($include_record_info)
+    public function setName($name)
     {
-        $this->container['include_record_info'] = $include_record_info;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets include_record_object
-     * @return bool
+     * Gets show_in_app
+     * @return bool[]
      */
-    public function getIncludeRecordObject()
+    public function getShowInApp()
     {
-        return $this->container['include_record_object'];
+        return $this->container['show_in_app'];
     }
 
     /**
-     * Sets include_record_object
-     * @param bool $include_record_object 
+     * Sets show_in_app
+     * @param bool[] $show_in_app whether notes of this category should be visible for the driver in the mobile app
      * @return $this
      */
-    public function setIncludeRecordObject($include_record_object)
+    public function setShowInApp($show_in_app)
     {
-        $this->container['include_record_object'] = $include_record_object;
+        $this->container['show_in_app'] = $show_in_app;
+
+        return $this;
+    }
+
+    /**
+     * Gets sys
+     * @return bool[]
+     */
+    public function getSys()
+    {
+        return $this->container['sys'];
+    }
+
+    /**
+     * Sets sys
+     * @param bool[] $sys Bumbal note categories which can not be edited or removed
+     * @return $this
+     */
+    public function setSys($sys)
+    {
+        $this->container['sys'] = $sys;
 
         return $this;
     }
