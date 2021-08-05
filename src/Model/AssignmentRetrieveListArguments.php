@@ -158,9 +158,6 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     const SORTING_COLUMN_ASSIGNMENTNR = 'assignment.nr';
     const SORTING_COLUMN_DATE_TIME_FROM = 'date_time_from';
-    const SORTING_COLUMN_DATE_TIME_TO = 'date_time_to';
-    const SORTING_COLUMN_PARTY_NAME = 'party_name';
-    const SORTING_COLUMN_ACCOUNT_NAME = 'account_name';
     const SORTING_DIRECTION_ASC = 'asc';
     const SORTING_DIRECTION_DESC = 'desc';
     
@@ -175,9 +172,6 @@ class AssignmentRetrieveListArguments implements ArrayAccess
         return [
             self::SORTING_COLUMN_ASSIGNMENTNR,
             self::SORTING_COLUMN_DATE_TIME_FROM,
-            self::SORTING_COLUMN_DATE_TIME_TO,
-            self::SORTING_COLUMN_PARTY_NAME,
-            self::SORTING_COLUMN_ACCOUNT_NAME,
         ];
     }
     
@@ -382,7 +376,7 @@ class AssignmentRetrieveListArguments implements ArrayAccess
 
     /**
      * Sets sorting_column
-     * @param string $sorting_column Sorting Column. Option include_party_name has to be set for party_name as the sorting column. Option include_booking_account has to be set for account_name as the sorting column.
+     * @param string $sorting_column Sorting Column
      * @return $this
      */
     public function setSortingColumn($sorting_column)

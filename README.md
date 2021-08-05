@@ -159,10 +159,6 @@ Class | Method | HTTP request | Description
 *NoteApi* | [**retrieveListNote**](docs/Api/NoteApi.md#retrievelistnote) | **PUT** /note | Retrieve List of Notes
 *NoteApi* | [**retrieveNote**](docs/Api/NoteApi.md#retrievenote) | **GET** /note/{noteId} | Find note by ID
 *NoteApi* | [**setNote**](docs/Api/NoteApi.md#setnote) | **POST** /note/set | Set (create or update) a note
-*NotecategoryApi* | [**deleteNoteCategory**](docs/Api/NotecategoryApi.md#deletenotecategory) | **DELETE** /note-category/{noteCategoryId} | Delete a note-category
-*NotecategoryApi* | [**retrieveListNoteCategory**](docs/Api/NotecategoryApi.md#retrievelistnotecategory) | **PUT** /note-category | Retrieve List of NoteCategories
-*NotecategoryApi* | [**retrieveNoteCategory**](docs/Api/NotecategoryApi.md#retrievenotecategory) | **GET** /note-category/{noteCategoryId} | Find note-category by ID
-*NotecategoryApi* | [**setNoteCategory**](docs/Api/NotecategoryApi.md#setnotecategory) | **POST** /note-category/set | Set (create or update) an NoteCategory
 *NotificationApi* | [**createNotification**](docs/Api/NotificationApi.md#createnotification) | **POST** /notification | Add a new Notification
 *NotificationApi* | [**deleteNotification**](docs/Api/NotificationApi.md#deletenotification) | **DELETE** /notification/{notificationId} | Delete an Notification entry
 *NotificationApi* | [**retrieveListNotification**](docs/Api/NotificationApi.md#retrievelistnotification) | **PUT** /notification | Retrieve List of Notification
@@ -556,11 +552,6 @@ Class | Method | HTTP request | Description
  - [MetaDataModel](docs/Model/MetaDataModel.md)
  - [MetaDataOptionsModel](docs/Model/MetaDataOptionsModel.md)
  - [MetaDataRetrieveListArguments](docs/Model/MetaDataRetrieveListArguments.md)
- - [NoteCategoryFiltersModel](docs/Model/NoteCategoryFiltersModel.md)
- - [NoteCategoryListResponse](docs/Model/NoteCategoryListResponse.md)
- - [NoteCategoryModel](docs/Model/NoteCategoryModel.md)
- - [NoteCategoryOptionsModel](docs/Model/NoteCategoryOptionsModel.md)
- - [NoteCategoryRetrieveListArguments](docs/Model/NoteCategoryRetrieveListArguments.md)
  - [NoteFiltersModel](docs/Model/NoteFiltersModel.md)
  - [NoteModel](docs/Model/NoteModel.md)
  - [NoteOptionsModel](docs/Model/NoteOptionsModel.md)
@@ -766,7 +757,6 @@ Class | Method | HTTP request | Description
  - [UsersModel](docs/Model/UsersModel.md)
  - [UsersOptionsModel](docs/Model/UsersOptionsModel.md)
  - [UsersRetrieveListArguments](docs/Model/UsersRetrieveListArguments.md)
- - [ValueOptionModel](docs/Model/ValueOptionModel.md)
  - [VariablesModel](docs/Model/VariablesModel.md)
  - [VehicleFiltersModel](docs/Model/VehicleFiltersModel.md)
  - [VehicleModel](docs/Model/VehicleModel.md)
