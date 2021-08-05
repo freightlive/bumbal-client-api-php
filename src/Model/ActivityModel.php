@@ -2930,7 +2930,7 @@ class ActivityModel implements ArrayAccess
 
     /**
      * Sets tag_ids
-     * @param int[] $tag_ids Tag ids
+     * @param int[] $tag_ids Tag type ids
      * @return $this
      */
     public function setTagIds($tag_ids)

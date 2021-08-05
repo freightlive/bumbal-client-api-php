@@ -59,13 +59,18 @@ class DriverModel implements ArrayAccess
         'uuid' => 'string',
         'addresses' => '\BumbalClient\Model\AddressModel[]',
         'tag_names' => 'string[]',
+        'tag_ids' => 'int[]',
         'first_name' => 'string',
         'last_name' => 'string',
         'prefix' => 'string',
         'full_name' => 'string',
         'email' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
+        'zones' => '\BumbalClient\Model\ZoneModel[]',
+        'zone_names' => 'string[]',
+        'zone_ids' => 'int[]',
         'links' => '\BumbalClient\Model\LinkModel[]',
+        'notes' => '\BumbalClient\Model\NoteModel[]',
         'removed' => 'bool',
         'active' => 'bool',
         'meta_data' => '\BumbalClient\Model\MetaDataModel[]',
@@ -87,13 +92,18 @@ class DriverModel implements ArrayAccess
         'uuid' => null,
         'addresses' => null,
         'tag_names' => null,
+        'tag_ids' => null,
         'first_name' => null,
         'last_name' => null,
         'prefix' => null,
         'full_name' => null,
         'email' => null,
         'tags' => null,
+        'zones' => null,
+        'zone_names' => null,
+        'zone_ids' => null,
         'links' => null,
+        'notes' => null,
         'removed' => null,
         'active' => null,
         'meta_data' => null,
@@ -125,13 +135,18 @@ class DriverModel implements ArrayAccess
         'uuid' => 'uuid',
         'addresses' => 'addresses',
         'tag_names' => 'tag_names',
+        'tag_ids' => 'tag_ids',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
         'prefix' => 'prefix',
         'full_name' => 'full_name',
         'email' => 'email',
         'tags' => 'tags',
+        'zones' => 'zones',
+        'zone_names' => 'zone_names',
+        'zone_ids' => 'zone_ids',
         'links' => 'links',
+        'notes' => 'notes',
         'removed' => 'removed',
         'active' => 'active',
         'meta_data' => 'meta_data',
@@ -154,13 +169,18 @@ class DriverModel implements ArrayAccess
         'uuid' => 'setUuid',
         'addresses' => 'setAddresses',
         'tag_names' => 'setTagNames',
+        'tag_ids' => 'setTagIds',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
         'prefix' => 'setPrefix',
         'full_name' => 'setFullName',
         'email' => 'setEmail',
         'tags' => 'setTags',
+        'zones' => 'setZones',
+        'zone_names' => 'setZoneNames',
+        'zone_ids' => 'setZoneIds',
         'links' => 'setLinks',
+        'notes' => 'setNotes',
         'removed' => 'setRemoved',
         'active' => 'setActive',
         'meta_data' => 'setMetaData',
@@ -183,13 +203,18 @@ class DriverModel implements ArrayAccess
         'uuid' => 'getUuid',
         'addresses' => 'getAddresses',
         'tag_names' => 'getTagNames',
+        'tag_ids' => 'getTagIds',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
         'prefix' => 'getPrefix',
         'full_name' => 'getFullName',
         'email' => 'getEmail',
         'tags' => 'getTags',
+        'zones' => 'getZones',
+        'zone_names' => 'getZoneNames',
+        'zone_ids' => 'getZoneIds',
         'links' => 'getLinks',
+        'notes' => 'getNotes',
         'removed' => 'getRemoved',
         'active' => 'getActive',
         'meta_data' => 'getMetaData',
@@ -237,13 +262,18 @@ class DriverModel implements ArrayAccess
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
         $this->container['tag_names'] = isset($data['tag_names']) ? $data['tag_names'] : null;
+        $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
         $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['zones'] = isset($data['zones']) ? $data['zones'] : null;
+        $this->container['zone_names'] = isset($data['zone_names']) ? $data['zone_names'] : null;
+        $this->container['zone_ids'] = isset($data['zone_ids']) ? $data['zone_ids'] : null;
         $this->container['links'] = isset($data['links']) ? $data['links'] : null;
+        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
         $this->container['removed'] = isset($data['removed']) ? $data['removed'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['meta_data'] = isset($data['meta_data']) ? $data['meta_data'] : null;
@@ -386,6 +416,27 @@ class DriverModel implements ArrayAccess
     }
 
     /**
+     * Gets tag_ids
+     * @return int[]
+     */
+    public function getTagIds()
+    {
+        return $this->container['tag_ids'];
+    }
+
+    /**
+     * Sets tag_ids
+     * @param int[] $tag_ids Tag type ids
+     * @return $this
+     */
+    public function setTagIds($tag_ids)
+    {
+        $this->container['tag_ids'] = $tag_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets first_name
      * @return string
      */
@@ -512,6 +563,69 @@ class DriverModel implements ArrayAccess
     }
 
     /**
+     * Gets zones
+     * @return \BumbalClient\Model\ZoneModel[]
+     */
+    public function getZones()
+    {
+        return $this->container['zones'];
+    }
+
+    /**
+     * Sets zones
+     * @param \BumbalClient\Model\ZoneModel[] $zones 
+     * @return $this
+     */
+    public function setZones($zones)
+    {
+        $this->container['zones'] = $zones;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_names
+     * @return string[]
+     */
+    public function getZoneNames()
+    {
+        return $this->container['zone_names'];
+    }
+
+    /**
+     * Sets zone_names
+     * @param string[] $zone_names Zone names
+     * @return $this
+     */
+    public function setZoneNames($zone_names)
+    {
+        $this->container['zone_names'] = $zone_names;
+
+        return $this;
+    }
+
+    /**
+     * Gets zone_ids
+     * @return int[]
+     */
+    public function getZoneIds()
+    {
+        return $this->container['zone_ids'];
+    }
+
+    /**
+     * Sets zone_ids
+     * @param int[] $zone_ids Zone ids
+     * @return $this
+     */
+    public function setZoneIds($zone_ids)
+    {
+        $this->container['zone_ids'] = $zone_ids;
+
+        return $this;
+    }
+
+    /**
      * Gets links
      * @return \BumbalClient\Model\LinkModel[]
      */
@@ -528,6 +642,27 @@ class DriverModel implements ArrayAccess
     public function setLinks($links)
     {
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     * @return \BumbalClient\Model\NoteModel[]
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     * @param \BumbalClient\Model\NoteModel[] $notes 
+     * @return $this
+     */
+    public function setNotes($notes)
+    {
+        $this->container['notes'] = $notes;
 
         return $this;
     }

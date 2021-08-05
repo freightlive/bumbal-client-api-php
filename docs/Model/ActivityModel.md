@@ -93,7 +93,7 @@ Name | Type | Description | Notes
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 
 **recurrence** | [**\BumbalClient\Model\RecurrenceModel**](RecurrenceModel.md) |  | [optional] 
 **tag_names** | **string[]** | Tag names | [optional] 
-**tag_ids** | **int[]** | Tag ids | [optional] 
+**tag_ids** | **int[]** | Tag type ids | [optional] 
 **zones** | [**\BumbalClient\Model\ZoneModel[]**](ZoneModel.md) |  | [optional] 
 **zone_names** | **string[]** | Zone names | [optional] 
 **links** | [**\BumbalClient\Model\LinkModel[]**](LinkModel.md) |  | [optional] 

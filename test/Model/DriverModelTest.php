@@ -113,6 +113,13 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "tag_ids"
+     */
+    public function testPropertyTagIds()
+    {
+    }
+
+    /**
      * Test attribute "first_name"
      */
     public function testPropertyFirstName()
@@ -155,9 +162,37 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "zones"
+     */
+    public function testPropertyZones()
+    {
+    }
+
+    /**
+     * Test attribute "zone_names"
+     */
+    public function testPropertyZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "zone_ids"
+     */
+    public function testPropertyZoneIds()
+    {
+    }
+
+    /**
      * Test attribute "links"
      */
     public function testPropertyLinks()
+    {
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
     {
     }
 

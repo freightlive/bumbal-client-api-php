@@ -104,4 +104,11 @@ class TagModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTagTypeName()
     {
     }
+
+    /**
+     * Test attribute "tag_name"
+     */
+    public function testPropertyTagName()
+    {
+    }
 }

@@ -57,7 +57,8 @@ class TagModel implements ArrayAccess
         'id' => 'int',
         'object_type' => 'int',
         'tag_type_id' => 'int',
-        'tag_type_name' => 'string'
+        'tag_type_name' => 'string',
+        'tag_name' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class TagModel implements ArrayAccess
         'id' => 'int64',
         'object_type' => 'int64',
         'tag_type_id' => 'int64',
-        'tag_type_name' => null
+        'tag_type_name' => null,
+        'tag_name' => null
     ];
 
     public static function swaggerTypes()
@@ -89,7 +91,8 @@ class TagModel implements ArrayAccess
         'id' => 'id',
         'object_type' => 'object_type',
         'tag_type_id' => 'tag_type_id',
-        'tag_type_name' => 'tag_type_name'
+        'tag_type_name' => 'tag_type_name',
+        'tag_name' => 'tag_name'
     ];
 
 
@@ -101,7 +104,8 @@ class TagModel implements ArrayAccess
         'id' => 'setId',
         'object_type' => 'setObjectType',
         'tag_type_id' => 'setTagTypeId',
-        'tag_type_name' => 'setTagTypeName'
+        'tag_type_name' => 'setTagTypeName',
+        'tag_name' => 'setTagName'
     ];
 
 
@@ -113,7 +117,8 @@ class TagModel implements ArrayAccess
         'id' => 'getId',
         'object_type' => 'getObjectType',
         'tag_type_id' => 'getTagTypeId',
-        'tag_type_name' => 'getTagTypeName'
+        'tag_type_name' => 'getTagTypeName',
+        'tag_name' => 'getTagName'
     ];
 
     public static function attributeMap()
@@ -151,6 +156,7 @@ class TagModel implements ArrayAccess
         $this->container['object_type'] = isset($data['object_type']) ? $data['object_type'] : null;
         $this->container['tag_type_id'] = isset($data['tag_type_id']) ? $data['tag_type_id'] : null;
         $this->container['tag_type_name'] = isset($data['tag_type_name']) ? $data['tag_type_name'] : null;
+        $this->container['tag_name'] = isset($data['tag_name']) ? $data['tag_name'] : null;
     }
 
     /**
@@ -258,6 +264,27 @@ class TagModel implements ArrayAccess
     public function setTagTypeName($tag_type_name)
     {
         $this->container['tag_type_name'] = $tag_type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets tag_name
+     * @return string
+     */
+    public function getTagName()
+    {
+        return $this->container['tag_name'];
+    }
+
+    /**
+     * Sets tag_name
+     * @param string $tag_name Tag Name (same as tag_type_name, but tag_type_name will become deprecated in the future)
+     * @return $this
+     */
+    public function setTagName($tag_name)
+    {
+        $this->container['tag_name'] = $tag_name;
 
         return $this;
     }

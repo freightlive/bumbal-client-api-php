@@ -78,6 +78,90 @@ class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "include_record_info"
+     */
+    public function testPropertyIncludeRecordInfo()
+    {
+    }
+
+    /**
+     * Test attribute "include_meta_data"
+     */
+    public function testPropertyIncludeMetaData()
+    {
+    }
+
+    /**
+     * Test attribute "include_tags"
+     */
+    public function testPropertyIncludeTags()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_names"
+     */
+    public function testPropertyIncludeTagNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_tag_ids"
+     */
+    public function testPropertyIncludeTagIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_addresses"
+     */
+    public function testPropertyIncludeAddresses()
+    {
+    }
+
+    /**
+     * Test attribute "include_links"
+     */
+    public function testPropertyIncludeLinks()
+    {
+    }
+
+    /**
+     * Test attribute "include_notes"
+     */
+    public function testPropertyIncludeNotes()
+    {
+    }
+
+    /**
+     * Test attribute "include_zones"
+     */
+    public function testPropertyIncludeZones()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_names"
+     */
+    public function testPropertyIncludeZoneNames()
+    {
+    }
+
+    /**
+     * Test attribute "include_zone_ids"
+     */
+    public function testPropertyIncludeZoneIds()
+    {
+    }
+
+    /**
+     * Test attribute "include_files"
+     */
+    public function testPropertyIncludeFiles()
+    {
+    }
+
+    /**
      * Test attribute "include_driver_record_info"
      */
     public function testPropertyIncludeDriverRecordInfo()
@@ -102,13 +186,6 @@ class DriverOptionsModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "include_driver_tag_type_names"
      */
     public function testPropertyIncludeDriverTagTypeNames()
-    {
-    }
-
-    /**
-     * Test attribute "include_addresses"
-     */
-    public function testPropertyIncludeAddresses()
     {
     }
 
