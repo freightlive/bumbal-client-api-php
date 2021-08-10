@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **tag_ids** | **int[]** | Tag type ids | [optional] 
 **first_name** | **string** | First Name | [optional] 
 **last_name** | **string** | Last Name | [optional] 
-**prefix** | **string** | Name Prefix | [optional] 
+**name_prefix** | **string** | Name Prefix | [optional] 
 **full_name** | **string** | Full name | [optional] 
 **email** | **string** | Email | [optional] 
 **tags** | [**\BumbalClient\Model\TagModel[]**](TagModel.md) |  | [optional] 

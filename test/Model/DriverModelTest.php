@@ -134,9 +134,9 @@ class DriverModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "prefix"
+     * Test attribute "name_prefix"
      */
-    public function testPropertyPrefix()
+    public function testPropertyNamePrefix()
     {
     }
 

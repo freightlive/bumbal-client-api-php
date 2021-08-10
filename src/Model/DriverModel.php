@@ -62,7 +62,7 @@ class DriverModel implements ArrayAccess
         'tag_ids' => 'int[]',
         'first_name' => 'string',
         'last_name' => 'string',
-        'prefix' => 'string',
+        'name_prefix' => 'string',
         'full_name' => 'string',
         'email' => 'string',
         'tags' => '\BumbalClient\Model\TagModel[]',
@@ -95,7 +95,7 @@ class DriverModel implements ArrayAccess
         'tag_ids' => null,
         'first_name' => null,
         'last_name' => null,
-        'prefix' => null,
+        'name_prefix' => null,
         'full_name' => null,
         'email' => null,
         'tags' => null,
@@ -138,7 +138,7 @@ class DriverModel implements ArrayAccess
         'tag_ids' => 'tag_ids',
         'first_name' => 'first_name',
         'last_name' => 'last_name',
-        'prefix' => 'prefix',
+        'name_prefix' => 'name_prefix',
         'full_name' => 'full_name',
         'email' => 'email',
         'tags' => 'tags',
@@ -172,7 +172,7 @@ class DriverModel implements ArrayAccess
         'tag_ids' => 'setTagIds',
         'first_name' => 'setFirstName',
         'last_name' => 'setLastName',
-        'prefix' => 'setPrefix',
+        'name_prefix' => 'setNamePrefix',
         'full_name' => 'setFullName',
         'email' => 'setEmail',
         'tags' => 'setTags',
@@ -206,7 +206,7 @@ class DriverModel implements ArrayAccess
         'tag_ids' => 'getTagIds',
         'first_name' => 'getFirstName',
         'last_name' => 'getLastName',
-        'prefix' => 'getPrefix',
+        'name_prefix' => 'getNamePrefix',
         'full_name' => 'getFullName',
         'email' => 'getEmail',
         'tags' => 'getTags',
@@ -265,7 +265,7 @@ class DriverModel implements ArrayAccess
         $this->container['tag_ids'] = isset($data['tag_ids']) ? $data['tag_ids'] : null;
         $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
         $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
-        $this->container['prefix'] = isset($data['prefix']) ? $data['prefix'] : null;
+        $this->container['name_prefix'] = isset($data['name_prefix']) ? $data['name_prefix'] : null;
         $this->container['full_name'] = isset($data['full_name']) ? $data['full_name'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -479,22 +479,22 @@ class DriverModel implements ArrayAccess
     }
 
     /**
-     * Gets prefix
+     * Gets name_prefix
      * @return string
      */
-    public function getPrefix()
+    public function getNamePrefix()
     {
-        return $this->container['prefix'];
+        return $this->container['name_prefix'];
     }
 
     /**
-     * Sets prefix
-     * @param string $prefix Name Prefix
+     * Sets name_prefix
+     * @param string $name_prefix Name Prefix
      * @return $this
      */
-    public function setPrefix($prefix)
+    public function setNamePrefix($name_prefix)
     {
-        $this->container['prefix'] = $prefix;
+        $this->container['name_prefix'] = $name_prefix;
 
         return $this;
     }
