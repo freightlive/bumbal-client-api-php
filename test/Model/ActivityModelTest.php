@@ -575,6 +575,13 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "payments"
+     */
+    public function testPropertyPayments()
+    {
+    }
+
+    /**
      * Test attribute "time_slots"
      */
     public function testPropertyTimeSlots()
@@ -837,13 +844,6 @@ class ActivityModelTest extends \PHPUnit_Framework_TestCase
      * Test attribute "due_total"
      */
     public function testPropertyDueTotal()
-    {
-    }
-
-    /**
-     * Test attribute "payments"
-     */
-    public function testPropertyPayments()
     {
     }
 

@@ -125,6 +125,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'object',
         'capacities' => '\BumbalClient\Model\CapacityModel[]',
         'package_lines' => '\BumbalClient\Model\PackageLineModel[]',
+        'payments' => '\BumbalClient\Model\PaymentModel[]',
         'time_slots' => '\BumbalClient\Model\TimeSlotModel[]',
         'brand_id' => 'int',
         'brand_name' => 'string',
@@ -163,7 +164,6 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'int',
         'transaction_total' => 'int',
         'due_total' => 'int',
-        'payments' => '\BumbalClient\Model\PaymentModel[]',
         'transactions' => '\BumbalClient\Model\TransactionModel[]'
     ];
 
@@ -243,6 +243,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => null,
         'capacities' => null,
         'package_lines' => null,
+        'payments' => null,
         'time_slots' => null,
         'brand_id' => null,
         'brand_name' => null,
@@ -281,7 +282,6 @@ class ActivityModel implements ArrayAccess
         'payment_total' => null,
         'transaction_total' => null,
         'due_total' => null,
-        'payments' => null,
         'transactions' => null
     ];
 
@@ -371,6 +371,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'applied_capacities',
         'capacities' => 'capacities',
         'package_lines' => 'package_lines',
+        'payments' => 'payments',
         'time_slots' => 'time_slots',
         'brand_id' => 'brand_id',
         'brand_name' => 'brand_name',
@@ -409,7 +410,6 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'payment_total',
         'transaction_total' => 'transaction_total',
         'due_total' => 'due_total',
-        'payments' => 'payments',
         'transactions' => 'transactions'
     ];
 
@@ -490,6 +490,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'setAppliedCapacities',
         'capacities' => 'setCapacities',
         'package_lines' => 'setPackageLines',
+        'payments' => 'setPayments',
         'time_slots' => 'setTimeSlots',
         'brand_id' => 'setBrandId',
         'brand_name' => 'setBrandName',
@@ -528,7 +529,6 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'setPaymentTotal',
         'transaction_total' => 'setTransactionTotal',
         'due_total' => 'setDueTotal',
-        'payments' => 'setPayments',
         'transactions' => 'setTransactions'
     ];
 
@@ -609,6 +609,7 @@ class ActivityModel implements ArrayAccess
         'applied_capacities' => 'getAppliedCapacities',
         'capacities' => 'getCapacities',
         'package_lines' => 'getPackageLines',
+        'payments' => 'getPayments',
         'time_slots' => 'getTimeSlots',
         'brand_id' => 'getBrandId',
         'brand_name' => 'getBrandName',
@@ -647,7 +648,6 @@ class ActivityModel implements ArrayAccess
         'payment_total' => 'getPaymentTotal',
         'transaction_total' => 'getTransactionTotal',
         'due_total' => 'getDueTotal',
-        'payments' => 'getPayments',
         'transactions' => 'getTransactions'
     ];
 
@@ -899,6 +899,7 @@ class ActivityModel implements ArrayAccess
         $this->container['applied_capacities'] = isset($data['applied_capacities']) ? $data['applied_capacities'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['package_lines'] = isset($data['package_lines']) ? $data['package_lines'] : null;
+        $this->container['payments'] = isset($data['payments']) ? $data['payments'] : null;
         $this->container['time_slots'] = isset($data['time_slots']) ? $data['time_slots'] : null;
         $this->container['brand_id'] = isset($data['brand_id']) ? $data['brand_id'] : null;
         $this->container['brand_name'] = isset($data['brand_name']) ? $data['brand_name'] : null;
@@ -937,7 +938,6 @@ class ActivityModel implements ArrayAccess
         $this->container['payment_total'] = isset($data['payment_total']) ? $data['payment_total'] : null;
         $this->container['transaction_total'] = isset($data['transaction_total']) ? $data['transaction_total'] : null;
         $this->container['due_total'] = isset($data['due_total']) ? $data['due_total'] : null;
-        $this->container['payments'] = isset($data['payments']) ? $data['payments'] : null;
         $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
     }
 
@@ -2521,6 +2521,27 @@ class ActivityModel implements ArrayAccess
     }
 
     /**
+     * Gets payments
+     * @return \BumbalClient\Model\PaymentModel[]
+     */
+    public function getPayments()
+    {
+        return $this->container['payments'];
+    }
+
+    /**
+     * Sets payments
+     * @param \BumbalClient\Model\PaymentModel[] $payments 
+     * @return $this
+     */
+    public function setPayments($payments)
+    {
+        $this->container['payments'] = $payments;
+
+        return $this;
+    }
+
+    /**
      * Gets time_slots
      * @return \BumbalClient\Model\TimeSlotModel[]
      */
@@ -3314,27 +3335,6 @@ class ActivityModel implements ArrayAccess
     public function setDueTotal($due_total)
     {
         $this->container['due_total'] = $due_total;
-
-        return $this;
-    }
-
-    /**
-     * Gets payments
-     * @return \BumbalClient\Model\PaymentModel[]
-     */
-    public function getPayments()
-    {
-        return $this->container['payments'];
-    }
-
-    /**
-     * Sets payments
-     * @param \BumbalClient\Model\PaymentModel[] $payments 
-     * @return $this
-     */
-    public function setPayments($payments)
-    {
-        $this->container['payments'] = $payments;
 
         return $this;
     }

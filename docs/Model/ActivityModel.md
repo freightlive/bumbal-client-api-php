@@ -74,6 +74,7 @@ Name | Type | Description | Notes
 **applied_capacities** | **object** |  | [optional] 
 **capacities** | [**\BumbalClient\Model\CapacityModel[]**](CapacityModel.md) |  | [optional] 
 **package_lines** | [**\BumbalClient\Model\PackageLineModel[]**](PackageLineModel.md) |  | [optional] 
+**payments** | [**\BumbalClient\Model\PaymentModel[]**](PaymentModel.md) |  | [optional] 
 **time_slots** | [**\BumbalClient\Model\TimeSlotModel[]**](TimeSlotModel.md) |  | [optional] 
 **brand_id** | **int** | Brand ID | [optional] 
 **brand_name** | **string** | Brand name (must be unique) | [optional] 
@@ -112,7 +113,6 @@ Name | Type | Description | Notes
 **payment_total** | **int** | Total to be paid in cents. readonly | [optional] 
 **transaction_total** | **int** | Total has been paid in cents. readonly | [optional] 
 **due_total** | **int** | Amount which hasn&#39;t been paid yet in cents. readonly | [optional] 
-**payments** | [**\BumbalClient\Model\PaymentModel[]**](PaymentModel.md) |  | [optional] 
 **transactions** | [**\BumbalClient\Model\TransactionModel[]**](TransactionModel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
