@@ -55,7 +55,6 @@ class RouteFiltersModel implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int[]',
-        'co_driver_ids' => 'int[]',
         'nr' => 'string[]',
         'date_time_from' => '\DateTime',
         'date_time_to' => '\DateTime',
@@ -81,7 +80,6 @@ class RouteFiltersModel implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => null,
-        'co_driver_ids' => null,
         'nr' => null,
         'date_time_from' => 'date-time',
         'date_time_to' => 'date-time',
@@ -117,7 +115,6 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'co_driver_ids' => 'co_driver_ids',
         'nr' => 'nr',
         'date_time_from' => 'date_time_from',
         'date_time_to' => 'date_time_to',
@@ -144,7 +141,6 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'co_driver_ids' => 'setCoDriverIds',
         'nr' => 'setNr',
         'date_time_from' => 'setDateTimeFrom',
         'date_time_to' => 'setDateTimeTo',
@@ -171,7 +167,6 @@ class RouteFiltersModel implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'co_driver_ids' => 'getCoDriverIds',
         'nr' => 'getNr',
         'date_time_from' => 'getDateTimeFrom',
         'date_time_to' => 'getDateTimeTo',
@@ -223,7 +218,6 @@ class RouteFiltersModel implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['co_driver_ids'] = isset($data['co_driver_ids']) ? $data['co_driver_ids'] : null;
         $this->container['nr'] = isset($data['nr']) ? $data['nr'] : null;
         $this->container['date_time_from'] = isset($data['date_time_from']) ? $data['date_time_from'] : null;
         $this->container['date_time_to'] = isset($data['date_time_to']) ? $data['date_time_to'] : null;
@@ -285,27 +279,6 @@ class RouteFiltersModel implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets co_driver_ids
-     * @return int[]
-     */
-    public function getCoDriverIds()
-    {
-        return $this->container['co_driver_ids'];
-    }
-
-    /**
-     * Sets co_driver_ids
-     * @param int[] $co_driver_ids Unique Identifier
-     * @return $this
-     */
-    public function setCoDriverIds($co_driver_ids)
-    {
-        $this->container['co_driver_ids'] = $co_driver_ids;
 
         return $this;
     }

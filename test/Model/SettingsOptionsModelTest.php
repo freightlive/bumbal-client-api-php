@@ -97,11 +97,4 @@ class SettingsOptionsModelTest extends \PHPUnit_Framework_TestCase
     public function testPropertyIncludeRecordObject()
     {
     }
-
-    /**
-     * Test attribute "include_value_options"
-     */
-    public function testPropertyIncludeValueOptions()
-    {
-    }
 }

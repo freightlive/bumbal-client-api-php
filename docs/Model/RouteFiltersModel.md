@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int[]** | Unique Identifier | [optional] 
-**co_driver_ids** | **int[]** | Unique Identifier | [optional] 
 **nr** | **string[]** | Route nr | [optional] 
 **date_time_from** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **date_time_to** | [**\DateTime**](\DateTime.md) |  | [optional] 
