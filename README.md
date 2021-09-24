@@ -20,7 +20,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/freightlive/bumbal-client-api-php.git"
+      "url": "https://github.com/bumbal/bumbal-client-api-php.git"
     }
   ],
   "require": {
