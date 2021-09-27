@@ -1,3 +1,5 @@
+Deprecated: for the new versin, go to https://github.com/bumbal/bumbal-api-client-php
+
 # 
 Bumbal API documentation
 
