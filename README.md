@@ -1,4 +1,4 @@
-Deprecated: for the new versin, go to https://github.com/bumbal/bumbal-api-client-php
+Deprecated: for the new version, go to https://github.com/bumbal/bumbal-api-client-php
 
 # 
 Bumbal API documentation
